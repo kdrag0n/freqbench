@@ -71,9 +71,13 @@ echo 0 > /sys/devices/virtual/graphics/fbcon/cursor_blink
 { echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled; } > /dev/null 2>&1 || true
 { echo 0 > /sys/module/msm_pm/parameters/sleep_disabled; } > /dev/null 2>&1 || true
 
-exec > /dev/null 2>&1
+#exec > /dev/null 2>&1
+
+cat /proc/interrupts > /tmp/pre_bench_interrupts.txt
 
 taskset 01 python3 /bench.py 2>&1 | tee /tmp/run.log || on_error
+
+cat /proc/interrupts > /tmp/post_bench_interrupts.txt
 
 mkdir /persist
 persist_part="$(find_part_by_name persist)"
