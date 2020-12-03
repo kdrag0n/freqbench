@@ -3,9 +3,9 @@
 oldwd="$PWD"
 cd "$(dirname "$0")"
 
-cat init.sh > rd/init
+cp -af init.sh rd/init
 cp usb.sh rd/
-cp -a bench.py rd/
+cp -af bench.py rd/
 ./packrd-gz.sh
 
 python mkbootimg.py \
