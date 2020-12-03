@@ -82,6 +82,7 @@ taskset 01 python3 /bench.py 2>&1 | tee /tmp/run.log || on_error
 
 # Gather system info
 cat /proc/interrupts > /tmp/post_bench_interrupts.txt
+cat /proc/cmdline > /tmp/cmdline.txt
 dmesg > /tmp/kernel.log
 ps -A > /tmp/processes.txt
 echo "Kernel: $(cat /proc/version)" > /tmp/versions.txt
