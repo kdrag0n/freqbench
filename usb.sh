@@ -42,7 +42,7 @@ dropbear -RBFE &
 mkdir /tmp/usb
 touch /tmp/usb/dhcpd4.leases
 INTERFACES=usb0 dhcpd -4 -f -cf /dhcpd.conf -pf /tmp/usb/dhcpd4.pid -lf /tmp/usb/dhcpd4.leases &
-echo -n "SSH on $LOCAL_IP" > $serial
-echo "SSH on $LOCAL_IP"
+echo -n "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@$LOCAL_IP" > $serial
+echo "SSH server running at $LOCAL_IP"
 
 set +v
