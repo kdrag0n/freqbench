@@ -26,6 +26,8 @@ OUT_DIR=/persist/freqbench
 
 # Populate PATH and other basic settings
 source /etc/profile
+# For htop config
+export HOME=/root
 
 on_exit() {
     save_logs
