@@ -110,6 +110,15 @@ echo "Kernel: $(cat /proc/version)" > /tmp/versions.txt
 echo "Python: $(python3 --version)" >> /tmp/versions.txt
 find /dev > /tmp/dev.list
 find /sys | gzip > /tmp/sysfs.list.gz
+
+mkdir /tmp/cpufreq_stats
+for policy in /sys/devices/system/cpu/cpufreq/policy*
+do
+    pol_dir="/tmp/cpufreq_stats/$(basename "$policy" | sed 's/policy/')"
+    mkdir "$pol_dir"
+    cp "$policy/"{time_in_state,total_trans,trans_table} "$pol_dir"
+done
+
 save_logs
 
 # To debug system load
