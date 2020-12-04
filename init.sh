@@ -28,6 +28,8 @@ OUT_DIR=/persist/freqbench
 source /etc/profile
 
 on_exit() {
+    save_logs
+
     echo
     echo
     echo "ERROR!"
@@ -61,6 +63,21 @@ on_error() {
     return $e
 }
 
+save_logs() {
+    mkdir /persist
+    persist_part="$(find_part_by_name persist)"
+
+    # We write everything to tmpfs and copy it to persist afterwards because writing to UFS will use power
+    echo
+    mount -t ext4 -o noatime,nosuid,nodev,barrier=1 "$persist_part" /persist
+
+    echo "Writing logs and results to $OUT_DIR"
+    rm -fr "$OUT_DIR"
+    cp -r /tmp "$OUT_DIR"
+    umount /persist
+    sync
+}
+
 # SSH debug over USB RNDIS
 #source /usb.sh
 
@@ -89,19 +106,6 @@ echo "Kernel: $(cat /proc/version)" > /tmp/versions.txt
 echo "Python: $(python3 --version)" >> /tmp/versions.txt
 find /dev > /tmp/dev.list
 find /sys | gzip > /tmp/sysfs.list.gz
-
-mkdir /persist
-persist_part="$(find_part_by_name persist)"
-
-# We write everything to tmpfs and copy it to persist afterwards because writing to UFS will use power
-echo
-mount -t ext4 -o noatime,nosuid,nodev,barrier=1 "$persist_part" /persist
-
-echo "Writing logs and results to $OUT_DIR"
-rm -fr "$OUT_DIR"
-cp -r /tmp "$OUT_DIR"
-umount /persist
-sync
 
 echo
 echo "Press volume down to reboot..."
