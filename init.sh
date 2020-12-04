@@ -110,6 +110,7 @@ echo "Kernel: $(cat /proc/version)" > /tmp/versions.txt
 echo "Python: $(python3 --version)" >> /tmp/versions.txt
 find /dev > /tmp/dev.list
 find /sys | gzip > /tmp/sysfs.list.gz
+save_logs
 
 # To debug system load
 #htop
