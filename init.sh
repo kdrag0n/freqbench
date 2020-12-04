@@ -53,6 +53,11 @@ mount -t proc proc /proc
 mount -t sysfs sysfs /sys
 mount -t tmpfs tmpfs /tmp
 
+# Log to kernel log
+#exec > /dev/kmsg 2>&1
+# Don't log anywhere
+#exec > /dev/null 2>&1
+
 find_part_by_name() {
     partnum="$(sgdisk -p "$BLOCK_DEV" | grep " $1$" | head -n1 | awk '{print $1}')"
     echo "$BLOCK_DEV$partnum"
@@ -91,11 +96,6 @@ echo 0 > /sys/devices/virtual/graphics/fbcon/cursor_blink
 # Enable cpuidle for more realistic conditions
 { echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled; } > /dev/null 2>&1 || true
 { echo 0 > /sys/module/msm_pm/parameters/sleep_disabled; } > /dev/null 2>&1 || true
-
-# Log to kernel log
-#exec > /dev/kmsg 2>&1
-# Don't log anywhere
-#exec > /dev/null 2>&1
 
 cat /proc/interrupts > /tmp/pre_bench_interrupts.txt
 
