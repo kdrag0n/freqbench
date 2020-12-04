@@ -2,8 +2,6 @@
 
 # DEPENDENCIES: dropbear dhcp
 
-set -veufo pipefail
-
 # Mount USB and SSH pseudo-filesystems
 mount -t configfs configfs /sys/kernel/config
 mkdir /dev/pts
