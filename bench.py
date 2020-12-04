@@ -27,6 +27,7 @@ DEBUG = False
 # sysfs power supply node for power sampling
 POWER_SUPPLY = "/sys/class/power_supply/bms"
 # qgauge updates every 100 ms, but sampling also uses power, so do it conservatively
+# qpnp-fg-gen4 updates every 1000 ms
 POWER_SAMPLE_INTERVAL = 250  # ms
 
 
