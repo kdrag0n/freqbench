@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# DEPENDENCIES: dropbear
+# DEPENDENCIES: dropbear dhcp
 
 set -veufo pipefail
 
