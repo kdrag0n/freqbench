@@ -7101,3 +7101,82 @@ R:rtcwake
 a:0:0:755
 Z:Q1/qnYVLNTEt+kWpoOZgC34KnG+1c=
 
+C:Q1dUUMPPXW3MvI/1ZmDjpDVRhVXiQ=
+P:dhcp
+V:4.4.2-r1
+A:aarch64
+S:1024267
+I:2351104
+T:ISC Dynamic Host Configuration Protocol (DHCP)
+U:https://www.isc.org/
+L:MPL-2.0
+o:dhcp
+m:Jakub Jirutka <jakub@jirutka.cz>
+t:1584970428
+c:54662bff3d87fcd7e30dc18d9cca2e3fd3e1bd0f
+D:/bin/sh so:libc.musl-aarch64.so.1
+p:cmd:omshell
+F:etc
+F:etc/dhcp
+R:dhcpd.conf.example
+Z:Q1pQ985VirbyS610Lc3eINNvA4h8A=
+F:run
+F:run/dhcp
+F:sbin
+F:usr
+F:usr/bin
+R:omshell
+a:0:0:755
+Z:Q1l3euSiKOrkVisXIjsWmJzB7AIb8=
+F:var
+F:var/lib
+F:var/lib/dhcp
+
+C:Q1zuFFDPflGHmyWdn50sOB+x57sZo=
+P:dhcp-server-vanilla
+V:4.4.2-r1
+A:aarch64
+S:1187331
+I:2654208
+T:ISC dhcpd server
+U:https://www.isc.org/
+L:MPL-2.0
+o:dhcp
+m:Jakub Jirutka <jakub@jirutka.cz>
+t:1584970428
+c:54662bff3d87fcd7e30dc18d9cca2e3fd3e1bd0f
+k:200
+D:!dhcp-server-ldap dhcp so:libc.musl-aarch64.so.1
+p:dhcp-server cmd:dhcpd
+i:dhcp=4.4.2-r1
+F:usr
+F:usr/sbin
+R:dhcpd
+a:0:0:755
+Z:Q1DLlC/dNYBJ6Y6DBm0I92xTcHjeI=
+
+C:Q1Bjz+OyIVUem/H+d7BDV5gH387zk=
+P:dropbear
+V:2019.78-r1
+A:aarch64
+S:197185
+I:413696
+T:small SSH 2 client/server designed for small memory environments
+U:http://matt.ucc.asn.au/dropbear/dropbear.html
+L:MIT
+o:dropbear
+m:Natanael Copa <ncopa@alpinelinux.org>
+t:1592543942
+c:e684959dd09576a280eda8616faeb6c3dbd460ff
+D:so:libc.musl-aarch64.so.1 so:libz.so.1
+p:cmd:dropbear cmd:dropbearkey
+F:usr
+F:usr/bin
+R:dropbearkey
+a:0:0:755
+Z:Q1Vdtz0K/+wOW9aWfd5buw7tF2w74=
+F:usr/sbin
+R:dropbear
+a:0:0:755
+Z:Q1NkIxHCLccSMBoDes/v14nKKykGU=
+
