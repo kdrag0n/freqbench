@@ -81,7 +81,9 @@ save_logs() {
 }
 
 # SSH debug over USB RNDIS
+set +e
 #source /usb.sh
+set -e
 
 # Disable fbcon cursor blinking to reduce interference from its 1-second timer and memory ops
 echo 0 > /sys/devices/virtual/graphics/fbcon/cursor_blink
