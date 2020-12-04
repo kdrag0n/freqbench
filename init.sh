@@ -107,13 +107,19 @@ echo "Python: $(python3 --version)" >> /tmp/versions.txt
 find /dev > /tmp/dev.list
 find /sys | gzip > /tmp/sysfs.list.gz
 
+# To debug system load
+#htop
+
 echo
-echo "Press volume down to reboot..."
+echo "Rebooting in 5 seconds..."
 # Rounded corner protection
 echo
 echo
 sleep 5
+
+# Wait for volume down keypress
 #read -n1
+# Wait for manual forced reboot
 #sleep inf
 
 # Busybox reboot doesn't work for some reason
