@@ -1,5 +1,10 @@
 #!/usr/bin/env sh
 
+set -eufo pipefail
+
 cd "$(dirname "$0")"
 
-./pack.sh && fastboot boot new.img
+cp ../rd-new.cpio ramdisk.gz
+cp ~/code/android/devices/zf6/proton/out/arch/arm64/boot/Image.gz-dtb zImage
+./pack.sh
+fastboot boot new.img

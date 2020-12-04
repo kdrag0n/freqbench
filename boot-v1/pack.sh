@@ -2,7 +2,7 @@
 
 cd "$(dirname "$0")"
 
-../pack-img.sh && cp ../rd-new.cpio ramdisk.gz && cp ~/code/android/devices/zf6/proton/out/arch/arm64/boot/Image.gz-dtb zImage
+../pack-img.sh
 
 mkbootimg \
     --kernel zImage \
