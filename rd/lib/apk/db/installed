@@ -7208,3 +7208,93 @@ F:usr/share/pixmaps
 R:htop.png
 Z:Q1/w+uZyAX8XlJqOiPa6ynIyGlRlQ=
 
+C:Q1ov/ZCusHAl9l9aM0PFl5/DUyQyE=
+P:libgcc
+V:9.3.0-r2
+A:aarch64
+S:36578
+I:86016
+T:GNU C compiler runtime libraries
+U:https://gcc.gnu.org
+L:GPL-2.0-or-later LGPL-2.1-or-later
+o:gcc
+m:Natanael Copa <ncopa@alpinelinux.org>
+t:1589798499
+c:1069d8331c7125eb84994d624d45579a660acc41
+D:so:libc.musl-aarch64.so.1
+p:so:libgcc_s.so.1=1
+r:libstdc++ binutils
+F:usr
+F:usr/lib
+R:libgcc_s.so.1
+Z:Q1MZzS6gNhIpXx/Z/je5YuZiNSayo=
+
+C:Q1P0RmviDX+rphGW4jLtsn9RSMSCY=
+P:popt
+V:1.16-r7
+A:aarch64
+S:21174
+I:57344
+T:A commandline option parser
+U:http://rpm5.org
+L:custom
+o:popt
+m:Natanael Copa <ncopa@alpinelinux.org>
+t:1563814045
+c:6b864404cbf08dfb16a8499a8433a766003ac00f
+D:so:libc.musl-aarch64.so.1
+p:so:libpopt.so.0=0.0.0
+F:lib
+R:libpopt.so.0
+a:0:0:777
+Z:Q1YXwq+k55+u6VTLlXFUcPh1wETlo=
+R:libpopt.so.0.0.0
+a:0:0:755
+Z:Q1C6HCnFD2Mnr61Y6m65/5v20kj0E=
+
+C:Q1yS6CjMApbFQW8s6FJFBysJ1mjBU=
+P:libstdc++
+V:9.3.0-r2
+A:aarch64
+S:488983
+I:1724416
+T:GNU C++ standard runtime library
+U:https://gcc.gnu.org
+L:GPL-2.0-or-later LGPL-2.1-or-later
+o:gcc
+m:Natanael Copa <ncopa@alpinelinux.org>
+t:1589798499
+c:1069d8331c7125eb84994d624d45579a660acc41
+D:so:libc.musl-aarch64.so.1 so:libgcc_s.so.1
+p:so:libstdc++.so.6=6.0.28
+r:libstdc++ binutils
+F:usr
+F:usr/lib
+R:libstdc++.so.6
+a:0:0:777
+Z:Q1XRF4iSaYuggdocGXkh0F6J/U2kI=
+R:libstdc++.so.6.0.28
+a:0:0:755
+Z:Q1/Iv6zFo2qoMrUprRnqI8eLxbQVs=
+
+C:Q18oTzoLdUqfqsmAXuG1AbBJ77vNE=
+P:sgdisk
+V:1.0.5-r0
+A:aarch64
+S:69147
+I:163840
+T:Command-line GUID partition table (GPT) manipulator
+U:https://www.rodsbooks.com/gdisk
+L:GPL-2.0-or-later
+o:gptfdisk
+m:Natanael Copa <ncopa@alpinelinux.org>
+t:1582033195
+c:216c7c0bb9aa81e81e0ecd434648b7cc6bf156d8
+D:so:libc.musl-aarch64.so.1 so:libgcc_s.so.1 so:libpopt.so.0 so:libstdc++.so.6 so:libuuid.so.1
+p:cmd:sgdisk
+F:usr
+F:usr/bin
+R:sgdisk
+a:0:0:755
+Z:Q1KonbnpcLB26LnPm3Hysl5QTe4UA=
+
