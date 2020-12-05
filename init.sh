@@ -29,8 +29,11 @@ source /etc/profile
 # For htop config
 export HOME=/root
 
+saving_logs=false
 on_exit() {
-    save_logs
+    if ! $saving_logs; then
+        save_logs
+    fi
 
     echo
     echo
@@ -71,6 +74,8 @@ on_error() {
 }
 
 save_logs() {
+    saving_logs=true
+
     mkdir /persist
     persist_part="$(find_part_by_name persist)"
 
@@ -83,6 +88,9 @@ save_logs() {
     cp -r /tmp "$OUT_DIR"
     umount /persist
     sync
+
+    # Saving logs multiple times is fine as long as we don't try to recurse
+    saving_logs=false
 }
 
 # SSH debug over USB RNDIS
