@@ -264,7 +264,7 @@ def main():
 
         for freq in freqs:
             mhz = freq / 1000
-            print(f"{mhz:4.0f}: ", end="", flush=True)
+            print(f"{int(mhz):4d}: ", end="", flush=True)
             write_cpu(cpu, "cpufreq/scaling_setspeed", str(freq))
 
             pr_debug("Validating frequency")
