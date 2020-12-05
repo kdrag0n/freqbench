@@ -148,6 +148,10 @@ def write_cpu(cpu, node, content):
     with open(f"{SYS_CPU}/cpu{cpu}/{node}", "w") as f:
         f.write(content)
 
+def read_cpu(cpu, node):
+    with open(f"{SYS_CPU}/cpu{cpu}/{node}", "r") as f:
+        return f.read().strip()
+
 def create_power_stats(time_ns, samples):
     sec = time_ns / 1e9
 
@@ -239,6 +243,20 @@ def main():
             raw_freqs = f.read().replace("\n", "").split(" ")
             freqs = [int(freq) for freq in raw_freqs if freq]
 
+        # Some kernels may change the defaults
+        pr_debug("Setting frequency limits")
+        write_cpu(cpu, "cpufreq/scaling_min_freq", str(min(freqs)))
+        write_cpu(cpu, "cpufreq/scaling_max_freq", str(max(freqs)))
+
+        # Bail out if the kernel is clamping our values
+        pr_debug("Validating frequency limits")
+        real_min_freq = int(read_cpu(cpu, "cpufreq/scaling_min_freq"))
+        if real_min_freq != min(freqs):
+            raise ValueError(f"Minimum frequency setting {min(freqs)} rejected by kernel; got {real_min_freq}")
+        real_max_freq = int(read_cpu(cpu, "cpufreq/scaling_max_freq"))
+        if real_max_freq != max(freqs):
+            raise ValueError(f"Maximum frequency setting {max(freqs)} rejected by kernel; got {real_max_freq}")
+
         # Need to sort because different platforms have different orders
         freqs.sort()
         print("Frequencies:", " ".join(str(int(freq / 1000)) for freq in freqs))
@@ -248,6 +266,11 @@ def main():
             mhz = freq / 1000
             print(f"{mhz:4.0f}: ", end="", flush=True)
             write_cpu(cpu, "cpufreq/scaling_setspeed", str(freq))
+
+            pr_debug("Validating frequency")
+            real_freq = int(read_cpu(cpu, "cpufreq/scaling_cur_freq"))
+            if real_freq != freq:
+                raise ValueError(f"Frequency setting is {freq} but kernel is using {real_freq}")
 
             pr_debug("Waiting for power usage to settle")
             time.sleep(3)
