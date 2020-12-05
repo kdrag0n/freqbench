@@ -137,7 +137,7 @@ do
     pol_dir="/tmp/cpufreq_stats/$(basename "$policy" | sed 's/policy//')"
     mkdir "$pol_dir"
     # Frequency domains with too many OPPs will fail here
-    cp "$policy/stats/"{time_in_state,total_trans,trans_table} "$pol_dir" || true
+    cp "$policy/stats/"{time_in_state,total_trans,trans_table} "$pol_dir" 2> /dev/null || true
 done
 
 save_logs
