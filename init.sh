@@ -6,7 +6,7 @@
 # Kernel config: CONFIG_DEVTMPFS
 # Kernel cmdline: printk.devkmsg=on isolcpus=1-7 (depends on CPU count)
 
-set -eufo pipefail
+set -euo pipefail
 
 
 ####################################################
@@ -122,9 +122,10 @@ find /sys | gzip > /tmp/sysfs.list.gz
 mkdir /tmp/cpufreq_stats
 for policy in /sys/devices/system/cpu/cpufreq/policy*
 do
-    pol_dir="/tmp/cpufreq_stats/$(basename "$policy" | sed 's/policy/')"
+    pol_dir="/tmp/cpufreq_stats/$(basename "$policy" | sed 's/policy//')"
     mkdir "$pol_dir"
-    cp "$policy/"{time_in_state,total_trans,trans_table} "$pol_dir"
+    # Frequency domains with too many OPPs will fail here
+    cp "$policy/stats/"{time_in_state,total_trans,trans_table} "$pol_dir" || true
 done
 
 save_logs
