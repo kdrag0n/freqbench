@@ -3,9 +3,6 @@
 oldwd="$PWD"
 cd "$(dirname "$0")"
 
-cp -af init.sh rd/init
-cp -af usb.sh bench.py dhcpd.conf rd/
-
 ./packrd-gz.sh
 
 python mkbootimg.py \

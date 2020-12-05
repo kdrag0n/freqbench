@@ -2,7 +2,7 @@
 
 cd "$(dirname "$0")"
 
-../pack-img.sh
+../packrd-gz.sh
 
 mkbootimg \
     --kernel zImage \
