@@ -29,6 +29,23 @@ source /etc/profile
 # For htop config
 export HOME=/root
 
+reboot_end() {
+    echo
+    echo "Rebooting in 5 seconds..."
+    # Rounded corner protection
+    echo
+    echo
+    sleep 5
+
+    # Wait for volume down keypress
+    #read -n1
+    # Wait for manual forced reboot
+    #sleep inf
+
+    # Busybox reboot doesn't work for some reason
+    reboot_with_cmd "$1"
+}
+
 saving_logs=false
 on_exit() {
     if ! $saving_logs; then
@@ -38,13 +55,8 @@ on_exit() {
     echo
     echo
     echo "ERROR!"
-    echo
-    echo "Press volume down to reboot..."
-    echo
-    echo
 
-    read -n1
-    reboot_with_cmd bootloader
+    reboot_end bootloader
 }
 
 # Set trap before mounting in case devtmpfs fails
@@ -133,17 +145,4 @@ save_logs
 # To debug system load
 #htop
 
-echo
-echo "Rebooting in 5 seconds..."
-# Rounded corner protection
-echo
-echo
-sleep 5
-
-# Wait for volume down keypress
-#read -n1
-# Wait for manual forced reboot
-#sleep inf
-
-# Busybox reboot doesn't work for some reason
-reboot_with_cmd ''
+reboot_end ''
