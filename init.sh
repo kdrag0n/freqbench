@@ -122,6 +122,7 @@ cat /proc/interrupts > /tmp/pre_bench_interrupts.txt
 taskset 01 python3 /bench.py 2>&1 | tee /tmp/run.log || on_error
 
 # Gather system info
+set +e
 cat /proc/interrupts > /tmp/post_bench_interrupts.txt
 cat /proc/cmdline > /tmp/cmdline.txt
 dmesg > /tmp/kernel.log
@@ -130,6 +131,7 @@ echo "Kernel: $(cat /proc/version)" > /tmp/versions.txt
 echo "Python: $(python3 --version)" >> /tmp/versions.txt
 find /dev > /tmp/dev.list
 find /sys | gzip > /tmp/sysfs.list.gz
+set -e
 
 mkdir /tmp/cpufreq_stats
 for policy in /sys/devices/system/cpu/cpufreq/policy*
