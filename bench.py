@@ -267,6 +267,9 @@ def main():
             print(f"{int(mhz):4d}: ", end="", flush=True)
             write_cpu(cpu, "cpufreq/scaling_setspeed", str(freq))
 
+            pr_debug("Waiting for frequency to settle")
+            time.sleep(0.1)
+
             pr_debug("Validating frequency")
             real_freq = int(read_cpu(cpu, "cpufreq/scaling_cur_freq"))
             if real_freq != freq:
