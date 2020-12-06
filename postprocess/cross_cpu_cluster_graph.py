@@ -24,6 +24,7 @@ COL_LABELS = {
 
 flags = set()
 socs = {}
+freq_load = "active"
 col_name = None
 for i, arg in enumerate(sys.argv[1:]):
     if ":" in arg:
@@ -33,6 +34,8 @@ for i, arg in enumerate(sys.argv[1:]):
     elif "+" in arg:
         flag = arg[1:]
         flags.add(flag)
+    elif "/" in arg:
+        freq_load, col_name = arg.split("/")
     else:
         col_name = arg
 
@@ -47,15 +50,15 @@ for soc_i, (soc, soc_data) in enumerate(socs.items()):
         cpu = int(cpu)
 
         freqs = [int(freq) / 1000 for freq in cpu_data["freqs"].keys()]
-        raw_values = [freq_data["active"][col_name] for freq_data in cpu_data["freqs"].values()]
+        raw_values = [freq_data[freq_load][col_name] for freq_data in cpu_data["freqs"].values()]
         values = []
         for freq, freq_data in cpu_data["freqs"].items():
             if "minscl" in flags:
-                curv = freq_data["active"][col_name]
+                curv = freq_data[freq_load][col_name]
                 minv = min(raw_values)
                 values.append(curv - minv)
             else:
-                values.append(freq_data["active"][col_name])
+                values.append(freq_data[freq_load][col_name])
 
         cpu_label = CPU_LABELS[cpu] if cpu in CPU_LABELS else f"CPU {cpu}"
         val_label = f"{soc} {cpu_label}"
