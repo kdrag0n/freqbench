@@ -111,7 +111,7 @@ set +e
 set -e
 
 # Disable fbcon cursor blinking to reduce interference from its 1-second timer and memory ops
-echo 0 > /sys/devices/virtual/graphics/fbcon/cursor_blink
+{ echo 0 > /sys/devices/virtual/graphics/fbcon/cursor_blink; } > /dev/null 2>&1 || true
 
 # Enable cpuidle for more realistic conditions
 { echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled; } > /dev/null 2>&1 || true
