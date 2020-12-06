@@ -122,7 +122,7 @@ def start_power_thread(sample_interval=POWER_SAMPLE_INTERVAL):
 
             try:
                 sample_dest[count] = power
-            except RangeError:
+            except IndexError:
                 # If out of pre-allocated slots
                 sample_dest.append(power)
 
