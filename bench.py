@@ -53,7 +53,7 @@ REPLACE_CPUS = {
 FREQ_IDLE_TIME = 5  # sec
 
 # To reduce chances of an array realloc + copy during benchmark runs
-PREALLOC_SECONDS = 240  # seconds of power sampling
+PREALLOC_SECONDS = 300  # seconds of power sampling
 PREALLOC_SLOTS = int(PREALLOC_SECONDS / (POWER_SAMPLE_INTERVAL / 1000))
 
 # CoreMark PERFORMANCE_RUN params with 250,000 iterations
