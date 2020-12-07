@@ -2,6 +2,29 @@
 
 freqbench is a comprehensive CPU benchmark that benchmarks each CPU frequency step on each frequency scaling domain (e.g. ARM DynamIQ/big.LITTLE cluster). It is based on a minimal Alpine Linux userspace with the [EEMBC CoreMark](https://www.eembc.org/coremark/) workload and a Python benchmark coordinator.
 
+Results include:
+
+- Performance (CoreMark scores)
+- Performance efficiency (CoreMarks per MHz)
+- Power usage (in milliwatts)
+- Energy usage (in millijoules and joules)
+- Energy efficiency (ULPMark-CM scores: iterations per second per millijoule of energy used)
+- Baseline power usage
+- Time elapsed
+- CPU frequency scaling stats during the benchmark (for validation)
+- Diagnostic data (logs, kernel version, kernel command line, interrupts, processes)
+- Raw power samples in machine-readable JSON format (for postprocessing)
+
+## Why?
+
+A benchmark like this can be useful for many reasons:
+
+- Creating energy models for EAS (Energy-Aware Scheduling)
+- Correcting inaccurate EAS energy models
+- Analyzing performance and power trends
+- Comparing efficiency across SoC and CPU generations
+- Improving performance and battery life of mobile devices by utilizing the race-to-idle phenomenon with efficient frequencies
+
 ## Usage
 
 Set the following kernel config options:
@@ -154,7 +177,7 @@ If you have a slow CPU with a lot of frequency steps, this is not entirely unrea
 
 freqbench offers interactive debugging via SSH over virtual USB Ethernet; the device acts as a USB Ethernet adapter and exposes an SSH server on the internal network. Uncomment `source /usb.sh` in init.sh to enable it and boot freqbench again. The feature is disabled by default to avoid unnecessary USB setup that may influence benchmark results, so keeping it enabled for a final benchmark run is not recommended.
 
-Connect your device to a computer over USB. You should see something like this in your kernel logs if you are running Linux: 
+Connect your device to a computer over USB. You should see something like this in your kernel logs if you are running Linux:
 
 ```log
 [7064379.627645] usb 7-3: new high-speed USB device number 114 using xhci_hcd
