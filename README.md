@@ -15,7 +15,7 @@ CONFIG_DEVTMPFS=y
 CONFIG_HZ_100=y
 ```
 
-Example commit: [kirin_defconfig: Configure for freqbench](https://github.com/kdrag0n/proton_zf6/commit/4bbe2cf0039b798b59ad056fd45d0c47d5c6ec66)
+Example commit: [kirin_defconfig: Configure for freqbench](https://github.com/kdrag0n/proton_zf6/commit/d5e931add54ad)
 
 If you have any commits that prevent userspace from controlling CPU affinities and utilization, frequencies, or anything of the sort, revert them for the benchmark to work properly. Here are some common examples of such commits in downstream kernels and their corresponding reverts:
 
@@ -96,7 +96,7 @@ Because voltages defined by the CPU frequency scaling driver cannot easily be ac
 
 For Qualcomm SoCs on the msm-4.19 kernel, voltages can be obtained by booting the kernel (with or without freqbench doesn't matter, as long as you can get kernel logs) with [this commit](https://github.com/kdrag0n/proton_kernel_redbull/commit/8db0557716a4) and searching for lines containing `volt=` in the kernel log.
 
-For msm-4.9 and msm-4.14, the process is the same but with [this commit](https://github.com/kdrag0n/proton_zf6/commit/8d26704454f5a) and searching for `open_loop_voltage` instead.
+For msm-4.9 and msm-4.14, the process is the same but with [this commit](https://github.com/kdrag0n/proton_zf6/commit/f7cc2d654f1b9) and searching for `open_loop_voltage` instead.
 
 Example usage: `./simplified_em.py results.json 1.300000=580000 1.576000=580000 1.614400=580000 1.864000=644000 1.1075200=708000 1.1363200=788000 1.1516800=860000 1.1651200=888000 1.1804800=968000 6.652800=624000 6.940800=672000 6.1152000=704000 6.1478400=752000 6.1728000=820000 6.1900800=864000 6.2092800=916000 6.2208000=948000 7.806400=564000 7.1094400=624000 7.1401600=696000 7.1766400=776000 7.1996800=836000 7.2188800=888000 7.2304000=916000 7.2400000=940000`
 
