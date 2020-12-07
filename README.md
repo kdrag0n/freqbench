@@ -46,7 +46,7 @@ Manually creating a new boot image with the kernel and ramdisk is only for advan
 Additional kernel config options:
 
 ```bash
-CONFIG_CMDLINE="isolcpus=1-7 nohz_full=1-7 loglevel=0"
+CONFIG_CMDLINE="isolcpus=1-7 nohz_full=1-7 loglevel=0 printk.devkmsg=on"
 CONFIG_CMDLINE_EXTEND=y
 ```
 

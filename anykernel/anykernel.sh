@@ -33,6 +33,7 @@ bench_cpus=1-$((cores - 1))
 patch_cmdline isolcpus isolcpus=$bench_cpus
 patch_cmdline nohz_full nohz_full=$bench_cpus
 patch_cmdline loglevel loglevel=0
+patch_cmdline printk.devkmsg printk.devkmsg=on
 
 mv $home/rd-new.cpio $home/ramdisk-new.cpio
 
