@@ -96,7 +96,7 @@ save_logs() {
     saving_logs=true
 
     mkdir /persist
-    persist_part="$(find_part_by_name persist)"
+    persist_part="$(find_part_by_name cache || find_part_by_name persist)"
 
     # We write everything to tmpfs and copy it to persist afterwards because writing to UFS will use power
     echo
