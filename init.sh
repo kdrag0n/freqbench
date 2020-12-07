@@ -126,7 +126,7 @@ set -e
 
 cat /proc/interrupts > /tmp/pre_bench_interrupts.txt
 
-taskset 01 python3 /bench.py 2>&1 | tee /tmp/run.log || on_error
+time taskset 01 python3 /bench.py 2>&1 | tee /tmp/run.log || on_error
 
 # Gather system info
 set +e
