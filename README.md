@@ -149,3 +149,22 @@ Check kernel.log, pre- and post-bench interrupts, running processes, and cpufreq
 ### It's still running after an hour
 
 If you have a slow CPU with a lot of frequency steps, this is not entirely unreasonable.
+
+### I want to debug it while it's running
+
+freqbench offers interactive debugging via SSH over virtual USB Ethernet; the device acts as a USB Ethernet adapter and exposes an SSH server on the internal network. Uncomment `source /usb.sh` in init.sh to enable it and boot freqbench again. The feature is disabled by default to avoid unnecessary USB setup that may influence benchmark results, so keeping it enabled for a final benchmark run is not recommended.
+
+Connect your device to a computer over USB. You should see something like this in your kernel logs if you are running Linux: 
+
+```log
+[7064379.627645] usb 7-3: new high-speed USB device number 114 using xhci_hcd
+[7064379.772208] usb 7-3: New USB device found, idVendor=0b05, idProduct=4daf, bcdDevice= 4.14
+[7064379.772210] usb 7-3: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[7064379.772211] usb 7-3: Product: Alpine GNU/Linux
+[7064379.772211] usb 7-3: Manufacturer: Linux
+[7064379.772212] usb 7-3: SerialNumber: ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@10.15.19.82
+[7064379.818904] rndis_host 7-3:1.0 usb0: register 'rndis_host' at usb-0000:47:00.1-3, RNDIS device, da:34:ab:99:c5:81
+[7064379.870018] rndis_host 7-3:1.0 enp71s0f1u3: renamed from usb0
+```
+
+Run the SSH command in the serial number field to open a shell to the device. The password is empty, so just press enter when asked to input a password.
