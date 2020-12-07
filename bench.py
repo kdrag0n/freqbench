@@ -24,19 +24,29 @@ gc.disable()
 # The extra framebuffer memory copies caused by it will influence results.
 DEBUG = False
 
-# sysfs power supply node for power sampling
-POWER_SUPPLY = "/sys/class/power_supply/bms"
-# qgauge updates every 100 ms, but sampling also uses power, so do it conservatively
-# qpnp-fg-gen4 updates every 1000 ms
-POWER_SAMPLE_INTERVAL = 250  # ms
-
-
-
 ####################################################
 ###################  END CONFIG  ###################
 ####################################################
 
 
+
+# sysfs power supply node for power sampling
+POWER_SUPPLY = None
+POWER_SUPPLY_NODES = [
+    # Qualcomm Battery Management System + fuel gauge: preferred when available for more info
+    "/sys/class/power_supply/bms",
+    # Most common
+    "/sys/class/power_supply/battery",
+]
+
+# Default power sampling intervals
+POWER_SAMPLE_INTERVAL = 1000  # ms
+POWER_SAMPLE_FG_DEFAULT_INTERVALS = {
+    # qgauge updates every 100 ms, but sampling also uses power, so do it conservatively
+    "qpnp,qg": 250,
+    # qpnp-fg-gen3/4 update every 1000 ms
+    "qpnp,fg": 1000,
+}
 
 # Must also set in init
 HOUSEKEEPING_CPU = 0
@@ -52,7 +62,6 @@ FREQ_IDLE_TIME = 5  # sec
 
 # To reduce chances of an array realloc + copy during benchmark runs
 PREALLOC_SECONDS = 300  # seconds of power sampling
-PREALLOC_SLOTS = int(PREALLOC_SECONDS / (POWER_SAMPLE_INTERVAL / 1000))
 
 # CoreMark PERFORMANCE_RUN params with 250,000 iterations
 COREMARK_PERFORMANCE_RUN = ["0x0", "0x0", "0x66", "250000", "7", "1", "2000"]
@@ -75,6 +84,21 @@ BANNER = """
 """
 
 SYS_CPU = "/sys/devices/system/cpu"
+
+# "Constants" evaluated at runtime
+for psy_node in POWER_SUPPLY_NODES:
+    if os.path.exists(psy_node):
+        POWER_SUPPLY = psy_node
+        break
+
+psy_name = os.readlink(POWER_SUPPLY)
+for fg_string, interval in POWER_SAMPLE_FG_DEFAULT_INTERVALS.items():
+    if fg_string in psy_name:
+        POWER_SAMPLE_INTERVAL = interval
+        break
+
+# Calculate prealloc slots now that the interval is known
+PREALLOC_SLOTS = int(PREALLOC_SECONDS / (POWER_SAMPLE_INTERVAL / 1000))
 
 _stop_power_mon = False
 _prealloc_samples = [-1] * PREALLOC_SLOTS
@@ -203,6 +227,7 @@ def main():
     write_cpu(HOUSEKEEPING_CPU, "cpufreq/scaling_governor", "powersave")
     pr_debug()
 
+    print(f"Sampling power every {POWER_SAMPLE_INTERVAL} ms")
     print("Baseline power usage: ", end="", flush=True)
     pr_debug("Waiting for power usage to settle", flush=True)
     time.sleep(15)
