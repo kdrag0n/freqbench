@@ -8,23 +8,40 @@ Set the following kernel config options:
 
 ```bash
 CONFIG_NO_HZ_FULL=y
-CONFIG_CMDLINE="isolcpus=1-7 nohz_full=1-7 loglevel=0"
-CONFIG_CMDLINE_EXTEND=y
 CONFIG_CPU_FREQ_TIMES=n  # may not exist
 CONFIG_CPU_FREQ_GOV_POWERSAVE=y
 CONFIG_CPU_FREQ_GOV_USERSPACE=y
 CONFIG_DEVTMPFS=y
 ```
 
-If you do not have 8 CPU cores, adjust `1-7` to `1-<core count - 1>`. Single-core CPUs are not supported.
-
-Adjust the config parameters in `bench.py` as appropriate for your device.
-
 If you have any commits that prevent userspace from controlling CPU affinities and utilization, frequencies, or anything of the sort, revert them for the benchmark to work properly. Here are some common examples of such commits in downstream kernels and their corresponding reverts:
 
 - [Performance-critical IRQs and kthreads](https://github.com/kdrag0n/proton_kernel_wahoo/commit/29b315cd5f3a6)
 - [Existing efficient frequency tables](https://github.com/kdrag0n/proton_kernel_wahoo/commit/9b98ee3fabd14)
 - [Preventing userspace from setting minimum CPU frequencies](https://github.com/kdrag0n/proton_kernel_wahoo/commit/d9d2fe54e87f9)
+
+Compile and flash your new kernel. Note that Android will not work properly on this kernel, so make sure you take a backup of your old boot image to restore later.
+
+Adjust the config parameters in `bench.py` as appropriate for your device. Run `pack-zip.sh` and flash `freqbench-installer.zip`.
+
+Unplug the device immediately, before the device starts booting. Do not try to wait for it to finish booting. Leaving the device plugged in will invalidate all power results.
+
+Finally, wait until the device reboots itself and then retrieve the results from `/persist/freqbench`. Do not touch the device, any of its buttons, or plug/unplug it during the test. It will be frozen on the bootloader splash screen; do not assume that it is broken. The benchmark is expected to take a long time; 1 hour is reasonable for a slower CPU.
+
+**If you have any problems, check the troubleshooting section before opening an issue!**
+
+### Manual boot image creation
+
+Manually creating a new boot image with the kernel and ramdisk is only for advanced users. Use the AnyKernel3 installer unless you have good reason to do this.
+
+Additional kernel config options:
+
+```bash
+CONFIG_CMDLINE="isolcpus=1-7 nohz_full=1-7 loglevel=0"
+CONFIG_CMDLINE_EXTEND=y
+```
+
+If you do not have 8 CPU cores, adjust `1-7` to `1-<core count - 1>`. Single-core CPUs are not supported.
 
 Create a boot image with your modified kernel and the freqbench ramdisk:
 
@@ -46,12 +63,6 @@ For boot image v3 devices:
 ```
 
 After that, boot the modified image with `fastboot boot` if your device supports it, or flash it to the boot/recovery partition and boot that manually.
-
-Unplug the device immediately after uploading and booting the image. Do not try to wait for it to finish booting. Leaving the device plugged in will invalidate all power results.
-
-Finally, wait until the device reboots itself and then retrieve the results from `/persist/freqbench`. Do not touch the device, any of its buttons, or plug/unplug it during the test. It will be frozen on the bootloader splash screen; do not assume that it is broken. The benchmark is expected to take a long time; 1 hour is reasonable for a slower CPU.
-
-**If you have any problems, check the troubleshooting section before opening an issue!**
 
 ## Results
 
