@@ -77,7 +77,7 @@ fi
 #exec > /dev/null 2>&1
 
 find_part_by_name() {
-    partnum="$(sgdisk -p "$BLOCK_DEV" | grep " $1$" | head -n1 | awk '{print $1}')"
+    partnum="$(sgdisk -p "$BLOCK_DEV" | grep -i " $1$" | head -n1 | awk '{print $1}')"
     echo "$BLOCK_DEV$partnum"
 }
 
