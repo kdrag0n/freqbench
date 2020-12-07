@@ -55,11 +55,13 @@ Example freqbench kernel adaptations:
 
 Compile and flash your new kernel. Note that Android will not work properly on this kernel, so make sure you take a backup of your old boot image to restore later.
 
-Adjust the config parameters in `bench.py` as appropriate for your device. Run `pack-zip.sh` and flash `freqbench-installer.zip`.
+Adjust the config parameters at the top of `bench.py` and `init.sh` as appropriate for your device. Run `pack-zip.sh` and flash `freqbench-installer.zip`.
 
 Unplug the device immediately, before the device starts booting. Do not try to wait for it to finish booting. Leaving the device plugged in will invalidate all power results.
 
-Finally, wait until the device reboots itself and then retrieve the results from `/persist/freqbench`. Do not touch the device, any of its buttons, or plug/unplug it during the test. It will be frozen on the bootloader splash screen; do not assume that it is broken. The benchmark is expected to take a long time; 1 hour is reasonable for a slower CPU.
+Finally, wait until the device reboots itself. Do not touch the device, any of its buttons, or plug/unplug it during the test. It will be frozen on the bootloader splash screen; do not assume that it is broken. The benchmark is expected to take a long time; 1 hour is reasonable for a slower CPU.
+
+Once the benchmark is done, retrieve the results from `/cache/freqbench` if your device has a cache partition, or `/persist/freqbench` otherwise (newer devices with A/B partitions don't have a cache partition).
 
 **If you have any problems, check the troubleshooting section before opening an issue!**
 
@@ -99,7 +101,7 @@ After that, boot the modified image with `fastboot boot` if your device supports
 
 ## Results
 
-After the benchmark finishes, results can be found in `/persist/freqbench`, or `/mnt/vendor/persist/freqbench` on some devices. Human-readable results, raw machine-readable JSON data, and diagnostic information are included for analysis.
+After the benchmark finishes, results can be found in `/cache/freqbench`, `/persist/freqbench`, or `/mnt/vendor/persist/freqbench`, in that order of preference. The first path that exists on your device will be used. Human-readable results, raw machine-readable JSON data, and diagnostic information are included for analysis.
 
 ## Post-processing
 
