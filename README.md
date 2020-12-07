@@ -14,6 +14,8 @@ CONFIG_CPU_FREQ_GOV_USERSPACE=y
 CONFIG_DEVTMPFS=y
 ```
 
+Example commit: [kirin_defconfig: Configure for freqbench](https://github.com/kdrag0n/proton_zf6/commit/4bbe2cf0039b798b59ad056fd45d0c47d5c6ec66)
+
 If you have any commits that prevent userspace from controlling CPU affinities and utilization, frequencies, or anything of the sort, revert them for the benchmark to work properly. Here are some common examples of such commits in downstream kernels and their corresponding reverts:
 
 - [Performance-critical IRQs and kthreads](https://github.com/kdrag0n/proton_kernel_wahoo/commit/29b315cd5f3a6)
