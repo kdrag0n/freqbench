@@ -68,8 +68,11 @@ mount -t proc proc /proc
 mount -t sysfs sysfs /sys
 mount -t tmpfs tmpfs /tmp
 
-# Log to kernel log
-#exec > /dev/kmsg 2>&1
+# Log to kernel log if no console is present
+if [[ ! -t 1 ]]; then
+    exec > /dev/kmsg 2>&1
+fi
+
 # Don't log anywhere
 #exec > /dev/null 2>&1
 
