@@ -133,6 +133,7 @@ set +e
 cat /proc/interrupts > /tmp/post_bench_interrupts.txt
 cat /proc/cmdline | redact_serial > /tmp/cmdline.txt
 dmesg | redact_serial > /tmp/kernel.log
+uptime > /tmp/uptime.txt
 ps -A > /tmp/processes.txt
 echo "Kernel: $(cat /proc/version)" > /tmp/versions.txt
 echo "Python: $(python3 --version)" >> /tmp/versions.txt
