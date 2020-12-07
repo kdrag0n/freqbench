@@ -12,6 +12,7 @@ CONFIG_CPU_FREQ_TIMES=n  # may not exist
 CONFIG_CPU_FREQ_GOV_POWERSAVE=y
 CONFIG_CPU_FREQ_GOV_USERSPACE=y
 CONFIG_DEVTMPFS=y
+CONFIG_HZ_100=y
 ```
 
 Example commit: [kirin_defconfig: Configure for freqbench](https://github.com/kdrag0n/proton_zf6/commit/4bbe2cf0039b798b59ad056fd45d0c47d5c6ec66)
@@ -23,11 +24,11 @@ If you have any commits that prevent userspace from controlling CPU affinities a
 - [Preventing userspace from setting minimum CPU frequencies](https://github.com/kdrag0n/proton_kernel_wahoo/commit/d9d2fe54e87f9)
 - [Ratelimiting fuel gauge queries](https://github.com/kdrag0n/proton_kernel_wahoo/commit/87ac3f89c7392)
 
-Example freqbench kernel changes:
+Example freqbench kernel adaptations:
 
 - [Pixel 2, msm-4.4](https://github.com/kdrag0n/proton_kernel_wahoo/commits/alpine-fbench)
 - [ZenFone 6, msm-4.14](https://github.com/kdrag0n/proton_zf6/commits/alpine-fbench-basic-example)
-- [Pixel 5, msm-4.19](https://github.com/kdrag0n/proton_kernel_redbull/commits/alpine-fbench-basic-example)
+- [Pixel 5, msm-4.19](https://github.com/kdrag0n/proton_kernel_redbull/commits/alpine-fbench-basic-example) (this device uses boot image v3, so it follows the manual boot image guide below)
 
 Compile and flash your new kernel. Note that Android will not work properly on this kernel, so make sure you take a backup of your old boot image to restore later.
 
