@@ -21,6 +21,13 @@ If you have any commits that prevent userspace from controlling CPU affinities a
 - [Performance-critical IRQs and kthreads](https://github.com/kdrag0n/proton_kernel_wahoo/commit/29b315cd5f3a6)
 - [Existing efficient frequency tables](https://github.com/kdrag0n/proton_kernel_wahoo/commit/9b98ee3fabd14)
 - [Preventing userspace from setting minimum CPU frequencies](https://github.com/kdrag0n/proton_kernel_wahoo/commit/d9d2fe54e87f9)
+- [Ratelimiting fuel gauge queries](https://github.com/kdrag0n/proton_kernel_wahoo/commit/87ac3f89c7392)
+
+Example freqbench kernel changes:
+
+- [Pixel 2, msm-4.4](https://github.com/kdrag0n/proton_kernel_wahoo/commits/alpine-fbench)
+- [ZenFone 6, msm-4.14](https://github.com/kdrag0n/proton_zf6/commits/alpine-fbench-basic-example)
+- [Pixel 5, msm-4.19](https://github.com/kdrag0n/proton_kernel_redbull/commits/alpine-fbench-basic-example)
 
 Compile and flash your new kernel. Note that Android will not work properly on this kernel, so make sure you take a backup of your old boot image to restore later.
 
