@@ -16,12 +16,13 @@ set -euo pipefail
 # Should usually stay the same
 BLOCK_DEV=/dev/sda
 
-# Must be in /persist or /tmp
-OUT_DIR=/persist/freqbench
-
 ####################################################
 ###################  END CONFIG  ###################
 ####################################################
+
+# Must be in /persist or /tmp
+# /persist will be mounted from the cache partition if it exists
+OUT_DIR=/persist/freqbench
 
 
 # Populate PATH and other basic settings
