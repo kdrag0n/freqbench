@@ -133,11 +133,14 @@ time taskset 01 python3 /bench.py 2>&1 | tee /tmp/run.log || on_error
 set +e
 cat /proc/interrupts > /tmp/post_bench_interrupts.txt
 cat /proc/cmdline | redact_serial > /tmp/cmdline.txt
+cat /proc/cpuinfo > /tmp/cpuinfo.txt
 dmesg | redact_serial > /tmp/kernel.log
 uptime > /tmp/uptime.txt
 ps -A > /tmp/processes.txt
 echo "Kernel: $(cat /proc/version)" > /tmp/versions.txt
 echo "Python: $(python3 --version)" >> /tmp/versions.txt
+echo "Model: $(cat /sys/firmware/devicetree/base/model)" > /tmp/device.txt
+echo "Compatible: $(cat /sys/firmware/devicetree/base/compatible | tr '\0' ',')" >> /tmp/device.txt
 find /dev > /tmp/dev.list
 find /sys | gzip > /tmp/sysfs.list.gz
 
