@@ -55,7 +55,7 @@ Example freqbench kernel adaptations:
 
 Compile and flash your new kernel. Note that Android will not work properly on this kernel, so make sure you take a backup of your old boot image to restore later.
 
-Adjust the config parameters at the top of `bench.py` and `init.sh` as appropriate for your device. Run `pack-zip.sh` and flash `freqbench-installer.zip`.
+If necessary, adjust the config parameters in `config.sh`. Most modern devices will not need any changes. Run `pack-zip.sh` and flash `freqbench-installer.zip`.
 
 Unplug the device immediately, before the device starts booting. Do not try to wait for it to finish booting. Leaving the device plugged in will invalidate all power results.
 

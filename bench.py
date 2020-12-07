@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import os
+import sys
 import time
 import subprocess
 import gc
@@ -13,22 +14,8 @@ import csv
 # Need to avoid as much extra CPU usage as possible
 gc.disable()
 
-
-
-####################################################
-################### START CONFIG ###################
-####################################################
-
-# Verbose debug logging
-# DO NOT ENABLE for final benchmarking!
-# The extra framebuffer memory copies caused by it will influence results.
+# Verbose logging
 DEBUG = False
-
-####################################################
-###################  END CONFIG  ###################
-####################################################
-
-
 
 # sysfs power supply node for power sampling
 POWER_SUPPLY = None
@@ -96,6 +83,13 @@ for fg_string, interval in POWER_SAMPLE_FG_DEFAULT_INTERVALS.items():
     if fg_string in psy_name:
         POWER_SAMPLE_INTERVAL = interval
         break
+
+if len(sys.argv) > 1:
+    DEBUG = int(sys.argv[1]) > 0
+
+    override_interval = int(sys.argv[2])
+    if override_interval > 0:
+        POWER_SAMPLE_INTERVAL = override_interval
 
 # Calculate prealloc slots now that the interval is known
 PREALLOC_SLOTS = int(PREALLOC_SECONDS / (POWER_SAMPLE_INTERVAL / 1000))

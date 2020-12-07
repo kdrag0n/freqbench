@@ -1,34 +1,17 @@
 #!/usr/bin/env bash
 
-# Deps: python3 util-linux bash
-# Execs: /usr/bin/coremark
-# Governors: powersave userspace
-# Kernel config: CONFIG_DEVTMPFS
-# Kernel cmdline: printk.devkmsg=on isolcpus=1-7 (depends on CPU count)
-
 set -euo pipefail
 
+# Populate PATH and other basic env
+source /etc/profile
+# For htop config
+export HOME=/root
 
-####################################################
-################### START CONFIG ###################
-####################################################
-
-# Should usually stay the same
-BLOCK_DEV=/dev/sda
-
-####################################################
-###################  END CONFIG  ###################
-####################################################
+source /config.sh
 
 # Must be in /persist or /tmp
 # /persist will be mounted from the cache partition if it exists
 OUT_DIR=/persist/freqbench
-
-
-# Populate PATH and other basic settings
-source /etc/profile
-# For htop config
-export HOME=/root
 
 reboot_end() {
     echo
@@ -127,7 +110,7 @@ set -e
 
 cat /proc/interrupts > /tmp/pre_bench_interrupts.txt
 
-time taskset 01 python3 /bench.py 2>&1 | tee /tmp/run.log || on_error
+time taskset 01 python3 /bench.py $DEBUG $POWER_SAMPLE_INTERVAL 2>&1 | tee /tmp/run.log || on_error
 
 # Gather system info
 set +e
