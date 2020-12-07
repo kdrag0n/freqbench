@@ -31,7 +31,12 @@ POWER_SUPPLY = "/sys/class/power_supply/bms"
 POWER_SAMPLE_INTERVAL = 250  # ms
 
 
-#### Don't change these unless you know what you're doing
+
+####################################################
+###################  END CONFIG  ###################
+####################################################
+
+
 
 # Must also set in init
 HOUSEKEEPING_CPU = 0
@@ -41,13 +46,6 @@ HOUSEKEEPING_CPU = 0
 REPLACE_CPUS = {
     HOUSEKEEPING_CPU: 1,
 }
-
-
-####################################################
-###################  END CONFIG  ###################
-####################################################
-
-
 
 # How long to idle at each freq and measure power before benchmarking
 FREQ_IDLE_TIME = 5  # sec
