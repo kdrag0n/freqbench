@@ -113,7 +113,23 @@ Several post-processing scripts, all written in Python and many using `matplotli
 
 Create a legacy EAS energy model for use with older kernels.
 
-Example usage: `./legacy_em.py results.json`
+Optional argument after path to results: `key_type/value_type`
+
+Key types:
+
+- Frequency (default) - looks like `652800` or `2323200`
+- Capacity - looks like `139` or `1024`
+
+You must use the correct key type for your kernel. When in doubt, refer to your original energy model and check which one the numbers look more like.
+
+Value types:
+
+- Power (default)
+- Energy (experimental)
+
+Do not change the value type unless you know what you're doing.
+
+Example usage: `./legacy_em.py results.json cap/power`
 
 ### Simplified energy model
 
