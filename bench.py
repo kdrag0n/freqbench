@@ -17,7 +17,7 @@ gc.disable()
 # Verbose logging
 DEBUG = False
 
-# sysfs power supply node for power sampling
+# sysfs power supply nodes for power sampling
 POWER_SUPPLY = None
 POWER_SUPPLY_NODES = [
     # Qualcomm Battery Management System + fuel gauge: preferred when available for more info
@@ -25,6 +25,8 @@ POWER_SUPPLY_NODES = [
     # Most common
     "/sys/class/power_supply/battery",
 ]
+# Some fuel gauges need current scaling
+CURRENT_FACTOR = 1
 
 # Default power sampling intervals
 POWER_SAMPLE_INTERVAL = 1000  # ms
@@ -84,6 +86,12 @@ for fg_string, interval in POWER_SAMPLE_FG_DEFAULT_INTERVALS.items():
         POWER_SAMPLE_INTERVAL = interval
         break
 
+# Maxim PMICs used on Exynos devices report current in mA, not µA
+with open(f"{POWER_SUPPLY}/current_now", "r") as f:
+    # Assumption: will never be below 1 mA
+    if abs(int(f.read())) <= 1000:
+        CURRENT_FACTOR = 1000
+
 if len(sys.argv) > 1:
     DEBUG = int(sys.argv[1]) > 0
 
@@ -111,7 +119,7 @@ def run_cmd(args):
 
 def sample_power():
     with open(f"{POWER_SUPPLY}/current_now", "r") as f:
-        ma = int(f.read()) / 1000
+        ma = int(f.read()) * CURRENT_FACTOR / 1000
     with open(f"{POWER_SUPPLY}/voltage_now", "r") as f:
         mv = int(f.read()) / 1000
 
