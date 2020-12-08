@@ -122,6 +122,16 @@ Key types:
 
 You must use the correct key type for your kernel. When in doubt, refer to your original energy model and check which one the numbers look more like.
 
+In general, downstream Qualcomm kernels will use the following key types depending on version:
+
+- 3.18: capacity
+- 4.4: capacity
+- 4.9: frequency
+- 4.14: frequency
+- 4.19: N/A (uses simplified energy model instead)
+
+Modifying your kernel to switch from one to the other is left as an exercise for the reader.
+
 Value types:
 
 - Power (default)
