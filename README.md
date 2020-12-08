@@ -125,9 +125,9 @@ You must use the correct key type for your kernel. When in doubt, refer to your 
 Value types:
 
 - Power (default)
-- Energy (experimental)
+- Energy (experimental, not recommended)
 
-Do not change the value type unless you know what you're doing.
+Do not change the value type unless you know what you're doing. The energy type only exists for testing purposes; do not expect it to work properly.
 
 Example usage: `./legacy_em.py results.json cap/power`
 
