@@ -1,5 +1,7 @@
 # freqbench
 
+![Power usage in mW per frequency per cluster for Qualcomm Snapdragon 835, 855, and 765G](https://user-images.githubusercontent.com/7930239/101429518-fb3a3a80-38b7-11eb-8005-5edf2d12a4d6.png)
+
 freqbench is a comprehensive CPU benchmark that benchmarks each CPU frequency step on each frequency scaling domain (e.g. ARM DynamIQ/big.LITTLE cluster). It is based on a minimal Alpine Linux userspace with the [EEMBC CoreMark](https://www.eembc.org/coremark/) workload and a Python benchmark coordinator.
 
 Results include:
