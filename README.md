@@ -139,6 +139,8 @@ Value types:
 
 Do not change the value type unless you know what you're doing. The energy type only exists for testing purposes; do not expect it to work properly.
 
+Once you have a full energy model generated, pick out the parts you need and incorporate them into your SoC device tree. In general, kernels 4.19 need `capacity-dmips-mhz`, while older kernels need `efficiency` when it comes to the contents of the CPU sections.
+
 Example usage: `./legacy_em.py results.json cap/power`
 
 ### Simplified energy model
@@ -159,7 +161,13 @@ Derive a list of efficient frequencies for each cluster and create a new results
 
 Note that this script is **experimental** and may not produce optimal results. Manual tuning of the resulting frequency tables is recommended.
 
-Example usage: `./efficient_freqs.py results.json`
+Example usage: `./efficient_freqs.py results.json eff_results.json`
+
+### Filter frequencies
+
+Create a new results.json with only the specified frequencies included.
+
+Example usage: `./filter_freqs.py results.json filtered_results.json 1.1516800 1.1804800 6.1478400 6.1728000 6.2208000 7.1766400 7.2188800 7.2304000 7.2400000`
 
 ### Cross-CPU cluster graph
 
