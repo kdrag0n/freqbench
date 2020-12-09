@@ -58,7 +58,10 @@ print("""\t};
 \tenergy_costs: energy-costs {
 \t\tcompatible = "sched-energy";""")
 
-max_perf = max(max(freq["active"]["coremark_score"] for freq in cpu["freqs"].values()) for cpu in cpus_data.values())
+max_perf = max(
+    max(freq["active"]["coremark_score"]
+    for freq in cpu["freqs"].values()) for cpu in cpus_data.values()
+)
 
 for cpu_i, (cpu, cpu_data) in enumerate(cpus_data.items()):
     cpu = int(cpu)
@@ -76,7 +79,6 @@ for cpu_i, (cpu, cpu_data) in enumerate(cpus_data.items()):
         elif value_type == "energy":
             value = freq_data["active"]["energy_millijoules"]
 
-
         if key_type == "freq":
             key = freq
             print(f"\t\t\t\t{key: 8.0f}{value: 5.0f}")
@@ -85,6 +87,7 @@ for cpu_i, (cpu, cpu_data) in enumerate(cpus_data.items()):
             print(f"\t\t\t\t{key: 5.0f}{value: 5.0f}")
 
     print("""\t\t\t>;
+
 \t\t\tidle-cost-data = <
 \t\t\t\t3 2 1
 \t\t\t>;
