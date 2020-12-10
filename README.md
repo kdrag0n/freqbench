@@ -107,7 +107,7 @@ After the benchmark finishes, results can be found in `/cache/freqbench`, `/pers
 
 ## Post-processing
 
-Several post-processing scripts, all written in Python and many using `matplotlib`, are available:
+Several post-processing scripts, all written in Python and some using `matplotlib`, are available:
 
 ### Legacy energy model
 
@@ -141,7 +141,9 @@ Do not change the value type unless you know what you're doing. The energy type 
 
 Once you have a full energy model generated, pick out the parts you need and incorporate them into your SoC device tree. In general, kernels 4.19 need `capacity-dmips-mhz`, while older kernels need `efficiency` when it comes to the contents of the CPU sections.
 
-Example usage: `./legacy_em.py results.json cap/power`
+If you have an existing energy model that you want to use for idle and cluster costs, add it as an argument.
+
+Example usage: `./legacy_em.py results.json cap/power old_model.dtsi`
 
 ### Simplified energy model
 
