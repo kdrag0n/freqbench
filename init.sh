@@ -66,7 +66,7 @@ find_part_by_name() {
 }
 
 redact_serial() {
-    sed -E 's/androidboot.serialno=[A-Z0-9]+/androidboot.serialno=REDACTED/'
+    sed -E 's/androidboot.serialno=[A-Za-z0-9]+/androidboot.serialno=REDACTED/'
 }
 
 # Add delay for error visibility
