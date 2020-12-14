@@ -5,7 +5,7 @@ These are reference freqbench results that have been collected from various devi
 ## Index
 
 | Name | SoC name | SoC model | Device | Accuracy |
-| - | - | - | - | - |
+| ---- | -------- | --------- | ------ | -------- |
 | msm8998 | Snapdragon 835 | MSM8998 | Google Pixel 2 XL | Verified |
 | sm7250ab | Snapdragon 765G | SM7250-AB | Google Pixel 5 | Verified |
 | sm8150 | Snapdragon 855 | SM8150-AA | Asus ZenFone 6 | Verified |
