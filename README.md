@@ -65,7 +65,9 @@ Finally, wait until the device reboots itself. Do not touch the device, any of i
 
 Once the benchmark is done, retrieve the results from `/cache/freqbench` if your device has a cache partition, or `/persist/freqbench` otherwise (newer devices with A/B partitions don't have a cache partition).
 
-**If you have any problems, check the troubleshooting section before opening an issue!**
+If you are able to retrieve results, **please consider [contributing your results](#contributing-results)!** It's very helpful for me to see how well freqbench is working, and enables anyone to analyze results across different SoCs that they don't have.
+
+If you have any problems, check the troubleshooting section before opening an issue.
 
 ### Manual boot image creation
 
@@ -104,6 +106,24 @@ After that, boot the modified image with `fastboot boot` if your device supports
 ## Results
 
 After the benchmark finishes, results can be found in `/cache/freqbench`, `/persist/freqbench`, or `/mnt/vendor/persist/freqbench`, in that order of preference. The first path that exists on your device will be used. Human-readable results, raw machine-readable JSON data, and diagnostic information are included for analysis.
+
+If you got this far, please consider contributing your results to help freqbench evolve and gather data about different SoCs:
+
+### Contributing results
+
+If you run the benchmark on a SoC that is not [already included](https://github.com/kdrag0n/freqbench/tree/master/results), **please contribute your results!** It's very helpful for me to see how well freqbench is working, and enables anyone to analyze results across different SoCs that they don't have.
+
+Contributing your results is easy:
+
+1. [Fork this repository](https://github.com/kdrag0n/freqbench/)
+2. Add your **entire results folder** (not just one file from it) to `results/socname/main`, replacing `socname` with the model name of your SoC in lowercase
+3. [Open a pull request](https://github.com/kdrag0n/freqbench/compare)
+
+If you don't know your SoC's model name, search the name of your SoC (e.g. [Snapdragon 855](https://www.qualcomm.com/products/snapdragon-855-mobile-platform)) and find the part number from the SoC manufacturer. You can also get it from your kernel source code and/or `device.txt` or `cpuinfo.txt` in the freqbench results. If you are still unsure, feel free to open an issue or guess the name.
+
+Identifiable information such as the device serial number is automatically redacted by freqbench, so it should not be a problem.
+
+Don't worry about getting something wrong; I would much rather have results submitted with mistakes than nothing at all.
 
 ## Post-processing
 
