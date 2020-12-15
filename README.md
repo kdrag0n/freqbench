@@ -121,6 +121,14 @@ Contributing your results is easy:
 
 If you don't know your SoC's model name, search the name of your SoC (e.g. [Snapdragon 855](https://www.qualcomm.com/products/snapdragon-855-mobile-platform)) and find the part number from the SoC manufacturer. You can also get it from your kernel source code and/or `device.txt` or `cpuinfo.txt` in the freqbench results. If you are still unsure, feel free to open an issue or guess the name.
 
+Example names:
+
+- `sm8150`
+- `sm8150ac`
+- `sm7250ab`
+- `exynos8895`
+- `mt6889`
+
 Identifiable information such as the device serial number is automatically redacted by freqbench, so it should not be a problem.
 
 Don't worry about getting something wrong; I would much rather have results submitted with mistakes than nothing at all.
