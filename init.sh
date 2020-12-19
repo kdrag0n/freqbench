@@ -61,7 +61,11 @@ fi
 #exec > /dev/null 2>&1
 
 find_part_by_name() {
-    partnum="$(sgdisk -p "$BLOCK_DEV" | grep -i " $1$" | head -n1 | awk '{print $1}')"
+    plist="$(sgdisk -p "$BLOCK_DEV")"
+    # Check for existence first
+    echo "$plist" | grep -qi " $1$" || return $?
+
+    partnum="$(echo "$plist" | grep -i " $1$" | head -n1 | awk '{print $1}')"
     if [[ -f "${BLOCK_DEV}p1" ]]; then
         echo "${BLOCK_DEV}p${partnum}"
     else
