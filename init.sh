@@ -102,7 +102,9 @@ save_logs() {
 
 # SSH debug over USB RNDIS
 set +e
-#source /usb.sh
+if $USB_DEBUG; then
+    source /usb.sh
+fi
 set -e
 
 # Disable fbcon cursor blinking to reduce interference from its 1-second timer and memory ops

@@ -243,9 +243,11 @@ If you have a slow CPU with a lot of frequency steps, this is not entirely unrea
 
 ### I want to debug it while it's running
 
-freqbench offers interactive debugging via SSH over virtual USB Ethernet; the device acts as a USB Ethernet adapter and exposes an SSH server on the internal network. Uncomment `source /usb.sh` in init.sh to enable it and boot freqbench again. The feature is disabled by default to avoid unnecessary USB setup that may influence benchmark results, so keeping it enabled for a final benchmark run is not recommended.
+freqbench offers interactive debugging via SSH over virtual USB Ethernet; the device acts as a USB Ethernet adapter and exposes an SSH server on the internal network. This feature can be enabled with the `USB_DEBUG` option in `config.sh`. It is disabled by default to avoid unnecessary USB setup that may influence benchmark results, so keeping it enabled for a final benchmark run is not recommended.
 
-Connect your device to a computer over USB. You should see something like this in your kernel logs if you are running Linux:
+`CONFIG_USB_CONFIGFS_RNDIS` must be enabled for this feature to work. If your kernel does not have or use configfs for USB configuration, it will not work regardless of whether you have the RNDIS function enabled.
+
+Once it's enabled, connect your device to a computer over USB. You should see something like this in your kernel logs if you are running Linux:
 
 ```log
 [7064379.627645] usb 7-3: new high-speed USB device number 114 using xhci_hcd
@@ -258,4 +260,4 @@ Connect your device to a computer over USB. You should see something like this i
 [7064379.870018] rndis_host 7-3:1.0 enp71s0f1u3: renamed from usb0
 ```
 
-Run the SSH command in the serial number field to open a shell to the device. The password is empty, so just press enter when asked to input a password.
+Run the SSH command in the serial number field to open a shell to the device. The password is empty, so just press enter when asked to provide a password.
