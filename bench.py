@@ -93,7 +93,7 @@ with open(f"{POWER_SUPPLY}/current_now", "r") as f:
         CURRENT_FACTOR = 1000
 
 if len(sys.argv) > 1:
-    DEBUG = int(sys.argv[1]) > 0
+    DEBUG = sys.argv[1] == "true"
 
     override_interval = int(sys.argv[2])
     if override_interval > 0:
