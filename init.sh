@@ -132,8 +132,8 @@ uptime > /tmp/uptime.txt
 ps -A > /tmp/processes.txt
 echo "Kernel: $(cat /proc/version)" > /tmp/versions.txt
 echo "Python: $(python3 --version)" >> /tmp/versions.txt
-echo "Model: $(cat /sys/firmware/devicetree/base/model)" > /tmp/device.txt
-echo "Compatible: $(cat /sys/firmware/devicetree/base/compatible | tr '\0' ',')" >> /tmp/device.txt
+echo "Model: $(cat /sys/firmware/devicetree/base/model | tr '\0' ';')" > /tmp/device.txt
+echo "Compatible: $(cat /sys/firmware/devicetree/base/compatible | tr '\0' ';')" >> /tmp/device.txt
 find /dev > /tmp/dev.list
 find /sys | gzip > /tmp/sysfs.list.gz
 
