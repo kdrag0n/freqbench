@@ -66,7 +66,7 @@ find_part_by_name() {
     echo "$plist" | grep -qi " $1$" || return $?
 
     partnum="$(echo "$plist" | grep -i " $1$" | head -n1 | awk '{print $1}')"
-    if [[ -f "${BLOCK_DEV}p1" ]]; then
+    if [[ -e "${BLOCK_DEV}p1" ]]; then
         echo "${BLOCK_DEV}p${partnum}"
     else
         echo "${BLOCK_DEV}${partnum}"
