@@ -92,7 +92,7 @@ save_logs() {
 
     # We write everything to tmpfs and copy it to persist afterwards because writing to UFS will use power
     echo
-    mount -t ext4 -o noatime,nosuid,nodev,barrier=1 "$persist_part" /persist
+    mount -o noatime "$persist_part" /persist
 
     echo "Writing logs and results to $OUT_DIR"
     rm -fr "$OUT_DIR"
