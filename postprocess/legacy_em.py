@@ -174,7 +174,6 @@ for cpu_i, (cpu, cpu_data) in enumerate(cpus_data.items()):
         idle_costs = "3 2 1"
 
     print(f"""\t\t\t>;
-
 \t\t\tidle-cost-data = <
 \t\t\t\t{idle_costs}
 \t\t\t>;
