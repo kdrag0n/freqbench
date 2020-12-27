@@ -12,3 +12,4 @@ These are reference freqbench results that have been collected from various devi
 | msm8998 | Snapdragon 835 | MSM8998 | Google Pixel 2 XL | Verified |
 | sm8150 | Snapdragon 855 | SM8150-AA | Asus ZenFone 6 | Verified |
 | sm8150ac | Snapdragon 855+ | SM8150-AC | Asus ROG Phone II | Verified |
+| sm8250 | Snapdragon 865 | SM8250 | Xiaomi Mi 10T Pro | Unknown |
