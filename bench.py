@@ -196,6 +196,7 @@ def main():
     bench_start_time = time.time()
 
     print(BANNER)
+    pr_debug("Running in debug mode")
 
     print("Frequency domains: ", end="", flush=True)
     bench_cpus = []
@@ -229,7 +230,11 @@ def main():
     write_cpu(HOUSEKEEPING_CPU, "cpufreq/scaling_governor", "powersave")
     pr_debug()
 
+    pr_debug(f"Using power supply: {POWER_SUPPLY}")
+    pr_debug(f"Scaling current by {CURRENT_FACTOR}x")
+
     print(f"Sampling power every {POWER_SAMPLE_INTERVAL} ms")
+    pr_debug(f"Pre-allocated {PREALLOC_SLOTS} sample slots for {PREALLOC_SECONDS} seconds")
     print("Baseline power usage: ", end="", flush=True)
     pr_debug("Waiting for power usage to settle", flush=True)
     time.sleep(15)
