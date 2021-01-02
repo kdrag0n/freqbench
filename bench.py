@@ -140,6 +140,7 @@ def start_power_thread(sample_interval=POWER_SAMPLE_INTERVAL):
 
             # Check stop flag immediately after sleep to avoid a low last reading
             if _stop_power_mon:
+                pr_debug("Stopping power monitor due to global stop flag")
                 break
 
             current, voltage, power = sample_power()
@@ -148,14 +149,17 @@ def start_power_thread(sample_interval=POWER_SAMPLE_INTERVAL):
             try:
                 sample_dest[count] = power
             except IndexError:
+                pr_debug("Pre-allocated sample slots exhausted, falling back to dynamic allocation")
                 # If out of pre-allocated slots
                 sample_dest.append(power)
 
             count += 1
 
         if count < len(sample_dest):
+            pr_debug(f"Truncating to first {count} samples from pre-allocated array")
             _power_samples = sample_dest[:count]
 
+    pr_debug("Starting power monitor thread")
     thread = threading.Thread(target=_power_thread, daemon=True)
     thread.start()
     return thread
@@ -163,19 +167,24 @@ def start_power_thread(sample_interval=POWER_SAMPLE_INTERVAL):
 def stop_power_thread(thread):
     global _stop_power_mon
 
+    pr_debug("Setting flag to stop power monitor")
     _stop_power_mon = True
+    pr_debug("Waiting for power monitor to stop")
     thread.join()
     _stop_power_mon = False
 
     return _power_samples
 
 def write_cpu(cpu, node, content):
+    pr_debug(f"Writing CPU value: cpu{cpu}/{node} => {content}")
     with open(f"{SYS_CPU}/cpu{cpu}/{node}", "w") as f:
         f.write(content)
 
 def read_cpu(cpu, node):
     with open(f"{SYS_CPU}/cpu{cpu}/{node}", "r") as f:
-        return f.read().strip()
+        content = f.read().strip()
+        pr_debug(f"Reading CPU value: cpu{cpu}/{node} = {content}")
+        return content
 
 def create_power_stats(time_ns, samples):
     sec = time_ns / 1e9
