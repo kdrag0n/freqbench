@@ -89,7 +89,8 @@ for fg_string, interval in POWER_SAMPLE_FG_DEFAULT_INTERVALS.items():
 # Maxim PMICs used on Exynos devices report current in mA, not µA
 with open(f"{POWER_SUPPLY}/current_now", "r") as f:
     # Assumption: will never be below 1 mA
-    if abs(int(f.read())) <= 1000:
+    ref_current = int(f.read())
+    if abs(ref_current) <= 1000:
         CURRENT_FACTOR = 1000
 
 if len(sys.argv) > 1:
@@ -124,7 +125,7 @@ def sample_power():
         mv = int(f.read()) / 1000
 
     mw = ma * mv / 1000
-    return abs(mw)
+    return ma, mv, abs(mw)
 
 def start_power_thread(sample_interval=POWER_SAMPLE_INTERVAL):
     def _power_thread():
@@ -141,8 +142,8 @@ def start_power_thread(sample_interval=POWER_SAMPLE_INTERVAL):
             if _stop_power_mon:
                 break
 
-            power = sample_power()
-            pr_debug(f"Power: {power}\t(sample {count})")
+            current, voltage, power = sample_power()
+            pr_debug(f"Power: {power} mW\t(sample {count} from {current} mA * {voltage} mV)")
 
             try:
                 sample_dest[count] = power
@@ -231,10 +232,11 @@ def main():
     pr_debug()
 
     pr_debug(f"Using power supply: {POWER_SUPPLY}")
-    pr_debug(f"Scaling current by {CURRENT_FACTOR}x")
+    pr_debug(f"Scaling current by {CURRENT_FACTOR}x (derived from initial sample: {ref_current})")
 
     print(f"Sampling power every {POWER_SAMPLE_INTERVAL} ms")
     pr_debug(f"Pre-allocated {PREALLOC_SLOTS} sample slots for {PREALLOC_SECONDS} seconds")
+    pr_debug(f"Power sample interval adjusted for power supply: {psy_name}")
     print("Baseline power usage: ", end="", flush=True)
     pr_debug("Waiting for power usage to settle", flush=True)
     time.sleep(15)
