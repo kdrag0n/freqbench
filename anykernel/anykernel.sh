@@ -28,7 +28,7 @@ ramdisk_compression=auto;
 ## AnyKernel install
 split_boot;
 
-cores=$(nproc)
+cores=$(grep '^processor' /proc/cpuinfo | wc -l)
 bench_cpus=1-$((cores - 1))
 patch_cmdline isolcpus isolcpus=$bench_cpus
 patch_cmdline nohz_full nohz_full=$bench_cpus
