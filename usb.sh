@@ -24,7 +24,7 @@ echo -n 0x4daf > $gadget/idProduct
 # Product strings
 echo -n "Linux" > $strings/manufacturer
 echo -n "Alpine GNU/Linux" > $strings/product
-echo -n "Starting SSH and DHCP servers..." > $serial
+echo -n "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@$LOCAL_IP" > $serial
 # RNDIS
 mkdir $gadget/functions/rndis.usb0
 echo -n rndis > $func_config/configuration
@@ -40,7 +40,6 @@ dropbear -RBFE &
 mkdir /tmp/usb
 touch /tmp/usb/dhcpd4.leases
 INTERFACES=usb0 dhcpd -4 -f -cf /dhcpd.conf -pf /tmp/usb/dhcpd4.pid -lf /tmp/usb/dhcpd4.leases &
-echo -n "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@$LOCAL_IP" > $serial
 echo "SSH server running at $LOCAL_IP"
 
 set +v
