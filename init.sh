@@ -157,4 +157,4 @@ save_logs
 # To debug system load
 #htop
 
-reboot_end ''
+reboot_end recovery
