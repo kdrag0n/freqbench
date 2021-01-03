@@ -14,9 +14,6 @@ import csv
 # Need to avoid as much extra CPU usage as possible
 gc.disable()
 
-# Verbose logging
-DEBUG = False
-
 # sysfs power supply nodes for power sampling
 POWER_SUPPLY = None
 POWER_SUPPLY_NODES = [
@@ -87,9 +84,7 @@ for fg_string, interval in POWER_SAMPLE_FG_DEFAULT_INTERVALS.items():
         break
 
 if len(sys.argv) > 1:
-    DEBUG = sys.argv[1] == "true"
-
-    override_interval = int(sys.argv[2])
+    override_interval = int(sys.argv[1])
     if override_interval > 0:
         POWER_SAMPLE_INTERVAL = override_interval
 
@@ -101,7 +96,7 @@ _prealloc_samples = [-1] * PREALLOC_SLOTS
 _power_samples = _prealloc_samples
 
 def pr_debug(*args, **kwargs):
-    if DEBUG:
+    if __debug__:
         print(*args, **kwargs)
 
 def run_cmd(args):

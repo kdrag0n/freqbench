@@ -120,7 +120,12 @@ set -e
 
 cat /proc/interrupts > /tmp/pre_bench_interrupts.txt
 
-time taskset 01 python3 /bench.py $DEBUG $POWER_SAMPLE_INTERVAL 2>&1 | tee /tmp/run.log || on_error
+py_args=()
+if ! $DEBUG; then
+    py_args+=(-OO)
+fi
+py_args+=(/bench.py "$POWER_SAMPLE_INTERVAL")
+time taskset 01 python3 "${py_args[@]}" 2>&1 | tee /tmp/run.log || on_error
 
 # Gather system info
 set +e
