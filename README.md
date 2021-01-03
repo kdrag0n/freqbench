@@ -76,11 +76,11 @@ Manually creating a new boot image with the kernel and ramdisk is only for advan
 Additional kernel config options:
 
 ```bash
-CONFIG_CMDLINE="isolcpus=1-7 nohz_full=1-7 loglevel=0 printk.devkmsg=on"
+CONFIG_CMDLINE="rcu_nocbs=1-7 isolcpus=1-7 nohz_full=1-7 loglevel=0 printk.devkmsg=on"
 CONFIG_CMDLINE_EXTEND=y
 ```
 
-If you do not have 8 CPU cores, adjust `1-7` to `1-<core count - 1>`. Single-core CPUs are not supported.
+If you don't have 8 CPU cores, adjust `1-7` to `1-<core count - 1>`. Single-core CPUs are not supported.
 
 Create a boot image with your modified kernel and the freqbench ramdisk:
 
