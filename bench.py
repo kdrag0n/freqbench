@@ -226,10 +226,33 @@ def init_cpus():
 
     return bench_cpus, cpu_count
 
+def check_charging(node, charging_value, charging_warned):
+    if os.path.exists(node):
+        with open(node, "r") as f:
+            psy_status = f.read().strip()
+            pr_debug(f"Power supply status at {node}: {psy_status}")
+            if psy_status == charging_value and not charging_warned:
+                print()
+                print("=============== WARNING ===============")
+                print("Detected power supply in charging state!")
+                print("Power measurements will be invalid and benchmark results may be affected.")
+                print("Unplug the device and restart the benchmark for valid results.")
+                print("=============== WARNING ===============")
+                print()
+                return True
+
+    return charging_warned
+
 def init_power():
     global CURRENT_FACTOR
 
     pr_debug(f"Using power supply: {POWER_SUPPLY}")
+
+    charging_warned = False
+    charging_warned = check_charging(f"{POWER_SUPPLY}/status", "Charging", charging_warned)
+    charging_warned = check_charging(f"/sys/class/power_supply/battery/status", "Charging", charging_warned)
+    charging_warned = check_charging(f"/sys/class/power_supply/usb/present", "1", charging_warned)
+    charging_warned = check_charging(f"/sys/class/power_supply/dc/present", "1", charging_warned)
 
     # Some PMICs may give unstable readings at this point
     pr_debug("Waiting for power usage to settle for initial current measurement")
