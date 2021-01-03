@@ -439,12 +439,13 @@ def main():
         },
     }
 
+    pr_debug("Writing JSON results")
     results_json = json.dumps(data)
     pr_debug(results_json)
     with open("/tmp/results.json", "w+") as f:
         f.write(results_json)
 
-    pr_debug("Writing CSV data")
+    pr_debug("Writing CSV results")
     with open("/tmp/results.csv", "w+") as f:
         fields = [
             "CPU",
