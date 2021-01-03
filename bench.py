@@ -191,14 +191,7 @@ def create_power_stats(time_ns, samples):
         "energy_joules": joules,
     }
 
-def main():
-    global CURRENT_FACTOR
-
-    bench_start_time = time.time()
-
-    print(BANNER)
-    pr_debug("Running in debug mode")
-
+def init_cpus():
     print("Frequency domains: ", end="", flush=True)
     bench_cpus = []
     for policy_dir in sorted(os.listdir(f"{SYS_CPU}/cpufreq")):
@@ -231,6 +224,11 @@ def main():
     write_cpu(HOUSEKEEPING_CPU, "cpufreq/scaling_governor", "powersave")
     pr_debug()
 
+    return bench_cpus, cpu_count
+
+def init_power():
+    global CURRENT_FACTOR
+
     pr_debug(f"Using power supply: {POWER_SUPPLY}")
 
     # Some PMICs may give unstable readings at this point
@@ -260,6 +258,20 @@ def main():
     base_power = min(base_power_samples)
     print(f"{base_power:.0f} mW")
     print()
+
+    return base_power, base_power_samples
+
+def main():
+    bench_start_time = time.time()
+
+    print(BANNER)
+    pr_debug("Running in debug mode")
+
+    pr_debug("Initializing CPU states")
+    bench_cpus, cpu_count = init_cpus()
+
+    pr_debug("Initializing power measurements")
+    base_power, base_power_samples = init_power()
 
     pr_debug("Starting benchmark")
     pr_debug()
