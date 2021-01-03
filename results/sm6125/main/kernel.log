@@ -1,0 +1,1607 @@
+[    0.000000] [<0>][0, swapper]Booting Linux on physical CPU 0x0
+[    0.000000] [<0>][0, swapper]Linux version 4.14.210-20210102-1539-ReZero (diepquynh@lolicon) (Proton clang version 12.0.0 (https://github.com/llvm/llvm-project f502b14d40e751fe00afc493ef0d08f196524886)) #1 SMP PREEMPT Sat Jan 2 15:49:39 +07 2021
+[    0.000000] [<0>][0, swapper]Boot CPU: AArch64 Processor [51af8014]
+[    0.000000] [<0>][0, swapper]Powerup reason=0x40141
+[    0.000000] [<0>][0, swapper]Machine: Qualcomm Technologies, Inc. trinket pm6125 + pmi632 QRD
+[    0.000000] [<0>][0, swapper]mem-offine node not found in FDT
+[    0.000000] [<0>][0, swapper]Reserved memory: created CMA memory pool at 0x00000000fec00000, size 16 MiB
+[    0.000000] [<0>][0, swapper]OF: reserved mem: initialized node qseecom_ta_region, compatible id shared-dma-pool
+[    0.000000] [<0>][0, swapper]Reserved memory: created CMA memory pool at 0x00000000fcc00000, size 32 MiB
+[    0.000000] [<0>][0, swapper]OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+[    0.000000] [<0>][0, swapper]Reserved memory: created CMA memory pool at 0x00000000fc800000, size 4 MiB
+[    0.000000] [<0>][0, swapper]OF: reserved mem: initialized node sdsp_region, compatible id shared-dma-pool
+[    0.000000] [<0>][0, swapper]Reserved memory: created CMA memory pool at 0x00000000fc000000, size 8 MiB
+[    0.000000] [<0>][0, swapper]OF: reserved mem: initialized node adsp_region, compatible id shared-dma-pool
+[    0.000000] [<0>][0, swapper]Reserved memory: created CMA memory pool at 0x00000000f3400000, size 140 MiB
+[    0.000000] [<0>][0, swapper]OF: reserved mem: initialized node secure_display_region, compatible id shared-dma-pool
+[    0.000000] [<0>][0, swapper]Reserved memory: created CMA memory pool at 0x000000013fc00000, size 4 MiB
+[    0.000000] [<0>][0, swapper]OF: reserved mem: initialized node mem_dump_region, compatible id shared-dma-pool
+[    0.000000] [<0>][0, swapper]Removed memory: created DMA memory pool at 0x0000000045700000, size 6 MiB
+[    0.000000] [<0>][0, swapper]OF: reserved mem: initialized node hyp_region@45700000, compatible id removed-dma-pool
+[    0.000000] [<0>][0, swapper]Removed memory: created DMA memory pool at 0x0000000045e00000, size 1 MiB
+[    0.000000] [<0>][0, swapper]OF: reserved mem: initialized node xbl_aop_mem@45e00000, compatible id removed-dma-pool
+[    0.000000] [<0>][0, swapper]Removed memory: created DMA memory pool at 0x0000000045fff000, size 0 MiB
+[    0.000000] [<0>][0, swapper]OF: reserved mem: initialized node sec_apps_region@45fff000, compatible id removed-dma-pool
+[    0.000000] [<0>][0, swapper]Removed memory: created DMA memory pool at 0x0000000046000000, size 2 MiB
+[    0.000000] [<0>][0, swapper]OF: reserved mem: initialized node smem@46000000, compatible id removed-dma-pool
+[    0.000000] [<0>][0, swapper]Removed memory: created DMA memory pool at 0x0000000046200000, size 73 MiB
+[    0.000000] [<0>][0, swapper]OF: reserved mem: initialized node removed_region@46200000, compatible id removed-dma-pool
+[    0.000000] [<0>][0, swapper]Removed memory: created DMA memory pool at 0x000000004ab00000, size 5 MiB
+[    0.000000] [<0>][0, swapper]OF: reserved mem: initialized node camera_region@4ab00000, compatible id removed-dma-pool
+[    0.000000] [<0>][0, swapper]Removed memory: created DMA memory pool at 0x000000004b000000, size 126 MiB
+[    0.000000] [<0>][0, swapper]OF: reserved mem: initialized node modem_region@4b000000, compatible id removed-dma-pool
+[    0.000000] [<0>][0, swapper]Removed memory: created DMA memory pool at 0x0000000052e00000, size 5 MiB
+[    0.000000] [<0>][0, swapper]OF: reserved mem: initialized node pil_video_region@52e00000, compatible id removed-dma-pool
+[    0.000000] [<0>][0, swapper]Removed memory: created DMA memory pool at 0x0000000053300000, size 2 MiB
+[    0.000000] [<0>][0, swapper]OF: reserved mem: initialized node wlan_msa_region@53300000, compatible id removed-dma-pool
+[    0.000000] [<0>][0, swapper]Removed memory: created DMA memory pool at 0x0000000053500000, size 30 MiB
+[    0.000000] [<0>][0, swapper]OF: reserved mem: initialized node cdsp_regions@53500000, compatible id removed-dma-pool
+[    0.000000] [<0>][0, swapper]Removed memory: created DMA memory pool at 0x0000000055300000, size 34 MiB
+[    0.000000] [<0>][0, swapper]OF: reserved mem: initialized node pil_adsp_region@55300000, compatible id removed-dma-pool
+[    0.000000] [<0>][0, swapper]Removed memory: created DMA memory pool at 0x0000000057500000, size 0 MiB
+[    0.000000] [<0>][0, swapper]OF: reserved mem: initialized node ips_fw_region@57500000, compatible id removed-dma-pool
+[    0.000000] [<0>][0, swapper]Removed memory: created DMA memory pool at 0x0000000057510000, size 0 MiB
+[    0.000000] [<0>][0, swapper]OF: reserved mem: initialized node ipa_gsi_region@57510000, compatible id removed-dma-pool
+[    0.000000] [<0>][0, swapper]Removed memory: created DMA memory pool at 0x0000000057515000, size 0 MiB
+[    0.000000] [<0>][0, swapper]OF: reserved mem: initialized node gpu_region@57515000, compatible id removed-dma-pool
+[    0.000000] [<0>][0, swapper]Reserved memory: created DMA memory pool at 0x000000005e400000, size 20 MiB
+[    0.000000] [<0>][0, swapper]OF: reserved mem: initialized node qseecom_region@5e400000, compatible id shared-dma-pool
+[    0.000000] [<0>][0, swapper]Removed memory: created DMA memory pool at 0x000000005f800000, size 30 MiB
+[    0.000000] [<0>][0, swapper]OF: reserved mem: initialized node cdsp_sec_regions@5f800000, compatible id removed-dma-pool
+[    0.000000] [<0>][0, swapper]On node 0 totalpages: 953768
+[    0.000000] [<0>][0, swapper]  DMA zone: 10807 pages used for memmap
+[    0.000000] [<0>][0, swapper]  DMA zone: 0 pages reserved
+[    0.000000] [<0>][0, swapper]  DMA zone: 691624 pages, LIFO batch:31
+[    0.000000] [<0>][0, swapper]  Normal zone: 4096 pages used for memmap
+[    0.000000] [<0>][0, swapper]  Normal zone: 262144 pages, LIFO batch:31
+[    0.000000] [<0>][0, swapper]psci: probing for conduit method from DT.
+[    0.000000] [<0>][0, swapper]psci: PSCIv1.0 detected in firmware.
+[    0.000000] [<0>][0, swapper]psci: Using standard PSCI v0.2 function IDs
+[    0.000000] [<0>][0, swapper]psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] [<0>][0, swapper]psci: SMC Calling Convention v1.1
+[    0.000000] [<0>][0, swapper]random: fast init done
+[    0.000000] [<0>][0, swapper]random: get_random_bytes called from start_kernel+0x94/0x518 with crng_init=1
+[    0.000000] [<0>][0, swapper]percpu: Embedded 19 pages/cpu s48920 r0 d28904 u77824
+[    0.000000] [<0>][0, swapper]pcpu-alloc: s48920 r0 d28904 u77824 alloc=19*4096
+[    0.000000] [<0>][0, swapper]pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+[    0.000000] [<0>][0, swapper]CPU features: enabling workaround for Kryo2xx Silver erratum 845719
+[    0.000000] [<0>][0, swapper]CPU features: kernel page table isolation forced ON by KASLR
+[    0.000000] [<0>][0, swapper]CPU features: detected: Kernel page table isolation (KPTI)
+[    0.000000] [<0>][0, swapper]Built 1 zonelists, mobility grouping on.  Total pages: 938865
+[    0.000000] [<0>][0, swapper]Kernel command line: rcupdate.rcu_expedited=1 rcu_nocbs=0-7 console=ttyMSM0,115200n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 androidboot.selinux=permissive lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=1 earlycon=msm_geni_serial,0x4a90000 loop.max_part=7 cgroup.memory=nokmem,nosocket buildvariant=user isolcpus=1-7 nohz_full=1-7 loglevel=0 printk.devkmsg=on androidboot.verifiedbootstate=orange androidboot.keymaster=1 root=PARTUUID=1824407e-9782-b35a-add2-e957f246f452 androidboot.bootdevice=4804000.ufshc androidboot.serialno=REDACTED androidboot.hwversion=10.39.0 androidboot.hwlevel=MP androidboot.hwc=Global28 board_id=S88512DA1 androidboot.baseband=msm msm_drm.dsi_display0=dsi_s6e8fco_samsung_hdp_video_display: androidboot.bootreason=WARM-RESET androidboot.secureboot=1 androidboot.dp=0x0 androidboot.slot_suffix=_b skip_initramfs rootwait ro init=/init androidboot
+[    0.000000] [<0>][0, swapper]log_buf_len individual max cpu contribution: 131072 bytes
+[    0.000000] [<0>][0, swapper]log_buf_len total cpu_extra contributions: 917504 bytes
+[    0.000000] [<0>][0, swapper]log_buf_len min size: 131072 bytes
+[    0.000000] [<0>][0, swapper]log_buf_len: 1048576 bytes
+[    0.000000] [<0>][0, swapper]early log buf free: 122004(93%)
+[    0.000000] [<0>][0, swapper]PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] [<0>][0, swapper]Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes)
+[    0.000000] [<0>][0, swapper]Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.000000] [<0>][0, swapper]software IO TLB: mapped [mem 0xfffbf000-0xfffff000] (0MB)
+[    0.000000] [<0>][0, swapper]Memory: 3422452K/3815072K available (22014K kernel code, 3438K rwdata, 7880K rodata, 6144K init, 10894K bss, 183724K reserved, 208896K cma-reserved)
+[    0.000000] [<0>][0, swapper]SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000] [<0>][0, swapper/0]Preemptible hierarchical RCU implementation.
+[    0.000000] [<0>][0, swapper/0]	RCU dyntick-idle grace-period acceleration is enabled.
+[    0.000000] [<0>][0, swapper/0]	All grace periods are expedited (rcu_expedited).
+[    0.000000] [<0>][0, swapper/0]	Tasks RCU enabled.
+[    0.000000] [<0>][0, swapper/0]NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] [<0>][0, swapper/0]GICv3: no VLPI support, no direct LPI support
+[    0.000000] [<0>][0, swapper/0]GICv3: CPU0: found redistributor 0 region 0:0x000000000f300000
+[    0.000000] [<0>][0, swapper/0]NO_HZ: Full dynticks CPUs: 1-7.
+[    0.000000] [<0>][0, swapper/0]	Offload RCU callbacks from CPUs: 0-7.
+[    0.000000] [<0>][0, swapper/0]arch_timer: cp15 and mmio timer(s) running at 19.20MHz (virt/virt).
+[    0.000000] [<0>][0, swapper/0]clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[    0.000003] [<0>][0, swapper/0]sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+[    0.000014] [<0>][0, swapper/0]clocksource: Switched to clocksource arch_sys_counter
+[    0.002333] [<0>][0, swapper/0]Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=192000)
+[    0.002347] [<0>][0, swapper/0]pid_max: default: 32768 minimum: 301
+[    0.002457] [<0>][0, swapper/0]Security Framework initialized
+[    0.002465] [<0>][0, swapper/0]SELinux:  Initializing.
+[    0.002528] [<0>][0, swapper/0]SELinux:  Starting in permissive mode
+[    0.002576] [<0>][0, swapper/0]Mount-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.002588] [<0>][0, swapper/0]Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.014187] [<0>][1, swapper/0]ASID allocator initialised with 32768 entries
+[    0.016273] [<0>][1, swapper/0]Hierarchical SRCU implementation.
+[    0.026838] [<0>][1, swapper/0]MSM Memory Dump base table set up
+[    0.026854] [<0>][1, swapper/0]MSM Memory Dump apps data table set up
+[    0.026997] [<0>][1, swapper/0]scm_call failed: func id 0x42000404, ret: -1, syscall returns: 0x0, 0x0, 0x0
+[    0.027000] [<0>][1, swapper/0]Core Debug Lock unlock failed, ret: -5
+[    0.029504] [<0>][1, swapper/0]smp: Bringing up secondary CPUs ...
+[    0.039691] [<1>][0, swapper/1]GICv3: CPU1: found redistributor 1 region 0:0x000000000f320000
+[    0.039749] [<1>][0, swapper/1]CPU1: Booted secondary processor [51af8014]
+[    0.049863] [<2>][0, swapper/2]GICv3: CPU2: found redistributor 2 region 0:0x000000000f340000
+[    0.049912] [<2>][0, swapper/2]CPU2: Booted secondary processor [51af8014]
+[    0.060003] [<3>][0, swapper/3]GICv3: CPU3: found redistributor 3 region 0:0x000000000f360000
+[    0.060049] [<3>][0, swapper/3]CPU3: Booted secondary processor [51af8014]
+[    0.070965] [<4>][0, swapper/4]CPU features: enabling workaround for ARM erratum 858921
+[    0.070999] [<4>][0, swapper/4]SSBD disabled by kernel configuration
+[    0.071007] [<4>][0, swapper/4]CPU features: enabling workaround for Speculative Store Bypass Disable
+[    0.071043] [<4>][0, swapper/4]CPU features: Unsupported CPU feature variation detected.
+[    0.071079] [<4>][0, swapper/4]GICv3: CPU4: found redistributor 100 region 0:0x000000000f380000
+[    0.071120] [<4>][0, swapper/4]arch_timer: Enabling local workaround for ARM erratum 858921
+[    0.071147] [<4>][0, swapper/4]arch_timer: CPU4: Trapping CNTVCT access
+[    0.071167] [<4>][0, swapper/4]CPU4: Booted secondary processor [51af8002]
+[    0.081513] [<5>][0, swapper/5]GICv3: CPU5: found redistributor 101 region 0:0x000000000f3a0000
+[    0.081553] [<5>][0, swapper/5]arch_timer: Enabling local workaround for ARM erratum 858921
+[    0.081578] [<5>][0, swapper/5]arch_timer: CPU5: Trapping CNTVCT access
+[    0.081596] [<5>][0, swapper/5]CPU5: Booted secondary processor [51af8002]
+[    0.091915] [<6>][0, swapper/6]GICv3: CPU6: found redistributor 102 region 0:0x000000000f3c0000
+[    0.091956] [<6>][0, swapper/6]arch_timer: Enabling local workaround for ARM erratum 858921
+[    0.091980] [<6>][0, swapper/6]arch_timer: CPU6: Trapping CNTVCT access
+[    0.091998] [<6>][0, swapper/6]CPU6: Booted secondary processor [51af8002]
+[    0.102341] [<7>][0, swapper/7]GICv3: CPU7: found redistributor 103 region 0:0x000000000f3e0000
+[    0.102382] [<7>][0, swapper/7]arch_timer: Enabling local workaround for ARM erratum 858921
+[    0.102406] [<7>][0, swapper/7]arch_timer: CPU7: Trapping CNTVCT access
+[    0.102424] [<7>][0, swapper/7]CPU7: Booted secondary processor [51af8002]
+[    0.102677] [<0>][1, swapper/0]smp: Brought up 1 node, 8 CPUs
+[    0.102685] [<0>][1, swapper/0]SMP: Total of 8 processors activated.
+[    0.102691] [<0>][1, swapper/0]CPU features: detected: GIC system register CPU interface
+[    0.102693] [<0>][1, swapper/0]CPU features: detected: 32-bit EL0 Support
+[    0.121974] [<0>][1, swapper/0]CPU: All CPU(s) started at EL1
+[    0.122030] [<0>][15, migration/0]alternatives: patching kernel code
+[    0.122305] [<0>][1, swapper/0]scm_enable_mem_protection: SCM call failed
+[    0.122954] [<0>][1, swapper/0]devtmpfs: initialized
+[    0.167866] [<0>][1, swapper/0]Registered cp15_barrier emulation handler
+[    0.167884] [<0>][1, swapper/0]Registered setend emulation handler
+[    0.168124] [<0>][1, swapper/0]clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.168135] [<0>][1, swapper/0]futex hash table entries: 2048 (order: 6, 262144 bytes)
+[    0.174089] [<0>][1, swapper/0]pinctrl core: initialized pinctrl subsystem
+[    0.174680] [<0>][1, swapper/0]NET: Registered protocol family 16
+[    0.176206] [<0>][1, swapper/0]schedtune: configured to support 6 boost groups
+[    0.177796] [<0>][1, swapper/0]cpuidle: using governor menu
+[    0.177815] [<0>][1, swapper/0]cpuidle: using governor qcom
+[    0.177934] [<0>][1, swapper/0]NET: Registered protocol family 42
+[    0.182238] [<0>][1, swapper/0]vdso: 2 pages (1 code @         (ptrval), 1 data @         (ptrval))
+[    0.182248] [<0>][1, swapper/0]hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.183342] [<0>][1, swapper/0]DMA: preallocated 256 KiB pool for atomic allocations
+[    0.186261] [<0>][1, swapper/0]exit: IPA_USB init success!
+[    0.186639] [<0>][1, swapper/0]pstore: using zlib compression
+[    0.186683] [<0>][1, swapper/0]console [pstore-1] enabled
+[    0.186686] [<0>][1, swapper/0]pstore: Registered ramoops as persistent store backend
+[    0.186690] [<0>][1, swapper/0]ramoops: attached 0x100000@0x61600000, ecc: 4/0
+[    0.187769] [<0>][1, swapper/0]msm-sn-fuse 1b46134.snfuse: SN interface initialized
+[    0.187871] [<0>][1, swapper/0]msm-secboot-fuse 1b40458.secbootfuse: Secboot-fuse interface initialized
+[    0.187978] [<0>][1, swapper/0]msm-cpufeature-id 1b44180.cpufeatureid: Cpu-feature-id interface initialized
+[    0.191086] [<0>][1, swapper/0]unable to find DT imem DLOAD mode node
+[    0.192642] [<0>][1, swapper/0]unable to find DT imem EDLOAD mode node
+[    0.194612] [<0>][1, swapper/0]platform 6080000.qcom,mss: assigned reserved memory node modem_region@4b000000
+[    0.194914] [<0>][1, swapper/0]msm_watchdog f017000.qcom,wdt: wdog absent resource not present
+[    0.195199] [<0>][1, swapper/0]msm_watchdog f017000.qcom,wdt: MSM Watchdog Initialized
+[    0.195616] [<0>][1, swapper/0]sps:sps is ready.
+[    0.196355] [<0>][1, swapper/0]platform ab00000.qcom,lpass: assigned reserved memory node pil_adsp_region@55300000
+[    0.196499] [<0>][1, swapper/0]platform b300000.qcom,turing: assigned reserved memory node cdsp_regions@53500000
+[    0.196643] [<0>][1, swapper/0]platform soc:mem_dump: assigned reserved memory node mem_dump_region
+[    0.198039] [<0>][1, swapper/0]platform soc:qcom,smem: assigned reserved memory node smem@46000000
+[    0.198414] [<0>][1, swapper/0]platform soc:qcom,msm-adsprpc-mem: assigned reserved memory node adsp_region
+[    0.198790] [<0>][1, swapper/0]qcom_glink_rpm soc:rpm-glink: failed to register early notif -22
+[    0.199351] [<0>][1, swapper/0]msm_glink soc:qcom,glink: [probe_subsystem]: no qcom,glink-label for wdsp
+[    0.199875] [<0>][1, swapper/0]platform 46d00000.qseecom: assigned reserved memory node qseecom_region@5e400000
+[    0.201979] [<0>][1, swapper/0]platform soc:qcom,ipa_fws: assigned reserved memory node ips_fw_region@57500000
+[    0.202068] [<0>][1, swapper/0]platform 5ae0000.qcom,venus: assigned reserved memory node pil_video_region@52e00000
+[    0.204293] [<0>][1, swapper/0]trinket-pinctrl 400000.pinctrl: invalid resource
+[    0.204962] [<0>][75, kworker/0:1]qcom_smd_rpm_probe: RPM-SMD running version 0
+[    0.207872] [<0>][78, kworker/u16:1]spmi spmi-0: PMIC arbiter version v5 (0x50010000)
+[    0.211058] [<0>][78, kworker/u16:1]LCDB: qpnp_lcdb_regulator_probe: Failed to parse dt rc=-517
+[    0.252250] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=0 freq=300000000 virtual_corner=0 open_loop_voltage=588
+[    0.252259] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=1 freq=614400000 virtual_corner=1 open_loop_voltage=588
+[    0.252267] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=2 freq=864000000 virtual_corner=2 open_loop_voltage=608
+[    0.252274] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=3 freq=1017600000 virtual_corner=3 open_loop_voltage=636
+[    0.252281] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=4 freq=1305600000 virtual_corner=4 open_loop_voltage=716
+[    0.252288] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=5 freq=1420800000 virtual_corner=5 open_loop_voltage=748
+[    0.252294] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=6 freq=1612800000 virtual_corner=6 open_loop_voltage=836
+[    0.252301] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=7 freq=1804800000 virtual_corner=7 open_loop_voltage=920
+[    0.252308] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=8 freq=1804800000 virtual_corner=7 open_loop_voltage=920
+[    0.252315] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=9 freq=1804800000 virtual_corner=7 open_loop_voltage=920
+[    0.252322] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=10 freq=1804800000 virtual_corner=7 open_loop_voltage=920
+[    0.252328] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=11 freq=1804800000 virtual_corner=7 open_loop_voltage=920
+[    0.252336] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=0 freq=300000000 virtual_corner=0 open_loop_voltage=588
+[    0.252342] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=1 freq=652800000 virtual_corner=1 open_loop_voltage=588
+[    0.252348] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=2 freq=902400000 virtual_corner=2 open_loop_voltage=620
+[    0.252355] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=3 freq=1056000000 virtual_corner=3 open_loop_voltage=648
+[    0.252361] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=4 freq=1401600000 virtual_corner=4 open_loop_voltage=732
+[    0.252367] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=5 freq=1536000000 virtual_corner=5 open_loop_voltage=764
+[    0.252375] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=6 freq=1804800000 virtual_corner=6 open_loop_voltage=852
+[    0.252381] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=7 freq=2016000000 virtual_corner=7 open_loop_voltage=920
+[    0.252387] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=8 freq=2016000000 virtual_corner=7 open_loop_voltage=920
+[    0.252394] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=9 freq=2016000000 virtual_corner=7 open_loop_voltage=920
+[    0.252401] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=10 freq=2016000000 virtual_corner=7 open_loop_voltage=920
+[    0.252408] [<0>][1, swapper/0]clk: clk_osm_read_lut: index=11 freq=2016000000 virtual_corner=7 open_loop_voltage=920
+[    0.252529] [<0>][1, swapper/0]clk: add_opp: Set OPP pair (300000000 Hz, 588000 uv) on cpu0
+[    0.252731] [<0>][1, swapper/0]clk: add_opp: Set OPP pair (1804800000 Hz, 920000 uv) on cpu0
+[    0.252774] [<0>][1, swapper/0]clk: add_opp: Set OPP pair (300000000 Hz, 588000 uv) on cpu1
+[    0.252970] [<0>][1, swapper/0]clk: add_opp: Set OPP pair (1804800000 Hz, 920000 uv) on cpu1
+[    0.253013] [<0>][1, swapper/0]clk: add_opp: Set OPP pair (300000000 Hz, 588000 uv) on cpu2
+[    0.253207] [<0>][1, swapper/0]clk: add_opp: Set OPP pair (1804800000 Hz, 920000 uv) on cpu2
+[    0.253265] [<0>][1, swapper/0]clk: add_opp: Set OPP pair (300000000 Hz, 588000 uv) on cpu3
+[    0.253468] [<0>][1, swapper/0]clk: add_opp: Set OPP pair (1804800000 Hz, 920000 uv) on cpu3
+[    0.253513] [<0>][1, swapper/0]clk: add_opp: Set OPP pair (300000000 Hz, 588000 uv) on cpu4
+[    0.253717] [<0>][1, swapper/0]clk: add_opp: Set OPP pair (2016000000 Hz, 920000 uv) on cpu4
+[    0.253760] [<0>][1, swapper/0]clk: add_opp: Set OPP pair (300000000 Hz, 588000 uv) on cpu5
+[    0.253958] [<0>][1, swapper/0]clk: add_opp: Set OPP pair (2016000000 Hz, 920000 uv) on cpu5
+[    0.254017] [<0>][1, swapper/0]clk: add_opp: Set OPP pair (300000000 Hz, 588000 uv) on cpu6
+[    0.254212] [<0>][1, swapper/0]clk: add_opp: Set OPP pair (2016000000 Hz, 920000 uv) on cpu6
+[    0.254259] [<0>][1, swapper/0]clk: add_opp: Set OPP pair (300000000 Hz, 588000 uv) on cpu7
+[    0.254457] [<0>][1, swapper/0]clk: add_opp: Set OPP pair (2016000000 Hz, 920000 uv) on cpu7
+[    0.254991] [<0>][1, swapper/0]sched-energy: Sched-energy-costs installed from DT
+[    0.255297] [<0>][1, swapper/0]cpufreq: driver osm-cpufreq up and running
+[    0.255299] [<0>][1, swapper/0]clk: clk_cpu_osm_driver_probe: OSM CPUFreq driver inited
+[    0.259499] [<0>][1, swapper/0]KPI: Bootloader start count = 85427
+[    0.259502] [<0>][1, swapper/0]KPI: Bootloader end count = 126520
+[    0.259504] [<0>][1, swapper/0]KPI: Bootloader display count = 3638055919
+[    0.259506] [<0>][1, swapper/0]KPI: Bootloader load kernel count = 3401131773
+[    0.259509] [<0>][1, swapper/0]KPI: Kernel MPM timestamp = 142520
+[    0.259511] [<0>][1, swapper/0]KPI: Kernel MPM Clock frequency = 32768
+[    0.259526] [<0>][1, swapper/0]socinfo_print: v0.15, id=394, ver=1.0, raw_id=266, raw_ver=0, hw_plat=11, hw_plat_ver=65536
+                accessory_chip=0, hw_plat_subtype=0, pmic_model=65581, pmic_die_revision=65537 foundry_id=3 serial_number=3661159501 num_pmics=2 chip_family=0x64 raw_device_family=0x9 raw_device_number=0x1 nproduct_id=0x411 num_clusters=0x1 ncluster_array_offset=0xb0 num_defective_parts=0xc ndefective_parts_array_offset=0xb4 nmodem_supported=0xff
+[    0.259582] [<0>][1, swapper/0]Minidump: Enabled with max number of regions 200
+[    0.262157] [<0>][1, swapper/0]arm-smmu 59a0000.kgsl-smmu: Couldn't get clock: gcc_gpu_memnoc_gfx_clk
+[    0.262638] [<0>][1, swapper/0]AXI: msm_bus_scale_register_client(): msm_bus_scale_register_client: Bus driver not ready.
+[    0.262642] [<0>][1, swapper/0]arm-smmu c600000.apps-smmu: Bus client registration failed
+[    0.262969] [<0>][1, swapper/0]vgaarb: loaded
+[    0.263208] [<0>][1, swapper/0]qcom,qpnp-misc 1c40000.qcom,spmi:qcom,pm6125@0:qcom,misc@900: probe successful
+[    0.263632] [<0>][1, swapper/0]SCSI subsystem initialized
+[    0.263702] [<0>][1, swapper/0]usbcore: registered new interface driver usbfs
+[    0.263717] [<0>][1, swapper/0]usbcore: registered new interface driver hub
+[    0.263820] [<0>][1, swapper/0]usbcore: registered new device driver usb
+[    0.264071] [<0>][1, swapper/0]usb_phy_generic soc:usb_nop_phy: soc:usb_nop_phy supply vcc not found, using dummy regulator
+[    0.264311] [<0>][1, swapper/0]touch tp_dev: touch info interface ready
+[    0.264535] [<0>][1, swapper/0]qcom,qpnp-power-on 1c40000.qcom,spmi:qcom,pmi632@2:qcom,power-on@800: PMIC@SID2 Power-on reason: Triggered from CBL (External Power Supply) and 'warm' boot
+[    0.264558] [<0>][1, swapper/0]qcom,qpnp-power-on 1c40000.qcom,spmi:qcom,pmi632@2:qcom,power-on@800: PMIC@SID2: Power-off reason: Triggered from SOFT (Software)
+[    0.264709] [<0>][1, swapper/0]qcom,qpnp-power-on 1c40000.qcom,spmi:qcom,pm6125@0:qcom,power-on@800: PMIC@SID0 Power-on reason: Triggered from Hard Reset and 'warm' boot
+[    0.264730] [<0>][1, swapper/0]qcom,qpnp-power-on 1c40000.qcom,spmi:qcom,pm6125@0:qcom,power-on@800: PMIC@SID0: Power-off reason: Triggered from PS_HOLD (PS_HOLD/MSM Controlled Shutdown)
+[    0.264955] [<0>][1, swapper/0]input: qpnp_pon as /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:qcom,power-on@800/input/input0
+[    0.265944] [<0>][1, swapper/0]media: Linux media interface: v0.10
+[    0.265960] [<0>][1, swapper/0]Linux video capture interface: v2.00
+[    0.274731] [<0>][1, swapper/0]platform soc:qcom,ion:qcom,ion-heap@27: assigned reserved memory node qseecom_region@5e400000
+[    0.274809] [<0>][1, swapper/0]platform soc:qcom,ion:qcom,ion-heap@19: assigned reserved memory node qseecom_ta_region
+[    0.274952] [<0>][1, swapper/0]platform soc:qcom,ion:qcom,ion-heap@10: assigned reserved memory node secure_display_region
+[    0.275083] [<0>][1, swapper/0]platform soc:qcom,ion:qcom,ion-heap@22: assigned reserved memory node sdsp_region
+[    0.275276] [<0>][1, swapper/0]ION heap system created
+[    0.275377] [<0>][1, swapper/0]ION heap qsecom created at 0x000000005e400000 with size 1400000
+[    0.275381] [<0>][1, swapper/0]ION heap qsecom_ta created at 0x00000000fec00000 with size 1000000
+[    0.275384] [<0>][1, swapper/0]ION heap secure_heap created
+[    0.275391] [<0>][1, swapper/0]ION heap secure_display created at 0x00000000f3400000 with size 8c00000
+[    0.305806] [<0>][1, swapper/0]platform soc:qcom,ion:qcom,ion-heap@14: ion_secure_carveout: creating heap@0x5f800000, size 0x1e00000
+[    0.305808] [<0>][1, swapper/0]ION heap secure_carveout created
+[    0.305813] [<0>][1, swapper/0]ION heap adsp created at 0x00000000fc800000 with size 400000
+[    0.307929] [<0>][1, swapper/0]PMIC@SID2: PMI632 v2.0 options: 0, 0, 0, 0
+[    0.308042] [<0>][1, swapper/0]PMIC@SID0: PM6125 v1.1 options: 0, 0, 0, 0
+[    0.308854] [<0>][1, swapper/0]AXI: msm_bus_scale_register_client(): msm_bus_scale_register_client: Bus driver not ready.
+[    0.308857] [<0>][1, swapper/0]ipa ipa3_pre_init:6472 fail to register with bus mgr!
+[    0.308951] [<0>][1, swapper/0]ipa ipa3_plat_drv_probe:8106 ipa3_init failed
+[    0.310968] [<0>][1, swapper/0]SDAM base=0xb600 size=128 registered successfully
+[    0.311222] [<0>][1, swapper/0]Advanced Linux Sound Architecture Driver Initialized.
+[    0.311471] [<0>][1, swapper/0]Bluetooth: Core ver 2.22
+[    0.311493] [<0>][1, swapper/0]NET: Registered protocol family 31
+[    0.311496] [<0>][1, swapper/0]Bluetooth: HCI device and connection manager initialized
+[    0.311502] [<0>][1, swapper/0]Bluetooth: HCI socket layer initialized
+[    0.311505] [<0>][1, swapper/0]Bluetooth: L2CAP socket layer initialized
+[    0.311520] [<0>][1, swapper/0]Bluetooth: SCO socket layer initialized
+[    0.312838] [<0>][1, swapper/0]NetLabel: Initializing
+[    0.312840] [<0>][1, swapper/0]NetLabel:  domain hash size = 128
+[    0.312841] [<0>][1, swapper/0]NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.312871] [<0>][1, swapper/0]NetLabel:  unlabeled traffic allowed by default
+[    0.312975] [<0>][1, swapper/0]pcie:pcie_init.
+[    0.320206] [<0>][75, kworker/0:1]qcom-clk-smd-rpm soc:qcom,rpmcc: Registered RPM clocks
+[    0.320407] [<0>][75, kworker/0:1]pm6125_s3_level: Bringing 1uV into 16-16uV
+[    0.320646] [<0>][75, kworker/0:1]pm6125_s3_floor_level: Bringing 1uV into 16-16uV
+[    0.321044] [<0>][75, kworker/0:1]pm6125_s3_level_ao: Bringing 1uV into 16-16uV
+[    0.321407] [<0>][75, kworker/0:1]pm6125_s5_level: Bringing 1uV into 16-16uV
+[    0.321593] [<0>][75, kworker/0:1]pm6125_s5_floor_level: Bringing 1uV into 16-16uV
+[    0.321996] [<0>][75, kworker/0:1]pm6125_s5_level_ao: Bringing 1uV into 16-16uV
+[    0.323334] [<0>][75, kworker/0:1]pm6125_l4: regulator get failed, ret=-517
+[    0.324314] [<0>][75, kworker/0:1]pm6125_l4: supplied by pm6125_l7
+[    0.325980] [<0>][75, kworker/0:1]pm6125_l15: supplied by pm6125_l10
+[    0.328959] [<0>][75, kworker/0:1]LCDB: qpnp_lcdb_regulator_probe: LCDB module successfully registered! lcdb_en=0 ldo_voltage=5500mV ncp_voltage=5500mV bst_voltage=5650mV
+[    0.329033] [<0>][75, kworker/0:1]sched-energy energy-costs: cpu=0 eff=1024 [freq=300000 cap=96 power_d0=12] -> [freq=1804800 cap=574 power_d0=172]
+[    0.329039] [<0>][75, kworker/0:1]sched-energy energy-costs: cpu=1 eff=1024 [freq=300000 cap=96 power_d0=12] -> [freq=1804800 cap=574 power_d0=172]
+[    0.329044] [<0>][75, kworker/0:1]sched-energy energy-costs: cpu=2 eff=1024 [freq=300000 cap=96 power_d0=12] -> [freq=1804800 cap=574 power_d0=172]
+[    0.329050] [<0>][75, kworker/0:1]sched-energy energy-costs: cpu=3 eff=1024 [freq=300000 cap=96 power_d0=12] -> [freq=1804800 cap=574 power_d0=172]
+[    0.329056] [<0>][75, kworker/0:1]sched-energy energy-costs: cpu=4 eff=1638 [freq=300000 cap=153 power_d0=211] -> [freq=2016000 cap=1024 power_d0=3391]
+[    0.329062] [<0>][75, kworker/0:1]sched-energy energy-costs: cpu=5 eff=1638 [freq=300000 cap=153 power_d0=211] -> [freq=2016000 cap=1024 power_d0=3391]
+[    0.329068] [<0>][75, kworker/0:1]sched-energy energy-costs: cpu=6 eff=1638 [freq=300000 cap=153 power_d0=211] -> [freq=2016000 cap=1024 power_d0=3391]
+[    0.329073] [<0>][75, kworker/0:1]sched-energy energy-costs: cpu=7 eff=1638 [freq=300000 cap=153 power_d0=211] -> [freq=2016000 cap=1024 power_d0=3391]
+[    0.329076] [<0>][75, kworker/0:1]sched-energy energy-costs: Sched-energy-costs capacity updated
+[    0.342189] [<0>][75, kworker/0:1]gcc-trinket 1400000.qcom,gcc: Registered GCC clocks
+[    0.343527] [<0>][75, kworker/0:1]gpu_cc_gx_gfx3d_clk_src: set OPP pair(320000000 Hz: 64 uV) on 5900000.qcom,kgsl-3d0
+[    0.343675] [<0>][75, kworker/0:1]gpu_cc_gx_gfx3d_clk_src: set OPP pair(950000000 Hz: 416 uV) on 5900000.qcom,kgsl-3d0
+[    0.343770] [<0>][75, kworker/0:1]gpu_cc-trinket 5990000.qcom,gpupcc: Registered GPU CC clocks
+[    0.344406] [<0>][75, kworker/0:1]video_cc-trinket 5b00000.qcom,videocc: Registered Video CC clocks
+[    0.344659] [<0>][75, kworker/0:1]arm-smmu 59a0000.kgsl-smmu: 	non-coherent table walk
+[    0.344662] [<0>][75, kworker/0:1]arm-smmu 59a0000.kgsl-smmu: 	(IDR0.CTTW overridden by FW configuration)
+[    0.344666] [<0>][75, kworker/0:1]arm-smmu 59a0000.kgsl-smmu: 	stream matching with 4 register groups
+[    0.346327] [<0>][75, kworker/0:1]AXI: msm_bus_scale_register_client(): msm_bus_scale_register_client: Bus driver not ready.
+[    0.346332] [<0>][75, kworker/0:1]arm-smmu c600000.apps-smmu: Bus client registration failed
+[    0.346968] [<0>][75, kworker/0:1]AXI: msm_bus_scale_register_client(): msm_bus_scale_register_client: Bus driver not ready.
+[    0.346971] [<0>][75, kworker/0:1]ipa ipa3_pre_init:6472 fail to register with bus mgr!
+[    0.347028] [<0>][75, kworker/0:1]ipa ipa3_plat_drv_probe:8106 ipa3_init failed
+[    0.349813] [<0>][75, kworker/0:1]disp_cc-trinket 5f00000.qcom,dispcc: Registered Display CC clocks
+[    0.350343] [<0>][75, kworker/0:1]AXI: msm_bus_scale_register_client(): msm_bus_scale_register_client: Bus driver not ready.
+[    0.350347] [<0>][75, kworker/0:1]arm-smmu c600000.apps-smmu: Bus client registration failed
+[    0.350904] [<0>][75, kworker/0:1]AXI: msm_bus_scale_register_client(): msm_bus_scale_register_client: Bus driver not ready.
+[    0.350907] [<0>][75, kworker/0:1]ipa ipa3_pre_init:6472 fail to register with bus mgr!
+[    0.350948] [<0>][75, kworker/0:1]ipa ipa3_plat_drv_probe:8106 ipa3_init failed
+[    0.351686] [<0>][1, swapper/0]clocksource: Switched to clocksource arch_sys_counter
+[    0.395877] [<0>][1, swapper/0]VFS: Disk quotas dquot_6.6.0
+[    0.395913] [<0>][1, swapper/0]VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.397685] [<0>][1, swapper/0]mdss_pll_probe: MDSS pll label = MDSS DSI 0 PLL
+[    0.397805] [<0>][1, swapper/0]mdss_pll 5e94400.qcom,mdss_dsi_pll: Failed to create debugfs directory
+[    0.397812] [<0>][1, swapper/0]mdss_pll 5e94400.qcom,mdss_dsi_pll: Failed to create debugfs directory
+[    0.397817] [<0>][1, swapper/0]mdss_pll 5e94400.qcom,mdss_dsi_pll: Failed to create debugfs directory
+[    0.399530] [<0>][1, swapper/0]dsi_pll_clock_register_14nm: Registered DSI PLL ndx=0 clocks successfully
+[    0.400176] [<0>][1, swapper/0]msm_bus_fabric_init_driver
+[    0.405745] [<0>][1, swapper/0]msm_bus_dev_init_qos: Skipping QOS init for 26
+[    0.405803] [<0>][1, swapper/0]msm_bus_device 1880000.ad-hoc-bus: Bus scaling driver probe successful
+[    0.407109] [<0>][1, swapper/0]NET: Registered protocol family 2
+[    0.407401] [<0>][1, swapper/0]TCP established hash table entries: 32768 (order: 6, 262144 bytes)
+[    0.407538] [<0>][1, swapper/0]TCP bind hash table entries: 32768 (order: 7, 524288 bytes)
+[    0.407831] [<0>][1, swapper/0]TCP: Hash tables configured (established 32768 bind 32768)
+[    0.407910] [<0>][1, swapper/0]UDP hash table entries: 2048 (order: 4, 65536 bytes)
+[    0.407961] [<0>][1, swapper/0]UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes)
+[    0.408106] [<0>][1, swapper/0]NET: Registered protocol family 1
+[    0.408121] [<0>][1, swapper/0]PCI: CLS 0 bytes, default 128
+[    0.408872] [<0>][75, kworker/0:1]arm-smmu c600000.apps-smmu: 	non-coherent table walk
+[    0.408875] [<0>][75, kworker/0:1]arm-smmu c600000.apps-smmu: 	(IDR0.CTTW overridden by FW configuration)
+[    0.408879] [<0>][75, kworker/0:1]arm-smmu c600000.apps-smmu: 	stream matching with 54 register groups
+[    0.411498] [<0>][75, kworker/0:1]iommu: Adding device 4ac0000.qcom,qupv3_0_geni_se:qcom,iommu_qupv3_0_geni_se_cb to group 0
+[    0.411610] [<0>][75, kworker/0:1]iommu: Adding device 4cc0000.qcom,qupv3_1_geni_se:qcom,iommu_qupv3_1_geni_se_cb to group 1
+[    0.420449] [<0>][75, kworker/0:1]ipa ipa3_smp2p_probe:7956 fail to get smp2p clk resp bit -517
+[    0.421024] [<0>][75, kworker/0:1]iommu: Adding device soc:ipa_smmu_ap to group 2
+[    0.421193] [<0>][75, kworker/0:1]iommu: Adding device soc:ipa_smmu_wlan to group 3
+[    0.421316] [<0>][75, kworker/0:1]iommu: Adding device soc:ipa_smmu_uc to group 4
+[    0.421425] [<0>][75, kworker/0:1]ipa ipa3_smp2p_probe:7956 fail to get smp2p clk resp bit -517
+[    0.421859] [<0>][1, swapper/0]Trying to unpack rootfs image as initramfs...
+[    1.307894] [<0>][1, swapper/0]Freeing initrd memory: 23656K
+[    1.310508] [<0>][1, swapper/0]hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+[    1.318423] [<0>][1, swapper/0]workingset: timestamp_bits=45 max_order=20 bucket_order=0
+[    1.324566] [<0>][1, swapper/0]Registering sdcardfs 0.1
+[    1.324825] [<0>][1, swapper/0]fuse init (API version 7.26)
+[    1.325504] [<0>][1, swapper/0]SELinux:  Registering netfilter hooks
+[    1.326167] [<0>][1, swapper/0]pfk_ext4 [pfk_ext4_init]: PFK EXT4 inited successfully
+[    1.326171] [<0>][1, swapper/0]pfk_f2fs [pfk_f2fs_init]: PFK F2FS inited successfully
+[    1.326179] [<0>][1, swapper/0]pfk [pfk_init]: Driver initialized successfully
+[    1.329554] [<0>][1, swapper/0]io scheduler noop registered
+[    1.329791] [<0>][1, swapper/0]io scheduler cfq registered (default)
+[    1.329796] [<0>][1, swapper/0]io scheduler mq-deadline registered
+[    1.329799] [<0>][1, swapper/0]io scheduler kyber registered
+[    1.348215] [<0>][1, swapper/0]fb0: Virtual frame buffer device, using 1024K of video memory
+[    1.353187] [<0>][1, swapper/0]iommu: Adding device 4a00000.qcom,gpi-dma to group 5
+[    1.355671] [<0>][1, swapper/0]iommu: Adding device 4c00000.qcom,gpi-dma to group 6
+[    1.363325] [<0>][1, swapper/0]iommu: Adding device c800000.qcom,icnss to group 7
+[    1.363428] [<0>][1, swapper/0]icnss: Recursive recovery allowed for WLAN
+[    1.363440] [<0>][1, swapper/0]icnss: adc_tm_dev probe defer
+[    1.366992] [<0>][1, swapper/0]memshare_child soc:qcom,memshare:qcom,client_1: for memshare_GPS segments only will be dumped.
+[    1.367658] [<0>][1, swapper/0]memshare_child soc:qcom,memshare:qcom,client_2: for memshare_FTM segments only will be dumped.
+[    1.367804] [<0>][1, swapper/0]memshare_child soc:qcom,memshare:qcom,client_3: for memshare_DIAG segments only will be dumped.
+[    1.369965] [<0>][1, swapper/0]minidump-id not found for adsp
+[    1.370855] [<0>][1, swapper/0]minidump-id not found for cdsp
+[    1.371676] [<0>][1, swapper/0]minidump-id not found for ipa_fws
+[    1.371694] [<0>][1, swapper/0]subsys-pil-tz soc:qcom,ipa_fws: for ipa_fws segments only will be dumped.
+[    1.371761] [<0>][1, swapper/0]subsys-pil-tz soc:qcom,ipa_fws: for md_ipa_fws segments only will be dumped.
+[    1.372376] [<0>][1, swapper/0]minidump-id not found for venus
+[    1.372388] [<0>][1, swapper/0]subsys-pil-tz 5ae0000.qcom,venus: for venus segments only will be dumped.
+[    1.372459] [<0>][1, swapper/0]subsys-pil-tz 5ae0000.qcom,venus: for md_venus segments only will be dumped.
+[    1.373433] [<0>][1, swapper/0]minidump-id not found for a610_zap
+[    1.373447] [<0>][1, swapper/0]subsys-pil-tz soc:qcom,kgsl-hyp: for a610_zap segments only will be dumped.
+[    1.373528] [<0>][1, swapper/0]subsys-pil-tz soc:qcom,kgsl-hyp: for md_a610_zap segments only will be dumped.
+[    1.385577] [<0>][1, swapper/0]smp2p_sleepstate soc:qcom,smp2p_sleepstate: got smp2p-sleepstate-in irq 224
+[    1.393325] [<0>][1, swapper/0]msm_geni_serial 4c90000.qcom,qup_uart: Wakeup byte 0xfd
+[    1.393766] [<0>][1, swapper/0]msm_geni_serial 4c90000.qcom,qup_uart: Serial port0 added.FifoSize 64 is_console0
+[    1.395657] [<0>][1, swapper/0]4c90000.qcom,qup_uart: ttyHS0 at MMIO 0x4c90000 (irq = 59, base_baud = 0) is a MSM
+[    1.397333] [<0>][184, hwrng]msm_geni_serial_init: Driver initialized
+[    1.402143] [<0>][184, hwrng]random: crng init done
+[    1.407510] [<0>][1, swapper/0]diag: MUX: unable to register pcie operations for proc: 0, err: -22
+[    1.407519] [<0>][1, swapper/0]diag: MUX: unable to register PCIe operations, continuing with USB registrations for proc: 0, err: -22
+[    1.462690] [<0>][1, swapper/0]dsi_phy 5e94400.qcom,mdss_dsi_phy0: 5e94400.qcom,mdss_dsi_phy0 supply gdsc not found, using dummy regulator
+[    1.462926] [<0>][1, swapper/0]msm-dsi-phy:[dsi_phy_driver_probe] Probe successful for dsi-phy-0
+[    1.464390] [<0>][1, swapper/0]drm_dsi_ctrl 5e94000.qcom,mdss_dsi_ctrl0: 5e94000.qcom,mdss_dsi_ctrl0 supply refgen not found, using dummy regulator
+[    1.464575] [<0>][1, swapper/0]AXI: get_pdata(): Error: Client name not found
+[    1.464579] [<0>][1, swapper/0]AXI: msm_bus_cl_get_pdata(): client has to provide missing entry for successful registration
+[    1.464585] [<0>][1, swapper/0]dsi-ctrl:[dsi_ctrl_dev_probe] Probe successful for dsi-ctrl-0
+[    1.465992] [<0>][1, swapper/0]msm-dsi-display:[dsi_display_parse_te_data] invalid vsync source selection
+[    1.466002] [<0>][1, swapper/0]OF: graph: no port node found in /soc/qcom,dsi-display
+[    1.466075] [<0>][1, swapper/0]msm-dsi-panel:[dsi_panel_parse_triggers:1296] [s6e8fco samsung amoled video mode dsi panel] fallback to default te-pin-select
+[    1.466103] [<0>][1, swapper/0]msm-dsi-panel:[dsi_panel_parse_panel_mode:1811] dsi_panel_parse_panel_mode: panel operating mode switch feature disabled
+[    1.466137] [<0>][1, swapper/0]msm-dsi-panel:[dsi_panel_parse_qsync_caps:1494] [s6e8fco samsung amoled video mode dsi panel] qsync min fps not defined rc:-22
+[    1.466139] [<0>][1, swapper/0]msm-dsi-panel:[dsi_panel_get:3601] failed to parse qsync features, rc=-22
+[    1.466175] [<0>][1, swapper/0]msm-dsi-panel:[dsi_panel_parse_reset_sequence:2189] RESET SEQ LENGTH = 24
+[    1.466239] [<0>][1, swapper/0]msm-dsi-panel:[dsi_panel_parse_misc_features:2239] dsi_panel_parse_misc_features: ulps feature disabled
+[    1.466244] [<0>][1, swapper/0]msm-dsi-panel:[dsi_panel_parse_misc_features:2245] dsi_panel_parse_misc_features: ulps during suspend feature disabled
+[    1.466301] [<0>][1, swapper/0]msm-dsi-panel:[dsi_panel_parse_esd_config:3495] ESD enabled with mode: error_flag
+[    1.469254] [<0>][1, swapper/0]iommu: Adding device 5e00000.qcom,mdss_mdp to group 8
+[    1.471716] [<0>][1, swapper/0][drm:sde_dbg_init:5189] evtlog_status: enable:3, panic:1, dump:2
+[    1.471765] [<0>][1, swapper/0]msm_drm 5e00000.qcom,mdss_mdp: bound soc:qcom,wb-display@0 (ops sde_wb_comp_ops)
+[    1.472435] [<0>][1, swapper/0]msm-dsi-display:[dsi_display_bind] Successfully bind display panel 'dsi_s6e8fco_samsung_hdp_video_display'
+[    1.472441] [<0>][1, swapper/0]msm-dsi-display:[dsi_display_register_te_irq] Unable to register for TE IRQ
+[    1.472459] [<0>][1, swapper/0]msm_drm 5e00000.qcom,mdss_mdp: bound soc:qcom,dsi-display (ops dsi_display_comp_ops)
+[    1.472532] [<0>][1, swapper/0][drm] mapped mdp address space @ffffff800fa00000
+[    1.472658] [<0>][1, swapper/0]msm_drm 5e00000.qcom,mdss_mdp: failed to get memory resource: vbif_nrt_phys
+[    1.472672] [<0>][1, swapper/0]msm_drm 5e00000.qcom,mdss_mdp: failed to get memory resource: sid_phys
+[    1.472732] [<0>][1, swapper/0][drm:_sde_kms_get_splash_data:3291] splash mem num_regions:1
+[    1.472771] [<0>][1, swapper/0][drm:_sde_kms_get_splash_data:3326] splash mem for disp:1 add:5c000000 size:f00000
+[    1.472781] [<0>][1, swapper/0][sde_rsc:sde_rsc_client_create:105]: rsc not probed yet or not available
+[    1.474391] [<0>][1, swapper/0][drm:sde_kms_hw_init:3472] sde hardware revision:0x50040000
+[    1.475631] [<0>][1, swapper/0][drm] Created domain mdp_ns [80000000,80000000] secure=0
+[    1.477860] [<0>][1, swapper/0]iommu: Adding device 5e00000.qcom,mdss_mdp:qcom,smmu_sde_sec_cb to group 9
+[    1.477897] [<0>][1, swapper/0][drm] probing device qcom,smmu_sde_sec
+[    1.477905] [<0>][1, swapper/0][drm] Created domain mdp_s [80000000,80000000] secure=1
+[    1.480509] [<0>][1, swapper/0][sde_rsc:is_sde_rsc_available:262]: rsc idx:0 not probed yet or not available
+[    1.480546] [<0>][1, swapper/0][sde_rsc:sde_rsc_client_create:105]: rsc not probed yet or not available
+[    1.480882] [<0>][1, swapper/0][sde_rsc:sde_rsc_client_create:105]: rsc not probed yet or not available
+[    1.480963] [<0>][1, swapper/0][drm:reg_dmav1_init_sspp_op_v4] *ERROR* invalid feature map 12 for feature 31
+[    1.481216] [<0>][1, swapper/0][drm:reg_dmav1_init_sspp_op_v4] *ERROR* invalid feature map 12 for feature 31
+[    1.481927] [<0>][1, swapper/0][drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    1.481929] [<0>][1, swapper/0][drm] No driver support for vblank timestamp query.
+[    1.482890] [<0>][1, swapper/0][drm] Initialized msm_drm 1.2.0 20130625 for 5e00000.qcom,mdss_mdp on minor 0
+[    1.482973] [<0>][1, swapper/0]msm-dsi-panel:[dsi_panel_parse_topology:3018] default topology: lm: 1 comp_enc:0 intf: 1
+[    1.483077] [<0>][1, swapper/0]msm-dsi-panel:[dsi_panel_parse_partial_update_caps:3108] partial update disabled as the property is not set
+[    1.483303] [<0>][1, swapper/0]dsi-ctrl:[_dsi_ctrl_setup_isr] [DSI_0] IRQ 228 registered
+[    1.493521] [<0>][1, swapper/0]iommu: Adding device 59a0000.qcom,kgsl-iommu:gfx3d_user to group 10
+[    1.493837] [<0>][1, swapper/0]iommu: Adding device 59a0000.qcom,kgsl-iommu:gfx3d_secure to group 11
+[    1.530609] [<0>][1, swapper/0]brd: module loaded
+[    1.539876] [<0>][1, swapper/0]loop: module loaded
+[    1.540216] [<0>][1, swapper/0]zram: Added device: zram0
+[    1.541792] [<0>][1, swapper/0]QSEECOM: qseecom_probe: qseecom.qsee_version = 0x1401000
+[    1.541808] [<0>][1, swapper/0]QSEECOM: qseecom_retrieve_ce_data: Device does not support PFE
+[    1.541814] [<0>][1, swapper/0]QSEECOM: qseecom_probe: qseecom clocks handled by other subsystem
+[    1.541817] [<0>][1, swapper/0]QSEECOM: qseecom_probe: qseecom.qsee_reentrancy_support = 2
+[    1.541920] [<0>][1, swapper/0]QSEECOM: qseecom_probe: qseecom.whitelist_support = 1
+[    1.543377] [<0>][1, swapper/0]fpc1020_init OK
+[    1.545955] [<0>][1, swapper/0]iommu: Adding device 1b20000.qcedev to group 12
+[    1.548101] [<0>][1, swapper/0]qce 1b20000.qcedev: QTI Crypto 5.5.0 device found @0x1b20000
+[    1.548303] [<0>][1, swapper/0]sps:BAM 0x0000000001b04000 is registered.
+[    1.548453] [<0>][1, swapper/0]sps:BAM 0x0000000001b04000 (va:0xffffff800fec0000) enabled: ver:0x27, number of pipes:16
+[    1.548649] [<0>][1, swapper/0]QCE50: qce_sps_init:  QTI MSM CE-BAM at 0x0000000001b04000 irq 45
+[    1.552009] [<0>][1, swapper/0]iommu: Adding device 1b20000.qcrypto to group 13
+[    1.553149] [<0>][1, swapper/0]QCE50: __qce_get_device_tree_data: CE operating frequency is not defined, setting to default 100MHZ
+[    1.553899] [<0>][1, swapper/0]qcrypto 1b20000.qcrypto: QTI Crypto 5.5.0 device found @0x1b20000
+[    1.554178] [<0>][1, swapper/0]QCE50: qce_sps_init:  QTI MSM CE-BAM at 0x0000000001b04000 irq 45
+[    1.555224] [<0>][1, swapper/0]qcrypto 1b20000.qcrypto: qcrypto-ecb-aes
+[    1.555345] [<0>][1, swapper/0]qcrypto 1b20000.qcrypto: qcrypto-cbc-aes
+[    1.555414] [<0>][1, swapper/0]qcrypto 1b20000.qcrypto: qcrypto-ctr-aes
+[    1.555475] [<0>][1, swapper/0]qcrypto 1b20000.qcrypto: qcrypto-ecb-des
+[    1.555540] [<0>][1, swapper/0]qcrypto 1b20000.qcrypto: qcrypto-cbc-des
+[    1.555602] [<0>][1, swapper/0]qcrypto 1b20000.qcrypto: qcrypto-ecb-3des
+[    1.555664] [<0>][1, swapper/0]qcrypto 1b20000.qcrypto: qcrypto-cbc-3des
+[    1.555730] [<0>][1, swapper/0]qcrypto 1b20000.qcrypto: qcrypto-xts-aes
+[    1.555793] [<0>][1, swapper/0]qcrypto 1b20000.qcrypto: qcrypto-sha1
+[    1.555855] [<0>][1, swapper/0]qcrypto 1b20000.qcrypto: qcrypto-sha256
+[    1.555921] [<0>][1, swapper/0]qcrypto 1b20000.qcrypto: qcrypto-aead-hmac-sha1-cbc-aes
+[    1.555982] [<0>][1, swapper/0]qcrypto 1b20000.qcrypto: qcrypto-aead-hmac-sha1-cbc-des
+[    1.556045] [<0>][1, swapper/0]qcrypto 1b20000.qcrypto: qcrypto-aead-hmac-sha1-cbc-3des
+[    1.556111] [<0>][1, swapper/0]qcrypto 1b20000.qcrypto: qcrypto-aead-hmac-sha256-cbc-aes
+[    1.556175] [<0>][1, swapper/0]qcrypto 1b20000.qcrypto: qcrypto-aead-hmac-sha256-cbc-des
+[    1.556241] [<0>][1, swapper/0]qcrypto 1b20000.qcrypto: qcrypto-aead-hmac-sha256-cbc-3des
+[    1.556304] [<0>][1, swapper/0]qcrypto 1b20000.qcrypto: qcrypto-hmac-sha1
+[    1.556366] [<0>][1, swapper/0]qcrypto 1b20000.qcrypto: qcrypto-hmac-sha256
+[    1.556434] [<0>][1, swapper/0]qcrypto 1b20000.qcrypto: qcrypto-aes-ccm
+[    1.556502] [<0>][1, swapper/0]qcrypto 1b20000.qcrypto: qcrypto-rfc4309-aes-ccm
+[    1.557811] [<0>][1, swapper/0]qcom_ice_get_device_tree_data: No vdd-hba-supply regulator, assuming not needed
+[    1.560061] [<0>][1, swapper/0]ufshcd-qcom 4804000.ufshc: ufshcd_populate_vreg: Unable to find vccq-supply regulator, assuming enabled
+[    1.560073] [<0>][1, swapper/0]ufshcd-qcom 4804000.ufshc: no vccq2-voltage-level property.
+[    1.561041] [<0>][1, swapper/0]qcom_ice_get_pdevice: found ice device ffffffc5b0bff800
+[    1.561044] [<0>][1, swapper/0]qcom_ice_get_pdevice: matching platform device ffffffc5ba273000
+[    1.565076] [<0>][1, swapper/0]scsi host0: ufshcd
+[    1.569607] [<0>][1, swapper/0]qcom_ice 4810000.ufsice: QC ICE 3.1.79 device found @0xffffff800ffa8000
+[    1.592251] [<0>][1, swapper/0]SCSI Media Changer driver v0.25 
+[    1.594882] [<0>][1, swapper/0]Ethernet Channel Bonding Driver: v3.7.1 (April 27, 2011)
+[    1.597146] [<0>][1, swapper/0]libphy: Fixed MDIO Bus: probed
+[    1.597150] [<0>][1, swapper/0]tun: Universal TUN/TAP device driver, 1.6
+[    1.597361] [<0>][1, swapper/0]PPP generic driver version 2.4.2
+[    1.597438] [<0>][1, swapper/0]PPP BSD Compression module registered
+[    1.597440] [<0>][1, swapper/0]PPP Deflate Compression module registered
+[    1.597477] [<0>][1, swapper/0]PPP MPPE Compression module registered
+[    1.597481] [<0>][1, swapper/0]NET: Registered protocol family 24
+[    1.597498] [<0>][1, swapper/0]PPTP driver version 0.8.5
+[    1.597803] [<0>][1, swapper/0]Context not found
+[    1.597908] [<0>][1, swapper/0]CLD80211: Initializing
+[    1.597983] [<0>][1, swapper/0]usbcore: registered new interface driver r8152
+[    1.597996] [<0>][1, swapper/0]usbcore: registered new interface driver asix
+[    1.598009] [<0>][1, swapper/0]usbcore: registered new interface driver ax88179_178a
+[    1.598021] [<0>][1, swapper/0]usbcore: registered new interface driver cdc_ether
+[    1.598037] [<0>][1, swapper/0]usbcore: registered new interface driver net1080
+[    1.598050] [<0>][1, swapper/0]usbcore: registered new interface driver cdc_subset
+[    1.598062] [<0>][1, swapper/0]usbcore: registered new interface driver zaurus
+[    1.598075] [<0>][1, swapper/0]usbcore: registered new interface driver cdc_ncm
+[    1.603927] [<0>][1, swapper/0]msm_sharedmem: msm_sharedmem_probe: Device created for client 'rmtfs'
+[    1.606821] [<0>][1, swapper/0]msm-qusb-phy 1613000.qusb: 1613000.qusb supply USB3_GDSC not found, using dummy regulator
+[    1.609425] [<0>][1, swapper/0]iommu: Adding device 4e00000.ssusb to group 14
+[    1.611595] [<0>][1, swapper/0]dwc3 4e00000.dwc3: changing max_speed on rev 00000000
+[    1.614369] [<0>][232, kworker/u16:2]Invalid index Defaulting curr to 0
+[    1.615817] [<0>][232, kworker/u16:2]ufshcd-qcom 4804000.ufshc: ufshcd_print_pwr_info:[RX, TX]: gear=[1, 1], lane[1, 1], pwr[SLOWAUTO_MODE, SLOWAUTO_MODE], rate = 0
+[    1.618631] [<0>][1, swapper/0]ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.618665] [<0>][1, swapper/0]ehci-pci: EHCI PCI platform driver
+[    1.618681] [<0>][1, swapper/0]ehci-platform: EHCI generic platform driver
+[    1.619319] [<0>][1, swapper/0]ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.619332] [<0>][1, swapper/0]ohci-pci: OHCI PCI platform driver
+[    1.619349] [<0>][1, swapper/0]ohci-platform: OHCI generic platform driver
+[    1.621444] [<0>][1, swapper/0]usbcore: registered new interface driver usb-storage
+[    1.621460] [<0>][1, swapper/0]usbcore: registered new interface driver usb_ehset_test
+[    1.621474] [<0>][1, swapper/0]usbcore: registered new interface driver lvs
+[    1.624197] [<0>][1, swapper/0][FTS_TS]fts_ts_init: Enter
+[    1.624213] [<0>][1, swapper/0][FTS_TS]fts_ts_init: Exit(2104)
+[    1.624282] [<0>][1, swapper/0]gf_spi: zhc:gf_init in!
+[    1.624302] [<0>][1, swapper/0]gf_spi: zhc:gf_init next platform_driver_register!
+[    1.624786] [<0>][1, swapper/0]gf_spi: zhc:gf_probe in!
+[    1.624797] [<0>][1, swapper/0]gf_platform: zhc:gf::reset_gpio:93
+[    1.624801] [<0>][1, swapper/0]gf_platform: zhc:gf::irq_gpio:92
+[    1.624802] [<0>][1, swapper/0]gf_spi: zhc:gf_probe next device_create!
+[    1.624947] [<0>][1, swapper/0]input: uinput-goodix as /devices/virtual/input/input1
+[    1.625070] [<0>][1, swapper/0]gf_spi: zhc:gf_probe out!
+[    1.625228] [<0>][1, swapper/0]gf_spi: zhc:gf_init out!
+[    1.625823] [<0>][1, swapper/0]qcom,qpnp-rtc 1c40000.qcom,spmi:qcom,pm6125@0:qcom,pm6125_rtc: rtc core: registered qpnp_rtc as rtc0
+[    1.626297] [<0>][1, swapper/0]i2c /dev entries driver
+[    1.626734] [<0>][1, swapper/0]i2c_geni 4a84000.i2c: Bus frequency not specified, default to 400KHz.
+[    1.628893] [<0>][1, swapper/0]i2c_geni 4a84000.i2c: i2c error :-107
+[    1.628901] [<0>][1, swapper/0]read failed rc=-107
+[    1.628903] [<0>][1, swapper/0]Invalid REVID peripheral type: 00
+[    1.628910] [<0>][1, swapper/0]qcom,qpnp-revid: probe of 4a84000.i2c:qcom,pm8008@8:qcom,revid@100 failed with error -22
+[    1.629417] [<0>][1, swapper/0]i2c_geni 4a84000.i2c: i2c error :-107
+[    1.629422] [<0>][1, swapper/0]qcom-spmi-gpio 4a84000.i2c:qcom,pm8008@8:pinctrl@c000: read 0x4 failed
+[    1.629426] [<0>][1, swapper/0]qcom-spmi-gpio 4a84000.i2c:qcom,pm8008@8:pinctrl@c000: failed to populate gpio 0, ret=-107
+[    1.629433] [<0>][1, swapper/0]qcom-spmi-gpio: probe of 4a84000.i2c:qcom,pm8008@8:pinctrl@c000 failed with error -107
+[    1.629492] [<0>][1, swapper/0]I2C PMIC: i2c_pmic_probe: I2C PMIC probe successful
+[    1.629561] [<0>][1, swapper/0]i2c_pmic 0-0009: could not find pctldev for node /soc/i2c@4a84000/qcom,pm8008@8/pinctrl@c000/gpio1_active/pm8008_gpio1_active, deferring probe
+[    1.629906] [<0>][1, swapper/0]i2c_geni 4a84000.i2c: i2c error :-107
+[    1.630057] [<0>][1, swapper/0]i2c_geni 4a84000.i2c: i2c error :-107
+[    1.630254] [<0>][1, swapper/0]i2c_geni 4a84000.i2c: i2c error :-107
+[    1.630360] [<0>][1, swapper/0]i2c_geni 4a84000.i2c: i2c error :-107
+[    1.630364] [<0>][1, swapper/0]I2C PMIC: i2c_pmic_read: i2c_pmic_read failed for 3 retries, rc = -107
+[    1.630366] [<0>][1, swapper/0]I2C PMIC: i2c_pmic_determine_initial_status: Couldn't read irq data rc=-107
+[    1.630368] [<0>][1, swapper/0]I2C PMIC: i2c_pmic_probe: Couldn't determine initial status rc=-107
+[    1.630439] [<0>][1, swapper/0]i2c_pmic: probe of 0-000c failed with error -107
+[    1.630754] [<0>][1, swapper/0]i2c_geni 4a88000.i2c: Bus frequency not specified, default to 400KHz.
+[    1.666450] [<0>][232, kworker/u16:2]ufshcd-qcom 4804000.ufshc: ufshcd_print_pwr_info:[RX, TX]: gear=[3, 3], lane[1, 1], pwr[FAST MODE, FAST MODE], rate = 2
+[    1.666876] [<0>][232, kworker/u16:2]scsi 0:0:0:49488: Well-known LUN    SKhynix  H9HQ53ACPMMDAR   0004 PQ: 0 ANSI: 6
+[    1.667485] [<0>][232, kworker/u16:2]scsi 0:0:0:49456: Well-known LUN    SKhynix  H9HQ53ACPMMDAR   0004 PQ: 0 ANSI: 6
+[    1.667986] [<0>][232, kworker/u16:2]scsi 0:0:0:49476: Well-known LUN    SKhynix  H9HQ53ACPMMDAR   0004 PQ: 0 ANSI: 6
+[    1.668718] [<0>][232, kworker/u16:2]scsi 0:0:0:0: Direct-Access     SKhynix  H9HQ53ACPMMDAR   0004 PQ: 0 ANSI: 6
+[    1.669111] [<0>][232, kworker/u16:2]scsi 0:0:0:1: Direct-Access     SKhynix  H9HQ53ACPMMDAR   0004 PQ: 0 ANSI: 6
+[    1.669439] [<0>][232, kworker/u16:2]scsi 0:0:0:2: Direct-Access     SKhynix  H9HQ53ACPMMDAR   0004 PQ: 0 ANSI: 6
+[    1.669760] [<0>][232, kworker/u16:2]scsi 0:0:0:3: Direct-Access     SKhynix  H9HQ53ACPMMDAR   0004 PQ: 0 ANSI: 6
+[    1.670111] [<0>][232, kworker/u16:2]scsi 0:0:0:4: Direct-Access     SKhynix  H9HQ53ACPMMDAR   0004 PQ: 0 ANSI: 6
+[    1.670430] [<0>][232, kworker/u16:2]scsi 0:0:0:5: Direct-Access     SKhynix  H9HQ53ACPMMDAR   0004 PQ: 0 ANSI: 6
+[    1.672820] [<0>][232, kworker/u16:2]sd 0:0:0:0: [sda] Write Protect is off
+[    1.672826] [<0>][232, kworker/u16:2]sd 0:0:0:0: [sda] Mode Sense: 00 32 00 10
+[    1.672844] [<0>][286, kworker/u16:3]sd 0:0:0:2: [sdc] Write Protect is off
+[    1.672848] [<0>][286, kworker/u16:3]sd 0:0:0:2: [sdc] Mode Sense: 00 32 00 10
+[    1.673117] [<0>][232, kworker/u16:2]sd 0:0:0:0: [sda] Optimal transfer size 524288 bytes
+[    1.673265] [<0>][286, kworker/u16:3]sd 0:0:0:2: [sdc] Optimal transfer size 524288 bytes
+[    1.673686] [<0>][78, kworker/u16:1]sd 0:0:0:3: [sdd] Write Protect is off
+[    1.673690] [<0>][78, kworker/u16:1]sd 0:0:0:3: [sdd] Mode Sense: 00 32 00 10
+[    1.673886] [<0>][78, kworker/u16:1]sd 0:0:0:3: [sdd] Optimal transfer size 524288 bytes
+[    1.675898] [<0>][232, kworker/u16:2] sda: sda1 sda2 sda3 sda4 sda5 sda6 sda7 sda8 sda9 sda10 sda11 sda12 sda13 sda14 sda15
+[    1.676081] [<0>][286, kworker/u16:3] sdc: sdc1 sdc2
+[    1.676172] [<0>][78, kworker/u16:1] sdd: sdd1 sdd2 sdd3
+[    1.679102] [<0>][286, kworker/u16:3]sd 0:0:0:5: [sdf] Write Protect is off
+[    1.679108] [<0>][286, kworker/u16:3]sd 0:0:0:5: [sdf] Mode Sense: 00 32 00 10
+[    1.679186] [<0>][78, kworker/u16:1]sd 0:0:0:4: [sde] Write Protect is off
+[    1.679189] [<0>][78, kworker/u16:1]sd 0:0:0:4: [sde] Mode Sense: 00 32 00 10
+[    1.679332] [<0>][286, kworker/u16:3]sd 0:0:0:5: [sdf] Optimal transfer size 524288 bytes
+[    1.679545] [<0>][78, kworker/u16:1]sd 0:0:0:4: [sde] Optimal transfer size 524288 bytes
+[    1.680349] [<0>][287, kworker/u16:4]sd 0:0:0:1: [sdb] Write Protect is off
+[    1.680353] [<0>][287, kworker/u16:4]sd 0:0:0:1: [sdb] Mode Sense: 00 32 00 10
+[    1.680874] [<0>][287, kworker/u16:4]sd 0:0:0:1: [sdb] Optimal transfer size 524288 bytes
+[    1.681721] [<0>][286, kworker/u16:3] sdf: sdf1 sdf2 sdf3 sdf4 sdf5
+[    1.682474] [<0>][78, kworker/u16:1] sde: sde1 sde2 sde3 sde4 sde5 sde6 sde7 sde8 sde9 sde10 sde11 sde12 sde13 sde14 sde15 sde16 sde17 sde18 sde19 sde20 sde21 sde22 sde23 sde24 sde25 sde26 sde27 sde28 sde29 sde30 sde31 sde32 sde33 sde34 sde35 sde36 sde37 sde38 sde39 sde40 sde41 sde42 sde43 sde44 sde45 sde46 sde47 sde48 sde49 sde50 sde51 sde52 sde53 sde54 sde55 sde56 sde57 sde58 sde59 sde60 sde61 sde62
+[    1.686859] [<0>][287, kworker/u16:4] sdb: sdb1 sdb2
+[    2.010399] [<0>][1, swapper/0]i2c_geni 4a88000.i2c: i2c error :-107
+[    2.040126] [<0>][1, swapper/0]i2c_geni 4a88000.i2c: i2c error :-107
+[    2.070125] [<0>][1, swapper/0]i2c_geni 4a88000.i2c: i2c error :-107
+[    2.100025] [<0>][1, swapper/0]pm_qos_remove_request called for unknown object
+[    2.100039] [<0>][1, swapper/0]------------[ cut here ]------------
+[    2.100053] [<0>][1, swapper/0]WARNING: CPU: 0 PID: 1 at kernel/power/qos.c:734 pm_qos_remove_request+0x134/0x150
+[    2.100061] [<0>][1, swapper/0]CPU: 0 PID: 1 Comm: swapper/0 Tainted: G S              4.14.210-20210102-1539-ReZero #1
+[    2.100062] [<0>][1, swapper/0]Hardware name: Qualcomm Technologies, Inc. trinket pm6125 + pmi632 QRD (DT)
+[    2.100067] [<0>][1, swapper/0]task: 00000000b962b19b task.stack: 00000000ecce75bd
+[    2.100071] [<0>][1, swapper/0]pc : pm_qos_remove_request+0x134/0x150
+[    2.100075] [<0>][1, swapper/0]lr : pm_qos_remove_request+0x134/0x150
+[    2.100076] [<0>][1, swapper/0]sp : ffffff800805b380 pstate : 60400045
+[    2.100078] [<0>][1, swapper/0]x29: ffffff800805b380 x28: ffffffc5bfa55520 
+[    2.100083] [<0>][1, swapper/0]x27: 000000000000005d x26: 0000000000000001 
+[    2.100086] [<0>][1, swapper/0]x25: 0000000000000000 x24: ffffffc5afea2c80 
+[    2.100090] [<0>][1, swapper/0]x23: 00000000fffffc18 x22: ffffffc5afe41080 
+[    2.100095] [<0>][1, swapper/0]x21: ffffffc5afe69880 x20: ffffffc5afe6c810 
+[    2.100099] [<0>][1, swapper/0]x19: ffffffc5afe15ad0 x18: 0000000000000000 
+[    2.100103] [<0>][1, swapper/0]x17: 00000000fffef40c x16: 0000000000000000 
+[    2.100107] [<0>][1, swapper/0]x15: 0000000000000082 x14: 0000000000000058 
+[    2.100111] [<0>][1, swapper/0]x13: 0000000000010c4c x12: 0000000000000000 
+[    2.100116] [<0>][1, swapper/0]x11: 0000000000000000 x10: ffffffffffffffff 
+[    2.100120] [<0>][1, swapper/0]x9 : 56c00c8b7eebd500 x8 : 56c00c8b7eebd500 
+[    2.100124] [<0>][1, swapper/0]x7 : 0000000000000000 x6 : ffffffc5bf809c1b 
+[    2.100128] [<0>][1, swapper/0]x5 : ffffff90ad634000 x4 : 0000000000000004 
+[    2.100132] [<0>][1, swapper/0]x3 : 0000000000000000 x2 : 0000000000000001 
+[    2.100136] [<0>][1, swapper/0]x1 : 00000000000000c0 x0 : 000000000000002f 
+[    2.100142] [<0>][1, swapper/0]
+               PC: 0xffffff90ab327c8c:
+[    2.100144] [<0>][1, swapper/0]7c8c  91014261 f8687928 52800042 12800003 f9400100 97fffc57 52801c02 aa1303e0
+[    2.100159] [<0>][1, swapper/0]7cac  2a1f03e1 944ef1d4 14000007 b000cdc0 f000d961 911a9c00 9127f021 94000f6e
+[    2.100171] [<0>][1, swapper/0]7ccc  d4210000 a9424ff4 a94157f6 a8c37bfd d65f03c0 944f5be3 17ffffe7 a9bf7bfd
+[    2.100182] [<0>][1, swapper/0]7cec  910003fd f000a708 91050108 f860d908 f9400108 f9402100 97feed75 a8c17bfd
+[    2.100194] [<0>][1, swapper/0]
+               LR: 0xffffff90ab327c8c:
+[    2.100195] [<0>][1, swapper/0]7c8c  91014261 f8687928 52800042 12800003 f9400100 97fffc57 52801c02 aa1303e0
+[    2.100206] [<0>][1, swapper/0]7cac  2a1f03e1 944ef1d4 14000007 b000cdc0 f000d961 911a9c00 9127f021 94000f6e
+[    2.100217] [<0>][1, swapper/0]7ccc  d4210000 a9424ff4 a94157f6 a8c37bfd d65f03c0 944f5be3 17ffffe7 a9bf7bfd
+[    2.100228] [<0>][1, swapper/0]7cec  910003fd f000a708 91050108 f860d908 f9400108 f9402100 97feed75 a8c17bfd
+[    2.100240] [<0>][1, swapper/0]
+               SP: 0xffffff800805b340:
+[    2.100241] [<0>][1, swapper/0]b340  ab327ccc ffffff90 60400045 00000000 ffffffc8 ffffff80 7eebd500 56c00c8b
+[    2.100252] [<0>][1, swapper/0]b360  ffffffff ffffffff ab327ccc ffffff90 0805b380 ffffff80 ab327ccc ffffff90
+[    2.100263] [<0>][1, swapper/0]b380  0805b3c0 ffffff80 abc1f508 ffffff90 afe41080 ffffffc5 afe69880 ffffffc5
+[    2.100274] [<0>][1, swapper/0]b3a0  afe6c810 ffffffc5 afe15880 ffffffc5 0805b3f0 ffffff00 7eebd500 56c00c8b
+[    2.100285] [<0>][1, swapper/0]
+[    2.100287] [<0>][1, swapper/0]Call trace:
+[    2.100292] [<0>][1, swapper/0] pm_qos_remove_request+0x134/0x150
+[    2.100297] [<0>][1, swapper/0] goodix_ts_probe+0x39c/0x6cc
+[    2.100303] [<0>][1, swapper/0] platform_drv_probe+0x64/0xb8
+[    2.100309] [<0>][1, swapper/0] driver_probe_device+0x4c0/0x62c
+[    2.100311] [<0>][1, swapper/0] __device_attach_driver+0x114/0x1b0
+[    2.100315] [<0>][1, swapper/0] bus_for_each_drv+0x7c/0xc4
+[    2.100320] [<0>][1, swapper/0] __device_attach+0xa8/0x15c
+[    2.100324] [<0>][1, swapper/0] device_initial_probe+0x10/0x18
+[    2.100326] [<0>][1, swapper/0] bus_probe_device+0x30/0x90
+[    2.100331] [<0>][1, swapper/0] device_add+0x614/0x898
+[    2.100333] [<0>][1, swapper/0] platform_device_add+0x8c/0x25c
+[    2.100337] [<0>][1, swapper/0] platform_device_register+0x28/0x34
+[    2.100342] [<0>][1, swapper/0] goodix_i2c_probe+0x280/0x5a4
+[    2.100349] [<0>][1, swapper/0] i2c_device_probe+0x24c/0x2d0
+[    2.100353] [<0>][1, swapper/0] driver_probe_device+0x4c0/0x62c
+[    2.100355] [<0>][1, swapper/0] __device_attach_driver+0x114/0x1b0
+[    2.100358] [<0>][1, swapper/0] bus_for_each_drv+0x7c/0xc4
+[    2.100362] [<0>][1, swapper/0] __device_attach+0xa8/0x15c
+[    2.100365] [<0>][1, swapper/0] device_initial_probe+0x10/0x18
+[    2.100368] [<0>][1, swapper/0] bus_probe_device+0x30/0x90
+[    2.100371] [<0>][1, swapper/0] device_add+0x614/0x898
+[    2.100373] [<0>][1, swapper/0] device_register+0x1c/0x28
+[    2.100377] [<0>][1, swapper/0] i2c_new_device+0x300/0x358
+[    2.100381] [<0>][1, swapper/0] of_i2c_register_devices+0x224/0x2b0
+[    2.100386] [<0>][1, swapper/0] i2c_register_adapter+0x2ac/0x3ac
+[    2.100389] [<0>][1, swapper/0] i2c_add_adapter+0xac/0xfc
+[    2.100393] [<0>][1, swapper/0] geni_i2c_probe+0x63c/0x698
+[    2.100396] [<0>][1, swapper/0] platform_drv_probe+0x64/0xb8
+[    2.100399] [<0>][1, swapper/0] driver_probe_device+0x4c0/0x62c
+[    2.100402] [<0>][1, swapper/0] __driver_attach+0xf0/0x194
+[    2.100405] [<0>][1, swapper/0] bus_for_each_dev+0x80/0xc8
+[    2.100409] [<0>][1, swapper/0] driver_attach+0x20/0x28
+[    2.100412] [<0>][1, swapper/0] bus_add_driver+0x134/0x230
+[    2.100415] [<0>][1, swapper/0] driver_register+0xa4/0xf0
+[    2.100418] [<0>][1, swapper/0] __platform_driver_register+0x40/0x48
+[    2.100424] [<0>][1, swapper/0] geni_i2c_driver_init+0x18/0x20
+[    2.100431] [<0>][1, swapper/0] do_one_initcall+0xe0/0x1bc
+[    2.100436] [<0>][1, swapper/0] kernel_init_freeable+0x1a8/0x238
+[    2.100442] [<0>][1, swapper/0] kernel_init+0x10/0x1fc
+[    2.100448] [<0>][1, swapper/0] ret_from_fork+0x10/0x18
+[    2.100454] [<0>][1, swapper/0]---[ end trace ea315601390abae1 ]---
+[    2.100457] [<0>][1, swapper/0]pm_qos_remove_request called for unknown object
+[    2.100463] [<0>][1, swapper/0]------------[ cut here ]------------
+[    2.100467] [<0>][1, swapper/0]WARNING: CPU: 0 PID: 1 at kernel/power/qos.c:734 pm_qos_remove_request+0x134/0x150
+[    2.100470] [<0>][1, swapper/0]CPU: 0 PID: 1 Comm: swapper/0 Tainted: G S      W       4.14.210-20210102-1539-ReZero #1
+[    2.100472] [<0>][1, swapper/0]Hardware name: Qualcomm Technologies, Inc. trinket pm6125 + pmi632 QRD (DT)
+[    2.100474] [<0>][1, swapper/0]task: 00000000b962b19b task.stack: 00000000ecce75bd
+[    2.100477] [<0>][1, swapper/0]pc : pm_qos_remove_request+0x134/0x150
+[    2.100480] [<0>][1, swapper/0]lr : pm_qos_remove_request+0x134/0x150
+[    2.100483] [<0>][1, swapper/0]sp : ffffff800805b380 pstate : 60400045
+[    2.100484] [<0>][1, swapper/0]x29: ffffff800805b380 x28: ffffffc5bfa55520 
+[    2.100489] [<0>][1, swapper/0]x27: 000000000000005d x26: 0000000000000001 
+[    2.100493] [<0>][1, swapper/0]x25: 0000000000000000 x24: ffffffc5afea2c80 
+[    2.100497] [<0>][1, swapper/0]x23: 00000000fffffc18 x22: ffffffc5afe41080 
+[    2.100501] [<0>][1, swapper/0]x21: ffffffc5afe69880 x20: ffffffc5afe6c810 
+[    2.100506] [<0>][1, swapper/0]x19: ffffffc5afe15bb0 x18: 0000000000000000 
+[    2.100510] [<0>][1, swapper/0]x17: 00000000fffed9bc x16: 0000000000000000 
+[    2.100514] [<0>][1, swapper/0]x15: 0000000000000082 x14: 0000000000000058 
+[    2.100518] [<0>][1, swapper/0]x13: 000000000001269c x12: 0000000000000000 
+[    2.100522] [<0>][1, swapper/0]x11: 0000000000000000 x10: ffffffffffffffff 
+[    2.100527] [<0>][1, swapper/0]x9 : 56c00c8b7eebd500 x8 : 56c00c8b7eebd500 
+[    2.100531] [<0>][1, swapper/0]x7 : 0000000000000000 x6 : ffffffc5bf80b66b 
+[    2.100535] [<0>][1, swapper/0]x5 : ffffff90ad634000 x4 : 0000000000000004 
+[    2.100539] [<0>][1, swapper/0]x3 : 0000000000000000 x2 : 0000000000000001 
+[    2.100543] [<0>][1, swapper/0]x1 : 00000000000000c0 x0 : 000000000000002f 
+[    2.100547] [<0>][1, swapper/0]
+               PC: 0xffffff90ab327c8c:
+[    2.100548] [<0>][1, swapper/0]7c8c  91014261 f8687928 52800042 12800003 f9400100 97fffc57 52801c02 aa1303e0
+[    2.100561] [<0>][1, swapper/0]7cac  2a1f03e1 944ef1d4 14000007 b000cdc0 f000d961 911a9c00 9127f021 94000f6e
+[    2.100572] [<0>][1, swapper/0]7ccc  d4210000 a9424ff4 a94157f6 a8c37bfd d65f03c0 944f5be3 17ffffe7 a9bf7bfd
+[    2.100583] [<0>][1, swapper/0]7cec  910003fd f000a708 91050108 f860d908 f9400108 f9402100 97feed75 a8c17bfd
+[    2.100595] [<0>][1, swapper/0]
+               LR: 0xffffff90ab327c8c:
+[    2.100596] [<0>][1, swapper/0]7c8c  91014261 f8687928 52800042 12800003 f9400100 97fffc57 52801c02 aa1303e0
+[    2.100606] [<0>][1, swapper/0]7cac  2a1f03e1 944ef1d4 14000007 b000cdc0 f000d961 911a9c00 9127f021 94000f6e
+[    2.100617] [<0>][1, swapper/0]7ccc  d4210000 a9424ff4 a94157f6 a8c37bfd d65f03c0 944f5be3 17ffffe7 a9bf7bfd
+[    2.100629] [<0>][1, swapper/0]7cec  910003fd f000a708 91050108 f860d908 f9400108 f9402100 97feed75 a8c17bfd
+[    2.100640] [<0>][1, swapper/0]
+               SP: 0xffffff800805b340:
+[    2.100641] [<0>][1, swapper/0]b340  ab327ccc ffffff90 60400045 00000000 ffffffc8 ffffff80 7eebd500 56c00c8b
+[    2.100652] [<0>][1, swapper/0]b360  ffffffff ffffffff ab327ccc ffffff90 0805b380 ffffff80 ab327ccc ffffff90
+[    2.100663] [<0>][1, swapper/0]b380  0805b3c0 ffffff80 abc1f510 ffffff90 afe41080 ffffffc5 afe69880 ffffffc5
+[    2.100675] [<0>][1, swapper/0]b3a0  afe6c810 ffffffc5 afe15880 ffffffc5 0805b3f0 ffffff00 7eebd500 56c00c8b
+[    2.100686] [<0>][1, swapper/0]
+[    2.100687] [<0>][1, swapper/0]Call trace:
+[    2.100690] [<0>][1, swapper/0] pm_qos_remove_request+0x134/0x150
+[    2.100693] [<0>][1, swapper/0] goodix_ts_probe+0x3a4/0x6cc
+[    2.100697] [<0>][1, swapper/0] platform_drv_probe+0x64/0xb8
+[    2.100700] [<0>][1, swapper/0] driver_probe_device+0x4c0/0x62c
+[    2.100702] [<0>][1, swapper/0] __device_attach_driver+0x114/0x1b0
+[    2.100706] [<0>][1, swapper/0] bus_for_each_drv+0x7c/0xc4
+[    2.100710] [<0>][1, swapper/0] __device_attach+0xa8/0x15c
+[    2.100713] [<0>][1, swapper/0] device_initial_probe+0x10/0x18
+[    2.100716] [<0>][1, swapper/0] bus_probe_device+0x30/0x90
+[    2.100719] [<0>][1, swapper/0] device_add+0x614/0x898
+[    2.100721] [<0>][1, swapper/0] platform_device_add+0x8c/0x25c
+[    2.100724] [<0>][1, swapper/0] platform_device_register+0x28/0x34
+[    2.100726] [<0>][1, swapper/0] goodix_i2c_probe+0x280/0x5a4
+[    2.100730] [<0>][1, swapper/0] i2c_device_probe+0x24c/0x2d0
+[    2.100733] [<0>][1, swapper/0] driver_probe_device+0x4c0/0x62c
+[    2.100735] [<0>][1, swapper/0] __device_attach_driver+0x114/0x1b0
+[    2.100738] [<0>][1, swapper/0] bus_for_each_drv+0x7c/0xc4
+[    2.100742] [<0>][1, swapper/0] __device_attach+0xa8/0x15c
+[    2.100745] [<0>][1, swapper/0] device_initial_probe+0x10/0x18
+[    2.100749] [<0>][1, swapper/0] bus_probe_device+0x30/0x90
+[    2.100752] [<0>][1, swapper/0] device_add+0x614/0x898
+[    2.100755] [<0>][1, swapper/0] device_register+0x1c/0x28
+[    2.100758] [<0>][1, swapper/0] i2c_new_device+0x300/0x358
+[    2.100762] [<0>][1, swapper/0] of_i2c_register_devices+0x224/0x2b0
+[    2.100766] [<0>][1, swapper/0] i2c_register_adapter+0x2ac/0x3ac
+[    2.100770] [<0>][1, swapper/0] i2c_add_adapter+0xac/0xfc
+[    2.100772] [<0>][1, swapper/0] geni_i2c_probe+0x63c/0x698
+[    2.100775] [<0>][1, swapper/0] platform_drv_probe+0x64/0xb8
+[    2.100778] [<0>][1, swapper/0] driver_probe_device+0x4c0/0x62c
+[    2.100780] [<0>][1, swapper/0] __driver_attach+0xf0/0x194
+[    2.100783] [<0>][1, swapper/0] bus_for_each_dev+0x80/0xc8
+[    2.100787] [<0>][1, swapper/0] driver_attach+0x20/0x28
+[    2.100790] [<0>][1, swapper/0] bus_add_driver+0x134/0x230
+[    2.100793] [<0>][1, swapper/0] driver_register+0xa4/0xf0
+[    2.100796] [<0>][1, swapper/0] __platform_driver_register+0x40/0x48
+[    2.100798] [<0>][1, swapper/0] geni_i2c_driver_init+0x18/0x20
+[    2.100802] [<0>][1, swapper/0] do_one_initcall+0xe0/0x1bc
+[    2.100805] [<0>][1, swapper/0] kernel_init_freeable+0x1a8/0x238
+[    2.100808] [<0>][1, swapper/0] kernel_init+0x10/0x1fc
+[    2.100811] [<0>][1, swapper/0] ret_from_fork+0x10/0x18
+[    2.100813] [<0>][1, swapper/0]---[ end trace ea315601390abae2 ]---
+[    2.100850] [<0>][1, swapper/0]goodix_ts: probe of goodix_ts.0 failed with error -1000
+[    2.101236] [<0>][1, swapper/0][FTS_TS/I]fts_ts_probe:Touch Screen(I2C BUS) driver prboe...
+[    2.101243] [<0>][1, swapper/0][FTS_TS]fts_ts_probe_entry: Enter
+[    2.101245] [<0>][1, swapper/0][FTS_TS]fts_parse_dt: Enter
+[    2.101250] [<0>][1, swapper/0][FTS_TS/I]fts_get_dt_coords:display x(0 720) y(0 1560)
+[    2.101258] [<0>][1, swapper/0][FTS_TS/I]fts_parse_dt:VK Number:3, key:(139,102,158), coords:(200,2000),(600,2000),(800,2000)
+[    2.101266] [<0>][1, swapper/0][FTS_TS/I]fts_parse_dt:max touch number:10, irq gpio:88, reset gpio:87
+[    2.101268] [<0>][1, swapper/0][FTS_TS]fts_parse_dt: Exit(1381)
+[    2.102362] [<0>][1, swapper/0][FTS_TS]fts_bus_init: Enter
+[    2.102364] [<0>][1, swapper/0][FTS_TS]fts_bus_init: Exit(162)
+[    2.102366] [<0>][1, swapper/0][FTS_TS]fts_input_init: Enter
+[    2.102372] [<0>][1, swapper/0][FTS_TS/I]fts_input_init:set key capabilities
+[    2.102458] [<0>][1, swapper/0]input: fts_ts as /devices/platform/soc/4a88000.i2c/i2c-1/1-0038/input/input2
+[    2.102628] [<0>][1, swapper/0][FTS_TS]fts_input_init: Exit(927)
+[    2.102630] [<0>][1, swapper/0][FTS_TS]fts_gpio_configure: Enter
+[    2.102651] [<0>][1, swapper/0][FTS_TS]fts_gpio_configure: Exit(1252)
+[    2.102652] [<0>][1, swapper/0][FTS_TS]fts_power_source_init: Enter
+[    2.102772] [<0>][1, swapper/0]fts_ts 1-0038: 1-0038 supply vcc_i2c not found, using dummy regulator
+[    2.102799] [<0>][1, swapper/0][FTS_TS]fts_power_source_ctrl: Enter
+[    2.102800] [<0>][1, swapper/0][FTS_TS]fts_power_source_ctrl:regulator enable !
+[    2.120023] [<0>][1, swapper/0][FTS_TS]fts_power_source_ctrl: Exit(1097)
+[    2.120025] [<0>][1, swapper/0][FTS_TS]fts_power_source_init: Exit(1157)
+[    2.120027] [<0>][1, swapper/0][FTS_TS]fts_reset_proc:tp reset
+[    2.350416] [<0>][1, swapper/0][FTS_TS]fts_get_chip_types:verify id:0x5452
+[    2.350419] [<0>][1, swapper/0][FTS_TS/I]fts_get_ic_information:get ic information, chip id = 0x5452
+[    2.350432] [<0>][1, swapper/0][FTS_TS/I]fts_create_apk_debug_channel:Create proc entry success!
+[    2.350452] [<0>][1, swapper/0][FTS_TS/I]fts_create_sysfs:[EX]: sysfs_create_group() succeeded!!
+[    2.350458] [<0>][1, swapper/0][FTS_TS]fts_ex_mode_init:create sysfs(ex_mode) succeedfully
+[    2.350460] [<0>][1, swapper/0][FTS_TS]fts_gesture_init: Enter
+[    2.350467] [<0>][1, swapper/0][FTS_TS]fts_gesture_init: Exit(753)
+[    2.350469] [<0>][1, swapper/0][FTS_TS][TEST]fts_test_init: Enter
+[    2.350471] [<0>][1, swapper/0][FTS_TS/I][TEST]fts_test_func_init:init test function
+[    2.350475] [<0>][1, swapper/0][FTS_TS/I][TEST]fts_test_func_init:match test function,type:81
+[    2.350479] [<0>][1, swapper/0][FTS_TS][TEST]fts_test_init:sysfs(test) create successfully
+[    2.350481] [<0>][1, swapper/0][FTS_TS][TEST]fts_test_init: Exit(2051)
+[    2.350484] [<0>][1, swapper/0]IRQ-0 not set for request with affinity flag
+[    2.350493] [<0>][1, swapper/0]------------[ cut here ]------------
+[    2.350499] [<0>][1, swapper/0]WARNING: CPU: 0 PID: 1 at kernel/power/qos.c:626 pm_qos_add_request+0x26c/0x27c
+[    2.350505] [<0>][1, swapper/0]CPU: 0 PID: 1 Comm: swapper/0 Tainted: G S      W       4.14.210-20210102-1539-ReZero #1
+[    2.350507] [<0>][1, swapper/0]Hardware name: Qualcomm Technologies, Inc. trinket pm6125 + pmi632 QRD (DT)
+[    2.350510] [<0>][1, swapper/0]task: 00000000b962b19b task.stack: 00000000ecce75bd
+[    2.350514] [<0>][1, swapper/0]pc : pm_qos_add_request+0x26c/0x27c
+[    2.350517] [<0>][1, swapper/0]lr : pm_qos_add_request+0x26c/0x27c
+[    2.350518] [<0>][1, swapper/0]sp : ffffff800805b600 pstate : 60400045
+[    2.350521] [<0>][1, swapper/0]x29: ffffff800805b600 x28: 0000000000000054 
+[    2.350525] [<0>][1, swapper/0]x27: ffffff800805b665 x26: 0000000000000000 
+[    2.350529] [<0>][1, swapper/0]x25: ffffff90ae21a000 x24: ffffff90ace11024 
+[    2.350533] [<0>][1, swapper/0]x23: 0000000000000052 x22: 0000000000000002 
+[    2.350537] [<0>][1, swapper/0]x21: 0000000000000001 x20: ffffffc5afe071b0 
+[    2.350542] [<0>][1, swapper/0]x19: 00000000ffffffff x18: 00000000ffff0a01 
+[    2.350546] [<0>][1, swapper/0]x17: 00000000fffeb324 x16: 0000000000000000 
+[    2.350550] [<0>][1, swapper/0]x15: 0000000000000082 x14: 0000000000000054 
+[    2.350554] [<0>][1, swapper/0]x13: 0000000000014d30 x12: 0000000000000000 
+[    2.350558] [<0>][1, swapper/0]x11: 0000000000000000 x10: ffffffffffffffff 
+[    2.350563] [<0>][1, swapper/0]x9 : 56c00c8b7eebd500 x8 : 56c00c8b7eebd500 
+[    2.350567] [<0>][1, swapper/0]x7 : 0000000000000000 x6 : ffffffc5bf80dd03 
+[    2.350571] [<0>][1, swapper/0]x5 : ffffff90ad634000 x4 : 000000000000000c 
+[    2.350575] [<0>][1, swapper/0]x3 : 0000000000000000 x2 : 0000000000000000 
+[    2.350579] [<0>][1, swapper/0]x1 : 00000000000000c0 x0 : 000000000000002c 
+[    2.350584] [<0>][1, swapper/0]
+               PC: 0xffffff90ab327774:
+[    2.350585] [<0>][1, swapper/0]7774  52800022 aa1503e1 2a1303e3 97fffd9f a9434ff4 a94257f6 f9400bf7 a8c47bfd
+[    2.350599] [<0>][1, swapper/0]7794  d65f03c0 b9401281 b000cdc0 52801fe8 91173800 b900029f f9000688 940010b4
+[    2.350611] [<0>][1, swapper/0]77b4  d4210000 17ffff9f 944f5d2c 17ffffd2 a9bd7bfd f9000bf5 a9024ff4 910003fd
+[    2.350622] [<0>][1, swapper/0]77d4  b9806008 f000a709 91050129 aa0003f4 f8687928 b85f8000 f9400113 940020dd
+[    2.350635] [<0>][1, swapper/0]
+               LR: 0xffffff90ab327774:
+[    2.350636] [<0>][1, swapper/0]7774  52800022 aa1503e1 2a1303e3 97fffd9f a9434ff4 a94257f6 f9400bf7 a8c47bfd
+[    2.350647] [<0>][1, swapper/0]7794  d65f03c0 b9401281 b000cdc0 52801fe8 91173800 b900029f f9000688 940010b4
+[    2.350658] [<0>][1, swapper/0]77b4  d4210000 17ffff9f 944f5d2c 17ffffd2 a9bd7bfd f9000bf5 a9024ff4 910003fd
+[    2.350669] [<0>][1, swapper/0]77d4  b9806008 f000a709 91050129 aa0003f4 f8687928 b85f8000 f9400113 940020dd
+[    2.350681] [<0>][1, swapper/0]
+               SP: 0xffffff800805b5c0:
+[    2.350682] [<0>][1, swapper/0]b5c0  ab3277b4 ffffff90 60400045 00000000 ffffffc8 ffffff80 7eebd500 56c00c8b
+[    2.350693] [<0>][1, swapper/0]b5e0  ffffffff ffffffff ab3277b4 ffffff90 0805b600 ffffff80 ab3277b4 ffffff90
+[    2.350704] [<0>][1, swapper/0]b600  0805b680 ffffff80 abc2cde8 ffffff90 00000052 00000000 abc2cd88 ffffff90
+[    2.350715] [<0>][1, swapper/0]b620  00000002 00000000 aff96c80 ffffffc5 aff93020 ffffffc5 afe07000 ffffffc5
+[    2.350726] [<0>][1, swapper/0]
+[    2.350728] [<0>][1, swapper/0]Call trace:
+[    2.350732] [<0>][1, swapper/0] pm_qos_add_request+0x26c/0x27c
+[    2.350737] [<0>][1, swapper/0] fts_ts_probe+0xe64/0x1084
+[    2.350742] [<0>][1, swapper/0] i2c_device_probe+0x24c/0x2d0
+[    2.350747] [<0>][1, swapper/0] driver_probe_device+0x4c0/0x62c
+[    2.350750] [<0>][1, swapper/0] __device_attach_driver+0x114/0x1b0
+[    2.350753] [<0>][1, swapper/0] bus_for_each_drv+0x7c/0xc4
+[    2.350756] [<0>][1, swapper/0] __device_attach+0xa8/0x15c
+[    2.350759] [<0>][1, swapper/0] device_initial_probe+0x10/0x18
+[    2.350763] [<0>][1, swapper/0] bus_probe_device+0x30/0x90
+[    2.350766] [<0>][1, swapper/0] device_add+0x614/0x898
+[    2.350770] [<0>][1, swapper/0] device_register+0x1c/0x28
+[    2.350774] [<0>][1, swapper/0] i2c_new_device+0x300/0x358
+[    2.350778] [<0>][1, swapper/0] of_i2c_register_devices+0x224/0x2b0
+[    2.350781] [<0>][1, swapper/0] i2c_register_adapter+0x2ac/0x3ac
+[    2.350785] [<0>][1, swapper/0] i2c_add_adapter+0xac/0xfc
+[    2.350788] [<0>][1, swapper/0] geni_i2c_probe+0x63c/0x698
+[    2.350790] [<0>][1, swapper/0] platform_drv_probe+0x64/0xb8
+[    2.350794] [<0>][1, swapper/0] driver_probe_device+0x4c0/0x62c
+[    2.350796] [<0>][1, swapper/0] __driver_attach+0xf0/0x194
+[    2.350800] [<0>][1, swapper/0] bus_for_each_dev+0x80/0xc8
+[    2.350803] [<0>][1, swapper/0] driver_attach+0x20/0x28
+[    2.350806] [<0>][1, swapper/0] bus_add_driver+0x134/0x230
+[    2.350808] [<0>][1, swapper/0] driver_register+0xa4/0xf0
+[    2.350811] [<0>][1, swapper/0] __platform_driver_register+0x40/0x48
+[    2.350815] [<0>][1, swapper/0] geni_i2c_driver_init+0x18/0x20
+[    2.350821] [<0>][1, swapper/0] do_one_initcall+0xe0/0x1bc
+[    2.350825] [<0>][1, swapper/0] kernel_init_freeable+0x1a8/0x238
+[    2.350830] [<0>][1, swapper/0] kernel_init+0x10/0x1fc
+[    2.350834] [<0>][1, swapper/0] ret_from_fork+0x10/0x18
+[    2.350836] [<0>][1, swapper/0]---[ end trace ea315601390abae3 ]---
+[    2.350845] [<0>][1, swapper/0]IRQ-0 not set for request with affinity flag
+[    2.350850] [<0>][1, swapper/0]------------[ cut here ]------------
+[    2.350854] [<0>][1, swapper/0]WARNING: CPU: 0 PID: 1 at kernel/power/qos.c:626 pm_qos_add_request+0x26c/0x27c
+[    2.350857] [<0>][1, swapper/0]CPU: 0 PID: 1 Comm: swapper/0 Tainted: G S      W       4.14.210-20210102-1539-ReZero #1
+[    2.350860] [<0>][1, swapper/0]Hardware name: Qualcomm Technologies, Inc. trinket pm6125 + pmi632 QRD (DT)
+[    2.350862] [<0>][1, swapper/0]task: 00000000b962b19b task.stack: 00000000ecce75bd
+[    2.350865] [<0>][1, swapper/0]pc : pm_qos_add_request+0x26c/0x27c
+[    2.350867] [<0>][1, swapper/0]lr : pm_qos_add_request+0x26c/0x27c
+[    2.350870] [<0>][1, swapper/0]sp : ffffff800805b600 pstate : 60400045
+[    2.350871] [<0>][1, swapper/0]x29: ffffff800805b600 x28: 0000000000000054 
+[    2.350875] [<0>][1, swapper/0]x27: ffffff800805b665 x26: 0000000000000000 
+[    2.350879] [<0>][1, swapper/0]x25: ffffff90ae21a000 x24: ffffff90ace11024 
+[    2.350884] [<0>][1, swapper/0]x23: 0000000000000052 x22: 0000000000000002 
+[    2.350888] [<0>][1, swapper/0]x21: 0000000000000001 x20: ffffffc5afe07290 
+[    2.350892] [<0>][1, swapper/0]x19: 00000000ffffffff x18: 00000000ffff0a01 
+[    2.350896] [<0>][1, swapper/0]x17: 00000000fffe9bf4 x16: 0000000000000000 
+[    2.350900] [<0>][1, swapper/0]x15: 0000000000000082 x14: 0000000000000054 
+[    2.350905] [<0>][1, swapper/0]x13: 0000000000016460 x12: 0000000000000000 
+[    2.350909] [<0>][1, swapper/0]x11: 0000000000000000 x10: ffffffffffffffff 
+[    2.350913] [<0>][1, swapper/0]x9 : 56c00c8b7eebd500 x8 : 56c00c8b7eebd500 
+[    2.350917] [<0>][1, swapper/0]x7 : 0000000000000000 x6 : ffffffc5bf80f433 
+[    2.350921] [<0>][1, swapper/0]x5 : ffffff90ad634000 x4 : 000000000000000c 
+[    2.350925] [<0>][1, swapper/0]x3 : 0000000000000000 x2 : 0000000000000000 
+[    2.350930] [<0>][1, swapper/0]x1 : 00000000000000c0 x0 : 000000000000002c 
+[    2.350934] [<0>][1, swapper/0]
+               PC: 0xffffff90ab327774:
+[    2.350935] [<0>][1, swapper/0]7774  52800022 aa1503e1 2a1303e3 97fffd9f a9434ff4 a94257f6 f9400bf7 a8c47bfd
+[    2.350946] [<0>][1, swapper/0]7794  d65f03c0 b9401281 b000cdc0 52801fe8 91173800 b900029f f9000688 940010b4
+[    2.350957] [<0>][1, swapper/0]77b4  d4210000 17ffff9f 944f5d2c 17ffffd2 a9bd7bfd f9000bf5 a9024ff4 910003fd
+[    2.350969] [<0>][1, swapper/0]77d4  b9806008 f000a709 91050129 aa0003f4 f8687928 b85f8000 f9400113 940020dd
+[    2.350980] [<0>][1, swapper/0]
+               LR: 0xffffff90ab327774:
+[    2.350981] [<0>][1, swapper/0]7774  52800022 aa1503e1 2a1303e3 97fffd9f a9434ff4 a94257f6 f9400bf7 a8c47bfd
+[    2.350992] [<0>][1, swapper/0]7794  d65f03c0 b9401281 b000cdc0 52801fe8 91173800 b900029f f9000688 940010b4
+[    2.351003] [<0>][1, swapper/0]77b4  d4210000 17ffff9f 944f5d2c 17ffffd2 a9bd7bfd f9000bf5 a9024ff4 910003fd
+[    2.351014] [<0>][1, swapper/0]77d4  b9806008 f000a709 91050129 aa0003f4 f8687928 b85f8000 f9400113 940020dd
+[    2.351026] [<0>][1, swapper/0]
+               SP: 0xffffff800805b5c0:
+[    2.351027] [<0>][1, swapper/0]b5c0  ab3277b4 ffffff90 60400045 00000000 ffffffc8 ffffff80 7eebd500 56c00c8b
+[    2.351038] [<0>][1, swapper/0]b5e0  ffffffff ffffffff ab3277b4 ffffff90 0805b600 ffffff80 ab3277b4 ffffff90
+[    2.351049] [<0>][1, swapper/0]b600  0805b680 ffffff80 abc2ce04 ffffff90 00000052 00000000 abc2cd88 ffffff90
+[    2.351061] [<0>][1, swapper/0]b620  00000002 00000000 aff96c80 ffffffc5 aff93020 ffffffc5 afe07000 ffffffc5
+[    2.351072] [<0>][1, swapper/0]
+[    2.351073] [<0>][1, swapper/0]Call trace:
+[    2.351076] [<0>][1, swapper/0] pm_qos_add_request+0x26c/0x27c
+[    2.351079] [<0>][1, swapper/0] fts_ts_probe+0xe80/0x1084
+[    2.351082] [<0>][1, swapper/0] i2c_device_probe+0x24c/0x2d0
+[    2.351085] [<0>][1, swapper/0] driver_probe_device+0x4c0/0x62c
+[    2.351088] [<0>][1, swapper/0] __device_attach_driver+0x114/0x1b0
+[    2.351091] [<0>][1, swapper/0] bus_for_each_drv+0x7c/0xc4
+[    2.351094] [<0>][1, swapper/0] __device_attach+0xa8/0x15c
+[    2.351098] [<0>][1, swapper/0] device_initial_probe+0x10/0x18
+[    2.351102] [<0>][1, swapper/0] bus_probe_device+0x30/0x90
+[    2.351105] [<0>][1, swapper/0] device_add+0x614/0x898
+[    2.351107] [<0>][1, swapper/0] device_register+0x1c/0x28
+[    2.351110] [<0>][1, swapper/0] i2c_new_device+0x300/0x358
+[    2.351114] [<0>][1, swapper/0] of_i2c_register_devices+0x224/0x2b0
+[    2.351117] [<0>][1, swapper/0] i2c_register_adapter+0x2ac/0x3ac
+[    2.351120] [<0>][1, swapper/0] i2c_add_adapter+0xac/0xfc
+[    2.351123] [<0>][1, swapper/0] geni_i2c_probe+0x63c/0x698
+[    2.351126] [<0>][1, swapper/0] platform_drv_probe+0x64/0xb8
+[    2.351130] [<0>][1, swapper/0] driver_probe_device+0x4c0/0x62c
+[    2.351132] [<0>][1, swapper/0] __driver_attach+0xf0/0x194
+[    2.351135] [<0>][1, swapper/0] bus_for_each_dev+0x80/0xc8
+[    2.351139] [<0>][1, swapper/0] driver_attach+0x20/0x28
+[    2.351143] [<0>][1, swapper/0] bus_add_driver+0x134/0x230
+[    2.351145] [<0>][1, swapper/0] driver_register+0xa4/0xf0
+[    2.351147] [<0>][1, swapper/0] __platform_driver_register+0x40/0x48
+[    2.351150] [<0>][1, swapper/0] geni_i2c_driver_init+0x18/0x20
+[    2.351153] [<0>][1, swapper/0] do_one_initcall+0xe0/0x1bc
+[    2.351156] [<0>][1, swapper/0] kernel_init_freeable+0x1a8/0x238
+[    2.351159] [<0>][1, swapper/0] kernel_init+0x10/0x1fc
+[    2.351162] [<0>][1, swapper/0] ret_from_fork+0x10/0x18
+[    2.351164] [<0>][1, swapper/0]---[ end trace ea315601390abae4 ]---
+[    2.351170] [<0>][1, swapper/0][FTS_TS/I]fts_irq_registration:irq:236, flag:2002
+[    2.351331] [<0>][1, swapper/0][FTS_TS/I]fts_fwupg_init:fw upgrade init function
+[    2.351384] [<0>][289, kworker/u16:6][FTS_TS/I]fts_fwupg_work:fw upgrade work function
+[    2.351386] [<0>][289, kworker/u16:6][FTS_TS]fts_irq_disable: Enter
+[    2.351390] [<0>][289, kworker/u16:6][FTS_TS]fts_irq_disable: Exit(200)
+[    2.351391] [<0>][289, kworker/u16:6][FTS_TS]fts_fwupg_get_fw_file:get upgrade fw file
+[    2.351394] [<0>][289, kworker/u16:6][FTS_TS/I]fts_fwupg_get_fw_file:upgrade fw file len:49640
+[    2.351396] [<0>][289, kworker/u16:6][FTS_TS/I]fts_fwupg_auto_upgrade:********************FTS enter upgrade********************
+[    2.351398] [<0>][289, kworker/u16:6][FTS_TS/I]fts_fwupg_upgrade:fw auto upgrade function
+[    2.351474] [<0>][1, swapper/0][FTS_TS]fts_ts_probe_entry: Exit(1631)
+[    2.351480] [<0>][1, swapper/0]touch tp_dev: device: 'tp_dev' register
+[    2.351558] [<0>][1, swapper/0]touch tp_dev: sysfs_create_link_targets: may return an invalid value
+[    2.351564] [<0>][1, swapper/0]touch tp_dev: create proc symlink: tp_dev as /sys/class/touch/tp_dev
+[    2.351579] [<0>][1, swapper/0]touch tp_dev: 'vendor' property does not exist
+[    2.351581] [<0>][1, swapper/0]touch tp_dev: 'product' property does not exist
+[    2.351585] [<0>][1, swapper/0]touch tp_dev: 'panel_maker' property does not exist
+[    2.351600] [<0>][1, swapper/0]touch tp_dev: set product information from compatible[0]
+[    2.351619] [<0>][1, swapper/0][FTS_TS/I]fts_ts_probe:Touch Screen(I2C BUS) driver prboe successfully
+[    2.352410] [<0>][1, swapper/0]IR NEC protocol handler initialized
+[    2.352412] [<0>][1, swapper/0]IR RC5(x/sz) protocol handler initialized
+[    2.352414] [<0>][1, swapper/0]IR RC6 protocol handler initialized
+[    2.352417] [<0>][1, swapper/0]IR JVC protocol handler initialized
+[    2.352419] [<0>][1, swapper/0]IR Sony protocol handler initialized
+[    2.352421] [<0>][1, swapper/0]IR SANYO protocol handler initialized
+[    2.352423] [<0>][1, swapper/0]IR Sharp protocol handler initialized
+[    2.352425] [<0>][1, swapper/0]IR MCE Keyboard/mouse protocol handler initialized
+[    2.352427] [<0>][1, swapper/0]IR XMP protocol handler initialized
+[    2.353897] [<0>][1, swapper/0]sde_mdp_parse_dt_prop_len: <SDEROT_INFO> prop qcom,mdss-rot-vbif-memtype : doesn't exist in device tree
+[    2.353909] [<0>][1, swapper/0]sde_mdp_parse_dt_prop_len: <SDEROT_INFO> prop qcom,mdss-inline-rot-qos-lut : doesn't exist in device tree
+[    2.353912] [<0>][1, swapper/0]sde_mdp_parse_dt_prop_len: <SDEROT_INFO> prop qcom,mdss-inline-rot-danger-lut : doesn't exist in device tree
+[    2.353917] [<0>][1, swapper/0]sde_mdp_parse_dt_prop_len: <SDEROT_INFO> prop qcom,mdss-inline-rot-safe-lut : doesn't exist in device tree
+[    2.354040] [<0>][1, swapper/0]register_client_adhoc:Failed to find path.src 1 dest 590
+[    2.354046] [<0>][1, swapper/0]sde_mdp_bus_scale_register: <SDEROT_WARN> reg_bus_client register failed
+[    2.355272] [<0>][289, kworker/u16:6][FTS_TS/I]fts_wait_tp_to_valid:TP Ready, Device ID = 0x54
+[    2.355275] [<0>][289, kworker/u16:6][FTS_TS/I]fts_fwupg_check_fw_valid:tp fw vaild
+[    2.355279] [<0>][289, kworker/u16:6][FTS_TS/I]fts_fwupg_get_ver_in_host:fw version offset:0x10e
+[    2.355507] [<0>][1, swapper/0]No change in context(0==0), skip
+[    2.355678] [<0>][289, kworker/u16:6][FTS_TS/I]fts_fwupg_need_upgrade:fw version in tp:81, host:81
+[    2.355681] [<0>][289, kworker/u16:6][FTS_TS/I]fts_fwupg_upgrade:fw upgrade flag:0
+[    2.355685] [<0>][289, kworker/u16:6][FTS_TS/I]fts_fwupg_auto_upgrade:**********tp fw(app/param) no upgrade/upgrade success**********
+[    2.355687] [<0>][289, kworker/u16:6][FTS_TS/I]fts_fwupg_auto_upgrade:********************FTS exit upgrade********************
+[    2.355689] [<0>][289, kworker/u16:6][FTS_TS]fts_irq_enable: Enter
+[    2.355708] [<0>][289, kworker/u16:6][FTS_TS]fts_irq_enable: Exit(216)
+[    2.356649] [<0>][1, swapper/0]sde_rotator_evtlog_create_debugfs: evtlog_status: enable:1, panic:1, dump:2
+[    2.357298] [<0>][1, swapper/0]sde_rotator 5e00000.qcom,mdss_rotator: <SDEROT_INFO> SDE v4l2 rotator probe success
+[    2.359347] [<0>][1, swapper/0]iommu: Adding device 5e00000.qcom,mdss_rotator:qcom,smmu_rot_unsec_cb to group 15
+[    2.359398] [<0>][1, swapper/0]sde_smmu_probe: <SDEROT_INFO> iommu v2 domain[0] mapping and clk register successful!
+[    2.359462] [<0>][1, swapper/0]iommu: Adding device 5e00000.qcom,mdss_rotator:qcom,smmu_rot_sec_cb to group 16
+[    2.359482] [<0>][1, swapper/0]sde_smmu_probe: <SDEROT_INFO> iommu v2 domain[1] mapping and clk register successful!
+[    2.364584] [<0>][1, swapper/0]iommu: Adding device 5a00000.qcom,vidc:non_secure_cb to group 17
+[    2.365180] [<0>][1, swapper/0]iommu: Adding device 5a00000.qcom,vidc:secure_bitstream_cb to group 18
+[    2.367277] [<0>][1, swapper/0]iommu: Adding device 5a00000.qcom,vidc:secure_pixel_cb to group 19
+[    2.368885] [<0>][1, swapper/0]iommu: Adding device 5a00000.qcom,vidc:secure_non_pixel_cb to group 20
+[    2.370783] [<0>][1, swapper/0]dvbdev: DVB: registering new adapter (Qualcomm Technologies, Inc. DVB adapter)
+[    2.380638] [<0>][1, swapper/0]iommu: Adding device soc:qcom,cam_smmu:msm_cam_smmu_cb1 to group 21
+[    2.380671] [<0>][1, swapper/0]CAM-SMMU cam_smmu_populate_sids:2115 __debug cnt = 6, cb->name: :vfe sid [0] = 1056
+               ,
+[    2.380675] [<0>][1, swapper/0]CAM-SMMU cam_smmu_populate_sids:2115 __debug cnt = 6, cb->name: :vfe sid [1] = 1057
+               ,
+[    2.381531] [<0>][1, swapper/0]iommu: Adding device soc:qcom,cam_smmu:msm_cam_smmu_cb2 to group 22
+[    2.381549] [<0>][1, swapper/0]CAM-SMMU cam_smmu_populate_sids:2115 __debug cnt = 3, cb->name: :cpp sid [0] = 2048
+               ,
+[    2.382066] [<0>][1, swapper/0]iommu: Adding device soc:qcom,cam_smmu:msm_cam_smmu_cb4 to group 23
+[    2.382084] [<0>][1, swapper/0]CAM-SMMU cam_smmu_populate_sids:2115 __debug cnt = 3, cb->name: :jpeg_enc0 sid [0] = 2080
+               ,
+[    2.382590] [<0>][1, swapper/0]iommu: Adding device soc:qcom,cam_smmu:msm_cam_smmu_cb5 to group 24
+[    2.382606] [<0>][1, swapper/0]CAM-SMMU cam_smmu_populate_sids:2115 __debug cnt = 3, cb->name: :jpeg_dma sid [0] = 2081
+               ,
+[    2.394603] [<0>][1, swapper/0]msm_actuator_platform_probe:1993 msm_actuator_platform_probe: No/Error Actuator GPIOs
+[    2.395637] [<0>][1, swapper/0]msm_eeprom_platform_probe failed 1834
+[    2.395705] [<0>][1, swapper/0]msm_eeprom_platform_probe:1901 pdev->id=0
+[    2.396712] [<0>][1, swapper/0]msm_cci_init:1441: hw_version = 0x10060000
+[    2.396743] [<0>][1, swapper/0]fill_module_id:1722 cell_index=0, sid=0x51, addr=0x1
+[    2.397251] [<0>][1, swapper/0]fill_module_id:1729 complete=1 rc=0
+[    2.397254] [<0>][1, swapper/0]fill_module_id:1739 complete=1 main_module_id=1 sub_module_id=-1 aux_8m_module_id=-1
+[    2.398075] [<0>][1, swapper/0]msm_eeprom_platform_probe failed 1834
+[    2.398139] [<0>][1, swapper/0]msm_eeprom_platform_probe:1901 pdev->id=1
+[    2.398646] [<0>][1, swapper/0]msm_cci_init:1441: hw_version = 0x10060000
+[    2.398671] [<0>][1, swapper/0]fill_module_id:1722 cell_index=1, sid=0x52, addr=0x1
+[    2.399174] [<0>][1, swapper/0]fill_module_id:1729 complete=1 rc=0
+[    2.399178] [<0>][1, swapper/0]fill_module_id:1739 complete=1 main_module_id=1 sub_module_id=1 aux_8m_module_id=-1
+[    2.399791] [<0>][1, swapper/0]msm_eeprom_platform_probe failed 1834
+[    2.399848] [<0>][1, swapper/0]msm_eeprom_platform_probe:1901 pdev->id=2
+[    2.400456] [<0>][1, swapper/0]msm_cci_init:1441: hw_version = 0x10060000
+[    2.400482] [<0>][1, swapper/0]fill_module_id:1722 cell_index=2, sid=0x54, addr=0x1
+[    2.400987] [<0>][1, swapper/0]fill_module_id:1729 complete=1 rc=0
+[    2.400990] [<0>][1, swapper/0]fill_module_id:1739 complete=1 main_module_id=1 sub_module_id=1 aux_8m_module_id=1
+[    2.410924] [<0>][1, swapper/0]MSM-CPP cpp_init_hardware:1135 CPP HW Version: 0x60010004
+[    2.410940] [<0>][1, swapper/0]MSM-CPP cpp_init_hardware:1153 stream_cnt:0
+[    2.411906] [<0>][1, swapper/0]MSM-CPP cpp_release_hardware:1216 cpp hw release done
+[    2.414460] [<0>][1, swapper/0]CAM-SOC msm_camera_get_reg_base:894 err: mem resource vfe_fuse not found
+[    2.414464] [<0>][1, swapper/0]CAM-SOC msm_camera_get_res_size:937 err: mem resource vfe_fuse not found
+[    2.415516] [<0>][1, swapper/0]CAM-SOC msm_camera_get_reg_base:894 err: mem resource vfe_fuse not found
+[    2.415520] [<0>][1, swapper/0]CAM-SOC msm_camera_get_res_size:937 err: mem resource vfe_fuse not found
+[    2.420532] [<0>][1, swapper/0]__msm_jpeg_init:1595] Jpeg Device id 0
+[    2.425877] [<0>][1, swapper/0]Couldn't parse device tree rc=-517
+[    2.444451] [<0>][1, swapper/0]device-mapper: uevent: version 1.0.3
+[    2.444770] [<0>][1, swapper/0]device-mapper: ioctl: 4.37.0-ioctl (2017-09-20) initialised: dm-devel@redhat.com
+[    2.446448] [<0>][1, swapper/0]bt_dt_parse_vreg_info: qca,bt-vdd-vl: is not provided in device tree
+[    2.446452] [<0>][1, swapper/0]bt_dt_parse_vreg_info: qca,bt-vdd-vm: is not provided in device tree
+[    2.446455] [<0>][1, swapper/0]bt_dt_parse_vreg_info: qca,bt-vdd-5c: is not provided in device tree
+[    2.446458] [<0>][1, swapper/0]bt_dt_parse_vreg_info: qca,bt-vdd-5a: is not provided in device tree
+[    2.446460] [<0>][1, swapper/0]bt_dt_parse_vreg_info: qca,bt-vdd-vh: is not provided in device tree
+[    2.446474] [<0>][1, swapper/0]bt_dt_parse_vreg_info: qca,bt-vdd-ldo: is not provided in device tree
+[    2.446477] [<0>][1, swapper/0]bt_dt_parse_vreg_info: qca,bt-chip-pwd: is not provided in device tree
+[    2.446481] [<0>][1, swapper/0]bt_power_populate_dt_pinfo: bt-reset-gpio not provided in device tree
+[    2.446484] [<0>][1, swapper/0]bt_dt_parse_clk_info: clocks is not provided in device tree
+[    2.446485] [<0>][1, swapper/0]bt_power_populate_dt_pinfo: clock not provided in device tree
+[    2.448763] [<0>][1, swapper/0]sdhci: Secure Digital Host Controller Interface driver
+[    2.448767] [<0>][1, swapper/0]sdhci: Copyright(c) Pierre Ossman
+[    2.448770] [<0>][1, swapper/0]sdhci-pltfm: SDHCI platform and OF driver helper
+[    2.450354] [<0>][1, swapper/0]qpnp_vibrator_ldo_probe: Vibrator LDO successfully registered: uV = 3000000, overdrive = disabled
+[    2.452897] [<0>][1, swapper/0]usbcore: registered new interface driver usbhid
+[    2.452901] [<0>][1, swapper/0]usbhid: USB HID core driver
+[    2.453146] [<0>][1, swapper/0]ashmem: initialized
+[    2.453220] [<0>][1, swapper/0]wlan_hdd_state wlan major(501) initialized
+[    2.454127] [<0>][1, swapper/0]ipa_ut ipa_ut_module_init:1043 Loading IPA test module...
+[    2.456029] [<0>][289, kworker/u16:6]qcom_ice_get_pdevice: found ice device ffffffc5b0bfde00
+[    2.456032] [<0>][289, kworker/u16:6]qcom_ice_get_pdevice: matching platform device ffffffc5b9e1e800
+[    2.458501] [<0>][289, kworker/u16:6]sdhci_msm 4784000.sdhci: sdhci_msm_probe: ICE device is not enabled
+[    2.472687] [<0>][289, kworker/u16:6]mmc0: SDHCI controller on 4784000.sdhci [4784000.sdhci] using 64-bit ADMA in legacy mode
+[    2.504320] [<0>][1, swapper/0]bimc-bwmon 1b8e200.qcom,cpu-cpu-ddr-bwmon: BW HWmon governor registered.
+[    2.507401] [<0>][1, swapper/0]arm-memlat-mon soc:qcom,cpu0-cpu-ddr-latmon: Memory Latency governor registered.
+[    2.509430] [<0>][1, swapper/0]arm-memlat-mon soc:qcom,cpu4-cpu-ddr-latmon: Memory Latency governor registered.
+[    2.511484] [<0>][1, swapper/0]arm-memlat-mon soc:qcom,cpu0-computemon: Compute governor registered.
+[    2.513476] [<0>][1, swapper/0]arm-memlat-mon soc:qcom,cpu4-computemon: Compute governor registered.
+[    2.539065] [<0>][1, swapper/0]iommu: Adding device 8048000.tmc to group 25
+[    2.543645] [<0>][1, swapper/0]coresight-stm 8002000.stm: stm_register_device failed, probing deffered
+[    2.543994] [<0>][1, swapper/0]OF: graph: no port node found in /soc/csr@8001000
+[    2.544123] [<0>][1, swapper/0]coresight-csr 8001000.csr: CSR initialized: coresight-csr
+[    2.545982] [<0>][1, swapper/0]usbcore: registered new interface driver snd-usb-audio
+[    2.546258] [<0>][1, swapper/0]iommu: Adding device soc:usb_audio_qmi_dev to group 26
+[    2.580199] [<0>][1, swapper/0]i2c_geni 4a84000.i2c: i2c error :-107
+[    2.580206] [<0>][1, swapper/0]reading version=0 - retry(0)
+[    2.600527] [<0>][1, swapper/0]This is max98937! device version 0x43
+[    2.610140] [<0>][1, swapper/0]max98927 register codec ok.
+[    2.612399] [<0>][1, swapper/0]msm-dai-q6-hdmi soc:qcom,msm-dai-q6-hdmi_ms: invalid device ID 24578
+[    2.641981] [<0>][1, swapper/0]GACT probability NOT on
+[    2.641992] [<0>][1, swapper/0]Mirror/redirect action on
+[    2.641999] [<0>][1, swapper/0]u32 classifier
+[    2.642001] [<0>][1, swapper/0]    Actions configured
+[    2.642009] [<0>][1, swapper/0]Netfilter messages via NETLINK v0.30.
+[    2.642146] [<0>][1, swapper/0]nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+[    2.642220] [<0>][1, swapper/0]ctnetlink v0.93: registering with nfnetlink.
+[    2.642431] [<0>][1, swapper/0]xt_time: kernel timezone is -0000
+[    2.642497] [<0>][1, swapper/0]gre: GRE over IPv4 demultiplexor driver
+[    2.642499] [<0>][1, swapper/0]IPv4 over IPsec tunneling driver
+[    2.642820] [<0>][1, swapper/0]ip_tables: (C) 2000-2006 Netfilter Core Team
+[    2.643178] [<0>][1, swapper/0]arp_tables: arp_tables: (C) 2002 David S. Miller
+[    2.643227] [<0>][1, swapper/0]Initializing XFRM netlink socket
+[    2.643239] [<0>][1, swapper/0]IPsec XFRM device driver
+[    2.643515] [<0>][1, swapper/0]NET: Registered protocol family 10
+[    2.645195] [<0>][1, swapper/0]Segment Routing with IPv6
+[    2.645237] [<0>][1, swapper/0]mip6: Mobile IPv6
+[    2.645249] [<0>][1, swapper/0]ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    2.645727] [<0>][1, swapper/0]sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    2.646178] [<0>][1, swapper/0]NET: Registered protocol family 17
+[    2.646189] [<0>][1, swapper/0]NET: Registered protocol family 15
+[    2.646216] [<0>][1, swapper/0]Bridge firewalling registered
+[    2.646219] [<0>][1, swapper/0]Ebtables v2.0 registered
+[    2.646347] [<0>][1, swapper/0]l2tp_core: L2TP core driver, V2.0
+[    2.646353] [<0>][1, swapper/0]l2tp_ppp: PPPoL2TP kernel driver, V2.0
+[    2.646355] [<0>][1, swapper/0]l2tp_ip: L2TP IP encapsulation support (L2TPv3)
+[    2.646368] [<0>][1, swapper/0]l2tp_netlink: L2TP netlink interface
+[    2.646386] [<0>][1, swapper/0]l2tp_eth: L2TP ethernet pseudowire support (L2TPv3)
+[    2.646388] [<0>][1, swapper/0]l2tp_ip6: L2TP IP encapsulation support for IPv6 (L2TPv3)
+[    2.646475] [<0>][1, swapper/0]sctp: Hash tables configured (bind 256/256)
+[    2.647074] [<0>][352, kworker/0:5]icnss: Recursive recovery allowed for WLAN
+[    2.647081] [<0>][352, kworker/0:5]icnss: adc_tm_dev probe defer
+[    2.648871] [<0>][352, kworker/0:5]dwc3 4e00000.dwc3: changing max_speed on rev 00000000
+[    2.651734] [<0>][352, kworker/0:5]usb_bam_init: setting SPS_BAM_SMMU_EN flag with (4f04000.qcom,usbbam)
+[    2.651881] [<0>][352, kworker/0:5]sps:BAM 0x0000000004f04000 is registered.
+[    2.652585] [<0>][352, kworker/0:5]Invalid index Defaulting curr to 0
+[    2.655214] [<0>][352, kworker/0:5]i2c_pmic 0-0009: could not find pctldev for node /soc/i2c@4a84000/qcom,pm8008@8/pinctrl@c000/gpio1_active/pm8008_gpio1_active, deferring probe
+[    2.655531] [<0>][352, kworker/0:5]QG-K: qg_parse_dt: PMIC subtype 37 Digital major 2
+[    2.655565] [<0>][352, kworker/0:5]QG-K: qg_parse_dt: DT: S2 FIFO length=4 low_vbat_length=2 acc_length=128 acc_interval=100
+[    2.655569] [<0>][352, kworker/0:5]QG-K: qg_parse_dt: DT: OCV timer_expiry =-22min ocv_tol_threshold=-22uV
+[    2.655597] [<0>][352, kworker/0:5]QG-K: qg_parse_dt: DT: cl_min_start_soc=10 cl_max_start_soc=15 cl_min_temp=150 cl_max_temp=500
+[    2.655601] [<0>][352, kworker/0:5]QG-K: qg_parse_dt: DT: vbatt_empty_mv=3200mV vbatt_low_mv=3500mV delta_soc=1 ext-sns=0
+[    2.655613] [<0>][352, kworker/0:5]QG-K: qg_set_wa_flags: wa_flags = 2
+[    2.669948] [<0>][352, kworker/0:5]of_batterydata_get_best_profile: profile id 330 batt id 331 pct 15
+[    2.669952] [<0>][352, kworker/0:5]of_batterydata_get_best_profile: S88512_mtp_Feimaotui_4V4_4030mAh found
+[    2.670786] [<0>][352, kworker/0:5]QG-K: qg_batterydata_init: QG Battery-profile loaded
+[    2.670876] [<0>][352, kworker/0:5]QG-K: qg_sanitize_sdam: SDAM valid
+[    2.670987] [<0>][352, kworker/0:5]QG-K: qg_determine_pon_soc: S7_PON_OCV OCV=4313350
+[    2.670998] [<0>][352, kworker/0:5]QG-K: qg_determine_pon_soc: S3_GOOD_OCV OCV=6377865
+[    2.671009] [<0>][352, kworker/0:5]QG-K: qg_determine_pon_soc: S3_LAST_OCV OCV=6377865
+[    2.671021] [<0>][352, kworker/0:5]QG-K: qg_determine_pon_soc: SDAM_PON_OCV OCV=4251845
+[    2.672177] [<0>][352, kworker/0:5]QG-K: qg_determine_pon_soc: Shutdown: Valid=1 SOC=98 OCV=4339900uV time=3042814secs temp=232, time_now=3043147secs temp_now=244 S7_soc=95
+[    2.672180] [<0>][352, kworker/0:5]QG-K: qg_determine_pon_soc: Using SHUTDOWN_SOC @ PON
+[    2.673372] [<0>][352, kworker/0:5]QG-K: qg_sdam_write: QG SDAM write param=SOC value=98
+[    2.673426] [<0>][352, kworker/0:5]QG-K: qg_determine_pon_soc: using SHUTDOWN_SOC @ PON ocv_uv=4339900uV soc=98
+[    2.673647] [<0>][352, kworker/0:5](NULL device *): hwmon_device_register() is deprecated. Please convert the driver to use hwmon_device_register_with_info().
+[    2.673931] [<0>][352, kworker/0:5]QG-K: qg_request_interrupt: IRQ qg-vbat-low registered wakeable=1
+[    2.674073] [<0>][352, kworker/0:5]QG-K: qg_request_interrupt: IRQ qg-vbat-empty registered wakeable=1
+[    2.674354] [<0>][352, kworker/0:5]QG-K: qg_request_interrupt: IRQ qg-fifo-done registered wakeable=1
+[    2.674495] [<0>][352, kworker/0:5]QG-K: qg_request_interrupt: IRQ qg-good-ocv registered wakeable=1
+[    2.674565] [<0>][352, kworker/0:5]QG-K: qpnp_qg_probe: QG initialized! battery_profile=S88512_mtp_Feimaotui_4V4_4030mAh SOC=98 QG_subtype=3
+[    2.675054] [<0>][352, kworker/0:5]PL_DISABLE: effective vote is now 1 voted by CHG_STATE_VOTER,0
+[    2.675559] [<0>][352, kworker/0:5]USB_ICL: effective vote is now -22 voted by (null),-22
+[    2.675563] [<0>][352, kworker/0:5]DC_SUSPEND: effective vote is now 0 voted by DEFAULT_VOTER,0
+[    2.675566] [<0>][352, kworker/0:5]FCC: effective vote is now 3000000 voted by HW_LIMIT_VOTER,0
+[    2.675571] [<0>][352, kworker/0:5]FV: effective vote is now 4400000 voted by HW_LIMIT_VOTER,0
+[    2.675575] [<0>][352, kworker/0:5]USB_ICL: effective vote is now 2000000 voted by HW_LIMIT_VOTER,1
+[    2.675623] [<0>][352, kworker/0:5]CHG_DISABLE: effective vote is now 0 voted by DEFAULT_VOTER,0
+[    2.676232] [<0>][352, kworker/0:5](NULL device *): hwmon_device_register() is deprecated. Please convert the driver to use hwmon_device_register_with_info().
+[    2.676440] [<0>][352, kworker/0:5]pmi632_charger: smblib_update_usb_type: APSD=UNKNOWN PD=0 QC3P5=0
+[    2.676443] [<0>][352, kworker/0:5]TEMP_CHANGE_IRQ_DISABLE: effective vote is now 1 voted by DEFAULT_VOTER,0
+[    2.676450] [<0>][352, kworker/0:5]pmi632_charger: smblib_usb_plugin_locked: IRQ: usbin-plugin detached
+[    2.676453] [<0>][352, kworker/0:5]pmi632_charger: typec_attach_detach_irq_handler: IRQ: determine-initial-status
+[    2.676466] [<0>][352, kworker/0:5]USB_ICL: effective vote is now 100000 voted by SW_ICL_MAX_VOTER,4
+[    2.676525] [<0>][352, kworker/0:5]pmi632_charger: typec_state_change_irq_handler: IRQ: cc-state-change; Type-C NONE detected
+[    2.676537] [<0>][352, kworker/0:5]pmi632_charger: usb_source_change_irq_handler: APSD_STATUS = 0x00
+[    2.676540] [<0>][352, kworker/0:5]pmi632_charger: smblib_handle_hvdcp_detect_done: IRQ: hvdcp-detect-done falling
+[    2.676542] [<0>][352, kworker/0:5]pmi632_charger: smblib_handle_hvdcp_check_timeout: IRQ: smblib_handle_hvdcp_check_timeout falling
+[    2.676544] [<0>][352, kworker/0:5]pmi632_charger: smblib_handle_sdp_enumeration_done: IRQ: sdp-enumeration-done falling
+[    2.676546] [<0>][352, kworker/0:5]pmi632_charger: smblib_handle_slow_plugin_timeout: IRQ: slow-plugin-timeout falling
+[    2.676558] [<0>][352, kworker/0:5]pmi632_charger: usb_source_change_irq_handler: APSD_STATUS = 0x00
+[    2.676561] [<0>][352, kworker/0:5]pmi632_charger: chg_state_change_irq_handler: IRQ: determine-initial-status
+[    2.676575] [<0>][352, kworker/0:5]AWAKE: effective vote is now 1 voted by USBOV_DELAY_VOTER,0
+[    2.676597] [<0>][352, kworker/0:5]pmi632_charger: batt_temp_changed_irq_handler: IRQ: determine-initial-status
+[    2.676600] [<0>][352, kworker/0:5]pmi632_charger: wdog_bark_irq_handler: IRQ: determine-initial-status
+[    2.676611] [<0>][352, kworker/0:5]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: determine-initial-status
+[    2.676625] [<0>][352, kworker/0:5]pmi632_charger: wdog_snarl_irq_handler: IRQ: determine-initial-status
+[    2.678296] [<0>][365, kworker/0:7]pmi632_charger: smblib_get_irq_status: Couldn't read MISC_PBS_RT_STS_REG rc=-19
+[    2.678359] [<0>][365, kworker/0:7]pmi632_charger: smblib_get_prop_batt_status: WT batt_status  old=0,new=2
+[    2.681762] [<0>][373, kworker/0:8]of_batterydata_get_best_profile: profile id 330 batt id 331 pct 15
+[    2.681767] [<0>][373, kworker/0:8]of_batterydata_get_best_profile: S88512_mtp_Feimaotui_4V4_4030mAh found
+[    2.681794] [<0>][373, kworker/0:8]pmi632_charger: smblib_update_jeita: Hard Jeita threshold configured
+[    2.681820] [<0>][373, kworker/0:8]pmi632_charger: jeita_update_work: Couldn't get fcc values for soft JEITA rc=-22
+[    2.681830] [<0>][373, kworker/0:8]PL_ENABLE_INDIRECT: effective vote is now 0 voted by USBIN_I_VOTER,0
+[    2.681951] [<0>][373, kworker/0:8]USB_ICL_IRQ_DISABLE: effective vote is now 0 voted by USB_SUSPEND_VOTER,0
+[    2.681962] [<0>][373, kworker/0:8]pmi632_charger: smblib_run_aicl: re-running AICL
+[    2.681997] [<0>][373, kworker/0:8]FCC_MAIN: effective vote is now 3000000 voted by MAIN_FCC_VOTER,0
+[    2.683297] [<0>][352, kworker/0:5]USB_LIMITED_IRQ_DISABLE: effective vote is now 1 voted by CHARGER_TYPE_VOTER,0
+[    2.683301] [<0>][352, kworker/0:5]USB_HDC_IRQ_DISABLE: effective vote is now 1 voted by CHARGER_TYPE_VOTER,0
+[    2.683404] [<0>][352, kworker/0:5]pmi632_charger: smblib_run_aicl: re-running AICL
+[    2.683427] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 0 --> 1!
+[    2.683447] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[    2.683538] [<0>][352, kworker/0:5]SMB5 status - usb:present=0 type=0 batt:present = 1 health = 1 charge = 1
+[    2.683555] [<0>][352, kworker/0:5]QPNP SMB5 probed successfully
+[    2.684294] [<0>][391, kworker/0:10]pmi632_charger: smblib_get_irq_status: Couldn't read MISC_PBS_RT_STS_REG rc=-19
+[    2.721231] [<0>][352, kworker/0:5]sps:BAM 0x0000000008064000 is registered.
+[    2.722451] [<0>][352, kworker/0:5]coresight-stm 8002000.stm: STM32 initialized with master Enabled
+[    2.723198] [<0>][352, kworker/0:5]icnss: Recursive recovery allowed for WLAN
+[    2.726302] [<0>][352, kworker/0:5]icnss c800000.qcom,icnss: for wcss_msa0 segments only will be dumped.
+[    2.726452] [<0>][352, kworker/0:5]icnss: Platform driver probed successfully
+[    2.729244] [<0>][352, kworker/0:5]dwc3 4e00000.dwc3: changing max_speed on rev 00000000
+[    2.732100] [<0>][352, kworker/0:5]usb_bam_init: setting SPS_BAM_SMMU_EN flag with (4f04000.qcom,usbbam)
+[    2.732243] [<0>][352, kworker/0:5]sps:BAM 0x0000000004f04000 is registered.
+[    2.733476] [<0>][352, kworker/0:5]i2c_geni 4a84000.i2c: i2c error :-107
+[    2.733636] [<0>][352, kworker/0:5]i2c_geni 4a84000.i2c: i2c error :-107
+[    2.733749] [<0>][352, kworker/0:5]i2c_geni 4a84000.i2c: i2c error :-107
+[    2.733881] [<0>][352, kworker/0:5]i2c_geni 4a84000.i2c: i2c error :-107
+[    2.733985] [<0>][352, kworker/0:5]i2c_geni 4a84000.i2c: i2c error :-107
+[    2.734088] [<0>][352, kworker/0:5]i2c_geni 4a84000.i2c: i2c error :-107
+[    2.734192] [<0>][352, kworker/0:5]i2c_geni 4a84000.i2c: i2c error :-107
+[    2.734295] [<0>][352, kworker/0:5]i2c_geni 4a84000.i2c: i2c error :-107
+[    2.734434] [<0>][352, kworker/0:5]i2c_geni 4a84000.i2c: i2c error :-107
+[    2.734538] [<0>][352, kworker/0:5]i2c_geni 4a84000.i2c: i2c error :-107
+[    2.734578] [<0>][352, kworker/0:5]i2c_pmic 0-0009: could not find pctldev for node /soc/i2c@4a84000/qcom,pm8008@8/pinctrl@c000/gpio1_active/pm8008_gpio1_active, deferring probe
+[    2.736344] [<0>][1, swapper/0]registered taskstats version 1
+[    2.736354] [<0>][1, swapper/0]page_owner is disabled
+[    2.743534] [<0>][78, kworker/u16:1]msm-dwc3 4e00000.ssusb: DWC3 exited from low power mode
+[    2.746768] [<0>][78, kworker/u16:1]msm-dwc3 4e00000.ssusb: DWC3 in low power mode
+[    2.757672] [<0>][285, kworker/0:3]mmc0: new ultra high speed SDR104 SDHC card at address 0001
+[    2.766968] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[    2.767256] [<0>][285, kworker/0:3]mmcblk0: mmc0:0001 SD16G 14.6 GiB 
+[    2.768729] [<0>][285, kworker/0:3] mmcblk0:
+[    2.830627] [<0>][1, swapper/0]ADSPRPC: Secure VMID = 22
+[    2.830631] [<0>][1, swapper/0]ADSPRPC: Secure VMID = 37
+[    2.831156] [<0>][1, swapper/0]iommu: Adding device soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb1 to group 27
+[    2.831933] [<0>][1, swapper/0]iommu: Adding device soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb2 to group 28
+[    2.832538] [<0>][1, swapper/0]iommu: Adding device soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb3 to group 29
+[    2.833109] [<0>][1, swapper/0]iommu: Adding device soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb4 to group 30
+[    2.833669] [<0>][1, swapper/0]iommu: Adding device soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb5 to group 31
+[    2.834233] [<0>][1, swapper/0]iommu: Adding device soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb6 to group 32
+[    2.834805] [<0>][1, swapper/0]iommu: Adding device soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb9 to group 33
+[    2.836380] [<0>][1, swapper/0]iommu: Adding device soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb10 to group 34
+[    2.838568] [<0>][285, kworker/0:3]i2c_pmic 0-0009: could not find pctldev for node /soc/i2c@4a84000/qcom,pm8008@8/pinctrl@c000/gpio1_active/pm8008_gpio1_active, deferring probe
+[    2.840058] [<0>][1, swapper/0]iommu: Adding device a340000.slim:qcom,iommu_slim_ctrl_cb to group 35
+[    2.840580] [<0>][285, kworker/0:3]i2c_pmic 0-0009: could not find pctldev for node /soc/i2c@4a84000/qcom,pm8008@8/pinctrl@c000/gpio1_active/pm8008_gpio1_active, deferring probe
+[    2.843863] [<0>][1, swapper/0]input: gpio-keys as /devices/platform/soc/soc:gpio_keys/input/input3
+[    2.843960] [<0>][285, kworker/0:3]i2c_pmic 0-0009: could not find pctldev for node /soc/i2c@4a84000/qcom,pm8008@8/pinctrl@c000/gpio1_active/pm8008_gpio1_active, deferring probe
+[    2.845007] [<0>][1, swapper/0]qcom,qpnp-rtc 1c40000.qcom,spmi:qcom,pm6125@0:qcom,pm6125_rtc: setting system clock to 1970-02-05 05:19:07 UTC (3043147)
+[    2.846660] [<0>][285, kworker/0:3]i2c_pmic 0-0009: could not find pctldev for node /soc/i2c@4a84000/qcom,pm8008@8/pinctrl@c000/gpio1_active/pm8008_gpio1_active, deferring probe
+[    2.848270] [<0>][1, swapper/0]lpm_levels: register_cluster_lpm_stats()
+[    2.848436] [<0>][1, swapper/0]lpm_levels: register_cluster_lpm_stats()
+[    2.849072] [<0>][285, kworker/0:3]i2c_pmic 0-0009: could not find pctldev for node /soc/i2c@4a84000/qcom,pm8008@8/pinctrl@c000/gpio1_active/pm8008_gpio1_active, deferring probe
+[    2.853085] [<0>][1, swapper/0]rmnet_ipa3 started initialization
+[    2.853802] [<0>][285, kworker/0:3]RNDIS_IPA module is loaded.
+[    2.853854] [<0>][285, kworker/0:3]i2c_pmic 0-0009: could not find pctldev for node /soc/i2c@4a84000/qcom,pm8008@8/pinctrl@c000/gpio1_active/pm8008_gpio1_active, deferring probe
+[    2.857182] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[    2.858339] [<0>][1, swapper/0]dbu1: disabling
+[    2.858490] [<0>][1, swapper/0]i2c_geni 4a84000.i2c: i2c error :-107
+[    2.858496] [<0>][1, swapper/0]PM8008: pm8008_read: failed to read 0x0950
+[    2.858498] [<0>][1, swapper/0]PM8008: pm8008_enable_regulator_is_enabled: qcom,pm8008-chip-en: failed to get chip state rc=-107
+[    2.858500] [<0>][1, swapper/0]pm8008-chip-en: disabling
+[    2.858605] [<0>][1, swapper/0]i2c_geni 4a84000.i2c: i2c error :-107
+[    2.858610] [<0>][1, swapper/0]PM8008: pm8008_masked_write: failed to write 0x00 to 0x0950 with mask 0x01
+[    2.858612] [<0>][1, swapper/0]PM8008: pm8008_enable_regulator_disable: qcom,pm8008-chip-en: failed to disable chip rc=-107
+[    2.858614] [<0>][1, swapper/0]pm8008-chip-en: couldn't disable: -107
+[    2.858617] [<0>][1, swapper/0]regulator_proxy_consumer_remove_all: removing regulator proxy consumer requests
+[    2.858679] [<0>][1, swapper/0]ALSA device list:
+[    2.858680] [<0>][1, swapper/0]  No soundcards found.
+[    2.858720] [<0>][1, swapper/0]Warning: unable to open an initial console.
+[    2.860261] [<0>][1, swapper/0]Freeing unused kernel memory: 6144K
+[    2.947394] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[    2.970200] [<0>][365, kworker/0:7]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[    2.970215] [<0>][365, kworker/0:7]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[    2.971804] [<0>][365, kworker/0:7]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[    2.971820] [<0>][365, kworker/0:7]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[    2.971848] [<0>][365, kworker/0:7]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[    3.065032] [<0>][433, tee]
+               
+               
+               
+                 __                _                     _     
+                / _|_ __ ___  __ _| |__   ___ _ __   ___| |__  
+               | |_| '__/ _ \/ _` | '_ \ / _ \ '_ \ / __| '_ \ 
+               |  _| | |  __/ (_| | |_) |  __/ | | | (__| | | |
+               |_| |_|  \___|\__, |_.__/ \___|_| |_|\___|_| |_|
+                                |_|                            
+               
+                          CPU benchmark • by kdrag0n
+               
+               ------------------------------------------------
+               
+               Frequency domains: 
+[    3.065233] [<0>][433, tee]cpu1 
+[    3.065286] [<0>][433, tee]cpu4 
+[    3.065328] [<0>][433, tee]
+               Offline CPUs: 
+[    3.066601] [<0>][432, python3]cpu1 
+[    3.067874] [<0>][432, python3]CPU1: shutdown
+[    3.068600] [<0>][432, python3]cpu2 
+[    3.070751] [<0>][432, python3]CPU2: shutdown
+[    3.071527] [<0>][432, python3]cpu3 
+[    3.073701] [<0>][432, python3]CPU3: shutdown
+[    3.074420] [<0>][432, python3]cpu4 
+[    3.076038] [<0>][432, python3]CPU4: shutdown
+[    3.076588] [<0>][432, python3]cpu5 
+[    3.077645] [<0>][432, python3]CPU5: shutdown
+[    3.078375] [<0>][432, python3]cpu6 
+[    3.079085] [<0>][432, python3]CPU6: shutdown
+[    3.079811] [<7>][66, migration/7]cpu7 
+[    3.081356] [<7>][66, migration/7]IRQ 7: no longer affine to CPU7
+[    3.081452] [<0>][432, python3]CPU7: shutdown
+[    3.082810] [<0>][285, kworker/0:3]
+               Sampling power every 250 ms
+               Baseline power usage: 
+[    3.681282] [<0>][285, kworker/0:3]pmi632_charger: smblib_icl_change_work: icl_settled=0
+[    3.681605] [<0>][285, kworker/0:3]pmi632_charger: smblib_get_irq_status: Couldn't read MISC_PBS_RT_STS_REG rc=-19
+[    4.721787] [<0>][285, kworker/0:3]of_batterydata_get_best_profile: profile id 330 batt id 331 pct 15
+[    4.721809] [<0>][285, kworker/0:3]of_batterydata_get_best_profile: S88512_mtp_Feimaotui_4V4_4030mAh found
+[    4.721845] [<0>][285, kworker/0:3]QCOM-STEPCHG: read_range_data_from_node: Count qcom,step-chg-ranges failed, rc=-22
+[    4.721860] [<0>][285, kworker/0:3]QCOM-STEPCHG: read_range_data_from_node: Count qcom,jeita-fcc-ranges failed, rc=-22
+[   13.314949] [<0>][382, kworker/0:9]***temp=244,v_batt=4294mV,c_batt=236mA,cap=98,status=2,charge_type=1,batt_p=1,usb_p=0,usb_v=0mV,chg_done=0
+[   13.314960] [<0>][382, kworker/0:9]WT temp change
+[   53.723566] [<0>][362, irq/242-qg-fifo]QG_WS: effective vote is now 1 voted by FIFO_DONE_VOTER,0
+[   63.048959] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[   63.049013] [<0>][385, irq/276-typec-o]AWAKE: effective vote is now 1 voted by LPD_VOTER,1
+[   63.139175] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[   63.229422] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[   63.319676] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[   63.341363] [<0>][91, kworker/0:2]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[   63.341401] [<0>][91, kworker/0:2]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[   63.343051] [<0>][91, kworker/0:2]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[   63.343084] [<0>][91, kworker/0:2]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[   63.343139] [<0>][91, kworker/0:2]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[   78.543814] [<1>][0, swapper/1]GICv3: CPU1: found redistributor 1 region 0:0x000000000f320000
+[   78.543944] [<1>][0, swapper/1]CPU1: Booted secondary processor [51af8014]
+[   78.552586] [<0>][385, irq/276-typec-o]1003 mW
+               
+               
+               ===== CPU 1 =====
+               Frequencies: 300 614 864 1017 1305 1420 1612 1804
+               
+                300: 
+[  123.430483] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  123.430530] [<0>][385, irq/276-typec-o]AWAKE: effective vote is now 1 voted by LPD_VOTER,1
+[  123.520940] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  123.611190] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  123.701219] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  123.730557] [<0>][348, kworker/0:4]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[  123.730603] [<0>][348, kworker/0:4]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  123.731936] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  123.732244] [<0>][348, kworker/0:4]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[  123.732276] [<0>][348, kworker/0:4]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  123.732329] [<0>][348, kworker/0:4]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[  183.752418] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  183.752462] [<0>][385, irq/276-typec-o]AWAKE: effective vote is now 1 voted by LPD_VOTER,1
+[  183.842682] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  183.932902] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  184.023138] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  184.050509] [<0>][348, kworker/0:4]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[  184.050543] [<0>][348, kworker/0:4]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  184.052186] [<0>][348, kworker/0:4]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[  184.052219] [<0>][348, kworker/0:4]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  184.052272] [<0>][348, kworker/0:4]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[  244.134092] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  244.134137] [<0>][385, irq/276-typec-o]AWAKE: effective vote is now 1 voted by LPD_VOTER,1
+[  244.224321] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  244.314591] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  244.404830] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  244.430548] [<0>][75, kworker/0:1]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[  244.430583] [<0>][75, kworker/0:1]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  244.432228] [<0>][75, kworker/0:1]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[  244.432261] [<0>][75, kworker/0:1]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  244.432314] [<0>][75, kworker/0:1]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[  304.514222] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  304.514269] [<0>][385, irq/276-typec-o]AWAKE: effective vote is now 1 voted by LPD_VOTER,1
+[  304.604437] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  304.694692] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  304.784962] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  304.810509] [<0>][91, kworker/0:2]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[  304.810543] [<0>][91, kworker/0:2]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  304.812187] [<0>][91, kworker/0:2]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[  304.812220] [<0>][91, kworker/0:2]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  304.812273] [<0>][91, kworker/0:2]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[  305.120547] [<0>][4, kworker/0:0]servloc: init_service_locator: init_service_locator: wait for locator service timed out
+[  305.120581] [<0>][4, kworker/0:0]servloc: pd_locator_work: Unable to connect to service locator!, rc = -62
+[  305.120605] [<0>][4, kworker/0:0]audio_notifer_reg_service: service SSR_ADSP is in use
+[  305.121413] [<0>][391, kworker/0:10]servloc: pd_locator_work: Unable to connect to service locator!, rc = -62
+[  305.121489] [<0>][352, kworker/0:5]servloc: pd_locator_work: Unable to connect to service locator!, rc = -62
+[  305.121499] [<0>][352, kworker/0:5]ADSPRPC: Audio PD restart notifier locator down
+[  305.121531] [<0>][355, kworker/0:6]servloc: pd_locator_work: Unable to connect to service locator!, rc = -62
+[  305.121540] [<0>][355, kworker/0:6]ADSPRPC: Audio PD restart notifier locator down
+[  320.512896] [<0>][355, kworker/0:6]***temp=247,v_batt=4271mV,c_batt=240mA,cap=98,status=2,charge_type=1,batt_p=1,usb_p=0,usb_v=0mV,chg_done=0
+[  343.480106] [<0>][385, irq/276-typec-o]  974     3.2 C/MHz     34 mW    8.6 J   28.9 I/mJ   256.6 s
+                614: 
+[  364.899434] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  364.899468] [<0>][385, irq/276-typec-o]AWAKE: effective vote is now 1 voted by LPD_VOTER,1
+[  364.989718] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  365.079924] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  365.170199] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  365.190263] [<0>][355, kworker/0:6]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[  365.190286] [<0>][355, kworker/0:6]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  365.192071] [<0>][355, kworker/0:6]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[  365.192094] [<0>][355, kworker/0:6]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  365.192133] [<0>][355, kworker/0:6]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[  425.280652] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  425.280685] [<0>][385, irq/276-typec-o]AWAKE: effective vote is now 1 voted by LPD_VOTER,1
+[  425.370892] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  425.461160] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  425.551406] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  425.580383] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[  425.580421] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  425.581900] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  425.582025] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[  425.582048] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  425.582087] [<0>][352, kworker/0:5]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[  477.003238] [<0>][385, irq/276-typec-o] 1995     3.2 C/MHz     52 mW    6.5 J   38.7 I/mJ   125.3 s
+                864: 
+[  485.603894] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  485.603923] [<0>][385, irq/276-typec-o]AWAKE: effective vote is now 1 voted by LPD_VOTER,1
+[  485.694134] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  485.784372] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  485.874620] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  485.900323] [<0>][355, kworker/0:6]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[  485.900345] [<0>][355, kworker/0:6]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  485.902103] [<0>][355, kworker/0:6]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[  485.902122] [<0>][355, kworker/0:6]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  485.902157] [<0>][355, kworker/0:6]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[  545.985164] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  545.985193] [<0>][385, irq/276-typec-o]AWAKE: effective vote is now 1 voted by LPD_VOTER,1
+[  546.075402] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  546.165648] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  546.255937] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  546.280348] [<0>][391, kworker/0:10]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[  546.280370] [<0>][391, kworker/0:10]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  546.281961] [<0>][391, kworker/0:10]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[  546.281981] [<0>][391, kworker/0:10]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  546.282016] [<0>][391, kworker/0:10]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[  574.408038] [<0>][385, irq/276-typec-o] 2806     3.2 C/MHz     68 mW    6.1 J   41.2 I/mJ    89.1 s
+               1017: 
+[  606.363871] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  606.363899] [<0>][385, irq/276-typec-o]AWAKE: effective vote is now 1 voted by LPD_VOTER,1
+[  606.454107] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  606.544336] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  606.634578] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  606.660307] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[  606.660327] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  606.661913] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[  606.661932] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  606.661965] [<0>][352, kworker/0:5]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[  627.712443] [<0>][453, kworker/0:1]***temp=251,v_batt=4257mV,c_batt=256mA,cap=98,status=2,charge_type=1,batt_p=1,usb_p=0,usb_v=1mV,chg_done=0
+[  658.443614] [<0>][385, irq/276-typec-o] 3304     3.2 C/MHz     79 mW    6.0 J   41.6 I/mJ    75.7 s
+               1305: 
+[  666.739131] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  666.739158] [<0>][385, irq/276-typec-o]AWAKE: effective vote is now 1 voted by LPD_VOTER,1
+[  666.829365] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  666.919627] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  667.009864] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  667.030297] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[  667.030316] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  667.031896] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[  667.031914] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  667.031945] [<0>][352, kworker/0:5]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[  725.607376] [<0>][385, irq/276-typec-o] 4240     3.2 C/MHz    114 mW    6.7 J   37.1 I/mJ    59.0 s
+               1420: 
+[  727.116910] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  727.116942] [<0>][385, irq/276-typec-o]AWAKE: effective vote is now 1 voted by LPD_VOTER,1
+[  727.207142] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  727.297382] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  727.387617] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  727.411118] [<0>][355, kworker/0:6]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[  727.411140] [<0>][355, kworker/0:6]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  727.412722] [<0>][355, kworker/0:6]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[  727.412739] [<0>][355, kworker/0:6]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  727.412770] [<0>][355, kworker/0:6]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[  787.491353] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  787.491380] [<0>][385, irq/276-typec-o]AWAKE: effective vote is now 1 voted by LPD_VOTER,1
+[  787.581565] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  787.671799] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  787.762065] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  787.790285] [<0>][453, kworker/0:1]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[  787.790304] [<0>][453, kworker/0:1]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  787.792032] [<0>][453, kworker/0:1]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[  787.792048] [<0>][453, kworker/0:1]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  787.792078] [<0>][453, kworker/0:1]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[  787.988345] [<0>][433, tee] 4614     3.2 C/MHz    132 mW    7.2 J   34.9 I/mJ    54.2 s
+               1612: 
+[  844.078191] [<0>][385, irq/276-typec-o] 5237     3.2 C/MHz    171 mW    8.1 J   30.7 I/mJ    47.7 s
+               1804: 
+[  847.866485] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  847.866517] [<0>][385, irq/276-typec-o]AWAKE: effective vote is now 1 voted by LPD_VOTER,1
+[  847.956708] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  848.046949] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  848.137179] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  848.161107] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[  848.161129] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  848.162709] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[  848.162724] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  848.162757] [<0>][352, kworker/0:5]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[  894.893725] [<0>][432, python3]CPU1: shutdown
+[  894.899053] [<4>][0, swapper/4]GICv3: CPU4: found redistributor 100 region 0:0x000000000f380000
+[  894.899108] [<4>][0, swapper/4]arch_timer: CPU4: Trapping CNTVCT access
+[  894.899122] [<4>][0, swapper/4]CPU4: Booted secondary processor [51af8002]
+[  894.906578] [<0>][385, irq/276-typec-o] 5861     3.2 C/MHz    223 mW    9.5 J   26.3 I/mJ    42.7 s
+               
+               
+               ===== CPU 4 =====
+               Frequencies: 300 652 902 1056 1401 1536 1804 2016
+               
+                300: 
+[  908.235632] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  908.235684] [<0>][385, irq/276-typec-o]AWAKE: effective vote is now 1 voted by LPD_VOTER,1
+[  908.325856] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  908.416091] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  908.506321] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  908.531323] [<0>][355, kworker/0:6]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[  908.531361] [<0>][355, kworker/0:6]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  908.533011] [<0>][355, kworker/0:6]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[  908.533044] [<0>][355, kworker/0:6]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  908.533098] [<0>][355, kworker/0:6]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[  934.914352] [<0>][355, kworker/0:6]***temp=255,v_batt=4244mV,c_batt=256mA,cap=98,status=2,charge_type=1,batt_p=1,usb_p=0,usb_v=0mV,chg_done=0
+[  968.603804] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  968.603856] [<0>][385, irq/276-typec-o]AWAKE: effective vote is now 1 voted by LPD_VOTER,1
+[  968.694001] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  968.784233] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  968.874460] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[  968.901266] [<0>][470, kworker/0:0]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[  968.901304] [<0>][470, kworker/0:0]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  968.903224] [<0>][470, kworker/0:0]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[  968.903256] [<0>][470, kworker/0:0]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[  968.903311] [<0>][470, kworker/0:0]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[ 1028.968551] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1028.968602] [<0>][385, irq/276-typec-o]AWAKE: effective vote is now 1 voted by LPD_VOTER,1
+[ 1029.058769] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1029.148997] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1029.239231] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1029.261370] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[ 1029.261409] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[ 1029.263061] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[ 1029.263093] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[ 1029.263147] [<0>][352, kworker/0:5]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[ 1062.487891] [<0>][385, irq/276-typec-o] 1569     5.2 C/MHz     70 mW   11.2 J   22.4 I/mJ   159.3 s
+                652: 
+[ 1089.331507] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1089.331556] [<0>][385, irq/276-typec-o]AWAKE: effective vote is now 1 voted by LPD_VOTER,1
+[ 1089.421476] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1089.512578] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1089.602795] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1089.631270] [<0>][355, kworker/0:6]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[ 1089.631320] [<0>][355, kworker/0:6]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[ 1089.632664] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1089.632966] [<0>][355, kworker/0:6]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[ 1089.632998] [<0>][355, kworker/0:6]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[ 1089.633051] [<0>][355, kworker/0:6]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[ 1144.162512] [<0>][385, irq/276-typec-o] 3414     5.2 C/MHz    115 mW    8.4 J   29.6 I/mJ    73.3 s
+                902: 
+[ 1149.716521] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1149.716575] [<0>][385, irq/276-typec-o]AWAKE: effective vote is now 1 voted by LPD_VOTER,1
+[ 1149.805723] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1149.896923] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1149.987135] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1150.011361] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[ 1150.011399] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[ 1150.013049] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[ 1150.013081] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[ 1150.013136] [<0>][352, kworker/0:5]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[ 1205.562973] [<0>][385, irq/276-typec-o] 4723     5.2 C/MHz    154 mW    8.2 J   30.6 I/mJ    52.9 s
+               1056: 
+[ 1210.059216] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1210.059269] [<0>][385, irq/276-typec-o]AWAKE: effective vote is now 1 voted by LPD_VOTER,1
+[ 1210.149375] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1210.239573] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1210.329766] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1210.351207] [<0>][470, kworker/0:0]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[ 1210.351245] [<0>][470, kworker/0:0]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[ 1210.353574] [<0>][470, kworker/0:0]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[ 1210.353606] [<0>][470, kworker/0:0]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[ 1210.353661] [<0>][470, kworker/0:0]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[ 1242.124330] [<0>][480, kworker/0:2]***temp=272,v_batt=4231mV,c_batt=278mA,cap=98,status=2,charge_type=1,batt_p=1,usb_p=0,usb_v=0mV,chg_done=0
+[ 1259.102421] [<0>][385, irq/276-typec-o] 5524     5.2 C/MHz    185 mW    8.4 J   29.9 I/mJ    45.3 s
+               1401: 
+[ 1270.389409] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1270.389461] [<0>][385, irq/276-typec-o]AWAKE: effective vote is now 1 voted by LPD_VOTER,1
+[ 1270.479559] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1270.569733] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1270.659917] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1270.681109] [<0>][480, kworker/0:2]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[ 1270.681147] [<0>][480, kworker/0:2]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[ 1270.683072] [<0>][480, kworker/0:2]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[ 1270.683104] [<0>][480, kworker/0:2]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[ 1270.683158] [<0>][480, kworker/0:2]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[ 1301.497462] [<0>][480, kworker/0:2] 7333     5.2 C/MHz    289 mW    9.9 J   25.3 I/mJ    34.1 s
+               1536: 
+[ 1303.554923] [<0>][480, kworker/0:2]WT temp change
+[ 1330.710561] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1330.710607] [<0>][385, irq/276-typec-o]AWAKE: effective vote is now 1 voted by LPD_VOTER,1
+[ 1330.801082] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1330.891078] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1330.981125] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1331.011199] [<0>][480, kworker/0:2]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[ 1331.011249] [<0>][480, kworker/0:2]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[ 1331.012597] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1331.012893] [<0>][480, kworker/0:2]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[ 1331.012925] [<0>][480, kworker/0:2]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[ 1331.012979] [<0>][480, kworker/0:2]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[ 1340.854393] [<0>][433, tee] 8038     5.2 C/MHz    344 mW   10.7 J   23.4 I/mJ    31.1 s
+               1804: 
+[ 1375.646621] [<0>][385, irq/276-typec-o] 9433     5.2 C/MHz    469 mW   12.4 J   20.1 I/mJ    26.5 s
+               2016: 
+[ 1391.054956] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1391.055007] [<0>][385, irq/276-typec-o]AWAKE: effective vote is now 1 voted by LPD_VOTER,1
+[ 1391.145100] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1391.235245] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1391.325394] [<0>][385, irq/276-typec-o]pmi632_charger: typec_or_rid_detection_change_irq_handler: IRQ: typec-or-rid-detect-change
+[ 1391.351201] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 1 --> 3!
+[ 1391.351239] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[ 1391.353159] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: power role change: 3 --> 1!
+[ 1391.353192] [<0>][352, kworker/0:5]pmi632_charger: smblib_set_prop_typec_power_role: snk_attached = 0, src_attached = 0, is_pr_lock = 0
+[ 1391.353246] [<0>][352, kworker/0:5]AWAKE: effective vote is now 0 voted by LPD_VOTER,1
+[ 1407.664079] [<0>][432, python3]CPU4: shutdown
+[ 1407.696609] [<0>][433, tee]10554     5.2 C/MHz    596 mW   14.1 J   17.7 I/mJ    23.7 s
+               
+               
+               Benchmark finished!
+[ 1407.729377] [<0>][1, bash]
+               real	23m24.850s
+               user	20m2.663s
+               sys	0m3.743s
