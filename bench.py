@@ -324,6 +324,9 @@ def main():
         pr_debug("Setting frequency limits")
         write_cpu(cpu, "cpufreq/scaling_min_freq", str(min(freqs)))
         write_cpu(cpu, "cpufreq/scaling_max_freq", str(max(freqs)))
+        # Sometimes, reading back the limits immediately may give an incorrect result
+        pr_debug("Waiting for frequency limits to take effect")
+        time.sleep(1)
 
         # Bail out if the kernel is clamping our values
         pr_debug("Validating frequency limits")
