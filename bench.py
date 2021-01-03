@@ -97,6 +97,7 @@ _power_samples = _prealloc_samples
 
 def pr_debug(*args, **kwargs):
     if __debug__:
+        kwargs["flush"] = True
         print(*args, **kwargs)
 
 def run_cmd(args):
@@ -247,7 +248,7 @@ def main():
     pr_debug(f"Pre-allocated {PREALLOC_SLOTS} sample slots for {PREALLOC_SECONDS} seconds")
     pr_debug(f"Power sample interval adjusted for power supply: {psy_name}")
     print("Baseline power usage: ", end="", flush=True)
-    pr_debug("Waiting for power usage to settle", flush=True)
+    pr_debug("Waiting for power usage to settle")
     time.sleep(15)
     pr_debug()
 
