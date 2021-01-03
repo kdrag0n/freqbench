@@ -86,13 +86,6 @@ for fg_string, interval in POWER_SAMPLE_FG_DEFAULT_INTERVALS.items():
         POWER_SAMPLE_INTERVAL = interval
         break
 
-# Maxim PMICs used on Exynos devices report current in mA, not µA
-with open(f"{POWER_SUPPLY}/current_now", "r") as f:
-    # Assumption: will never be below 1 mA
-    ref_current = int(f.read())
-    if abs(ref_current) <= 1000:
-        CURRENT_FACTOR = 1000
-
 if len(sys.argv) > 1:
     DEBUG = sys.argv[1] == "true"
 
@@ -203,6 +196,8 @@ def create_power_stats(time_ns, samples):
     }
 
 def main():
+    global CURRENT_FACTOR
+
     bench_start_time = time.time()
 
     print(BANNER)
@@ -241,6 +236,16 @@ def main():
     pr_debug()
 
     pr_debug(f"Using power supply: {POWER_SUPPLY}")
+
+    # Some PMICs may give unstable readings at this point
+    pr_debug("Waiting for power usage to settle for initial current measurement")
+    time.sleep(5)
+    # Maxim PMICs used on Exynos devices report current in mA, not µA
+    with open(f"{POWER_SUPPLY}/current_now", "r") as f:
+        # Assumption: will never be below 1 mA
+        ref_current = int(f.read())
+        if abs(ref_current) <= 1000:
+            CURRENT_FACTOR = 1000
     pr_debug(f"Scaling current by {CURRENT_FACTOR}x (derived from initial sample: {ref_current})")
 
     print(f"Sampling power every {POWER_SAMPLE_INTERVAL} ms")
