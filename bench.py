@@ -314,7 +314,10 @@ def main():
         boost_node = f"{SYS_CPU}/cpu{cpu}/cpufreq/scaling_boost_frequencies"
         if os.path.exists(boost_node):
             raw_freqs += read_file(boost_node).split(" ")
-        freqs = [int(freq) for freq in raw_freqs if freq]
+        # Need to sort because different platforms have different orders
+        freqs = sorted(set(int(freq) for freq in raw_freqs if freq))
+        print("Frequencies:", " ".join(str(int(freq / 1000)) for freq in freqs))
+        print()
 
         # Some kernels may change the defaults
         pr_debug("Setting frequency limits")
@@ -332,11 +335,6 @@ def main():
         real_max_freq = int(read_file(f"{SYS_CPU}/cpu{cpu}/cpufreq/scaling_max_freq"))
         if real_max_freq != max(freqs):
             raise ValueError(f"Maximum frequency setting {max(freqs)} rejected by kernel; got {real_max_freq}")
-
-        # Need to sort because different platforms have different orders
-        freqs.sort()
-        print("Frequencies:", " ".join(str(int(freq / 1000)) for freq in freqs))
-        print()
 
         for freq in freqs:
             mhz = freq / 1000
