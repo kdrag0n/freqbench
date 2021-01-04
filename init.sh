@@ -87,6 +87,32 @@ on_error() {
 save_logs() {
     saving_logs=true
 
+    # Gather system info
+    # This is best-effort and does not strictly need to be present, so suppress errors here.
+    set +e
+    cat /proc/interrupts > /tmp/post_bench_interrupts.txt
+    cat /proc/cmdline | redact_serial > /tmp/cmdline.txt
+    cat /proc/cpuinfo > /tmp/cpuinfo.txt
+    dmesg | redact_serial > /tmp/kernel.log
+    uptime > /tmp/uptime.txt
+    ps -A > /tmp/processes.txt
+    echo "Kernel: $(cat /proc/version)" > /tmp/versions.txt
+    echo "Python: $(python3 --version)" >> /tmp/versions.txt
+    echo "Model: $(cat /sys/firmware/devicetree/base/model | tr '\0' ';')" > /tmp/device.txt
+    echo "Compatible: $(cat /sys/firmware/devicetree/base/compatible | tr '\0' ';')" >> /tmp/device.txt
+    find /dev > /tmp/dev.list
+    find /sys | gzip > /tmp/sysfs.list.gz
+
+    mkdir /tmp/cpufreq_stats
+    for policy in /sys/devices/system/cpu/cpufreq/policy*
+    do
+        pol_dir="/tmp/cpufreq_stats/$(basename "$policy" | sed 's/policy//')"
+        mkdir "$pol_dir"
+        # Frequency domains with too many OPPs will fail here
+        cp "$policy/stats/"{time_in_state,total_trans,trans_table} "$pol_dir" 2> /dev/null || true
+    done
+    set -e
+
     mkdir /persist
     persist_part="$(find_part_by_name cache || find_part_by_name persist)"
 
@@ -126,31 +152,6 @@ if ! $DEBUG; then
 fi
 py_args+=(/bench.py "$POWER_SAMPLE_INTERVAL")
 time taskset 01 python3 "${py_args[@]}" 2>&1 | tee /tmp/run.log || on_error
-
-# Gather system info
-set +e
-cat /proc/interrupts > /tmp/post_bench_interrupts.txt
-cat /proc/cmdline | redact_serial > /tmp/cmdline.txt
-cat /proc/cpuinfo > /tmp/cpuinfo.txt
-dmesg | redact_serial > /tmp/kernel.log
-uptime > /tmp/uptime.txt
-ps -A > /tmp/processes.txt
-echo "Kernel: $(cat /proc/version)" > /tmp/versions.txt
-echo "Python: $(python3 --version)" >> /tmp/versions.txt
-echo "Model: $(cat /sys/firmware/devicetree/base/model | tr '\0' ';')" > /tmp/device.txt
-echo "Compatible: $(cat /sys/firmware/devicetree/base/compatible | tr '\0' ';')" >> /tmp/device.txt
-find /dev > /tmp/dev.list
-find /sys | gzip > /tmp/sysfs.list.gz
-
-mkdir /tmp/cpufreq_stats
-for policy in /sys/devices/system/cpu/cpufreq/policy*
-do
-    pol_dir="/tmp/cpufreq_stats/$(basename "$policy" | sed 's/policy//')"
-    mkdir "$pol_dir"
-    # Frequency domains with too many OPPs will fail here
-    cp "$policy/stats/"{time_in_state,total_trans,trans_table} "$pol_dir" 2> /dev/null || true
-done
-set -e
 
 save_logs
 
