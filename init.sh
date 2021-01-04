@@ -101,7 +101,6 @@ save_logs() {
     echo "Model: $(cat /sys/firmware/devicetree/base/model | tr '\0' ';')" > /tmp/device.txt
     echo "Compatible: $(cat /sys/firmware/devicetree/base/compatible | tr '\0' ';')" >> /tmp/device.txt
     find /dev > /tmp/dev.list
-    find /sys | gzip > /tmp/sysfs.list.gz
 
     mkdir /tmp/cpufreq_stats
     for policy in /sys/devices/system/cpu/cpufreq/policy*
