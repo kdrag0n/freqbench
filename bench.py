@@ -108,10 +108,8 @@ def run_cmd(args):
         raise ValueError(f"Subprocess {args} failed with exit code {proc.returncode}:\n{proc.stdout}")
 
 def sample_power():
-    with open(f"{POWER_SUPPLY}/current_now", "r") as f:
-        ma = int(f.read()) * CURRENT_FACTOR / 1000
-    with open(f"{POWER_SUPPLY}/voltage_now", "r") as f:
-        mv = int(f.read()) / 1000
+    ma = int(read_file(f"{POWER_SUPPLY}/current_now")) * CURRENT_FACTOR / 1000
+    mv = int(read_file(f"{POWER_SUPPLY}/voltage_now")) / 1000
 
     mw = ma * mv / 1000
     return ma, mv, abs(mw)
@@ -169,10 +167,10 @@ def write_cpu(cpu, node, content):
     with open(f"{SYS_CPU}/cpu{cpu}/{node}", "w") as f:
         f.write(content)
 
-def read_cpu(cpu, node):
-    with open(f"{SYS_CPU}/cpu{cpu}/{node}", "r") as f:
+def read_file(node):
+    with open(node, "r") as f:
         content = f.read().strip()
-        pr_debug(f"Reading CPU value: cpu{cpu}/{node} = {content}")
+        pr_debug(f"Reading file: {node} = {content}")
         return content
 
 def create_power_stats(time_ns, samples):
@@ -208,9 +206,7 @@ def init_cpus():
     print()
 
     print("Offline CPUs: ", end="", flush=True)
-    with open("/proc/cpuinfo", "r") as f:
-        cpuinfo = f.read()
-        cpu_count = len(re.findall(r'processor\s+:\s+\d+', cpuinfo))
+    cpu_count = len(re.findall(r'processor\s+:\s+\d+', read_file("/proc/cpuinfo")))
 
     for cpu in range(cpu_count):
         if cpu == HOUSEKEEPING_CPU:
@@ -228,18 +224,17 @@ def init_cpus():
 
 def check_charging(node, charging_value, charging_warned):
     if os.path.exists(node):
-        with open(node, "r") as f:
-            psy_status = f.read().strip()
-            pr_debug(f"Power supply status at {node}: {psy_status}")
-            if psy_status == charging_value and not charging_warned:
-                print()
-                print("=============== WARNING ===============")
-                print("Detected power supply in charging state!")
-                print("Power measurements will be invalid and benchmark results may be affected.")
-                print("Unplug the device and restart the benchmark for valid results.")
-                print("=============== WARNING ===============")
-                print()
-                return True
+        psy_status = read_file(node)
+        pr_debug(f"Power supply status at {node}: {psy_status}")
+        if psy_status == charging_value and not charging_warned:
+            print()
+            print("=============== WARNING ===============")
+            print("Detected power supply in charging state!")
+            print("Power measurements will be invalid and benchmark results may be affected.")
+            print("Unplug the device and restart the benchmark for valid results.")
+            print("=============== WARNING ===============")
+            print()
+            return True
 
     return charging_warned
 
@@ -258,11 +253,10 @@ def init_power():
     pr_debug("Waiting for power usage to settle for initial current measurement")
     time.sleep(5)
     # Maxim PMICs used on Exynos devices report current in mA, not µA
-    with open(f"{POWER_SUPPLY}/current_now", "r") as f:
-        # Assumption: will never be below 1 mA
-        ref_current = int(f.read())
-        if abs(ref_current) <= 1000:
-            CURRENT_FACTOR = 1000
+    ref_current = int(read_file(f"{POWER_SUPPLY}/current_now"))
+    # Assumption: will never be below 1 mA
+    if abs(ref_current) <= 1000:
+        CURRENT_FACTOR = 1000
     pr_debug(f"Scaling current by {CURRENT_FACTOR}x (derived from initial sample: {ref_current})")
 
     print(f"Sampling power every {POWER_SAMPLE_INTERVAL} ms")
@@ -316,13 +310,9 @@ def main():
         write_cpu(cpu, "cpufreq/scaling_governor", "userspace")
 
         pr_debug("Getting frequencies")
-        with open(f"{SYS_CPU}/cpu{cpu}/cpufreq/scaling_available_frequencies", "r") as f:
-            raw_freqs = f.read().replace("\n", "").split(" ")
-            freqs = [int(freq) for freq in raw_freqs if freq]
-
-        with open(f"{SYS_CPU}/cpu{cpu}/cpufreq/scaling_boost_frequencies", "r") as f:
-            raw_boost_freqs = f.read().replace("\n", "").split(" ")
-            freqs.extend([int(freq) for freq in raw_boost_freqs if freq])
+        raw_freqs = read_file(f"{SYS_CPU}/cpu{cpu}/cpufreq/scaling_available_frequencies").split(" ")
+        raw_freqs += read_file(f"{SYS_CPU}/cpu{cpu}/cpufreq/scaling_boost_frequencies").split(" ")
+        freqs = [int(freq) for freq in raw_freqs if freq]
 
         # Some kernels may change the defaults
         pr_debug("Setting frequency limits")
@@ -334,10 +324,10 @@ def main():
 
         # Bail out if the kernel is clamping our values
         pr_debug("Validating frequency limits")
-        real_min_freq = int(read_cpu(cpu, "cpufreq/scaling_min_freq"))
+        real_min_freq = int(read_file(f"{SYS_CPU}/cpu{cpu}/cpufreq/scaling_min_freq"))
         if real_min_freq != min(freqs):
             raise ValueError(f"Minimum frequency setting {min(freqs)} rejected by kernel; got {real_min_freq}")
-        real_max_freq = int(read_cpu(cpu, "cpufreq/scaling_max_freq"))
+        real_max_freq = int(read_file(f"{SYS_CPU}/cpu{cpu}/cpufreq/scaling_max_freq"))
         if real_max_freq != max(freqs):
             raise ValueError(f"Maximum frequency setting {max(freqs)} rejected by kernel; got {real_max_freq}")
 
@@ -355,7 +345,7 @@ def main():
             time.sleep(0.1)
 
             pr_debug("Validating frequency")
-            real_freq = int(read_cpu(cpu, "cpufreq/scaling_cur_freq"))
+            real_freq = int(read_file(f"{SYS_CPU}/cpu{cpu}/cpufreq/scaling_cur_freq"))
             if real_freq != freq:
                 raise ValueError(f"Frequency setting is {freq} but kernel is using {real_freq}")
 
