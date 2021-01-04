@@ -320,6 +320,10 @@ def main():
             raw_freqs = f.read().replace("\n", "").split(" ")
             freqs = [int(freq) for freq in raw_freqs if freq]
 
+        with open(f"{SYS_CPU}/cpu{cpu}/cpufreq/scaling_boost_frequencies", "r") as f:
+            raw_boost_freqs = f.read().replace("\n", "").split(" ")
+            freqs.extend([int(freq) for freq in raw_boost_freqs if freq])
+
         # Some kernels may change the defaults
         pr_debug("Setting frequency limits")
         write_cpu(cpu, "cpufreq/scaling_min_freq", str(min(freqs)))
