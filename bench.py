@@ -311,7 +311,9 @@ def main():
 
         pr_debug("Getting frequencies")
         raw_freqs = read_file(f"{SYS_CPU}/cpu{cpu}/cpufreq/scaling_available_frequencies").split(" ")
-        raw_freqs += read_file(f"{SYS_CPU}/cpu{cpu}/cpufreq/scaling_boost_frequencies").split(" ")
+        boost_node = f"{SYS_CPU}/cpu{cpu}/cpufreq/scaling_boost_frequencies"
+        if os.path.exists(boost_node):
+            raw_freqs += read_file(boost_node).split(" ")
         freqs = [int(freq) for freq in raw_freqs if freq]
 
         # Some kernels may change the defaults
