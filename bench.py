@@ -101,7 +101,9 @@ def pr_debug(*args, **kwargs):
         print(*args, **kwargs)
 
 def run_cmd(args):
+    pr_debug(f"Running command: {args}")
     proc = subprocess.run(args, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+    pr_debug(f"Command exited with return code {proc.returncode}")
     if proc.returncode == 0:
         return proc.stdout
     else:
