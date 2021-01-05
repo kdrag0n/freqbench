@@ -8,7 +8,7 @@ BLOCK_DEV=/dev/sda
 # Whether to enable verbose debug logging during the benchmark
 # DO NOT ENABLE for final benchmarking!
 # The extra framebuffer memory copies caused by it will influence results.
-DEBUG=true
+DEBUG=false
 
 # How often to sample power usage while benchmarking (in milliseconds)
 # 0 = auto (default is based on fuel gauge)
