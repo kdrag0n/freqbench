@@ -1,0 +1,1821 @@
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.9.246-perf-g7fa29bb0fa45-dirty (jjpprrrr@WienerMusikverein) (Android (6573524 based on r383902b) clang version 11.0.2 (https://android.googlesource.com/toolchain/llvm-project b397f81060ce6d701042b782172ed13bee898b79)) #1 SMP PREEMPT Sun Jan 3 11:21:22 EST 2021
+[    0.000000] Boot CPU: AArch64 Processor [517f803c]
+[    0.000000] Powerup reason=0x40181
+[    0.000000] Machine: Xiaomi Technologies, Inc. Polaris MP v2.1
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000fa000000, size 92 MiB
+[    0.000000] OF: reserved mem: initialized node secure_display_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000f9000000, size 16 MiB
+[    0.000000] OF: reserved mem: initialized node adsp_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000001fb000000, size 36 MiB
+[    0.000000] OF: reserved mem: initialized node mem_dump_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000f8000000, size 16 MiB
+[    0.000000] OF: reserved mem: initialized node qseecom_ta_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000f6000000, size 32 MiB
+[    0.000000] OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000f5800000, size 8 MiB
+[    0.000000] OF: reserved mem: initialized node secure_sp_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created DMA memory pool at 0x000000008ab00000, size 20 MiB
+[    0.000000] OF: reserved mem: initialized node qseecom_region@0x8ab00000, compatible id shared-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x000000008bf00000, size 5 MiB
+[    0.000000] OF: reserved mem: initialized node camera_region@0x8bf00000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x000000008c400000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node ips_fw_region@0x8c400000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x000000008c410000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node ipa_gsi_region@0x8c410000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x000000008c415000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node gpu_region@0x8c415000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x000000008c500000, size 30 MiB
+[    0.000000] OF: reserved mem: initialized node adsp_region@0x8c500000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x000000008e300000, size 1 MiB
+[    0.000000] OF: reserved mem: initialized node wlan_fw_region@0x8e300000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x000000008e400000, size 120 MiB
+[    0.000000] OF: reserved mem: initialized node modem_region@0x8e400000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000095c00000, size 5 MiB
+[    0.000000] OF: reserved mem: initialized node video_region@0x95c00000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000096100000, size 8 MiB
+[    0.000000] OF: reserved mem: initialized node cdsp_region@0x96100000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000096900000, size 2 MiB
+[    0.000000] OF: reserved mem: initialized node mba_region@0x96900000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000096b00000, size 20 MiB
+[    0.000000] OF: reserved mem: initialized node slpi_region@0x96b00000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000097f00000, size 1 MiB
+[    0.000000] OF: reserved mem: initialized node pil_spss_region@0x97f00000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x00000000af000000, size 16 MiB
+[    0.000000] OF: reserved mem: initialized node ramdump_fb_region@af000000, compatible id removed-dma-pool
+[    0.000000] On node 0 totalpages: 1482569
+[    0.000000]   DMA zone: 6955 pages used for memmap
+[    0.000000]   DMA zone: 0 pages reserved
+[    0.000000]   DMA zone: 445097 pages, LIFO batch:31
+[    0.000000]   Normal zone: 16211 pages used for memmap
+[    0.000000]   Normal zone: 1037472 pages, LIFO batch:31
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.0
+[    0.000000] random: fast init done
+[    0.000000] percpu: Embedded 22 pages/cpu s50968 r8192 d30952 u90112
+[    0.000000] pcpu-alloc: s50968 r8192 d30952 u90112 alloc=22*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 1459403
+[    0.000000] Kernel command line: rcupdate.rcu_expedited=1 console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xA84000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.usbcontroller=a600000.dwc3 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=2048 loop.max_part=16 androidboot.configfs=true buildvariant=userdebug rcu_nocbs=0-7 isolcpus=1-7 nohz_full=1-7 loglevel=0 printk.devkmsg=on root=/dev/dm-0 dm="system none ro,0 1 android-verity /dev/sde48" androidboot.verifiedbootstate=orange androidboot.keymaster=1  androidboot.veritymode=enforcing androidboot.bootdevice=1d84000.ufshc androidboot.serialno=REDACTED androidboot.baseband=msm msm_drm.dsi_display0=dsi_jdi_fhd_nt35596s_video_display: androidboot.ramdump=disable androidboot.secureboot=1 androidboot.dp=0x0 androidboot.cpuid=0xdca143aa androidboot.hwversion=2.4.0 androidboot.hwc=CN androidboot.cert=M1803D5XE androidboot.hwlevel=MP andr
+[    0.000000] device-mapper: init: will configure 1 devices
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes)
+[    0.000000] Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes)
+[    0.000000] software IO TLB: mapped [mem 0xf5400000-0xf5800000] (4MB)
+[    0.000000] Memory: 5494888K/5930276K available (19966K kernel code, 2424K rwdata, 9368K rodata, 6144K init, 8095K bss, 230588K reserved, 204800K cma-reserved)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     modules : 0xffffff8000000000 - 0xffffff8008000000   (   128 MB)
+[    0.000000]     vmalloc : 0xffffff8008000000 - 0xffffffbebfff0000   (   250 GB)
+[    0.000000]       .text : 0x        (ptrval) - 0x        (ptrval)   ( 19968 KB)
+[    0.000000]     .rodata : 0x        (ptrval) - 0x        (ptrval)   ( 10240 KB)
+[    0.000000]       .init : 0x        (ptrval) - 0x        (ptrval)   (  6144 KB)
+[    0.000000]       .data : 0x        (ptrval) - 0x        (ptrval)   (  2424 KB)
+[    0.000000]        .bss : 0x        (ptrval) - 0x        (ptrval)   (  8096 KB)
+[    0.000000]     fixed   : 0xffffffbefe7fb000 - 0xffffffbefec00000   (  4116 KB)
+[    0.000000]     PCI I/O : 0xffffffbefee00000 - 0xffffffbeffe00000   (    16 MB)
+[    0.000000]     vmemmap : 0xffffffbf00000000 - 0xffffffc000000000   (     4 GB maximum)
+[    0.000000]               0xffffffbfd2000000 - 0xffffffbfd7f52800   (    95 MB actual)
+[    0.000000]     memory  : 0xfffffff480000000 - 0xfffffff5fd4a0000   (  6100 MB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] 	RCU dyntick-idle grace-period acceleration is enabled.
+[    0.000000] NR_IRQS:64 nr_irqs:64 0
+[    0.000000] PDC SDM845 v2 initialized
+[    0.000000] NO_HZ: Full dynticks CPUs: 1-7.
+[    0.000000] 	Offload RCU callbacks from all CPUs
+[    0.000000] 	Offload RCU callbacks from CPUs: 0-7.
+[    0.000000] arm_arch_timer: Architected cp15 and mmio timer(s) running at 19.20MHz (virt/virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[    0.000004] sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+[    0.000019] clocksource: Switched to clocksource arch_sys_counter
+[    0.001621] Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=192000)
+[    0.001631] pid_max: default: 32768 minimum: 301
+[    0.001702] Security Framework initialized
+[    0.001711] SELinux:  Initializing.
+[    0.001754] SELinux:  Starting in permissive mode
+[    0.001781] Mount-cache hash table entries: 16384 (order: 5, 131072 bytes)
+[    0.001786] Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes)
+[    0.002733] /cpus/cpu@0: Missing clock-frequency property
+[    0.002741] /cpus/cpu@100: Missing clock-frequency property
+[    0.002746] /cpus/cpu@200: Missing clock-frequency property
+[    0.002750] /cpus/cpu@300: Missing clock-frequency property
+[    0.002757] /cpus/cpu@400: Missing clock-frequency property
+[    0.002762] /cpus/cpu@500: Missing clock-frequency property
+[    0.002769] /cpus/cpu@600: Missing clock-frequency property
+[    0.002774] /cpus/cpu@700: Missing clock-frequency property
+[    0.002832] sched-energy: Sched-energy-costs installed from DT
+[    0.012068] ASID allocator initialised with 32768 entries
+[    0.020876] MSM Memory Dump base table set up
+[    0.020893] MSM Memory Dump apps data table set up
+[    0.032332] CPU1: Booted secondary processor [517f803c]
+[    0.041414] CPU2: Booted secondary processor [517f803c]
+[    0.050500] CPU3: Booted secondary processor [517f803c]
+[    0.060151] CPU4: Booted secondary processor [516f802d]
+[    0.069556] CPU5: Booted secondary processor [516f802d]
+[    0.079115] CPU6: Booted secondary processor [516f802d]
+[    0.088803] CPU7: Booted secondary processor [516f802d]
+[    0.088964] Brought up 8 CPUs
+[    0.088969] SMP: Total of 8 processors activated.
+[    0.088974] CPU features: detected feature: GIC system register CPU interface
+[    0.088976] CPU features: detected feature: Privileged Access Never
+[    0.088978] CPU features: detected feature: User Access Override
+[    0.088981] CPU features: detected feature: 32-bit EL0 Support
+[    0.088984] CPU features: detected feature: Kernel page table isolation (KPTI)
+[    0.138484] CPU: All CPU(s) started at EL1
+[    0.138527] alternatives: patching kernel code
+[    0.140293] CPU0: update max cpu_capacity 1024
+[    0.141491] devtmpfs: initialized
+[    0.207658] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.207671] futex hash table entries: 2048 (order: 6, 262144 bytes)
+[    0.211778] pinctrl core: initialized pinctrl subsystem
+[    0.212440] NET: Registered protocol family 16
+[    0.213462] schedtune: init normalization constants...
+[    0.213469] schedtune: CLUSTER[0]        min_pwr:     1 max_pwr:    17
+[    0.213475] schedtune: CPU[0]            min_pwr:     4 max_pwr:   160
+[    0.213480] schedtune: SYSTEM            min_pwr:     5 max_pwr:   177
+[    0.213484] schedtune: using normalization constants mul: 2097542168 sh1: 1 sh2: 7
+[    0.213485] schedtune: verify normalization constants...
+[    0.213488] schedtune: max_pwr/2^0:  172 => norm_pwr:  1024
+[    0.213490] schedtune: max_pwr/2^1:   86 => norm_pwr:   512
+[    0.213492] schedtune: max_pwr/2^2:   43 => norm_pwr:   256
+[    0.213494] schedtune: max_pwr/2^3:   21 => norm_pwr:   125
+[    0.213495] schedtune: max_pwr/2^4:   10 => norm_pwr:    59
+[    0.213497] schedtune: max_pwr/2^5:    5 => norm_pwr:    29
+[    0.213500] schedtune: configured to support 5 boost groups
+[    0.215133] cpuidle: using governor menu
+[    0.215155] cpuidle: using governor qcom
+[    0.219359] vdso32: 3 pages (2 code @         (ptrval), 1 data @         (ptrval))
+[    0.219363] vdso: 2 pages (1 code @         (ptrval), 1 data @         (ptrval))
+[    0.219368] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.219970] DMA: preallocated 256 KiB pool for atomic allocations
+[    0.222841] exit: IPA_USB init success!
+[    0.228589] pstore: using zlib compression
+[    0.228611] console [pstore-1] enabled
+[    0.228773] pstore: Registered ramoops as persistent store backend
+[    0.228776] ramoops: attached 0x400000@0xb0000000, ecc: 0/0
+[    0.231473] irq: no irq domain found for /soc/qcom,mdss_mdp@ae00000 !
+[    0.231556] irq: no irq domain found for /soc/qcom,mdss_mdp@ae00000 !
+[    0.231632] irq: no irq domain found for /soc/qcom,mdss_mdp@ae00000 !
+[    0.232065] irq: no irq domain found for /soc/pinctrl@03400000 !
+[    0.235311] unable to find DT imem DLOAD mode node
+[    0.236751] unable to find DT imem EDLOAD mode node
+[    0.238125] spmi spmi-0: PMIC arbiter version v5 (0x50000000)
+[    0.246776] platform 4080000.qcom,mss: assigned reserved memory node modem_region@0x8e400000
+[    0.246877] platform 17300000.qcom,lpass: assigned reserved memory node adsp_region@0x8c500000
+[    0.246975] platform 5c00000.qcom,ssc: assigned reserved memory node slpi_region@0x96b00000
+[    0.247411] platform 188101c.qcom,spss: assigned reserved memory node pil_spss_region@0x97f00000
+[    0.247590] msm_watchdog 17980000.qcom,wdt: wdog absent resource not present
+[    0.247603] msm_watchdog 17980000.qcom,wdt: No need to allocate memory for scandumps
+[    0.248292] msm_watchdog 17980000.qcom,wdt: MSM Watchdog Initialized
+[    0.248355] platform 8300000.qcom,turing: assigned reserved memory node cdsp_region@0x96100000
+[    0.248569] platform soc:qcom,msm-adsprpc-mem: assigned reserved memory node adsp_region
+[    0.248742] platform aae0000.qcom,venus: assigned reserved memory node video_region@0x95c00000
+[    0.250396] <CORE> glink_mailbox_probe: unable to create log context for [spss:mailbox]
+[    0.258190] sps:sps is ready.
+[    0.259073] platform soc:qcom,ipa_fws: assigned reserved memory node ips_fw_region@0x8c400000
+[    0.260330] platform soc:mem_dump: assigned reserved memory node mem_dump_region
+[    0.272741] pm8998_s9_level: Bringing 1uV into 17-17uV
+[    0.272847] pm8998_s9_level: supplied by pm8998_s6_level
+[    0.272913] pm8998_s9_level_ao: Bringing 1uV into 17-17uV
+[    0.272993] pm8998_s9_level_ao: supplied by pm8998_s6_level_ao
+[    0.280272] pm8998_l24: supplied by pm8998_l12
+[    0.281744] pm8998_lvs1: Bringing 1uV into 1800000-1800000uV
+[    0.282079] pm8998_lvs2: Bringing 1uV into 1800000-1800000uV
+[    0.295292] sdm845-v2-pinctrl 3400000.pinctrl: invalid resource
+[    0.301648] platform soc:qcom,kgsl-hyp: assigned reserved memory node gpu_region@0x8c415000
+[    0.324295] gpu_cx_gdsc: supplied by pm8998_s9_level
+[    0.333142] cam_cc-sdm845 ad00000.qcom,camcc: Registered Camera CC clocks
+[    0.334088] qmp-aop-clk soc:qcom,aopclk: Registered clocks with AOP
+[    0.334953] clk-rpmh soc:qcom,rpmhclk: Registered RPMh clocks
+[    0.336674] disp_cc-sdm845 af00000.qcom,dispcc: Registered Display CC clocks
+[    0.358716] gcc-sdm845 100000.qcom,gcc: Registered GCC clocks
+[    0.359611] clk: gpu_cc_gx_gfx3d_clk_src: set OPP pair(180000000 Hz: 49 uV) on 5000000.qcom,kgsl-3d0
+[    0.359903] clk: gpu_cc_gx_gfx3d_clk_src: set OPP pair(710000000 Hz: 417 uV) on 5000000.qcom,kgsl-3d0
+[    0.359970] gfxcc-sdm845 5090000.qcom,gfxcc: Registered GFX CC clocks
+[    0.361498] clk: gpu_cc_gmu_clk_src: set OPP pair(19200000 Hz: 49 uV) on 506a000.qcom,gmu
+[    0.361602] clk: gpu_cc_gmu_clk_src: set OPP pair(500000000 Hz: 129 uV) on 506a000.qcom,gmu
+[    0.361784] gpu_cc-sdm845 5090000.qcom,gpucc: Registered GPU CC clocks
+[    0.362912] video_cc-sdm845 ab00000.qcom,videocc: Registered Video CC clocks
+[    0.363885] KPI: Bootloader start count = 58536
+[    0.363887] KPI: Bootloader end count = 84113
+[    0.363889] KPI: Bootloader display count = 1873735551
+[    0.363891] KPI: Bootloader load kernel count = 2998
+[    0.363894] KPI: Kernel MPM timestamp = 103662
+[    0.363896] KPI: Kernel MPM Clock frequency = 32768
+[    0.363918] socinfo_print: v0.15, id=321, ver=2.1, raw_id=139, raw_ver=2, hw_plat=40, hw_plat_ver=262144
+                accessory_chip=0, hw_plat_subtype=0, pmic_model=65556, pmic_die_revision=131072 foundry_id=3 serial_number=3701556138 num_pmics=3 chip_family=0x4f raw_device_family=0x6 raw_device_number=0x0 nproduct_id=0x3f4 num_clusters=0x1 ncluster_array_offset=0xb0 num_defective_parts=0x6 ndefective_parts_array_offset=0xb4 nmodem_supported=0xff
+[    0.363920] msm_bus_fabric_rpmh_init_driver
+[    0.364117] msm_bus: Probe started
+[    0.364681] msm_bus_device 16e0000.ad-hoc-bus: Bus type is missing
+[    0.364737] msm_bus_device 16e0000.ad-hoc-bus: Bus type is missing
+[    0.364750] msm_bus_device 16e0000.ad-hoc-bus: Bus type is missing
+[    0.364803] msm_bus_device 16e0000.ad-hoc-bus: Bus type is missing
+[    0.366992] msm_bus: DT Parsing complete
+[    0.370059] msm_bus_fab_init_noc_ops: Invalid Bus type
+[    0.370228] msm_bus_fab_init_noc_ops: Invalid Bus type
+[    0.370269] msm_bus_fab_init_noc_ops: Invalid Bus type
+[    0.370434] msm_bus_fab_init_noc_ops: Invalid Bus type
+[    0.383648] actuator_rear_regulator: supplied by pmi8998_bob
+[    0.383915] actuator_rear_aux_regulator: supplied by pmi8998_bob
+[    0.384008] reg-fixed-voltage 2.gpio-regulator: could not find pctldev for node /soc/qcom,spmi@c440000/qcom,pm8998@0/pinctrl@c000/camera_rear_dvdd_en/camera_rear_dvdd_en_default, deferring probe
+[    0.384024] reg-fixed-voltage 3.gpio-regulator: could not find pctldev for node /soc/qcom,spmi@c440000/qcom,pm8998@0/pinctrl@c000/camera_dvdd_en/camera_dvdd_en_default, deferring probe
+[    0.384162] camera_aux_ldo: supplied by pm8998_s3
+[    0.384378] camera_ois_regulator: supplied by pmi8998_bob
+[    0.397472] camera_vio_ldo: supplied by pm8998_s4
+[    0.397909] reg-fixed-voltage vendor:ext_5v_boost: could not find pctldev for node /soc/qcom,spmi@c440000/qcom,pmi8998@2/pinctrl@c000/usb2_ext_5v_boost/usb2_ext_5v_boost_default, deferring probe
+[    0.398849] arm-smmu 5040000.arm,smmu-kgsl: 	(IDR0.CTTW overridden by dma-coherent property)
+[    0.398908] arm-smmu 5040000.arm,smmu-kgsl: 	stream matching with 5 register groups, mask 0x7
+[    0.398992] arm-smmu 5040000.arm,smmu-kgsl: found 8 context interrupt(s) but have 5 context banks. assuming 5 context interrupts.
+[    0.401149] register_client_adhoc:find path.src 139 dest 627
+[    0.401374] register_client_adhoc:Client handle 1 apps_smmu
+[    0.401570] arm-smmu 15000000.apps-smmu: 	(IDR0.CTTW overridden by dma-coherent property)
+[    0.401622] arm-smmu 15000000.apps-smmu: 	stream matching with 76 register groups, mask 0x7fff
+[    0.401947] arm-smmu 15000000.apps-smmu: found 64 context interrupt(s) but have 45 context banks. assuming 45 context interrupts.
+[    0.402478] register_client_adhoc:find path.src 139 dest 627
+[    0.402643] register_client_adhoc:Client handle 2 apps_smmu
+[    0.402876] register_client_adhoc:find path.src 139 dest 627
+[    0.403018] register_client_adhoc:Client handle 3 apps_smmu
+[    0.403210] register_client_adhoc:find path.src 22 dest 773
+[    0.403287] register_client_adhoc:Client handle 4 mnoc_hf_0_tbu
+[    0.403475] register_client_adhoc:find path.src 22 dest 773
+[    0.403543] register_client_adhoc:Client handle 5 mnoc_hf_1_tbu
+[    0.403732] register_client_adhoc:find path.src 137 dest 772
+[    0.403810] register_client_adhoc:Client handle 6 mnoc_sf_0_tbu
+[    0.403952] register_client_adhoc:find path.src 139 dest 627
+[    0.404103] register_client_adhoc:Client handle 7 apps_smmu
+[    0.404284] register_client_adhoc:find path.src 139 dest 627
+[    0.404418] register_client_adhoc:Client handle 8 apps_smmu
+[    0.404636] register_client_adhoc:find path.src 139 dest 627
+[    0.404769] register_client_adhoc:Client handle 9 apps_smmu
+[    0.405599] iommu: Adding device ae00000.qcom,mdss_mdp to group 0
+[    0.405768] iommu: Adding device 8c0000.qcom,qupv3_0_geni_se:qcom,iommu_qupv3_0_geni_se_cb to group 1
+[    0.405925] iommu: Adding device ac0000.qcom,qupv3_1_geni_se:qcom,iommu_qupv3_1_geni_se_cb to group 2
+[    0.406118] iommu: Adding device 1de0000.qcedev to group 3
+[    0.406273] iommu: Adding device 1de0000.qcrypto to group 4
+[    0.406429] iommu: Adding device 18800000.qcom,icnss to group 5
+[    0.406583] iommu: Adding device 800000.qcom,gpi-dma to group 6
+[    0.406736] iommu: Adding device a00000.qcom,gpi-dma to group 7
+[    0.406886] iommu: Adding device 88a7000.msm_tspp to group 8
+[    0.407048] iommu: Adding device soc:apps_iommu_test_device to group 8
+[    0.407189] iommu: Adding device soc:apps_iommu_coherent_test_device to group 8
+[    0.407372] iommu: Adding device soc:qcom,msm-audio-ion to group 9
+[    0.407533] iommu: Adding device a600000.ssusb to group 10
+[    0.407684] iommu: Adding device soc:usb_audio_qmi_dev to group 11
+[    0.409095] vgaarb: loaded
+[    0.409289] SCSI subsystem initialized
+[    0.409429] usbcore: registered new interface driver usbfs
+[    0.409456] usbcore: registered new interface driver hub
+[    0.409588] usbcore: registered new device driver usb
+[    0.410167] soc:usb_nop_phy supply vcc not found, using dummy regulator
+[    0.410514] qcom,qpnp-power-on c440000.qcom,spmi:qcom,pm8998@0:qcom,power-on@800: PMIC@SID0 Power-on reason: Triggered from Hard Reset and 'warm' boot
+[    0.410538] qcom,qpnp-power-on c440000.qcom,spmi:qcom,pm8998@0:qcom,power-on@800: PMIC@SID0: Power-off reason: Triggered from KPDPWR_N (Long Power Key hold)
+[    0.410712] input: qpnp_pon as /devices/virtual/input/input0
+[    0.411527] qcom,qpnp-power-on c440000.qcom,spmi:qcom,pm8005@4:qcom,power-on@800: No PON config. specified
+[    0.411570] qcom,qpnp-power-on c440000.qcom,spmi:qcom,pm8005@4:qcom,power-on@800: PMIC@SID4 Power-on reason: Triggered from PON1 (secondary PMIC) and 'warm' boot
+[    0.411592] qcom,qpnp-power-on c440000.qcom,spmi:qcom,pm8005@4:qcom,power-on@800: PMIC@SID4: Power-off reason: Triggered from GP1 (Keypad_Reset1)
+[    0.411652] qcom,qpnp-power-on c440000.qcom,spmi:qcom,pmi8998@2:qcom,power-on@800: No PON config. specified
+[    0.411695] qcom,qpnp-power-on c440000.qcom,spmi:qcom,pmi8998@2:qcom,power-on@800: PMIC@SID2 Power-on reason: Triggered from PON1 (secondary PMIC) and 'warm' boot
+[    0.411715] qcom,qpnp-power-on c440000.qcom,spmi:qcom,pmi8998@2:qcom,power-on@800: PMIC@SID2: Power-off reason: Triggered from GP1 (Keypad_Reset1)
+[    0.412121] media: Linux media interface: v0.10
+[    0.412142] Linux video capture interface: v2.00
+[    0.424383] Unable to get pmic_revid rc=-22
+[    0.426225] platform soc:qcom,ion:qcom,ion-heap@22: assigned reserved memory node adsp_region
+[    0.426471] platform soc:qcom,ion:qcom,ion-heap@27: assigned reserved memory node qseecom_region@0x8ab00000
+[    0.426558] platform soc:qcom,ion:qcom,ion-heap@19: assigned reserved memory node qseecom_ta_region
+[    0.426636] platform soc:qcom,ion:qcom,ion-heap@13: assigned reserved memory node secure_sp_region
+[    0.426714] platform soc:qcom,ion:qcom,ion-heap@10: assigned reserved memory node secure_display_region
+[    0.427035] ION heap system created
+[    0.427125] ION heap adsp created at 0x00000000f9000000 with size 1000000
+[    0.427135] ION heap qsecom created at 0x000000008ab00000 with size 1400000
+[    0.427143] ION heap qsecom_ta created at 0x00000000f8000000 with size 1000000
+[    0.427151] ION heap spss created at 0x00000000f5800000 with size 800000
+[    0.427160] ION heap secure_display created at 0x00000000fa000000 with size 5c00000
+[    0.427169] ION heap secure_heap created
+[    0.427868] ipa ipa3_tz_unlock_reg:5243 Bad parameters
+[    0.427874] ipa ipa3_pre_init:5445 Failed to unlock memory region using TZ
+[    0.428045] register_client_adhoc:find path.src 90 dest 512
+[    0.428532] register_client_adhoc:find path.src 90 dest 585
+[    0.428667] register_client_adhoc:find path.src 1 dest 676
+[    0.428904] register_client_adhoc:find path.src 143 dest 777
+[    0.428971] register_client_adhoc:Client handle 10 ipa
+[    0.429506] ipa ipa3_uc_state_check:284 uC interface not initialized
+[    0.433141] ipa ipa3_uc_state_check:284 uC interface not initialized
+[    0.433709] iommu: Adding device 1e00000.qcom,ipa:ipa_smmu_ap to group 12
+[    0.433952] iommu: Adding device 1e00000.qcom,ipa:ipa_smmu_wlan to group 13
+[    0.434195] iommu: Adding device 1e00000.qcom,ipa:ipa_smmu_uc to group 14
+[    0.434976] PMIC@SID0: PM8998 v2.0 options: 0, 0, 0, 0
+[    0.435088] PMIC@SID4: PM8005 v2.0 options: 0, 0, 0, 0
+[    0.435202] PMIC@SID2: PMI8998 v2.1 options: 0, 0, 0, 0
+[    0.438366] Advanced Linux Sound Architecture Driver Initialized.
+[    0.439203] Bluetooth: Core ver 2.22
+[    0.439223] NET: Registered protocol family 31
+[    0.439224] Bluetooth: HCI device and connection manager initialized
+[    0.439234] Bluetooth: HCI socket layer initialized
+[    0.439240] Bluetooth: L2CAP socket layer initialized
+[    0.439264] Bluetooth: SCO socket layer initialized
+[    0.440615] NetLabel: Initializing
+[    0.440617] NetLabel:  domain hash size = 128
+[    0.440618] NetLabel:  protocols = UNLABELED CIPSOv4
+[    0.440661] NetLabel:  unlabeled traffic allowed by default
+[    0.440796] pcie:pcie_init.
+[    0.443948] qpnp_labibb_regulator_probe: LAB/IBB registered successfully, lab_vreg enable=1 ibb_vreg enable=1 swire_control=0
+[    0.444355] gpu_gx_gdsc: supplied by pm8005_s1_level
+[    0.445860] clk: add_opp: Set OPP pair (300000000 Hz, 592000 uv) on cpu0
+[    0.446589] clk: add_opp: Set OPP pair (1766400000 Hz, 828000 uv) on cpu0
+[    0.446663] clk: add_opp: Set OPP pair (300000000 Hz, 592000 uv) on cpu1
+[    0.447349] clk: add_opp: Set OPP pair (1766400000 Hz, 828000 uv) on cpu1
+[    0.447402] clk: add_opp: Set OPP pair (300000000 Hz, 592000 uv) on cpu2
+[    0.448074] clk: add_opp: Set OPP pair (1766400000 Hz, 828000 uv) on cpu2
+[    0.448139] clk: add_opp: Set OPP pair (300000000 Hz, 592000 uv) on cpu3
+[    0.448818] clk: add_opp: Set OPP pair (1766400000 Hz, 828000 uv) on cpu3
+[    0.448878] clk: add_opp: Set OPP pair (825600000 Hz, 620000 uv) on cpu4
+[    0.449983] clk: add_opp: Set OPP pair (2803200000 Hz, 1056000 uv) on cpu4
+[    0.450079] clk: add_opp: Set OPP pair (825600000 Hz, 620000 uv) on cpu5
+[    0.451174] clk: add_opp: Set OPP pair (2803200000 Hz, 1056000 uv) on cpu5
+[    0.451231] clk: add_opp: Set OPP pair (825600000 Hz, 620000 uv) on cpu6
+[    0.452277] clk: add_opp: Set OPP pair (2803200000 Hz, 1056000 uv) on cpu6
+[    0.452334] clk: add_opp: Set OPP pair (825600000 Hz, 620000 uv) on cpu7
+[    0.453390] clk: add_opp: Set OPP pair (2803200000 Hz, 1056000 uv) on cpu7
+[    0.453746] clk: add_opp: Set OPP pair (300000000 Hz, 600000 uv) on soc:qcom,l3-cpu0
+[    0.453748] clk: add_opp: Set OPP pair (300000000 Hz, 600000 uv) on soc:qcom,l3-cpu4
+[    0.453751] clk: add_opp: Set OPP pair (300000000 Hz, 600000 uv) on soc:qcom,l3-cdsp
+[    0.453753] clk: add_opp: Set OPP pair (300000000 Hz, 600000 uv) on 5000000.qcom,kgsl-3d0
+[    0.455904] clk: add_opp: Set OPP pair (1478400000 Hz, 824000 uv) on soc:qcom,l3-cpu0
+[    0.455906] clk: add_opp: Set OPP pair (1478400000 Hz, 824000 uv) on soc:qcom,l3-cpu4
+[    0.455909] clk: add_opp: Set OPP pair (1478400000 Hz, 824000 uv) on soc:qcom,l3-cdsp
+[    0.455911] clk: add_opp: Set OPP pair (1478400000 Hz, 824000 uv) on 5000000.qcom,kgsl-3d0
+[    0.457799] cpufreq: driver osm-cpufreq up and running
+[    0.457801] clk: clk_cpu_osm_driver_probe: OSM CPUFreq driver inited
+[    0.457845] reg-fixed-voltage 2.gpio-regulator: could not find pctldev for node /soc/qcom,spmi@c440000/qcom,pm8998@0/pinctrl@c000/camera_rear_dvdd_en/camera_rear_dvdd_en_default, deferring probe
+[    0.457889] reg-fixed-voltage 3.gpio-regulator: could not find pctldev for node /soc/qcom,spmi@c440000/qcom,pm8998@0/pinctrl@c000/camera_dvdd_en/camera_dvdd_en_default, deferring probe
+[    0.457929] reg-fixed-voltage vendor:ext_5v_boost: could not find pctldev for node /soc/qcom,spmi@c440000/qcom,pmi8998@2/pinctrl@c000/usb2_ext_5v_boost/usb2_ext_5v_boost_default, deferring probe
+[    0.460435] sched-energy energy-costs: cpu=0 eff=1024 [freq=300000 cap=65 power_d0=12] -> [freq=1766400 cap=381 power_d0=160]
+[    0.460439] CPU0: update cpu_capacity 381
+[    0.460445] sched-energy energy-costs: cpu=1 eff=1024 [freq=300000 cap=65 power_d0=12] -> [freq=1766400 cap=381 power_d0=160]
+[    0.460447] CPU1: update cpu_capacity 381
+[    0.460453] sched-energy energy-costs: cpu=2 eff=1024 [freq=300000 cap=65 power_d0=12] -> [freq=1766400 cap=381 power_d0=160]
+[    0.460454] CPU2: update cpu_capacity 381
+[    0.460460] sched-energy energy-costs: cpu=3 eff=1024 [freq=300000 cap=65 power_d0=12] -> [freq=1766400 cap=381 power_d0=160]
+[    0.460462] CPU3: update cpu_capacity 381
+[    0.460470] sched-energy energy-costs: cpu=4 eff=1740 [freq=300000 cap=110 power_d0=189] -> [freq=2956800 cap=1024 power_d0=60000]
+[    0.460472] CPU4: update cpu_capacity 1024
+[    0.460479] sched-energy energy-costs: cpu=5 eff=1740 [freq=300000 cap=110 power_d0=189] -> [freq=2956800 cap=1024 power_d0=60000]
+[    0.460481] CPU5: update cpu_capacity 1024
+[    0.460488] sched-energy energy-costs: cpu=6 eff=1740 [freq=300000 cap=110 power_d0=189] -> [freq=2956800 cap=1024 power_d0=60000]
+[    0.460489] CPU6: update cpu_capacity 1024
+[    0.460495] sched-energy energy-costs: cpu=7 eff=1740 [freq=300000 cap=110 power_d0=189] -> [freq=2956800 cap=1024 power_d0=60000]
+[    0.460497] CPU7: update cpu_capacity 1024
+[    0.460639] CPU0: update max cpu_capacity 381
+[    0.460848] sched-energy energy-costs: Sched-energy-costs capacity updated
+[    0.460885] reg-fixed-voltage 2.gpio-regulator: could not find pctldev for node /soc/qcom,spmi@c440000/qcom,pm8998@0/pinctrl@c000/camera_rear_dvdd_en/camera_rear_dvdd_en_default, deferring probe
+[    0.460921] reg-fixed-voltage 3.gpio-regulator: could not find pctldev for node /soc/qcom,spmi@c440000/qcom,pm8998@0/pinctrl@c000/camera_dvdd_en/camera_dvdd_en_default, deferring probe
+[    0.460957] reg-fixed-voltage vendor:ext_5v_boost: could not find pctldev for node /soc/qcom,spmi@c440000/qcom,pmi8998@2/pinctrl@c000/usb2_ext_5v_boost/usb2_ext_5v_boost_default, deferring probe
+[    0.461409] clocksource: Switched to clocksource arch_sys_counter
+[    0.499818] VFS: Disk quotas dquot_6.6.0
+[    0.499873] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.500677] debugcc-sdm845 soc:qcom,cc-debug@100000: Registered debug mux successfully
+[    0.501570] mdss_pll_probe: MDSS pll label = MDSS DSI 0 PLL
+[    0.501575] mdss_pll_probe: mdss_pll_probe: label=MDSS DSI 0 PLL PLL SSC enabled
+[    0.501677] mdss_pll ae94a00.qcom,mdss_dsi_pll: Failed to create debugfs directory
+[    0.501683] mdss_pll ae94a00.qcom,mdss_dsi_pll: Failed to create debugfs directory
+[    0.501689] mdss_pll ae94a00.qcom,mdss_dsi_pll: Failed to create debugfs directory
+[    0.501695] mdss_pll ae94a00.qcom,mdss_dsi_pll: Failed to create debugfs directory
+[    0.501701] mdss_pll ae94a00.qcom,mdss_dsi_pll: Failed to create debugfs directory
+[    0.502343] dsi_pll_clock_register_10nm: Registered DSI PLL ndx=0, clocks successfully
+[    0.502372] mdss_pll_probe: MDSS pll label = MDSS DSI 1 PLL
+[    0.502375] mdss_pll_probe: mdss_pll_probe: label=MDSS DSI 1 PLL PLL SSC enabled
+[    0.502444] mdss_pll ae96a00.qcom,mdss_dsi_pll: Failed to create debugfs directory
+[    0.502450] mdss_pll ae96a00.qcom,mdss_dsi_pll: Failed to create debugfs directory
+[    0.502455] mdss_pll ae96a00.qcom,mdss_dsi_pll: Failed to create debugfs directory
+[    0.502462] mdss_pll ae96a00.qcom,mdss_dsi_pll: Failed to create debugfs directory
+[    0.502467] mdss_pll ae96a00.qcom,mdss_dsi_pll: Failed to create debugfs directory
+[    0.507506] dsi_pll_10nm_lock_status: DSI PLL(1) lock failed, status=0x00000000
+[    0.512726] dsi_pll_10nm_lock_status: DSI PLL(1) lock failed, status=0x00000000
+[    0.512894] dsi_pll_clock_register_10nm: Registered DSI PLL ndx=1, clocks successfully
+[    0.512922] mdss_pll_probe: MDSS pll label = MDSS DP PLL
+[    0.517073] NET: Registered protocol family 2
+[    0.517556] TCP established hash table entries: 65536 (order: 7, 524288 bytes)
+[    0.517791] TCP bind hash table entries: 65536 (order: 8, 1048576 bytes)
+[    0.518797] TCP: Hash tables configured (established 65536 bind 65536)
+[    0.518849] UDP hash table entries: 4096 (order: 5, 131072 bytes)
+[    0.518919] UDP-Lite hash table entries: 4096 (order: 5, 131072 bytes)
+[    0.519127] NET: Registered protocol family 1
+[    0.519152] PCI: CLS 0 bytes, default 128
+[    0.519234] reg-fixed-voltage 2.gpio-regulator: could not find pctldev for node /soc/qcom,spmi@c440000/qcom,pm8998@0/pinctrl@c000/camera_rear_dvdd_en/camera_rear_dvdd_en_default, deferring probe
+[    0.519289] reg-fixed-voltage 3.gpio-regulator: could not find pctldev for node /soc/qcom,spmi@c440000/qcom,pm8998@0/pinctrl@c000/camera_dvdd_en/camera_dvdd_en_default, deferring probe
+[    0.519328] reg-fixed-voltage vendor:ext_5v_boost: could not find pctldev for node /soc/qcom,spmi@c440000/qcom,pmi8998@2/pinctrl@c000/usb2_ext_5v_boost/usb2_ext_5v_boost_default, deferring probe
+[    0.519699] Trying to unpack rootfs image as initramfs...
+[    1.156957] Freeing initrd memory: 23676K
+[    1.158156] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+[    1.163733] audit: initializing netlink subsys (disabled)
+[    1.163800] audit: type=2000 audit(1.159:1): initialized
+[    1.165424] workingset: timestamp_bits=45 max_order=21 bucket_order=0
+[    1.168941] [SDFAT] Filesystem version 2.3.0
+[    1.169428] Registering sdcardfs 0.1
+[    1.172099] fuse init (API version 7.26)
+[    1.172602] SELinux:  Registering netfilter hooks
+[    1.172899] pfk_ext4 [pfk_ext4_init]: PFK EXT4 inited successfully
+[    1.172902] pfk_f2fs [pfk_f2fs_init]: PFK F2FS inited successfully
+[    1.172908] pfk [pfk_init]: Driver initialized successfully
+[    1.176657] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 247)
+[    1.176663] io scheduler noop registered
+[    1.176665] io scheduler deadline registered
+[    1.176753] io scheduler cfq registered (default)
+[    1.195637] fb0: Virtual frame buffer device, using 3000K of video memory
+[    1.198216] qcom,qpnp-clkdiv c440000.qcom,spmi:qcom,pm8998@0:qcom,clkdiv@5b00: Registered qpnp_clkdiv_1 successfully
+[    1.198313] qcom,qpnp-clkdiv c440000.qcom,spmi:qcom,pm8998@0:qcom,clkdiv@5c00: Registered qpnp_clkdiv_2 successfully
+[    1.198408] qcom,qpnp-clkdiv c440000.qcom,spmi:qcom,pm8998@0:qcom,clkdiv@5d00: Registered qpnp_clkdiv_3 successfully
+[    1.216528] icnss 18800000.qcom,icnss: for wcss_msa0 segments only will be dumped.
+[    1.216652] icnss: Platform driver probed successfully
+[    1.217799] memshare_child soc:qcom,memshare:qcom,client_1: for memshare_GPS segments only will be dumped.
+[    1.218036] memshare_child soc:qcom,memshare:qcom,client_2: for memshare_FTM segments only will be dumped.
+[    1.218134] memshare_child soc:qcom,memshare:qcom,client_3: for memshare_DIAG segments only will be dumped.
+[    1.219024] register_client_adhoc:find path.src 125 dest 512
+[    1.219518] register_client_adhoc:Client handle 11 scm_pas
+[    1.219533] minidump-id not found for adsp
+[    1.219721] minidump-id not found for slpi
+[    1.219834] minidump-id not found for spss
+[    1.219884] subsys-pil-tz 188101c.qcom,spss: for spss segments only will be dumped.
+[    1.220455] minidump-id not found for cdsp
+[    1.220817] register_client_adhoc:find path.src 63 dest 512
+[    1.221039] register_client_adhoc:Client handle 12 pil-venus
+[    1.221045] minidump-id not found for venus
+[    1.221053] subsys-pil-tz aae0000.qcom,venus: for venus segments only will be dumped.
+[    1.221312] minidump-id not found for ipa_fws
+[    1.221318] subsys-pil-tz soc:qcom,ipa_fws: for ipa_fws segments only will be dumped.
+[    1.221618] minidump-id not found for a630_zap
+[    1.221625] subsys-pil-tz soc:qcom,kgsl-hyp: for a630_zap segments only will be dumped.
+[    1.222482] pil-q6v5-mss 4080000.qcom,mss: No pas_id found.
+[    1.225459] msm_geni_serial 898000.qcom,qup_uart: Wakeup byte 0xfd
+[    1.225497] msm_geni_serial 898000.qcom,qup_uart: Serial port0 added.FifoSize 64 is_console0
+[    1.226109] 898000.qcom,qup_uart: ttyHS0 at MMIO 0x898000 (irq = 8, base_baud = 0) is a MSM
+[    1.226531] msm_geni_serial_init: Driver initialized
+[    1.227024] register_client_adhoc:find path.src 1 dest 618
+[    1.227293] register_client_adhoc:Client handle 13 msm-rng-noc
+[    1.228331] random: crng init done
+[    1.233624] diag: MUX: unable to register pcie operations for proc: 0, err: -22
+[    1.233630] diag: MUX: unable to register PCIe operations, continuing with USB registrations for proc: 0, err: -22
+[    1.277210] [drm] Initialized
+[    1.277556] register_client_adhoc:find path.src 20003 dest 20515
+[    1.277759] register_client_adhoc:find path.src 20004 dest 20515
+[    1.277841] register_client_adhoc:Client handle 14 disp_rsc_mnoc
+[    1.277870] register_client_adhoc:find path.src 20001 dest 20513
+[    1.277953] register_client_adhoc:Client handle 15 disp_rsc_llcc
+[    1.277978] register_client_adhoc:find path.src 20000 dest 20512
+[    1.278063] register_client_adhoc:Client handle 16 disp_rsc_ebi
+[    1.278330] [sde_rsc_hw:rsc_hw_init:679]: sde rsc init successfully done
+[    1.278347] [sde_rsc:sde_rsc_probe:1422]: sde rsc index:0 probed successfully
+[    1.279468] dsi_phy ae94400.qcom,mdss_dsi_phy0: failed to get memory resource: dyn_refresh_base
+[    1.279620] msm-dsi-phy:[dsi_phy_driver_probe] Probe successful for dsi-phy-0
+[    1.279655] dsi_phy ae96400.qcom,mdss_dsi_phy0: failed to get memory resource: dyn_refresh_base
+[    1.279792] msm-dsi-phy:[dsi_phy_driver_probe] Probe successful for dsi-phy-1
+[    1.281206] AXI: get_pdata(): Error: Client name not found
+[    1.281210] AXI: msm_bus_cl_get_pdata(): client has to provide missing entry for successful registration
+[    1.281216] dsi-ctrl:[dsi_ctrl_dev_probe] Probe successful for dsi-ctrl-0
+[    1.281462] AXI: get_pdata(): Error: Client name not found
+[    1.281464] AXI: msm_bus_cl_get_pdata(): client has to provide missing entry for successful registration
+[    1.281467] dsi-ctrl:[dsi_ctrl_dev_probe] Probe successful for dsi-ctrl-1
+[    1.284898] msm-dsi-panel:[dsi_panel_get:3861] [LCD]dsi_panel_get: on_cmds_tuning = 0.
+[    1.284925] msm-dsi-panel:[dsi_panel_parse_triggers:1614] [jdi fhd video dsi panel] fallback to default te-pin-select
+[    1.285048] msm-dsi-panel:[dsi_panel_parse_reset_sequence:2426] RESET SEQ LENGTH = 16
+[    1.285069] msm-dsi-panel:[dsi_panel_parse_misc_features:2475] dsi_panel_parse_misc_features: ulps feature disabled
+[    1.285074] msm-dsi-panel:[dsi_panel_parse_misc_features:2481] dsi_panel_parse_misc_features: ulps during suspend feature disabled
+[    1.285138] msm-dsi-panel:[dsi_panel_parse_mi_config:3739] [LCD]dsi_panel_parse_mi_config:3739 Dispparam enabled.
+[    1.285144] msm-dsi-panel:[dsi_panel_parse_mi_config:3760] 0xf 0x18 enabled:1
+[    1.285150] msm-dsi-panel:[dsi_panel_parse_mi_config:3776] 0xf 0x20 enabled:1
+[    1.285163] msm-dsi-panel:[dsi_panel_parse_mi_config:3819] Panel on dimming delay 120 ms
+[    1.285167] msm-dsi-panel:[dsi_panel_parse_mi_config:3826] default doze backlight threshold is 5
+[    1.285172] msm-dsi-panel:[dsi_panel_get:3946] failed to parse mi config, rc=-22
+[    1.285204] msm-dsi-display:[dsi_display_clocks_init] failed to get src_byte_clk, rc=-2
+[    1.287317] msm-dsi-display:[dsi_display_get_boot_display] index = 0
+[    1.287321] msm-dsi-display:[dsi_display_get_boot_display] index = 1
+[    1.288029] register_client_adhoc:find path.src 1 dest 590
+[    1.288315] register_client_adhoc:Client handle 17 mdss_reg
+[    1.288349] register_client_adhoc:find path.src 22 dest 512
+[    1.288580] register_client_adhoc:find path.src 23 dest 512
+[    1.288788] register_client_adhoc:Client handle 18 mdss_sde
+[    1.288945] [drm:sde_dbg_init:3490] evtlog_status: enable:0, panic:0, dump:1
+[    1.289014] msm_drm ae00000.qcom,mdss_mdp: bound af20000.qcom,sde_rscc (ops sde_rsc_comp_ops)
+[    1.289027] msm_drm ae00000.qcom,mdss_mdp: bound soc:qcom,wb-display@0 (ops sde_wb_comp_ops)
+[    1.289650] msm-dsi-display:[dsi_display_bind] Successfully bind display panel 'dsi_jdi_fhd_nt35596s_video_display'
+[    1.290123] msm_drm ae00000.qcom,mdss_mdp: bound soc:qcom,dsi-display@18 (ops dsi_display_comp_ops)
+[    1.290185] [drm] mapped mdp address space @ffffff800ef00000
+[    1.290207] msm_drm ae00000.qcom,mdss_mdp: failed to get memory resource: vbif_nrt_phys
+[    1.290332] [drm:_sde_kms_get_splash_data:3272] found continuous splash base address:9d400000 size:2400000
+[    1.291923] [drm:sde_kms_hw_init:3401] sde hardware revision:0x40000001
+[    1.293107] [drm] invalid feature map 9 for feature 10
+[    1.293112] [drm] invalid feature map 9 for feature 10
+[    1.293116] [drm] invalid feature map 9 for feature 10
+[    1.293120] [drm] invalid feature map 9 for feature 10
+[    1.293352] [drm:alloc_reg_dma_buf_v1] *ERROR* failed to get aspace
+[    1.293374] Failed to allocate reg dma, ret:18446744073709551594
+[    1.293395] [drm] Created domain mdp_ns [80000000,80000000] secure=0
+[    1.299320] iommu: Adding device ae00000.qcom,mdss_mdp:qcom,smmu_sde_sec_cb to group 15
+[    1.299935] [drm] probing device qcom,smmu_sde_sec
+[    1.299946] [drm] Created domain mdp_s [80000000,80000000] secure=1
+[    1.306110] [drm:sde_connector_init:2401] sde_connector_init: Request esd irq succeed!
+[    1.308131] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    1.308135] [drm] No driver support for vblank timestamp query.
+[    1.310391] msm-dsi-panel:[dsi_panel_parse_topology:3293] default topology: lm: 1 comp_enc:0 intf: 1
+[    1.310853] msm-dsi-panel:[dsi_panel_parse_partial_update_caps:3381] partial update disabled as the property is not set
+[    1.311192] dsi-ctrl:[_dsi_ctrl_setup_isr] [DSI_0] IRQ 668 registered
+[    1.319248] iommu: Adding device 506a000.qcom,gmu:gmu_user to group 16
+[    1.319573] iommu: Adding device 506a000.qcom,gmu:gmu_kernel to group 17
+[    1.321886] register_client_adhoc:find path.src 26 dest 512
+[    1.322257] register_client_adhoc:Client handle 19 grp3d
+[    1.322276] register_client_adhoc:find path.src 26 dest 10036
+[    1.322455] register_client_adhoc:Client handle 20 cnoc
+[    1.322462] query_client_usecase_all: query_start
+[    1.322526] query_client_usecase_all: query_start
+[    1.323853] iommu: Adding device 5040000.qcom,kgsl-iommu:gfx3d_user to group 18
+[    1.324155] iommu: Adding device 5040000.qcom,kgsl-iommu:gfx3d_secure to group 19
+[    1.420124] brd: module loaded
+[    1.444217] loop: module loaded
+[    1.445672] zram: Added device: zram0
+[    1.449598] QSEECOM: qseecom_probe: qseecom.qsee_version = 0x1400000
+[    1.449653] QSEECOM: qseecom_retrieve_ce_data: Device does not support PFE
+[    1.449662] QSEECOM: qseecom_probe: no-clock-support=0x1
+[    1.449668] QSEECOM: qseecom_probe: qseecom.qsee_reentrancy_support = 2
+[    1.449879] register_client_adhoc:find path.src 125 dest 512
+[    1.450657] register_client_adhoc:Client handle 21 qseecom-noc
+[    1.450756] QSEECOM: qseecom_probe: qseecom.whitelist_support = 1
+[    1.453185] register_client_adhoc:find path.src 125 dest 512
+[    1.453467] register_client_adhoc:Client handle 22 qcedev-noc
+[    1.455630] qce 1de0000.qcedev: QTI Crypto 5.4.1 device found @0x1de0000
+[    1.455638] qce 1de0000.qcedev: CE device = 0x0 IO base, CE = ffffff800e320000 Consumer (IN) PIPE 6,
+               Producer (OUT) PIPE 7 IO base BAM = 0000000000000000
+               BAM IRQ 108 Engines Availability = 0x2011073
+[    1.455946] sps:BAM 0x0000000001dc4000 is registered.
+[    1.456213] sps:BAM 0x0000000001dc4000 (va:0xffffff800ee80000) enabled: ver:0x27, number of pipes:16
+[    1.456546] QCE50: qce_sps_init:  QTI MSM CE-BAM at 0x0000000001dc4000 irq 108
+[    1.457319] iommu: Adding device 1de0000.qcedev:qcom_cedev_ns_cb to group 20
+[    1.458241] qcedev_setup_context_bank Attached 1de0000.qcedev:qcom_cedev_ns_cb and create mapping
+[    1.458244] qcedev_setup_context_bank Context Bank name:ns_context, is_secure:0, start_addr:0x60000000
+[    1.458248] qcedev_setup_context_bank size:0x40000000, dev:fffffff5e8139410, mapping:fffffff5e8213680
+[    1.458355] iommu: Adding device 1de0000.qcedev:qcom_cedev_s_cb to group 21
+[    1.460776] qcedev_setup_context_bank Attached 1de0000.qcedev:qcom_cedev_s_cb and create mapping
+[    1.460781] qcedev_setup_context_bank Context Bank name:secure_context, is_secure:1, start_addr:0x60200000
+[    1.460784] qcedev_setup_context_bank size:0x40000000, dev:fffffff5e8139810, mapping:fffffff5e8217100
+[    1.462772] register_client_adhoc:find path.src 125 dest 512
+[    1.463128] register_client_adhoc:Client handle 23 qcrypto-noc
+[    1.464389] qcrypto 1de0000.qcrypto: QTI Crypto 5.4.1 device found @0x1de0000
+[    1.464395] qcrypto 1de0000.qcrypto: CE device = 0x0 IO base, CE = ffffff800eec0000 Consumer (IN) PIPE 4,
+               Producer (OUT) PIPE 5 IO base BAM = 0000000000000000
+               BAM IRQ 108 Engines Availability = 0x2011073
+[    1.464786] QCE50: qce_sps_init:  QTI MSM CE-BAM at 0x0000000001dc4000 irq 108
+[    1.465313] qcrypto 1de0000.qcrypto: qcrypto-ecb-aes
+[    1.465555] qcrypto 1de0000.qcrypto: qcrypto-cbc-aes
+[    1.465663] qcrypto 1de0000.qcrypto: qcrypto-ctr-aes
+[    1.465771] qcrypto 1de0000.qcrypto: qcrypto-ecb-des
+[    1.465879] qcrypto 1de0000.qcrypto: qcrypto-cbc-des
+[    1.465992] qcrypto 1de0000.qcrypto: qcrypto-ecb-3des
+[    1.466098] qcrypto 1de0000.qcrypto: qcrypto-cbc-3des
+[    1.466210] qcrypto 1de0000.qcrypto: qcrypto-xts-aes
+[    1.466320] qcrypto 1de0000.qcrypto: qcrypto-sha1
+[    1.466443] qcrypto 1de0000.qcrypto: qcrypto-sha256
+[    1.466558] qcrypto 1de0000.qcrypto: qcrypto-aead-hmac-sha1-cbc-aes
+[    1.466664] qcrypto 1de0000.qcrypto: qcrypto-aead-hmac-sha1-cbc-des
+[    1.466770] qcrypto 1de0000.qcrypto: qcrypto-aead-hmac-sha1-cbc-3des
+[    1.466880] qcrypto 1de0000.qcrypto: qcrypto-aead-hmac-sha256-cbc-aes
+[    1.466986] qcrypto 1de0000.qcrypto: qcrypto-aead-hmac-sha256-cbc-des
+[    1.467098] qcrypto 1de0000.qcrypto: qcrypto-aead-hmac-sha256-cbc-3des
+[    1.467217] qcrypto 1de0000.qcrypto: qcrypto-hmac-sha1
+[    1.467332] qcrypto 1de0000.qcrypto: qcrypto-hmac-sha256
+[    1.467441] qcrypto 1de0000.qcrypto: qcrypto-aes-ccm
+[    1.467548] qcrypto 1de0000.qcrypto: qcrypto-rfc4309-aes-ccm
+[    1.470278] ufshcd-qcom 1d84000.ufshc: ufshcd_populate_vreg: Unable to find vccq-supply regulator, assuming enabled
+[    1.472925] qcom_ice_get_pdevice: found ice device fffffff5e8350000
+[    1.472928] qcom_ice_get_pdevice: matching platform device fffffff5f29e7800
+[    1.474162] register_client_adhoc:find path.src 123 dest 512
+[    1.474532] register_client_adhoc:find path.src 1 dest 757
+[    1.474794] register_client_adhoc:Client handle 24 ufshc_mem
+[    1.476690] scsi host0: ufshcd
+[    1.481589] qcom_ice 1d90000.ufsice: QC ICE 3.1.75 device found @0xffffff8009d88000
+[    1.500742] SCSI Media Changer driver v0.25 
+[    1.503608] Ethernet Channel Bonding Driver: v3.7.1 (April 27, 2011)
+[    1.506405] libphy: Fixed MDIO Bus: probed
+[    1.506410] tun: Universal TUN/TAP device driver, 1.6
+[    1.506412] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    1.506676] PPP generic driver version 2.4.2
+[    1.506788] PPP BSD Compression module registered
+[    1.506793] PPP Deflate Compression module registered
+[    1.506823] PPP MPPE Compression module registered
+[    1.506829] NET: Registered protocol family 24
+[    1.506853] PPTP driver version 0.8.5
+[    1.507166] CLD80211: Initializing
+[    1.507427] usbcore: registered new interface driver rtl8150
+[    1.507464] usbcore: registered new interface driver r8152
+[    1.507496] usbcore: registered new interface driver asix
+[    1.507516] usbcore: registered new interface driver ax88179_178a
+[    1.507536] usbcore: registered new interface driver cdc_ether
+[    1.507566] usbcore: registered new interface driver cdc_ncm
+[    1.507573] CHRDEV "uio" major number 233 goes below the dynamic allocation range
+[    1.513823] msm_sharedmem: msm_sharedmem_probe: Device created for client 'rmtfs'
+[    1.515243] msm-usb-ssphy-qmp 88e8000.ssphy: failed to get phandle for msm_ssphy_qmp
+[    1.517294] msm-qusb-phy-v2 88e3000.qusb: invalid reg offset count
+[    1.517310] msm-qusb-phy-v2: probe of 88e3000.qusb failed with error -22
+[    1.519611] msm-dwc3 a600000.ssusb: unable to get dbm device
+[    1.521213] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.521218] ehci-pci: EHCI PCI platform driver
+[    1.521250] ehci-platform: EHCI generic platform driver
+[    1.521622] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.521641] ohci-pci: OHCI PCI platform driver
+[    1.521671] ohci-platform: OHCI generic platform driver
+[    1.522628] usbcore: registered new interface driver cdc_acm
+[    1.522632] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    1.522672] usbcore: registered new interface driver usb-storage
+[    1.522698] usbcore: registered new interface driver usb_ehset_test
+[    1.522724] usbcore: registered new interface driver lvs
+[    1.522844] ufshcd-qcom 1d84000.ufshc: ufshcd_print_pwr_info:[RX, TX]: gear=[1, 1], lane[1, 1], pwr[SLOWAUTO_MODE, SLOWAUTO_MODE], rate = 0
+[    1.524398] msm_sharedmem: sharedmem_register_qmi: qmi init successful
+[    1.528367] qpnp-pdphy c440000.qcom,spmi:qcom,pmi8998@2:qcom,usb-pdphy@1700: usbpd_create failed: -517
+[    1.529271] mousedev: PS/2 mouse device common for all mice
+[    1.529636] [NVT-ts] nvt_driver_init 2236: start
+[    1.529649] nvt_driver_init: finished
+[    1.530263] fpc1020 soc:fingerprint_fpc: found pin control fpc1020_reset_reset
+[    1.530267] fpc1020 soc:fingerprint_fpc: found pin control fpc1020_reset_active
+[    1.530310] fpc1020 soc:fingerprint_fpc: fpc1020_probe: ok
+[    1.530354] fpc1020_init OK
+[    1.530361] CHRDEV "goodix_fp_spi" major number 232 goes below the dynamic allocation range
+[    1.530666] gf::irq_gpio:121
+[    1.531003] input: uinput-goodix as /devices/virtual/input/input1
+[    1.531816] qcom,qpnp-rtc c440000.qcom,spmi:qcom,pm8998@0:qcom,pm8998_rtc: rtc core: registered qpnp_rtc as rtc0
+[    1.532144] i2c /dev entries driver
+[    1.532431] i2c_geni 88c000.i2c: Bus frequency not specified, default to 400KHz.
+[    1.534403] nq-nci 1-0028: nqx_probe: probing NFCC NQxxx exited successfully
+[    1.534656] i2c_geni 894000.i2c: Bus frequency not specified, default to 400KHz.
+[    1.535571] i2c_geni a88000.i2c: Bus frequency not specified, default to 400KHz.
+[    1.536528] i2c_geni a88000.i2c: i2c error :-107
+[    1.536647] i2c_geni a88000.i2c: i2c error :-107
+[    1.536763] i2c_geni a88000.i2c: i2c error :-107
+[    1.536898] i2c_geni a88000.i2c: i2c error :-107
+[    1.536904] I2C PMIC: i2c_pmic_read: i2c_pmic_read failed for 3 retries, rc = -107
+[    1.536907] I2C PMIC: i2c_pmic_determine_initial_status: Couldn't read irq data rc=-107
+[    1.536911] I2C PMIC: i2c_pmic_probe: Couldn't determine initial status rc=-107
+[    1.536964] i2c_pmic: probe of 0-0008 failed with error -107
+[    1.541141] PMIC@SID0: (null) v1.1 options: 0, 0, 0, 0
+[    1.541486] I2C PMIC: i2c_pmic_probe: I2C PMIC probe successful
+[    1.541771] i2c_geni a98000.i2c: Bus frequency not specified, default to 400KHz.
+[    1.547019] ufshcd-qcom 1d84000.ufshc: UFS manufacturer id: 0x0198
+[    1.559613] ufshcd-qcom 1d84000.ufshc: ufshcd_print_pwr_info:[RX, TX]: gear=[3, 3], lane[2, 2], pwr[FAST MODE, FAST MODE], rate = 2
+[    1.561176] scsi 0:0:0:49488: Well-known LUN    TOSHIBA  THGAF4G9N4LBAIRB 0100 PQ: 0 ANSI: 6
+[    1.563132] scsi 0:0:0:49456: Well-known LUN    TOSHIBA  THGAF4G9N4LBAIRB 0100 PQ: 0 ANSI: 6
+[    1.564982] scsi 0:0:0:49476: Well-known LUN    TOSHIBA  THGAF4G9N4LBAIRB 0100 PQ: 0 ANSI: 6
+[    1.567378] scsi 0:0:0:0: Direct-Access     TOSHIBA  THGAF4G9N4LBAIRB 0100 PQ: 0 ANSI: 6
+[    1.569511] scsi 0:0:0:1: Direct-Access     TOSHIBA  THGAF4G9N4LBAIRB 0100 PQ: 0 ANSI: 6
+[    1.571574] scsi 0:0:0:2: Direct-Access     TOSHIBA  THGAF4G9N4LBAIRB 0100 PQ: 0 ANSI: 6
+[    1.573634] scsi 0:0:0:3: Direct-Access     TOSHIBA  THGAF4G9N4LBAIRB 0100 PQ: 0 ANSI: 6
+[    1.575701] scsi 0:0:0:4: Direct-Access     TOSHIBA  THGAF4G9N4LBAIRB 0100 PQ: 0 ANSI: 6
+[    1.577765] scsi 0:0:0:5: Direct-Access     TOSHIBA  THGAF4G9N4LBAIRB 0100 PQ: 0 ANSI: 6
+[    1.580304] sd 0:0:0:0: [sda] Write Protect is off
+[    1.580309] sd 0:0:0:0: [sda] Mode Sense: 00 32 00 10
+[    1.580820] sd 0:0:0:0: [sda] Optimal transfer size 65536 bytes
+[    1.581730] sd 0:0:0:1: [sdb] Write Protect is off
+[    1.581757] sd 0:0:0:1: [sdb] Mode Sense: 00 32 00 10
+[    1.582416] sd 0:0:0:1: [sdb] Optimal transfer size 65536 bytes
+[    1.583117]  sda: sda1 sda2 sda3 sda4 sda5 sda6 sda7 sda8 sda9 sda10 sda11 sda12 sda13 sda14 sda15 sda16 sda17 sda18 sda19 sda20 sda21
+[    1.584012] sd 0:0:0:2: [sdc] Write Protect is off
+[    1.584017] sd 0:0:0:2: [sdc] Mode Sense: 00 32 00 10
+[    1.584197] sd 0:0:0:2: [sdc] Optimal transfer size 65536 bytes
+[    1.585910]  sdb: sdb1 sdb2
+[    1.587197]  sdc: sdc1 sdc2
+[    1.588841] sd 0:0:0:3: [sdd] Write Protect is off
+[    1.588868] sd 0:0:0:3: [sdd] Mode Sense: 00 32 00 10
+[    1.589168] sd 0:0:0:3: [sdd] Optimal transfer size 65536 bytes
+[    1.589299] sd 0:0:0:4: [sde] Write Protect is off
+[    1.589303] sd 0:0:0:4: [sde] Mode Sense: 00 32 00 10
+[    1.589672] sd 0:0:0:4: [sde] Optimal transfer size 65536 bytes
+[    1.592272]  sdd: sdd1 sdd2 sdd3 sdd4 sdd5
+[    1.592751]  sde: sde1 sde2 sde3 sde4 sde5 sde6 sde7 sde8 sde9 sde10 sde11 sde12 sde13 sde14 sde15 sde16 sde17 sde18 sde19 sde20 sde21 sde22 sde23 sde24 sde25 sde26 sde27 sde28 sde29 sde30 sde31 sde32 sde33 sde34 sde35 sde36 sde37 sde38 sde39 sde40 sde41 sde42 sde43 sde44 sde45 sde46 sde47 sde48
+[    1.594131] sd 0:0:0:5: [sdf] Write Protect is off
+[    1.594160] sd 0:0:0:5: [sdf] Mode Sense: 00 32 00 10
+[    1.594447] sd 0:0:0:5: [sdf] Optimal transfer size 65536 bytes
+[    1.596709]  sdf: sdf1 sdf2 sdf3 sdf4 sdf5 sdf6 sdf7
+[    1.793268] synaptics_rmi4_f12_init 2698: fhandler->full_addr.query_base = 0x0049
+[    1.793271] synaptics_rmi4_f12_init 2699: fhandler->full_addr.ctrl_base = 0x0012
+[    1.793274] synaptics_rmi4_f12_init 2700: size_of_query5 = 9
+[    1.793277] synaptics_rmi4_f12_init 2706: size_of_query5 = 9
+[    1.802184] synaptics_dsi_force 3-0020: synaptics_rmi4_f1a_button_map: Button map is missing in board file
+[    1.809695] input: synaptics_dsx as /devices/platform/soc/a98000.i2c/i2c-3/3-0020/input/input2
+[    1.810379] synaptics_dsi_force 3-0020: chip info: 0x53 0x33 0x33 0x33 0x30 0x00 0x00 0x00
+[    1.818810] CHRDEV "rmi" major number 231 goes below the dynamic allocation range
+[    1.821520] synaptics_rmi4_fwu_init: fwu->in_ub_mode = 0
+[    1.823143] iommu: Adding device aa00000.qcom,vidc:non_secure_cb to group 22
+[    1.823847] iommu: Adding device aa00000.qcom,vidc:secure_bitstream_cb to group 23
+[    1.825881] iommu: Adding device aa00000.qcom,vidc:secure_pixel_cb to group 24
+[    1.827093] iommu: Adding device aa00000.qcom,vidc:secure_non_pixel_cb to group 25
+[    1.830067] register_client_adhoc:find path.src 1 dest 590
+[    1.830644] register_client_adhoc:Client handle 25 sde_reg
+[    1.830734] iommu: Adding device ae00000.qcom,mdss_rotator:qcom,smmu_rot_unsec_cb to group 26
+[    1.830896] iommu: Adding device ae00000.qcom,mdss_rotator:qcom,smmu_rot_sec_cb to group 27
+[    1.831161] register_client_adhoc:find path.src 25 dest 512
+[    1.831408] register_client_adhoc:Client handle 26 mdss_rotator
+[    1.831422] register_client_adhoc:find path.src 1 dest 590
+[    1.831617] register_client_adhoc:Client handle 27 mdss_rot_reg
+[    1.832504] No change in context(0==0), skip
+[    1.835053] sde_rotator_evtlog_create_debugfs: evtlog_status: enable:0, panic:1, dump:2
+[    1.836578] sde_rotator ae00000.qcom,mdss_rotator: <SDEROT_INFO> SDE v4l2 rotator probe success
+[    1.838929] sde_smmu_probe: <SDEROT_INFO> iommu v2 domain[0] mapping and clk register successful!
+[    1.838998] sde_smmu_probe: <SDEROT_INFO> iommu v2 domain[1] mapping and clk register successful!
+[    1.841854] iommu: Adding device soc:qcom,cam_smmu:msm_cam_smmu_ife to group 28
+[    1.842089] iommu: Adding device soc:qcom,cam_smmu:msm_cam_smmu_jpeg to group 29
+[    1.842227] platform soc:qcom,cam_smmu:msm_cam_icp_fw: assigned reserved memory node camera_region@0x8bf00000
+[    1.842425] iommu: Adding device soc:qcom,cam_smmu:msm_cam_smmu_icp to group 30
+[    1.842719] iommu: Adding device soc:qcom,cam_smmu:msm_cam_smmu_cpas_cdm to group 31
+[    1.843026] iommu: Adding device soc:qcom,cam_smmu:msm_cam_smmu_fd to group 32
+[    1.843196] iommu: Adding device soc:qcom,cam_smmu:msm_cam_smmu_lrme to group 33
+[    1.845400] register_client_adhoc:find path.src 1 dest 589
+[    1.845719] register_client_adhoc:Client handle 28 cam_ahb
+[    1.845860] register_client_adhoc:find path.src 136 dest 512
+[    1.846079] register_client_adhoc:Client handle 29 cam_hf_1_mnoc
+[    1.846298] register_client_adhoc:find path.src 146 dest 778
+[    1.846353] register_client_adhoc:Client handle 30 cam_hf_1_camnoc
+[    1.846474] register_client_adhoc:find path.src 145 dest 512
+[    1.846676] register_client_adhoc:Client handle 31 cam_hf_2_mnoc
+[    1.846884] register_client_adhoc:find path.src 147 dest 778
+[    1.846938] register_client_adhoc:Client handle 32 cam_hf_2_camnoc
+[    1.847051] register_client_adhoc:find path.src 137 dest 512
+[    1.847269] register_client_adhoc:Client handle 33 cam_sf_1_mnoc
+[    1.847467] register_client_adhoc:find path.src 148 dest 778
+[    1.847519] register_client_adhoc:Client handle 34 cam_sf_1_camnoc
+[    1.852815] synaptics_dsi_force 3-0020: fwu_read_f34_guest_serialization_partition: Lockdown info: 0x31 0x31 0x32 0x1 0x44 0x35 0x31 0x2
+[    1.857573] synaptics_dsi_force 3-0020: fwu_get_firmware_name: Choose firmware synaptics_jdi_3330_d5x.fw
+[    1.857597] synaptics_dsi_force 3-0020: fwu_start_reflash: Start of reflash process
+[    1.859451] synaptics_dsi_force 3-0020: fwu_go_nogo: Device firmware ID = 2812197
+[    1.859454] synaptics_dsi_force 3-0020: fwu_go_nogo: Image firmware ID = 2812197
+[    1.859855] CAM_ERR: CAM-IRQ-CTRL: cam_irq_controller_subscribe_irq: 268 Invalid params: bh_handler=ffffff9a0b476e3c bh=0000000000000000 bh_enq_f=ffffff9a0cf27da8
+[    1.859879] CAM_ERR: CAM-ISP: cam_vfe_bus_deinit_hw: 2933 Failed to unsubscribe error irq rc=-22
+[    1.860811] synaptics_dsi_force 3-0020: fwu_go_nogo: Device firmware Config ID = 1d410831
+[    1.860817] synaptics_dsi_force 3-0020: fwu_go_nogo: Image firmware Config ID = 1d410831
+[    1.860821] synaptics_dsi_force 3-0020: fwu_go_nogo: No need to do reflash
+[    1.860826] fwu_start_reflash: End of reflash process
+[    1.862773] CAM_ERR: CAM-IRQ-CTRL: cam_irq_controller_subscribe_irq: 268 Invalid params: bh_handler=ffffff9a0b476e3c bh=0000000000000000 bh_enq_f=ffffff9a0cf27da8
+[    1.862780] CAM_ERR: CAM-ISP: cam_vfe_bus_deinit_hw: 2933 Failed to unsubscribe error irq rc=-22
+[    1.863592] CAM_ERR: CAM-UTIL: cam_soc_util_get_option_clk_by_name: 536 No clk named ife_dsp_clk found. Dev vfe2
+[    1.863596] CAM_WARN: CAM-ISP: cam_vfe_init_soc_resources: 107 option clk get failed
+[    1.865791] CAM_ERR: CAM-IRQ-CTRL: cam_irq_controller_subscribe_irq: 268 Invalid params: bh_handler=ffffff9a0b476e3c bh=0000000000000000 bh_enq_f=ffffff9a0cf27da8
+[    1.865797] CAM_ERR: CAM-ISP: cam_vfe_bus_deinit_hw: 2933 Failed to unsubscribe error irq rc=-22
+[    1.867404] CAM_INFO: CAM-ISP: cam_isp_dev_probe: 172 Camera ISP probe complete
+[    1.869300] CAM_INFO: CAM: cam_res_mgr_probe: 681 Disable shared gpio support.
+[    1.874740] CAM_INFO: CAM-ACTUATOR: cam_actuator_parse_dt: 58 No GPIO found
+[    1.874776] CAM_INFO: CAM-ACTUATOR: cam_actuator_parse_dt: 58 No GPIO found
+[    1.877453] CAM_INFO: CAM-OIS: cam_ois_get_dt_data: 52 No GPIO found
+[    1.883954] CAM_ERR: CAM-SMMU: cam_smmu_create_add_handle_in_table: 689 Error: cam-secure already got handle 0x49eba
+[    1.886616] CAM_INFO: CAM-JPEG: cam_jpeg_dev_probe: 170 Camera JPEG probe complete
+[    1.904945] SMB1355_IRQ_DISABLE: current vote is now 1 voted by PARALLEL_ENABLE_VOTER,0,previous voted 1
+[    1.908596] SMB1355: smb1355_probe: smb1355 probed successfully pl_mode=USBMID-USBMID batfet_mode=NON-STACKED_BATFET
+[    1.908927] PL_DISABLE: current vote is now 1 voted by CHG_STATE_VOTER,0,previous voted 1
+[    1.909354] DISABLE_POWER_ROLE_SWITCH: current vote is now 0 voted by DEFAULT_VOTER,0,previous voted 0
+[    1.909399] PMI: __smblib_set_prop_typec_power_role: set power_role to 0
+[    1.909404] PMI: smblib_masked_write: set 0x1368 mask:0x7,val:0x0
+[    1.909439] PMI: smblib_disable_power_role_switch_callback: power_role_switch = enabled
+[    1.911356] USB_ICL: current vote is now -22 voted by (null),-22,previous voted -22
+[    1.911362] DC_SUSPEND: current vote is now 0 voted by DEFAULT_VOTER,0,previous voted 0
+[    1.911380] BATT_PROFILE_VOTER: val: 3300000
+[    1.911382] FCC: current vote is now 3300000 voted by BATT_PROFILE_VOTER,0,previous voted 3300000
+[    1.911386] BATT_PROFILE_VOTER: val: 4395000
+[    1.911389] FV: current vote is now 4395000 voted by BATT_PROFILE_VOTER,0,previous voted 4395000
+[    1.911392] DEFAULT_VOTER: val: 950000
+[    1.911395] DC_ICL: current vote is now 950000 voted by DEFAULT_VOTER,0,previous voted 950000
+[    1.911510] HVDCP_DISABLE_INDIRECT: current vote is now 0 voted by DEFAULT_VOTER,0,previous voted 0
+[    1.911516] HVDCP_ENABLE: current vote is now 1 voted by HVDCP_INDIRECT_VOTER,0,previous voted 1
+[    1.911519] HVDCP_HW_INOV_DIS: current vote is now 0 voted by HVDCP_INDIRECT_VOTER,0,previous voted 0
+[    1.911630] PD_DISALLOWED_INDIRECT: current vote is now 1 voted by CC_DETACHED_VOTER,0,previous voted 1
+[    1.911634] PD_ALLOWED: current vote is now 0 voted by PD_DISALLOWED_INDIRECT_VOTER,0,previous voted 0
+[    1.911795] CHG_DISABLE: current vote is now 0 voted by DEFAULT_VOTER,0,previous voted 0
+[    1.911843] PMI: smblib_masked_write: set 0x1368 mask:0x7,val:0x0
+[    1.911974] HVDCP_DISABLE_INDIRECT: current vote is now 1 voted by PD_INACTIVE_VOTER,1,previous voted 1
+[    1.911977] HVDCP_ENABLE: current vote is now 0 voted by HVDCP_INDIRECT_VOTER,0,previous voted 0
+[    1.911980] HVDCP_HW_INOV_DIS: current vote is now 1 voted by HVDCP_INDIRECT_VOTER,0,previous voted 1
+[    1.912194] PMI: smblib_masked_write: set 0x1368 mask:0x18,val:0x10
+[    1.913489] AWAKE: current vote is now 0 voted by CHG_AWAKE_VOTER,0,previous voted 0
+[    1.913503] PMI: smblib_usb_plugin_locked: IRQ: usbin-plugin detached
+[    1.913618] PMI: smblib_get_prop_typec_power_role: TYPE_C_INTRPT_ENB_SOFTWARE_CTRL = 0x30
+[    1.913708] get prop 146 is not supported in usb
+[    1.913868] PMI: smblib_get_prop_typec_power_role: TYPE_C_INTRPT_ENB_SOFTWARE_CTRL = 0x30
+[    1.913943] get prop 146 is not supported in usb
+[    1.914072] smblib_set_icl_current: set icl 25000
+[    1.914099] smblib_set_icl_current: set icl 2147483647
+[    1.914304] PL_ENABLE_INDIRECT: current vote is now 0 voted by USBIN_I_VOTER,0,previous voted 0
+[    1.914533] PMI: smblib_get_prop_typec_power_role: TYPE_C_INTRPT_ENB_SOFTWARE_CTRL = 0x30
+[    1.914609] get prop 146 is not supported in usb
+[    1.925724] smblib_set_icl_current: set icl 25000
+[    1.925752] smblib_set_icl_current: set icl 2147483647
+[    1.925814] PMI: smblib_masked_write: set 0x1368 mask:0x7,val:0x0
+[    1.925911] QPNP SMB2 probed successfully usb:present=0 type=0 batt:present = 1 health = 1 charge = 1
+[    1.927435] QNOVO_CHG_READY: current vote is now 0 voted by USB_READY_VOTER,0,previous voted 0
+[    1.927439] QNOVO_NOT_OK: current vote is now 1 voted by CHG_READY_VOTER,0,previous voted 1
+[    1.927444] QNOVO_DISABLE: current vote is now 1 voted by ok_to_qnovo_voter,0,previous voted 1
+[    1.927469] AUTO_ESR: current vote is now 1 voted by QNOVO_OVERALL_VOTER,0,previous voted 1
+[    1.927474] QNOVO_PT_DIS: current vote is now 1 voted by QNOVO_OVERALL_VOTER,0,previous voted 1
+[    1.927480] QNOVO_AWAKE: current vote is now 0 voted by PT_RESTART_VOTER,0,previous voted 0
+[    1.929441] idtp9220 0-0061: [idt] success probe idtp922x driver
+[    1.932995] i2c_geni a88000.i2c: i2c error :-107
+[    1.933001] idtp9220 0-0061: [idt] write error: -107
+[    1.940607] PMI: smblib_get_prop_typec_power_role: TYPE_C_INTRPT_ENB_SOFTWARE_CTRL = 0x30
+[    1.940690] get prop 146 is not supported in usb
+[    1.941260] i2c_geni a88000.i2c: i2c error :-107
+[    1.941265] idtp9220 0-0061: [idt] write error: -107
+[    1.944438] bcl_peripheral:bcl_read_soc battery percentage read error:-61
+[    1.944448] thermal thermal_zone63: failed to read out thermal zone (-61)
+[    1.944474] bcl_peripheral:bcl_read_soc battery percentage read error:-61
+[    1.944477] thermal thermal_zone63: failed to read out thermal zone (-61)
+[    1.946152] bcl_peripheral:bcl_read_soc battery percentage read error:-61
+[    1.946390] 17d41000.qcom,cpucc:qcom,limits-dcvs@0 supply isens_vref not found, using dummy regulator
+[    1.946464] msm_lmh_dcvs:limits_isens_vref_ldo_init Regulator:isens_vref settings read error:-22
+[    1.955416] bcl_peripheral:bcl_read_soc battery percentage read error:-61
+[    1.955419] thermal thermal_zone63: failed to read out thermal zone (-61)
+[    1.958792] bcl_peripheral:bcl_read_soc battery percentage read error:-61
+[    1.958795] thermal thermal_zone63: failed to read out thermal zone (-61)
+[    1.961630] bcl_peripheral:bcl_read_soc battery percentage read error:-61
+[    1.961633] thermal thermal_zone63: failed to read out thermal zone (-61)
+[    1.964443] bcl_peripheral:bcl_read_soc battery percentage read error:-61
+[    1.964446] thermal thermal_zone63: failed to read out thermal zone (-61)
+[    1.982586] device-mapper: uevent: version 1.0.3
+[    1.983111] device-mapper: ioctl: 4.35.0-ioctl (2016-06-23) initialised: dm-devel@redhat.com
+[    1.984304] device-mapper: req-crypt: dm-req-crypt successfully initalized.
+
+[    1.984785] bt_power_populate_dt_pinfo: bt-reset-gpio not provided in devicetree
+[    1.984833] bt_dt_parse_vreg_info: qca,bt-chip-pwd: is not provided in device tree
+[    1.984837] bt_dt_parse_clk_info: clocks is not provided in device tree
+[    1.985027] CHRDEV "bt" major number 230 goes below the dynamic allocation range
+[    1.985770] sdhci: Secure Digital Host Controller Interface driver
+[    1.985773] sdhci: Copyright(c) Pierre Ossman
+[    1.985776] sdhci-pltfm: SDHCI platform and OF driver helper
+[    1.986575] haptics: qpnp_haptics_parse_buffer_dt: effect_arry:0: 62,62,190,160,0,0,0,0
+[    1.986578] haptics: qpnp_haptics_parse_buffer_dt: effect_arry:1: 62,62,62,190,190,0,0,0
+[    1.986582] haptics: qpnp_haptics_parse_buffer_dt: effect_arry:2: 62,62,62,62,190,190,160,144
+[    1.988886] haptics: qpnp_haptics_probe: haptic probe succeed
+[    1.989550] sdhci_msm 8804000.sdhci: sdhci_msm_probe: ICE device is not enabled
+[    1.990079] sdhci_msm 8804000.sdhci: Failed to get dll hsr settings from dt
+[    1.990536] register_client_adhoc:find path.src 81 dest 512
+[    1.991303] register_client_adhoc:find path.src 1 dest 608
+[    1.991565] register_client_adhoc:Client handle 35 sdhc2
+[    1.992535] usbcore: registered new interface driver usbhid
+[    1.992537] usbhid: USB HID core driver
+[    1.992673] ashmem: initialized
+[    1.992680] CHRDEV "qcwlanstate" major number 229 goes below the dynamic allocation range
+[    1.992799] wlan_hdd_state wlan major(229) initialized
+[    1.992803] ipa_ut ipa_ut_module_init:1046 Loading IPA test module...
+[    1.992980] qpnp_coincell_charger_show_state: enabled=Y, voltage=3200 mV, resistance=800 ohm
+[    1.995907] CHRDEV "seemplog" major number 228 goes below the dynamic allocation range
+[    1.996722] seemp: seemp_logk_init: SCM call failed with ret val = 0 -3 0
+[    2.008662] mmc0: SDHCI controller on 8804000.sdhci [8804000.sdhci] using 64-bit ADMA in legacy mode
+[    2.042521] bimc-bwmon 1436400.qcom,cpu-bwmon: BW HWmon governor registered.
+[    2.042565] bimc-bwmon 114a000.qcom,llcc-bwmon: BW HWmon governor registered.
+[    2.043154] arm-memlat-mon soc:qcom,cpu0-memlat-mon: Memory Latency governor registered.
+[    2.043204] arm-memlat-mon soc:qcom,cpu4-memlat-mon: Memory Latency governor registered.
+[    2.043244] arm-memlat-mon soc:qcom,cpu0-l3lat-mon: Memory Latency governor registered.
+[    2.043282] arm-memlat-mon soc:qcom,cpu4-l3lat-mon: Memory Latency governor registered.
+[    2.043331] arm-memlat-mon soc:qcom,devfreq-compute: Compute governor registered.
+[    2.045422] register_client_adhoc:find path.src 1 dest 770
+[    2.045699] register_client_adhoc:Client handle 36 soc:qcom,cpubw
+[    2.046193] register_client_adhoc:find path.src 129 dest 512
+[    2.046258] register_client_adhoc:Client handle 37 soc:qcom,llccbw
+[    2.047733] register_client_adhoc:find path.src 1 dest 512
+[    2.047945] register_client_adhoc:Client handle 38 soc:qcom,memlat-cpu0
+[    2.048202] register_client_adhoc:find path.src 1 dest 512
+[    2.048394] register_client_adhoc:Client handle 39 soc:qcom,memlat-cpu4
+[    2.048649] register_client_adhoc:find path.src 139 dest 627
+[    2.048782] register_client_adhoc:Client handle 40 soc:qcom,snoc_cnoc_keepalive
+[    2.048969] register_client_adhoc:find path.src 1 dest 512
+[    2.049169] register_client_adhoc:Client handle 41 soc:qcom,mincpubw
+[    2.049558] register_client_adhoc:find path.src 26 dest 512
+[    2.049693] register_client_adhoc:Client handle 42 soc:qcom,gpubw
+[    2.052084] CHRDEV "sensors" major number 227 goes below the dynamic allocation range
+[    2.052503] usbcore: registered new interface driver snd-usb-audio
+[    2.072018] tas2559 2-004c: tas2559_i2c_probe enter
+[    2.072068] tas2559 2-004c: tas2559_parse_dt, tas2559 reset gpio 14
+[    2.072073] tas2559 2-004c: tas2559_parse_dt, tas2560 reset gpio 25
+[    2.072079] tas2559 2-004c: ti,tas2559 addr=0x4c
+[    2.072082] tas2559 2-004c: ti,tas2560-addr=0x4d
+[    2.072096] tas2559 2-004c: tas2559_hw_reset
+[    2.072998] bcl_peripheral:bcl_read_soc battery percentage read error:-61
+[    2.073002] thermal thermal_zone63: failed to read out thermal zone (-61)
+[    2.170056] bcl_peripheral:bcl_read_soc battery percentage read error:-61
+[    2.170060] thermal thermal_zone63: failed to read out thermal zone (-61)
+[    2.170310] tas2559 2-004c: TAS2559 PGID=0xa0
+[    2.170545] tas2559 2-004c: TAS2560 PGID=0x00
+[    2.170554] tas2559 2-004c: irq = 280
+[    2.170711] tas2559 2-004c: irq = 286
+[    2.170788] tas2559 2-004c: tas2559_register_codec, enter
+[    2.170886] tas2559 2-004c: tas2559_register_misc, leave
+[    2.170889] tas2559 2-004c: tiload_driver_init_tas2559
+[    2.170891] CHRDEV "tiload_node" major number 225 goes below the dynamic allocation range
+[    2.170903] tas2559 2-004c: allocated Major Number: 225
+[    2.170965] tas2559 2-004c: Registered TiLoad driver, Major number: 225
+[    2.171244] wdsp_mgr_parse_dt_entries: using global wdsp fw: cpe_intl.
+[    2.173812] CHRDEV "elliptic" major number 224 goes below the dynamic allocation range
+[    2.174119] CHRDEV "elliptic_us_io" major number 223 goes below the dynamic allocation range
+[    2.174182] CHRDEV "elliptic_us_ctrl_io" major number 222 goes below the dynamic allocation range
+[    2.175310] CHRDEV "avtimer" major number 221 goes below the dynamic allocation range
+[    2.178531] CHRDEV "wcd-dsp-glink" major number 220 goes below the dynamic allocation range
+[    2.179286] GACT probability NOT on
+[    2.179301] Mirror/redirect action on
+[    2.179312] u32 classifier
+[    2.179313]     Actions configured
+[    2.179319] Netfilter messages via NETLINK v0.30.
+[    2.179493] nf_conntrack version 0.5.0 (65536 buckets, 262144 max)
+[    2.179594] ctnetlink v0.93: registering with nfnetlink.
+[    2.179817] xt_time: kernel timezone is -0000
+[    2.179880] gre: GRE over IPv4 demultiplexor driver
+[    2.179882] IPv4 over IPsec tunneling driver
+[    2.180253] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    2.180346] arp_tables: arp_tables: (C) 2002 David S. Miller
+[    2.180370] Initializing XFRM netlink socket
+[    2.180380] IPsec XFRM device driver
+[    2.180528] NET: Registered protocol family 10
+[    2.182232] mip6: Mobile IPv6
+[    2.182242] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    2.182550] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    2.182988] NET: Registered protocol family 17
+[    2.182999] NET: Registered protocol family 15
+[    2.183013] Ebtables v2.0 registered
+[    2.183098] l2tp_core: L2TP core driver, V2.0
+[    2.183104] l2tp_ppp: PPPoL2TP kernel driver, V2.0
+[    2.183105] l2tp_ip: L2TP IP encapsulation support (L2TPv3)
+[    2.183115] l2tp_netlink: L2TP netlink interface
+[    2.183139] l2tp_eth: L2TP ethernet pseudowire support (L2TPv3)
+[    2.183141] l2tp_ip6: L2TP IP encapsulation support for IPv6 (L2TPv3)
+[    2.183612] NET: Registered protocol family 27
+[    2.184168] camera_rear_ldo: supplied by pm8998_s3
+[    2.184550] camera_ldo: supplied by pm8998_s4
+[    2.194326] minidump-id not found for adsp
+[    2.194829] subsys-pil-tz 17300000.qcom,lpass: for adsp segments only will be dumped.
+[    2.196401] minidump-id not found for slpi
+[    2.196517] subsys-pil-tz 5c00000.qcom,ssc: for slpi segments only will be dumped.
+[    2.196922] minidump-id not found for cdsp
+[    2.197026] subsys-pil-tz 8300000.qcom,turing: for cdsp segments only will be dumped.
+[    2.197551] pil-q6v5-mss 4080000.qcom,mss: No pas_id found.
+[    2.197697] platform 4080000.qcom,mss:qcom,mba-mem@0: assigned reserved memory node mba_region@0x96900000
+[    2.198034] pil-q6v5-mss 4080000.qcom,mss: for modem segments only will be dumped.
+[    2.198110] pil-q6v5-mss 4080000.qcom,mss: for md_modem segments only will be dumped.
+[    2.198403] msm-usb-ssphy-qmp 88e8000.ssphy: failed to get phandle for msm_ssphy_qmp
+[    2.201114] sps:BAM 0x000000000a704000 is registered.
+[    2.201304] msm-dwc3 a600000.ssusb: unable to get ssphy device
+[    2.201473] ipa_rm ipa_rm_delete_resource:155 resource does not exist
+[    2.201479] usb_bam_ipa_delete_resources: Failed to delete USB_PROD resource
+[    2.201484] ipa_rm ipa_rm_delete_resource:155 resource does not exist
+[    2.201488] usb_bam_ipa_delete_resources: Failed to delete USB_CONS resource
+[    2.203057] FG: fg_clear_dma_errors_if_any: dma_sts: 0
+[    2.204764] FG: fg_set_esr_timer: esr_charging_timer set to 0/96
+[    2.205056] FG: fg_set_esr_timer: esr_discharging_timer set to 96/96
+[    2.209837] FG_DELTA_BSOC_IRQ: current vote is now 0 voted by fg_delta_bsoc_irq,0,previous voted 0
+[    2.209840] FG_BATT_MISS_IRQ: current vote is now 0 voted by fg_batt_miss_irq,0,previous voted 0
+[    2.209895] FG: fg_gen3_probe: battery SOC:50 voltage: 4213856uV temp: 370
+[    2.210332] FG: __fg_esr_filter_config: applied ESR filter 1 values
+[    2.210720] qcom,fg-gen3 c440000.qcom,spmi:qcom,pmi8998@2:qpnp,fg: thermal_zone_of_sensor_register() failed rc:-19
+[    2.212160] bcl_peripheral:bcl_read_soc battery percentage read error:-61
+[    2.212163] FG: status_change_work: Profile load is not complete yet
+[    2.212166] FG: status_change_work: charge_status:-22 charge_type:0 charge_done:0
+[    2.230049] FG: fg_psy_get_property: unsupported property 4
+[    2.511785] FG: status_change_work: Profile load is not complete yet
+[    2.511788] FG: status_change_work: charge_status:-22 charge_type:0 charge_done:0
+[    2.515486] sps:BAM 0x000000000a704000 is registered.
+[    2.515762] register_client_adhoc:find path.src 61 dest 512
+[    2.516116] register_client_adhoc:find path.src 61 dest 676
+[    2.516296] register_client_adhoc:find path.src 1 dest 583
+[    2.516500] register_client_adhoc:Client handle 43 usb0
+[    2.517495] Registered cp15_barrier emulation handler
+[    2.517520] Registered setend emulation handler
+[    2.517543] core_ctl: Creating CPU group 0
+[    2.517545] core_ctl: Init CPU0 state
+[    2.517546] core_ctl: Init CPU1 state
+[    2.517548] core_ctl: Init CPU2 state
+[    2.517549] core_ctl: Init CPU3 state
+[    2.517685] core_ctl: Creating CPU group 4
+[    2.517687] core_ctl: Init CPU4 state
+[    2.517689] core_ctl: Init CPU5 state
+[    2.517690] core_ctl: Init CPU6 state
+[    2.517692] core_ctl: Init CPU7 state
+[    2.518104] registered taskstats version 1
+[    2.531116] msm-dwc3 a600000.ssusb: DWC3 exited from low power mode
+[    2.531944] msm-dwc3 a600000.ssusb: DWC3 in low power mode
+[    2.552444] spss_utils [spss_init]: spss-utils driver Ver 2.0 30-Mar-2017.
+[    2.552916] spss_utils [spss_probe]: Initialization completed ok, firmware_name [spss2p].
+[    2.556672] iommu: Adding device soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb1 to group 34
+[    2.557238] iommu: Adding device soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb2 to group 35
+[    2.557663] iommu: Adding device soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb3 to group 36
+[    2.558077] iommu: Adding device soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb4 to group 37
+[    2.558474] iommu: Adding device soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb5 to group 38
+[    2.558864] iommu: Adding device soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb6 to group 39
+[    2.559252] iommu: Adding device soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb7 to group 40
+[    2.559633] iommu: Adding device soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb8 to group 41
+[    2.560081] iommu: Adding device soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb9 to group 42
+[    2.561115] iommu: Adding device soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb10 to group 43
+[    2.561264] fastrpc: probe of soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb10 failed with error -1
+[    2.561319] iommu: Adding device soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb11 to group 44
+[    2.561693] iommu: Adding device soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb12 to group 45
+[    2.563037] fastrpc: probe of soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb10 failed with error -1
+[    2.563057] CHRDEV "adsprpc-smd" major number 219 goes below the dynamic allocation range
+[    2.564549] iommu: Adding device 171c0000.slim:qcom,iommu_slim_ctrl_cb to group 46
+[    2.567551] iommu: Adding device 17240000.slim:qcom,iommu_slim_ctrl_cb to group 47
+[    2.570951] input: gpio-keys as /devices/platform/soc/soc:gpio_keys/input/input3
+[    2.572445] ft5x46_i2c 3-0038: can't read imin-cc
+[    2.572448] ft5x46_i2c 3-0038: can't read short-max
+[    2.572466] ft5x46_i2c 3-0038: irq gpio request failed
+[    2.572473] ft5x46_i2c: probe of 3-0038 failed with error -16
+[    2.572560] qcom,qpnp-rtc c440000.qcom,spmi:qcom,pm8998@0:qcom,pm8998_rtc: setting system clock to 1970-03-26 23:29:20 UTC (7342160)
+[    2.574063] CAM_ERR: CAM-CRM: cam_cci_assign_fops: 412 Invalid args sd node: fffffff5e7adfc80
+[    2.574480] lpm_levels_of: idx 1 7100
+[    2.574482] lpm_levels_of: idx 2 5989
+[    2.574483] lpm_levels_of: idx 2 3933
+[    2.574555] lpm_levels_of: idx 1 1744
+[    2.574557] lpm_levels_of: idx 2 1000
+[    2.574558] lpm_levels_of: Residency < 0 for LPM
+[    2.574560] lpm_levels_of: idx 2 1000
+[    2.574674] lpm_levels: register_cluster_lpm_stats()
+[    2.574816] lpm_levels: register_cluster_lpm_stats()
+[    2.578985] rmnet_ipa3 started initialization
+[    2.579318] RNDIS_IPA module is loaded.
+[    2.580565] msm_bus_late_init: Remove handoff bw requests
+[    2.581492] ufs_card_gdsc: disabling
+[    2.581554] actuator_rear_regulator: disabling
+[    2.581556] actuator_rear_aux_regulator: disabling
+[    2.581558] camera_aux_ldo: disabling
+[    2.581560] camera_ois_regulator: disabling
+[    2.581562] disp_vddio_vreg: disabling
+[    2.581570] camera_vio_ldo: disabling
+[    2.581572] vreg_pa_p_5p0: disabling
+[    2.581574] vreg_pa_n_5p0: disabling
+[    2.581585] camera_rear_ldo: disabling
+[    2.581586] camera_ldo: disabling
+[    2.581589] ext_5v_boost: disabling
+[    2.581591] regulator_proxy_consumer_remove_all: removing regulator proxy consumer requests
+[    2.581801] ALSA device list:
+[    2.581803]   No soundcards found.
+[    2.581840] Warning: unable to open an initial console.
+[    2.582919] Freeing unused kernel memory: 6144K
+[    2.600136] FG: fg_get_batt_id: batt_id: 62000
+[    2.600169] FG_BATT_MISS_IRQ: current vote is now 1 voted by fg_batt_miss_irq,0,previous voted 1
+[    2.601341] of_batterydata_get_best_profile: d5_atl found
+[    2.601744] FG: is_profile_load_required: Battery profile integrity bit is set
+[    2.602158] FG: is_profile_load_required: Battery profile is same, not loading it
+[    2.602780] BATT_PROFILE_VOTER: val: 4400000
+[    2.602783] FV: current vote is now 4400000 voted by BATT_PROFILE_VOTER,0,previous voted 4400000
+[    2.603339] FG: fg_notify_charger: Notified charger on float voltage and FCC
+[    2.603342] FG: profile_load_work: profile loaded successfully
+[    2.603574] FG: fg_cycle_counter_update: batt_soc: 238 bucket: 7 chg_status: 2
+[    2.674394] FG: fg_soc_update_irq_handler: irq 1002 triggered
+[    2.674599] FG: fg_prime_cc_soc_sw: cc_soc_sw: 1000097581
+[    2.675085] FG: fg_adjust_ki_coeff_full_soc: Wrote ki_coeff_full_soc 0
+[    2.675132] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[    2.744265] 
+               
+               
+               
+                 __                _                     _     
+                / _|_ __ ___  __ _| |__   ___ _ __   ___| |__  
+               | |_| '__/ _ \/ _` | '_ \ / _ \ '_ \ / __| '_ \ 
+               |  _| | |  __/ (_| | |_) |  __/ | | | (__| | | |
+               |_| |_|  \___|\__, |_.__/ \___|_| |_|\___|_| |_|
+                                |_|                            
+               
+                          CPU benchmark • by kdrag0n
+               
+               ------------------------------------------------
+               
+               Frequency domains: 
+[    2.744437] cpu1 
+[    2.744498] cpu4 
+[    2.744549] 
+               Offline CPUs: 
+[    2.746319] cpu1 
+[    2.750918] cpu2 
+[    2.752712] IRQ105 no longer affine to CPU2
+[    2.756169] cpu3 
+[    2.760594] cpu4 
+[    2.763270] cpu5 
+[    2.765888] cpu6 
+[    2.768485] cpu7 
+
+[    3.280566] FG: fg_battery_soc_smooth_tracking: soc:98, last_soc:98, raw_soc:98, soc_changed:0.
+[    3.280579] FG: soc_monitor_work: soc:98, raw_soc:98, c:373534, s:2
+[    3.282111] FG: fg_cycle_counter_update: batt_soc: 238 bucket: 7 chg_status: 2
+[    3.283667] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[    4.640523] of_batterydata_get_best_profile: d5_atl found
+[    4.640551] QCOM-STEPCHG: read_range_data_from_node: Count qcom,step-chg-ranges failed, rc=-22
+[    6.960543] idtp9220 0-0061: [idt] enter idtp9220_chg_detect_work
+[    6.960592] idtp9220 0-0061: [idt] dc_online 0
+[    7.781677] Sampling power every 1000 ms
+               Baseline power usage: 
+[   10.000479] PL_AWAKE: current vote is now 0 voted by PL_VOTER,0,previous voted 0
+[   13.280556] FG: fg_battery_soc_smooth_tracking: soc:98, last_soc:98, raw_soc:98, soc_changed:0.
+[   13.280569] FG: soc_monitor_work: soc:98, raw_soc:98, c:228515, s:2
+[   22.243942] FG: fg_cycle_counter_update: batt_soc: 238 bucket: 7 chg_status: 2
+[   22.244253] BATT_PROFILE_VOTER: val: 3300000
+[   22.244358] JEITA_VOTER: val: 3300000
+[   22.244385] BATT_PROFILE_VOTER: val: 4400000
+[   22.244526] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[   22.244563] JEITA_VOTER: val: 4400000
+[   23.520550] FG: fg_battery_soc_smooth_tracking: soc:98, last_soc:98, raw_soc:97, soc_changed:0.
+[   23.520563] FG: soc_monitor_work: soc:98, raw_soc:97, c:225097, s:2
+[   33.760615] FG: fg_battery_soc_smooth_tracking: soc:98, last_soc:98, raw_soc:97, soc_changed:0.
+[   33.760628] FG: soc_monitor_work: soc:98, raw_soc:97, c:226074, s:2
+[   44.000557] FG: fg_battery_soc_smooth_tracking: soc:98, last_soc:98, raw_soc:97, soc_changed:0.
+[   44.000570] FG: soc_monitor_work: soc:98, raw_soc:97, c:230956, s:2
+[   54.240560] FG: fg_battery_soc_smooth_tracking: soc:98, last_soc:98, raw_soc:97, soc_changed:0.
+[   54.240573] FG: soc_monitor_work: soc:98, raw_soc:97, c:226074, s:2
+[   64.480672] tas2559 2-004c: tas2559_fw_ready:
+[   64.480687] tas2559 2-004c: tas2559_uCDSP.bin firmware is not loaded.
+[   64.481399] smb:01:1000 47 00 00 79 00 40 20 00 24 00 ff ff 00 00 03 03 00 00 00 00 00 38 02 3f 40 7f 00 00 00 00 00 00 00 00 00 00 00 06 84 03 02 00 00 00 00 00 00 00 00 00 00 00 00 79 
+[   64.481940] smb:01:1100 30 90 51 00 00 00 00 00 00 00 00 0f 0f 0f 00 0f 0f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 28 
+[   64.482203] smb:01:1200 00 ff ff fe 00 3f 3f 00 00 00 00 00 00 00 00 03 03 00 01 00 
+[   64.482886] smb:01:1300 00 00 00 00 00 00 20 00 80 00 06 ff 1f 00 ff ff 00 00 00 00 00 00 00 c8 73 1b 47 00 00 00 00 08 00 1d b8 75 e5 02 04 30 7f 00 00 00 00 00 00 14 d4 00 00 00 00 
+[   64.483570] smb:01:1600 02 00 00 00 00 02 01 00 00 00 00 fe fe 00 00 00 00 00 42 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 04 02 00 07 00 00 00 00 00 00 03 00 00 00 00 02 00 00 00 22 
+[   64.483883] smb:01:1700 00 7f 7f 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 
+[   64.483997] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[   64.484008] FG: soc_monitor_work: soc:97, raw_soc:97, c:223144, s:2
+[   64.486263] FG: fg_cycle_counter_update: batt_soc: 237 bucket: 7 chg_status: 2
+[   64.486829] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[   74.720554] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:0.
+[   74.720567] FG: soc_monitor_work: soc:97, raw_soc:97, c:220214, s:2
+[   82.912568] CPU1: Booted secondary processor [517f803c]
+[   82.922025] 933 mW
+               
+               
+               ===== CPU 1 =====
+               Frequencies: 300 403 480 576 652 748 825 902 979 1056 1132 1228 1324 1420 1516 1612 1689 1766
+               
+                300: 
+[   84.960617] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:0.
+[   84.960630] FG: soc_monitor_work: soc:97, raw_soc:97, c:222656, s:2
+[   95.200476] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:0.
+[   95.200489] FG: soc_monitor_work: soc:97, raw_soc:97, c:227538, s:2
+[  105.440473] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:0.
+[  105.440487] FG: soc_monitor_work: soc:97, raw_soc:97, c:235351, s:2
+[  115.680468] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:0.
+[  115.680481] FG: soc_monitor_work: soc:97, raw_soc:97, c:229980, s:2
+[  125.920525] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  125.920538] FG: soc_monitor_work: soc:97, raw_soc:97, c:233398, s:2
+[  136.160534] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  136.160546] FG: soc_monitor_work: soc:97, raw_soc:97, c:230956, s:2
+[  146.400469] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  146.400482] FG: soc_monitor_work: soc:97, raw_soc:97, c:235351, s:2
+[  156.640471] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  156.640484] FG: soc_monitor_work: soc:97, raw_soc:97, c:230468, s:2
+[  165.603936] FG: fg_cycle_counter_update: batt_soc: 237 bucket: 7 chg_status: 2
+[  165.604514] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[  166.880473] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  166.880486] FG: soc_monitor_work: soc:97, raw_soc:97, c:229492, s:2
+[  177.120471] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  177.120484] FG: soc_monitor_work: soc:97, raw_soc:97, c:231933, s:2
+[  187.360355] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  187.360368] FG: soc_monitor_work: soc:97, raw_soc:97, c:234374, s:2
+[  197.600487] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  197.600500] FG: soc_monitor_work: soc:97, raw_soc:97, c:231933, s:2
+[  207.840469] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  207.840482] FG: soc_monitor_work: soc:97, raw_soc:97, c:231933, s:2
+[  218.080474] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  218.080487] FG: soc_monitor_work: soc:97, raw_soc:97, c:230468, s:2
+[  228.320472] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  228.320485] FG: soc_monitor_work: soc:97, raw_soc:97, c:232910, s:2
+[  238.560532] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  238.560545] FG: soc_monitor_work: soc:97, raw_soc:97, c:236816, s:2
+[  242.735862] FG: fg_delta_msoc_irq_handler: irq 1005 triggered
+[  242.736214] FG: fg_cycle_counter_update: batt_soc: 236 bucket: 7 chg_status: 2
+[  242.738780] FG: fg_cycle_counter_update: batt_soc: 236 bucket: 7 chg_status: 2
+[  242.739347] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[  248.800522] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  248.800535] FG: soc_monitor_work: soc:97, raw_soc:97, c:233398, s:2
+[  259.040473] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  259.040486] FG: soc_monitor_work: soc:97, raw_soc:97, c:237304, s:2
+[  269.280469] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  269.280482] FG: soc_monitor_work: soc:97, raw_soc:97, c:230956, s:2
+[  279.520471] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  279.520484] FG: soc_monitor_work: soc:97, raw_soc:97, c:233398, s:2
+[  288.483842] FG: fg_cycle_counter_update: batt_soc: 236 bucket: 7 chg_status: 2
+[  288.484410] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[  289.760535] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  289.760549] FG: soc_monitor_work: soc:97, raw_soc:97, c:231933, s:2
+[  300.000470] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  300.000483] FG: soc_monitor_work: soc:97, raw_soc:97, c:230956, s:2
+[  305.120579] servloc: init_service_locator: init_service_locator: wait for locator service timed out
+[  305.120623] servloc: pd_locator_work: Unable to connect to service locator!, rc = -62
+[  305.121700] servloc: pd_locator_work: Unable to connect to service locator!, rc = -62
+[  305.121722] audio_notifer_reg_service: service SSR_ADSP is in use
+[  310.240472] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  310.240485] FG: soc_monitor_work: soc:97, raw_soc:97, c:234863, s:2
+[  315.757042]  1114     3.7 C/MHz     57 mW   12.7 J   19.7 I/mJ   224.5 s
+                403: 
+[  320.480477] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  320.480486] FG: soc_monitor_work: soc:97, raw_soc:97, c:230468, s:2
+[  330.720391] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  330.720402] FG: soc_monitor_work: soc:97, raw_soc:97, c:236816, s:2
+[  340.960278] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  340.960288] FG: soc_monitor_work: soc:97, raw_soc:97, c:235839, s:2
+[  351.200392] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  351.200402] FG: soc_monitor_work: soc:97, raw_soc:97, c:234863, s:2
+[  361.440391] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  361.440401] FG: soc_monitor_work: soc:97, raw_soc:97, c:235839, s:2
+[  371.680431] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  371.680441] FG: soc_monitor_work: soc:97, raw_soc:97, c:231933, s:2
+[  381.920393] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  381.920403] FG: soc_monitor_work: soc:97, raw_soc:97, c:228027, s:2
+[  392.160437] FG: fg_battery_soc_smooth_tracking: soc:97, last_soc:97, raw_soc:97, soc_changed:1.
+[  392.160447] FG: soc_monitor_work: soc:97, raw_soc:97, c:234374, s:2
+[  402.400395] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  402.400405] FG: soc_monitor_work: soc:96, raw_soc:96, c:234863, s:2
+[  402.402357] FG: fg_cycle_counter_update: batt_soc: 235 bucket: 7 chg_status: 2
+[  402.402882] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[  411.363352] FG: fg_cycle_counter_update: batt_soc: 235 bucket: 7 chg_status: 2
+[  411.363868] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[  412.640392] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:0.
+[  412.640402] FG: soc_monitor_work: soc:96, raw_soc:96, c:237304, s:2
+[  422.880390] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:0.
+[  422.880399] FG: soc_monitor_work: soc:96, raw_soc:96, c:232910, s:2
+[  433.120392] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:0.
+[  433.120402] FG: soc_monitor_work: soc:96, raw_soc:96, c:235351, s:2
+[  443.360439] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:0.
+[  443.360449] FG: soc_monitor_work: soc:96, raw_soc:96, c:234374, s:2
+[  453.600393] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:0.
+[  453.600402] FG: soc_monitor_work: soc:96, raw_soc:96, c:232421, s:2
+[  463.840393] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  463.840402] FG: soc_monitor_work: soc:96, raw_soc:96, c:231933, s:2
+[  474.080394] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  474.080404] FG: soc_monitor_work: soc:96, raw_soc:96, c:239257, s:2
+[  484.320391] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  484.320400] FG: soc_monitor_work: soc:96, raw_soc:96, c:232421, s:2
+[  491.311896]  1497     3.7 C/MHz     61 mW   10.2 J   24.5 I/mJ   167.0 s
+                480: 
+[  494.560514] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  494.560522] FG: soc_monitor_work: soc:96, raw_soc:96, c:234374, s:2
+[  504.800368] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  504.800378] FG: soc_monitor_work: soc:96, raw_soc:96, c:234863, s:2
+[  515.040362] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  515.040371] FG: soc_monitor_work: soc:96, raw_soc:96, c:236816, s:2
+[  525.280363] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  525.280372] FG: soc_monitor_work: soc:96, raw_soc:96, c:236816, s:2
+[  534.243066] FG: fg_cycle_counter_update: batt_soc: 234 bucket: 7 chg_status: 2
+[  534.243511] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[  535.520459] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  535.520467] FG: soc_monitor_work: soc:96, raw_soc:96, c:233398, s:2
+[  545.760409] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  545.760417] FG: soc_monitor_work: soc:96, raw_soc:96, c:238281, s:2
+[  556.000364] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  556.000372] FG: soc_monitor_work: soc:96, raw_soc:96, c:233398, s:2
+[  556.908055] FG: fg_delta_msoc_irq_handler: irq 1005 triggered
+[  556.908326] FG: fg_cycle_counter_update: batt_soc: 234 bucket: 7 chg_status: 2
+[  556.910361] FG: fg_cycle_counter_update: batt_soc: 234 bucket: 7 chg_status: 2
+[  556.910854] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[  566.240367] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  566.240375] FG: soc_monitor_work: soc:96, raw_soc:96, c:242675, s:2
+[  576.480365] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  576.480373] FG: soc_monitor_work: soc:96, raw_soc:96, c:241699, s:2
+[  586.720364] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  586.720372] FG: soc_monitor_work: soc:96, raw_soc:96, c:238281, s:2
+[  596.960416] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  596.960425] FG: soc_monitor_work: soc:96, raw_soc:96, c:232421, s:2
+[  607.200363] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  607.200371] FG: soc_monitor_work: soc:96, raw_soc:96, c:237792, s:2
+[  617.440399] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  617.440407] FG: soc_monitor_work: soc:96, raw_soc:96, c:236816, s:2
+[  627.680377] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  627.680386] FG: soc_monitor_work: soc:96, raw_soc:96, c:238281, s:2
+[  637.920364] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  637.920372] FG: soc_monitor_work: soc:96, raw_soc:96, c:235839, s:2
+[  639.759475]  1782     3.7 C/MHz     67 mW    9.4 J   26.5 I/mJ   140.3 s
+                576: 
+[  648.160373] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  648.160380] FG: soc_monitor_work: soc:96, raw_soc:96, c:232910, s:2
+[  657.123256] FG: fg_cycle_counter_update: batt_soc: 233 bucket: 7 chg_status: 2
+[  657.123689] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[  658.400334] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  658.400341] FG: soc_monitor_work: soc:96, raw_soc:96, c:236816, s:2
+[  668.640331] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  668.640338] FG: soc_monitor_work: soc:96, raw_soc:96, c:240722, s:2
+[  678.880337] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  678.880343] FG: soc_monitor_work: soc:96, raw_soc:96, c:239745, s:2
+[  689.120336] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  689.120342] FG: soc_monitor_work: soc:96, raw_soc:96, c:234863, s:2
+[  699.360364] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  699.360371] FG: soc_monitor_work: soc:96, raw_soc:96, c:235351, s:2
+[  709.600337] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  709.600344] FG: soc_monitor_work: soc:96, raw_soc:96, c:234863, s:2
+[  719.840334] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  719.840341] FG: soc_monitor_work: soc:96, raw_soc:96, c:237304, s:2
+[  730.080210] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  730.080217] FG: soc_monitor_work: soc:96, raw_soc:96, c:236816, s:2
+[  740.320364] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  740.320371] FG: soc_monitor_work: soc:96, raw_soc:96, c:236816, s:2
+[  750.560371] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  750.560378] FG: soc_monitor_work: soc:96, raw_soc:96, c:232421, s:2
+[  760.800333] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  760.800340] FG: soc_monitor_work: soc:96, raw_soc:96, c:235839, s:2
+[  765.124518]  2138     3.7 C/MHz     78 mW    9.1 J   27.5 I/mJ   116.9 s
+                652: 
+[  771.040402] FG: fg_battery_soc_smooth_tracking: soc:96, last_soc:96, raw_soc:96, soc_changed:1.
+[  771.040408] FG: soc_monitor_work: soc:96, raw_soc:96, c:227538, s:2
+[  780.002878] FG: fg_cycle_counter_update: batt_soc: 232 bucket: 7 chg_status: 2
+[  780.003340] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[  781.280373] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:1.
+[  781.280379] FG: soc_monitor_work: soc:95, raw_soc:95, c:237304, s:2
+[  781.281955] FG: fg_cycle_counter_update: batt_soc: 232 bucket: 7 chg_status: 2
+[  781.282578] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[  791.520325] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:0.
+[  791.520331] FG: soc_monitor_work: soc:95, raw_soc:95, c:235839, s:2
+[  801.760349] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:0.
+[  801.760355] FG: soc_monitor_work: soc:95, raw_soc:95, c:239257, s:2
+[  812.000319] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:0.
+[  812.000325] FG: soc_monitor_work: soc:95, raw_soc:95, c:238281, s:2
+[  822.240317] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:0.
+[  822.240323] FG: soc_monitor_work: soc:95, raw_soc:95, c:234863, s:2
+[  832.480319] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:0.
+[  832.480325] FG: soc_monitor_work: soc:95, raw_soc:95, c:234374, s:2
+[  842.720318] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:1.
+[  842.720324] FG: soc_monitor_work: soc:95, raw_soc:95, c:235351, s:2
+[  852.960347] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:1.
+[  852.960353] FG: soc_monitor_work: soc:95, raw_soc:95, c:239257, s:2
+[  863.200304] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:1.
+[  863.200310] FG: soc_monitor_work: soc:95, raw_soc:95, c:237792, s:2
+[  873.440318] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:1.
+[  873.440324] FG: soc_monitor_work: soc:95, raw_soc:95, c:235839, s:2
+[  876.456483]  2424     3.7 C/MHz     69 mW    7.2 J   34.9 I/mJ   103.2 s
+                748: 
+[  878.350813] FG: fg_delta_msoc_irq_handler: irq 1005 triggered
+[  878.351044] FG: fg_cycle_counter_update: batt_soc: 232 bucket: 7 chg_status: 2
+[  878.352680] FG: fg_cycle_counter_update: batt_soc: 232 bucket: 7 chg_status: 2
+[  878.353128] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[  883.680379] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:1.
+[  883.680384] FG: soc_monitor_work: soc:95, raw_soc:95, c:225585, s:2
+[  893.920302] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:1.
+[  893.920308] FG: soc_monitor_work: soc:95, raw_soc:95, c:240722, s:2
+[  904.160328] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:1.
+[  904.160334] FG: soc_monitor_work: soc:95, raw_soc:95, c:235839, s:2
+[  914.400305] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:1.
+[  914.400310] FG: soc_monitor_work: soc:95, raw_soc:95, c:236816, s:2
+[  923.362664] FG: fg_cycle_counter_update: batt_soc: 231 bucket: 7 chg_status: 2
+[  923.363107] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[  924.640301] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:1.
+[  924.640306] FG: soc_monitor_work: soc:95, raw_soc:95, c:240234, s:2
+[  934.880301] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:1.
+[  934.880306] FG: soc_monitor_work: soc:95, raw_soc:95, c:238281, s:2
+[  945.120300] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:1.
+[  945.120305] FG: soc_monitor_work: soc:95, raw_soc:95, c:245605, s:2
+[  955.360325] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:1.
+[  955.360331] FG: soc_monitor_work: soc:95, raw_soc:95, c:240234, s:2
+[  965.600300] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:1.
+[  965.600305] FG: soc_monitor_work: soc:95, raw_soc:95, c:242675, s:2
+[  974.746674]  2780     3.7 C/MHz     75 mW    6.8 J   37.0 I/mJ    89.9 s
+                825: 
+[  975.840367] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:1.
+[  975.840372] FG: soc_monitor_work: soc:95, raw_soc:95, c:227538, s:2
+[  986.080311] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:1.
+[  986.080317] FG: soc_monitor_work: soc:95, raw_soc:95, c:245117, s:2
+[  996.320289] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:1.
+[  996.320293] FG: soc_monitor_work: soc:95, raw_soc:95, c:240234, s:2
+[ 1006.560313] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:1.
+[ 1006.560318] FG: soc_monitor_work: soc:95, raw_soc:95, c:244628, s:2
+[ 1016.800288] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:1.
+[ 1016.800293] FG: soc_monitor_work: soc:95, raw_soc:95, c:239257, s:2
+[ 1027.040289] FG: fg_battery_soc_smooth_tracking: soc:95, last_soc:95, raw_soc:95, soc_changed:1.
+[ 1027.040293] FG: soc_monitor_work: soc:95, raw_soc:95, c:236816, s:2
+[ 1037.280290] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1037.280294] FG: soc_monitor_work: soc:94, raw_soc:94, c:238281, s:2
+[ 1037.281699] FG: fg_cycle_counter_update: batt_soc: 230 bucket: 7 chg_status: 2
+[ 1037.282137] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 1046.242654] FG: fg_cycle_counter_update: batt_soc: 230 bucket: 7 chg_status: 2
+[ 1046.243090] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 1047.520288] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:0.
+[ 1047.520293] FG: soc_monitor_work: soc:94, raw_soc:94, c:239745, s:2
+[ 1057.760314] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:0.
+[ 1057.760319] FG: soc_monitor_work: soc:94, raw_soc:94, c:244140, s:2
+[ 1065.010235]  3065     3.7 C/MHz     97 mW    7.9 J   31.5 I/mJ    81.6 s
+                902: 
+[ 1068.000360] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:0.
+[ 1068.000365] FG: soc_monitor_work: soc:94, raw_soc:94, c:224609, s:2
+[ 1078.240287] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:0.
+[ 1078.240293] FG: soc_monitor_work: soc:94, raw_soc:94, c:242675, s:2
+[ 1088.480280] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:0.
+[ 1088.480285] FG: soc_monitor_work: soc:94, raw_soc:94, c:243163, s:2
+[ 1098.720278] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1098.720283] FG: soc_monitor_work: soc:94, raw_soc:94, c:247070, s:2
+[ 1108.960320] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1108.960325] FG: soc_monitor_work: soc:94, raw_soc:94, c:243163, s:2
+[ 1119.200280] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1119.200284] FG: soc_monitor_work: soc:94, raw_soc:94, c:241699, s:2
+[ 1129.440280] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1129.440284] FG: soc_monitor_work: soc:94, raw_soc:94, c:242187, s:2
+[ 1139.680285] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1139.680289] FG: soc_monitor_work: soc:94, raw_soc:94, c:244140, s:2
+[ 1148.257913]  3350     3.7 C/MHz     86 mW    6.4 J   39.0 I/mJ    74.6 s
+                979: 
+[ 1149.920352] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1149.920356] FG: soc_monitor_work: soc:94, raw_soc:94, c:226074, s:2
+[ 1160.160295] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1160.160299] FG: soc_monitor_work: soc:94, raw_soc:94, c:244628, s:2
+[ 1169.122586] FG: fg_cycle_counter_update: batt_soc: 229 bucket: 7 chg_status: 2
+[ 1169.123018] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 1170.400323] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1170.400327] FG: soc_monitor_work: soc:94, raw_soc:94, c:247070, s:2
+[ 1180.640272] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1180.640276] FG: soc_monitor_work: soc:94, raw_soc:94, c:249023, s:2
+[ 1190.880271] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1190.880275] FG: soc_monitor_work: soc:94, raw_soc:94, c:243163, s:2
+[ 1198.296528] FG: fg_delta_msoc_irq_handler: irq 1005 triggered
+[ 1198.296890] FG: fg_cycle_counter_update: batt_soc: 229 bucket: 7 chg_status: 2
+[ 1198.298342] FG: fg_cycle_counter_update: batt_soc: 229 bucket: 7 chg_status: 2
+[ 1198.298762] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 1201.120276] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1201.120280] FG: soc_monitor_work: soc:94, raw_soc:94, c:242675, s:2
+[ 1211.360293] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1211.360298] FG: soc_monitor_work: soc:94, raw_soc:94, c:243163, s:2
+[ 1221.600270] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1221.600274] FG: soc_monitor_work: soc:94, raw_soc:94, c:244628, s:2
+[ 1225.492370]  3635     3.7 C/MHz     97 mW    6.7 J   37.6 I/mJ    68.8 s
+               1056: 
+[ 1231.840361] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1231.840366] FG: soc_monitor_work: soc:94, raw_soc:94, c:235351, s:2
+[ 1242.080270] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1242.080274] FG: soc_monitor_work: soc:94, raw_soc:94, c:247070, s:2
+[ 1252.320264] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1252.320268] FG: soc_monitor_work: soc:94, raw_soc:94, c:247558, s:2
+[ 1262.560289] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1262.560294] FG: soc_monitor_work: soc:94, raw_soc:94, c:250488, s:2
+[ 1272.800264] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1272.800268] FG: soc_monitor_work: soc:94, raw_soc:94, c:249511, s:2
+[ 1283.040265] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1283.040269] FG: soc_monitor_work: soc:94, raw_soc:94, c:253906, s:2
+[ 1292.002490] FG: fg_cycle_counter_update: batt_soc: 229 bucket: 7 chg_status: 2
+[ 1292.002912] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 1293.280264] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1293.280268] FG: soc_monitor_work: soc:94, raw_soc:94, c:249999, s:2
+[ 1297.718154]  3921     3.7 C/MHz    111 mW    7.1 J   35.3 I/mJ    63.8 s
+               1132: 
+[ 1303.520338] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1303.520342] FG: soc_monitor_work: soc:94, raw_soc:94, c:228515, s:2
+[ 1313.760278] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1313.760282] FG: soc_monitor_work: soc:94, raw_soc:94, c:253906, s:2
+[ 1324.000259] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1324.000263] FG: soc_monitor_work: soc:94, raw_soc:94, c:256347, s:2
+[ 1334.240258] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1334.240262] FG: soc_monitor_work: soc:94, raw_soc:94, c:256347, s:2
+[ 1344.480258] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1344.480262] FG: soc_monitor_work: soc:94, raw_soc:94, c:254882, s:2
+[ 1354.720275] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1354.720279] FG: soc_monitor_work: soc:94, raw_soc:94, c:252441, s:2
+[ 1364.960278] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1364.960281] FG: soc_monitor_work: soc:94, raw_soc:94, c:249023, s:2
+[ 1365.933732]  4205     3.7 C/MHz    127 mW    7.5 J   33.2 I/mJ    59.5 s
+               1228: 
+[ 1375.200254] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1375.200259] FG: soc_monitor_work: soc:94, raw_soc:94, c:250488, s:2
+[ 1385.440254] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1385.440258] FG: soc_monitor_work: soc:94, raw_soc:94, c:254394, s:2
+[ 1395.680257] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1395.680260] FG: soc_monitor_work: soc:94, raw_soc:94, c:255370, s:2
+[ 1405.920252] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1405.920255] FG: soc_monitor_work: soc:94, raw_soc:94, c:250488, s:2
+[ 1416.160167] FG: fg_battery_soc_smooth_tracking: soc:94, last_soc:94, raw_soc:94, soc_changed:1.
+[ 1416.160171] FG: soc_monitor_work: soc:94, raw_soc:94, c:252929, s:2
+[ 1426.400255] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:1.
+[ 1426.400258] FG: soc_monitor_work: soc:93, raw_soc:93, c:252929, s:2
+[ 1426.401569] FG: fg_cycle_counter_update: batt_soc: 228 bucket: 7 chg_status: 2
+[ 1426.401974] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 1429.139942]  4562     3.7 C/MHz    132 mW    7.2 J   34.6 I/mJ    54.8 s
+               1324: 
+[ 1435.362491] FG: fg_cycle_counter_update: batt_soc: 228 bucket: 7 chg_status: 2
+[ 1435.362955] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 1436.640325] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:0.
+[ 1436.640329] FG: soc_monitor_work: soc:93, raw_soc:93, c:228515, s:2
+[ 1446.880249] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:0.
+[ 1446.880253] FG: soc_monitor_work: soc:93, raw_soc:93, c:259765, s:2
+[ 1457.120247] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:0.
+[ 1457.120251] FG: soc_monitor_work: soc:93, raw_soc:93, c:256835, s:2
+[ 1467.360264] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:0.
+[ 1467.360267] FG: soc_monitor_work: soc:93, raw_soc:93, c:257812, s:2
+[ 1477.600266] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:0.
+[ 1477.600269] FG: soc_monitor_work: soc:93, raw_soc:93, c:257812, s:2
+[ 1487.840254] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:1.
+[ 1487.840257] FG: soc_monitor_work: soc:93, raw_soc:93, c:258788, s:2
+[ 1488.335089]  4918     3.7 C/MHz    156 mW    8.0 J   31.4 I/mJ    50.8 s
+               1420: 
+[ 1498.080255] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:1.
+[ 1498.080259] FG: soc_monitor_work: soc:93, raw_soc:93, c:259765, s:2
+[ 1508.320243] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:1.
+[ 1508.320246] FG: soc_monitor_work: soc:93, raw_soc:93, c:262206, s:2
+[ 1518.560260] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:1.
+[ 1518.560263] FG: soc_monitor_work: soc:93, raw_soc:93, c:262695, s:2
+[ 1519.692580] FG: fg_delta_msoc_irq_handler: irq 1005 triggered
+[ 1519.692778] FG: fg_cycle_counter_update: batt_soc: 227 bucket: 7 chg_status: 2
+[ 1519.694175] FG: fg_cycle_counter_update: batt_soc: 227 bucket: 7 chg_status: 2
+[ 1519.694574] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 1528.800245] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:1.
+[ 1528.800248] FG: soc_monitor_work: soc:93, raw_soc:93, c:262206, s:2
+[ 1539.040243] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:1.
+[ 1539.040246] FG: soc_monitor_work: soc:93, raw_soc:93, c:259765, s:2
+[ 1544.524000]  5275     3.7 C/MHz    156 mW    7.4 J   33.8 I/mJ    47.4 s
+               1516: 
+[ 1549.280322] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:1.
+[ 1549.280324] FG: soc_monitor_work: soc:93, raw_soc:93, c:224609, s:2
+[ 1558.242225] FG: fg_cycle_counter_update: batt_soc: 227 bucket: 7 chg_status: 2
+[ 1558.242620] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 1559.520239] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:1.
+[ 1559.520242] FG: soc_monitor_work: soc:93, raw_soc:93, c:261718, s:2
+[ 1569.760254] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:1.
+[ 1569.760257] FG: soc_monitor_work: soc:93, raw_soc:93, c:264160, s:2
+[ 1580.000239] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:1.
+[ 1580.000242] FG: soc_monitor_work: soc:93, raw_soc:93, c:259765, s:2
+[ 1590.240239] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:1.
+[ 1590.240242] FG: soc_monitor_work: soc:93, raw_soc:93, c:261718, s:2
+[ 1597.703619]  5631     3.7 C/MHz    191 mW    8.5 J   29.4 I/mJ    44.4 s
+               1612: 
+[ 1600.480333] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:1.
+[ 1600.480336] FG: soc_monitor_work: soc:93, raw_soc:93, c:222656, s:2
+[ 1610.720238] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:1.
+[ 1610.720241] FG: soc_monitor_work: soc:93, raw_soc:93, c:264160, s:2
+[ 1620.960251] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:1.
+[ 1620.960253] FG: soc_monitor_work: soc:93, raw_soc:93, c:262695, s:2
+[ 1631.200259] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:1.
+[ 1631.200262] FG: soc_monitor_work: soc:93, raw_soc:93, c:264160, s:2
+[ 1641.440236] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:1.
+[ 1641.440239] FG: soc_monitor_work: soc:93, raw_soc:93, c:266601, s:2
+[ 1647.879506]  5988     3.7 C/MHz    168 mW    7.0 J   35.7 I/mJ    41.8 s
+               1689: 
+[ 1651.680315] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:1.
+[ 1651.680317] FG: soc_monitor_work: soc:93, raw_soc:93, c:224609, s:2
+[ 1661.920234] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:1.
+[ 1661.920237] FG: soc_monitor_work: soc:93, raw_soc:93, c:268554, s:2
+[ 1672.160248] FG: fg_battery_soc_smooth_tracking: soc:93, last_soc:93, raw_soc:93, soc_changed:1.
+[ 1672.160250] FG: soc_monitor_work: soc:93, raw_soc:93, c:267577, s:2
+[ 1681.122228] FG: fg_cycle_counter_update: batt_soc: 226 bucket: 7 chg_status: 2
+[ 1681.122712] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 1682.400234] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1682.400236] FG: soc_monitor_work: soc:92, raw_soc:92, c:267577, s:2
+[ 1682.401347] FG: fg_cycle_counter_update: batt_soc: 226 bucket: 7 chg_status: 2
+[ 1682.401821] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 1692.640233] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:0.
+[ 1692.640236] FG: soc_monitor_work: soc:92, raw_soc:92, c:264160, s:2
+[ 1696.049431]  6273     3.7 C/MHz    176 mW    7.0 J   35.7 I/mJ    39.9 s
+               1766: 
+[ 1702.880311] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:0.
+[ 1702.880314] FG: soc_monitor_work: soc:92, raw_soc:92, c:223632, s:2
+[ 1713.120232] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:0.
+[ 1713.120235] FG: soc_monitor_work: soc:92, raw_soc:92, c:267577, s:2
+[ 1723.360257] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:0.
+[ 1723.360260] FG: soc_monitor_work: soc:92, raw_soc:92, c:264648, s:2
+[ 1733.600231] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:0.
+[ 1733.600234] FG: soc_monitor_work: soc:92, raw_soc:92, c:266601, s:2
+[ 1743.228760] CPU4: Booted secondary processor [516f802d]
+[ 1743.237098]  6558     3.7 C/MHz    193 mW    7.4 J   33.9 I/mJ    38.1 s
+               
+               
+               ===== CPU 4 =====
+               Frequencies: 825 902 979 1056 1209 1286 1363 1459 1536 1612 1689 1766 1843 1920 1996 2092 2169 2246 2323 2400 2476 2553 2649 2803
+               
+                825: 
+[ 1743.840562] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1743.840575] FG: soc_monitor_work: soc:92, raw_soc:92, c:222656, s:2
+[ 1754.080569] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1754.080582] FG: soc_monitor_work: soc:92, raw_soc:92, c:267577, s:2
+[ 1764.320564] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1764.320576] FG: soc_monitor_work: soc:92, raw_soc:92, c:270019, s:2
+[ 1774.560643] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1774.560656] FG: soc_monitor_work: soc:92, raw_soc:92, c:268554, s:2
+[ 1784.800566] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1784.800579] FG: soc_monitor_work: soc:92, raw_soc:92, c:269531, s:2
+[ 1795.040565] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1795.040578] FG: soc_monitor_work: soc:92, raw_soc:92, c:270019, s:2
+[ 1800.524462]  5141     6.2 C/MHz    186 mW    9.1 J   27.6 I/mJ    48.6 s
+                902: 
+[ 1804.004134] FG: fg_cycle_counter_update: batt_soc: 225 bucket: 7 chg_status: 2
+[ 1804.004710] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 1805.280557] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1805.280570] FG: soc_monitor_work: soc:92, raw_soc:92, c:225097, s:2
+[ 1815.520567] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1815.520581] FG: soc_monitor_work: soc:92, raw_soc:92, c:272460, s:2
+[ 1825.760627] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1825.760641] FG: soc_monitor_work: soc:92, raw_soc:92, c:269531, s:2
+[ 1830.981107] FG: fg_delta_msoc_irq_handler: irq 1005 triggered
+[ 1830.981467] FG: fg_cycle_counter_update: batt_soc: 225 bucket: 7 chg_status: 2
+[ 1830.984098] FG: fg_cycle_counter_update: batt_soc: 225 bucket: 7 chg_status: 2
+[ 1830.984671] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 1836.000565] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1836.000578] FG: soc_monitor_work: soc:92, raw_soc:92, c:270995, s:2
+[ 1846.240615] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1846.240628] FG: soc_monitor_work: soc:92, raw_soc:92, c:268554, s:2
+[ 1853.801239]  5625     6.2 C/MHz    197 mW    8.8 J   28.6 I/mJ    44.5 s
+                979: 
+[ 1856.480582] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1856.480595] FG: soc_monitor_work: soc:92, raw_soc:92, c:225585, s:2
+[ 1866.720565] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1866.720578] FG: soc_monitor_work: soc:92, raw_soc:92, c:276855, s:2
+[ 1876.960628] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1876.960641] FG: soc_monitor_work: soc:92, raw_soc:92, c:275878, s:2
+[ 1887.200565] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1887.200578] FG: soc_monitor_work: soc:92, raw_soc:92, c:270019, s:2
+[ 1897.441186] smb:01:1000 47 00 00 79 00 40 20 00 24 00 ff ff 00 00 03 03 00 00 00 00 00 38 02 3f 40 7f 00 00 00 00 00 00 00 00 00 00 00 06 84 03 02 00 00 00 00 00 00 00 00 00 00 00 00 79 
+[ 1897.441727] smb:01:1100 34 13 c2 00 00 00 00 00 00 00 00 0f 0f 0f 00 0f 0f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 28 
+[ 1897.441993] smb:01:1200 00 ff ff fe 00 3f 3f 00 00 00 00 00 00 00 00 03 03 00 01 00 
+[ 1897.442679] smb:01:1300 00 00 00 00 00 00 20 80 00 00 06 ff 1f 00 ff ff 00 00 00 00 00 00 00 c8 73 1b 47 00 00 00 00 08 00 1d b8 75 e5 02 04 30 7f 00 00 00 00 00 00 14 d4 00 00 00 00 
+[ 1897.443365] smb:01:1600 02 00 00 00 00 02 01 00 00 00 00 fe fe 00 00 00 00 00 42 00 0b 00 00 00 00 00 00 00 00 00 00 00 00 04 02 00 07 00 00 00 00 00 00 03 00 00 00 00 02 00 00 00 22 
+[ 1897.443679] smb:01:1700 00 7f 7f 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 
+[ 1897.443784] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1897.443795] FG: soc_monitor_work: soc:92, raw_soc:92, c:272460, s:2
+[ 1903.065655]  6098     6.2 C/MHz    234 mW    9.6 J   26.0 I/mJ    41.0 s
+               1056: 
+[ 1907.680568] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1907.680581] FG: soc_monitor_work: soc:92, raw_soc:92, c:227050, s:2
+[ 1917.920583] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1917.920597] FG: soc_monitor_work: soc:92, raw_soc:92, c:277343, s:2
+[ 1926.884058] FG: fg_cycle_counter_update: batt_soc: 224 bucket: 7 chg_status: 2
+[ 1926.884633] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 1928.160626] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1928.160639] FG: soc_monitor_work: soc:92, raw_soc:92, c:280761, s:2
+[ 1938.400566] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1938.400579] FG: soc_monitor_work: soc:92, raw_soc:92, c:274902, s:2
+[ 1948.640566] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1948.640579] FG: soc_monitor_work: soc:92, raw_soc:92, c:278808, s:2
+[ 1949.320234]  6561     6.2 C/MHz    216 mW    8.2 J   30.3 I/mJ    38.1 s
+               1209: 
+[ 1958.880567] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1958.880581] FG: soc_monitor_work: soc:92, raw_soc:92, c:263671, s:2
+[ 1969.120635] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1969.120647] FG: soc_monitor_work: soc:92, raw_soc:92, c:285644, s:2
+[ 1979.360628] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1979.360642] FG: soc_monitor_work: soc:92, raw_soc:92, c:284179, s:2
+[ 1989.600562] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1989.600575] FG: soc_monitor_work: soc:92, raw_soc:92, c:284667, s:2
+[ 1991.563962]  7517     6.2 C/MHz    246 mW    8.2 J   30.5 I/mJ    33.3 s
+               1286: 
+[ 1999.840571] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 1999.840585] FG: soc_monitor_work: soc:92, raw_soc:92, c:241699, s:2
+[ 2010.080569] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 2010.080583] FG: soc_monitor_work: soc:92, raw_soc:92, c:295410, s:2
+[ 2020.320561] FG: fg_battery_soc_smooth_tracking: soc:92, last_soc:92, raw_soc:92, soc_changed:1.
+[ 2020.320574] FG: soc_monitor_work: soc:92, raw_soc:92, c:293945, s:2
+[ 2029.284669] FG: fg_cycle_counter_update: batt_soc: 223 bucket: 6 chg_status: 2
+[ 2029.285680] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 2030.560631] FG: fg_battery_soc_smooth_tracking: soc:91, last_soc:91, raw_soc:91, soc_changed:1.
+[ 2030.560644] FG: soc_monitor_work: soc:91, raw_soc:91, c:292968, s:2
+[ 2030.562885] FG: fg_cycle_counter_update: batt_soc: 223 bucket: 6 chg_status: 2
+[ 2030.563848] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 2031.802872]  7976     6.2 C/MHz    310 mW    9.7 J   25.7 I/mJ    31.4 s
+               1363: 
+[ 2040.800571] FG: fg_battery_soc_smooth_tracking: soc:91, last_soc:91, raw_soc:91, soc_changed:0.
+[ 2040.800585] FG: soc_monitor_work: soc:91, raw_soc:91, c:298827, s:2
+[ 2051.040573] FG: fg_battery_soc_smooth_tracking: soc:91, last_soc:91, raw_soc:91, soc_changed:0.
+[ 2051.040586] FG: soc_monitor_work: soc:91, raw_soc:91, c:297851, s:2
+[ 2061.280569] FG: fg_battery_soc_smooth_tracking: soc:91, last_soc:91, raw_soc:91, soc_changed:0.
+[ 2061.280582] FG: soc_monitor_work: soc:91, raw_soc:91, c:301269, s:2
+[ 2070.035002]  8465     6.2 C/MHz    310 mW    9.2 J   27.3 I/mJ    29.5 s
+               1459: 
+[ 2071.520563] FG: fg_battery_soc_smooth_tracking: soc:91, last_soc:91, raw_soc:91, soc_changed:0.
+[ 2071.520577] FG: soc_monitor_work: soc:91, raw_soc:91, c:227050, s:2
+[ 2081.760629] FG: fg_battery_soc_smooth_tracking: soc:91, last_soc:91, raw_soc:91, soc_changed:0.
+[ 2081.760643] FG: soc_monitor_work: soc:91, raw_soc:91, c:303710, s:2
+[ 2092.000618] FG: fg_battery_soc_smooth_tracking: soc:91, last_soc:91, raw_soc:91, soc_changed:1.
+[ 2092.000632] FG: soc_monitor_work: soc:91, raw_soc:91, c:304199, s:2
+[ 2102.242439] FG: fg_battery_soc_smooth_tracking: soc:91, last_soc:91, raw_soc:91, soc_changed:1.
+[ 2102.242452] FG: soc_monitor_work: soc:91, raw_soc:91, c:306640, s:2
+[ 2106.259521]  9086     6.2 C/MHz    340 mW    9.4 J   26.7 I/mJ    27.5 s
+               1536: 
+[ 2112.480562] FG: fg_battery_soc_smooth_tracking: soc:91, last_soc:91, raw_soc:91, soc_changed:1.
+[ 2112.480575] FG: soc_monitor_work: soc:91, raw_soc:91, c:228515, s:2
+[ 2117.573106] FG: fg_delta_msoc_irq_handler: irq 1005 triggered
+[ 2117.573475] FG: fg_cycle_counter_update: batt_soc: 222 bucket: 6 chg_status: 2
+[ 2117.576176] FG: fg_cycle_counter_update: batt_soc: 222 bucket: 6 chg_status: 2
+[ 2117.576749] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 2122.720565] FG: fg_battery_soc_smooth_tracking: soc:91, last_soc:91, raw_soc:91, soc_changed:1.
+[ 2122.720578] FG: soc_monitor_work: soc:91, raw_soc:91, c:308105, s:2
+[ 2132.960630] FG: fg_battery_soc_smooth_tracking: soc:91, last_soc:91, raw_soc:91, soc_changed:1.
+[ 2132.960643] FG: soc_monitor_work: soc:91, raw_soc:91, c:311034, s:2
+[ 2141.481891]  9557     6.2 C/MHz    357 mW    9.3 J   26.8 I/mJ    26.2 s
+               1612: 
+[ 2143.200576] FG: fg_battery_soc_smooth_tracking: soc:91, last_soc:91, raw_soc:91, soc_changed:1.
+[ 2143.200589] FG: soc_monitor_work: soc:91, raw_soc:91, c:227538, s:2
+[ 2152.164406] FG: fg_cycle_counter_update: batt_soc: 222 bucket: 6 chg_status: 2
+[ 2152.164981] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 2153.440567] FG: fg_battery_soc_smooth_tracking: soc:91, last_soc:91, raw_soc:91, soc_changed:1.
+[ 2153.440580] FG: soc_monitor_work: soc:91, raw_soc:91, c:317382, s:2
+[ 2163.680291] FG: fg_battery_soc_smooth_tracking: soc:91, last_soc:91, raw_soc:91, soc_changed:1.
+[ 2163.680304] FG: soc_monitor_work: soc:91, raw_soc:91, c:448241, s:2
+[ 2173.920565] FG: fg_battery_soc_smooth_tracking: soc:91, last_soc:91, raw_soc:91, soc_changed:1.
+[ 2173.920577] FG: soc_monitor_work: soc:91, raw_soc:91, c:315429, s:2
+[ 2174.696030] 10018     6.2 C/MHz    381 mW    9.5 J   26.2 I/mJ    25.0 s
+               1689: 
+[ 2184.160633] FG: fg_battery_soc_smooth_tracking: soc:91, last_soc:91, raw_soc:91, soc_changed:1.
+[ 2184.160647] FG: soc_monitor_work: soc:91, raw_soc:91, c:324706, s:2
+[ 2194.400566] FG: fg_battery_soc_smooth_tracking: soc:91, last_soc:91, raw_soc:91, soc_changed:1.
+[ 2194.400579] FG: soc_monitor_work: soc:91, raw_soc:91, c:322265, s:2
+[ 2204.640565] FG: fg_battery_soc_smooth_tracking: soc:91, last_soc:91, raw_soc:91, soc_changed:1.
+[ 2204.640579] FG: soc_monitor_work: soc:91, raw_soc:91, c:323242, s:2
+[ 2206.906724] 10476     6.2 C/MHz    407 mW    9.7 J   25.7 I/mJ    23.9 s
+               1766: 
+[ 2214.880634] FG: fg_battery_soc_smooth_tracking: soc:91, last_soc:91, raw_soc:91, soc_changed:1.
+[ 2214.880647] FG: soc_monitor_work: soc:91, raw_soc:91, c:230468, s:2
+[ 2225.120570] FG: fg_battery_soc_smooth_tracking: soc:91, last_soc:91, raw_soc:91, soc_changed:1.
+[ 2225.120583] FG: soc_monitor_work: soc:91, raw_soc:91, c:332031, s:2
+[ 2235.360627] FG: fg_battery_soc_smooth_tracking: soc:91, last_soc:91, raw_soc:91, soc_changed:1.
+[ 2235.360640] FG: soc_monitor_work: soc:91, raw_soc:91, c:330566, s:2
+[ 2238.114785] 10995     6.2 C/MHz    427 mW    9.7 J   25.7 I/mJ    22.8 s
+               1843: 
+[ 2245.600564] FG: fg_battery_soc_smooth_tracking: soc:91, last_soc:91, raw_soc:91, soc_changed:1.
+[ 2245.600577] FG: soc_monitor_work: soc:91, raw_soc:91, c:225585, s:2
+[ 2254.564247] FG: fg_cycle_counter_update: batt_soc: 221 bucket: 6 chg_status: 2
+[ 2254.564822] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 2255.840572] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2255.840585] FG: soc_monitor_work: soc:90, raw_soc:90, c:349609, s:2
+[ 2255.843052] FG: fg_cycle_counter_update: batt_soc: 221 bucket: 6 chg_status: 2
+[ 2255.844000] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 2266.080570] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:0.
+[ 2266.080583] FG: soc_monitor_work: soc:90, raw_soc:90, c:349609, s:2
+[ 2268.321764] 11468     6.2 C/MHz    519 mW   11.3 J   22.1 I/mJ    21.8 s
+               1920: 
+[ 2276.320565] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:0.
+[ 2276.320578] FG: soc_monitor_work: soc:90, raw_soc:90, c:228515, s:2
+[ 2286.560630] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:0.
+[ 2286.560644] FG: soc_monitor_work: soc:90, raw_soc:90, c:351562, s:2
+[ 2296.800564] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:0.
+[ 2296.800576] FG: soc_monitor_work: soc:90, raw_soc:90, c:358886, s:2
+[ 2297.525134] 11951     6.2 C/MHz    505 mW   10.6 J   23.7 I/mJ    20.9 s
+               1996: 
+[ 2307.040575] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:0.
+[ 2307.040589] FG: soc_monitor_work: soc:90, raw_soc:90, c:360351, s:2
+[ 2317.280584] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2317.280597] FG: soc_monitor_work: soc:90, raw_soc:90, c:357421, s:2
+[ 2326.728272] 12396     6.2 C/MHz    529 mW   10.7 J   23.4 I/mJ    20.2 s
+               2092: 
+[ 2327.520560] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2327.520573] FG: soc_monitor_work: soc:90, raw_soc:90, c:229492, s:2
+[ 2337.760682] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2337.760696] FG: soc_monitor_work: soc:90, raw_soc:90, c:375976, s:2
+[ 2348.000569] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2348.000583] FG: soc_monitor_work: soc:90, raw_soc:90, c:383788, s:2
+[ 2354.926507] 13037     6.2 C/MHz    635 mW   12.2 J   20.5 I/mJ    19.2 s
+               2169: 
+[ 2356.964562] FG: fg_cycle_counter_update: batt_soc: 220 bucket: 6 chg_status: 2
+[ 2356.965585] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 2358.240561] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2358.240574] FG: soc_monitor_work: soc:90, raw_soc:90, c:229492, s:2
+[ 2368.480569] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2368.480582] FG: soc_monitor_work: soc:90, raw_soc:90, c:381835, s:2
+[ 2378.720572] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2378.720585] FG: soc_monitor_work: soc:90, raw_soc:90, c:389648, s:2
+[ 2382.122330] 13497     6.2 C/MHz    674 mW   12.5 J   20.0 I/mJ    18.5 s
+               2246: 
+[ 2386.782357] FG: fg_delta_msoc_irq_handler: irq 1005 triggered
+[ 2386.782722] FG: fg_cycle_counter_update: batt_soc: 220 bucket: 6 chg_status: 2
+[ 2386.785362] FG: fg_cycle_counter_update: batt_soc: 220 bucket: 6 chg_status: 2
+[ 2386.785936] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 2388.960625] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2388.960638] FG: soc_monitor_work: soc:90, raw_soc:90, c:227538, s:2
+[ 2399.200571] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2399.200585] FG: soc_monitor_work: soc:90, raw_soc:90, c:397949, s:2
+[ 2408.315794] 13949     6.2 C/MHz    688 mW   12.3 J   20.2 I/mJ    17.9 s
+               2323: 
+[ 2409.440566] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2409.440579] FG: soc_monitor_work: soc:90, raw_soc:90, c:232910, s:2
+[ 2419.680567] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2419.680581] FG: soc_monitor_work: soc:90, raw_soc:90, c:422851, s:2
+[ 2429.920566] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2429.920579] FG: soc_monitor_work: soc:90, raw_soc:90, c:423827, s:2
+[ 2434.507819] 14486     6.2 C/MHz    801 mW   13.8 J   18.1 I/mJ    17.3 s
+               2400: 
+[ 2440.160628] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2440.160641] FG: soc_monitor_work: soc:90, raw_soc:90, c:234374, s:2
+[ 2450.400566] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2450.400580] FG: soc_monitor_work: soc:90, raw_soc:90, c:437011, s:2
+[ 2459.364441] FG: fg_cycle_counter_update: batt_soc: 219 bucket: 6 chg_status: 2
+[ 2459.365018] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 2459.697968] 14937     6.2 C/MHz    880 mW   14.7 J   17.0 I/mJ    16.8 s
+               2476: 
+[ 2460.640620] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2460.640633] FG: soc_monitor_work: soc:90, raw_soc:90, c:238281, s:2
+[ 2470.880301] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2470.880315] FG: soc_monitor_work: soc:90, raw_soc:90, c:439941, s:2
+[ 2481.120565] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2481.120578] FG: soc_monitor_work: soc:90, raw_soc:90, c:456542, s:2
+[ 2484.885876] 15440     6.2 C/MHz    893 mW   14.5 J   17.3 I/mJ    16.2 s
+               2553: 
+[ 2491.360627] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2491.360640] FG: soc_monitor_work: soc:90, raw_soc:90, c:235351, s:2
+[ 2501.600570] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2501.600584] FG: soc_monitor_work: soc:90, raw_soc:90, c:438476, s:2
+[ 2509.072934] 15855     6.2 C/MHz    859 mW   13.6 J   18.4 I/mJ    15.8 s
+               2649: 
+[ 2511.840562] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2511.840576] FG: soc_monitor_work: soc:90, raw_soc:90, c:239257, s:2
+[ 2522.080573] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2522.080587] FG: soc_monitor_work: soc:90, raw_soc:90, c:468749, s:2
+[ 2532.257686] 16799     6.3 C/MHz    997 mW   14.9 J   16.8 I/mJ    14.9 s
+               2803: 
+[ 2532.320567] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2532.320580] FG: soc_monitor_work: soc:90, raw_soc:90, c:470214, s:2
+[ 2542.560630] FG: fg_battery_soc_smooth_tracking: soc:90, last_soc:90, raw_soc:90, soc_changed:1.
+[ 2542.560643] FG: soc_monitor_work: soc:90, raw_soc:90, c:550780, s:2
+[ 2552.800576] FG: fg_battery_soc_smooth_tracking: soc:89, last_soc:89, raw_soc:89, soc_changed:1.
+[ 2552.800589] FG: soc_monitor_work: soc:89, raw_soc:89, c:540527, s:2
+[ 2552.803004] FG: fg_cycle_counter_update: batt_soc: 218 bucket: 6 chg_status: 2
+[ 2552.803579] FG: status_change_work: charge_status:2 charge_type:1 charge_done:0
+[ 2555.467676] 17425     6.2 C/MHz   1298 mW   18.6 J   13.4 I/mJ    14.4 s
+               
+               
+               Benchmark finished!
+[ 2555.486500] 
+               real	42m32.887s
+               user	35m14.077s
+               sys	0m2.039s
