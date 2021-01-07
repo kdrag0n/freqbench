@@ -21,6 +21,8 @@ POWER_SUPPLY_NODES = [
     "/sys/class/power_supply/bms",
     # Most common
     "/sys/class/power_supply/battery",
+    # Nexus 10
+    "/sys/class/power_supply/ds2784-fuelgauge",
 ]
 # Some fuel gauges need current scaling
 CURRENT_FACTOR = 1
