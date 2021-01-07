@@ -73,8 +73,10 @@ find_part_by_name() {
     fi
 }
 
-redact_serial() {
-    sed -E 's/androidboot.serialno=[A-Za-z0-9]+/androidboot.serialno=REDACTED/'
+redact_args() {
+    sed -E 's/androidboot.serialno=[A-Za-z0-9]+/androidboot.serialno=REDACTED/' | \
+        sed -E 's/androidboot.wifimacaddr=[A-Za-z0-9]+/androidboot.wifimacaddr=REDACTED/' | \
+        sed -E 's/androidboot.btmacaddr=[A-Za-z0-9]+/androidboot.btmacaddr=REDACTED/'
 }
 
 # Add delay for error visibility
@@ -91,9 +93,9 @@ save_logs() {
     # This is best-effort and does not strictly need to be present, so suppress errors here.
     set +e
     cat /proc/interrupts > /tmp/post_bench_interrupts.txt
-    cat /proc/cmdline | redact_serial > /tmp/cmdline.txt
+    cat /proc/cmdline | redact_args > /tmp/cmdline.txt
     cat /proc/cpuinfo > /tmp/cpuinfo.txt
-    dmesg | redact_serial > /tmp/kernel.log
+    dmesg | redact_args > /tmp/kernel.log
     uptime > /tmp/uptime.txt
     ps -A > /tmp/processes.txt
     echo "Kernel: $(cat /proc/version)" > /tmp/versions.txt
