@@ -4,17 +4,17 @@ These are reference freqbench results that have been collected from various devi
 
 ## Index
 
-| Name       | SoC name        | SoC model | Device                 | Accuracy |
-| ---------- | --------------- | --------- | ---------------------- | -------- |
-| exynos5250 | Exynos 5250     | E5250     | Google Nexus 10        | Low      |
-| sdm632     | Snapdragon 632  | SDM632    | Motorola Moto E (2020) | Unknown  |
-| sdm660     | Snapdragon 660  | SDM660    | Xiaomi Redmi Note 7    | Unknown  |
-| sm6125     | Snapdragon 665  | SM6125    | Xiaomi Mi A3           | Unknown  |
-| sm7125     | Snapdragon 720G | SM7125    | Xiaomi Redmi Note 9S   | Unknown  |
-| sm7150ac   | Snapdragon 732G | SM7150-AC | Xiaomi Poco X3         | Unknown  |
-| sm7250ab   | Snapdragon 765G | SM7250-AB | Google Pixel 5         | Verified |
-| msm8998    | Snapdragon 835  | MSM8998   | Google Pixel 2 XL      | Verified |
-| sdm845     | Snapdragon 845  | SDM845    | Xiaomi Mi Mix 2S       | Unknown  |
-| sm8150     | Snapdragon 855  | SM8150-AA | Asus ZenFone 6         | Verified |
-| sm8150ac   | Snapdragon 855+ | SM8150-AC | Asus ROG Phone II      | Verified |
-| sm8250     | Snapdragon 865  | SM8250    | Xiaomi Mi 10T Pro      | Unknown  |
+| Name       | SoC model | SoC name        | Device                 | Accuracy |
+| ---------- | --------- | --------------- | ---------------------- | -------- |
+| exynos5250 | E5250     | Exynos 5250     | Google Nexus 10        | Low      |
+| sdm632     | SDM632    | Snapdragon 632  | Motorola Moto E (2020) | Unknown  |
+| sdm660     | SDM660    | Snapdragon 660  | Xiaomi Redmi Note 7    | Unknown  |
+| sm6125     | SM6125    | Snapdragon 665  | Xiaomi Mi A3           | Unknown  |
+| sm7125     | SM7125    | Snapdragon 720G | Xiaomi Redmi Note 9S   | Unknown  |
+| sm7150ac   | SM7150-AC | Snapdragon 732G | Xiaomi Poco X3         | Unknown  |
+| sm7250ab   | SM7250-AB | Snapdragon 765G | Google Pixel 5         | Verified |
+| msm8998    | MSM8998   | Snapdragon 835  | Google Pixel 2 XL      | Verified |
+| sdm845     | SDM845    | Snapdragon 845  | Xiaomi Mi Mix 2S       | Unknown  |
+| sm8150     | SM8150-AA | Snapdragon 855  | Asus ZenFone 6         | Verified |
+| sm8150ac   | SM8150-AC | Snapdragon 855+ | Asus ROG Phone II      | Verified |
+| sm8250     | SM8250    | Snapdragon 865  | Xiaomi Mi 10T Pro      | Unknown  |
