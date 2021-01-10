@@ -76,10 +76,19 @@ find_part_by_name() {
     fi
 }
 
+redact_arg() {
+    sed -e "s/$1=[^ ]+/$1=REDACTED/"
+}
+
 redact_args() {
-    sed -E 's/androidboot.serialno=[A-Za-z0-9]+/androidboot.serialno=REDACTED/' | \
-        sed -E 's/androidboot.wifimacaddr=[A-Za-z0-9]+/androidboot.wifimacaddr=REDACTED/' | \
-        sed -E 's/androidboot.btmacaddr=[A-Za-z0-9]+/androidboot.btmacaddr=REDACTED/'
+    redact_arg androidboot.serialno | \
+        redact_arg androidboot.wifimacaddr | \
+        redact_arg androidboot.btmacaddr | \
+        redact_arg androidboot.uid | \
+        redact_arg androidboot.ap_serial | \
+        redact_arg androidboot.cpuid | \
+        redact_arg LCD | \
+        redact_arg androidboot.id.jtag
 }
 
 # Add delay for error visibility
