@@ -8,6 +8,7 @@ These are reference freqbench results that have been collected from various devi
 | ---- | -------- | --------- | ------ | -------- |
 | exynos5250 | Exynos 5250 | E5250 | Google Nexus 10 | Low |
 | sdm632 | Snapdragon 632 | SDM632 | Motorola Moto E (2020) | Unknown |
+| sdm660 | Snapdragon 660 | SDM660 | Xiaomi Redmi Note 7 | Unknown |
 | sm6125 | Snapdragon 665 | SM6125 | Xiaomi Mi A3 | Unknown |
 | sm7125 | Snapdragon 720G | SM7125 | Xiaomi Redmi Note 9S | Unknown |
 | sm7150ac | Snapdragon 732G | SM7150-AC | Xiaomi Poco X3 | Unknown |
