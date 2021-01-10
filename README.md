@@ -29,18 +29,20 @@ A benchmark like this can be useful for many reasons:
 
 ## Usage
 
+It is possible to use freqbench with a stock kernel, but a custom kernel is **highly recommended** for accuracy. Stock OEM kernels are almost always missing features that the benchmark coordinator relies on for maximum accuracy. Custom kernel results are eligible for high accuracy classification, while stock kernel results are limited to low accuracy. Use a stock kernel at your own risk.
+
+### Custom kernel (recommended)
+
 Set the following kernel config options:
 
 ```bash
 CONFIG_NO_HZ_FULL=y
 CONFIG_CPU_FREQ_TIMES=n  # may not exist
-CONFIG_CPU_FREQ_GOV_POWERSAVE=y
 CONFIG_CPU_FREQ_GOV_USERSPACE=y
-CONFIG_DEVTMPFS=y
 CONFIG_HZ_100=y
 ```
 
-Example commit: [kirin_defconfig: Configure for freqbench](https://github.com/kdrag0n/proton_zf6/commit/d5e931add54ad)
+Example commit: [kirin_defconfig: Configure for freqbench](https://github.com/kdrag0n/proton_zf6/commit/59d24abf40dec)
 
 If you have any commits that prevent userspace from controlling CPU affinities and utilization, frequencies, or anything of the sort, revert them for the benchmark to work properly. Here are some common examples of such commits in downstream kernels and their corresponding reverts:
 
