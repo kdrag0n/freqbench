@@ -1,4 +1,4 @@
-# Commonly-used config options for freqbench
+# Common config options for freqbench
 
 # Should usually stay the same
 # Note that this is NOT like Android where everything is in /dev/block
