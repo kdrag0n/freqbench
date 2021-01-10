@@ -221,7 +221,7 @@ def init_cpus():
             print(f"cpu{first_cpu}", end=" ", flush=True)
             bench_cpus.append(first_cpu)
         else:
-            print(f"Unrecognized file/dir in cpufreq: {policy_dir}")
+            pr_debug(f"Unrecognized file/dir in cpufreq: {policy_dir}")
             continue
     print()
 
