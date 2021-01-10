@@ -24,8 +24,17 @@ POWER_SUPPLY_NODES = [
     # Nexus 10
     "/sys/class/power_supply/ds2784-fuelgauge",
 ]
-# Some fuel gauges need current scaling
-CURRENT_FACTOR = 1
+# Some fuel gauges need current unit scaling
+POWER_CURRENT_FACTOR = 1
+POWER_CURRENT_NODES = [
+    # Exynos devices with Maxim PMICs report µA separately
+    "batt_current_ua_now",
+    # Standard µA node
+    "current_now",
+]
+# Full paths to final nodes
+POWER_CURRENT_NODE = None
+POWER_VOLTAGE_NODE = None
 
 # Default power sampling intervals
 POWER_SAMPLE_INTERVAL = 1000  # ms
@@ -36,7 +45,7 @@ POWER_SAMPLE_FG_DEFAULT_INTERVALS = {
     "qpnp,fg": 1000,
 }
 
-# Must also set in init
+# Needs to match init and cmdline
 HOUSEKEEPING_CPU = 0
 
 # cpu0 is for housekeeping, so we can't benchmark it
@@ -79,6 +88,13 @@ for psy_node in POWER_SUPPLY_NODES:
         POWER_SUPPLY = psy_node
         break
 
+POWER_VOLTAGE_NODE = f"{POWER_SUPPLY}/voltage_now"
+for node in POWER_CURRENT_NODES:
+    path = f"{POWER_SUPPLY}/{node}"
+    if os.path.exists(path):
+        POWER_CURRENT_NODE = path
+        break
+
 psy_name = os.readlink(POWER_SUPPLY)
 for fg_string, interval in POWER_SAMPLE_FG_DEFAULT_INTERVALS.items():
     if fg_string in psy_name:
@@ -112,8 +128,8 @@ def run_cmd(args):
         raise ValueError(f"Subprocess {args} failed with exit code {proc.returncode}:\n{proc.stdout}")
 
 def sample_power():
-    ma = int(read_file(f"{POWER_SUPPLY}/current_now")) * CURRENT_FACTOR / 1000
-    mv = int(read_file(f"{POWER_SUPPLY}/voltage_now")) / 1000
+    ma = int(read_file(POWER_CURRENT_NODE)) * POWER_CURRENT_FACTOR / 1000
+    mv = int(read_file(POWER_VOLTAGE_NODE)) / 1000
 
     mw = ma * mv / 1000
     return ma, mv, abs(mw)
@@ -243,7 +259,7 @@ def check_charging(node, charging_value, charging_warned):
     return charging_warned
 
 def init_power():
-    global CURRENT_FACTOR
+    global POWER_CURRENT_FACTOR
 
     pr_debug(f"Using power supply: {POWER_SUPPLY}")
 
@@ -257,11 +273,11 @@ def init_power():
     pr_debug("Waiting for power usage to settle for initial current measurement")
     time.sleep(5)
     # Maxim PMICs used on Exynos devices report current in mA, not µA
-    ref_current = int(read_file(f"{POWER_SUPPLY}/current_now"))
+    ref_current = int(read_file(POWER_CURRENT_NODE))
     # Assumption: will never be below 1 mA
     if abs(ref_current) <= 1000:
-        CURRENT_FACTOR = 1000
-    pr_debug(f"Scaling current by {CURRENT_FACTOR}x (derived from initial sample: {ref_current})")
+        POWER_CURRENT_FACTOR = 1000
+    pr_debug(f"Scaling current by {POWER_CURRENT_FACTOR}x (derived from initial sample: {ref_current})")
 
     print(f"Sampling power every {POWER_SAMPLE_INTERVAL} ms")
     pr_debug(f"Pre-allocated {PREALLOC_SLOTS} sample slots for {PREALLOC_SECONDS} seconds")
