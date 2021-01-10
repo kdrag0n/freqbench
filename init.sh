@@ -143,6 +143,10 @@ save_logs() {
     saving_logs=false
 }
 
+try_write() {
+    { echo "$2" > "$1"; } > /dev/null 2>&1 || true
+}
+
 # SSH debug over USB RNDIS
 set +e
 if $USB_DEBUG; then
@@ -151,11 +155,14 @@ fi
 set -e
 
 # Disable fbcon cursor blinking to reduce interference from its 1-second timer and memory ops
-{ echo 0 > /sys/devices/virtual/graphics/fbcon/cursor_blink; } > /dev/null 2>&1 || true
+try_write /sys/devices/virtual/graphics/fbcon/cursor_blink 0
 
-# Enable cpuidle for more realistic conditions
-{ echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled; } > /dev/null 2>&1 || true
-{ echo 0 > /sys/module/msm_pm/parameters/sleep_disabled; } > /dev/null 2>&1 || true
+# Snapdragon: Enable cpuidle for more realistic conditions
+try_write /sys/module/lpm_levels/parameters/sleep_disabled 0
+try_write /sys/module/msm_pm/parameters/sleep_disabled 0
+
+# Exynos: Disable Exynos auto-hotplug to allow manual CPU control
+try_write /sys/power/cpuhotplug/enabled 0
 
 cat /proc/interrupts > /tmp/pre_bench_interrupts.txt
 
