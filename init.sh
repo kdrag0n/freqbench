@@ -111,7 +111,6 @@ save_logs() {
     echo "Python: $(python3 --version)" >> /tmp/versions.txt
     echo "Model: $(cat /sys/firmware/devicetree/base/model | tr '\0' ';')" > /tmp/device.txt
     echo "Compatible: $(cat /sys/firmware/devicetree/base/compatible | tr '\0' ';')" >> /tmp/device.txt
-    find /dev > /tmp/dev.list
 
     mkdir /tmp/cpufreq_stats
     for policy in /sys/devices/system/cpu/cpufreq/policy*
