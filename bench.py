@@ -209,6 +209,18 @@ def create_power_stats(time_ns, samples):
         "energy_joules": joules,
     }
 
+def get_cpu_freqs(cpu):
+    raw_freqs = read_file(f"{SYS_CPU}/cpu{cpu}/cpufreq/scaling_available_frequencies").split(" ")
+    boost_node = f"{SYS_CPU}/cpu{cpu}/cpufreq/scaling_boost_frequencies"
+    # Some devices have extra boost frequencies not in scaling_available_frequencies
+    if os.path.exists(boost_node):
+        raw_freqs += read_file(boost_node).split(" ")
+
+    # Need to sort because different platforms have different orders
+    freqs = sorted(set(int(freq) for freq in raw_freqs if freq))
+
+    return freqs
+
 def init_cpus():
     print("Frequency domains: ", end="", flush=True)
     bench_cpus = []
@@ -237,7 +249,10 @@ def init_cpus():
     print(flush=True)
 
     pr_debug("Minimizing frequency of housekeeping CPU")
-    write_cpu(HOUSEKEEPING_CPU, "cpufreq/scaling_governor", "powersave")
+    min_freq = min(get_cpu_freqs(HOUSEKEEPING_CPU))
+    pr_debug(f"Minimum frequency for {HOUSEKEEPING_CPU}: {min_freq} kHz")
+    write_cpu(HOUSEKEEPING_CPU, "cpufreq/scaling_governor", "userspace")
+    write_cpu(HOUSEKEEPING_CPU, "cpufreq/scaling_setspeed", str(min_freq))
     pr_debug()
 
     return bench_cpus, cpu_count
@@ -330,12 +345,7 @@ def main():
         write_cpu(cpu, "cpufreq/scaling_governor", "userspace")
 
         pr_debug("Getting frequencies")
-        raw_freqs = read_file(f"{SYS_CPU}/cpu{cpu}/cpufreq/scaling_available_frequencies").split(" ")
-        boost_node = f"{SYS_CPU}/cpu{cpu}/cpufreq/scaling_boost_frequencies"
-        if os.path.exists(boost_node):
-            raw_freqs += read_file(boost_node).split(" ")
-        # Need to sort because different platforms have different orders
-        freqs = sorted(set(int(freq) for freq in raw_freqs if freq))
+        freqs = get_cpu_freqs(cpu)
         print("Frequencies:", " ".join(str(int(freq / 1000)) for freq in freqs))
         print()
 
@@ -423,8 +433,8 @@ def main():
             }
 
         # In case the CPU shares a freq domain with the housekeeping CPU, e.g. cpu1
-        pr_debug("Reverting governor")
-        write_cpu(cpu, "cpufreq/scaling_governor", "powersave")
+        pr_debug(f"Minimizing frequency of CPU: {min(freqs)} kHz")
+        write_cpu(cpu, "cpufreq/scaling_setspeed", str(min(freqs)))
 
         pr_debug("Offlining CPU")
         write_cpu(cpu, "online", "0")
@@ -432,7 +442,8 @@ def main():
 
     # Make the rest run faster
     pr_debug("Maxing housekeeping CPU frequency")
-    write_cpu(HOUSEKEEPING_CPU, "cpufreq/scaling_governor", "performance")
+    max_hk_freq = max(get_cpu_freqs(HOUSEKEEPING_CPU))
+    write_cpu(HOUSEKEEPING_CPU, "cpufreq/scaling_setspeed", str(max_hk_freq))
 
     # OK to GC beyond this point as all the benchmarking is done
     pr_debug("Enabling Python GC")
