@@ -63,16 +63,14 @@ fi
 #exec > /dev/null 2>&1
 
 find_part_by_name() {
-    plist="$(sgdisk -p "$BLOCK_DEV")"
-    # Check for existence first
-    echo "$plist" | grep -qi " $1$" || return $?
+    pinfo="$(blkid -l --match-token "PARTLABEL=$1" && blkid -l --match-token "PARTLABEL=${1^^}")"
 
-    partnum="$(echo "$plist" | grep -i " $1$" | head -n1 | awk '{print $1}')"
-    if [[ -e "${BLOCK_DEV}p1" ]]; then
-        echo "${BLOCK_DEV}p${partnum}"
-    else
-        echo "${BLOCK_DEV}${partnum}"
+    # Check for existence first
+    if [[ -z "$pinfo" ]]; then
+        return 1
     fi
+
+    echo "$pinfo" | cut -d' ' -f1 | tr -d ':'
 }
 
 redact_arg() {
