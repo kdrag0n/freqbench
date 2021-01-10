@@ -26,8 +26,7 @@ reboot_end() {
     # Wait for manual forced reboot
     #sleep inf
 
-    # Busybox reboot doesn't work for some reason
-    reboot_with_cmd "$1"
+    reboot_with_cmd bootloader
 }
 
 saving_logs=false
@@ -40,7 +39,7 @@ on_exit() {
     echo
     echo "ERROR!"
 
-    reboot_end bootloader
+    reboot_end
 }
 
 # Set trap before mounting in case devtmpfs fails
@@ -178,4 +177,4 @@ save_logs
 # To debug system load
 #htop
 
-reboot_end ''
+reboot_end
