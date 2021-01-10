@@ -63,7 +63,7 @@ fi
 #exec > /dev/null 2>&1
 
 find_part_by_name() {
-    pinfo="$(blkid -l --match-token "PARTLABEL=$1" && blkid -l --match-token "PARTLABEL=${1^^}")"
+    pinfo="$(blkid -l --match-token "PARTLABEL=$1"; blkid -l --match-token "PARTLABEL=${1^^}")"
 
     # Check for existence first
     if [[ -z "$pinfo" ]]; then
