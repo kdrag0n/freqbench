@@ -74,7 +74,7 @@ find_part_by_name() {
 }
 
 redact_arg() {
-    sed -e "s/$1=[^ ]+/$1=REDACTED/"
+    sed -E "s/$1=[^ ]+/$1=REDACTED/"
 }
 
 redact_args() {
