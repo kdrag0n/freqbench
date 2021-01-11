@@ -85,7 +85,8 @@ redact_args() {
         redact_arg androidboot.ap_serial | \
         redact_arg androidboot.cpuid | \
         redact_arg LCD | \
-        redact_arg androidboot.id.jtag
+        redact_arg androidboot.id.jtag | \
+        redact_arg androidboot.em.did
 }
 
 # Add delay for error visibility
