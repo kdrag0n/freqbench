@@ -154,6 +154,9 @@ set -e
 # Disable fbcon cursor blinking to reduce interference from its 1-second timer and memory ops
 try_write /sys/devices/virtual/graphics/fbcon/cursor_blink 0
 
+# Disable hung task detection
+try_write /proc/sys/kernel/hung_task_timeout_secs 0
+
 # Snapdragon: Enable cpuidle for more realistic conditions
 try_write /sys/module/lpm_levels/parameters/sleep_disabled 0
 try_write /sys/module/msm_pm/parameters/sleep_disabled 0
