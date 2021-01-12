@@ -64,7 +64,10 @@ for cpu, cpu_data in cpus_data.items():
         dpcs.append(dpc)
 
     cm_mhz_norm = scaled_cpu_cm_mhz[cpu]
-    dpc = statistics.mean(dpcs)
+    if dpcs:
+        dpc = statistics.mean(dpcs)
+    else:
+        dpc = 0
 
     lb = "{"
     rb = "}"
