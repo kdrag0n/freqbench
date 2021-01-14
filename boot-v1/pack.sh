@@ -3,6 +3,7 @@
 cd "$(dirname "$0")"
 
 ../packrd-gz.sh
+cp ../rd-new.cpio ramdisk.gz
 
 mkbootimg \
     --kernel zImage \

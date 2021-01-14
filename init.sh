@@ -26,8 +26,7 @@ reboot_end() {
     # Wait for manual forced reboot
     #sleep inf
 
-    # Busybox reboot doesn't work for some reason
-    reboot_with_cmd "$1"
+    reboot_with_cmd bootloader
 }
 
 saving_logs=false
@@ -40,7 +39,7 @@ on_exit() {
     echo
     echo "ERROR!"
 
-    reboot_end bootloader
+    reboot_end
 }
 
 # Set trap before mounting in case devtmpfs fails
@@ -64,22 +63,30 @@ fi
 #exec > /dev/null 2>&1
 
 find_part_by_name() {
-    plist="$(sgdisk -p "$BLOCK_DEV")"
-    # Check for existence first
-    echo "$plist" | grep -qi " $1$" || return $?
+    pinfo="$(blkid -l --match-token "PARTLABEL=$1"; blkid -l --match-token "PARTLABEL=${1^^}")"
 
-    partnum="$(echo "$plist" | grep -i " $1$" | head -n1 | awk '{print $1}')"
-    if [[ -e "${BLOCK_DEV}p1" ]]; then
-        echo "${BLOCK_DEV}p${partnum}"
-    else
-        echo "${BLOCK_DEV}${partnum}"
+    # Check for existence first
+    if [[ -z "$pinfo" ]]; then
+        return 1
     fi
+
+    echo "$pinfo" | cut -d' ' -f1 | tr -d ':'
+}
+
+redact_arg() {
+    sed -E "s/$1=[^ ]+/$1=REDACTED/"
 }
 
 redact_args() {
-    sed -E 's/androidboot.serialno=[A-Za-z0-9]+/androidboot.serialno=REDACTED/' | \
-        sed -E 's/androidboot.wifimacaddr=[A-Za-z0-9]+/androidboot.wifimacaddr=REDACTED/' | \
-        sed -E 's/androidboot.btmacaddr=[A-Za-z0-9]+/androidboot.btmacaddr=REDACTED/'
+    redact_arg androidboot.serialno | \
+        redact_arg androidboot.wifimacaddr | \
+        redact_arg androidboot.btmacaddr | \
+        redact_arg androidboot.uid | \
+        redact_arg androidboot.ap_serial | \
+        redact_arg androidboot.cpuid | \
+        redact_arg LCD | \
+        redact_arg androidboot.id.jtag | \
+        redact_arg androidboot.em.did
 }
 
 # Add delay for error visibility
@@ -105,7 +112,6 @@ save_logs() {
     echo "Python: $(python3 --version)" >> /tmp/versions.txt
     echo "Model: $(cat /sys/firmware/devicetree/base/model | tr '\0' ';')" > /tmp/device.txt
     echo "Compatible: $(cat /sys/firmware/devicetree/base/compatible | tr '\0' ';')" >> /tmp/device.txt
-    find /dev > /tmp/dev.list
 
     mkdir /tmp/cpufreq_stats
     for policy in /sys/devices/system/cpu/cpufreq/policy*
@@ -134,6 +140,10 @@ save_logs() {
     saving_logs=false
 }
 
+try_write() {
+    { echo "$2" > "$1"; } > /dev/null 2>&1 || true
+}
+
 # SSH debug over USB RNDIS
 set +e
 if $USB_DEBUG; then
@@ -142,11 +152,17 @@ fi
 set -e
 
 # Disable fbcon cursor blinking to reduce interference from its 1-second timer and memory ops
-{ echo 0 > /sys/devices/virtual/graphics/fbcon/cursor_blink; } > /dev/null 2>&1 || true
+try_write /sys/devices/virtual/graphics/fbcon/cursor_blink 0
 
-# Enable cpuidle for more realistic conditions
-{ echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled; } > /dev/null 2>&1 || true
-{ echo 0 > /sys/module/msm_pm/parameters/sleep_disabled; } > /dev/null 2>&1 || true
+# Disable hung task detection
+try_write /proc/sys/kernel/hung_task_timeout_secs 0
+
+# Snapdragon: Enable cpuidle for more realistic conditions
+try_write /sys/module/lpm_levels/parameters/sleep_disabled 0
+try_write /sys/module/msm_pm/parameters/sleep_disabled 0
+
+# Exynos: Disable Exynos auto-hotplug to allow manual CPU control
+try_write /sys/power/cpuhotplug/enabled 0
 
 cat /proc/interrupts > /tmp/pre_bench_interrupts.txt
 
@@ -162,4 +178,4 @@ save_logs
 # To debug system load
 #htop
 
-reboot_end ''
+reboot_end

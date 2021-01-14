@@ -2,7 +2,7 @@
 
 # DEPENDENCIES: dropbear dhcp
 
-# Mount USB and SSH pseudo-filesystems
+# Mount USB and pty (SSH terminal) pseudo-filesystems
 mount -t configfs configfs /sys/kernel/config
 mkdir /dev/pts
 mount -t devpts devpts /dev/pts
@@ -14,7 +14,6 @@ hostname phone
 LOCAL_IP=10.15.19.82
 gadget=/sys/kernel/config/usb_gadget/g1
 strings=$gadget/strings/0x409
-serial=$strings/serialnumber
 func_config=$gadget/configs/c.1/strings/0x409
 mkdir -p $strings
 mkdir -p $func_config
@@ -24,7 +23,7 @@ echo -n 0x4daf > $gadget/idProduct
 # Product strings
 echo -n "Linux" > $strings/manufacturer
 echo -n "Alpine GNU/Linux" > $strings/product
-echo -n "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@$LOCAL_IP" > $serial
+echo -n "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@$LOCAL_IP" > $strings/serialnumber
 # RNDIS
 mkdir $gadget/functions/rndis.usb0
 echo -n rndis > $func_config/configuration
