@@ -164,6 +164,23 @@ try_write /sys/module/msm_pm/parameters/sleep_disabled 0
 # Exynos: Disable Exynos auto-hotplug to allow manual CPU control
 try_write /sys/power/cpuhotplug/enabled 0
 
+# Snapdragon: Initialize aDSP for power supply on newer SoCs
+# On Snapdragon 888 (Qualcomm kernel 5.4) devices and newer, the DSP is
+# responsible for power and charging, so we need to initialize it before we can
+# read power usage from the fuel gauge.
+if uname -r | grep -q '^5\.' && grep -q Qualcomm /proc/cpuinfo; then
+    # qrtr nameserver is required for DSP services to work properly
+    qrtr-ns &
+
+    echo "Booting DSP..."
+    echo -n 1 > /sys/kernel/boot_adsp/boot
+    sleep 3
+    if [[ "$(cat /sys/class/subsys/subsys_adsp/device/subsys1/state)" != "ONLINE" ]]; then
+        echo "Failed to boot aDSP!"
+        exit 1
+    fi
+fi
+
 cat /proc/interrupts > /tmp/pre_bench_interrupts.txt
 
 py_args=()
