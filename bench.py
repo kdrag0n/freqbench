@@ -43,6 +43,8 @@ POWER_SAMPLE_FG_DEFAULT_INTERVALS = {
     "qpnp,qg": 250,
     # qpnp-fg-gen3/4 update every 1000 ms
     "qpnp,fg": 1000,
+    # SM8350+ aDSP fuel gauge updates every 1000 ms
+    "qcom,pmic_glink": 1000,
 }
 
 # Needs to match init and cmdline
