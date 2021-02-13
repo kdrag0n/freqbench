@@ -175,7 +175,7 @@ if uname -r | grep -q '^5\.' && grep -q Qualcomm /proc/cpuinfo; then
     echo "Booting DSP..."
     echo -n 1 > /sys/kernel/boot_adsp/boot
     sleep 3
-    if [[ "$(cat /sys/class/subsys/subsys_adsp/device/subsys1/state)" != "ONLINE" ]]; then
+    if [[ "$(cat /sys/class/subsys/subsys_adsp/device/subsys*/state)" != "ONLINE" ]]; then
         echo "Failed to boot aDSP!"
         exit 1
     fi
