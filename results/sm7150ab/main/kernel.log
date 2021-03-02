@@ -1,0 +1,73 @@
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.14.117-Kensur (KenHV@Kensur) (gcc version 11.0.0 20210206 (experimental) (Eva GCC)) #1 SMP PREEMPT Tue Mar 2 15:29:34 IST 2021
+[    0.000000] Boot CPU: AArch64 Processor [51df805e]
+[    0.000000] Machine: liber
+[    0.000000] OF: reserved mem: OVERLAP DETECTED!
+               disp_rdump_region@9c000000 (0x000000009c000000--0x000000009d800000) overlaps with cont_splash_region@9c000000 (0x000000009c000000--0x000000009d800000)
+[    0.000000] OF: reserved mem: OVERLAP DETECTED!
+               cont_splash_region@9c000000 (0x000000009c000000--0x000000009d800000) overlaps with dfps_data_region@9e300000 (0x000000009d700000--0x000000009d800000)
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000ff800000, size 4 MiB
+[    0.000000] OF: reserved mem: initialized node cdsp_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000001fa800000, size 36 MiB
+[    0.000000] OF: reserved mem: initialized node mem_dump_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000fec00000, size 12 MiB
+[    0.000000] OF: reserved mem: initialized node adsp_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000fdc00000, size 16 MiB
+[    0.000000] OF: reserved mem: initialized node qseecom_ta_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000fd400000, size 8 MiB
+[    0.000000] OF: reserved mem: initialized node sp_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000fb400000, size 32 MiB
+[    0.000000] OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000f5800000, size 92 MiB
+[    0.000000] OF: reserved mem: initialized node secure_display_region, compatible id shared-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000085700000, size 6 MiB
+[    0.000000] OF: reserved mem: initialized node hyp_region@85700000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000085e00000, size 1 MiB
+[    0.000000] OF: reserved mem: initialized node xbl_aop_mem@85e00000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000085fff000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node sec_apps_region@85fff000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000086000000, size 2 MiB
+[    0.000000] OF: reserved mem: initialized node smem@86000000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000086200000, size 65 MiB
+[    0.000000] OF: reserved mem: initialized node removed_region@86200000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x000000008ab00000, size 5 MiB
+[    0.000000] OF: reserved mem: initialized node camera_region@8ab00000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x000000008b000000, size 132 MiB
+[    0.000000] OF: reserved mem: initialized node modem_region@8b000000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000093400000, size 5 MiB
+[    0.000000] OF: reserved mem: initialized node pil_video_region@93400000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000093900000, size 30 MiB
+[    0.000000] OF: reserved mem: initialized node cdsp_regions@93900000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000095700000, size 30 MiB
+[    0.000000] OF: reserved mem: initialized node pil_adsp_region@95700000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000097500000, size 1 MiB
+[    0.000000] OF: reserved mem: initialized node wlan_msa_region@97500000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000097680000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node npu_region@97680000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000097700000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node ips_fw_region@97700000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000097710000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node ipa_gsi_region@97710000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000097715000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node gpu_region@97715000, compatible id removed-dma-pool
+[    0.000000] Reserved memory: created DMA memory pool at 0x000000009e400000, size 20 MiB
+[    0.000000] OF: reserved mem: initialized node qseecom_region@9e400000, compatible id shared-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x000000009f800000, size 30 MiB
+[    0.000000] OF: reserved mem: initialized node cdsp_sec_regions@0x9f800000, compatible id removed-dma-pool
+[    0.000000] On node 0 totalpages: 1475018
+[    0.000000]   DMA zone: 6872 pages used for memmap
+[    0.000000]   DMA zone: 0 pages reserved
+[    0.000000]   DMA zone: 439754 pages, LIFO batch:31
+[    0.000000]   Normal zone: 16176 pages used for memmap
+[    0.000000]   Normal zone: 1035264 pages, LIFO batch:31
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.1
+[    0.000000] random: fast init done
+[    0.000000] random: get_random_bytes called from start_kernel+0xa4/0x50c with crng_init=1
+[    0.000000] percpu: Embedded 21 pages/cpu s54040 r0 d31976 u86016
+[    0.000000] pcpu-alloc: s54040 r0 d31976 u86016 alloc=21*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1451970
