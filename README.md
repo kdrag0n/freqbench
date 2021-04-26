@@ -173,7 +173,7 @@ Once you have a full energy model generated, pick out the parts you need and inc
 
 If you have an existing energy model that you want to use for idle and cluster costs, add it as an argument.
 
-Example usage: `./legacy_em.py results.json cap/power old_model.dtsi`
+Example usage: `./legacy_energy_model.py results.json cap/power old_model.dtsi`
 
 ### Simplified energy model
 
@@ -185,7 +185,7 @@ For Qualcomm SoCs on the msm-4.19 kernel, voltages can be obtained by booting th
 
 For msm-4.9 and msm-4.14, the process is the same but with [this commit](https://github.com/kdrag0n/proton_zf6/commit/f7cc2d654f1b9) and searching for `open_loop_voltage` instead.
 
-Example usage: `./simplified_em.py results.json 1.300000=580000 1.576000=580000 1.614400=580000 1.864000=644000 1.1075200=708000 1.1363200=788000 1.1516800=860000 1.1651200=888000 1.1804800=968000 6.652800=624000 6.940800=672000 6.1152000=704000 6.1478400=752000 6.1728000=820000 6.1900800=864000 6.2092800=916000 6.2208000=948000 7.806400=564000 7.1094400=624000 7.1401600=696000 7.1766400=776000 7.1996800=836000 7.2188800=888000 7.2304000=916000 7.2400000=940000`
+Example usage: `./simplified_energy_model.py results.json 1.300000=580000 1.576000=580000 1.614400=580000 1.864000=644000 1.1075200=708000 1.1363200=788000 1.1516800=860000 1.1651200=888000 1.1804800=968000 6.652800=624000 6.940800=672000 6.1152000=704000 6.1478400=752000 6.1728000=820000 6.1900800=864000 6.2092800=916000 6.2208000=948000 7.806400=564000 7.1094400=624000 7.1401600=696000 7.1766400=776000 7.1996800=836000 7.2188800=888000 7.2304000=916000 7.2400000=940000`
 
 ### Efficient frequencies (experimental)
 
