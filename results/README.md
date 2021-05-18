@@ -8,6 +8,7 @@ These are reference freqbench results that have been collected from various devi
 | ---------- | --------- | --------------- | ----------------------- | -------- |
 | exynos5250 | E5250     | Exynos 5250     | Google Nexus 10         | Low      |
 | msm8917    | MSM8917   | Snapdragon 425  | Xiaomi Redmi 5A         | Unknown  |
+| msm8940    | MSM8940   | Snapdragon 435  | Xiaomi Redmi 4X         | Unknown  |
 | msm8953    | MSM8953   | Snapdragon 625  | Xiaomi Redmi Note 4X    | Unknown  |
 | sdm632     | SDM632    | Snapdragon 632  | Motorola Moto E (2020)  | Unknown  |
 | sdm636     | SDM636    | Snapdragon 636  | Xiaomi Redmi Note 5/Pro | Unknown  |
