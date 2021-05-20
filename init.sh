@@ -164,6 +164,9 @@ try_write /sys/module/msm_pm/parameters/sleep_disabled 0
 # Exynos: Disable Exynos auto-hotplug to allow manual CPU control
 try_write /sys/power/cpuhotplug/enabled 0
 
+# Snapdragon: Decrease delay of qpnp_fg to 1000ms to get proper results
+try_write /sys/module/qpnp_fg/parameters/sram_update_period_ms 1000
+
 # Snapdragon: Initialize aDSP for power supply on newer SoCs
 # On Snapdragon 888 (Qualcomm kernel 5.4) devices and newer, the DSP is
 # responsible for power and charging, so we need to initialize it before we can
