@@ -11,6 +11,7 @@ These are reference freqbench results that have been collected from various devi
 | msm8940    | MSM8940   | Snapdragon 435  | Xiaomi Redmi 4X         | Unknown  |
 | msm8953    | MSM8953   | Snapdragon 625  | Xiaomi Redmi Note 4X    | Unknown  |
 | sdm632     | SDM632    | Snapdragon 632  | Motorola Moto E (2020)  | Unknown  |
+| sdm439     | SDM439    | Snapdragon 439  | Xiaomi Redmi 8A         | Unknown  |
 | sdm636     | SDM636    | Snapdragon 636  | Xiaomi Redmi Note 5/Pro | Unknown  |
 | sdm660     | SDM660    | Snapdragon 660  | Xiaomi Redmi Note 7     | Unknown  |
 | sm6125     | SM6125    | Snapdragon 665  | Xiaomi Mi A3            | Unknown  |
