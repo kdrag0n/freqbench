@@ -62,8 +62,8 @@ FREQ_IDLE_TIME = 5  # sec
 # To reduce chances of an array realloc + copy during benchmark runs
 PREALLOC_SECONDS = 300  # seconds of power sampling
 
-# CoreMark PERFORMANCE_RUN params with 250,000 iterations
-COREMARK_PERFORMANCE_RUN = ["0x0", "0x0", "0x66", "250000", "7", "1", "2000"]
+# CoreMark PERFORMANCE_RUN params with 280,000 iterations
+COREMARK_PERFORMANCE_RUN = ["0x0", "0x0", "0x66", "280000", "7", "1", "2000"]
 
 # Blank lines are for rounded corner & camera cutout protection
 BANNER = """
