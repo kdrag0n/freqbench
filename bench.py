@@ -406,8 +406,13 @@ def main():
 
             # Extract score and iterations
             match = re.search(r'CoreMark 1\.0 : ([0-9.]+?) / ', cm_out)
-            if not match.group(1) and "Must execute for at least 10 secs" in cm_out:
-                raise ValueError("Benchmark ran too fast; increase COREMARK_ITERATIONS and try again")
+            if not match.group(1):
+                if "Must execute for at least 10 secs" in cm_out:
+                    raise ValueError("Benchmark ran too fast; increase COREMARK_ITERATIONS and try again")
+                else:
+                    print(cm_out, file=sys.stderr)
+                    raise ValueError("Failed to parse CoreMark output")
+
             score = float(match.group(1))
             match = re.search(r'Iterations\s+:\s+(\d+)', cm_out)
             iters = float(match.group(1))
