@@ -63,7 +63,8 @@ FREQ_IDLE_TIME = 5  # sec
 PREALLOC_SECONDS = 300  # seconds of power sampling
 
 # CoreMark PERFORMANCE_RUN params with 250,000 iterations
-COREMARK_PERFORMANCE_RUN = ["0x0", "0x0", "0x66", "250000", "7", "1", "2000"]
+COREMARK_ITERATIONS = 250000
+COREMARK_PERFORMANCE_RUN = ["0x0", "0x0", "0x66", str(COREMARK_ITERATIONS), "7", "1", "2000"]
 
 # Blank lines are for rounded corner & camera cutout protection
 BANNER = """
