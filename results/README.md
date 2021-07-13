@@ -6,6 +6,7 @@ These are reference freqbench results that have been collected from various devi
 
 | Name       | SoC model | SoC name        | Device                  | Accuracy |
 | ---------- | --------- | --------------- | ----------------------- | -------- |
+| mt6853t    | MT6853T   | Dimensity 800U  | Xiaomi Redmi Note 9T    | Unknown  |
 | exynos5250 | E5250     | Exynos 5250     | Google Nexus 10         | Low      |
 | msm8917    | MSM8917   | Snapdragon 425  | Xiaomi Redmi 5A         | Unknown  |
 | msm8940    | MSM8940   | Snapdragon 435  | Xiaomi Redmi 4X         | Unknown  |
