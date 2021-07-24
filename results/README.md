@@ -4,6 +4,8 @@ These are reference freqbench results that have been collected from various devi
 
 ## Index
 
+<!-- When adding new SoCs, please sort new entries alphanumerically by SoC marketing name and set the accuracy to "Unknown". -->
+
 | Name       | SoC model | SoC name        | Device                  | Accuracy |
 | ---------- | --------- | --------------- | ----------------------- | -------- |
 | mt6853t    | MT6853T   | Dimensity 800U  | Xiaomi Redmi Note 9T    | Unknown  |
