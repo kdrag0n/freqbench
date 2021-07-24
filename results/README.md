@@ -19,6 +19,7 @@ These are reference freqbench results that have been collected from various devi
 | sm6150     | SM6150    | Snapdragon 675  | Xiaomi Redmi Note 7 Pro | Unknown  |
 | sdm712     | SDM712    | Snapdragon 712  | Xiaomi Mi 9 SE          | Unknown  |
 | sm7125     | SM7125    | Snapdragon 720G | Xiaomi Redmi Note 9S    | Unknown  |
+| sm7150     | SM7150-AA | Snapdragon 730  | Xiaomi Mi 9T            | Unknown  |
 | sm7150ab   | SM7150-AB | Snapdragon 730G | Motorola One Fusion+    | Unknown  |
 | sm7150ac   | SM7150-AC | Snapdragon 732G | Xiaomi Poco X3          | Unknown  |
 | sm7150ab   | SM7150-AB | Snapdragon 730G | Google Pixel 4a         | Verified |
