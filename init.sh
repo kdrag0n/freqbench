@@ -163,6 +163,7 @@ try_write /sys/module/msm_pm/parameters/sleep_disabled 0
 
 # Exynos: Disable Exynos auto-hotplug to allow manual CPU control
 try_write /sys/power/cpuhotplug/enabled 0
+try_write /sys/power/cpuhp/enabled 0
 
 # Snapdragon: Decrease delay of qpnp_fg to 1000ms to get proper results
 try_write /sys/module/qpnp_fg/parameters/sram_update_period_ms 1000
