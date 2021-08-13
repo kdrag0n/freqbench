@@ -32,3 +32,4 @@ These are reference freqbench results that have been collected from various devi
 | sm8150     | SM8150-AA | Snapdragon 855  | Asus ZenFone 6          | Verified |
 | sm8150ac   | SM8150-AC | Snapdragon 855+ | Asus ROG Phone II       | Verified |
 | sm8250     | SM8250    | Snapdragon 865  | Xiaomi Mi 10T Pro       | Unknown  |
+| sm8350     | SM8350    | Snapdragon 888  | Xiaomi Mi 11            | Unknown  |
