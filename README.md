@@ -179,7 +179,7 @@ Example usage: `./legacy_energy_model.py results.json cap/power old_model.dtsi`
 
 Create a simplified EAS energy model for use with newer kernels.
 
-Because voltages defined by the CPU frequency scaling driver cannot easily be accessed from userspace, you will need to provide them. Each frequency step for each cluster have its voltage specified as an argument: `cpu#.khz=microvolts`
+Because voltages defined by the CPU frequency scaling driver cannot easily be accessed from userspace, you will need to provide them. Pass the voltage for each frequency step as an argument: `cpu#.khz=microvolts`
 
 For Qualcomm SoCs on the msm-4.19 kernel, voltages can be obtained by booting the kernel (with or without freqbench doesn't matter, as long as you can get kernel logs) with [this commit](https://github.com/kdrag0n/proton_kernel_redbull/commit/8db0557716a4) and searching for lines containing `volt=` in the kernel log.
 
