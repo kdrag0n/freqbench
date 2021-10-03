@@ -8,6 +8,7 @@ These are reference freqbench results that have been collected from various devi
 
 | Name       | SoC model | SoC name        | Device                  | Accuracy |
 | ---------- | --------- | --------------- | ----------------------- | -------- |
+| t8103      | T8103     | Apple M1        | MacBook Air (Late 2020) | Unknown  |
 | mt6853t    | MT6853T   | Dimensity 800U  | Xiaomi Redmi Note 9T    | Unknown  |
 | exynos5250 | E5250     | Exynos 5250     | Google Nexus 10         | Low      |
 | exynos9611 | E9610     | Exynos 9611     | Samsung Galaxy M21      | Unknown  |
