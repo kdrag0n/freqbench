@@ -1,0 +1,320 @@
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x611f0221]
+[    0.000000] Linux version 5.15.0-rc2-12214-g82f5b5e5541a (kdrag0n@pinwheel) (aarch64-linux-gnu-gcc (GCC) 11.2.0, GNU ld (GNU Binutils) 2.37) #20 SMP PREEMPT Sat Oct 2 19:00:17 PDT 2021
+[    0.000000] Machine model: Apple MacBook Air (M1, 2020)
+[    0.000000] earlycon: s5l0 at MMIO32 0x0000000235200000 (options '')
+[    0.000000] printk: bootconsole [s5l0] enabled
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x00000008019c4000-0x00000009d93e3fff]
+[    0.000000]   DMA32    empty
+[    0.000000]   Normal   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x00000008019c4000-0x00000009d93e3fff]
+[    0.000000] Initmem setup node 0 [mem 0x00000008019c4000-0x00000009d93e3fff]
+[    0.000000] On node 0, zone DMA: 775 pages in unavailable ranges
+[    0.000000] percpu: Embedded 4 pages/cpu s34200 r0 d31336 u65536
+[    0.000000] pcpu-alloc: s34200 r0 d31336 u65536 alloc=4*16384
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: detected: Address authentication (IMP DEF algorithm)
+[    0.000000] CPU features: detected: Virtualization Host Extensions
+[    0.000000] CPU features: detected: Spectre-v4
+[    0.000000] alternatives: patching kernel code
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 481065
+[    0.000000] Kernel command line: earlycon console=tty0 rcu_nocbs=0-7 isolcpus=1-7 nohz_full=1-7
+[    0.000000] Dentry cache hash table entries: 1048576 (order: 9, 8388608 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 524288 (order: 8, 4194304 bytes, linear)
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 7644992K/7727232K available (13056K kernel code, 1094K rwdata, 2960K rodata, 1280K init, 435K bss, 82240K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU dyntick-idle grace-period acceleration is enabled.
+[    0.000000] 	Trampoline variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] Root IRQ handler: aic_handle_irq
+[    0.000000] Root FIQ handler: aic_handle_fiq
+[    0.000000] irq_apple_aic: Initialized with 896 IRQs, 4 FIQs, 32 vIPIs
+[    0.000000] NO_HZ: Full dynticks CPUs: 1-7.
+[    0.000000] rcu: 	Offload RCU callbacks from CPUs: 0-7.
+[    0.000000] random: get_random_bytes called from start_kernel+0x474/0x654 with crng_init=0
+[    0.000000] arch_timer: cp15 timer(s) running at 24.00MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x588fe9dc0, max_idle_ns: 440795202592 ns
+[    0.000000] sched_clock: 56 bits at 24MHz, resolution 41ns, wraps every 4398046511097ns
+[    0.008064] Console: colour dummy device 80x25
+[    0.012470] printk: console [tty0] enabled
+[    0.016568] printk: bootconsole [s5l0] disabled
+[    0.021112] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=240000)
+[    0.021117] pid_max: default: 32768 minimum: 301
+[    0.021133] LSM: Security Framework initializing
+[    0.021146] Mount-cache hash table entries: 16384 (order: 3, 131072 bytes, linear)
+[    0.021151] Mountpoint-cache hash table entries: 16384 (order: 3, 131072 bytes, linear)
+[    0.021464] rcu: Hierarchical SRCU implementation.
+[    0.021559] smp: Bringing up secondary CPUs ...
+[    0.021623] Detected VIPT I-cache on CPU1
+[    0.021633] CPU1: Booted secondary processor 0x0000000001 [0x611f0221]
+[    0.021719] Detected VIPT I-cache on CPU2
+[    0.021727] CPU2: Booted secondary processor 0x0000000002 [0x611f0221]
+[    0.021802] Detected VIPT I-cache on CPU3
+[    0.021809] CPU3: Booted secondary processor 0x0000000003 [0x611f0221]
+[    0.021901] Detected VIPT I-cache on CPU4
+[    0.021928] CPU4: Booted secondary processor 0x0000010100 [0x611f0231]
+[    0.022061] Detected VIPT I-cache on CPU5
+[    0.022081] CPU5: Booted secondary processor 0x0000010101 [0x611f0231]
+[    0.022198] Detected VIPT I-cache on CPU6
+[    0.022218] CPU6: Booted secondary processor 0x0000010102 [0x611f0231]
+[    0.022341] Detected VIPT I-cache on CPU7
+[    0.022361] CPU7: Booted secondary processor 0x0000010103 [0x611f0231]
+[    0.022415] smp: Brought up 1 node, 8 CPUs
+[    0.022434] SMP: Total of 8 processors activated.
+[    0.022437] CPU features: detected: ARMv8.4 Translation Table Level
+[    0.022439] CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+[    0.022442] CPU features: detected: Common not Private translations
+[    0.022444] CPU features: detected: CRC32 instructions
+[    0.022446] CPU features: detected: E0PD
+[    0.022449] CPU features: detected: Generic authentication (IMP DEF algorithm)
+[    0.022451] CPU features: detected: RCpc load-acquire (LDAPR)
+[    0.022453] CPU features: detected: LSE atomic instructions
+[    0.022455] CPU features: detected: Privileged Access Never
+[    0.022457] CPU features: detected: RAS Extension Support
+[    0.022459] CPU features: detected: Speculation barrier (SB)
+[    0.022461] CPU features: detected: Stage-2 Force Write-Back
+[    0.022463] CPU features: detected: TLB range maintenance instructions
+[    0.022465] CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+[    0.040782] CPU: All CPU(s) started at EL2
+[    0.041143] devtmpfs: initialized
+[    0.041547] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.041553] futex hash table entries: 2048 (order: 3, 131072 bytes, linear)
+[    0.041578] pinctrl core: initialized pinctrl subsystem
+[    0.041656] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.041859] DMA: preallocated 1024 KiB GFP_KERNEL pool for atomic allocations
+[    0.041877] DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.041896] DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.041953] thermal_sys: Registered thermal governor 'step_wise'
+[    0.041954] thermal_sys: Registered thermal governor 'user_space'
+[    0.041980] cpuidle: using governor ladder
+[    0.041986] cpuidle: using governor menu
+[    0.041991] NET: Registered PF_QIPCRTR protocol family
+[    0.042016] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.042107] ASID allocator initialised with 256 entries
+[    0.042113] Serial: AMBA PL011 UART driver
+[    0.044049] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.044052] HugeTLB registered 32.0 MiB page size, pre-allocated 0 pages
+[    0.044055] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.044350] cryptd: max_cpu_qlen set to 1000
+[    0.051134] random: fast init done
+[    0.052226] random: crng init done
+[    0.212284] raid6: neonx8   gen() 10127 MB/s
+[    0.382299] raid6: neonx8   xor()  8544 MB/s
+[    0.552316] raid6: neonx4   gen() 10132 MB/s
+[    0.722336] raid6: neonx4   xor()  8818 MB/s
+[    0.892360] raid6: neonx2   gen()  9986 MB/s
+[    1.062399] raid6: neonx2   xor()  8552 MB/s
+[    1.232426] raid6: neonx1   gen()  8502 MB/s
+[    1.402445] raid6: neonx1   xor()  7074 MB/s
+[    1.572481] raid6: int64x8  gen()  4160 MB/s
+[    1.742510] raid6: int64x8  xor()  2386 MB/s
+[    1.912542] raid6: int64x4  gen()  4311 MB/s
+[    2.082572] raid6: int64x4  xor()  2573 MB/s
+[    2.252587] raid6: int64x2  gen()  3776 MB/s
+[    2.422602] raid6: int64x2  xor()  2189 MB/s
+[    2.592658] raid6: int64x1  gen()  2938 MB/s
+[    2.762675] raid6: int64x1  xor()  1671 MB/s
+[    2.762677] raid6: using algorithm neonx4 gen() 10132 MB/s
+[    2.762679] raid6: .... xor() 8818 MB/s, rmw enabled
+[    2.762682] raid6: using neon recovery algorithm
+[    2.762700] iommu: Default domain type: Translated 
+[    2.762702] iommu: DMA domain TLB invalidation policy: strict mode 
+[    2.762724] vgaarb: loaded
+[    2.762761] SCSI subsystem initialized
+[    2.762784] usbcore: registered new interface driver usbfs
+[    2.762790] usbcore: registered new interface driver hub
+[    2.762797] usbcore: registered new device driver usb
+[    2.762822] mc: Linux media interface: v0.10
+[    2.762827] videodev: Linux video capture interface: v2.00
+[    2.762869] Advanced Linux Sound Architecture Driver Initialized.
+[    2.762966] Bluetooth: Core ver 2.22
+[    2.762970] NET: Registered PF_BLUETOOTH protocol family
+[    2.762972] Bluetooth: HCI device and connection manager initialized
+[    2.762976] Bluetooth: HCI socket layer initialized
+[    2.762978] Bluetooth: L2CAP socket layer initialized
+[    2.762981] Bluetooth: SCO socket layer initialized
+[    2.763000] nfc: nfc_init: NFC Core ver 0.1
+[    2.763009] NET: Registered PF_NFC protocol family
+[    2.763058] clocksource: Switched to clocksource arch_sys_counter
+[    2.763086] VFS: Disk quotas dquot_6.6.0
+[    2.763096] VFS: Dquot-cache hash table entries: 2048 (order 0, 16384 bytes)
+[    2.763184] simple-framebuffer 9df4e4000.framebuffer: framebuffer at 0x9df4e4000, 0xfa0000 bytes
+[    2.763189] simple-framebuffer 9df4e4000.framebuffer: format=x2r10g10b10, mode=2560x1600x32, linelength=10240
+[    2.770403] Console: switching to colour frame buffer device 160x50
+[    2.777333] simple-framebuffer 9df4e4000.framebuffer: fb0: simplefb registered!
+[    2.778079] NET: Registered PF_INET protocol family
+[    2.778163] IP idents hash table entries: 131072 (order: 6, 1048576 bytes, linear)
+[    2.779734] tcp_listen_portaddr_hash hash table entries: 4096 (order: 2, 65536 bytes, linear)
+[    2.779834] TCP established hash table entries: 65536 (order: 5, 524288 bytes, linear)
+[    2.779983] TCP bind hash table entries: 65536 (order: 6, 1048576 bytes, linear)
+[    2.780158] TCP: Hash tables configured (established 65536 bind 65536)
+[    2.780240] UDP hash table entries: 4096 (order: 3, 131072 bytes, linear)
+[    2.780329] UDP-Lite hash table entries: 4096 (order: 3, 131072 bytes, linear)
+[    2.780445] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    2.780567] RPC: Registered named UNIX socket transport module.
+[    2.780631] RPC: Registered udp transport module.
+[    2.780682] RPC: Registered tcp transport module.
+[    2.780732] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    2.780900] PCI: CLS 0 bytes, default 64
+[    2.780998] Unpacking initramfs...
+[    2.958937] Freeing initrd memory: 13280K
+[    2.959595] Initialise system trusted keyrings
+[    2.959894] workingset: timestamp_bits=46 max_order=19 bucket_order=0
+[    2.960925] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    2.961195] NFS: Registering the id_resolver key type
+[    2.961253] Key type id_resolver registered
+[    2.963469] Key type id_legacy registered
+[    2.965638] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    2.967856] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+[    2.970135] fuse: init (API version 7.34)
+[    2.972487] 9p: Installing v9fs 9p2000 file system support
+[    2.987757] NET: Registered PF_ALG protocol family
+[    2.990061] xor: measuring software checksum speed
+[    2.993283]    8regs           : 11180 MB/sec
+[    2.996255]    32regs          : 14262 MB/sec
+[    2.999054]    arm64_neon      : 17796 MB/sec
+[    3.001276] xor: using function: arm64_neon (17796 MB/sec)
+[    3.003513] Key type asymmetric registered
+[    3.005736] Asymmetric key parser 'x509' registered
+[    3.007993] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 250)
+[    3.010295] io scheduler mq-deadline registered
+[    3.012590] io scheduler kyber registered
+[    3.015179] apple-cluster-clk 210e20000.clock-controller: Initializing cluster (DVMR: 0)
+[    3.018261] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    3.020957] 235200000.serial: ttySAC0 at MMIO 0x235200000 (irq = 37, base_baud = 0) is a APPLE S5L
+[    3.023456] 235208000.serial: ttySAC2 at MMIO 0x235208000 (irq = 38, base_baud = 0) is a APPLE S5L
+[    3.027083] apple-dart 382f00000.iommu: DART [pagesize 4000, bypass support: 1, bypass forced: 0] initialized
+[    3.029517] apple-dart 382f80000.iommu: DART [pagesize 4000, bypass support: 1, bypass forced: 0] initialized
+[    3.031886] apple-dart 502f00000.iommu: DART [pagesize 4000, bypass support: 1, bypass forced: 0] initialized
+[    3.034405] apple-dart 502f80000.iommu: DART [pagesize 4000, bypass support: 1, bypass forced: 0] initialized
+[    3.036687] cacheinfo: Unable to detect cache hierarchy for CPU 0
+[    3.039435] loop: module loaded
+[    3.054838] wireguard: WireGuard 1.0.0 loaded. See www.wireguard.com for information.
+[    3.057042] wireguard: Copyright (C) 2015-2019 Jason A. Donenfeld <Jason@zx2c4.com>. All Rights Reserved.
+[    3.059338] libphy: Fixed MDIO Bus: probed
+[    3.061526] tun: Universal TUN/TAP device driver, 1.6
+[    3.063825] CAN device driver interface
+[    3.066026] usbcore: registered new interface driver rtl8150
+[    3.068164] usbcore: registered new interface driver r8152
+[    3.070268] usbcore: registered new interface driver lan78xx
+[    3.072660] usbcore: registered new interface driver asix
+[    3.074729] usbcore: registered new interface driver ax88179_178a
+[    3.076727] usbcore: registered new interface driver cdc_ether
+[    3.078731] usbcore: registered new interface driver dm9601
+[    3.080709] usbcore: registered new interface driver CoreChips
+[    3.082652] usbcore: registered new interface driver smsc75xx
+[    3.084618] usbcore: registered new interface driver smsc95xx
+[    3.086558] usbcore: registered new interface driver net1080
+[    3.088439] usbcore: registered new interface driver plusb
+[    3.090288] usbcore: registered new interface driver cdc_subset
+[    3.092089] usbcore: registered new interface driver MOSCHIP usb-ethernet driver
+[    3.093961] usbcore: registered new interface driver ipheth
+[    3.095741] usbcore: registered new interface driver cdc_ncm
+[    3.097558] dwc3 382280000.usb: Adding to iommu group 0
+[    3.133110] dwc3 502280000.usb: Adding to iommu group 1
+[    3.173179] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    3.174870] ehci-pci: EHCI PCI platform driver
+[    3.176543] ehci-platform: EHCI generic platform driver
+[    3.178263] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    3.179985] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 1
+[    3.181798] xhci-hcd xhci-hcd.0.auto: hcc params 0x0238ffcd hci version 0x110 quirks 0x0000000000010010
+[    3.183581] xhci-hcd xhci-hcd.0.auto: irq 40, io mem 0x382280000
+[    3.185459] hub 1-0:1.0: USB hub found
+[    3.187222] hub 1-0:1.0: 1 port detected
+[    3.189014] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    3.190789] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 2
+[    3.192548] xhci-hcd xhci-hcd.0.auto: Host supports USB 3.1 Enhanced SuperSpeed
+[    3.194527] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[    3.196395] hub 2-0:1.0: USB hub found
+[    3.198143] hub 2-0:1.0: 1 port detected
+[    3.199910] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+[    3.201611] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 3
+[    3.203452] xhci-hcd xhci-hcd.1.auto: hcc params 0x0238ffcd hci version 0x110 quirks 0x0000000000010010
+[    3.205183] xhci-hcd xhci-hcd.1.auto: irq 42, io mem 0x502280000
+[    3.207094] hub 3-0:1.0: USB hub found
+[    3.208860] hub 3-0:1.0: 1 port detected
+[    3.210682] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+[    3.212453] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 4
+[    3.214263] xhci-hcd xhci-hcd.1.auto: Host supports USB 3.1 Enhanced SuperSpeed
+[    3.216075] usb usb4: We don't know the algorithms for LPM for this host, disabling LPM.
+[    3.217893] hub 4-0:1.0: USB hub found
+[    3.219580] hub 4-0:1.0: 1 port detected
+[    3.221317] usbcore: registered new interface driver cdc_acm
+[    3.223005] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    3.224874] usbcore: registered new interface driver uas
+[    3.226655] usbcore: registered new interface driver usb-storage
+[    3.228450] usbcore: registered new interface driver cp210x
+[    3.230233] usbserial: USB Serial support registered for cp210x
+[    3.232068] usbcore: registered new interface driver ftdi_sio
+[    3.233986] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    3.235930] usbcore: registered new interface driver option
+[    3.237865] usbserial: USB Serial support registered for GSM modem (1-port)
+[    3.239916] udc-core: couldn't find an available UDC - added [g_serial] to list of pending drivers
+[    3.241994] udc-core: couldn't find an available UDC - added [g_cdc] to list of pending drivers
+[    3.244206] i2c_dev: i2c /dev entries driver
+[    3.246338] usbcore: registered new interface driver uvcvideo
+[    3.248495] gspca_main: v2.14.0 registered
+[    3.250725] device-mapper: ioctl: 4.45.0-ioctl (2021-03-22) initialised: dm-devel@redhat.com
+[    3.252978] Bluetooth: HCI UART driver ver 2.3
+[    3.255415] Bluetooth: HCI UART protocol H4 registered
+[    3.257680] Bluetooth: HCI UART protocol LL registered
+[    3.259940] Bluetooth: HCI UART protocol QCA registered
+[    3.262165] usbcore: registered new interface driver btusb
+[    3.264602] usbcore: registered new interface driver usbhid
+[    3.266794] usbhid: USB HID core driver
+[    3.268994] apple-mcc 200200000.memory-controller: MCC performance driver initialized
+[    3.271306] GACT probability NOT on
+[    3.273805] Mirror/redirect action on
+[    3.276456] NET: Registered PF_INET6 protocol family
+[    3.278756] Segment Routing with IPv6
+[    3.280939] In-situ OAM (IOAM) with IPv6
+[    3.283130] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    3.285434] NET: Registered PF_PACKET protocol family
+[    3.287642] can: controller area network core
+[    3.289806] NET: Registered PF_CAN protocol family
+[    3.291924] can: raw protocol
+[    3.294082] can: broadcast manager protocol
+[    3.296197] can: netlink gateway - max_hops=1
+[    3.298313] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    3.300419] Bluetooth: HIDP socket layer initialized
+[    3.302494] 8021q: 802.1Q VLAN Support v1.8
+[    3.304621] 9pnet: Installing 9P2000 support
+[    3.306706] Key type dns_resolver registered
+[    3.308826] registered taskstats version 1
+[    3.310869] Loading compiled-in X.509 certificates
+[    3.313090] Btrfs loaded, crc32c=crc32c-generic, zoned=no, fsverity=no
+[    3.315206] apple-cluster-clk 211e20000.clock-controller: Initializing cluster (DVMR: 1)
+[    3.317588] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    3.319739] apple-pmgr-pwrstate 23b700000.power-management:power-controller@418: PS 0x418: pwrstate = 0x0: 0xf0000f0
+[    3.319745] apple-pmgr-pwrstate 23b700000.power-management:power-controller@348: PS 0x348: pwrstate = 0x0: 0xf0
+[    3.319749] apple-pmgr-pwrstate 23b700000.power-management:power-controller@288: PS 0x288: pwrstate = 0x0: 0xf0
+[    3.319754] apple-pmgr-pwrstate 23b700000.power-management:power-controller@278: PS 0x278: pwrstate = 0x0: 0xf0
+[    3.320027] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    3.322142] ALSA device list:
+[    3.324208]   No soundcards found.
+[    3.326319] Freeing unused kernel memory: 1280K
+[    3.328394] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    3.330550] platform regulatory.0: Falling back to sysfs fallback for: regulatory.db
+[    3.353095] Run /init as init process
+[    3.355682]   with arguments:
+[    3.355683]     /init
+[    3.355684]   with environment:
+[    3.355684]     HOME=/
+[    3.355685]     TERM=linux
+[    3.493060] usb 3-1: new high-speed USB device number 2 using xhci-hcd
+[    3.674411] usb-storage 3-1:1.0: USB Mass Storage device detected
+[    3.677878] scsi host0: usb-storage 3-1:1.0
+[    4.714142] scsi 0:0:0:0: Direct-Access     SanDisk  Ultra Fit        1.00 PQ: 0 ANSI: 6
+[    4.722033] sd 0:0:0:0: [sda] 242614272 512-byte logical blocks: (124 GB/116 GiB)
+[    4.725696] sd 0:0:0:0: [sda] Write Protect is off
+[    4.728267] sd 0:0:0:0: [sda] Mode Sense: 43 00 00 00
+[    4.728609] sd 0:0:0:0: [sda] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[    4.780697]  sda: sda1
+[    4.858375] sd 0:0:0:0: [sda] Attached SCSI removable disk
+[   64.473114] cfg80211: failed to load regulatory.db
