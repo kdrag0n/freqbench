@@ -10,6 +10,7 @@ These are reference freqbench results that have been collected from various devi
 | ---------- | --------- | --------------- | ----------------------- | -------- |
 | t8103      | T8103     | Apple M1        | MacBook Air (Late 2020) | Unknown  |
 | mt6853t    | MT6853T   | Dimensity 800U  | Xiaomi Redmi Note 9T    | Unknown  |
+| mt6768     | MT6769V/CB| Helio G70       | Realme C3               | Unknown  |
 | exynos5250 | E5250     | Exynos 5250     | Google Nexus 10         | Low      |
 | exynos9611 | E9610     | Exynos 9611     | Samsung Galaxy M21      | Unknown  |
 | msm8917    | MSM8917   | Snapdragon 425  | Xiaomi Redmi 5A         | Unknown  |
