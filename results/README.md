@@ -21,6 +21,7 @@ These are reference freqbench results that have been collected from various devi
 | sdm630     | SDM630    | Snapdragon 630  | Sony Xperia 8           | Unknown  |
 | sdm636     | SDM636    | Snapdragon 636  | Xiaomi Redmi Note 5/Pro | Unknown  |
 | sdm660     | SDM660    | Snapdragon 660  | Xiaomi Redmi Note 7     | Unknown  |
+| sm6115     | SM6115    | Snapdragon 662  | Xiaomi Poco M3          | Unknown  |
 | sm6125     | SM6125    | Snapdragon 665  | Xiaomi Mi A3            | Unknown  |
 | sm6150     | SM6150    | Snapdragon 675  | Xiaomi Redmi Note 7 Pro | Unknown  |
 | sm6150ac   | SM6150-AC | Snapdragon 678  | Xiaomi Redmi Note 10    | Unknown  |
