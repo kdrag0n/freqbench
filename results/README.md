@@ -33,6 +33,7 @@ These are reference freqbench results that have been collected from various devi
 | sm7150ac   | SM7150-AC | Snapdragon 732G | Xiaomi Poco X3          | Unknown  |
 | sm7150ab   | SM7150-AB | Snapdragon 730G | Google Pixel 4a         | Verified |
 | sm7250ab   | SM7250-AB | Snapdragon 765G | Google Pixel 5          | Verified |
+| sm7325     | SM7325    | Snapdragon 778G | Xiaomi 11 Lite NE       | Unknown  |
 | msm8998    | MSM8998   | Snapdragon 835  | Google Pixel 2 XL       | Verified |
 | sdm845     | SDM845    | Snapdragon 845  | Xiaomi Mi Mix 2S        | Unknown  |
 | sm8150     | SM8150-AA | Snapdragon 855  | Asus ZenFone 6          | Verified |
