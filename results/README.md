@@ -12,6 +12,7 @@ These are reference freqbench results that have been collected from various devi
 | mt6853t    | MT6853T   | Dimensity 800U  | Xiaomi Redmi Note 9T    | Unknown  |
 | mt6768     | MT6769V/CB| Helio G70       | Realme C3               | Unknown  |
 | exynos5250 | E5250     | Exynos 5250     | Google Nexus 10         | Low      |
+| exynos7904 | E7904     | Exynos 7904     | Samsung Galaxy M20      | Unknown  |
 | exynos9611 | E9610     | Exynos 9611     | Samsung Galaxy M21      | Unknown  |
 | msm8917    | MSM8917   | Snapdragon 425  | Xiaomi Redmi 5A         | Unknown  |
 | msm8940    | MSM8940   | Snapdragon 435  | Xiaomi Redmi 4X         | Unknown  |

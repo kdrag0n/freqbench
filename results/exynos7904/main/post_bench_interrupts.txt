@@ -1,0 +1,126 @@
+           CPU0       
+  5:          0       GIC 266 Edge      mct_comp_irq
+  6:      24459       GIC 270 Edge      mct_tick0
+  7:          0       GIC 271 Edge      mct_tick1
+  8:          0       GIC 272 Edge      mct_tick2
+  9:          0       GIC 273 Edge      mct_tick3
+ 10:          0       GIC 274 Edge      mct_tick4
+ 11:          0       GIC 275 Edge      mct_tick5
+ 12:          0       GIC 276 Edge      mct_tick6
+ 13:          0       GIC 277 Edge      mct_tick7
+ 14:          0       GIC 160 Edge      148c0000.sysmmu
+ 15:          0       GIC 159 Edge      148c0000.sysmmu
+ 16:          0       GIC 161 Edge      14a30000.sysmmu_abox
+ 17:          0       GIC 339 Edge      14540000.sysmmu
+ 18:          0       GIC 340 Edge      14540000.sysmmu
+ 19:          0       GIC 349 Edge      14730000.sysmmu
+ 20:          0       GIC 350 Edge      14730000.sysmmu
+ 21:          0       GIC 353 Edge      14760000.sysmmu
+ 22:          0       GIC 354 Edge      14760000.sysmmu
+ 23:          0       GIC 230 Edge      12c50000.sysmmu
+ 24:          0       GIC 231 Edge      12c50000.sysmmu
+ 43:          0       GIC 182 Edge      13430000.pinctrl
+ 44:          0       GIC 298 Edge      139b0000.pinctrl
+ 45:          0       GIC 191 Edge      11500000.mali
+ 46:          0       GIC 192 Edge      11500000.mali
+ 47:          1       GIC 190 Edge      11500000.mali
+ 60:          0       GIC 104 Edge      ITMON_DATA
+ 61:          0       GIC 105 Edge      ITMON_PERI
+ 62:          0       GIC  66 Edge      11ce0000.speedy
+ 64:         65       GIC 178 Edge      dw-mci
+ 65:        113       GIC 179 Edge      dw-mci
+ 66:          0       GIC 289 Edge      138a0000.hsi2c
+ 67:          0       GIC 290 Edge      138b0000.hsi2c
+ 68:          0       GIC 291 Edge      138c0000.hsi2c
+ 69:          0       GIC 292 Edge      138d0000.hsi2c
+ 70:         86       GIC 299 Edge      13920000.hsi2c
+ 71:        494       GIC 300 Edge      13930000.hsi2c
+ 72:          0       GIC 303 Edge      13940000.hsi2c
+ 73:      33802       GIC 280 Edge      13830000.i2c
+ 74:       2509       GIC 281 Edge      13840000.i2c
+ 75:          0       GIC 282 Edge      13850000.i2c
+ 76:          5       GIC 283 Edge      13860000.i2c
+ 77:          0       GIC 284 Edge      13870000.i2c
+ 78:         54       GIC 285 Edge      13880000.i2c
+ 79:        150       GIC 286 Edge      13890000.i2c
+ 80:          0       GIC 288 Edge      spi-s3c64xx
+ 81:          0       GIC 153 Edge      14851000.dpp
+ 82:          0       GIC 154 Edge      14852000.dpp
+ 83:          0       GIC 155 Edge      14853000.dpp
+ 84:          0       GIC 156 Edge      14854000.dpp
+ 85:          0       GIC 152 Edge      14854000.dpp
+ 86:     214184       GIC 157 Edge      14870000.dsim
+ 87:          0       GIC 147 Edge      14860000.decon_f
+ 88:          1       GIC 146 Edge      14860000.decon_f
+ 89:     107091       GIC 145 Edge      14860000.decon_f
+ 90:          0       GIC 144 Edge      14860000.decon_f
+ 91:          0       GIC 151 Edge      14af1000.abox_gic
+ 92:          0       GIC 226 Edge      12c00000.smfc
+ 93:          0       GIC 227 Edge      12c10000.scaler
+ 94:          0       GIC 228 Edge      12c20000.fimg2d
+ 98:          0       GIC 229 Edge      12c30000.mfc0
+ 99:          0       GIC  54 Edge      11c40000.acpm_ipc
+100:          0       GIC 265 Edge      10060000.watchdog
+101:        600       GIC  92 Edge      120a0000.adc
+105:          0       GIC  94 Edge      12020000.pdma0
+106:          0       GIC 256 Edge      seclog
+107:          2       GIC 255 Edge      trustonic
+110:          0       GIC 254 Edge      mmc-srpmb
+111:          1       GIC 263 Edge      10070000.BIG, 10070000.LITTLE
+112:          1       GIC 312 Edge      10074000.G3D
+113:          0       GIC 333 Edge      fimc3aa0-0
+114:          0       GIC 334 Edge      fimc3aa0-1
+115:          0       GIC 335 Edge      fimc3aa1-0
+116:          0       GIC 336 Edge      fimc3aa1-1
+117:          0       GIC 342 Edge      fimcisp0-0
+118:          0       GIC 343 Edge      fimcisp0-1
+119:          0       GIC 346 Edge      fimcmcs0-0
+120:          0       GIC 344 Edge      fimcvra-1
+126:          0       GIC  51 Edge      cp_fail
+127:          0       GIC 249 Edge      cp_wdt
+128:          0       GIC  87 Edge      12080000.mcu_ipc
+129:          0       GIC  88 Edge      120d0000.mcu_ipc
+130:          0       GIC  52 Edge      kepler_active_handler
+131:          0       GIC 197 Edge      kepler_wdt_handler
+132:          0       GIC 196 Edge      kepler_wakelock_handler
+133:          0  exynos7_wkup_irq_chip   2 Level     s2mu004-irq
+144:          0   s2mpu08 Edge      rtc-alarm0
+157:          0  exynos7_wkup_irq_chip   0 Level     s2mpu08-irq
+158:          2  exynos7_wkup_irq_chip   6 Edge      usim_detect0
+159:          0   s2mu004 Edge      sys-irq
+161:          0   s2mu004 Edge      chg_fault-irq
+162:          0   s2mu004 Edge      restart-irq
+163:          0   s2mu004 Edge      done-irq
+166:          0   s2mu004 Edge      chgin-irq
+173:          0   s2mu004 Edge      bat-irq
+174:          0   s2mu004 Edge      muic-vbadc
+175:          0   s2mu004 Edge      muic-vdnmon
+177:          0   s2mu004 Edge      muic-mpnack
+179:          0   s2mu004 Edge      muic-mrxtrf
+181:          0   s2mu004 Edge      muic-mrxrdy
+182:          0   s2mu004 Edge      muic-attach
+183:          0   s2mu004 Edge      muic-detach
+187:          0   s2mu004 Edge      muic-rid_chg
+188:          0   s2mu004 Edge      muic-vbus_on
+189:          0   s2mu004 Edge      muic-rsvd_attach
+190:          0   s2mu004 Edge      muic-adc_change
+194:          0   s2mu004 Edge      muic-av_charge
+195:          0   s2mu004 Edge      muic-vbus_off
+198:          0  exynos7_wkup_irq_chip   0 Edge      hxcommon
+199:          2  exynos7_wkup_irq_chip   7 Edge      tflash_det
+200:          0  exynos7_wkup_irq_chip   4 Edge      fuelgauge-irq
+201:          1  exynos7_wkup_irq_chip   3 Edge      lsm6dsl
+202:          0  exynos7_wkup_irq_chip   4 Edge      proximity_int
+203:          0  exynos7_wkup_irq_chip   7 Edge      TC3XXK
+204:          0  exynos7_wkup_irq_chip   6 Edge      gpio-keys: KEY_VOLUMEDOWN
+205:          0  exynos7_wkup_irq_chip   5 Edge      gpio-keys: KEY_VOLUMEUP
+206:          0  exynos7_wkup_irq_chip   7 Edge      gpio-keys: KEY_POWER
+207:          0  exynos7_wkup_irq_chip   3 Level     s2mu004-usbpd
+IPI0:      5733       Rescheduling interrupts
+IPI1:        12       Function call interrupts
+IPI2:         2       Single function call interrupts
+IPI3:         0       CPU stop interrupts
+IPI4:         0       Timer broadcast interrupts
+IPI5:         0       IRQ work interrupts
+IPI6:         0       CPU wake-up interrupts
+Err:          0
