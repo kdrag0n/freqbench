@@ -27,6 +27,7 @@ These are reference freqbench results that have been collected from various devi
 | sm6150     | SM6150    | Snapdragon 675  | Xiaomi Redmi Note 7 Pro | Unknown  |
 | sm6150ac   | SM6150-AC | Snapdragon 678  | Xiaomi Redmi Note 10    | Unknown  |
 | sdm712     | SDM712    | Snapdragon 712  | Xiaomi Mi 9 SE          | Unknown  |
+| sdm712     | SDM712    | Snapdragon 712  | Realme 5 Pro            | Unknown  |
 | sdm712     | SDM712    | Snapdragon 712  | Realme XT               | Unknown  |
 | sm7125     | SM7125    | Snapdragon 720G | Xiaomi Redmi Note 9S    | Unknown  |
 | sm7150     | SM7150-AA | Snapdragon 730  | Xiaomi Mi 9T            | Unknown  |
