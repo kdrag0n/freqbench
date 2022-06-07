@@ -310,7 +310,7 @@ def init_power():
     thread = start_power_thread(sample_interval=POWER_SAMPLE_INTERVAL * 2)
     time.sleep(60)
     base_power_samples = stop_power_thread(thread)
-    base_power = min(base_power_samples)
+    base_power = statistics.median(base_power_samples)
     print(f"{base_power:.0f} mW")
     print()
 
