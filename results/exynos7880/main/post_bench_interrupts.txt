@@ -1,0 +1,129 @@
+           CPU0       CPU1       CPU2       CPU3       CPU4       CPU5       CPU6       CPU7       
+  1:          0          0          0          0          0          0          0          0  exynos_wkup_irq_chip   0  gpio-keys: KEY_POWER
+  2:          0          0          0          0          0          0          0          0  exynos_wkup_irq_chip   2  s2mpu05
+  3:          1          0          0          0          0          0          0          0  exynos_wkup_irq_chip   2  si47xx
+  4:          0          0          0          0          0          0          0          0  exynos_wkup_irq_chip   4  abov-touchkey-ft1804
+  5:       3230          0          0          0          0          0          0          0  exynos_wkup_irq_chip   5  bt532_ts_device
+  6:          1          0          0          0          0          0          0          0  exynos_wkup_irq_chip   6  sec-nfc
+  7:          0          0          0          0          0          0          0          0  exynos_wkup_irq_chip   7  s2mu004-irq
+  8:          0          0          0          0          0          0          0          0  exynos_wkup_irq_chip   6  bt_host_wake
+  9:          1          0          0          0          0          0          0          0  exynos_wkup_irq_chip   3  tflash_det
+ 10:          0          0          0          0          0          0          0          0  exynos_wkup_irq_chip   3  fuelgauge-irq
+ 11:          0          0          0          0          0          0          0          0  exynos_wkup_irq_chip   4  cod3026_theaded_isr
+ 12:     203253          0          0          0          0          0          0          0  exynos_gpio_irq_chip   2  14830000.decon_f
+ 13:          0          0          0          0          0          0          0          0  exynos_wkup_irq_chip   5  pcd
+ 14:          0          0          0          0          0          0          0          0  exynos_wkup_irq_chip   3  s2mu004-usbpd
+ 15:          0          0          0          0          0          0          0          0  exynos_wkup_irq_chip   1  gpio-keys: KEY_VOLUMEDOWN
+ 27:          0          0          0          0          0          0          0          0       GIC  27  arch_timer
+ 32:          0          0          0          0          0          0          0          0       GIC  32  139f0000.pinctrl
+ 50:          0          0          0          0          0          0          0          0       GIC  50  cp_fail
+ 51:          0          0          0          0          0          0          0          0       GIC  51  kepler_active_handler
+100:          0          0          0          0          0          0          0          0       GIC 100  148c0000.pinctrl
+105:          0          0          0          0          0          0          0          0       GIC 105  14890000.adma
+132:          0          0          0          0          0          0          0          0       GIC 132  10170000.watchdog
+134:          0          0          0          0          0          0          0          0       GIC 134  mct_comp_irq
+138:     130289          0          0          0          0          0          0          0       GIC 138  mct_tick0
+139:          0     184551          0          0          0          0          0          0       GIC 139  mct_tick1
+140:          0          0       3375          0          0          0          0          0       GIC 140  mct_tick2
+141:          0          0          0       4949          0          0          0          0       GIC 141  mct_tick3
+142:          0          0          0          0        980          0          0          0       GIC 142  mct_tick4
+143:          0          0          0          0          0     144216          0          0       GIC 143  mct_tick5
+144:          0          0          0          0          0          0        916          0       GIC 144  mct_tick6
+145:          0          0          0          0          0          0          0        915       GIC 145  mct_tick7
+160:          0          0          0          0          0          0          0          0       GIC 160  14470000.sysmmu
+163:          0          0          0          0          0          0          0          0       GIC 163  14490000.sysmmu
+166:          0          0          0          0          0          0          0          0       GIC 166  144a0000.sysmmu
+171:          0          0          0          0          0          0          0          0       GIC 171  fimcis0-1
+172:          0          0          0          0          0          0          0          0       GIC 172  fimcis0-2
+174:          0          0          0          0          0          0          0          0       GIC 174  fimcmcs-0
+178:          0          0          0          0          0          0          0          0       GIC 178  fimcvra-0
+179:          0          0          0          0          0          0          0          0       GIC 179  fimcvra-1
+180:          0          0          0          0          0          0          0          0       GIC 180  fimc3a0-1
+181:          0          0          0          0          0          0          0          0       GIC 181  fimc3a0-2
+225:          0          0          0          0          0          0          0          0       GIC 225  14860000.sysmmu
+233:          0          0          0          0          0          0          0          0       GIC 233  14830000.decon_f
+234:          1          0          0          0          0          0          0          0       GIC 234  14830000.decon_f
+235:          0          0          0          0          0          0          0          0       GIC 235  14830000.decon_f
+236:          0          0          0          0          0          0          0          0       GIC 236  14830000.decon_f
+239:         40          0          0          0          0          0          0          0       GIC 239  14800000.dsim
+243:          0          0          0          0          0          0          0          0       GIC 243  14821000.vpp
+244:          0          0          0          0          0          0          0          0       GIC 244  14822000.vpp
+245:          0          0          0          0          0          0          0          0       GIC 245  14823000.vpp
+246:          0          0          0          0          0          0          0          0       GIC 246  14824000.vpp
+255:          2          0          0          0          0          0          0          0       GIC 255  trustonic
+260:          0          0          0          0          0          0          0          0       GIC 260  13450000.pdma0
+261:          0          0          0          0          0          0          0          0       GIC 261  13460000.pdma1
+262:          0          0          0          0          0          0          0          0       GIC 262  dwc3
+277:         71          0          0          0          0          0          0          0       GIC 277  dw-mci
+278:        170          0          0          0          0          0          0          0       GIC 278  dw-mci
+279:         86          0          0          0          0          0          0          0       GIC 279  dw-mci
+282:          0          0          0          0          0          0          0          0       GIC 282  13750000.pinctrl
+313:          3          0          0          0          0          0          0          0       GIC 313  11400000.mali
+314:          0          0          0          0          0          0          0          0       GIC 314  11400000.mali
+315:          0          0          0          0          0          0          0          0       GIC 315  11400000.mali
+338:          0          0          0          0          0          0          0          0       GIC 338  10600000.mcu_ipc
+341:        756          0          0          0          0          0          0          0       GIC 341  10610000.hsi2c
+342:          0          0          0          0          0          0          0          0       GIC 342  10670000.mcu_ipc
+343:          0          0          0          0          0          0          0          0       GIC 343  107a0000.BUSMON_PERI_GROUP4
+344:          0          0          0          0          0          0          0          0       GIC 344  10780200.BUSMON_RT_GROUP2
+345:          0          0          0          0          0          0          0          0       GIC 345  10790200.BUSMON_NRT_GROUP1
+346:          0          0          0          0          0          0          0          0       GIC 346  107b0000.BUSMON_CP_GROUP3
+359:          0          0          0          0          0          0          0          0       GIC 359  10630000.pinctrl
+360:       1725          0          0          0          0          0          0          0       GIC 360  10650000.adc
+384:          0          0          0          0          0          0          0          0       GIC 384  12c90000.sysmmu
+386:          0          0          0          0          0          0          0          0       GIC 386  12c30000.mfc0
+432:          0          0          0          0          0          0          0          0       GIC 432  12c00000.scaler
+433:          0          0          0          0          0          0          0          0       GIC 433  12c10000.scaler
+434:          0          0          0          0          0          0          0          0       GIC 434  12c80000.sysmmu
+436:          0          0          0          0          0          0          0          0       GIC 436  12c20000.smfc
+456:     130229          0          0          0          0          0          0          0       GIC 456  13830000.i2c
+459:          0          0          0          0          0          0          0          0       GIC 459  13860000.i2c
+460:       3116          0          0          0          0          0          0          0       GIC 460  13870000.i2c
+461:          0          0          0          0          0          0          0          0       GIC 461  13880000.i2c
+462:     151953          0          0          0          0          0          0          0       GIC 462  13890000.i2c
+463:          0          0          0          0          0          0          0          0       GIC 463  spi-s3c64xx
+466:          0          0          0          0          0          0          0          0       GIC 466  spi-s3c64xx
+467:          2          0          0          0          0          0          0          0       GIC 467  10130000.tmuctrl_CPUCL0, 10130000.tmuctrl_CPUCL1, 10130000.tmuctrl_G3D
+470:     203253          0          0          0          0          0          0          0       GIC 470  139b0000.pinctrl
+471:          0          0          0          0          0          0          0          0       GIC 471  139c0000.pinctrl
+481:          0          0          0          0          0          0          0          0       GIC 481  138a0000.hsi2c
+482:          0          0          0          0          0          0          0          0       GIC 482  138b0000.hsi2c
+483:          0          0          0          0          0          0          0          0       GIC 483  138c0000.hsi2c
+487:          0          0          0          0          0          0          0          0       GIC 487  spi-s3c64xx
+488:          0          0          0          0          0          0          0          0       GIC 488  138f0000.hsi2c
+490:          0          0          0          0          0          0          0          0       GIC 490  13960000.hsi2c
+509:          0          0          0          0          0          0          0          0       GIC 509  kepler_wakelock_handler
+510:          0          0          0          0          0          0          0          0       GIC 510  kepler_wdt_handler
+511:          0          0          0          0          0          0          0          0       GIC 511  cp_wdt
+522:          0          0          0          0          0          0          0          0   s2mpu05  10  rtc-alarm0
+529:          0          0          0          0          0          0          0          0   s2mu004  sys-irq
+531:          0          0          0          0          0          0          0          0   s2mu004  chg_fault-irq
+532:          0          0          0          0          0          0          0          0   s2mu004  restart-irq
+533:          0          0          0          0          0          0          0          0   s2mu004  done-irq
+536:          0          0          0          0          0          0          0          0   s2mu004  chgin-irq
+544:          0          0          0          0          0          0          0          0   s2mu004  muic-vbadc
+545:          0          0          0          0          0          0          0          0   s2mu004  muic-vdnmon
+547:          0          0          0          0          0          0          0          0   s2mu004  muic-mpnack
+551:          0          0          0          0          0          0          0          0   s2mu004  muic-mrxrdy
+552:          0          0          0          0          0          0          0          0   s2mu004  muic-attach
+553:          0          0          0          0          0          0          0          0   s2mu004  muic-detach
+557:          0          0          0          0          0          0          0          0   s2mu004  muic-rid_chg
+558:          0          0          0          0          0          0          0          0   s2mu004  muic-vbus_on
+559:          0          0          0          0          0          0          0          0   s2mu004  muic-rsvd_attach
+560:          0          0          0          0          0          0          0          0   s2mu004  muic-adc_change
+564:          0          0          0          0          0          0          0          0   s2mu004  muic-av_charge
+565:          0          0          0          0          0          0          0          0   s2mu004  muic-vbus_off
+566:          0          0          0          0          0          0          0          0  exynos_wkup_irq_chip   0  gpio-keys: KEY_VOLUMEUP
+567:          0          0          0          0          0          0          0          0  exynos_wkup_irq_chip   7  gpio-keys: KEY_HOME
+568:          0          0          0          0          0          0          0          0  exynos_wkup_irq_chip   6  flip_cover
+569:          0          0          0          0          0          0          0          0  exynos_wkup_irq_chip   2  certify_cover
+570:          8          1          0          0          0          0          0          0  exynos_wkup_irq_chip   7  SSP_Int
+571:          0          0          0          0          0          0          0          0  exynos_wkup_irq_chip   2  wlan-host-wake
+IPI0:      2193      24399       7492        748        171         94         29         39       Rescheduling interrupts
+IPI1:         5          5         11         10          8          6          6          6       Function call interrupts
+IPI2:         0          2          0          0         16          0          0          0       Single function call interrupts
+IPI3:         0          0          0          0          0          0          0          0       CPU stop interrupts
+IPI4:         0          0          0          0          0          0          0          0       Timer broadcast interrupts
+IPI5:         0          0          0          0          0          0          0          0       IRQ work interrupts
+IPI6:         0          1          1          1          1          1          1          1       CPU Wakeup by interrupts
+Err:          0
