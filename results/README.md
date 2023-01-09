@@ -4,7 +4,7 @@ These are reference freqbench results that have been collected from various devi
 
 ## Index
 
-<!-- When adding new SoCs, please sort new entries alphanumerically by SoC marketing name and set the accuracy to "Unknown". -->
+<!-- When adding new SoCs, please sort new entries alphanumerically by SoC internal name and set the accuracy to "Unknown". -->
 
 | Name       | SoC model | SoC name        | Device                  | Accuracy |
 | ---------- | --------- | --------------- | ----------------------- | -------- |
@@ -13,6 +13,7 @@ These are reference freqbench results that have been collected from various devi
 | mt6768     | MT6769V/CB| Helio G70       | Realme C3               | Unknown  |
 | exynos5250 | E5250     | Exynos 5250     | Google Nexus 10         | Low      |
 | exynos7904 | E7904     | Exynos 7904     | Samsung Galaxy M20      | Unknown  |
+| exynos7880 | E7880     | Exynos 7880     | Samsung Galaxy A5 (2017)| Low      |
 | exynos9611 | E9610     | Exynos 9611     | Samsung Galaxy M21      | Unknown  |
 | msm8917    | MSM8917   | Snapdragon 425  | Xiaomi Redmi 5A         | Unknown  |
 | msm8940    | MSM8940   | Snapdragon 435  | Xiaomi Redmi 4X         | Unknown  |
