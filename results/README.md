@@ -4,7 +4,7 @@ These are reference freqbench results that have been collected from various devi
 
 ## Index
 
-<!-- When adding new SoCs, please sort new entries alphanumerically by SoC internal name and set the accuracy to "Unknown". -->
+<!-- When adding new SoCs, sort new entries alphanumerically by SoC name, *grouped by vendor*, and set the accuracy to "Unknown". For example, all Snapdragon SoCs should be sorted by marketing name within the Snapdragon group. -->
 
 | Name       | SoC model | SoC name        | Device                  | Accuracy |
 | ---------- | --------- | --------------- | ----------------------- | -------- |
