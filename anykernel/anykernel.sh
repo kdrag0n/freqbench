@@ -38,7 +38,7 @@ patch_cmdline loglevel loglevel=0
 patch_cmdline printk.devkmsg printk.devkmsg=on
 patch_cmdline skip_initramfs ""
 
-mv $home/rd-new.cpio $home/ramdisk-new.cpio
+mv $home/rd-new.cpio.gz $home/ramdisk-new.cpio
 
 flash_boot;
 ## end install

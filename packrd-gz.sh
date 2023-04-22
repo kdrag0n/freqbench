@@ -17,4 +17,4 @@ mkdir -p rd/var/{tmp,opt,mail,log,local,empty}
 
 oldwd="$PWD"
 cd rd
-find . | cpio -o -H newc | "$GZIP" -9c > "$oldwd/rd-new.cpio"
+find . | cpio -o -H newc | "$GZIP" -9c > "$oldwd/rd-new.cpio.gz"
