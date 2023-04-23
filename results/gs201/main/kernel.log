@@ -1,0 +1,2710 @@
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x412fd050]
+[    0.000000] Linux version 5.10.149-Sultan (sultan@sultan-box) (aarch64-linux-gnu-gcc (GCC) 12.2.0, GNU ld (GNU Binutils) 2.40) #1 SMP PREEMPT Sat Apr 22 23:13:08 PDT 2023
+[    0.000000] Machine model: GS201 CHEETAH MP based on GS201
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000009fb800000, size 72 MiB
+[    0.000000] OF: reserved mem: initialized node vstream, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000009f7c00000, size 60 MiB
+[    0.000000] OF: reserved mem: initialized node faimg, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000009e7c00000, size 256 MiB
+[    0.000000] OF: reserved mem: initialized node farawimg, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000009e4c00000, size 48 MiB
+[    0.000000] OF: reserved mem: initialized node faprev, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000009e2c00000, size 32 MiB
+[    0.000000] OF: reserved mem: initialized node faceauth_tpu, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000009dac00000, size 52 MiB
+[    0.000000] OF: reserved mem: initialized node vscaler, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000009bac00000, size 512 MiB
+[    0.000000] OF: reserved mem: initialized node vframe, compatible id shared-dma-pool
+[    0.000000] OF: reserved mem: initialized node pkvm_guest_firmware, compatible id linux,pkvm-guest-firmware-memory
+[    0.000000] Reserved memory: created DMA memory pool at 0x0000000097000000, size 4 MiB
+[    0.000000] OF: reserved mem: initialized node xhci_dma@0x97000000, compatible id shared-dma-pool
+[    0.000000] kvm [0]: Reserved 66 MiB at 0xafbc00000
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000080000000-0x0000000affffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000080000000-0x000000008affffff]
+[    0.000000]   node   0: [mem 0x000000008b000000-0x000000008b035fff]
+[    0.000000]   node   0: [mem 0x000000008b036000-0x00000000901fffff]
+[    0.000000]   node   0: [mem 0x0000000090200000-0x00000000905fffff]
+[    0.000000]   node   0: [mem 0x0000000090600000-0x0000000091dfffff]
+[    0.000000]   node   0: [mem 0x0000000091e00000-0x00000000973fffff]
+[    0.000000]   node   0: [mem 0x0000000097400000-0x0000000097ffffff]
+[    0.000000]   node   0: [mem 0x0000000098000000-0x00000000984fffff]
+[    0.000000]   node   0: [mem 0x0000000098500000-0x00000000b71fffff]
+[    0.000000]   node   0: [mem 0x00000000c0000000-0x00000000d80fffff]
+[    0.000000]   node   0: [mem 0x00000000d8100000-0x00000000da70ffff]
+[    0.000000]   node   0: [mem 0x00000000da710000-0x00000000dc20ffff]
+[    0.000000]   node   0: [mem 0x00000000dc210000-0x00000000dc61ffff]
+[    0.000000]   node   0: [mem 0x00000000dc620000-0x00000000dfffffff]
+[    0.000000]   node   0: [mem 0x00000000e3800000-0x00000000f87fffff]
+[    0.000000]   node   0: [mem 0x00000000f8800000-0x00000000fa7fffff]
+[    0.000000]   node   0: [mem 0x00000000fa800000-0x00000000fd3effff]
+[    0.000000]   node   0: [mem 0x00000000fd3f0000-0x00000000fd3fefff]
+[    0.000000]   node   0: [mem 0x00000000fd3ff000-0x00000000fd7fffff]
+[    0.000000]   node   0: [mem 0x00000000fd800000-0x00000000fd90bfff]
+[    0.000000]   node   0: [mem 0x00000000fd90c000-0x00000000ffffffff]
+[    0.000000]   node   0: [mem 0x0000000880000000-0x0000000affffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000080000000-0x0000000affffffff]
+[    0.000000] On node 0 totalpages: 3095040
+[    0.000000]   Normal zone: 48360 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 3095040 pages, LIFO batch:63
+[    0.000000] cma: Reserved 16 MiB at 0x0000000880000000
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.2
+[    0.000000] Load bootconfig: 1438 bytes 101 nodes
+[    0.000000] percpu: Embedded 33 pages/cpu s103640 r0 d31528 u135168
+[    0.000000] pcpu-alloc: s103640 r0 d31528 u135168 alloc=33*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: SYS_ID_AA64MMFR1_EL1[11:8]: forced to 0
+[    0.000000] CPU features: detected: GIC system register CPU interface
+[    0.000000] CPU features: kernel page table isolation disabled by kernel configuration
+[    0.000000] CPU features: detected: Hardware dirty bit management
+[    0.000000] CPU features: detected: ARM errata 1165522, 1319367, or 1530923
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 3046680
+[    0.000000] Kernel command line: stack_depot_disable=on kasan.stacktrace=off kvm-arm.mode=protected cgroup_disable=pressure cgroup.memory=nokmem rcu_nocbs=0-7 isolcpus=1-7 nohz_full=1-7 loglevel=0 printk.devkmsg=on clocksource=arch_sys_counter root=/dev/ram0 rw ramdisk_size=65536 firmware_class.path=/vendor/firmware reserve-fimc=0xffffff90f9fe0000 clk_ignore_unused loop.max_part=7 coherent_pool=4M no_console_suspend softlockup_panic=1 maxcpus=8 sysrq_always_enabled kasan_multi_shot ehld.noehld=1 swiotlb=noforce dyndbg="func alloc_contig_dump_pages +p" printk.devkmsg=on cma_sysfs.experimental=Y cgroup_disable=memory rcupdate.rcu_expedited=1 rcu_nocbs=all stack_depot_disable=off page_pinner=on swiotlb=1024 disable_dma32=on at24.write_timeout=100 log_buf_len=1024K bootconfig buildvariant=userdebug console=null exynos_drm.panel_name=sdc-s6e3hc4 tcpci_max77759.conf_sbu=0 ufs_pixel_fips140.fips_first_lba=86406 ufs_pixel_fips140.fips_last_lba=86917 ufs_pixel_fips140.fips_lu=0 id_aa64mmfr1.vh=0
+[    0.000000] cgroup: Disabling pressure control group feature
+[    0.000000] sysrq: sysrq always enabled.
+[    0.000000] cgroup: Disabling memory control group subsystem
+[    0.000000] Dentry cache hash table entries: 2097152 (order: 12, 16777216 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 10581372K/12380160K available (19134K kernel code, 16458K rwdata, 9908K rodata, 10176K init, 4810K bss, 725636K reserved, 1073152K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU dyntick-idle grace-period acceleration is enabled.
+[    0.000000] 	All grace periods are expedited (rcu_expedited).
+[    0.000000] 	Trampoline variant of Tasks RCU enabled.
+[    0.000000] 	Tracing variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: GIC: Using split EOI/Deactivate mode
+[    0.000000] GICv3: 960 SPIs implemented
+[    0.000000] GICv3: 0 Extended SPIs implemented
+[    0.000000] GICv3: Distributor has no Range Selector support
+[    0.000000] GICv3: 16 PPIs implemented
+[    0.000000] GICv3: CPU0: found redistributor 0 region 0:0x0000000010440000
+[    0.000000] NO_HZ: Full dynticks CPUs: 1-7.
+[    0.000000] rcu: 	Offload RCU callbacks from CPUs: 0-7.
+[    0.000000] arch_timer: cp15 timer(s) running at 24.57MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x5ab00a189, max_idle_ns: 440795202599 ns
+[    0.000011] sched_clock: 56 bits at 24MHz, resolution 40ns, wraps every 4398046511099ns
+[    0.003070] random: crng init done
+[    0.003294] Calibrating delay loop (skipped), value calculated using timer frequency.. 49.15 BogoMIPS (lpj=245760)
+[    0.003322] pid_max: default: 32768 minimum: 301
+[    0.003441] LSM: Security Framework initializing
+[    0.003526] SELinux:  Initializing.
+[    0.003791] Mount-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.003877] Mountpoint-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.006850] rcu: Hierarchical SRCU implementation.
+[    0.008390] smp: Bringing up secondary CPUs ...
+[    0.010025] Detected VIPT I-cache on CPU1
+[    0.010126] GICv3: CPU1: found redistributor 100 region 0:0x0000000010460000
+[    0.010228] CPU1: Booted secondary processor 0x0000000100 [0x412fd050]
+[    0.011257] Detected VIPT I-cache on CPU2
+[    0.011291] GICv3: CPU2: found redistributor 200 region 0:0x0000000010480000
+[    0.011347] CPU2: Booted secondary processor 0x0000000200 [0x412fd050]
+[    0.012540] Detected VIPT I-cache on CPU3
+[    0.012572] GICv3: CPU3: found redistributor 300 region 0:0x00000000104a0000
+[    0.012628] CPU3: Booted secondary processor 0x0000000300 [0x412fd050]
+[    0.014136] CPU features: detected: Spectre-v4
+[    0.014140] CPU features: detected: Spectre-BHB
+[    0.014144] Detected PIPT I-cache on CPU4
+[    0.014172] GICv3: CPU4: found redistributor 400 region 0:0x00000000104c0000
+[    0.014220] CPU4: Booted secondary processor 0x0000000400 [0x411fd411]
+[    0.015437] Detected PIPT I-cache on CPU5
+[    0.015465] GICv3: CPU5: found redistributor 500 region 0:0x00000000104e0000
+[    0.015512] CPU5: Booted secondary processor 0x0000000500 [0x411fd411]
+[    0.016929] Detected PIPT I-cache on CPU6
+[    0.016960] GICv3: CPU6: found redistributor 600 region 0:0x0000000010500000
+[    0.017007] CPU6: Booted secondary processor 0x0000000600 [0x411fd440]
+[    0.018216] Detected PIPT I-cache on CPU7
+[    0.018245] GICv3: CPU7: found redistributor 700 region 0:0x0000000010520000
+[    0.018289] CPU7: Booted secondary processor 0x0000000700 [0x411fd440]
+[    0.018359] smp: Brought up 1 node, 8 CPUs
+[    0.018373] SMP: Total of 8 processors activated.
+[    0.018379] CPU features: detected: Privileged Access Never
+[    0.018382] CPU features: detected: LSE atomic instructions
+[    0.018386] CPU features: detected: User Access Override
+[    0.018392] CPU features: detected: 32-bit EL0 Support
+[    0.018396] CPU features: detected: Common not Private translations
+[    0.018401] CPU features: detected: RAS Extension Support
+[    0.018406] CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+[    0.018412] CPU features: detected: CRC32 instructions
+[    0.018415] CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+[    0.018423] CPU features: detected: RCpc load-acquire (LDAPR)
+[    0.018429] CPU features: detected: Protected KVM
+[    0.065093] CPU: All CPU(s) started at EL2
+[    0.065198] alternatives: patching kernel code
+[    0.146295] Registered cp15_barrier emulation handler
+[    0.146317] Registered setend emulation handler
+[    0.146333] KASLR enabled
+[    0.146588] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.146623] futex hash table entries: 2048 (order: 5, 131072 bytes, linear)
+[    0.212562] pinctrl core: initialized pinctrl subsystem
+[    0.213829] NET: Registered protocol family 16
+[    0.217109] DMA: preallocated 4096 KiB GFP_KERNEL pool for atomic allocations
+[    0.217677] thermal_sys: Registered thermal governor 'step_wise'
+[    0.217684] thermal_sys: Registered thermal governor 'user_space'
+[    0.217692] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.227710] cpuidle: using governor teo
+[    0.228246] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.228440] ASID allocator initialised with 65536 entries
+[    0.228524] Serial: AMBA PL011 UART driver
+[    0.229222] printk: console [ramoops-1] enabled
+[    0.229303] pstore: Registered ramoops as persistent store backend
+[    0.229309] ramoops: using 0x400000@0xfd3ff000, ecc: 0
+[    0.342902] iommu: Default domain type: Translated 
+[    0.343521] SCSI subsystem initialized
+[    0.343671] usbcore: registered new interface driver usbfs
+[    0.343707] usbcore: registered new interface driver hub
+[    0.343738] usbcore: registered new device driver usb
+[    0.343908] mc: Linux media interface: v0.10
+[    0.343936] videodev: Linux video capture interface: v2.00
+[    0.344796] Advanced Linux Sound Architecture Driver Initialized.
+[    0.345580] Bluetooth: Core ver 2.22
+[    0.345599] NET: Registered protocol family 31
+[    0.345604] Bluetooth: HCI device and connection manager initialized
+[    0.345622] Bluetooth: HCI socket layer initialized
+[    0.345636] Bluetooth: L2CAP socket layer initialized
+[    0.345652] Bluetooth: SCO socket layer initialized
+[    0.345868] nfc: nfc_init: NFC Core ver 0.1
+[    0.345924] NET: Registered protocol family 39
+[    0.346465] clocksource: Switched to clocksource arch_sys_counter
+[    0.348153] VFS: Disk quotas dquot_6.6.0
+[    0.348231] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.349251] NET: Registered protocol family 2
+[    0.350077] IP idents hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.357228] tcp_listen_portaddr_hash hash table entries: 8192 (order: 5, 131072 bytes, linear)
+[    0.357385] TCP established hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.358066] TCP bind hash table entries: 65536 (order: 8, 1048576 bytes, linear)
+[    0.360824] TCP: Hash tables configured (established 131072 bind 65536)
+[    0.360997] UDP hash table entries: 8192 (order: 6, 262144 bytes, linear)
+[    0.361190] UDP-Lite hash table entries: 8192 (order: 6, 262144 bytes, linear)
+[    0.361537] NET: Registered protocol family 1
+[    0.362355] NET: Registered protocol family 44
+[    0.362378] PCI: CLS 0 bytes, default 64
+[    0.674328] Freeing initrd memory: 26348K
+[    0.680003] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+[    0.681677] kvm [1]: IPA Size Limit: 40 bits
+[    0.752893] kvm [1]: GICv3: no GICV resource entry
+[    0.752908] kvm [1]: disabling GICv2 emulation
+[    0.752938] kvm [1]: GIC system register CPU interface enabled
+[    0.753227] kvm [1]: vgic interrupt IRQ9
+[    0.753766] kvm [1]: Protected nVHE mode initialized successfully
+[    0.759452] Initialise system trusted keyrings
+[    0.759622] workingset: timestamp_bits=46 max_order=22 bucket_order=0
+[    0.765112] fuse: init (API version 7.32)
+[    0.803327] Key type asymmetric registered
+[    0.803340] Asymmetric key parser 'x509' registered
+[    0.803404] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 244)
+[    0.803492] io scheduler mq-deadline registered
+[    0.803603] io scheduler bfq registered
+[    0.814012] cacheinfo: Unable to detect cache hierarchy for CPU 0
+[    0.819606] brd: module loaded
+[    0.825710] loop: module loaded
+[    0.827317] wireguard: WireGuard 1.0.0 loaded. See www.wireguard.com for information.
+[    0.827322] wireguard: Copyright (C) 2015-2019 Jason A. Donenfeld <Jason@zx2c4.com>. All Rights Reserved.
+[    0.827948] MACsec IEEE 802.1AE
+[    0.828668] tun: Universal TUN/TAP device driver, 1.6
+[    0.828751] CAN device driver interface
+[    0.828757] PPP generic driver version 2.4.2
+[    0.828844] PPP BSD Compression module registered
+[    0.828854] PPP Deflate Compression module registered
+[    0.828887] PPP MPPE Compression module registered
+[    0.828896] NET: Registered protocol family 24
+[    0.828901] PPTP driver version 0.8.5
+[    0.829197] usbcore: registered new interface driver rtl8150
+[    0.829229] usbcore: registered new interface driver r8152
+[    0.829259] usbcore: registered new interface driver asix
+[    0.829286] usbcore: registered new interface driver ax88179_178a
+[    0.829312] usbcore: registered new interface driver cdc_ether
+[    0.829336] usbcore: registered new interface driver cdc_eem
+[    0.829374] usbcore: registered new interface driver cdc_ncm
+[    0.829403] usbcore: registered new interface driver aqc111
+[    0.830403] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.830414] ehci-pci: EHCI PCI platform driver
+[    0.830456] ehci-platform: EHCI generic platform driver
+[    0.831959] usbcore: registered new interface driver cdc_acm
+[    0.831966] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    0.832127] usbcore: registered new interface driver uas
+[    0.832164] usbcore: registered new interface driver usb-storage
+[    0.832823] dummy_hcd dummy_hcd.0: USB Host+Gadget Emulator, driver 02 May 2005
+[    0.832862] dummy_hcd dummy_hcd.0: Dummy host controller
+[    0.832911] dummy_hcd dummy_hcd.0: new USB bus registered, assigned bus number 1
+[    0.833238] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.10
+[    0.833247] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    0.833263] usb usb1: Product: Dummy host controller
+[    0.833270] usb usb1: Manufacturer: Linux 5.10.149-Sultan dummy_hcd
+[    0.833277] usb usb1: SerialNumber: dummy_hcd.0
+[    0.833777] hub 1-0:1.0: USB hub found
+[    0.833820] hub 1-0:1.0: 1 port detected
+[    0.834846] usbcore: registered new interface driver xpad
+[    0.835076] usbcore: registered new interface driver uvcvideo
+[    0.835079] USB Video Class driver (1.1.1)
+[    0.835090] gspca_main: v2.14.0 registered
+[    0.835422] device-mapper: uevent: version 1.0.3
+[    0.835603] device-mapper: ioctl: 4.44.0-ioctl (2021-02-01) initialised: dm-devel@redhat.com
+[    0.835797] Bluetooth: HCI UART driver ver 2.3
+[    0.835809] Bluetooth: HCI UART protocol H4 registered
+[    0.835852] Bluetooth: HCI UART protocol LL registered
+[    0.835993] Bluetooth: HCI UART protocol Broadcom registered
+[    0.836018] Bluetooth: HCI UART protocol QCA registered
+[    0.838006] hid: raw HID events driver (C) Jiri Kosina
+[    0.838969] usbcore: registered new interface driver usbhid
+[    0.838975] usbhid: USB HID core driver
+[    0.839171] ashmem: initialized
+[    0.839253] gnss: GNSS driver registered with major 238
+[    0.842130] usbcore: registered new interface driver snd-usb-audio
+[    0.842693] GACT probability NOT on
+[    0.842719] Mirror/redirect action on
+[    0.842778] netem: version 1.3
+[    0.842808] u32 classifier
+[    0.842811]     input device check on
+[    0.842817]     Actions configured
+[    0.844188] xt_time: kernel timezone is -0000
+[    0.844311] ipip: IPv4 and MPLS over IPv4 tunneling driver
+[    0.844763] gre: GRE over IPv4 demultiplexor driver
+[    0.844773] ip_gre: GRE over IPv4 tunneling driver
+[    0.845767] IPv4 over IPsec tunneling driver
+[    0.846745] Initializing XFRM netlink socket
+[    0.846787] IPsec XFRM device driver
+[    0.847246] NET: Registered protocol family 10
+[    0.848978] Segment Routing with IPv6
+[    0.849092] mip6: Mobile IPv6
+[    0.849899] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    0.850746] ip6_gre: GRE over IPv6 tunneling driver
+[    0.851177] NET: Registered protocol family 17
+[    0.851211] NET: Registered protocol family 15
+[    0.851257] can: controller area network core
+[    0.851324] NET: Registered protocol family 29
+[    0.851331] can: raw protocol
+[    0.851346] can: broadcast manager protocol
+[    0.851365] can: netlink gateway - max_hops=1
+[    0.851557] Bluetooth: RFCOMM TTY layer initialized
+[    0.851575] Bluetooth: RFCOMM socket layer initialized
+[    0.851580] Bluetooth: RFCOMM ver 1.11
+[    0.851590] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    0.851605] Bluetooth: HIDP socket layer initialized
+[    0.851636] l2tp_core: L2TP core driver, V2.0
+[    0.851657] l2tp_ppp: PPPoL2TP kernel driver, V2.0
+[    0.851666] 8021q: 802.1Q VLAN Support v1.8
+[    0.851704] tipc: Activated (version 2.0.0)
+[    0.851827] NET: Registered protocol family 30
+[    0.851965] tipc: Started in single node mode
+[    0.852092] NET: Registered protocol family 36
+[    0.852281] NET: Registered protocol family 40
+[    0.852958] registered taskstats version 1
+[    0.852980] Loading compiled-in X.509 certificates
+[    0.853079] Key type ._fscrypt registered
+[    0.853086] Key type .fscrypt registered
+[    0.853097] Key type fscrypt-provisioning registered
+[    0.853293] pstore: Invalid compression size for deflate: 0
+[    0.855257] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    0.856587] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    0.857271] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    0.857293] cfg80211: failed to load regulatory.db
+[    0.859864] pkvm_s2mpu: 36 devices to be initialized
+[    1.055652] pkvm-s2mpu 20c70000.s2mpu_cpucl0: registered with hypervisor [1/36]
+[    1.057261] pkvm-s2mpu 17040000.s2mpu_eh: registered with hypervisor [2/36]
+[    1.058725] pkvm-s2mpu 20080000.s2mpu_g3d: registered with hypervisor [3/36]
+[    1.059861] pkvm-s2mpu 11070000.s2mpu_hsi0: registered with hypervisor [4/36]
+[    1.060831] pkvm-s2mpu 11880000.s2mpu_hsi1: registered with hypervisor [5/36]
+[    1.062034] pkvm-s2mpu 145e0000.s2mpu_hsi2: registered with hypervisor [6/36]
+[    1.063182] pkvm-s2mpu 17c60000.s2mpu_gsa: registered with hypervisor [7/36]
+[    1.064109] pkvm-s2mpu 101e0000.s2mpu_misc: registered with hypervisor [8/36]
+[    1.066755] exynos-pmu-if 18060000.exynos-pmu: exynos_pmu_if probe
+[    1.067961] exynos-mipi-phy dphy_m4s4_dsim0@0x1C2E0000: exynos_mipi_phy_probe: isolation 0x3eb8
+[    1.068102] exynos-mipi-phy dphy_m4s4_dsim0@0x1C2E0000: creating exynos-mipi-phy
+[    1.069846] exynos-mipi-phy-csi 1a4f1300.dcphy_m0s4s4s4s4s4_csi0: exynos_mipi_phy_probe: isolation 0x3ebc
+[    1.069854] exynos-mipi-phy-csi 1a4f1300.dcphy_m0s4s4s4s4s4_csi0: exynos_mipi_phy_probe: reset 0
+[    1.069956] exynos-mipi-phy-csi 1a4f1300.dcphy_m0s4s4s4s4s4_csi0: creating exynos-mipi-phy
+[    1.070959] exynos-mipi-phy-csi 1a4f1b00.dcphy_m0s4s4s4s4s4_csi0: exynos_mipi_phy_probe: isolation 0x3ebc
+[    1.070967] exynos-mipi-phy-csi 1a4f1b00.dcphy_m0s4s4s4s4s4_csi0: exynos_mipi_phy_probe: reset 1
+[    1.071047] exynos-mipi-phy-csi 1a4f1b00.dcphy_m0s4s4s4s4s4_csi0: creating exynos-mipi-phy
+[    1.072027] exynos-mipi-phy-csi 1a4f2300.dcphy_m0s4s4s4s4s4_csi0: exynos_mipi_phy_probe: isolation 0x3ebc
+[    1.072034] exynos-mipi-phy-csi 1a4f2300.dcphy_m0s4s4s4s4s4_csi0: exynos_mipi_phy_probe: reset 2
+[    1.072141] exynos-mipi-phy-csi 1a4f2300.dcphy_m0s4s4s4s4s4_csi0: creating exynos-mipi-phy
+[    1.073121] exynos-mipi-phy-csi 1a4f2600.dcphy_m0s4s4s4s4s4_csi0: exynos_mipi_phy_probe: isolation 0x3ebc
+[    1.073129] exynos-mipi-phy-csi 1a4f2600.dcphy_m0s4s4s4s4s4_csi0: exynos_mipi_phy_probe: reset 3
+[    1.073209] exynos-mipi-phy-csi 1a4f2600.dcphy_m0s4s4s4s4s4_csi0: creating exynos-mipi-phy
+[    1.074181] exynos-mipi-phy-csi 1a4f2b00.dcphy_m0s4s4s4s4s4_csi0: exynos_mipi_phy_probe: isolation 0x3ebc
+[    1.074188] exynos-mipi-phy-csi 1a4f2b00.dcphy_m0s4s4s4s4s4_csi0: exynos_mipi_phy_probe: reset 4
+[    1.074296] exynos-mipi-phy-csi 1a4f2b00.dcphy_m0s4s4s4s4s4_csi0: creating exynos-mipi-phy
+[    1.075273] exynos-mipi-phy-csi 1a4f2e00.dcphy_m0s4s4s4s4s4_csi0: exynos_mipi_phy_probe: isolation 0x3ebc
+[    1.075280] exynos-mipi-phy-csi 1a4f2e00.dcphy_m0s4s4s4s4s4_csi0: exynos_mipi_phy_probe: reset 5
+[    1.075367] exynos-mipi-phy-csi 1a4f2e00.dcphy_m0s4s4s4s4s4_csi0: creating exynos-mipi-phy
+[    1.076339] exynos-mipi-phy-csi 1a4f3300.dcphy_m0s4s4s4s4s4_csi0: exynos_mipi_phy_probe: isolation 0x3ebc
+[    1.076348] exynos-mipi-phy-csi 1a4f3300.dcphy_m0s4s4s4s4s4_csi0: exynos_mipi_phy_probe: reset 6
+[    1.076455] exynos-mipi-phy-csi 1a4f3300.dcphy_m0s4s4s4s4s4_csi0: creating exynos-mipi-phy
+[    1.077438] exynos-mipi-phy-csi 1a4f3600.dcphy_m0s4s4s4s4s4_csi0: exynos_mipi_phy_probe: isolation 0x3ebc
+[    1.077449] exynos-mipi-phy-csi 1a4f3600.dcphy_m0s4s4s4s4s4_csi0: exynos_mipi_phy_probe: reset 7
+[    1.077547] exynos-mipi-phy-csi 1a4f3600.dcphy_m0s4s4s4s4s4_csi0: creating exynos-mipi-phy
+[    1.085989] samsung-pinctrl 17a80000.pinctrl: irq number not available
+[    1.086180] samsung-pinctrl 17940000.pinctrl: irq number not available
+[    1.087365] input: gpio_keys as /devices/platform/gpio_keys/input/input0
+[    1.099540] gs-acpm-ipc 18210000.acpm_ipc: acpm_ipc probe
+[    1.101546] [ACPM] acpm framework SRAM dump to dram base: 0x86d00000
+[    1.101782] gs-acpm-ipc 18210000.acpm_ipc: acpm_ipc probe done.
+[    1.102122] gs-acpm 18040000.acpm: acpm probe
+[    1.102131] gs-acpm 18040000.acpm: acpm probe done.
+[    1.104122] gs-chipid 10000000.chipid: CPU[GS201]B0 CPU_REV[0x10] Detected
+[    1.104649] ect_probe: Reserved memory for ect: addr=0x0000000090000000, size=3a000
+[    1.104675] exynos-ect exynos-ect: Exynos ect driver probe done!
+[    1.105107] ECT version: 0042
+[    1.106282] vclk initialize for cmucal
+[    1.112206] gs201_cal_data_init: cal data init
+[    1.119861] panic threshold: 0
+[    1.119872] policy: err_fatal: [3]
+[    1.119879] policy: err_drex_tmout: [3]
+[    1.119885] policy: err_cpu: [3]
+[    1.119893] policy: err_ip: [0]
+[    1.119897] policy: err_unhandled: [1]
+[    1.119992] success to register request irq295 - BUS_DATA0
+[    1.120083] success to register request irq296 - BUS_DATA1
+[    1.120301] success to register request irq297 - BUS_DATA2
+[    1.120502] success to register request irq298 - BUS_DATA3
+[    1.120639] success to register request irq299 - BUS_PERI0
+[    1.120806] success to register request irq300 - BUS_PERI1
+[    1.120884] success to register request irq301 - BUS_PERI2
+[    1.121010] success to register request irq302 - BUS_PERI3
+[    1.121469] success to probe gs201 ITMON driver
+[    1.124256] pcie-sysmmu 11860000.sysmmu: Enable map once.
+[    1.124601] pcie-sysmmu 11860000.sysmmu: Probe HSI1 block, PCIe VID : 0
+[    1.124607] pcie-sysmmu 11860000.sysmmu: L1Page Table Address : 0x0x0000000086dc0000(phys)
+[    1.124614] pcie-sysmmu 11860000.sysmmu: is probed. Version 8.1.0
+[    1.125672] pcie-sysmmu 145c0000.sysmmu: There is NO ignore tlb inval, so set default value(0)
+[    1.125873] pcie-sysmmu 145c0000.sysmmu: Probe HSI2 block, PCIe VID : 1
+[    1.125880] pcie-sysmmu 145c0000.sysmmu: L1Page Table Address : 0x0x0000000086e40000(phys)
+[    1.125887] pcie-sysmmu 145c0000.sysmmu: is probed. Version 8.1.0
+[    1.130881] dma-pl330 10110000.pdma0: Loaded driver for PL330 DMAC-341330
+[    1.130891] dma-pl330 10110000.pdma0: 	DBUFF-32x4bytes Num_Chans-8 Num_Peri-32 Num_Events-32
+[    1.133118] cpif: cp_shmem_probe: +++
+[    1.133161] cpif: cp_rmem_setup_latecall: rmem 0 cp_rmem 0xea400000 0x00800000
+[    1.133174] cpif: cp_rmem_setup_latecall: rmem 1 cp_msi_rmem 0xf6200000 0x00001000
+[    1.133181] cpif: cp_rmem_setup_latecall: rmem 2 cp_rmem_1 0xe8000000 0x02000000
+[    1.133193] cpif: cp_rmem_setup_latecall: rmem 3 cp_aoc_rmem 0x197fd000 0x00003000
+[    1.133234] cpif: cp_shmem_probe: use_mem_map_on_cp is disabled. Use dt information
+[    1.133245] cpif: cp_shmem_probe: cp_num:0 rmem:3 index:1 VSS_AOC 0x197fd000 0x00003000 0
+[    1.133255] cpif: cp_shmem_probe: cp_num:0 rmem:0 index:3 IPC 0xea400000 0x00800000 1
+[    1.133262] cpif: cp_shmem_probe: cp_num:0 rmem:2 index:7 PKTPROC 0xe8000000 0x01c00000 0
+[    1.133269] cpif: cp_shmem_probe: cp_num:0 rmem:2 index:8 PKTPROC_UL 0xe9c00000 0x00400000 0
+[    1.133280] cpif: cp_shmem_probe: cp_num:0 rmem:1 index:11 MSI 0xf6200000 0x00001000 0
+[    1.133292] cpif: cp_shmem_probe: ---
+[    1.134952] ACPM-FLEXPMU-DBG:  exynos_flexpmu_dbg_probe: FLEXPMU_DBG buffer with size 1024 found
+[    1.136769] exynos-pm 180d0000.exynos-pm: initialized
+[    1.146263] GS201: Clock setup completed
+[    1.148613] clocksource: mct-frc: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 77769386669 ns
+[    1.149140] s3c64xx-spi 10940000.spi: spi bus clock parent not specified, using clock at index 0 as parent
+[    1.149151] s3c64xx-spi 10940000.spi: number of chip select lines not specified, assuming 1 chip select line
+[    1.149305] s3c64xx-spi 10940000.spi: set usi mode - 0x2
+[    1.149398] s3c64xx-spi 10940000.spi: Not using idle state
+[    1.149404] s3c64xx-spi 10940000.spi: spi clkoff-time is empty(Default: 0ms)
+[    1.149415] s3c64xx-spi 10940000.spi: PORT 5 fifo_lvl_mask = 0x7f
+[    1.151083] trusty trusty: trusty version: Project: cloudripper, Build: 9614246, Built: 01:21:42 Feb 16 2023
+[    1.151123] trusty trusty: selected api version: 5 (requested 5)
+[    1.153812] samsung,dma-heap-chunk trusty:video_stream_dma_heap: assigned reserved memory node vstream
+[    1.153977] Registered vstream-secure dma-heap successfully
+[    1.154032] samsung,dma-heap-chunk trusty:video_frame_dma_heap: assigned reserved memory node vframe
+[    1.154115] Registered vframe-secure dma-heap successfully
+[    1.154169] samsung,dma-heap-chunk trusty:video_scaler_dma_heap: assigned reserved memory node vscaler
+[    1.154240] Registered vscaler-secure dma-heap successfully
+[    1.154291] samsung,dma-heap-chunk trusty:faceauth_tpu_dma_heap: assigned reserved memory node faceauth_tpu
+[    1.154350] Registered faceauth_tpu-secure dma-heap successfully
+[    1.154674] samsung,dma-heap-cma trusty:faceauth_image_heap: assigned reserved memory node faimg
+[    1.154751] Registered faimg-secure dma-heap successfully
+[    1.154802] samsung,dma-heap-cma trusty:faceauth_rawimage_heap: assigned reserved memory node farawimg
+[    1.154856] Registered farawimg-secure dma-heap successfully
+[    1.154909] samsung,dma-heap-cma trusty:faceauth_preview_heap: assigned reserved memory node faprev
+[    1.154982] Registered faprev-secure dma-heap successfully
+[    1.155285] Registered famodel-secure dma-heap successfully
+[    1.155544] Registered tui-secure dma-heap successfully
+[    1.155660] Registered mfc_fw-secure dma-heap successfully
+[    1.156056] Registered system dma-heap successfully
+[    1.156110] Registered system-uncached dma-heap successfully
+[    1.156221] Registered video_system dma-heap successfully
+[    1.156286] Registered video_system-uncached dma-heap successfully
+[    1.156898] gsa 17c90000.gsa-ns: linked to 17c60000.s2mpu_gsa
+[    1.157467] gsa 17c90000.gsa-ns: Initialized
+[    1.158385] sjtag sjtag_ap: [probe sts read]: SJTAG_GET_STATUS: Success - Cmd status: 0x00000000
+[    1.159866] s3c64xx-spi 10960000.spi: spi bus clock parent not specified, using clock at index 0 as parent
+[    1.159874] s3c64xx-spi 10960000.spi: number of chip select lines not specified, assuming 1 chip select line
+[    1.159914] s3c64xx-spi 10960000.spi: set usi mode - 0x2
+[    1.159994] s3c64xx-spi 10960000.spi: Not using idle state
+[    1.160002] s3c64xx-spi 10960000.spi: spi clkoff-time is empty(Default: 0ms)
+[    1.160011] s3c64xx-spi 10960000.spi: PORT 7 fifo_lvl_mask = 0x7f
+[    1.161803] s3c64xx-spi 10d10000.spi: spi bus clock parent not specified, using clock at index 0 as parent
+[    1.161813] s3c64xx-spi 10d10000.spi: number of chip select lines not specified, assuming 1 chip select line
+[    1.161897] s3c64xx-spi 10d10000.spi: set usi mode - 0x2
+[    1.161974] s3c64xx-spi 10d10000.spi: Not using idle state
+[    1.161982] s3c64xx-spi 10d10000.spi: spi clkoff-time is empty(Default: 0ms)
+[    1.161990] s3c64xx-spi 10d10000.spi: PORT 0 fifo_lvl_mask = 0x7f
+[    1.162272] sjtag sjtag_gsa: [probe sts read]: SJTAG_GET_STATUS: Success - Cmd status: 0x00000010-0
+[    1.166272] s3c64xx-spi 10d20000.spi: spi bus clock parent not specified, using clock at index 0 as parent
+[    1.166281] s3c64xx-spi 10d20000.spi: number of chip select lines not specified, assuming 1 chip select line
+[    1.166303] s3c64xx-spi 10d20000.spi: set usi mode - 0x2
+[    1.166371] s3c64xx-spi 10d20000.spi: Not using idle state
+[    1.166377] s3c64xx-spi 10d20000.spi: spi clkoff-time is empty(Default: 0ms)
+[    1.166385] s3c64xx-spi 10d20000.spi: PORT 9 fifo_lvl_mask = 0x7f
+[    1.167311] s3c64xx-spi 10d30000.spi: spi bus clock parent not specified, using clock at index 0 as parent
+[    1.167319] s3c64xx-spi 10d30000.spi: number of chip select lines not specified, assuming 1 chip select line
+[    1.167335] s3c64xx-spi 10d30000.spi: set usi mode - 0x2
+[    1.167413] s3c64xx-spi 10d30000.spi: Not using idle state
+[    1.167424] s3c64xx-spi 10d30000.spi: spi clkoff-time is empty(Default: 0ms)
+[    1.167431] s3c64xx-spi 10d30000.spi: PORT 10 fifo_lvl_mask = 0x7f
+[    1.168499] s3c64xx-spi 10db0000.spi: spi bus clock parent not specified, using clock at index 0 as parent
+[    1.168505] s3c64xx-spi 10db0000.spi: number of chip select lines not specified, assuming 1 chip select line
+[    1.168524] s3c64xx-spi 10db0000.spi: set usi mode - 0x2
+[    1.168592] s3c64xx-spi 10db0000.spi: Not using idle state
+[    1.168599] s3c64xx-spi 10db0000.spi: spi clkoff-time is empty(Default: 0ms)
+[    1.168607] s3c64xx-spi 10db0000.spi: PORT 16 fifo_lvl_mask = 0x7f
+[    1.170853] exynos-etm exynos-etm: exynos_etm_probe successful
+[    1.172946] arm-memlat-mon cpu0-cpugrp:cpu0-cpu-mif-latmon: Memory Latency governor registered.
+[    1.173309] arm-memlat-mon cpu1-cpugrp:cpu1-cpu-mif-latmon: Memory Latency governor registered.
+[    1.173633] arm-memlat-mon cpu2-cpugrp:cpu2-cpu-mif-latmon: Memory Latency governor registered.
+[    1.173998] arm-memlat-mon cpu3-cpugrp:cpu3-cpu-mif-latmon: Memory Latency governor registered.
+[    1.174332] arm-memlat-mon cpu4-cpugrp:cpu4-cpu-mif-latmon: Memory Latency governor registered.
+[    1.174655] arm-memlat-mon cpu5-cpugrp:cpu5-cpu-mif-latmon: Memory Latency governor registered.
+[    1.174992] arm-memlat-mon cpu6-cpugrp:cpu6-cpu-mif-latmon: Memory Latency governor registered.
+[    1.175353] arm-memlat-mon cpu7-cpugrp:cpu7-cpu-mif-latmon: Memory Latency governor registered.
+[    1.176542] exynos_cpuhp: Register new user [name:SYSFS, mask:0-7]
+[    1.176584] exynos_cpuhp: Exynos CPUHP driver probe done!
+[    1.177461] exynos-pd 18061c00.pd-eh: on
+[    1.177563] exynos-pd 18061e00.pd-g3d: on
+[    1.177662] exynos-pd 18062080.pd-hsi0: on
+[    1.177765] exynos-pd 18062280.pd-disp: on
+[    1.177869] exynos-pd 18062300.pd-g2d: on
+[    1.177984] exynos-pd 18062380.pd-mfc: on
+[    1.178086] exynos-pd 18062400.pd-csis: on
+[    1.178192] exynos-pd 18062480.pd-pdp: on
+[    1.178304] exynos-pd 18062580.pd-g3aa: on
+[    1.178432] exynos-pd 18062600.pd-ipp: on
+[    1.178466] exynos-pd 18062480.pd-pdp: has new subdomain pd-ipp
+[    1.178554] exynos-pd 18062680.pd-itp: on
+[    1.178653] exynos-pd 18062700.pd-mcsc: on
+[    1.178758] exynos-pd 18062780.pd-gdc: on
+[    1.178893] exynos-pd 18062800.pd-tnr: on
+[    1.179016] exynos-pd 18062880.pd-bo: on
+[    1.179112] exynos-pd 18062900.pd-tpu: on
+[    1.179199] exynos-pd 18062980.pd-aur: on
+[    1.179638] exynos_pd_dbg dbgdev-pd-aoc: ignoring dependency for device, assuming no driver
+[    1.180085] exynos_pd_dbg dbgdev-pd-hsi2: ignoring dependency for device, assuming no driver
+[    1.182202] power_stats acpm_stats: defer probe, 18062000.pd-embedded_g3d not ready
+[    1.182625] exynos-dm 17000000.exynos-dm: This doesn't need to send policy to ACPM
+[    1.182638] exynos-dm 17000000.exynos-dm: This doesn't need to send policy to ACPM
+[    1.182647] exynos-dm 17000000.exynos-dm: This doesn't need to send policy to ACPM
+[    1.182661] exynos-dm 17000000.exynos-dm: This doesn't need to send policy to ACPM
+[    1.182668] exynos-dm 17000000.exynos-dm: This doesn't need to send policy to ACPM
+[    1.182677] exynos-dm 17000000.exynos-dm: This doesn't need to send policy to ACPM
+[    1.182685] exynos-dm 17000000.exynos-dm: This doesn't need to send policy to ACPM
+[    1.182692] exynos-dm 17000000.exynos-dm: This doesn't need to send policy to ACPM
+[    1.182698] exynos-dm 17000000.exynos-dm: This doesn't need to send policy to ACPM
+[    1.182702] exynos-dm 17000000.exynos-dm: This doesn't need to send policy to ACPM
+[    1.182712] exynos-dm 17000000.exynos-dm: dm_type: 0(dm_cpu_cl0), available = true
+[    1.182718] exynos-dm 17000000.exynos-dm: dm_type: 1(dm_cpu_cl1), available = true
+[    1.182722] exynos-dm 17000000.exynos-dm: dm_type: 2(dm_cpu_cl2), available = true
+[    1.182729] exynos-dm 17000000.exynos-dm: dm_type: 3(dm_mif), available = true
+[    1.182738] exynos-dm 17000000.exynos-dm: dm_type: 4(dm_int), available = true
+[    1.182744] exynos-dm 17000000.exynos-dm: dm_type: 5(dm_intcam), available = true
+[    1.182752] exynos-dm 17000000.exynos-dm: dm_type: 6(dm_cam), available = true
+[    1.182761] exynos-dm 17000000.exynos-dm: dm_type: 7(dm_tpu), available = true
+[    1.182769] exynos-dm 17000000.exynos-dm: dm_type: 8(dm_tnr), available = true
+[    1.182776] exynos-dm 17000000.exynos-dm: dm_type: 9(dm_disp), available = true
+[    1.182782] exynos-dm 17000000.exynos-dm: dm_type: 10(dm_mfc), available = true
+[    1.182786] exynos-dm 17000000.exynos-dm: dm_type: 11(dm_BO), available = true
+[    1.184051] gs101-devfreq 17000010.devfreq_mif: no power domain
+[    1.184072] gs101-devfreq 17000010.devfreq_mif: MIF clock info exist
+[    1.184089] gs101-devfreq 17000010.devfreq_mif: This does not bts update
+[    1.184096] gs101-devfreq 17000010.devfreq_mif: This does not update fvp
+[    1.184215] gs101-devfreq 17000010.devfreq_mif: DEVFREQ :  3172000Khz,        0uV
+[    1.184225] gs101-devfreq 17000010.devfreq_mif: DEVFREQ :  2730000Khz,        0uV
+[    1.184231] gs101-devfreq 17000010.devfreq_mif: DEVFREQ :  2535000Khz,        0uV
+[    1.184240] gs101-devfreq 17000010.devfreq_mif: DEVFREQ :  2288000Khz,        0uV
+[    1.184250] gs101-devfreq 17000010.devfreq_mif: DEVFREQ :  2028000Khz,        0uV
+[    1.184258] gs101-devfreq 17000010.devfreq_mif: DEVFREQ :  1716000Khz,        0uV
+[    1.184264] gs101-devfreq 17000010.devfreq_mif: DEVFREQ :  1539000Khz,        0uV
+[    1.184272] gs101-devfreq 17000010.devfreq_mif: DEVFREQ :  1352000Khz,        0uV
+[    1.184284] gs101-devfreq 17000010.devfreq_mif: DEVFREQ :  1014000Khz,        0uV
+[    1.184290] gs101-devfreq 17000010.devfreq_mif: DEVFREQ :   845000Khz,        0uV
+[    1.184297] gs101-devfreq 17000010.devfreq_mif: DEVFREQ :   676000Khz,        0uV
+[    1.184306] gs101-devfreq 17000010.devfreq_mif: DEVFREQ :   546000Khz,        0uV
+[    1.184317] gs101-devfreq 17000010.devfreq_mif: DEVFREQ :   421000Khz,        0uV
+[    1.184330] gs101-devfreq 17000010.devfreq_mif: max_freq: 3172000Khz, get_max_freq: 3172000Khz
+[    1.184340] gs101-devfreq 17000010.devfreq_mif: min_freq: 421000Khz, get_min_freq: 421000Khz
+[    1.184347] gs101-devfreq 17000010.devfreq_mif: min_freq: 421000Khz, max_freq: 3172000Khz
+[    1.184363] gs101-devfreq 17000010.devfreq_mif: initial_freq: 3172000Khz, suspend_freq: 421000Khz
+[    1.184593] gs101-devfreq 17000010.devfreq_mif: Initial Frequency: 3172000, Initial Voltage: 0
+[    1.186122] s3c64xx-spi 181c0000.spi: spi bus clock parent not specified, using clock at index 0 as parent
+[    1.186127] s3c64xx-spi 181c0000.spi: number of chip select lines not specified, assuming 1 chip select line
+[    1.186235] s3c64xx-spi 181c0000.spi: set usi mode - 0x2
+[    1.186361] s3c64xx-spi 181c0000.spi: Couldn't get pinctrl.
+[    1.186369] s3c64xx-spi 181c0000.spi: spi clkoff-time is empty(Default: 0ms)
+[    1.186375] s3c64xx-spi 181c0000.spi: PORT 17 fifo_lvl_mask = 0x7f
+[    1.186871] gs101-devfreq 17000010.devfreq_mif: failed to update frequency from PM QoS (-11)
+[    1.186887] gs101-devfreq 17000010.devfreq_mif: failed to update frequency from PM QoS (-11)
+[    1.187739] gs101-devfreq 17000010.devfreq_mif: MIF cdev is initialized!!
+[    1.187750] gs101-devfreq 17000010.devfreq_mif: devfreq is initialized!!
+[    1.188010] gs101-devfreq 17000020.devfreq_int: no power domain
+[    1.188026] gs101-devfreq 17000020.devfreq_int: This does not bts update
+[    1.188035] gs101-devfreq 17000020.devfreq_int: This does not update fvp
+[    1.188042] gs101-devfreq 17000020.devfreq_int: Operation function get_dev_status will not be registered.
+[    1.188049] gs101-devfreq 17000020.devfreq_int: Not registered UM monitor data
+[    1.188057] gs101-devfreq 17000020.devfreq_int: ALT-DVFS is not declared by device tree.
+[    1.188074] gs101-devfreq 17000020.devfreq_int: DEVFREQ :   533000Khz,        0uV
+[    1.188079] gs101-devfreq 17000020.devfreq_int: DEVFREQ :   465000Khz,        0uV
+[    1.188087] gs101-devfreq 17000020.devfreq_int: DEVFREQ :   332000Khz,        0uV
+[    1.188093] gs101-devfreq 17000020.devfreq_int: DEVFREQ :   267000Khz,        0uV
+[    1.188101] gs101-devfreq 17000020.devfreq_int: DEVFREQ :   200000Khz,        0uV
+[    1.188108] gs101-devfreq 17000020.devfreq_int: DEVFREQ :   155000Khz,        0uV
+[    1.188116] gs101-devfreq 17000020.devfreq_int: DEVFREQ :   100000Khz,        0uV
+[    1.188126] gs101-devfreq 17000020.devfreq_int: max_freq: 533000Khz, get_max_freq: 533000Khz
+[    1.188131] gs101-devfreq 17000020.devfreq_int: min_freq: 100000Khz, get_min_freq: 100000Khz
+[    1.188137] gs101-devfreq 17000020.devfreq_int: min_freq: 100000Khz, max_freq: 533000Khz
+[    1.188143] gs101-devfreq 17000020.devfreq_int: initial_freq: 533000Khz, suspend_freq: 100000Khz
+[    1.190924] pkvm-s2mpu 25a70000.s2mpu_aur_idma: registered with hypervisor [9/36]
+[    1.191432] pkvm-s2mpu 25aa0000.s2mpu_aur_inst_data: registered with hypervisor [10/36]
+[    1.191945] pkvm-s2mpu 1ca60000.s2mpu_bo: registered with hypervisor [11/36]
+[    1.192383] pkvm-s2mpu 1a520000.s2mpu_csis0: registered with hypervisor [12/36]
+[    1.192860] pkvm-s2mpu 1a550000.s2mpu_csis1: registered with hypervisor [13/36]
+[    1.193479] pkvm-s2mpu 1c680000.s2mpu_g2d0: registered with hypervisor [14/36]
+[    1.193882] pkvm-s2mpu 1c6b0000.s2mpu_g2d1: registered with hypervisor [15/36]
+[    1.194273] pkvm-s2mpu 1c730000.s2mpu_g2d2: registered with hypervisor [16/36]
+[    1.194673] pkvm-s2mpu 1a8a0000.s2mpu_g3aa: registered with hypervisor [17/36]
+[    1.195223] pkvm-s2mpu 1d0c0000.s2mpu_gdc0: registered with hypervisor [18/36]
+[    1.195714] pkvm-s2mpu 1d0f0000.s2mpu_gdc1: registered with hypervisor [19/36]
+[    1.196214] pkvm-s2mpu 1d120000.s2mpu_gdc2: registered with hypervisor [20/36]
+[    1.196476] gs101-devfreq 17000020.devfreq_int: Initial Frequency: 533000, Initial Voltage: 0
+[    1.196870] pkvm-s2mpu 1ad20000.s2mpu_ipp: registered with hypervisor [21/36]
+[    1.197373] pkvm-s2mpu 1b7a0000.s2mpu_mcsc0: registered with hypervisor [22/36]
+[    1.197858] pkvm-s2mpu 1b7d0000.s2mpu_mcsc1: registered with hypervisor [23/36]
+[    1.198338] pkvm-s2mpu 1b800000.s2mpu_mcsc2: registered with hypervisor [24/36]
+[    1.198833] pkvm-s2mpu 1c890000.s2mpu_mfc0: registered with hypervisor [25/36]
+[    1.199336] pkvm-s2mpu 1c8c0000.s2mpu_mfc1: registered with hypervisor [26/36]
+[    1.199851] pkvm-s2mpu 1bc90000.s2mpu_tnr0: registered with hypervisor [27/36]
+[    1.200350] pkvm-s2mpu 1bcc0000.s2mpu_tnr1: registered with hypervisor [28/36]
+[    1.200840] pkvm-s2mpu 1bcf0000.s2mpu_tnr2: registered with hypervisor [29/36]
+[    1.201320] pkvm-s2mpu 1bd20000.s2mpu_tnr3: registered with hypervisor [30/36]
+[    1.201803] pkvm-s2mpu 1bd50000.s2mpu_tnr4: registered with hypervisor [31/36]
+[    1.202131] pkvm-s2mpu 1cc60000.s2mpu_tpu: registered with hypervisor [32/36]
+[    1.202436] exynos-pd 18062000.pd-embedded_g3d: on
+[    1.202465] exynos-pd 18061e00.pd-g3d: has new subdomain pd-embedded_g3d
+[    1.202651] exynos-pd 18062200.pd-dpu: on
+[    1.202677] exynos-pd 18062280.pd-disp: has new subdomain pd-dpu
+[    1.203206] exynos-pd 18062500.pd-dns: on
+[    1.203233] exynos-pd 18062680.pd-itp: has new subdomain pd-dns
+[    1.207116] gs101-devfreq 17000020.devfreq_int: INT cdev is initialized!!
+[    1.207124] gs101-devfreq 17000020.devfreq_int: devfreq is initialized!!
+[    1.207328] gs101-devfreq 17000030.devfreq_intcam: no power domain
+[    1.207337] gs101-devfreq 17000030.devfreq_intcam: This doesn't use boot value
+[    1.207342] gs101-devfreq 17000030.devfreq_intcam: This does not use acpm
+[    1.207347] gs101-devfreq 17000030.devfreq_intcam: This does not bts update
+[    1.207352] gs101-devfreq 17000030.devfreq_intcam: This does not update fvp
+[    1.207357] gs101-devfreq 17000030.devfreq_intcam: Operation function get_dev_status will not be registered.
+[    1.207362] gs101-devfreq 17000030.devfreq_intcam: Not registered UM monitor data
+[    1.207367] gs101-devfreq 17000030.devfreq_intcam: ALT-DVFS is not declared by device tree.
+[    1.207380] gs101-devfreq 17000030.devfreq_intcam: DEVFREQ :   664000Khz,        0uV
+[    1.207386] gs101-devfreq 17000030.devfreq_intcam: DEVFREQ :   533000Khz,        0uV
+[    1.207391] gs101-devfreq 17000030.devfreq_intcam: DEVFREQ :   465000Khz,        0uV
+[    1.207396] gs101-devfreq 17000030.devfreq_intcam: DEVFREQ :   332000Khz,        0uV
+[    1.207403] gs101-devfreq 17000030.devfreq_intcam: DEVFREQ :   233000Khz,        0uV
+[    1.207409] gs101-devfreq 17000030.devfreq_intcam: DEVFREQ :   134000Khz,        0uV
+[    1.207415] gs101-devfreq 17000030.devfreq_intcam: DEVFREQ :    67000Khz,        0uV
+[    1.207421] gs101-devfreq 17000030.devfreq_intcam: max_freq: 664000Khz, get_max_freq: 664000Khz
+[    1.207428] gs101-devfreq 17000030.devfreq_intcam: min_freq: 67000Khz, get_min_freq: 67000Khz
+[    1.207433] gs101-devfreq 17000030.devfreq_intcam: min_freq: 67000Khz, max_freq: 664000Khz
+[    1.207439] gs101-devfreq 17000030.devfreq_intcam: initial_freq: 67000Khz, suspend_freq: 67000Khz
+[    1.207445] gs101-devfreq 17000030.devfreq_intcam: Initial Frequency: 67000, Initial Voltage: 0
+[    1.207892] pkvm-s2mpu 1b0a0000.s2s2mpu_dnsmpu: registered with hypervisor [33/36]
+[    1.208373] pkvm-s2mpu 1c160000.s2mpu_dpu0: registered with hypervisor [34/36]
+[    1.208746] pkvm-s2mpu 1c170000.s2mpu_dpu1: registered with hypervisor [35/36]
+[    1.209123] pkvm-s2mpu 1c180000.s2mpu_dpu2: registered with hypervisor [36/36]
+[    1.209128] pkvm_s2mpu: list of devices successfully finalized
+[    1.209946] gs101-devfreq 17000030.devfreq_intcam: INTCAM cdev is initialized!!
+[    1.209953] gs101-devfreq 17000030.devfreq_intcam: devfreq is initialized!!
+[    1.210167] gs101-devfreq 17000040.devfreq_disp: no power domain
+[    1.210177] gs101-devfreq 17000040.devfreq_disp: This doesn't use boot value
+[    1.210183] gs101-devfreq 17000040.devfreq_disp: This does not use acpm
+[    1.210188] gs101-devfreq 17000040.devfreq_disp: This does not bts update
+[    1.210193] gs101-devfreq 17000040.devfreq_disp: This does not update fvp
+[    1.210200] gs101-devfreq 17000040.devfreq_disp: Operation function get_dev_status will not be registered.
+[    1.210208] gs101-devfreq 17000040.devfreq_disp: Not registered UM monitor data
+[    1.210213] gs101-devfreq 17000040.devfreq_disp: ALT-DVFS is not declared by device tree.
+[    1.210226] gs101-devfreq 17000040.devfreq_disp: DEVFREQ :   664000Khz,        0uV
+[    1.210232] gs101-devfreq 17000040.devfreq_disp: DEVFREQ :   533000Khz,        0uV
+[    1.210238] gs101-devfreq 17000040.devfreq_disp: DEVFREQ :   465000Khz,        0uV
+[    1.210244] gs101-devfreq 17000040.devfreq_disp: DEVFREQ :   400000Khz,        0uV
+[    1.210250] gs101-devfreq 17000040.devfreq_disp: DEVFREQ :   310000Khz,        0uV
+[    1.210257] gs101-devfreq 17000040.devfreq_disp: DEVFREQ :   267000Khz,        0uV
+[    1.210263] gs101-devfreq 17000040.devfreq_disp: DEVFREQ :   134000Khz,        0uV
+[    1.210269] gs101-devfreq 17000040.devfreq_disp: max_freq: 664000Khz, get_max_freq: 664000Khz
+[    1.210275] gs101-devfreq 17000040.devfreq_disp: min_freq: 134000Khz, get_min_freq: 134000Khz
+[    1.210279] gs101-devfreq 17000040.devfreq_disp: min_freq: 134000Khz, max_freq: 664000Khz
+[    1.210285] gs101-devfreq 17000040.devfreq_disp: initial_freq: 400000Khz, suspend_freq: 134000Khz
+[    1.210291] gs101-devfreq 17000040.devfreq_disp: Initial Frequency: 400000, Initial Voltage: 0
+[    1.211103] gs101-devfreq 17000040.devfreq_disp: DISP cdev is initialized!!
+[    1.211110] gs101-devfreq 17000040.devfreq_disp: devfreq is initialized!!
+[    1.211310] gs101-devfreq 17000050.devfreq_cam: no power domain
+[    1.211320] gs101-devfreq 17000050.devfreq_cam: This doesn't use boot value
+[    1.211326] gs101-devfreq 17000050.devfreq_cam: This does not use acpm
+[    1.211331] gs101-devfreq 17000050.devfreq_cam: This does not bts update
+[    1.211336] gs101-devfreq 17000050.devfreq_cam: This does not update fvp
+[    1.211341] gs101-devfreq 17000050.devfreq_cam: Operation function get_dev_status will not be registered.
+[    1.211346] gs101-devfreq 17000050.devfreq_cam: Not registered UM monitor data
+[    1.211351] gs101-devfreq 17000050.devfreq_cam: ALT-DVFS is not declared by device tree.
+[    1.211363] gs101-devfreq 17000050.devfreq_cam: DEVFREQ :   664000Khz,        0uV
+[    1.211368] gs101-devfreq 17000050.devfreq_cam: DEVFREQ :   533000Khz,        0uV
+[    1.211374] gs101-devfreq 17000050.devfreq_cam: DEVFREQ :   465000Khz,        0uV
+[    1.211379] gs101-devfreq 17000050.devfreq_cam: DEVFREQ :   332000Khz,        0uV
+[    1.211386] gs101-devfreq 17000050.devfreq_cam: DEVFREQ :   233000Khz,        0uV
+[    1.211397] gs101-devfreq 17000050.devfreq_cam: DEVFREQ :   134000Khz,        0uV
+[    1.211402] gs101-devfreq 17000050.devfreq_cam: DEVFREQ :    67000Khz,        0uV
+[    1.211409] gs101-devfreq 17000050.devfreq_cam: max_freq: 664000Khz, get_max_freq: 664000Khz
+[    1.211415] gs101-devfreq 17000050.devfreq_cam: min_freq: 67000Khz, get_min_freq: 67000Khz
+[    1.211420] gs101-devfreq 17000050.devfreq_cam: min_freq: 67000Khz, max_freq: 664000Khz
+[    1.211426] gs101-devfreq 17000050.devfreq_cam: initial_freq: 67000Khz, suspend_freq: 67000Khz
+[    1.211432] gs101-devfreq 17000050.devfreq_cam: Initial Frequency: 67000, Initial Voltage: 0
+[    1.211882] gs101-devfreq 17000050.devfreq_cam: CAM cdev is initialized!!
+[    1.211889] gs101-devfreq 17000050.devfreq_cam: devfreq is initialized!!
+[    1.212096] gs101-devfreq 17000060.devfreq_tnr: no power domain
+[    1.212104] gs101-devfreq 17000060.devfreq_tnr: This doesn't use boot value
+[    1.212109] gs101-devfreq 17000060.devfreq_tnr: This does not use acpm
+[    1.212114] gs101-devfreq 17000060.devfreq_tnr: This does not bts update
+[    1.212119] gs101-devfreq 17000060.devfreq_tnr: This does not update fvp
+[    1.212125] gs101-devfreq 17000060.devfreq_tnr: Operation function get_dev_status will not be registered.
+[    1.212129] gs101-devfreq 17000060.devfreq_tnr: Not registered UM monitor data
+[    1.212134] gs101-devfreq 17000060.devfreq_tnr: ALT-DVFS is not declared by device tree.
+[    1.212145] gs101-devfreq 17000060.devfreq_tnr: DEVFREQ :   664000Khz,        0uV
+[    1.212152] gs101-devfreq 17000060.devfreq_tnr: DEVFREQ :   533000Khz,        0uV
+[    1.212158] gs101-devfreq 17000060.devfreq_tnr: DEVFREQ :   465000Khz,        0uV
+[    1.212163] gs101-devfreq 17000060.devfreq_tnr: DEVFREQ :   332000Khz,        0uV
+[    1.212173] gs101-devfreq 17000060.devfreq_tnr: DEVFREQ :   233000Khz,        0uV
+[    1.212179] gs101-devfreq 17000060.devfreq_tnr: DEVFREQ :   134000Khz,        0uV
+[    1.212185] gs101-devfreq 17000060.devfreq_tnr: DEVFREQ :    67000Khz,        0uV
+[    1.212191] gs101-devfreq 17000060.devfreq_tnr: max_freq: 664000Khz, get_max_freq: 664000Khz
+[    1.212197] gs101-devfreq 17000060.devfreq_tnr: min_freq: 67000Khz, get_min_freq: 67000Khz
+[    1.212203] gs101-devfreq 17000060.devfreq_tnr: min_freq: 67000Khz, max_freq: 664000Khz
+[    1.212209] gs101-devfreq 17000060.devfreq_tnr: initial_freq: 67000Khz, suspend_freq: 67000Khz
+[    1.212215] gs101-devfreq 17000060.devfreq_tnr: Initial Frequency: 67000, Initial Voltage: 0
+[    1.212676] gs101-devfreq 17000060.devfreq_tnr: TNR cdev is initialized!!
+[    1.212683] gs101-devfreq 17000060.devfreq_tnr: devfreq is initialized!!
+[    1.212886] gs101-devfreq 17000070.devfreq_mfc: no power domain
+[    1.212895] gs101-devfreq 17000070.devfreq_mfc: This doesn't use boot value
+[    1.212901] gs101-devfreq 17000070.devfreq_mfc: This does not use acpm
+[    1.212906] gs101-devfreq 17000070.devfreq_mfc: This does not bts update
+[    1.212911] gs101-devfreq 17000070.devfreq_mfc: This does not update fvp
+[    1.212915] gs101-devfreq 17000070.devfreq_mfc: Operation function get_dev_status will not be registered.
+[    1.212921] gs101-devfreq 17000070.devfreq_mfc: Not registered UM monitor data
+[    1.212926] gs101-devfreq 17000070.devfreq_mfc: ALT-DVFS is not declared by device tree.
+[    1.212938] gs101-devfreq 17000070.devfreq_mfc: DEVFREQ :   711000Khz,        0uV
+[    1.212943] gs101-devfreq 17000070.devfreq_mfc: DEVFREQ :   664000Khz,        0uV
+[    1.212949] gs101-devfreq 17000070.devfreq_mfc: DEVFREQ :   533000Khz,        0uV
+[    1.212956] gs101-devfreq 17000070.devfreq_mfc: DEVFREQ :   465000Khz,        0uV
+[    1.212963] gs101-devfreq 17000070.devfreq_mfc: DEVFREQ :   356000Khz,        0uV
+[    1.212970] gs101-devfreq 17000070.devfreq_mfc: DEVFREQ :   267000Khz,        0uV
+[    1.212975] gs101-devfreq 17000070.devfreq_mfc: DEVFREQ :   100000Khz,        0uV
+[    1.212982] gs101-devfreq 17000070.devfreq_mfc: max_freq: 711000Khz, get_max_freq: 711000Khz
+[    1.212987] gs101-devfreq 17000070.devfreq_mfc: min_freq: 100000Khz, get_min_freq: 100000Khz
+[    1.212992] gs101-devfreq 17000070.devfreq_mfc: min_freq: 100000Khz, max_freq: 711000Khz
+[    1.212997] gs101-devfreq 17000070.devfreq_mfc: initial_freq: 100000Khz, suspend_freq: 100000Khz
+[    1.213003] gs101-devfreq 17000070.devfreq_mfc: Initial Frequency: 100000, Initial Voltage: 0
+[    1.213464] gs101-devfreq 17000070.devfreq_mfc: MFC cdev is initialized!!
+[    1.213471] gs101-devfreq 17000070.devfreq_mfc: devfreq is initialized!!
+[    1.213674] gs101-devfreq 17000080.devfreq_bo: no power domain
+[    1.213682] gs101-devfreq 17000080.devfreq_bo: This doesn't use boot value
+[    1.213688] gs101-devfreq 17000080.devfreq_bo: This does not use acpm
+[    1.213692] gs101-devfreq 17000080.devfreq_bo: This does not bts update
+[    1.213697] gs101-devfreq 17000080.devfreq_bo: This does not update fvp
+[    1.213702] gs101-devfreq 17000080.devfreq_bo: Operation function get_dev_status will not be registered.
+[    1.213707] gs101-devfreq 17000080.devfreq_bo: Not registered UM monitor data
+[    1.213711] gs101-devfreq 17000080.devfreq_bo: ALT-DVFS is not declared by device tree.
+[    1.213724] gs101-devfreq 17000080.devfreq_bo: DEVFREQ :   620000Khz,        0uV
+[    1.213729] gs101-devfreq 17000080.devfreq_bo: DEVFREQ :   533000Khz,        0uV
+[    1.213735] gs101-devfreq 17000080.devfreq_bo: DEVFREQ :   465000Khz,        0uV
+[    1.213742] gs101-devfreq 17000080.devfreq_bo: DEVFREQ :   400000Khz,        0uV
+[    1.213748] gs101-devfreq 17000080.devfreq_bo: DEVFREQ :   310000Khz,        0uV
+[    1.213754] gs101-devfreq 17000080.devfreq_bo: DEVFREQ :   222000Khz,        0uV
+[    1.213760] gs101-devfreq 17000080.devfreq_bo: DEVFREQ :    95000Khz,        0uV
+[    1.213765] gs101-devfreq 17000080.devfreq_bo: max_freq: 620000Khz, get_max_freq: 620000Khz
+[    1.213771] gs101-devfreq 17000080.devfreq_bo: min_freq: 95000Khz, get_min_freq: 95000Khz
+[    1.213775] gs101-devfreq 17000080.devfreq_bo: min_freq: 95000Khz, max_freq: 620000Khz
+[    1.213780] gs101-devfreq 17000080.devfreq_bo: initial_freq: 95000Khz, suspend_freq: 95000Khz
+[    1.213788] gs101-devfreq 17000080.devfreq_bo: Initial Frequency: 95000, Initial Voltage: 0
+[    1.214246] gs101-devfreq 17000080.devfreq_bo: BO cdev is initialized!!
+[    1.214253] gs101-devfreq 17000080.devfreq_bo: devfreq is initialized!!
+[    1.215429] google,slc-acpm slc-acpm: channel 10
+[    1.215664] google,slc-acpm slc-acpm: found valid acpm firmware 1.8.
+[    1.215672] google,slc-acpm slc-acpm: Asynchronous notification enabled
+[    1.215961] slc-pmon: Error when fetching number of events (0).
+[    1.216574] gsa-gsc 17c90000.gsa-ns:gsa_gsc@0: Initiliazed
+[    1.216691] cpif: cpboot_spi_probe: bus_num:9 count:0
+[    1.219164] exynos-bts exynos-bts: exynos_bts_debugfs_init failed
+[    1.219170] bts_probe successfully done.
+[    1.220244] cpif: cpif_probe: Exynos CP interface driver CPIF-20220408R1
+[    1.220248] cpif: cpif_probe: cpif: +++ ()
+[    1.220256] cpif: parse_dt_common_pdata: protocol:1
+[    1.220263] cpif: parse_dt_common_pdata: capability_check:1
+[    1.220270] cpif: parse_dt_common_pdata: cp2ap_active_not_alive:0
+[    1.220484] cpif: parse_dt_iodevs_pdata: num_iodevs:52
+[    1.220486] cpif: modem_if_parse_dt_pdata: DT parse complete!
+[    1.220902] cpif: s5100_get_pdata: PCIe Channel Number:0
+[    1.220998] cpif: s5100_init_modemctl_device: Register GPIO interrupts
+[    1.221352] cpif: create_modemctl_device: s5300 is created!!!
+[    1.221408] cpif: create_link_device: +++
+[    1.221413] cpif: create_link_device: MODEM:s5300 LINK:PCIE
+[    1.221422] cpif: create_link_device: link_attrs:0x000017c8
+[    1.221458] cpif: create_link_device: PCIE<->s5300: LINK_ATTR_DPRAM_MAGIC
+[    1.221469] cpif: init_shmem_maps: ipc_base=000000007850ca1c, ipc_size=8388608
+[    1.221510] cpif: pktproc_get_info: version:2 cp_base:0x20000000 mode:1 num_queue:4
+[    1.221514] cpif: pktproc_get_info: use_netrx_mng:0 netrx_capacity:0 exclusive_irq:1
+[    1.221528] cpif: pktproc_get_info: iocc:1 max_packet_size:1584 baaw:0
+[    1.221546] cpif: pktproc_get_info: info_rgn 0x00000000 0x00001000 desc_rgn 0x00001000 0x000ff000 0 buff_rgn 0x00100000 0x01b00000
+[    1.221557] cpif: pktproc_get_info: cached:1/1/1
+[    1.221560] cpif: pktproc_adjust_size: adjusted iommu required:2032 true_packet_size:2048
+[    1.221566] cpif: pktproc_create: memaddr:0xe8000000 memsize:0x01c00000
+[    1.221655] cpif: pktproc_create: info + desc size:0x00100000
+[    1.221658] cpif: pktproc_create: Rounded down queue size from 0x006c0000 to 0x006c0000
+[    1.221661] cpif: pktproc_create: release iommu buffer region offset:0x00100000
+[    1.221666] cpif: cp_shmem_release_rmem: Release rmem base:0xe8000000 size:0x01c00000 headroom:0x00100000
+[    1.226851] cpif: pktproc_create: Total buff buffer size:0x01b00000 Queue:4 Size by queue:0x006c0000
+[    1.226855] cpif: pktproc_create: Create queue 0
+[    1.226861] cpif: pktproc_create: cp_desc_pbase - 36bit addr: 0x20001000, 32bit addr: 0x20001000
+[    1.226876] cpif: pktproc_create: num_desc:3456 cp_desc_pbase:0x20001000 desc_size:0x0000d800
+[    1.226880] cpif: pktproc_create: cp_buff_pbase:0x20100000 buff_size:0x006c0000
+[    1.226883] cpif: pktproc_create: Create queue 1
+[    1.226888] cpif: pktproc_create: cp_desc_pbase - 36bit addr: 0x2000e800, 32bit addr: 0x2000e800
+[    1.226897] cpif: pktproc_create: num_desc:3456 cp_desc_pbase:0x2000e800 desc_size:0x0000d800
+[    1.226900] cpif: pktproc_create: cp_buff_pbase:0x207c0000 buff_size:0x006c0000
+[    1.226904] cpif: pktproc_create: Create queue 2
+[    1.226908] cpif: pktproc_create: cp_desc_pbase - 36bit addr: 0x2001c000, 32bit addr: 0x2001c000
+[    1.226918] cpif: pktproc_create: num_desc:3456 cp_desc_pbase:0x2001c000 desc_size:0x0000d800
+[    1.226921] cpif: pktproc_create: cp_buff_pbase:0x20e80000 buff_size:0x006c0000
+[    1.226925] cpif: pktproc_create: Create queue 3
+[    1.226929] cpif: pktproc_create: cp_desc_pbase - 36bit addr: 0x20029800, 32bit addr: 0x20029800
+[    1.226938] cpif: pktproc_create: num_desc:3456 cp_desc_pbase:0x20029800 desc_size:0x0000d800
+[    1.226941] cpif: pktproc_create: cp_buff_pbase:0x21540000 buff_size:0x006c0000
+[    1.226996] cpif: pktproc_get_info_ul: cp_base:0x20000000 num_queue:2 max_packet_size:2048 hiprio_ack_only:1 iocc:1
+[    1.226999] cpif: pktproc_get_info_ul: cached: 1/1/1 padding_required:1
+[    1.227027] cpif: pktproc_get_info_ul: info_rgn 0x01c00000 0x00001000 desc_rgn 0x01c01000 0x0008f000 buff_rgn 0x01c90000 0x00370000
+[    1.227031] cpif: pktproc_create_ul: memaddr:0xe8000000 memsize:0x00400000
+[    1.227085] cpif: pktproc_create_ul: info + desc size:0x00090000
+[    1.227089] cpif: pktproc_create_ul: Total buffer size:0x00370000 Queue:2 Size by queue:0x001b8000
+[    1.227092] cpif: pktproc_create_ul: Queue 0
+[    1.227098] cpif: pktproc_create_ul: num_desc:1760 desc_offset:0x21c01000 desc_size:0x0000dc00 max_packet_size: 1024
+[    1.227102] cpif: pktproc_create_ul: buff_offset:0x21c90000 buff_size:0x001b8000
+[    1.227105] cpif: pktproc_create_ul: Queue 1
+[    1.227110] cpif: pktproc_create_ul: num_desc:880 desc_offset:0x21c0ec00 desc_size:0x00006e00 max_packet_size: 2048
+[    1.227113] cpif: pktproc_create_ul: buff_offset:0x21e48000 buff_size:0x001b8000
+[    1.227126] cpif: tpmon_create: register cpufreq notifier
+[    1.227136] cpif: tpmon_parse_dt: trigger min:500msec max:1500msec
+[    1.227141] cpif: tpmon_parse_dt: monitor interval:1000msec hold:3000msec stop:15mbps
+[    1.227144] cpif: tpmon_parse_dt: boost hold:6000msec
+[    1.227156] cpif: tpmon_parse_dt: name:RPS measure:0 target:0 extra_idx:0 level:2/3 proto:0
+[    1.227164] cpif: tpmon_parse_dt: name:GRO measure:0 target:1 extra_idx:0 level:1/2 proto:0
+[    1.227174] cpif: tpmon_set_cpufreq: notifier_call is registered
+[    1.227179] cpif: tpmon_parse_dt: name:CL1 measure:0 target:10 extra_idx:4 level:1/2 proto:0
+[    1.227188] cpif: tpmon_parse_dt: name:PCIE_LP measure:0 target:3 extra_idx:0 level:1/2 proto:0
+[    1.227196] cpif: tpmon_parse_dt: name:IRQ_0 measure:0 target:5 extra_idx:3 level:1/2 proto:0
+[    1.227349] cpif: create_link_device: ---
+[    1.227353] cpif: cpif_probe: s5300: PCIE link created
+[    1.227425] cpif: create_io_device: umts_ipc0 created. attrs:0x00002000
+[    1.227503] cpif: create_io_device: umts_ipc1 created. attrs:0x00002000
+[    1.227577] cpif: create_io_device: umts_rfs0 created. attrs:0x00000000
+[    1.227647] cpif: create_io_device: umts_router created. attrs:0x00000000
+[    1.227716] cpif: create_io_device: umts_dm0 created. attrs:0x00004000
+[    1.227787] cpif: create_io_device: umts_loopback created. attrs:0x00000000
+[    1.228321] cpif: create_io_device: rmnet0 created. attrs:0x00002000
+[    1.228711] cpif: create_io_device: rmnet1 created. attrs:0x00002000
+[    1.229106] cpif: create_io_device: rmnet2 created. attrs:0x00002000
+[    1.229499] cpif: create_io_device: rmnet3 created. attrs:0x00002000
+[    1.229895] cpif: create_io_device: rmnet4 created. attrs:0x00002000
+[    1.230292] cpif: create_io_device: rmnet5 created. attrs:0x00002000
+[    1.230729] cpif: create_io_device: rmnet6 created. attrs:0x00002000
+[    1.231125] cpif: create_io_device: rmnet7 created. attrs:0x00002000
+[    1.231516] cpif: create_io_device: rmnet8 created. attrs:0x00002000
+[    1.231910] cpif: create_io_device: rmnet9 created. attrs:0x00002000
+[    1.232298] cpif: create_io_device: rmnet10 created. attrs:0x00002000
+[    1.232695] cpif: create_io_device: rmnet11 created. attrs:0x00002000
+[    1.233098] cpif: create_io_device: rmnet12 created. attrs:0x00002000
+[    1.233489] cpif: create_io_device: rmnet13 created. attrs:0x00002000
+[    1.233884] cpif: create_io_device: rmnet14 created. attrs:0x00002000
+[    1.234284] cpif: create_io_device: rmnet15 created. attrs:0x00002000
+[    1.234677] cpif: create_io_device: rmnet16 created. attrs:0x00002000
+[    1.235067] cpif: create_io_device: rmnet17 created. attrs:0x00002000
+[    1.235462] cpif: create_io_device: rmnet18 created. attrs:0x00002000
+[    1.235870] cpif: create_io_device: rmnet19 created. attrs:0x00002000
+[    1.236280] cpif: create_io_device: rmnet20 created. attrs:0x00002000
+[    1.236786] cpif: create_io_device: rmnet21 created. attrs:0x00002000
+[    1.237182] cpif: create_io_device: rmnet22 created. attrs:0x00002000
+[    1.237581] cpif: create_io_device: rmnet23 created. attrs:0x00002000
+[    1.237983] cpif: create_io_device: rmnet24 created. attrs:0x00002000
+[    1.238366] cpif: create_io_device: rmnet25 created. attrs:0x00002000
+[    1.238754] cpif: create_io_device: rmnet26 created. attrs:0x00002000
+[    1.239147] cpif: create_io_device: rmnet27 created. attrs:0x00002000
+[    1.239549] cpif: create_io_device: rmnet28 created. attrs:0x00002000
+[    1.239940] cpif: create_io_device: rmnet29 created. attrs:0x00002000
+[    1.240343] cpif: create_io_device: umts_dummy created. attrs:0x00000000
+[    1.240427] cpif: create_io_device: multipdp created. attrs:0x00000000
+[    1.240468] cpif: create_io_device: BOOT device = umts_boot0
+[    1.240504] cpif: create_io_device: umts_boot0 created. attrs:0x00000200
+[    1.240576] cpif: create_io_device: umts_rcs0 created. attrs:0x00000000
+[    1.240648] cpif: create_io_device: umts_rcs1 created. attrs:0x00000000
+[    1.240721] cpif: create_io_device: umts_wfc0 created. attrs:0x00000000
+[    1.240793] cpif: create_io_device: umts_wfc1 created. attrs:0x00000000
+[    1.240866] cpif: create_io_device: oem_ipc0 created. attrs:0x00002000
+[    1.240936] cpif: create_io_device: oem_ipc1 created. attrs:0x00002000
+[    1.241006] cpif: create_io_device: oem_ipc2 created. attrs:0x00002000
+[    1.241075] cpif: create_io_device: oem_ipc3 created. attrs:0x00002000
+[    1.241156] cpif: create_io_device: oem_ipc4 created. attrs:0x00002000
+[    1.241224] cpif: create_io_device: oem_ipc5 created. attrs:0x00002000
+[    1.241294] cpif: create_io_device: oem_ipc6 created. attrs:0x00002000
+[    1.241368] cpif: create_io_device: oem_ipc7 created. attrs:0x00002000
+[    1.241436] cpif: create_io_device: oem_test created. attrs:0x00000000
+[    1.241484] cpif: cpif_probe: cpif: done ---
+[    1.242243] eh: starting probing
+[    1.255094] eh: starting probing done
+[    1.256483] s3c2410-wdt 10060000.watchdog_cl0: watchdog cluster0 probe
+[    1.256493] s3c2410-wdt 10060000.watchdog_cl0: It is not a multistage watchdog.
+[    1.256516] s3c2410-wdt 10060000.watchdog_cl0: NONCPU_INT_EN reg val: 1fc
+[    1.256533] s3c2410-wdt 10060000.watchdog_cl0: probe: mapped reg_base=00000000dbb308ba
+[    1.256693] s3c2410-wdt 10060000.watchdog_cl0: Watchdog cluster 0 stop done, WTCON = 15718
+[    1.256708] s3c2410-wdt 10060000.watchdog_cl0: NONCPU_OUT set true done, val = 78d10, en= 1
+[    1.256716] s3c2410-wdt 10060000.watchdog_cl0: NONCPU_INT_EN set true done, val = 1fc, mask = 0
+[    1.256737] s3c2410-wdt 10060000.watchdog_cl0: Watchdog cluster 0 stop done, WTCON = 15718
+[    1.256749] s3c2410-wdt 10060000.watchdog_cl0: watchdog cluster 0, inactive, reset disabled, irq disabled
+[    1.256756] s3c2410-wdt 10060000.watchdog_cl0: DBGACK enabled
+[    1.256763] s3c2410-wdt 10060000.watchdog_cl0: windowed watchdog disabled, wtmincnt=1ff5e
+[    1.256767] Multistage watchdog disabled
+[    1.256816] s3c2410-wdt 10070000.watchdog_cl1: watchdog cluster1 probe
+[    1.256835] s3c2410-wdt 10070000.watchdog_cl1: NONCPU_INT_EN reg val: 4
+[    1.256848] s3c2410-wdt 10070000.watchdog_cl1: probe: mapped reg_base=00000000d7f3d58f
+[    1.256902] s3c2410-wdt 10070000.watchdog_cl1: s3c2410wdt_multistage_wdt_stop: cluster 1 stop done, WTCON 00015701
+[    1.256911] s3c2410-wdt 10070000.watchdog_cl1: Watchdog cluster 1 stop done, WTCON = 15700
+[    1.256922] s3c2410-wdt 10070000.watchdog_cl1: NONCPU_OUT set true done, val = 88, en= 1
+[    1.256930] s3c2410-wdt 10070000.watchdog_cl1: s3c2410wdt_multistage_wdt_stop: cluster 1 stop done, WTCON 00015700
+[    1.256939] s3c2410-wdt 10070000.watchdog_cl1: Watchdog cluster 1 stop done, WTCON = 15700
+[    1.256947] s3c2410-wdt 10070000.watchdog_cl1: watchdog cluster 1, inactive, reset disabled, irq disabled
+[    1.256951] s3c2410-wdt 10070000.watchdog_cl1: DBGACK enabled
+[    1.256958] s3c2410-wdt 10070000.watchdog_cl1: windowed watchdog disabled, wtmincnt=19918
+[    1.256961] Multistage watchdog enabled
+[    1.257674] exynos-seclog seclog: [ERROR] EL3 Monitor doesn't support Secure log
+[    1.257679] exynos-seclog seclog: Fail to initialize Secure log
+[    1.257710] exynos-seclog: probe of seclog failed with error -22
+[    1.258959] exynos-uart 181b0000.serial: set usi mode - 0x1
+[    1.258997] exynos-uart 181b0000.serial: IRQ index 1 not found
+[    1.259003] exynos-uart 181b0000.serial: No explicit src-clk. Use default src-clk
+[    1.259039] 181b0000.serial: ttySAC18 at MMIO 0x181b0000 (irq = 191, base_baud = 0) is a S3C6400/10
+[    1.259439] logbuffer: id:tty18 registered
+[    1.259560] exynos-uart 10a00000.uart: usi offset is not specified
+[    1.259565] exynos-uart 10a00000.uart: no lookup for usi-phandle.
+[    1.259600] exynos-uart 10a00000.uart: IRQ index 1 not found
+[    1.259606] exynos-uart 10a00000.uart: No explicit src-clk. Use default src-clk
+[    1.259638] 10a00000.uart: ttySAC0 at MMIO 0x10a00000 (irq = 350, base_baud = 0) is a S3C6400/10
+[    1.261635] samsung-sysmmu 1a090000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.262809] samsung-sysmmu 1ca40000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.264055] samsung-sysmmu 1a510000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.265330] samsung-sysmmu 1a540000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.266689] samsung-sysmmu 1b080000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.267840] samsung-sysmmu 1c100000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.268937] samsung-sysmmu 1c110000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.270056] samsung-sysmmu 1c120000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.271014] samsung-sysmmu 1c660000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.271900] samsung-sysmmu 1c690000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.272771] samsung-sysmmu 1c710000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.274029] samsung-sysmmu 1a880000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.275340] samsung-sysmmu 1d0a0000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.276663] samsung-sysmmu 1d0d0000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.277961] samsung-sysmmu 1d100000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.279248] samsung-sysmmu 1ad00000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.280665] samsung-sysmmu 1b780000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.281935] samsung-sysmmu 1b7b0000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.283207] samsung-sysmmu 1b7e0000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.284575] samsung-sysmmu 1c870000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.285855] samsung-sysmmu 1c8a0000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.287156] samsung-sysmmu 1bc70000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.288428] samsung-sysmmu 1bca0000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.289711] samsung-sysmmu 1bcd0000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.290981] samsung-sysmmu 1bd00000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.292256] samsung-sysmmu 1bd30000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.293495] samsung-sysmmu 1cc40000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.294789] samsung-sysmmu 25a50000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.296037] samsung-sysmmu 25a80000.sysmmu: initialized IOMMU. Ver 8.1.0, no gate clock
+[    1.296855] exynos-g2d 1c640000.g2d: has sysmmu 1c660000.sysmmu (total count:1)
+[    1.296888] exynos-g2d 1c640000.g2d: has sysmmu 1c690000.sysmmu (total count:2)
+[    1.296931] exynos-g2d 1c640000.g2d: Adding to iommu group 5
+[    1.297016] exynos-g2d 1c640000.g2d: attached with pgtable 0x00000000e9380000
+[    1.298041] exynos-g2d 1c640000.g2d: Probed FIMG2D version 0xa0010004
+[    1.298582] zram: Added device: zram0
+[    1.299249] brcm gps spi spi5.0: ssp-host-req=48, ssp-mcu_req=128, ssp-mcu-resp=100 nstandby=101 
+[    1.299600] brcm gps spi spi5.0: Can not get ts default pinstate
+[    1.299636] brcm gps spi spi5.0: Probe OK. ssp-host-req=48, irq=371, priv=0x00000000552f5e46
+[    1.299738] GPSBBD: (511,1) registered /dev/bbd_sensor
+[    1.299773] GPSBBD: (511,2) registered /dev/bbd_control
+[    1.299807] GPSBBD: (511,3) registered /dev/bbd_patch
+[    1.299842] GPSBBD: (511,4) registered /dev/bbd_pwrstat
+[    1.299846] GPSBBD: 167888 nsec elapsed
+[    1.300408] exynos-ufs 14700000.ufs: exynos_ufs_probe: start
+[    1.300412] exynos-ufs 14700000.ufs: ===============================
+[    1.300427] exynos-ufs 14700000.ufs: reg_hci    00000000731aaa28
+[    1.300439] exynos-ufs 14700000.ufs: reg_unipro 000000008e3ef18f
+[    1.300451] exynos-ufs 14700000.ufs: reg_ufsp   0000000051ac70df
+[    1.300464] exynos-ufs 14700000.ufs: reg_phy    00000000df2f02fa
+[    1.300478] exynos-ufs 14700000.ufs: reg_cport  00000000bb976778
+[    1.300484] exynos-ufs 14700000.ufs: 
+[    1.300554] exynos-ufs 14700000.ufs: ufs-iocc: offset 0x710, mask 0x3, value 0x3
+[    1.300560] exynos-ufs 14700000.ufs: No ufs-pm-qos node, not guarantee pm qos
+[    1.300569] exynos-ufs 14700000.ufs: evt version : 1, board: 1
+[    1.300575] exynos-ufs 14700000.ufs: ===============================
+[    1.300586] exynos-ufs 14700000.ufs: exynos_ufs_init_dbg:
+[    1.300591] exynos-ufs 14700000.ufs: UNIP_COMP_AXI_AUX_FIELD = 0x00000040
+[    1.300595] exynos-ufs 14700000.ufs: __WSTRB = 0x0f000000
+[    1.301791] exynos-ufs 14700000.ufs: ufshcd_populate_vreg: Unable to find vdd-hba-supply regulator, assuming enabled
+[    1.301800] exynos-ufs 14700000.ufs: ufshcd_populate_vreg: unable to find vcc-max-microamp
+[    1.301806] exynos-ufs 14700000.ufs: ufshcd_populate_vreg: Unable to find vccq-supply regulator, assuming enabled
+[    1.301813] exynos-ufs 14700000.ufs: ufshcd_populate_vreg: Unable to find vccq2-supply regulator, assuming enabled
+[    1.302557] exynos-ufs 14700000.ufs: configured KDN with MKE=1, DT=0, KE=0
+[    1.302586] exynos-ufs 14700000.ufs: enabled inline encryption support with wrapped keys
+[    1.303917] scsi host0: ufshcd
+[    1.304178] exynos-ufs 14700000.ufs: kdn: evicting keyslot 0
+[    1.304758] exynos-ufs 14700000.ufs: kdn: evicting keyslot 1
+[    1.305319] exynos-ufs 14700000.ufs: kdn: evicting keyslot 2
+[    1.305854] exynos-ufs 14700000.ufs: kdn: evicting keyslot 3
+[    1.306410] exynos-ufs 14700000.ufs: kdn: evicting keyslot 4
+[    1.306968] exynos-ufs 14700000.ufs: kdn: evicting keyslot 5
+[    1.307487] exynos-ufs 14700000.ufs: kdn: evicting keyslot 6
+[    1.308024] exynos-ufs 14700000.ufs: kdn: evicting keyslot 7
+[    1.308579] exynos-ufs 14700000.ufs: kdn: evicting keyslot 8
+[    1.309116] exynos-ufs 14700000.ufs: kdn: evicting keyslot 9
+[    1.309674] exynos-ufs 14700000.ufs: kdn: evicting keyslot 10
+[    1.310200] exynos-ufs 14700000.ufs: kdn: evicting keyslot 11
+[    1.310757] exynos-ufs 14700000.ufs: kdn: evicting keyslot 12
+[    1.311316] exynos-ufs 14700000.ufs: kdn: evicting keyslot 13
+[    1.311855] exynos-ufs 14700000.ufs: kdn: evicting keyslot 14
+[    1.312426] exynos-ufs 14700000.ufs: mclk: 177664000
+[    1.312443] exynos-ufs 14700000.ufs: kdn: restoring keys
+[    1.314137] exynos-ufs 14700000.ufs: kdn: restored keys
+[    1.320112] logbuffer: id:tcpm registered
+[    1.320944] exynos5-hsi2c 10900000.hsi2c: set usi mode - 0x4
+[    1.321030] exynos5-hsi2c 10900000.hsi2c: exynos5_i2c_set_timing IPCLK = 199680000 OP_CLK = 1000000 DIV = 11 TIMING FS1(FS+) = 0x1E0FF00 TIMING FS2(FS+) = 0x30003E0 TIMING FS3(FS+) = 0xB0000
+[    1.321881] exynos5-hsi2c 10910000.hsi2c: set usi mode - 0x4
+[    1.321955] exynos5-hsi2c 10910000.hsi2c: exynos5_i2c_set_timing IPCLK = 199680000 OP_CLK = 950000 DIV = 12 TIMING FS1(FS+) = 0x1E0FF00 TIMING FS2(FS+) = 0x30003E0 TIMING FS3(FS+) = 0xC0000
+[    1.322455] exynos5-hsi2c 10920000.hsi2c: set usi mode - 0x4
+[    1.322530] exynos5-hsi2c 10920000.hsi2c: exynos5_i2c_set_timing IPCLK = 199680000 OP_CLK = 950000 DIV = 12 TIMING FS1(FS+) = 0x1E0FF00 TIMING FS2(FS+) = 0x30003E0 TIMING FS3(FS+) = 0xC0000
+[    1.323037] exynos5-hsi2c 10930000.hsi2c: set usi mode - 0x4
+[    1.323106] exynos5-hsi2c 10930000.hsi2c: exynos5_i2c_set_timing IPCLK = 199680000 OP_CLK = 1000000 DIV = 11 TIMING FS1(FS+) = 0x1E0FF00 TIMING FS2(FS+) = 0x30003E0 TIMING FS3(FS+) = 0xB0000
+[    1.323554] exynos5-hsi2c 10970000.hsi2c: set usi mode - 0x4
+[    1.323625] exynos5-hsi2c 10970000.hsi2c: exynos5_i2c_set_timing IPCLK = 199680000 OP_CLK = 400000 DIV = 31 Timing FS1 = 0x1F0FF00 TIMING FS2 = 0x30003E0 TIMING FS3 = 0x1F0000
+[    1.325350] exynos5-hsi2c 10d60000.hsi2c: set usi mode - 0x4
+[    1.325427] exynos5-hsi2c 10d60000.hsi2c: exynos5_i2c_set_timing IPCLK = 199680000 OP_CLK = 400000 DIV = 31 Timing FS1 = 0x1F0FF00 TIMING FS2 = 0x30003E0 TIMING FS3 = 0x1F0000
+[    1.326945] exynos5-hsi2c 10da0000.hsi2c: set usi mode - 0x4
+[    1.327017] exynos5-hsi2c 10da0000.hsi2c: exynos5_i2c_set_timing IPCLK = 199680000 OP_CLK = 400000 DIV = 31 Timing FS1 = 0x1F0FF00 TIMING FS2 = 0x30003E0 TIMING FS3 = 0x1F0000
+[    1.327216] at24 6-0050: supply vcc not found, using dummy regulator
+[    1.328418] at24 6-0050: 1024 byte 24c08 EEPROM, writable, 1 bytes/write
+[    1.329708] i2c-acpm acpm_mfd_bus@18100000: acpm mfd bus driver probe started
+[    1.330360] s2mpg12 i2c-s2mpg12mfd: s2mpg12 i2c probe
+[    1.333343] s2mpg12_i2c_probe device found: rev.0x01
+[    1.335820] exynos-ufs 14700000.ufs: PA_ActiveTxDataLanes(2), PA_ActiveRxDataLanes(2)
+[    1.335825] exynos-ufs 14700000.ufs: max_gear(4), PA_MaxRxHSGear(4)
+[    1.335835] exynos-ufs 14700000.ufs: UFS link start-up passes
+[    1.347004] exynos-ufs 14700000.ufs: UFS device initialized
+[    1.349240] exynos-ufs 14700000.ufs: PA_ActiveTxDataLanes(2),PA_ActiveRxDataLanes(2)
+[    1.349339] exynos-ufs 14700000.ufs: Power mode change(0): M(1)G(4)L(2)HS-series(2)
+[    1.349344] exynos-ufs 14700000.ufs: HS mode config passes
+[    1.349615] scsi 0:0:0:49488: Well-known LUN    KIOXIA   THGJFGT1E45BAIPB 0100 PQ: 0 ANSI: 6
+[    1.350064] ufs_device_wlun 0:0:0:49488: Attached scsi generic sg0 type 30
+[    1.350609] scsi 0:0:0:49476: Well-known LUN    KIOXIA   THGJFGT1E45BAIPB 0100 PQ: 0 ANSI: 6
+[    1.351012] scsi 0:0:0:49476: Attached scsi generic sg1 type 30
+[    1.351322] scsi 0:0:0:49456: Well-known LUN    KIOXIA   THGJFGT1E45BAIPB 0100 PQ: 0 ANSI: 6
+[    1.351720] scsi 0:0:0:49456: Attached scsi generic sg2 type 30
+[    1.352215] scsi 0:0:0:0: Direct-Access     KIOXIA   THGJFGT1E45BAIPB 0100 PQ: 0 ANSI: 6
+[    1.352633] scsi 0:0:0:0: Attached scsi generic sg3 type 0
+[    1.353207] scsi 0:0:0:1: Direct-Access     KIOXIA   THGJFGT1E45BAIPB 0100 PQ: 0 ANSI: 6
+[    1.353472] sd 0:0:0:0: [sda] 62436352 4096-byte logical blocks: (256 GB/238 GiB)
+[    1.353707] scsi 0:0:0:1: Attached scsi generic sg4 type 0
+[    1.353948] sd 0:0:0:0: [sda] Write Protect is off
+[    1.353954] sd 0:0:0:0: [sda] Mode Sense: 00 32 00 10
+[    1.354101] sd 0:0:0:0: [sda] Disabling FUA
+[    1.354108] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    1.354155] scsi 0:0:0:2: Direct-Access     KIOXIA   THGJFGT1E45BAIPB 0100 PQ: 0 ANSI: 6
+[    1.354182] sd 0:0:0:0: [sda] Optimal transfer size 524288 bytes
+[    1.354799] scsi 0:0:0:2: Attached scsi generic sg5 type 0
+[    1.355158] scsi 0:0:0:3: Direct-Access     KIOXIA   THGJFGT1E45BAIPB 0100 PQ: 0 ANSI: 6
+[    1.355557] scsi 0:0:0:3: Attached scsi generic sg6 type 0
+[    1.356992] sd 0:0:0:1: [sdb] 8192 4096-byte logical blocks: (33.6 MB/32.0 MiB)
+[    1.357126] sd 0:0:0:1: [sdb] Write Protect is off
+[    1.357161] sd 0:0:0:1: [sdb] Mode Sense: 00 32 00 10
+[    1.357308]  sda: sda1 sda2 sda3 sda4 sda5 sda6 sda7 sda8 sda9 sda10 sda11 sda12 sda13 sda14 sda15 sda16 sda17 sda18 sda19 sda20 sda21 sda22 sda23 sda24 sda25 sda26 sda27 sda28 sda29 sda30 sda31
+[    1.358999] sd 0:0:0:1: [sdb] Disabling FUA
+[    1.359037] sd 0:0:0:1: [sdb] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[    1.359099] sd 0:0:0:2: [sdc] 8192 4096-byte logical blocks: (33.6 MB/32.0 MiB)
+[    1.359123] sd 0:0:0:1: [sdb] Optimal transfer size 524288 bytes
+[    1.359167] sd 0:0:0:2: [sdc] Write Protect is off
+[    1.359173] sd 0:0:0:2: [sdc] Mode Sense: 00 32 00 10
+[    1.359392] sd 0:0:0:2: [sdc] Disabling FUA
+[    1.359400] sd 0:0:0:2: [sdc] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[    1.359876] sd 0:0:0:2: [sdc] Optimal transfer size 524288 bytes
+[    1.362037]  sdb: sdb1 sdb2 sdb3 sdb4 sdb5 sdb6 sdb7 sdb8 sdb9 sdb10
+[    1.362864]  sdc: sdc1 sdc2 sdc3 sdc4 sdc5 sdc6 sdc7 sdc8 sdc9 sdc10
+[    1.364395] sd 0:0:0:1: [sdb] Attached SCSI disk
+[    1.364723] sd 0:0:0:2: [sdc] Attached SCSI disk
+[    1.365387] sd 0:0:0:0: [sda] Attached SCSI disk
+[    1.365920] sd 0:0:0:3: [sdd] 1024 4096-byte logical blocks: (4.19 MB/4.00 MiB)
+[    1.365976] sd 0:0:0:3: [sdd] Write Protect is off
+[    1.365983] sd 0:0:0:3: [sdd] Mode Sense: 00 32 00 10
+[    1.366112] sd 0:0:0:3: [sdd] Disabling FUA
+[    1.366120] sd 0:0:0:3: [sdd] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    1.366203] sd 0:0:0:3: [sdd] Optimal transfer size 524288 bytes
+[    1.368058]  sdd: sdd1 sdd2 sdd3 sdd4
+[    1.369311] sd 0:0:0:3: [sdd] Attached SCSI disk
+[    1.386809] s2mpg12 i2c-s2mpg12mfd: s2mpg12 S2MPG12_COMMON_IBIM1=0xfe
+[    1.420055] s2mpg12-regulator s2mpg12-regulator: BUCK_OCP_CTRL1: 0xbb
+[    1.420188] s2mpg12-regulator s2mpg12-regulator: BUCK_OCP_CTRL2: 0xbb
+[    1.420322] s2mpg12-regulator s2mpg12-regulator: BUCK_OCP_CTRL3: 0xbb
+[    1.420460] s2mpg12-regulator s2mpg12-regulator: BUCK_OCP_CTRL4: 0xbb
+[    1.420596] s2mpg12-regulator s2mpg12-regulator: BUCK_OCP_CTRL5: 0xbb
+[    1.420730] s2mpg12-regulator s2mpg12-regulator: SMPL_WARN_CTRL : 0x68
+[    1.420866] s2mpg12-regulator s2mpg12-regulator: B2M_OCP_WARN : 0x80
+[    1.420998] s2mpg12-regulator s2mpg12-regulator: B3M_OCP_WARN : 0x80
+[    1.421129] s2mpg12-regulator s2mpg12-regulator: B10M_OCP_WARN : 0x80
+[    1.421265] s2mpg12-regulator s2mpg12-regulator: B2M_SOFT_OCP_WARN : 0x14
+[    1.421398] s2mpg12-regulator s2mpg12-regulator: B3M_SOFT_OCP_WARN : 0x0
+[    1.421532] s2mpg12-regulator s2mpg12-regulator: B10M_SOFT_OCP_WARN : 0x0
+[    1.425959] s2mpg12-rtc s2mpg12-rtc: s2m_rtc_enable_wtsr_smpl: WTSR: enable, COLDRST : disable, SMPL: disable
+[    1.430727] s2mpg12-rtc s2mpg12-rtc: s2m_rtc_read_time: 2023-04-23 06:17:14(0x01)AM
+[    1.432471] s2mpg12-rtc s2mpg12-rtc: s2m_rtc_read_alarm: 2023-04-23 03:14:21(0)
+[    1.434348] s2mpg12-rtc s2mpg12-rtc: s2m_rtc_read_time: 2023-04-23 06:17:14(0x01)AM
+[    1.434795] s2mpg12-rtc s2mpg12-rtc: registered as rtc0
+[    1.436552] s2mpg12-rtc s2mpg12-rtc: s2m_rtc_read_time: 2023-04-23 06:17:14(0x01)AM
+[    1.437396] s2mpg12-rtc s2mpg12-rtc: setting system clock to 2023-04-23T06:17:14 UTC (1682230634)
+[    1.440831] power_keys_probe: start
+[    1.442890] input: s2mpg12-power-keys as /devices/platform/acpm_mfd_bus@18100000/i2c-7/i2c-s2mpg12mfd/s2mpg12-power-keys/input/input1
+[    1.442947] s2mpg12-power-keys s2mpg12-power-keys: S2MPG12 Key probe End
+[    1.443122] i2c-acpm acpm_mfd_bus@18100000: acpm mfd bus driver probe was succeeded
+[    1.443242] i2c-acpm acpm_mfd_bus@18110000: acpm mfd bus driver probe started
+[    1.444530] s2mpg13 i2c-s2mpg13mfd: s2mpg13 i2c probe
+[    1.445702] exynos-pcie-rc 11920000.pcie: ## PCIe RC PROBE start
+[    1.445737] exynos-pcie-rc 11920000.pcie: ## PCIe ch 0 ##
+[    1.445858] logbuffer: id:pcie0 registered
+[    1.445874] exynos-pcie-rc 11920000.pcie: Failed to parse the number of chip-ver, default '0'
+[    1.445879] exynos-pcie-rc 11920000.pcie: parse the number of lanes: 2
+[    1.445884] exynos-pcie-rc 11920000.pcie: parse the separated msi: 1
+[    1.445890] exynos-pcie-rc 11920000.pcie: Cache Coherency unit is ENABLED.
+[    1.445895] exynos-pcie-rc 11920000.pcie: MSI is ENABLED.
+[    1.445899] exynos-pcie-rc 11920000.pcie: ## PCIe use SICD
+[    1.445904] exynos-pcie-rc 11920000.pcie: ## PCIe use PCIE ON Sleep
+[    1.445908] exynos-pcie-rc 11920000.pcie: PCIe SysMMU is ENABLED.
+[    1.445913] exynos-pcie-rc 11920000.pcie: PCIe I/A is ENABLED.
+[    1.445917] exynos-pcie-rc 11920000.pcie: PCIe L1SS(L1.2) is ENABLED.
+[    1.445922] exynos-pcie-rc 11920000.pcie: PCIe Secure ATU is ENABLED.
+[    1.445934] exynos-pcie-rc 11920000.pcie: exynos_pcie_rc_parse_dt: pcie int_min_lock = 200000
+[    1.446012] exynos-pcie-rc 11920000.pcie: wlan gpio is not defined -> don't use wifi through pcie#0
+[    1.446021] exynos-pcie-rc 11920000.pcie: ssd gpio is not defined -> don't use ssd through pcie#0
+[    1.446108] exynos-pcie-rc 11920000.pcie: No idle pin state(but it's OK)!!
+[    1.446163] exynos-pcie-rc 11920000.pcie: Initialize PHY functions.
+[    1.446167] exynos-pcie-rc 11920000.pcie: Initialize PCIe function.
+[    1.446360] exynos-pcie-rc 11920000.pcie: PCIe cap [0x1][Power Management]: 0x40
+[    1.446366] exynos-pcie-rc 11920000.pcie: PCIe cap [0x5][Message Signalled Interrupts]: 0x50
+[    1.446372] exynos-pcie-rc 11920000.pcie: PCIe cap [0x10][PCI Express]: 0x70
+[    1.446378] exynos-pcie-rc 11920000.pcie: PCIe ext cap [0x1][Advanced Error Reporting]: 0x100
+[    1.446384] exynos-pcie-rc 11920000.pcie: PCIe ext cap [0x19][Secondary PCIe Capability]: 0x148
+[    1.446390] exynos-pcie-rc 11920000.pcie: PCIe ext cap [0x1e][L1 PM Substates]: 0x194
+[    1.446395] exynos-pcie-rc 11920000.pcie: PCIe ext cap [0x25][Data Link Feature]: 0x1a4
+[    1.446400] exynos-pcie-rc 11920000.pcie: PCIe ext cap [0x26][Physical Layer 16GT/s]: 0x158
+[    1.446405] exynos-pcie-rc 11920000.pcie: PCIe ext cap [0x27][Physical Layer 16GT/s Margining]: 0x17c
+[    1.446484] exynos-pcie-rc 11920000.pcie: 314 separated MSI irq is defined.
+[    1.446519] exynos-pcie-rc 11920000.pcie: 315 separated MSI irq is defined.
+[    1.446532] exynos-pcie-rc 11920000.pcie: 316 separated MSI irq is defined.
+[    1.446547] exynos-pcie-rc 11920000.pcie: 317 separated MSI irq is defined.
+[    1.446563] exynos-pcie-rc 11920000.pcie: 318 separated MSI irq is defined.
+[    1.446621] exynos-pcie-rc 11920000.pcie: host bridge /pcie@11920000 ranges:
+[    1.446631] exynos-pcie-rc 11920000.pcie:   No bus range found for /pcie@11920000, using [bus 00-ff]
+[    1.446646] exynos-pcie-rc 11920000.pcie:      MEM 0x0040000000..0x0040feffff -> 0x0014e00000
+[    1.446716] exynos-pcie-rc 11920000.pcie: invalid resource
+[    1.446838] exynos-pcie-rc 11920000.pcie: PCI host bridge to bus 0000:00
+[    1.446845] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    1.446852] pci_bus 0000:00: root bus resource [mem 0x40000000-0x40feffff] (bus address [0x14e00000-0x15deffff])
+[    1.446905] pci 0000:00:00.0: [144d:ecec] type 01 class 0x060400
+[    1.447054] pci 0000:00:00.0: PME# supported from D0 D3hot D3cold
+[    1.457104] s2mpg13 i2c-s2mpg13mfd: device found: rev.0x01
+[    1.470791] pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+[    1.470815] [exynos_pcie_quirks] async suspend disabled
+[    1.472525] pcieport 0000:00:00.0: PME: Signaling with IRQ 473
+[    1.472757] pcieport 0000:00:00.0: AER: enabled with IRQ 473
+[    1.472953] exynos-pcie-rc 11920000.pcie: PCIE idle ip index : 30
+[    1.472960] exynos-pcie-rc 11920000.pcie: exynos_pcie_rc_probe, ip idle status : 1, idle_ip_index: 30
+[    1.473050] exynos-pcie-rc 11920000.pcie: ## register pcie connection function
+[    1.473053] Registered pcie_is_connect func
+[    1.473057] exynos-pcie-rc 11920000.pcie: ## exynos_pcie_rc_probe: PCIe probe success
+[    1.568744] s2mpg13-regulator s2mpg13-regulator: OCP_CTRL1: 0xbb
+[    1.568880] s2mpg13-regulator s2mpg13-regulator: OCP_CTRL2: 0xbb
+[    1.569012] s2mpg13-regulator s2mpg13-regulator: OCP_CTRL3: 0xbb
+[    1.569148] s2mpg13-regulator s2mpg13-regulator: OCP_CTRL4: 0xbb
+[    1.569285] s2mpg13-regulator s2mpg13-regulator: OCP_CTRL5: 0xbb
+[    1.569417] s2mpg13-regulator s2mpg13-regulator: OCP_CTRL6: 0xbb
+[    1.569549] s2mpg13-regulator s2mpg13-regulator: OCP_CTRL7: 0xb
+[    1.569686] s2mpg13-regulator s2mpg13-regulator: B2S_OCP_WARN : 0x80
+[    1.569819] s2mpg13-regulator s2mpg13-regulator: B2S_SOFT_OCP_WARN : 0x0
+[    1.574098] exynos-pcie-rc 14520000.pcie: ## PCIe RC PROBE start
+[    1.574120] exynos-pcie-rc 14520000.pcie: ## PCIe ch 1 ##
+[    1.574239] logbuffer: id:pcie1 registered
+[    1.574253] exynos-pcie-rc 14520000.pcie: Failed to parse the number of chip-ver, default '0'
+[    1.574258] exynos-pcie-rc 14520000.pcie: parse the number of lanes: 1
+[    1.574264] exynos-pcie-rc 14520000.pcie: Unset separated-msi value, default '0'
+[    1.574268] exynos-pcie-rc 14520000.pcie: Cache Coherency unit is ENABLED.
+[    1.574272] exynos-pcie-rc 14520000.pcie: ## PCIe don't use MSI
+[    1.574277] exynos-pcie-rc 14520000.pcie: ## PCIe use SICD
+[    1.574281] exynos-pcie-rc 14520000.pcie: ## PCIe don't use PCIE ON Sleep
+[    1.574285] exynos-pcie-rc 14520000.pcie: PCIe SysMMU is ENABLED.
+[    1.574290] exynos-pcie-rc 14520000.pcie: PCIe I/A is ENABLED.
+[    1.574295] exynos-pcie-rc 14520000.pcie: PCIe L1SS(L1.2) is ENABLED.
+[    1.574299] exynos-pcie-rc 14520000.pcie: PCIe Secure ATU is DISABLED.
+[    1.574308] exynos-pcie-rc 14520000.pcie: exynos_pcie_rc_parse_dt: pcie int_min_lock = 200000
+[    1.574342] exynos-pcie-rc 14520000.pcie: ssd gpio is not defined -> don't use ssd through pcie#1
+[    1.574417] exynos-pcie-rc 14520000.pcie: No idle pin state(but it's OK)!!
+[    1.574473] exynos-pcie-rc 14520000.pcie: Initialize PHY functions.
+[    1.574477] exynos-pcie-rc 14520000.pcie: Initialize PCIe function.
+[    1.574625] exynos-pcie-rc 14520000.pcie: PCIe cap [0x1][Power Management]: 0x40
+[    1.574630] exynos-pcie-rc 14520000.pcie: PCIe cap [0x5][Message Signalled Interrupts]: 0x50
+[    1.574635] exynos-pcie-rc 14520000.pcie: PCIe cap [0x10][PCI Express]: 0x70
+[    1.574640] exynos-pcie-rc 14520000.pcie: PCIe ext cap [0x1][Advanced Error Reporting]: 0x100
+[    1.574646] exynos-pcie-rc 14520000.pcie: PCIe ext cap [0x19][Secondary PCIe Capability]: 0x148
+[    1.574651] exynos-pcie-rc 14520000.pcie: PCIe ext cap [0x1e][L1 PM Substates]: 0x194
+[    1.574657] exynos-pcie-rc 14520000.pcie: PCIe ext cap [0x25][Data Link Feature]: 0x1a4
+[    1.574662] exynos-pcie-rc 14520000.pcie: PCIe ext cap [0x26][Physical Layer 16GT/s]: 0x158
+[    1.574669] exynos-pcie-rc 14520000.pcie: PCIe ext cap [0x27][Physical Layer 16GT/s Margining]: 0x17c
+[    1.574728] exynos-pcie-rc 14520000.pcie: host bridge /pcie@14520000 ranges:
+[    1.574737] exynos-pcie-rc 14520000.pcie:   No bus range found for /pcie@14520000, using [bus 00-ff]
+[    1.574751] exynos-pcie-rc 14520000.pcie:      MEM 0x0060000000..0x0060feffff -> 0x0060000000
+[    1.574801] exynos-pcie-rc 14520000.pcie: invalid resource
+[    1.574915] exynos-pcie-rc 14520000.pcie: PCI host bridge to bus 0001:00
+[    1.574922] pci_bus 0001:00: root bus resource [bus 00-ff]
+[    1.574928] pci_bus 0001:00: root bus resource [mem 0x60000000-0x60feffff]
+[    1.574971] pci 0001:00:00.0: [144d:eced] type 01 class 0x060400
+[    1.574993] pci 0001:00:00.0: reg 0x10: [mem 0x00000000-0x000fffff]
+[    1.575015] pci 0001:00:00.0: reg 0x38: [mem 0x00000000-0x0000ffff pref]
+[    1.575117] pci 0001:00:00.0: PME# supported from D0 D3hot D3cold
+[    1.586740] i2c-acpm acpm_mfd_bus@18110000: acpm mfd bus driver probe was succeeded
+[    1.587158] i2c /dev entries driver
+[    1.587964] s5p-mfc mfc: has sysmmu 1c870000.sysmmu (total count:1)
+[    1.588000] s5p-mfc mfc: has sysmmu 1c8a0000.sysmmu (total count:2)
+[    1.588044] s5p-mfc mfc: Adding to iommu group 3
+[    1.588136] s5p-mfc mfc: attached with pgtable 0x00000000e9900000
+[    1.588148] s5p-mfc mfc: Reserved IOMMU mapping [0x0..0x10000000)
+[    1.588153] s5p-mfc mfc: Reserved IOMMU mapping [0x10000000..0x10100000)
+[    1.588236] s5p-mfc mfc: Reserved IOMMU mapping [0x0..0x10000000)
+[    1.588241] s5p-mfc mfc: Reserved IOMMU mapping [0x10000000..0x10100000)
+[    1.588263] s5p-mfc mfc: mfc_probe is called
+[    1.588415] s5p-mfc mfc: __mfc_create_bitrate_table:716: [QoS] bitrate table[0] 134000KHz: ~ 49152Kbps
+[    1.588422] s5p-mfc mfc: __mfc_create_bitrate_table:716: [QoS] bitrate table[1] 267000KHz: ~ 98304Kbps
+[    1.588428] s5p-mfc mfc: __mfc_create_bitrate_table:716: [QoS] bitrate table[2] 400000KHz: ~ 147456Kbps
+[    1.588434] s5p-mfc mfc: __mfc_create_bitrate_table:716: [QoS] bitrate table[3] 534000KHz: ~ 196608Kbps
+[    1.588440] s5p-mfc mfc: __mfc_create_bitrate_table:716: [QoS] bitrate table[4] 666000KHz: ~ 245760Kbps
+[    1.588518] s5p-mfc mfc: video device registered as /dev/video6
+[    1.588564] s5p-mfc mfc: video device registered as /dev/video7
+[    1.588610] s5p-mfc mfc: video device registered as /dev/video8
+[    1.588653] s5p-mfc mfc: video device registered as /dev/video9
+[    1.588700] s5p-mfc mfc: video device registered as /dev/video10
+[    1.588746] s5p-mfc mfc: video device registered as /dev/video11
+[    1.600246] pci 0001:00:00.0: BAR 0: assigned [mem 0x60000000-0x600fffff]
+[    1.600259] pci 0001:00:00.0: BAR 6: assigned [mem 0x60100000-0x6010ffff pref]
+[    1.600265] pci 0001:00:00.0: PCI bridge to [bus 01-ff]
+[    1.600285] [exynos_pcie_quirks] async suspend disabled
+[    1.602222] mfc-core 1c8d0000.MFC-0: has sysmmu 1c870000.sysmmu (total count:1)
+[    1.602240] mfc-core 1c8d0000.MFC-0: has sysmmu 1c8a0000.sysmmu (total count:2)
+[    1.602270] mfc-core 1c8d0000.MFC-0: changed DMA range [0x0000000000000000..0x00000000ffffffff] successfully.
+[    1.602275] mfc-core 1c8d0000.MFC-0: attached with pgtable 0x00000000e9900000
+[    1.602280] mfc-core 1c8d0000.MFC-0: Adding to iommu group 3
+[    1.602296] mfc-core 1c8d0000.MFC-0: changed DMA range [0x0000000000000000..0x00000000ffffffff] successfully.
+[    1.602301] mfc-core 1c8d0000.MFC-0: attached with pgtable 0x00000000e9900000
+[    1.602313] mfc-core 1c8d0000.MFC-0: Reserved IOMMU mapping [0x10000000..0x10100000)
+[    1.602327] mfc-core 1c8d0000.MFC-0: mfc_core_probe is called
+[    1.603115] genirq: irq_chip PCI-MSI did not update eff. affinity mask of irq 474
+[    1.603137] pcieport 0001:00:00.0: PME: Signaling with IRQ 474
+[    1.603295] pcieport 0001:00:00.0: AER: enabled with IRQ 474
+[    1.603439] exynos-pcie-rc 14520000.pcie: PCIE idle ip index : 31
+[    1.603445] exynos-pcie-rc 14520000.pcie: exynos_pcie_rc_probe, ip idle status : 1, idle_ip_index: 31
+[    1.603582] exynos-pcie-rc 14520000.pcie: ## exynos_pcie_rc_probe: PCIe probe success
+[    1.604891] mfc-core 1c8d0000.MFC-0: mfc_core_probe:658: [QoS] control: mfc_freq(1), mo(1), bw(1)
+[    1.604897] mfc-core 1c8d0000.MFC-0: mfc_core_probe:662: [QoS]-------------------Default table
+[    1.604906] mfc-core 1c8d0000.MFC-0: mfc_core_probe:664: [QoS] table[0] mfc: 134000, int: 100000, mif: 421000, bts_scen: default(0)
+[    1.604915] mfc-core 1c8d0000.MFC-0: mfc_core_probe:664: [QoS] table[1] mfc: 267000, int: 200000, mif: 421000, bts_scen: default(0)
+[    1.604921] mfc-core 1c8d0000.MFC-0: mfc_core_probe:664: [QoS] table[2] mfc: 267000, int: 200000, mif: 676000, bts_scen: default(0)
+[    1.604928] mfc-core 1c8d0000.MFC-0: mfc_core_probe:664: [QoS] table[3] mfc: 356000, int: 332000, mif: 1014000, bts_scen: default(0)
+[    1.604935] mfc-core 1c8d0000.MFC-0: mfc_core_probe:664: [QoS] table[4] mfc: 465000, int: 332000, mif: 1014000, bts_scen: default(0)
+[    1.604942] mfc-core 1c8d0000.MFC-0: mfc_core_probe:664: [QoS] table[5] mfc: 664000, int: 332000, mif: 1539000, bts_scen: mfc_uhd(1)
+[    1.604948] mfc-core 1c8d0000.MFC-0: mfc_core_probe:664: [QoS] table[6] mfc: 664000, int: 533000, mif: 1539000, bts_scen: mfc_uhd_10bit(2)
+[    1.604955] mfc-core 1c8d0000.MFC-0: mfc_core_probe:664: [QoS] table[7] mfc: 711000, int: 533000, mif: 1539000, bts_scen: mfc_8k_dec30(3)
+[    1.604960] mfc-core 1c8d0000.MFC-0: mfc_core_probe:671: [QoS]-------------------Encoder only table
+[    1.604966] mfc-core 1c8d0000.MFC-0: mfc_core_probe:673: [QoS] table[0] mfc: 134000, int: 100000, mif: 421000, bts_scen: default(0)
+[    1.604973] mfc-core 1c8d0000.MFC-0: mfc_core_probe:673: [QoS] table[1] mfc: 267000, int: 200000, mif: 421000, bts_scen: default(0)
+[    1.604979] mfc-core 1c8d0000.MFC-0: mfc_core_probe:673: [QoS] table[2] mfc: 267000, int: 200000, mif: 676000, bts_scen: default(0)
+[    1.604985] mfc-core 1c8d0000.MFC-0: mfc_core_probe:673: [QoS] table[3] mfc: 356000, int: 332000, mif: 1014000, bts_scen: default(0)
+[    1.604993] mfc-core 1c8d0000.MFC-0: mfc_core_probe:673: [QoS] table[4] mfc: 465000, int: 332000, mif: 1014000, bts_scen: default(0)
+[    1.604999] mfc-core 1c8d0000.MFC-0: mfc_core_probe:673: [QoS] table[5] mfc: 533000, int: 200000, mif: 1539000, bts_scen: default(0)
+[    1.605005] mfc-core 1c8d0000.MFC-0: mfc_core_probe:673: [QoS] table[6] mfc: 664000, int: 332000, mif: 1539000, bts_scen: mfc_uhd(1)
+[    1.605011] mfc-core 1c8d0000.MFC-0: mfc_core_probe:673: [QoS] table[7] mfc: 664000, int: 533000, mif: 1539000, bts_scen: mfc_uhd_10bit(2)
+[    1.605466] mfc-core 1c8d0000.MFC-0: mfc_client_pt_register:112: [SLC] PT Client Register success
+[    1.606512] mfc-core 1c8d0000.MFC-0: mfc_core_probe is completed
+[    1.606561] s5p-mfc mfc: mfc_probe is completed
+[    1.607290] exynos-jpeg 1c700000.smfc: has sysmmu 1c710000.sysmmu (total count:1)
+[    1.607332] exynos-jpeg 1c700000.smfc: Adding to iommu group 6
+[    1.607417] exynos-jpeg 1c700000.smfc: attached with pgtable 0x0000000088840000
+[    1.607577] exynos-jpeg 1c700000.smfc: device ID is not declared: unique device
+[    1.607802] exynos-jpeg 1c700000.smfc: Probed H/W Version: 15.01.2015
+[    1.608206] odpm: s2mpg12-odpm: init
+[    1.608367] odpm: Configuring S2MPG12...
+[    1.608647] odpm: S2MPG12: Applied new sampling frequency (type 0) in Hz: 125.000000
+[    1.608789] odpm: S2MPG12: Applied new sampling frequency (type 1) in Hz: 31.250000
+[    1.608793] odpm: S2MPG12: CH0=VSYS_PWR_MMWAVE
+[    1.608799] s2mpg12-meter s2mpg12-meter: CH0, VSEN_C1
+[    1.608935] odpm: S2MPG12: CH1=VSYS_PWR_MODEM
+[    1.608940] s2mpg12-meter s2mpg12-meter: CH1, VSEN_C2
+[    1.609077] odpm: S2MPG12: CH2=VSYS_PWR_RFFE
+[    1.609081] s2mpg12-meter s2mpg12-meter: CH2, VSEN_C3
+[    1.609213] odpm: S2MPG12: CH3=S1M_VDD_MIF
+[    1.609219] s2mpg12-meter s2mpg12-meter: CH3, BUCK1M
+[    1.609350] odpm: S2MPG12: CH4=S2M_VDD_CPUCL2
+[    1.609355] s2mpg12-meter s2mpg12-meter: CH4, BUCK2M
+[    1.609488] odpm: S2MPG12: CH5=S3M_VDD_CPUCL1
+[    1.609494] s2mpg12-meter s2mpg12-meter: CH5, BUCK3M
+[    1.609625] odpm: S2MPG12: CH6=S4M_VDD_CPUCL0
+[    1.609630] s2mpg12-meter s2mpg12-meter: CH6, BUCK4M
+[    1.609763] odpm: S2MPG12: CH7=S5M_VDD_INT
+[    1.609768] s2mpg12-meter s2mpg12-meter: CH7, BUCK5M
+[    1.609899] odpm: S2MPG12: CH8=S8M_LLDO2
+[    1.609904] s2mpg12-meter s2mpg12-meter: CH8, BUCK8M
+[    1.610038] odpm: S2MPG12: CH9=L15M_VDD_SLC_M
+[    1.610044] s2mpg12-meter s2mpg12-meter: CH9, LDO15M
+[    1.610176] odpm: S2MPG12: CH10=S10M_VDD_TPU
+[    1.610180] s2mpg12-meter s2mpg12-meter: CH10, BUCK10M
+[    1.610314] odpm: S2MPG12: CH11=S6M_LLDO1
+[    1.610319] s2mpg12-meter s2mpg12-meter: CH11, BUCK6M
+[    1.610589] s2mpg12-meter s2mpg12-meter: s2mpg12 external meter off
+[    1.610850] s2mpg12-meter s2mpg12-meter: s2mpg12 meter on
+[    1.610983] s2mpg12-meter s2mpg12-meter: s2mpg12 external meter on
+[    1.611116] odpm: Configuring S2MPG12...done
+[    1.612943] odpm: S2MPG12: Starting at timestamp (ms): 1604
+[    1.613223] odpm: s2mpg12-odpm: init completed
+[    1.613263] odpm: s2mpg13-odpm: init
+[    1.613435] odpm: Configuring S2MPG13...
+[    1.613605] odpm: S2MPG13: Applied new sampling frequency (type 0) in Hz: 125.000000
+[    1.613743] odpm: S2MPG13: Applied new sampling frequency (type 1) in Hz: 31.250000
+[    1.613747] odpm: S2MPG13: CH0=VSYS_PWR_DISPLAY
+[    1.613752] s2mpg13-meter s2mpg13-meter: CH0, VSEN_C4
+[    1.613888] odpm: S2MPG13: CH1=VSYS_PWR_WLAN_BT
+[    1.613893] s2mpg13-meter s2mpg13-meter: CH1, VSEN_C5
+[    1.614024] odpm: S2MPG13: CH2=L9S_GNSS_CORE
+[    1.614030] s2mpg13-meter s2mpg13-meter: CH2, LDO9S
+[    1.614163] odpm: S2MPG13: CH3=S1S_VDD_CAM
+[    1.614169] s2mpg13-meter s2mpg13-meter: CH3, BUCK1S
+[    1.614300] odpm: S2MPG13: CH4=S2S_VDD_G3D
+[    1.614306] s2mpg13-meter s2mpg13-meter: CH4, BUCK2S
+[    1.614440] odpm: S2MPG13: CH5=S4S_VDD2H_MEM
+[    1.614445] s2mpg13-meter s2mpg13-meter: CH5, BUCK4S
+[    1.614579] odpm: S2MPG13: CH6=S5S_VDDQ_MEM
+[    1.614585] s2mpg13-meter s2mpg13-meter: CH6, BUCK5S
+[    1.614720] odpm: S2MPG13: CH7=S8S_VDD_G3D_L2
+[    1.614725] s2mpg13-meter s2mpg13-meter: CH7, BUCK8S
+[    1.614859] odpm: S2MPG13: CH8=S9S_VDD_AOC
+[    1.614864] s2mpg13-meter s2mpg13-meter: CH8, BUCK9S
+[    1.614996] odpm: S2MPG13: CH9=L7S_SENSORS
+[    1.615002] s2mpg13-meter s2mpg13-meter: CH9, LDO7S
+[    1.615136] odpm: S2MPG13: CH10=L14S_ALIVE
+[    1.615141] s2mpg13-meter s2mpg13-meter: CH10, LDO14S
+[    1.615272] odpm: S2MPG13: CH11=L2S_PLL_MIPI_UFS
+[    1.615279] s2mpg13-meter s2mpg13-meter: CH11, LDO2S
+[    1.615543] s2mpg13-meter s2mpg13-meter: s2mpg13 external meter off
+[    1.615806] s2mpg13_meter_onoff: s2mpg13 meter on
+[    1.615941] s2mpg13-meter s2mpg13-meter: s2mpg13 external meter on
+[    1.616074] odpm: Configuring S2MPG13...done
+[    1.617108] odpm: S2MPG13: Starting at timestamp (ms): 1609
+[    1.617356] odpm: s2mpg13-odpm: init completed
+[    1.617569] s2mpg13-spmic-thermal s2mpg13-spmic-thermal: DMA mask not set
+[    1.617759] s2mpg13-spmic-thermal s2mpg13-spmic-thermal: Registering 0 sensor
+[    1.618722] thermal thermal_zone33: Failed to set trips: -11
+[    1.618738] s2mpg13-spmic-thermal s2mpg13-spmic-thermal: Registering 1 sensor
+[    1.619080] thermal thermal_zone34: Failed to set trips: -11
+[    1.619230] s2mpg13-spmic-thermal s2mpg13-spmic-thermal: Set sensor 1 hot trip(mdegC):59000, ret:0
+[    1.619235] s2mpg13-spmic-thermal s2mpg13-spmic-thermal: Registering 2 sensor
+[    1.619579] thermal thermal_zone35: Failed to set trips: -11
+[    1.619592] s2mpg13-spmic-thermal s2mpg13-spmic-thermal: Registering 3 sensor
+[    1.619939] thermal thermal_zone36: Failed to set trips: -11
+[    1.619950] s2mpg13-spmic-thermal s2mpg13-spmic-thermal: Registering 4 sensor
+[    1.620299] thermal thermal_zone37: Failed to set trips: -11
+[    1.620312] s2mpg13-spmic-thermal s2mpg13-spmic-thermal: Registering 5 sensor
+[    1.620662] thermal thermal_zone38: Failed to set trips: -11
+[    1.620676] s2mpg13-spmic-thermal s2mpg13-spmic-thermal: Registering 6 sensor
+[    1.621027] thermal thermal_zone39: Failed to set trips: -11
+[    1.621040] s2mpg13-spmic-thermal s2mpg13-spmic-thermal: Registering 7 sensor
+[    1.621395] thermal thermal_zone40: Failed to set trips: -11
+[    1.642054] s2mpg13-spmic-thermal s2mpg13-spmic-thermal: probe done, now wait for sensors
+[    1.642193] softdog: initialized. soft_noboot=0 soft_margin=60 sec soft_panic=0 (nowayout=0)
+[    1.642197] softdog:              soft_reboot_cmd=<not set> soft_active_on_boot=0
+[    1.642425] cpu cpu0: EM: created perf domain
+[    1.642430] exynos_acme: Complete to initialize cpufreq-domain0
+[    1.642434] exynos_acme: CPUFREQ of domain0 cal-id : 0xb040002
+[    1.642440] exynos_acme: CPUFREQ of domain0 sibling cpus : 0-3
+[    1.642443] exynos_acme: CPUFREQ of domain0 boot freq = 1197000 kHz, resume freq = 1197000 kHz
+[    1.642447] exynos_acme: CPUFREQ of domain0 max freq : 1803000 kHz, min freq : 300000 kHz
+[    1.642449] exynos_acme: CPUFREQ of domain0 table size = 11
+[    1.642453] exynos_acme: CPUFREQ of domain0 : L0    300000 kHz
+[    1.642459] exynos_acme: CPUFREQ of domain0 : L1    574000 kHz
+[    1.642462] exynos_acme: CPUFREQ of domain0 : L2    738000 kHz
+[    1.642465] exynos_acme: CPUFREQ of domain0 : L3    930000 kHz
+[    1.642468] exynos_acme: CPUFREQ of domain0 : L4   1098000 kHz
+[    1.642471] exynos_acme: CPUFREQ of domain0 : L5   1197000 kHz
+[    1.642474] exynos_acme: CPUFREQ of domain0 : L6   1328000 kHz
+[    1.642478] exynos_acme: CPUFREQ of domain0 : L7   1401000 kHz
+[    1.642482] exynos_acme: CPUFREQ of domain0 : L8   1598000 kHz
+[    1.642485] exynos_acme: CPUFREQ of domain0 : L9   1704000 kHz
+[    1.642488] exynos_acme: CPUFREQ of domain0 : L10  1803000 kHz
+[    1.642589] cpu cpu4: EM: created perf domain
+[    1.642593] exynos_acme: Complete to initialize cpufreq-domain1
+[    1.642597] exynos_acme: CPUFREQ of domain1 cal-id : 0xb040003
+[    1.642601] exynos_acme: CPUFREQ of domain1 sibling cpus : 4-5
+[    1.642604] exynos_acme: CPUFREQ of domain1 boot freq = 1197000 kHz, resume freq = 1491000 kHz
+[    1.642608] exynos_acme: CPUFREQ of domain1 max freq : 2348000 kHz, min freq : 400000 kHz
+[    1.642611] exynos_acme: CPUFREQ of domain1 table size = 15
+[    1.642615] exynos_acme: CPUFREQ of domain1 : L0    400000 kHz
+[    1.642618] exynos_acme: CPUFREQ of domain1 : L1    553000 kHz
+[    1.642622] exynos_acme: CPUFREQ of domain1 : L2    696000 kHz
+[    1.642625] exynos_acme: CPUFREQ of domain1 : L3    799000 kHz
+[    1.642629] exynos_acme: CPUFREQ of domain1 : L4    910000 kHz
+[    1.642632] exynos_acme: CPUFREQ of domain1 : L5   1024000 kHz
+[    1.642635] exynos_acme: CPUFREQ of domain1 : L6   1197000 kHz
+[    1.642638] exynos_acme: CPUFREQ of domain1 : L7   1328000 kHz
+[    1.642641] exynos_acme: CPUFREQ of domain1 : L8   1491000 kHz
+[    1.642645] exynos_acme: CPUFREQ of domain1 : L9   1663000 kHz
+[    1.642648] exynos_acme: CPUFREQ of domain1 : L10  1836000 kHz
+[    1.642651] exynos_acme: CPUFREQ of domain1 : L11  1999000 kHz
+[    1.642654] exynos_acme: CPUFREQ of domain1 : L12  2130000 kHz
+[    1.642657] exynos_acme: CPUFREQ of domain1 : L13  2253000 kHz
+[    1.642660] exynos_acme: CPUFREQ of domain1 : L14  2348000 kHz
+[    1.642774] cpu cpu6: EM: created perf domain
+[    1.642778] exynos_acme: Complete to initialize cpufreq-domain2
+[    1.642781] exynos_acme: CPUFREQ of domain2 cal-id : 0xb040004
+[    1.642784] exynos_acme: CPUFREQ of domain2 sibling cpus : 6-7
+[    1.642787] exynos_acme: CPUFREQ of domain2 boot freq = 1106000 kHz, resume freq = 1826000 kHz
+[    1.642791] exynos_acme: CPUFREQ of domain2 max freq : 2850000 kHz, min freq : 500000 kHz
+[    1.642795] exynos_acme: CPUFREQ of domain2 table size = 18
+[    1.642798] exynos_acme: CPUFREQ of domain2 : L0    500000 kHz
+[    1.642801] exynos_acme: CPUFREQ of domain2 : L1    851000 kHz
+[    1.642804] exynos_acme: CPUFREQ of domain2 : L2    984000 kHz
+[    1.642807] exynos_acme: CPUFREQ of domain2 : L3   1106000 kHz
+[    1.642810] exynos_acme: CPUFREQ of domain2 : L4   1277000 kHz
+[    1.642813] exynos_acme: CPUFREQ of domain2 : L5   1426000 kHz
+[    1.642817] exynos_acme: CPUFREQ of domain2 : L6   1582000 kHz
+[    1.642820] exynos_acme: CPUFREQ of domain2 : L7   1745000 kHz
+[    1.642823] exynos_acme: CPUFREQ of domain2 : L8   1826000 kHz
+[    1.642826] exynos_acme: CPUFREQ of domain2 : L9   2048000 kHz
+[    1.642829] exynos_acme: CPUFREQ of domain2 : L10  2188000 kHz
+[    1.642833] exynos_acme: CPUFREQ of domain2 : L11  2252000 kHz
+[    1.642836] exynos_acme: CPUFREQ of domain2 : L12  2401000 kHz
+[    1.642839] exynos_acme: CPUFREQ of domain2 : L13  2507000 kHz
+[    1.642842] exynos_acme: CPUFREQ of domain2 : L14  2630000 kHz
+[    1.642845] exynos_acme: CPUFREQ of domain2 : L15  2704000 kHz
+[    1.642849] exynos_acme: CPUFREQ of domain2 : L16  2802000 kHz
+[    1.642852] exynos_acme: CPUFREQ of domain2 : L17  2850000 kHz
+[    1.642908] exynos_acme: CPUFREQ domain0 registered
+[    1.643021] exynos_acme: CPUFREQ domain1 registered
+[    1.643033] cpif: tpmon_cpufreq_nb: freq_qos_add_request for cpu4 min
+[    1.643116] exynos_acme: CPUFREQ domain2 registered
+[    1.643218] cpu_cooling 0: freq:1803000 KHz
+[    1.643221] cpu_cooling 0: freq:1704000 KHz
+[    1.643224] cpu_cooling 0: freq:1598000 KHz
+[    1.643227] cpu_cooling 0: freq:1401000 KHz
+[    1.643230] cpu_cooling 0: freq:1328000 KHz
+[    1.643236] cpu_cooling 0: freq:1197000 KHz
+[    1.643239] cpu_cooling 0: freq:1098000 KHz
+[    1.643242] cpu_cooling 0: freq:930000 KHz
+[    1.643245] cpu_cooling 0: freq:738000 KHz
+[    1.643248] cpu_cooling 0: freq:574000 KHz
+[    1.643252] cpu_cooling 0: freq:300000 KHz
+[    1.643260] cpu_cooling 0: freq:1803000 power: 129, mV: 900, cap: 89
+[    1.643265] cpu_cooling 0: freq:1704000 power: 114, mV: 868, cap: 89
+[    1.643271] cpu_cooling 0: freq:1598000 power: 98, mV: 831, cap: 89
+[    1.643276] cpu_cooling 0: freq:1401000 power: 74, mV: 775, cap: 89
+[    1.643281] cpu_cooling 0: freq:1328000 power: 66, mV: 750, cap: 89
+[    1.643286] cpu_cooling 0: freq:1197000 power: 54, mV: 718, cap: 89
+[    1.643290] cpu_cooling 0: freq:1098000 power: 46, mV: 693, cap: 89
+[    1.643295] cpu_cooling 0: freq:930000 power: 35, mV: 656, cap: 89
+[    1.643300] cpu_cooling 0: freq:738000 power: 25, mV: 618, cap: 89
+[    1.643305] cpu_cooling 0: freq:574000 power: 17, mV: 593, cap: 89
+[    1.643311] cpu_cooling 0: freq:300000 power: 7, mV: 543, cap: 89
+[    1.643337] build_static_power_table: Failed to get param table from ECT
+[    1.643453] parse_ect_cooling_level: (LITTLE, 0)instance isn't valid
+[    1.643458] cpu cooling registered for cpu: 0, capacitance: 89, power_callback: true, static_power: false
+[    1.643466] exynos_acme: Skipping boot pm_qos domain0
+[    1.643555] cpu_cooling 4: freq:2348000 KHz
+[    1.643558] cpu_cooling 4: freq:2253000 KHz
+[    1.643562] cpu_cooling 4: freq:2130000 KHz
+[    1.643565] cpu_cooling 4: freq:1999000 KHz
+[    1.643569] cpu_cooling 4: freq:1836000 KHz
+[    1.643572] cpu_cooling 4: freq:1663000 KHz
+[    1.643575] cpu_cooling 4: freq:1491000 KHz
+[    1.643577] cpu_cooling 4: freq:1328000 KHz
+[    1.643580] cpu_cooling 4: freq:1197000 KHz
+[    1.643583] cpu_cooling 4: freq:1024000 KHz
+[    1.643586] cpu_cooling 4: freq:910000 KHz
+[    1.643589] cpu_cooling 4: freq:799000 KHz
+[    1.643591] cpu_cooling 4: freq:696000 KHz
+[    1.643594] cpu_cooling 4: freq:553000 KHz
+[    1.643597] cpu_cooling 4: freq:400000 KHz
+[    1.643603] cpu_cooling 4: freq:2348000 power: 1233, mV: 1012, cap: 513
+[    1.643608] cpu_cooling 4: freq:2253000 power: 1083, mV: 968, cap: 513
+[    1.643612] cpu_cooling 4: freq:2130000 power: 920, mV: 918, cap: 513
+[    1.643617] cpu_cooling 4: freq:1999000 power: 772, mV: 868, cap: 513
+[    1.643622] cpu_cooling 4: freq:1836000 power: 630, mV: 818, cap: 513
+[    1.643627] cpu_cooling 4: freq:1663000 power: 512, mV: 775, cap: 513
+[    1.643632] cpu_cooling 4: freq:1491000 power: 408, mV: 731, cap: 513
+[    1.643637] cpu_cooling 4: freq:1328000 power: 321, mV: 687, cap: 513
+[    1.643641] cpu_cooling 4: freq:1197000 power: 269, mV: 662, cap: 513
+[    1.643646] cpu_cooling 4: freq:1024000 power: 205, mV: 625, cap: 513
+[    1.643650] cpu_cooling 4: freq:910000 power: 171, mV: 606, cap: 513
+[    1.643654] cpu_cooling 4: freq:799000 power: 138, mV: 581, cap: 513
+[    1.643660] cpu_cooling 4: freq:696000 power: 112, mV: 562, cap: 513
+[    1.643665] cpu_cooling 4: freq:553000 power: 81, mV: 537, cap: 513
+[    1.643670] cpu_cooling 4: freq:400000 power: 52, mV: 506, cap: 513
+[    1.643772] cpu cooling registered for cpu: 4, capacitance: 513, power_callback: true, static_power: true
+[    1.643795] exynos_acme: Skipping boot pm_qos domain1
+[    1.643885] cpu_cooling 6: freq:2850000 KHz
+[    1.643888] cpu_cooling 6: freq:2802000 KHz
+[    1.643892] cpu_cooling 6: freq:2704000 KHz
+[    1.643895] cpu_cooling 6: freq:2630000 KHz
+[    1.643898] cpu_cooling 6: freq:2507000 KHz
+[    1.643900] cpu_cooling 6: freq:2401000 KHz
+[    1.643903] cpu_cooling 6: freq:2252000 KHz
+[    1.643906] cpu_cooling 6: freq:2188000 KHz
+[    1.643909] cpu_cooling 6: freq:2048000 KHz
+[    1.643912] cpu_cooling 6: freq:1826000 KHz
+[    1.643915] cpu_cooling 6: freq:1745000 KHz
+[    1.643918] cpu_cooling 6: freq:1582000 KHz
+[    1.643921] cpu_cooling 6: freq:1426000 KHz
+[    1.643923] cpu_cooling 6: freq:1277000 KHz
+[    1.643927] cpu_cooling 6: freq:1106000 KHz
+[    1.643930] cpu_cooling 6: freq:984000 KHz
+[    1.643933] cpu_cooling 6: freq:851000 KHz
+[    1.643936] cpu_cooling 6: freq:500000 KHz
+[    1.643941] cpu_cooling 6: freq:2850000 power: 2577, mV: 1093, cap: 757
+[    1.643947] cpu_cooling 6: freq:2802000 power: 2419, mV: 1068, cap: 757
+[    1.643952] cpu_cooling 6: freq:2704000 power: 2150, mV: 1025, cap: 757
+[    1.643956] cpu_cooling 6: freq:2630000 power: 1939, mV: 987, cap: 757
+[    1.643961] cpu_cooling 6: freq:2507000 power: 1687, mV: 943, cap: 757
+[    1.643968] cpu_cooling 6: freq:2401000 power: 1491, mV: 906, cap: 757
+[    1.643972] cpu_cooling 6: freq:2252000 power: 1249, mV: 856, cap: 757
+[    1.643977] cpu_cooling 6: freq:2188000 power: 1160, mV: 837, cap: 757
+[    1.643981] cpu_cooling 6: freq:2048000 power: 992, mV: 800, cap: 757
+[    1.643985] cpu_cooling 6: freq:1826000 power: 777, mV: 750, cap: 757
+[    1.643990] cpu_cooling 6: freq:1745000 power: 717, mV: 737, cap: 757
+[    1.643994] cpu_cooling 6: freq:1582000 power: 596, mV: 706, cap: 757
+[    1.643998] cpu_cooling 6: freq:1426000 power: 491, mV: 675, cap: 757
+[    1.644002] cpu_cooling 6: freq:1277000 power: 392, mV: 637, cap: 757
+[    1.644007] cpu_cooling 6: freq:1106000 power: 301, mV: 600, cap: 757
+[    1.644012] cpu_cooling 6: freq:984000 power: 246, mV: 575, cap: 757
+[    1.644017] cpu_cooling 6: freq:851000 power: 194, mV: 550, cap: 757
+[    1.644022] cpu_cooling 6: freq:500000 power: 94, mV: 500, cap: 757
+[    1.644127] cpu cooling registered for cpu: 6, capacitance: 757, power_callback: true, static_power: true
+[    1.644148] exynos_acme: Skipping boot pm_qos domain2
+[    1.644223] exynos_acme: Initialized Exynos cpufreq driver
+[    1.645223] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu0_memlat@17000010: DEVFREQ :  3172000Khz,        0uV
+[    1.645231] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu0_memlat@17000010: DEVFREQ :  2730000Khz,        0uV
+[    1.645238] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu0_memlat@17000010: DEVFREQ :  2535000Khz,        0uV
+[    1.645245] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu0_memlat@17000010: DEVFREQ :  2288000Khz,        0uV
+[    1.645251] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu0_memlat@17000010: DEVFREQ :  2028000Khz,        0uV
+[    1.645257] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu0_memlat@17000010: DEVFREQ :  1716000Khz,        0uV
+[    1.645264] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu0_memlat@17000010: DEVFREQ :  1539000Khz,        0uV
+[    1.645270] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu0_memlat@17000010: DEVFREQ :  1352000Khz,        0uV
+[    1.645276] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu0_memlat@17000010: DEVFREQ :  1014000Khz,        0uV
+[    1.645283] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu0_memlat@17000010: DEVFREQ :   845000Khz,        0uV
+[    1.645290] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu0_memlat@17000010: DEVFREQ :   676000Khz,        0uV
+[    1.645297] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu0_memlat@17000010: DEVFREQ :   546000Khz,        0uV
+[    1.645303] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu0_memlat@17000010: DEVFREQ :   421000Khz,        0uV
+[    1.645311] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu0_memlat@17000010: max_freq: 2147483647Khz, get_max_freq: 3172000Khz
+[    1.645317] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu0_memlat@17000010: min_freq: 0Khz, get_min_freq: 421000Khz
+[    1.645324] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu0_memlat@17000010: min_freq: 421000Khz, max_freq: 3172000Khz
+[    1.645330] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu0_memlat@17000010: initial_freq: 3172000Khz, suspend_freq: 421000Khz
+[    1.645504] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu0_memlat@17000010: devfreq is initialized!!
+[    1.645703] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu1_memlat@17000010: DEVFREQ :  3172000Khz,        0uV
+[    1.645710] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu1_memlat@17000010: DEVFREQ :  2730000Khz,        0uV
+[    1.645717] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu1_memlat@17000010: DEVFREQ :  2535000Khz,        0uV
+[    1.645725] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu1_memlat@17000010: DEVFREQ :  2288000Khz,        0uV
+[    1.645732] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu1_memlat@17000010: DEVFREQ :  2028000Khz,        0uV
+[    1.645739] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu1_memlat@17000010: DEVFREQ :  1716000Khz,        0uV
+[    1.645749] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu1_memlat@17000010: DEVFREQ :  1539000Khz,        0uV
+[    1.645755] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu1_memlat@17000010: DEVFREQ :  1352000Khz,        0uV
+[    1.645762] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu1_memlat@17000010: DEVFREQ :  1014000Khz,        0uV
+[    1.645768] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu1_memlat@17000010: DEVFREQ :   845000Khz,        0uV
+[    1.645774] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu1_memlat@17000010: DEVFREQ :   676000Khz,        0uV
+[    1.645780] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu1_memlat@17000010: DEVFREQ :   546000Khz,        0uV
+[    1.645787] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu1_memlat@17000010: DEVFREQ :   421000Khz,        0uV
+[    1.645792] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu1_memlat@17000010: max_freq: 2147483647Khz, get_max_freq: 3172000Khz
+[    1.645798] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu1_memlat@17000010: min_freq: 0Khz, get_min_freq: 421000Khz
+[    1.645804] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu1_memlat@17000010: min_freq: 421000Khz, max_freq: 3172000Khz
+[    1.645810] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu1_memlat@17000010: initial_freq: 3172000Khz, suspend_freq: 421000Khz
+[    1.646155] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu1_memlat@17000010: devfreq is initialized!!
+[    1.646359] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu2_memlat@17000010: DEVFREQ :  3172000Khz,        0uV
+[    1.646365] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu2_memlat@17000010: DEVFREQ :  2730000Khz,        0uV
+[    1.646372] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu2_memlat@17000010: DEVFREQ :  2535000Khz,        0uV
+[    1.646378] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu2_memlat@17000010: DEVFREQ :  2288000Khz,        0uV
+[    1.646385] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu2_memlat@17000010: DEVFREQ :  2028000Khz,        0uV
+[    1.646392] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu2_memlat@17000010: DEVFREQ :  1716000Khz,        0uV
+[    1.646399] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu2_memlat@17000010: DEVFREQ :  1539000Khz,        0uV
+[    1.646406] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu2_memlat@17000010: DEVFREQ :  1352000Khz,        0uV
+[    1.646412] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu2_memlat@17000010: DEVFREQ :  1014000Khz,        0uV
+[    1.646418] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu2_memlat@17000010: DEVFREQ :   845000Khz,        0uV
+[    1.646425] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu2_memlat@17000010: DEVFREQ :   676000Khz,        0uV
+[    1.646431] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu2_memlat@17000010: DEVFREQ :   546000Khz,        0uV
+[    1.646458] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu2_memlat@17000010: DEVFREQ :   421000Khz,        0uV
+[    1.646465] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu2_memlat@17000010: max_freq: 2147483647Khz, get_max_freq: 3172000Khz
+[    1.646472] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu2_memlat@17000010: min_freq: 0Khz, get_min_freq: 421000Khz
+[    1.646479] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu2_memlat@17000010: min_freq: 421000Khz, max_freq: 3172000Khz
+[    1.646486] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu2_memlat@17000010: initial_freq: 3172000Khz, suspend_freq: 421000Khz
+[    1.646799] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu2_memlat@17000010: devfreq is initialized!!
+[    1.646999] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu3_memlat@17000010: DEVFREQ :  3172000Khz,        0uV
+[    1.647006] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu3_memlat@17000010: DEVFREQ :  2730000Khz,        0uV
+[    1.647013] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu3_memlat@17000010: DEVFREQ :  2535000Khz,        0uV
+[    1.647021] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu3_memlat@17000010: DEVFREQ :  2288000Khz,        0uV
+[    1.647031] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu3_memlat@17000010: DEVFREQ :  2028000Khz,        0uV
+[    1.647040] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu3_memlat@17000010: DEVFREQ :  1716000Khz,        0uV
+[    1.647046] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu3_memlat@17000010: DEVFREQ :  1539000Khz,        0uV
+[    1.647053] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu3_memlat@17000010: DEVFREQ :  1352000Khz,        0uV
+[    1.647059] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu3_memlat@17000010: DEVFREQ :  1014000Khz,        0uV
+[    1.647065] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu3_memlat@17000010: DEVFREQ :   845000Khz,        0uV
+[    1.647072] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu3_memlat@17000010: DEVFREQ :   676000Khz,        0uV
+[    1.647079] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu3_memlat@17000010: DEVFREQ :   546000Khz,        0uV
+[    1.647085] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu3_memlat@17000010: DEVFREQ :   421000Khz,        0uV
+[    1.647092] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu3_memlat@17000010: max_freq: 2147483647Khz, get_max_freq: 3172000Khz
+[    1.647099] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu3_memlat@17000010: min_freq: 0Khz, get_min_freq: 421000Khz
+[    1.647105] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu3_memlat@17000010: min_freq: 421000Khz, max_freq: 3172000Khz
+[    1.647111] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu3_memlat@17000010: initial_freq: 3172000Khz, suspend_freq: 421000Khz
+[    1.647419] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu3_memlat@17000010: devfreq is initialized!!
+[    1.647618] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu4_memlat@17000010: DEVFREQ :  3172000Khz,        0uV
+[    1.647626] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu4_memlat@17000010: DEVFREQ :  2730000Khz,        0uV
+[    1.647633] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu4_memlat@17000010: DEVFREQ :  2535000Khz,        0uV
+[    1.647640] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu4_memlat@17000010: DEVFREQ :  2288000Khz,        0uV
+[    1.647647] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu4_memlat@17000010: DEVFREQ :  2028000Khz,        0uV
+[    1.647654] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu4_memlat@17000010: DEVFREQ :  1716000Khz,        0uV
+[    1.647660] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu4_memlat@17000010: DEVFREQ :  1539000Khz,        0uV
+[    1.647667] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu4_memlat@17000010: DEVFREQ :  1352000Khz,        0uV
+[    1.647673] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu4_memlat@17000010: DEVFREQ :  1014000Khz,        0uV
+[    1.647680] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu4_memlat@17000010: DEVFREQ :   845000Khz,        0uV
+[    1.647686] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu4_memlat@17000010: DEVFREQ :   676000Khz,        0uV
+[    1.647693] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu4_memlat@17000010: DEVFREQ :   546000Khz,        0uV
+[    1.647700] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu4_memlat@17000010: DEVFREQ :   421000Khz,        0uV
+[    1.647706] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu4_memlat@17000010: max_freq: 2147483647Khz, get_max_freq: 3172000Khz
+[    1.647712] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu4_memlat@17000010: min_freq: 0Khz, get_min_freq: 421000Khz
+[    1.647717] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu4_memlat@17000010: min_freq: 421000Khz, max_freq: 3172000Khz
+[    1.647724] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu4_memlat@17000010: initial_freq: 3172000Khz, suspend_freq: 421000Khz
+[    1.648287] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu4_memlat@17000010: devfreq is initialized!!
+[    1.648489] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu5_memlat@17000010: DEVFREQ :  3172000Khz,        0uV
+[    1.648501] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu5_memlat@17000010: DEVFREQ :  2730000Khz,        0uV
+[    1.648508] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu5_memlat@17000010: DEVFREQ :  2535000Khz,        0uV
+[    1.648515] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu5_memlat@17000010: DEVFREQ :  2288000Khz,        0uV
+[    1.648522] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu5_memlat@17000010: DEVFREQ :  2028000Khz,        0uV
+[    1.648528] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu5_memlat@17000010: DEVFREQ :  1716000Khz,        0uV
+[    1.648535] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu5_memlat@17000010: DEVFREQ :  1539000Khz,        0uV
+[    1.648545] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu5_memlat@17000010: DEVFREQ :  1352000Khz,        0uV
+[    1.648551] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu5_memlat@17000010: DEVFREQ :  1014000Khz,        0uV
+[    1.648558] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu5_memlat@17000010: DEVFREQ :   845000Khz,        0uV
+[    1.648564] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu5_memlat@17000010: DEVFREQ :   676000Khz,        0uV
+[    1.648571] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu5_memlat@17000010: DEVFREQ :   546000Khz,        0uV
+[    1.648578] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu5_memlat@17000010: DEVFREQ :   421000Khz,        0uV
+[    1.648584] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu5_memlat@17000010: max_freq: 2147483647Khz, get_max_freq: 3172000Khz
+[    1.648590] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu5_memlat@17000010: min_freq: 0Khz, get_min_freq: 421000Khz
+[    1.648596] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu5_memlat@17000010: min_freq: 421000Khz, max_freq: 3172000Khz
+[    1.648602] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu5_memlat@17000010: initial_freq: 3172000Khz, suspend_freq: 421000Khz
+[    1.649191] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu5_memlat@17000010: devfreq is initialized!!
+[    1.649395] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu6_memlat@17000010: DEVFREQ :  3172000Khz,        0uV
+[    1.649401] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu6_memlat@17000010: DEVFREQ :  2730000Khz,        0uV
+[    1.649409] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu6_memlat@17000010: DEVFREQ :  2535000Khz,        0uV
+[    1.649416] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu6_memlat@17000010: DEVFREQ :  2288000Khz,        0uV
+[    1.649422] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu6_memlat@17000010: DEVFREQ :  2028000Khz,        0uV
+[    1.649430] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu6_memlat@17000010: DEVFREQ :  1716000Khz,        0uV
+[    1.649436] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu6_memlat@17000010: DEVFREQ :  1539000Khz,        0uV
+[    1.649442] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu6_memlat@17000010: DEVFREQ :  1352000Khz,        0uV
+[    1.649449] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu6_memlat@17000010: DEVFREQ :  1014000Khz,        0uV
+[    1.649456] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu6_memlat@17000010: DEVFREQ :   845000Khz,        0uV
+[    1.649462] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu6_memlat@17000010: DEVFREQ :   676000Khz,        0uV
+[    1.649469] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu6_memlat@17000010: DEVFREQ :   546000Khz,        0uV
+[    1.649475] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu6_memlat@17000010: DEVFREQ :   421000Khz,        0uV
+[    1.649482] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu6_memlat@17000010: max_freq: 2147483647Khz, get_max_freq: 3172000Khz
+[    1.649488] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu6_memlat@17000010: min_freq: 0Khz, get_min_freq: 421000Khz
+[    1.649495] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu6_memlat@17000010: min_freq: 421000Khz, max_freq: 3172000Khz
+[    1.649501] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu6_memlat@17000010: initial_freq: 3172000Khz, suspend_freq: 421000Khz
+[    1.650091] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu6_memlat@17000010: devfreq is initialized!!
+[    1.650293] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu7_memlat@17000010: DEVFREQ :  3172000Khz,        0uV
+[    1.650300] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu7_memlat@17000010: DEVFREQ :  2730000Khz,        0uV
+[    1.650307] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu7_memlat@17000010: DEVFREQ :  2535000Khz,        0uV
+[    1.650314] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu7_memlat@17000010: DEVFREQ :  2288000Khz,        0uV
+[    1.650321] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu7_memlat@17000010: DEVFREQ :  2028000Khz,        0uV
+[    1.650327] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu7_memlat@17000010: DEVFREQ :  1716000Khz,        0uV
+[    1.650334] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu7_memlat@17000010: DEVFREQ :  1539000Khz,        0uV
+[    1.650340] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu7_memlat@17000010: DEVFREQ :  1352000Khz,        0uV
+[    1.650346] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu7_memlat@17000010: DEVFREQ :  1014000Khz,        0uV
+[    1.650355] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu7_memlat@17000010: DEVFREQ :   845000Khz,        0uV
+[    1.650361] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu7_memlat@17000010: DEVFREQ :   676000Khz,        0uV
+[    1.650369] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu7_memlat@17000010: DEVFREQ :   546000Khz,        0uV
+[    1.650375] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu7_memlat@17000010: DEVFREQ :   421000Khz,        0uV
+[    1.650381] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu7_memlat@17000010: max_freq: 2147483647Khz, get_max_freq: 3172000Khz
+[    1.650388] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu7_memlat@17000010: min_freq: 0Khz, get_min_freq: 421000Khz
+[    1.650395] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu7_memlat@17000010: min_freq: 421000Khz, max_freq: 3172000Khz
+[    1.650401] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu7_memlat@17000010: initial_freq: 3172000Khz, suspend_freq: 421000Khz
+[    1.650998] gs101-memlat-devfreq gs_memlat_devfreq:devfreq_mif_cpu7_memlat@17000010: devfreq is initialized!!
+[    1.652018] s2mpg13-spmic-thermal s2mpg13-spmic-thermal: Applying NTC... disabling odpm [s2mpg13]
+[    1.654914] trusty-log trusty:log: /dev/trusty-log0 registered
+[    1.655469] trusty_ipc virtio0: vring0: va(id)  00000000e52fd086(ffffffc3) qsz 32 notifyid 1
+[    1.655507] trusty_ipc virtio0: vring1: va(id)  00000000bd79c14b(ffffffc4) qsz 32 notifyid 2
+[    1.657513] trusty-virtio trusty:virtio: initializing done
+[    1.657560] trusty_ipc virtio0: is online
+[    1.658406] usb_vendor_helper_init: AP suspend support is enabled
+[    1.659056] st33spi spi17.0: Loading st33spi driver, major: 508
+[    1.659103] st33spi spi17.0: st33spi_probe : TSU_NSS configuration be implemented!
+[    1.659107] st33spi spi17.0: Power mode: ST33
+[    1.659140] st33spi spi17.0: Default st33spi state: 0
+[    1.659144] st33spi spi17.0: st33spi: configure pinctrl: 0
+[    1.659454] st54spi spi10.0: Loading st54spi driver, major: 507
+[    1.659495] st54spi spi10.0: st54spi_probe : TSU_NSS configuration be implemented!
+[    1.659499] st54spi spi10.0: google-modules/nfc/ese/st54spi.c: Power mode: ST54J Combo
+[    1.660009] exynos_dpp_parse_dt: exynos-dpp[0]: attr(0x50047), port(0)
+[    1.660013] dpp_print_restriction: exynos-dpp[0]: src_f_w[16 65534 1] src_f_h[16 8190 1]
+[    1.660018] dpp_print_restriction: exynos-dpp[0]: src_w[16 4096 1] src_h[16 4096 1] src_x_y_align[1 1]
+[    1.660022] dpp_print_restriction: exynos-dpp[0]: dst_f_w[16 8190 1] dst_f_h[16 8190 1]
+[    1.660025] dpp_print_restriction: exynos-dpp[0]: dst_w[16 4096 1] dst_h[16 4096 1] dst_x_y_align[1 1]
+[    1.660029] dpp_print_restriction: exynos-dpp[0]: blk_w[4 4096 1] blk_h[4 4096 1] blk_x_y_align[1 1]
+[    1.660031] dpp_print_restriction: exynos-dpp[0]: src_h_rot_max[2160]
+[    1.660033] dpp_print_restriction: exynos-dpp[0]: max scale up(1x), down(1/1x) ratio
+[    1.660056] dpp_init_resources: exynos-dpp[0]: dma irq no = 147
+[    1.660099] dpp_init_resources: exynos-dpp[0]: dpp irq no = 148
+[    1.660131] dpp_probe: exynos-dpp[0]: successfully probed
+[    1.660378] exynos_dpp_parse_dt: exynos-dpp[1]: attr(0x50c7f), port(0)
+[    1.660382] dpp_print_restriction: exynos-dpp[1]: src_f_w[16 65534 1] src_f_h[16 8190 1]
+[    1.660386] dpp_print_restriction: exynos-dpp[1]: src_w[16 4096 1] src_h[16 4096 1] src_x_y_align[1 1]
+[    1.660391] dpp_print_restriction: exynos-dpp[1]: dst_f_w[16 8190 1] dst_f_h[16 8190 1]
+[    1.660395] dpp_print_restriction: exynos-dpp[1]: dst_w[16 4096 1] dst_h[16 4096 1] dst_x_y_align[1 1]
+[    1.660400] dpp_print_restriction: exynos-dpp[1]: blk_w[4 4096 1] blk_h[4 4096 1] blk_x_y_align[1 1]
+[    1.660402] dpp_print_restriction: exynos-dpp[1]: src_h_rot_max[2160]
+[    1.660405] dpp_print_restriction: exynos-dpp[1]: max scale up(8x), down(1/4x) ratio
+[    1.660423] dpp_init_resources: exynos-dpp[1]: dma irq no = 149
+[    1.660459] dpp_init_resources: exynos-dpp[1]: dpp irq no = 150
+[    1.660491] dpp_probe: exynos-dpp[1]: successfully probed
+[    1.660735] exynos_dpp_parse_dt: exynos-dpp[2]: attr(0x50047), port(1)
+[    1.660739] dpp_print_restriction: exynos-dpp[2]: src_f_w[16 65534 1] src_f_h[16 8190 1]
+[    1.660743] dpp_print_restriction: exynos-dpp[2]: src_w[16 4096 1] src_h[16 4096 1] src_x_y_align[1 1]
+[    1.660747] dpp_print_restriction: exynos-dpp[2]: dst_f_w[16 8190 1] dst_f_h[16 8190 1]
+[    1.660751] dpp_print_restriction: exynos-dpp[2]: dst_w[16 4096 1] dst_h[16 4096 1] dst_x_y_align[1 1]
+[    1.660756] dpp_print_restriction: exynos-dpp[2]: blk_w[4 4096 1] blk_h[4 4096 1] blk_x_y_align[1 1]
+[    1.660759] dpp_print_restriction: exynos-dpp[2]: src_h_rot_max[2160]
+[    1.660761] dpp_print_restriction: exynos-dpp[2]: max scale up(1x), down(1/1x) ratio
+[    1.660779] dpp_init_resources: exynos-dpp[2]: dma irq no = 151
+[    1.660817] dpp_init_resources: exynos-dpp[2]: dpp irq no = 152
+[    1.660845] dpp_probe: exynos-dpp[2]: successfully probed
+[    1.661088] exynos_dpp_parse_dt: exynos-dpp[3]: attr(0x50c7f), port(1)
+[    1.661092] dpp_print_restriction: exynos-dpp[3]: src_f_w[16 65534 1] src_f_h[16 8190 1]
+[    1.661096] dpp_print_restriction: exynos-dpp[3]: src_w[16 4096 1] src_h[16 4096 1] src_x_y_align[1 1]
+[    1.661100] dpp_print_restriction: exynos-dpp[3]: dst_f_w[16 8190 1] dst_f_h[16 8190 1]
+[    1.661104] dpp_print_restriction: exynos-dpp[3]: dst_w[16 4096 1] dst_h[16 4096 1] dst_x_y_align[1 1]
+[    1.661108] dpp_print_restriction: exynos-dpp[3]: blk_w[4 4096 1] blk_h[4 4096 1] blk_x_y_align[1 1]
+[    1.661110] dpp_print_restriction: exynos-dpp[3]: src_h_rot_max[2160]
+[    1.661112] dpp_print_restriction: exynos-dpp[3]: max scale up(8x), down(1/4x) ratio
+[    1.661130] dpp_init_resources: exynos-dpp[3]: dma irq no = 153
+[    1.661170] dpp_init_resources: exynos-dpp[3]: dpp irq no = 154
+[    1.661197] dpp_probe: exynos-dpp[3]: successfully probed
+[    1.661442] exynos_dpp_parse_dt: exynos-dpp[4]: attr(0x50047), port(2)
+[    1.661446] dpp_print_restriction: exynos-dpp[4]: src_f_w[16 65534 1] src_f_h[16 8190 1]
+[    1.661450] dpp_print_restriction: exynos-dpp[4]: src_w[16 4096 1] src_h[16 4096 1] src_x_y_align[1 1]
+[    1.661454] dpp_print_restriction: exynos-dpp[4]: dst_f_w[16 8190 1] dst_f_h[16 8190 1]
+[    1.661458] dpp_print_restriction: exynos-dpp[4]: dst_w[16 4096 1] dst_h[16 4096 1] dst_x_y_align[1 1]
+[    1.661461] dpp_print_restriction: exynos-dpp[4]: blk_w[4 4096 1] blk_h[4 4096 1] blk_x_y_align[1 1]
+[    1.661464] dpp_print_restriction: exynos-dpp[4]: src_h_rot_max[2160]
+[    1.661467] dpp_print_restriction: exynos-dpp[4]: max scale up(1x), down(1/1x) ratio
+[    1.661484] dpp_init_resources: exynos-dpp[4]: dma irq no = 155
+[    1.661524] dpp_init_resources: exynos-dpp[4]: dpp irq no = 156
+[    1.661556] dpp_probe: exynos-dpp[4]: successfully probed
+[    1.661804] exynos_dpp_parse_dt: exynos-dpp[5]: attr(0x50c7f), port(2)
+[    1.661808] dpp_print_restriction: exynos-dpp[5]: src_f_w[16 65534 1] src_f_h[16 8190 1]
+[    1.661813] dpp_print_restriction: exynos-dpp[5]: src_w[16 4096 1] src_h[16 4096 1] src_x_y_align[1 1]
+[    1.661818] dpp_print_restriction: exynos-dpp[5]: dst_f_w[16 8190 1] dst_f_h[16 8190 1]
+[    1.661823] dpp_print_restriction: exynos-dpp[5]: dst_w[16 4096 1] dst_h[16 4096 1] dst_x_y_align[1 1]
+[    1.661827] dpp_print_restriction: exynos-dpp[5]: blk_w[4 4096 1] blk_h[4 4096 1] blk_x_y_align[1 1]
+[    1.661830] dpp_print_restriction: exynos-dpp[5]: src_h_rot_max[2160]
+[    1.661832] dpp_print_restriction: exynos-dpp[5]: max scale up(8x), down(1/4x) ratio
+[    1.661856] dpp_init_resources: exynos-dpp[5]: dma irq no = 157
+[    1.661896] dpp_init_resources: exynos-dpp[5]: dpp irq no = 158
+[    1.661925] dpp_probe: exynos-dpp[5]: successfully probed
+[    1.662173] exynos_dpp_parse_dt: exynos-dpp[6]: attr(0x100000), port(0)
+[    1.662177] dpp_print_restriction: exynos-dpp[6]: src_f_w[16 65534 1] src_f_h[16 8190 1]
+[    1.662182] dpp_print_restriction: exynos-dpp[6]: src_w[16 4096 1] src_h[16 4096 1] src_x_y_align[1 1]
+[    1.662186] dpp_print_restriction: exynos-dpp[6]: dst_f_w[16 8190 1] dst_f_h[16 8190 1]
+[    1.662190] dpp_print_restriction: exynos-dpp[6]: dst_w[16 4096 1] dst_h[16 4096 1] dst_x_y_align[1 1]
+[    1.662194] dpp_print_restriction: exynos-dpp[6]: blk_w[4 4096 1] blk_h[4 4096 1] blk_x_y_align[1 1]
+[    1.662196] dpp_print_restriction: exynos-dpp[6]: src_h_rot_max[2160]
+[    1.662198] dpp_print_restriction: exynos-dpp[6]: max scale up(0x), down(1/0x) ratio
+[    1.662215] dpp_init_resources: exynos-dpp[6]: dma irq no = 159
+[    1.662238] dpp_probe: exynos-dpp[6]: successfully probed
+[    1.662493] exynos_dpp_parse_dt: exynos-dpp[7]: attr(0x100000), port(1)
+[    1.662498] dpp_print_restriction: exynos-dpp[7]: src_f_w[16 65534 1] src_f_h[16 8190 1]
+[    1.662501] dpp_print_restriction: exynos-dpp[7]: src_w[16 4096 1] src_h[16 4096 1] src_x_y_align[1 1]
+[    1.662505] dpp_print_restriction: exynos-dpp[7]: dst_f_w[16 8190 1] dst_f_h[16 8190 1]
+[    1.662509] dpp_print_restriction: exynos-dpp[7]: dst_w[16 4096 1] dst_h[16 4096 1] dst_x_y_align[1 1]
+[    1.662513] dpp_print_restriction: exynos-dpp[7]: blk_w[4 4096 1] blk_h[4 4096 1] blk_x_y_align[1 1]
+[    1.662515] dpp_print_restriction: exynos-dpp[7]: src_h_rot_max[2160]
+[    1.662518] dpp_print_restriction: exynos-dpp[7]: max scale up(0x), down(1/0x) ratio
+[    1.662536] dpp_init_resources: exynos-dpp[7]: dma irq no = 160
+[    1.662564] dpp_probe: exynos-dpp[7]: successfully probed
+[    1.663009] attr(0x60410), port(2)
+[    1.663013] src_f_w[16 65534 1] src_f_h[16 8190 1]
+[    1.663016] src_w[16 4096 1] src_h[16 4096 1] src_x_y_align[1 1]
+[    1.663018] dst_f_w[16 8190 1] dst_f_h[16 8190 1]
+[    1.663021] dst_w[16 4096 1] dst_h[16 4096 1] dst_x_y_align[1 1]
+[    1.663024] blk_w[4 4096 1] blk_h[4 4096 1] blk_x_y_align[1 1]
+[    1.663026] src_h_rot_max[2160]
+[    1.663028] max scale up(1x), down(1/1x) ratio
+[    1.663043] dma irq no = 161
+[    1.663070] writeback(dpp8) successfully probe
+[    1.663532] exynos-decon 1c240000.drmdecon: has sysmmu 1c100000.sysmmu (total count:1)
+[    1.663553] exynos-decon 1c240000.drmdecon: has sysmmu 1c110000.sysmmu (total count:2)
+[    1.663573] exynos-decon 1c240000.drmdecon: has sysmmu 1c120000.sysmmu (total count:3)
+[    1.663601] exynos-decon 1c240000.drmdecon: Adding to iommu group 0
+[    1.663799] exynos-decon 1c240000.drmdecon: attached with pgtable 0x0000000088980000
+[    1.663924] exynos-decon[0]: PPC(2)
+[    1.663927] exynos-decon[0]: rotator ppc(4)
+[    1.663930] exynos-decon[0]: scaler ppc(2)
+[    1.663932] exynos-decon[0]: line delay comp(4)
+[    1.663935] exynos-decon[0]: line delay scaler(3)
+[    1.663941] exynos-decon[0]: DPU DFS Level : 
+[    1.663943] exynos-decon[0]: 664000 
+[    1.663945] exynos-decon[0]: 533000 
+[    1.663947] exynos-decon[0]: 465000 
+[    1.663949] exynos-decon[0]: 400000 
+[    1.663951] exynos-decon[0]: 310000 
+[    1.663953] exynos-decon[0]: 267000 
+[    1.663955] exynos-decon[0]: 134000 
+[    1.663958] exynos-decon[0]: 
+[    1.663984] exynos-decon[0]: found dpp0
+[    1.664006] exynos-decon[0]: found dpp1
+[    1.664027] exynos-decon[0]: found dpp2
+[    1.664048] exynos-decon[0]: found dpp3
+[    1.664070] exynos-decon[0]: found dpp4
+[    1.664092] exynos-decon[0]: found dpp5
+[    1.664359] exynos-decon[0]: failed to get aclk(optional)
+[    1.664363] exynos-decon[0]: failed to get aclk_disp(optional)
+[    1.664450] doesn't need to get camera operation register
+[    1.664452] display hibernation is supported
+[    1.664456] [RECOVERY] exynos_recovery_register: ESD recovery is supported
+[    1.664533] exynos_dqe_register: display quality enhancer is supported(DQE_V3)
+[    1.664574] exynos-decon[0]: successfully probed
+[    1.664839] exynos-decon 1c242000.drmdecon: has sysmmu 1c100000.sysmmu (total count:1)
+[    1.664850] exynos-decon 1c242000.drmdecon: has sysmmu 1c110000.sysmmu (total count:2)
+[    1.664861] exynos-decon 1c242000.drmdecon: has sysmmu 1c120000.sysmmu (total count:3)
+[    1.664882] exynos-decon 1c242000.drmdecon: attached with pgtable 0x0000000088980000
+[    1.664885] exynos-decon 1c242000.drmdecon: Adding to iommu group 0
+[    1.664895] exynos-decon 1c242000.drmdecon: attached with pgtable 0x0000000088980000
+[    1.664917] exynos-decon[2]: failed to parse urgent rd_en(-22)
+[    1.664920] exynos-decon[2]: failed to parse urgent rd_hi_thres(-22)
+[    1.664923] exynos-decon[2]: failed to parse urgent rd_lo_thres(-22)
+[    1.664925] exynos-decon[2]: failed to parse urgent rd_wait_cycle(-22)
+[    1.664928] exynos-decon[2]: failed to parse urgent wr_en(-22)
+[    1.664931] exynos-decon[2]: failed to parse urgent wr_hi_thres(-22)
+[    1.664933] exynos-decon[2]: failed to parse urgent wr_lo_thres(-22)
+[    1.664936] exynos-decon[2]: PPC(2)
+[    1.664938] exynos-decon[2]: rotator ppc(4)
+[    1.664940] exynos-decon[2]: scaler ppc(2)
+[    1.664944] exynos-decon[2]: line delay comp(4)
+[    1.664946] exynos-decon[2]: line delay scaler(3)
+[    1.664954] exynos-decon[2]: DPU DFS Level : 
+[    1.664956] exynos-decon[2]: 664000 
+[    1.664959] exynos-decon[2]: 533000 
+[    1.664961] exynos-decon[2]: 465000 
+[    1.664963] exynos-decon[2]: 400000 
+[    1.664965] exynos-decon[2]: 310000 
+[    1.664967] exynos-decon[2]: 267000 
+[    1.664969] exynos-decon[2]: 134000 
+[    1.664971] exynos-decon[2]: 
+[    1.664982] exynos-decon[2]: found dpp0
+[    1.664993] exynos-decon[2]: found dpp1
+[    1.665004] exynos-decon[2]: found dpp2
+[    1.665015] exynos-decon[2]: found dpp3
+[    1.665026] exynos-decon[2]: found dpp4
+[    1.665040] exynos-decon[2]: found dpp5
+[    1.665223] exynos-decon[2]: dimming start irq is not supported
+[    1.665227] exynos-decon[2]: dimming end irq is not supported
+[    1.665230] exynos-decon[2]: failed to get aclk(optional)
+[    1.665234] exynos-decon[2]: failed to get aclk_disp(optional)
+[    1.665298] display hibernation is not supported
+[    1.665300] [RECOVERY] exynos_recovery_register: ESD recovery is supported
+[    1.665304] exynos_dqe_register: display quality enhancer is not supported
+[    1.665308] exynos-decon[2]: successfully probed
+[    1.665824] dsim_get_phys: exynos-dsim[0]: failed to get dsim extra phy
+[    1.665857] dsim_probe: exynos-dsim[0]: dsim idle_ip_index[32]
+[    1.666073] dsim_probe: exynos-dsim[0]: driver has been probed.
+[    1.667463] exynos-drm exynos-drm: bound 1c0b0000.drmdpp (ops 0xffffffda928357e8)
+[    1.667505] exynos-drm exynos-drm: bound 1c0b1000.drmdpp (ops 0xffffffda928357e8)
+[    1.667530] exynos-drm exynos-drm: bound 1c0b2000.drmdpp (ops 0xffffffda928357e8)
+[    1.667562] exynos-drm exynos-drm: bound 1c0b3000.drmdpp (ops 0xffffffda928357e8)
+[    1.667593] exynos-drm exynos-drm: bound 1c0b4000.drmdpp (ops 0xffffffda928357e8)
+[    1.667622] exynos-drm exynos-drm: bound 1c0b5000.drmdpp (ops 0xffffffda928357e8)
+[    1.667633] exynos-drm exynos-drm: bound 1c0b8000.drmdpp (ops 0xffffffda928357e8)
+[    1.667643] exynos-drm exynos-drm: bound 1c0b9000.drmdpp (ops 0xffffffda928357e8)
+[    1.667646] writeback_bind +
+[    1.667672] writeback_bind -
+[    1.667676] exynos-drm exynos-drm: bound 1c0bc000.drmdpp (ops 0xffffffda92836340)
+[    1.667709] [BTS] IDMA_TYPE(0) CH(0) Port(0)
+[    1.667711] [BTS] IDMA_TYPE(1) CH(1) Port(0)
+[    1.667713] [BTS] IDMA_TYPE(2) CH(2) Port(1)
+[    1.667715] [BTS] IDMA_TYPE(3) CH(3) Port(1)
+[    1.667717] [BTS] IDMA_TYPE(4) CH(4) Port(2)
+[    1.667719] [BTS] IDMA_TYPE(5) CH(5) Port(2)
+[    1.667721] [BTS] decon0 bts feature is enabled
+[    1.667727] exynos-drm exynos-drm: bound 1c240000.drmdecon (ops 0xffffffda92835470)
+[    1.667747] [BTS] IDMA_TYPE(0) CH(0) Port(0)
+[    1.667749] [BTS] IDMA_TYPE(1) CH(1) Port(0)
+[    1.667751] [BTS] IDMA_TYPE(2) CH(2) Port(1)
+[    1.667754] [BTS] IDMA_TYPE(3) CH(3) Port(1)
+[    1.667756] [BTS] IDMA_TYPE(4) CH(4) Port(2)
+[    1.667758] [BTS] IDMA_TYPE(5) CH(5) Port(2)
+[    1.667760] [BTS] decon2 bts feature is enabled
+[    1.667765] exynos-drm exynos-drm: bound 1c242000.drmdecon (ops 0xffffffda92835470)
+[    1.667775] exynos-drm exynos-drm: bound 1c2c0000.drmdsim (ops 0xffffffda92835cc0)
+[    1.667778] encoder[0] type(0x5) possible_clones(0x3)
+[    1.667781] encoder[1] type(0x6) possible_clones(0x3)
+[    1.668271] [drm] Initialized exynos 1.0.0 20110530 for exynos-drm on minor 0
+[    1.668464] exynos-reboot exynos-reboot: register restart handler successfully
+[    1.668592] janeiro error creating edgetpu debugfs dir
+[    1.668742] edgetpu_platform 1ce00000.janeiro: has sysmmu 1cc40000.sysmmu (total count:1)
+[    1.668772] edgetpu_platform 1ce00000.janeiro: Adding to iommu group 7
+[    1.668827] edgetpu_platform 1ce00000.janeiro: changed DMA range [0x0000000018000000..0x00000000fffff000] successfully.
+[    1.668831] edgetpu_platform 1ce00000.janeiro: attached with pgtable 0x0000000088a80000
+[    1.669621] edgetpu_platform 1ce00000.janeiro: Initial power state: 226000
+[    1.669873] edgetpu_platform 1ce00000.janeiro: Failed to create debug FS power
+[    1.669995] edgetpu janeiro: Failed to setup debugfs
+[    1.672129] edgetpu_platform 1ce00000.janeiro: failed to create debug fs for cooling
+[    1.672529] edgetpu_platform 1ce00000.janeiro: janeiro edgetpu initialized. Build: Not a git repository
+[    1.672534] edgetpu janeiro: Powering down
+[    1.673139] gsa 17c90000.gsa-ns: TZ: com.android.trusty.gsa.hwmgr.tpu connected
+[    1.766475] s2mpg13-spmic-thermal s2mpg13-spmic-thermal: Set NTC channels (adc_ch_en : 0xff
+               )
+[    1.766608] s2mpg13-spmic-thermal s2mpg13-spmic-thermal: Re-enabled odpm [s2mpg13] :)
+[    1.766745] s2mpg13-spmic-thermal s2mpg13-spmic-thermal: Sensor 0 raw:0x939
+[    1.766882] s2mpg13-spmic-thermal s2mpg13-spmic-thermal: Sensor 1 raw:0x982
+[    1.767018] s2mpg13-spmic-thermal s2mpg13-spmic-thermal: Sensor 2 raw:0x906
+[    1.767153] s2mpg13-spmic-thermal s2mpg13-spmic-thermal: Sensor 3 raw:0x96a
+[    1.767289] s2mpg13-spmic-thermal s2mpg13-spmic-thermal: Sensor 4 raw:0x95d
+[    1.767425] s2mpg13-spmic-thermal s2mpg13-spmic-thermal: Sensor 5 raw:0x971
+[    1.767561] s2mpg13-spmic-thermal s2mpg13-spmic-thermal: Sensor 6 raw:0xfeb
+[    1.767698] s2mpg13-spmic-thermal s2mpg13-spmic-thermal: Sensor 7 raw:0x929
+[    1.835018] edgetpu janeiro: janeiro_block_down: blk_shutdown timeout (20000 uS) exceeded
+[    1.835862] aoc 19000000.aoc: has sysmmu 1a090000.sysmmu (total count:1)
+[    1.835891] aoc 19000000.aoc: Adding to iommu group 4
+[    1.835948] aoc 19000000.aoc: attached with pgtable 0x0000000089840000
+[    1.836222] aoc: found aoc with interrupt:0 sram:[mem 0x19000000-0x19ffffff] dram:[mem 0x94000000-0x96ffffff]
+[    1.837678] aoc: sensor power is enabled.
+[    1.838047] nitrous_bluetooth odm:btbcm: Wake polarity not in dev tree
+[    1.838237] logbuffer: id:btlpm registered
+[    1.838263] nitrous_bluetooth odm:btbcm: IRQ: 476 active: High
+[    1.838358] nitrous_bluetooth odm:btbcm: rfkill: off (blocked=1)
+[    1.856923] p9221 i2c-p9412: selecting p9412
+[    1.856933] p9221 i2c-p9412: enable gpio:110
+[    1.856940] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    1.856949] p9221 i2c-p9412: WLC enable/disable pin:110
+[    1.856955] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    1.856959] p9221 i2c-p9412: has_rtx:1
+[    1.856997] p9221 i2c-p9412: Failed to parse dt
+[    1.857725] panel vddd found
+[    1.858650] panel-samsung-s6e3hc4 1c2c0000.drmdsim.0: panel enabled at boot
+[    1.865013] panel-samsung-s6e3hc4 1c2c0000.drmdsim.0: samsung common panel driver has been probed
+[    1.865261] p9221 i2c-p9412: selecting p9412
+[    1.865270] p9221 i2c-p9412: enable gpio:110
+[    1.865277] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    1.865284] p9221 i2c-p9412: WLC enable/disable pin:110
+[    1.865292] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    1.865296] p9221 i2c-p9412: has_rtx:1
+[    1.865304] p9221 i2c-p9412: Failed to parse dt
+[    1.865497] of_pca9468_dt: irq-gpio: 34 
+[    1.865501] of_pca9468_dt: pca9468,iin_cfg is 2500000
+[    1.865503] of_pca9468_dt: pca9468,v_float is 4300000
+[    1.865507] of_pca9468_dt: pca9468,iin_topoff is 500000
+[    1.865509] of_pca9468_dt: pca9468,fsw_cfg is 3
+[    1.865512] of_pca9468_dt: pca9468,ntc_th is 0
+[    1.865514] of_pca9468_dt: pca9468,iin_max_offset is 0
+[    1.865517] of_pca9468_dt: pca9468,iin_cc_comp_offset is 50000
+[    1.865522] of_pca9468_dt: pca9468,spread-spectrum is 0
+[    1.865524] of_pca9468_dt: google,usb-port-tz-name is usbc-therm-adc
+[    1.865783] logbuffer: id:pca9468 registered
+[    1.867287] pca9468 5-0057: pca9468_set_input_current: iin=2550000 real iin_cfg=2600000 (0)
+[    1.867393] pca9468 5-0057: pca9468_set_vfloat: v_float=4300000 (0)
+[    1.868211] pca9468 5-0057: Couldn't create debug dir
+[    1.868214] pca9468 5-0057: error while registering debugfs -2
+[    1.868259] pca9468: probe_done
+[    1.868329] st21nfc_dev_init: Loading st21nfc driver (version 2.0.19)
+[    1.869044] p9221 i2c-p9412: selecting p9412
+[    1.869053] p9221 i2c-p9412: enable gpio:110
+[    1.869059] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    1.869067] p9221 i2c-p9412: WLC enable/disable pin:110
+[    1.869076] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    1.869080] p9221 i2c-p9412: has_rtx:1
+[    1.869088] p9221 i2c-p9412: Failed to parse dt
+[    1.869616] p9221 i2c-p9412: selecting p9412
+[    1.869625] p9221 i2c-p9412: enable gpio:110
+[    1.869633] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    1.869642] p9221 i2c-p9412: WLC enable/disable pin:110
+[    1.869649] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    1.869654] p9221 i2c-p9412: has_rtx:1
+[    1.869662] p9221 i2c-p9412: Failed to parse dt
+[    1.869726] touch_bus_negotiator tbn: tbn_aoc2ap_irq_thread: bus_released:0 bus_requested:0.
+[    1.869748] touch_bus_negotiator tbn: tbn_probe: gpios(aoc2ap: 63 ap2aoc: 91), mode 1
+[    1.869834] [FTS_TS/D]fts_ts_init: Enter
+[    1.869865] [FTS_TS/D]fts_ts_init: Exit(3876)
+[    1.870119] [   info] syna_spi_parse_dt: Firmware name synaptics.img
+[    1.870189] spi_master spi0: will run message pump with realtime priority
+[    1.870690] [   info] syna_tcm_init_message_wrap: Resp reading method (default): polling
+[    1.870694] [   info] syna_tcm_allocate_device: TouchComm core module created, ver.: 1.25
+[    1.870697] [   info] syna_tcm_allocate_device: Capability: wr_chunk(512), rd_chunk(512), irq_control(yes)
+[    1.870755] [   info] syna_dev_probe: tbn_register_mask = 0x1.
+[    1.871021] p9221 i2c-p9412: selecting p9412
+[    1.871031] p9221 i2c-p9412: enable gpio:110
+[    1.871038] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    1.871046] p9221 i2c-p9412: WLC enable/disable pin:110
+[    1.871054] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    1.871058] p9221 i2c-p9412: has_rtx:1
+[    1.871066] p9221 i2c-p9412: Failed to parse dt
+[    2.086596] [   info] syna_spi_hw_reset: Trigger hardware reset.
+[    2.346786] [   info] syna_tcm_v1_parse_idinfo: TCM Fw mode: 0x01
+[    2.346790] [   info] syna_tcm_v1_detect: Message CRC appending is disabled
+[    2.346793] [   info] syna_tcm_detect_device: Device in Application FW, build id: 4024440, S3908GA1B0-15.0
+[    2.386962] [   info] syna_tcm_set_custom_touch_entity_callback: enabled
+[    2.387052] input: synaptics_tcm_touch as /devices/platform/10d10000.spi/spi_master/spi0/spi0.0/input/input2
+[    2.387174] [   info] syna_dev_request_irq: Interrupt handler registered
+[    2.387213] [   info] syna_dev_connect: TCM packrat: 4024440
+[    2.387216] [   info] syna_dev_connect: Configuration: name(synaptics_tcm), lpwg(no), hw_reset(yes), irq_ctrl(yes)
+[    2.506625] [   info] syna_tcm_set_reset_occurrence_callback: enabled
+[    2.506628] [   info] syna_dev_probe: synaptics_tcm TouchComm driver v1.2.8 installed
+[    2.507058] pixel-em: Loading 3 profile(s).
+[    2.507108] pixel-em: Successfully created/updated profile 'cam1'!
+[    2.507147] pixel-em: Successfully created/updated profile 'cam2'!
+[    2.507187] pixel-em: Successfully created/updated profile 'ui'!
+[    2.507191] pixel-em: Publishing EM profile to vh_sched!
+[    2.507193] pixel-em: Publishing EM profile to exynos_cpu_cooling!
+[    2.507194] pixel-em: Publishing EM profile to exynos acme!
+[    2.507393] pixel-em: Registered! :D
+[    2.508020] p9221 i2c-p9412: selecting p9412
+[    2.508028] p9221 i2c-p9412: enable gpio:110
+[    2.508035] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.508042] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.508050] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.508054] p9221 i2c-p9412: has_rtx:1
+[    2.508062] p9221 i2c-p9412: Failed to parse dt
+[    2.508466] null_blk: module loaded
+[    2.508500] sbb-mux: Initializing signal [0, '0']...
+[    2.508510] sbb-mux: Initializing signal [1, '1']...
+[    2.508521] sbb-mux: Initializing signal [2, 'kernel_test']...
+[    2.508532] sbb-mux: Initializing signal [3, 'userland_test']...
+[    2.508541] sbb-mux: Initializing signal [4, 'gp_region_0']...
+[    2.508551] sbb-mux: Initializing signal [5, 'gp_region_1']...
+[    2.508561] sbb-mux: Initializing signal [6, 'gp_region_2']...
+[    2.508571] sbb-mux: Initializing signal [7, 'gp_region_3']...
+[    2.508579] sbb-mux: Initializing signal [8, 'k_gp_region_0']...
+[    2.508589] sbb-mux: Initializing signal [9, 'k_gp_region_1']...
+[    2.508599] sbb-mux: Initializing signal [10, 'k_gp_region_2']...
+[    2.508608] sbb-mux: Initializing signal [11, 'k_gp_region_3']...
+[    2.508618] sbb-mux: Initializing signal [12, 'app_misc0']...
+[    2.508628] sbb-mux: Initializing signal [13, 'app_misc1']...
+[    2.508638] sbb-mux: Initializing signal [14, 'app_misc2']...
+[    2.508648] sbb-mux: Initializing signal [15, 'app_misc3']...
+[    2.508657] sbb-mux: Initializing signal [16, 'app_misc4']...
+[    2.508668] sbb-mux: Initializing signal [17, 'app_misc5']...
+[    2.508679] sbb-mux: Initializing signal [18, 'app_misc6']...
+[    2.508687] sbb-mux: Initializing signal [19, 'app_misc7']...
+[    2.508698] sbb-mux: Initializing signal [20, 'app_misc8']...
+[    2.508707] sbb-mux: Initializing signal [21, 'app_misc9']...
+[    2.508716] sbb-mux: Initializing signal [22, 'cam_misc0']...
+[    2.508725] sbb-mux: Initializing signal [23, 'cam_misc1']...
+[    2.508734] sbb-mux: Initializing signal [24, 'cam_misc2']...
+[    2.508742] sbb-mux: Initializing signal [25, 'cam_misc3']...
+[    2.508753] sbb-mux: Initializing signal [26, 'cam_misc4']...
+[    2.508763] sbb-mux: Initializing signal [27, 'cam_misc5']...
+[    2.508772] sbb-mux: Initializing signal [28, 'cam_misc6']...
+[    2.508782] sbb-mux: Initializing signal [29, 'cam_misc7']...
+[    2.508792] sbb-mux: Initializing signal [30, 'cam_misc8']...
+[    2.508800] sbb-mux: Initializing signal [31, 'cam_misc9']...
+[    2.508982] sbb-mux: Calling sbb_mux_drv_probe!
+[    2.509002] sbb-mux: Num GPIOs: 4.
+[    2.509016] sbb-mux: GPIO system id: 167.
+[    2.509031] Correctly initialized GPIO tracker #167 for GPIO C1_T0__KIBBLE1_TRIG0!
+[    2.509039] sbb-mux: GPIO system id: 168.
+[    2.509053] Correctly initialized GPIO tracker #168 for GPIO C1_T1__KIBBLE1_TRIG1!
+[    2.509063] sbb-mux: GPIO system id: 112.
+[    2.509077] Correctly initialized GPIO tracker #112 for GPIO C1_T2__KIBBLE1_TRIG2!
+[    2.509086] sbb-mux: GPIO system id: 115.
+[    2.509100] Correctly initialized GPIO tracker #115 for GPIO C1_T3__KIBBLE1_TRIG3!
+[    2.509160] sbb-mux: Registered! :D
+[    2.509608] p9221 i2c-p9412: selecting p9412
+[    2.509617] p9221 i2c-p9412: enable gpio:110
+[    2.509625] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.509634] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.509641] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.509645] p9221 i2c-p9412: has_rtx:1
+[    2.509653] p9221 i2c-p9412: Failed to parse dt
+[    2.526316] slg51002 4-0075: No init registers are overridden
+[    2.527255] slg51002 4-0075: chip_id: 0xb13103
+[    2.528214] ldo1: supplied by regulator-dummy
+[    2.529064] ldo2: supplied by regulator-dummy
+[    2.529657] ldo3: Bringing 1800000uV into 2250000-2250000uV
+[    2.530803] ldo3: supplied by regulator-dummy
+[    2.531653] ldo4: supplied by regulator-dummy
+[    2.532511] ldo5: supplied by regulator-dummy
+[    2.533102] ldo6: Bringing 1150000uV into 1100000-1100000uV
+[    2.534250] ldo6: supplied by regulator-dummy
+[    2.534843] ldo7: Bringing 1150000uV into 1000000-1000000uV
+[    2.535984] ldo7: supplied by regulator-dummy
+[    2.536843] ldo8: supplied by regulator-dummy
+[    2.540668] p9221 i2c-p9412: selecting p9412
+[    2.540678] p9221 i2c-p9412: enable gpio:110
+[    2.540685] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.540694] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.540701] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.540705] p9221 i2c-p9412: has_rtx:1
+[    2.540713] p9221 i2c-p9412: Failed to parse dt
+[    2.541853] ETR MIU configured
+[    2.542209] stmvl53l1 0-0029: stmvl53l1 : 0x29
+[    2.542348] stmvl53l1 0-0029: Selecting pinctrl state default
+[    2.543260] p9221 i2c-p9412: selecting p9412
+[    2.543269] p9221 i2c-p9412: enable gpio:110
+[    2.543278] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.543286] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.543293] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.543298] p9221 i2c-p9412: has_rtx:1
+[    2.543306] p9221 i2c-p9412: Failed to parse dt
+[    2.543871] stmvl53l1 0-0029: slow power on
+[    2.543900] stmvl53l1 0-0029: Shared i2c pinctrl state on_i2c
+[    2.543904] stmvl53l1 0-0029: Power up successfully
+[    2.547974] input: STM VL53L1 proximity sensor as /devices/virtual/input/input3
+[    2.560516] stmvl53l1 0-0029: device name VL53L3 cut1.1 type VL53L3
+[    2.560626] stmvl53l1 0-0029: Probe Success, device id 0xea
+[    2.560735] stmvl53l1 0-0029: Probe Success, device type 0xaa
+[    2.560797] stmvl53l1 0-0029: irq 483 now handled
+[    2.560800] stmvl53l1 0-0029: Misc device registration name:stmvl53l1_ranging
+[    2.560980] stmvl53l1 0-0029: Shared i2c pinctrl state off_i2c
+[    2.560983] stmvl53l1 0-0029: Power down successfully
+[    2.560988] stmvl53l1 0-0029: VL53L1 setscheduler rc = 0
+[    2.561308] input: goodix_fingerprint as /devices/virtual/input/input4
+[    2.561395] goodixfp: version V1.2.13
+[    2.561504] goodixfp: status = 0x0
+[    2.562041] p9221 i2c-p9412: selecting p9412
+[    2.562051] p9221 i2c-p9412: enable gpio:110
+[    2.562058] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.562067] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.562074] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.562078] p9221 i2c-p9412: has_rtx:1
+[    2.562086] p9221 i2c-p9412: Failed to parse dt
+[    2.563863] bigocean 1cb00000.bigocean: has sysmmu 1ca40000.sysmmu (total count:1)
+[    2.563893] bigocean 1cb00000.bigocean: Adding to iommu group 2
+[    2.563951] bigocean 1cb00000.bigocean: attached with pgtable 0x0000000089a40000
+[    2.564852] gxp_platform 25c00000.gxp: has sysmmu 25a50000.sysmmu (total count:1)
+[    2.564878] gxp_platform 25c00000.gxp: has sysmmu 25a80000.sysmmu (total count:2)
+[    2.564910] gxp_platform 25c00000.gxp: Adding to iommu group 8
+[    2.564968] gxp_platform 25c00000.gxp: changed DMA range [0x0000000030000000..0x00000000f0000000] successfully.
+[    2.564971] gxp_platform 25c00000.gxp: attached with pgtable 0x0000000089ac0000
+[    2.565035] gxp_platform 25c00000.gxp: Probing gxp driver with commit Not a git repository
+[    2.565440] p9221 i2c-p9412: selecting p9412
+[    2.565450] p9221 i2c-p9412: enable gpio:110
+[    2.565456] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.565465] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.565472] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.565476] p9221 i2c-p9412: has_rtx:1
+[    2.565484] p9221 i2c-p9412: Failed to parse dt
+[    2.565812] gxp_platform 25c00000.gxp: Powering on BLK ...
+[    2.566779] gxp_platform 25c00000.gxp: Aurora version: 0x10104
+[    2.566788] gxp_platform 25c00000.gxp: Aurora core 0 processor ID: 0x0
+[    2.566795] gxp_platform 25c00000.gxp: Aurora core 1 processor ID: 0x1
+[    2.566803] gxp_platform 25c00000.gxp: Aurora core 2 processor ID: 0x2
+[    2.566809] gxp_platform 25c00000.gxp: Aurora core 3 processor ID: 0x3
+[    2.566813] gxp_platform 25c00000.gxp: Powering off BLK ...
+[    2.566909] gxp_platform 25c00000.gxp: GSA device found, Firmware authentication available
+[    2.567218] gxp_platform 25c00000.gxp: failed to create debug fs for cooling
+[    2.567605] lwis-dev: LWIS device initialization
+[    2.567619] lwis-top-dev: Top device initialization
+[    2.567818] lwis lwis-top: Base Probe: Success
+[    2.568468] p9221 i2c-p9412: selecting p9412
+[    2.568477] p9221 i2c-p9412: enable gpio:110
+[    2.568485] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.568493] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.568500] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.568504] p9221 i2c-p9412: has_rtx:1
+[    2.568512] p9221 i2c-p9412: Failed to parse dt
+[    2.568751] lwis-ioreg-dev: IOREG device initialization
+[    2.568884] lwis-ioreg 1a440000.lwis_csi: has sysmmu 1a510000.sysmmu (total count:1)
+[    2.568906] lwis-ioreg 1a440000.lwis_csi: has sysmmu 1a540000.sysmmu (total count:2)
+[    2.568935] lwis-ioreg 1a440000.lwis_csi: Adding to iommu group 1
+[    2.568995] lwis-ioreg 1a440000.lwis_csi: attached with pgtable 0x0000000089e00000
+[    2.572624] lwis lwis-csi: Base Probe: Success
+[    2.572993] p9221 i2c-p9412: selecting p9412
+[    2.573002] p9221 i2c-p9412: enable gpio:110
+[    2.573009] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.573018] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.573025] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.573030] p9221 i2c-p9412: has_rtx:1
+[    2.573058] p9221 i2c-p9412: Failed to parse dt
+[    2.573132] lwis lwis-csi: IOREG Device Probe: Success
+[    2.573177] lwis-ioreg 1aa40000.lwis_pdp: has sysmmu 1a540000.sysmmu (total count:1)
+[    2.573203] lwis-ioreg 1aa40000.lwis_pdp: has sysmmu 1ad00000.sysmmu (total count:2)
+[    2.573226] lwis-ioreg 1aa40000.lwis_pdp: has sysmmu 1a880000.sysmmu (total count:3)
+[    2.573249] lwis-ioreg 1aa40000.lwis_pdp: attached with pgtable 0x0000000089e00000
+[    2.573252] lwis-ioreg 1aa40000.lwis_pdp: Adding to iommu group 1
+[    2.573264] lwis-ioreg 1aa40000.lwis_pdp: attached with pgtable 0x0000000089e00000
+[    2.573776] lwis lwis-pdp: Base Probe: Success
+[    2.574130] p9221 i2c-p9412: selecting p9412
+[    2.574149] p9221 i2c-p9412: enable gpio:110
+[    2.574156] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.574164] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.574173] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.574177] p9221 i2c-p9412: has_rtx:1
+[    2.574185] p9221 i2c-p9412: Failed to parse dt
+[    2.574266] lwis lwis-pdp: IOREG Device Probe: Success
+[    2.574308] lwis-ioreg 1ac40000.lwis_ipp: has sysmmu 1ad00000.sysmmu (total count:1)
+[    2.574326] lwis-ioreg 1ac40000.lwis_ipp: attached with pgtable 0x0000000089e00000
+[    2.574329] lwis-ioreg 1ac40000.lwis_ipp: Adding to iommu group 1
+[    2.574338] lwis-ioreg 1ac40000.lwis_ipp: attached with pgtable 0x0000000089e00000
+[    2.575132] lwis lwis-ipp: Base Probe: Success
+[    2.575457] p9221 i2c-p9412: selecting p9412
+[    2.575470] p9221 i2c-p9412: enable gpio:110
+[    2.575476] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.575484] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.575492] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.575496] p9221 i2c-p9412: has_rtx:1
+[    2.575504] p9221 i2c-p9412: Failed to parse dt
+[    2.575591] lwis lwis-ipp: IOREG Device Probe: Success
+[    2.575631] lwis-ioreg 1ac80000.lwis_gtnr_align: has sysmmu 1ad00000.sysmmu (total count:1)
+[    2.575654] lwis-ioreg 1ac80000.lwis_gtnr_align: has sysmmu 1b080000.sysmmu (total count:2)
+[    2.575673] lwis-ioreg 1ac80000.lwis_gtnr_align: attached with pgtable 0x0000000089e00000
+[    2.575676] lwis-ioreg 1ac80000.lwis_gtnr_align: Adding to iommu group 1
+[    2.575685] lwis-ioreg 1ac80000.lwis_gtnr_align: attached with pgtable 0x0000000089e00000
+[    2.575881] lwis lwis-gtnr-align: Base Probe: Success
+[    2.576201] p9221 i2c-p9412: selecting p9412
+[    2.576211] p9221 i2c-p9412: enable gpio:110
+[    2.576218] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.576226] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.576233] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.576238] p9221 i2c-p9412: has_rtx:1
+[    2.576245] p9221 i2c-p9412: Failed to parse dt
+[    2.576328] lwis lwis-gtnr-align: IOREG Device Probe: Success
+[    2.576385] lwis-ioreg 1bc40000.lwis_gtnr_merge: has sysmmu 1bc70000.sysmmu (total count:1)
+[    2.576410] lwis-ioreg 1bc40000.lwis_gtnr_merge: has sysmmu 1bca0000.sysmmu (total count:2)
+[    2.576434] lwis-ioreg 1bc40000.lwis_gtnr_merge: has sysmmu 1bcd0000.sysmmu (total count:3)
+[    2.576477] lwis-ioreg 1bc40000.lwis_gtnr_merge: has sysmmu 1bd00000.sysmmu (total count:4)
+[    2.576501] lwis-ioreg 1bc40000.lwis_gtnr_merge: has sysmmu 1bd30000.sysmmu (total count:5)
+[    2.576528] lwis-ioreg 1bc40000.lwis_gtnr_merge: attached with pgtable 0x0000000089e00000
+[    2.576531] lwis-ioreg 1bc40000.lwis_gtnr_merge: Adding to iommu group 1
+[    2.576542] lwis-ioreg 1bc40000.lwis_gtnr_merge: attached with pgtable 0x0000000089e00000
+[    2.576789] lwis lwis-gtnr-merge: Base Probe: Success
+[    2.577158] p9221 i2c-p9412: selecting p9412
+[    2.577167] p9221 i2c-p9412: enable gpio:110
+[    2.577174] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.577183] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.577190] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.577197] p9221 i2c-p9412: has_rtx:1
+[    2.577205] p9221 i2c-p9412: Failed to parse dt
+[    2.577292] lwis lwis-gtnr-merge: IOREG Device Probe: Success
+[    2.577332] lwis-ioreg 1a840000.lwis_g3aa: has sysmmu 1a880000.sysmmu (total count:1)
+[    2.577350] lwis-ioreg 1a840000.lwis_g3aa: attached with pgtable 0x0000000089e00000
+[    2.577354] lwis-ioreg 1a840000.lwis_g3aa: Adding to iommu group 1
+[    2.577365] lwis-ioreg 1a840000.lwis_g3aa: attached with pgtable 0x0000000089e00000
+[    2.577656] lwis lwis-g3aa: Base Probe: Success
+[    2.577978] p9221 i2c-p9412: selecting p9412
+[    2.577987] p9221 i2c-p9412: enable gpio:110
+[    2.577994] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.578002] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.578009] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.578014] p9221 i2c-p9412: has_rtx:1
+[    2.578022] p9221 i2c-p9412: Failed to parse dt
+[    2.578107] lwis lwis-g3aa: IOREG Device Probe: Success
+[    2.578146] lwis-ioreg 1b450000.lwis_itp: has sysmmu 1b080000.sysmmu (total count:1)
+[    2.578171] lwis-ioreg 1b450000.lwis_itp: has sysmmu 1b780000.sysmmu (total count:2)
+[    2.578191] lwis-ioreg 1b450000.lwis_itp: attached with pgtable 0x0000000089e00000
+[    2.578195] lwis-ioreg 1b450000.lwis_itp: Adding to iommu group 1
+[    2.578205] lwis-ioreg 1b450000.lwis_itp: attached with pgtable 0x0000000089e00000
+[    2.578745] lwis lwis-itp: Base Probe: Success
+[    2.579073] p9221 i2c-p9412: selecting p9412
+[    2.579082] p9221 i2c-p9412: enable gpio:110
+[    2.579089] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.579097] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.579104] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.579108] p9221 i2c-p9412: has_rtx:1
+[    2.579116] p9221 i2c-p9412: Failed to parse dt
+[    2.579202] lwis lwis-itp: IOREG Device Probe: Success
+[    2.579256] lwis-ioreg 1b760000.lwis_mcsc: has sysmmu 1b7b0000.sysmmu (total count:1)
+[    2.579279] lwis-ioreg 1b760000.lwis_mcsc: has sysmmu 1b7e0000.sysmmu (total count:2)
+[    2.579301] lwis-ioreg 1b760000.lwis_mcsc: attached with pgtable 0x0000000089e00000
+[    2.579304] lwis-ioreg 1b760000.lwis_mcsc: Adding to iommu group 1
+[    2.579314] lwis-ioreg 1b760000.lwis_mcsc: attached with pgtable 0x0000000089e00000
+[    2.579606] lwis lwis-mcsc: Base Probe: Success
+[    2.579928] p9221 i2c-p9412: selecting p9412
+[    2.579938] p9221 i2c-p9412: enable gpio:110
+[    2.579945] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.579954] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.579961] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.579964] p9221 i2c-p9412: has_rtx:1
+[    2.579972] p9221 i2c-p9412: Failed to parse dt
+[    2.580054] lwis lwis-mcsc: IOREG Device Probe: Success
+[    2.580107] lwis-ioreg 1d080000.lwis_scsc: has sysmmu 1d100000.sysmmu (total count:1)
+[    2.580127] lwis-ioreg 1d080000.lwis_scsc: attached with pgtable 0x0000000089e00000
+[    2.580130] lwis-ioreg 1d080000.lwis_scsc: Adding to iommu group 1
+[    2.580139] lwis-ioreg 1d080000.lwis_scsc: attached with pgtable 0x0000000089e00000
+[    2.580393] lwis lwis-scsc: Base Probe: Success
+[    2.580720] p9221 i2c-p9412: selecting p9412
+[    2.580729] p9221 i2c-p9412: enable gpio:110
+[    2.580736] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.580744] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.580751] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.580756] p9221 i2c-p9412: has_rtx:1
+[    2.580764] p9221 i2c-p9412: Failed to parse dt
+[    2.580845] lwis lwis-scsc: IOREG Device Probe: Success
+[    2.580898] lwis-ioreg 1d040000.lwis_gdc: has sysmmu 1d0a0000.sysmmu (total count:1)
+[    2.580918] lwis-ioreg 1d040000.lwis_gdc: attached with pgtable 0x0000000089e00000
+[    2.580922] lwis-ioreg 1d040000.lwis_gdc: Adding to iommu group 1
+[    2.580931] lwis-ioreg 1d040000.lwis_gdc: attached with pgtable 0x0000000089e00000
+[    2.581182] lwis lwis-gdc0: Base Probe: Success
+[    2.581502] p9221 i2c-p9412: selecting p9412
+[    2.581511] p9221 i2c-p9412: enable gpio:110
+[    2.581518] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.581526] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.581533] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.581540] p9221 i2c-p9412: has_rtx:1
+[    2.581548] p9221 i2c-p9412: Failed to parse dt
+[    2.581632] lwis lwis-gdc0: IOREG Device Probe: Success
+[    2.581686] lwis-ioreg 1d060000.lwis_gdc: has sysmmu 1d0d0000.sysmmu (total count:1)
+[    2.581704] lwis-ioreg 1d060000.lwis_gdc: attached with pgtable 0x0000000089e00000
+[    2.581708] lwis-ioreg 1d060000.lwis_gdc: Adding to iommu group 1
+[    2.581718] lwis-ioreg 1d060000.lwis_gdc: attached with pgtable 0x0000000089e00000
+[    2.581893] lwis lwis-gdc1: Base Probe: Success
+[    2.582215] p9221 i2c-p9412: selecting p9412
+[    2.582224] p9221 i2c-p9412: enable gpio:110
+[    2.582230] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.582239] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.582246] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.582250] p9221 i2c-p9412: has_rtx:1
+[    2.582259] p9221 i2c-p9412: Failed to parse dt
+[    2.582344] lwis lwis-gdc1: IOREG Device Probe: Success
+[    2.582387] lwis-ioreg 1a4e0000.lwis_votf: has sysmmu 1d0a0000.sysmmu (total count:1)
+[    2.582398] lwis-ioreg 1a4e0000.lwis_votf: has sysmmu 1d0d0000.sysmmu (total count:2)
+[    2.582410] lwis-ioreg 1a4e0000.lwis_votf: has sysmmu 1d100000.sysmmu (total count:3)
+[    2.582421] lwis-ioreg 1a4e0000.lwis_votf: has sysmmu 1ad00000.sysmmu (total count:4)
+[    2.582432] lwis-ioreg 1a4e0000.lwis_votf: has sysmmu 1b080000.sysmmu (total count:5)
+[    2.582445] lwis-ioreg 1a4e0000.lwis_votf: has sysmmu 1b780000.sysmmu (total count:6)
+[    2.582471] lwis-ioreg 1a4e0000.lwis_votf: has sysmmu 1b7b0000.sysmmu (total count:7)
+[    2.582485] lwis-ioreg 1a4e0000.lwis_votf: has sysmmu 1b7e0000.sysmmu (total count:8)
+[    2.582500] lwis-ioreg 1a4e0000.lwis_votf: has sysmmu 1bc70000.sysmmu (total count:9)
+[    2.582514] lwis-ioreg 1a4e0000.lwis_votf: has sysmmu 1bca0000.sysmmu (total count:10)
+[    2.582529] lwis-ioreg 1a4e0000.lwis_votf: has sysmmu 1bcd0000.sysmmu (total count:11)
+[    2.582545] lwis-ioreg 1a4e0000.lwis_votf: has sysmmu 1bd00000.sysmmu (total count:12)
+[    2.582561] lwis-ioreg 1a4e0000.lwis_votf: has sysmmu 1bd30000.sysmmu (total count:13)
+[    2.582576] lwis-ioreg 1a4e0000.lwis_votf: has sysmmu 1a510000.sysmmu (total count:14)
+[    2.582589] lwis-ioreg 1a4e0000.lwis_votf: has sysmmu 1a540000.sysmmu (total count:15)
+[    2.582618] lwis-ioreg 1a4e0000.lwis_votf: attached with pgtable 0x0000000089e00000
+[    2.582622] lwis-ioreg 1a4e0000.lwis_votf: Adding to iommu group 1
+[    2.582632] lwis-ioreg 1a4e0000.lwis_votf: attached with pgtable 0x0000000089e00000
+[    2.582854] lwis lwis-votf: Base Probe: Success
+[    2.583191] p9221 i2c-p9412: selecting p9412
+[    2.583201] p9221 i2c-p9412: enable gpio:110
+[    2.583208] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.583217] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.583224] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.583229] p9221 i2c-p9412: has_rtx:1
+[    2.583237] p9221 i2c-p9412: Failed to parse dt
+[    2.583346] lwis lwis-votf: IOREG Device Probe: Success
+[    2.583478] lwis-i2c-dev: I2C device initialization
+[    2.584240] lwis lwis-sensor-nagual: Base Probe: Success
+[    2.584607] p9221 i2c-p9412: selecting p9412
+[    2.584616] p9221 i2c-p9412: enable gpio:110
+[    2.584623] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.584631] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.584638] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.584642] p9221 i2c-p9412: has_rtx:1
+[    2.584651] p9221 i2c-p9412: Failed to parse dt
+[    2.584736] lwis lwis-sensor-nagual: I2C Device Probe: Success
+[    2.585111] lwis lwis-sensor-dokkaebi: Base Probe: Success
+[    2.585484] p9221 i2c-p9412: selecting p9412
+[    2.585497] p9221 i2c-p9412: enable gpio:110
+[    2.585505] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.585514] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.585521] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.585525] p9221 i2c-p9412: has_rtx:1
+[    2.585554] p9221 i2c-p9412: Failed to parse dt
+[    2.585652] lwis lwis-sensor-dokkaebi: I2C Device Probe: Success
+[    2.586069] lwis lwis-sensor-sandworm: Base Probe: Success
+[    2.586544] p9221 i2c-p9412: selecting p9412
+[    2.586553] p9221 i2c-p9412: enable gpio:110
+[    2.586562] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.586570] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.586577] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.586581] p9221 i2c-p9412: has_rtx:1
+[    2.586589] p9221 i2c-p9412: Failed to parse dt
+[    2.586656] lwis lwis-sensor-sandworm: I2C Device Probe: Success
+[    2.587039] lwis lwis-sensor-kraken: Base Probe: Success
+[    2.587415] p9221 i2c-p9412: selecting p9412
+[    2.587423] p9221 i2c-p9412: enable gpio:110
+[    2.587431] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.587440] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.587447] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.587451] p9221 i2c-p9412: has_rtx:1
+[    2.587460] p9221 i2c-p9412: Failed to parse dt
+[    2.587544] lwis lwis-sensor-kraken: I2C Device Probe: Success
+[    2.587738] lwis lwis-eeprom-gargoyle: Base Probe: Success
+[    2.588100] p9221 i2c-p9412: selecting p9412
+[    2.588109] p9221 i2c-p9412: enable gpio:110
+[    2.588116] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.588125] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.588132] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.588136] p9221 i2c-p9412: has_rtx:1
+[    2.588144] p9221 i2c-p9412: Failed to parse dt
+[    2.588228] lwis lwis-eeprom-gargoyle: I2C Device Probe: Success
+[    2.588357] lwis lwis-eeprom-smaug-dokkaebi: Base Probe: Success
+[    2.588720] p9221 i2c-p9412: selecting p9412
+[    2.588733] p9221 i2c-p9412: enable gpio:110
+[    2.588740] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.588748] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.588756] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.588760] p9221 i2c-p9412: has_rtx:1
+[    2.588789] p9221 i2c-p9412: Failed to parse dt
+[    2.588873] lwis lwis-eeprom-smaug-dokkaebi: I2C Device Probe: Success
+[    2.588996] lwis lwis-eeprom-smaug-sandworm: Base Probe: Success
+[    2.589337] p9221 i2c-p9412: selecting p9412
+[    2.589346] p9221 i2c-p9412: enable gpio:110
+[    2.589353] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.589362] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.589369] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.589373] p9221 i2c-p9412: has_rtx:1
+[    2.589381] p9221 i2c-p9412: Failed to parse dt
+[    2.589463] lwis lwis-eeprom-smaug-sandworm: I2C Device Probe: Success
+[    2.589698] lwis lwis-eeprom-jotnar: Base Probe: Success
+[    2.590040] p9221 i2c-p9412: selecting p9412
+[    2.590050] p9221 i2c-p9412: enable gpio:110
+[    2.590057] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.590065] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.590074] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.590078] p9221 i2c-p9412: has_rtx:1
+[    2.590086] p9221 i2c-p9412: Failed to parse dt
+[    2.590169] lwis lwis-eeprom-jotnar: I2C Device Probe: Success
+[    2.590343] lwis lwis-act-slenderman: Base Probe: Success
+[    2.590687] p9221 i2c-p9412: selecting p9412
+[    2.590696] p9221 i2c-p9412: enable gpio:110
+[    2.590703] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.590712] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.590719] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.590723] p9221 i2c-p9412: has_rtx:1
+[    2.590731] p9221 i2c-p9412: Failed to parse dt
+[    2.590823] lwis lwis-act-slenderman: I2C Device Probe: Success
+[    2.591039] lwis lwis-act-jotnar: Base Probe: Success
+[    2.591047] i2c i2c-3: Failed to register i2c client  at 0x34 (-16)
+[    2.591360] p9221 i2c-p9412: selecting p9412
+[    2.591369] p9221 i2c-p9412: enable gpio:110
+[    2.591377] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.591385] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.591392] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.591397] p9221 i2c-p9412: has_rtx:1
+[    2.591404] p9221 i2c-p9412: Failed to parse dt
+[    2.591492] lwis lwis-act-jotnar: I2C Device Probe: Success
+[    2.591664] lwis lwis-act-slenderman-sandworm: Base Probe: Success
+[    2.592008] p9221 i2c-p9412: selecting p9412
+[    2.592017] p9221 i2c-p9412: enable gpio:110
+[    2.592025] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.592035] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.592042] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.592047] p9221 i2c-p9412: has_rtx:1
+[    2.592055] p9221 i2c-p9412: Failed to parse dt
+[    2.592144] lwis lwis-act-slenderman-sandworm: I2C Device Probe: Success
+[    2.592384] lwis lwis-ois-gargoyle: Base Probe: Success
+[    2.592391] i2c i2c-0: Failed to register i2c client  at 0x24 (-16)
+[    2.592704] p9221 i2c-p9412: selecting p9412
+[    2.592713] p9221 i2c-p9412: enable gpio:110
+[    2.592720] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.592729] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.592737] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.592741] p9221 i2c-p9412: has_rtx:1
+[    2.592749] p9221 i2c-p9412: Failed to parse dt
+[    2.592836] lwis lwis-ois-gargoyle: I2C Device Probe: Success
+[    2.593048] lwis lwis-ois-jotnar: Base Probe: Success
+[    2.593055] i2c i2c-3: Failed to register i2c client  at 0x34 (-16)
+[    2.593372] p9221 i2c-p9412: selecting p9412
+[    2.593381] p9221 i2c-p9412: enable gpio:110
+[    2.593388] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.593397] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.593404] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.593407] p9221 i2c-p9412: has_rtx:1
+[    2.593415] p9221 i2c-p9412: Failed to parse dt
+[    2.593503] lwis lwis-ois-jotnar: I2C Device Probe: Success
+[    2.593617] lwis lwis-flash-lm3644: Base Probe: Success
+[    2.593988] p9221 i2c-p9412: selecting p9412
+[    2.593997] p9221 i2c-p9412: enable gpio:110
+[    2.594004] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.594014] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.594021] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.594025] p9221 i2c-p9412: has_rtx:1
+[    2.594033] p9221 i2c-p9412: Failed to parse dt
+[    2.594110] lwis lwis-flash-lm3644: I2C Device Probe: Success
+[    2.594165] SLC device initialization
+[    2.594326] lwis lwis-slc: Base Probe: Success
+[    2.594329] lwis lwis-slc: SLC Device Probe: Success
+[    2.594440] lwis-dpm: DPM device initialization
+[    2.594591] lwis lwis-dpm: Base Probe: Success
+[    2.594815] mali-mgm physical-memory-group-manager: Memory group manager probed successfully
+[    2.595028] mali-pcm priority-control-manager: Priority control manager probed successfully
+[    2.595246] mali-pma protected-memory-allocator: Protected memory allocator probed successfully
+[    2.596112] mali 28000000.mali: Kernel DDK version r38p1-01eac0
+[    2.596330] mali 28000000.mali: using synchronous suspend for TOP domain
+[    2.596969] mali 28000000.mali: Failed to find voltage for clock 1 frequency 633000 in gpu_dvfs_table_v2
+[    2.597065] p9221 i2c-p9412: selecting p9412
+[    2.597074] p9221 i2c-p9412: enable gpio:110
+[    2.597081] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.597102] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.597109] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.597113] p9221 i2c-p9412: has_rtx:1
+[    2.597121] p9221 i2c-p9412: Failed to parse dt
+[    2.597206] synaptics_tcm_spi spi0.0: Direct firmware load for synaptics.img failed with error -2
+[    2.597213] [  error] syna_dev_reflash_startup_work: Fail to request synaptics.img
+[    2.597553] [GPU cooling] index : 0, frequency : 848000
+[    2.597556] [GPU cooling] index : 1, frequency : 762000
+[    2.597558] [GPU cooling] index : 2, frequency : 701000
+[    2.597560] [GPU cooling] index : 3, frequency : 572000
+[    2.597562] [GPU cooling] index : 4, frequency : 510000
+[    2.597564] [GPU cooling] index : 5, frequency : 471000
+[    2.597565] [GPU cooling] index : 6, frequency : 400000
+[    2.597567] [GPU cooling] index : 7, frequency : 351000
+[    2.597569] [GPU cooling] index : 8, frequency : 302000
+[    2.597571] [GPU cooling] index : 9, frequency : 251000
+[    2.597573] [GPU cooling] index : 10, frequency : 202000
+[    2.597677] gpu cooling registered for thermal-gpufreq-0, capacitance: 4250, power_callback: true
+[    2.598346] mali 28000000.mali: No OPPs found in device tree! Scaling timeouts using 100000 kHz
+[    2.598356] mali 28000000.mali: GPU identified as 0x2 arch 10.8.6 r0p0 status 4
+[    2.598746] mali 28000000.mali: No priority control manager is configured
+[    2.598777] mali 28000000.mali: Memory group manager successfully loaded
+[    2.598816] mali 28000000.mali: Protected memory allocator successfully loaded
+[    2.599056] mali 28000000.mali: Capping CSF_FIRMWARE_TIMEOUT to CSF_FIRMWARE_PING_TIMEOUT
+[    2.599414] p9221 i2c-p9412: selecting p9412
+[    2.599423] p9221 i2c-p9412: enable gpio:110
+[    2.599430] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.599439] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.599446] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.599450] p9221 i2c-p9412: has_rtx:1
+[    2.599458] p9221 i2c-p9412: Failed to parse dt
+[    2.600223] mali 28000000.mali: Clock not available for devfreq
+[    2.600227] mali 28000000.mali: Continuing without devfreq
+[    2.600391] mali 28000000.mali: Probed as mali0
+[    2.600716] p9221 i2c-p9412: selecting p9412
+[    2.600728] p9221 i2c-p9412: enable gpio:110
+[    2.600735] p9221 i2c-p9412: unable to read idt,gpio_qi_vbus_en from dt: -2
+[    2.600744] p9221 i2c-p9412: WLC enable/disable pin:110
+[    2.600751] p9221 i2c-p9412: unable to read idt,gpio_slct from dt: -2
+[    2.600755] p9221 i2c-p9412: has_rtx:1
+[    2.600763] p9221 i2c-p9412: Failed to parse dt
+[    2.600791] clk: Not disabling unused clocks
+[    2.600829] exynos_pd: pd-eh sync_state: turn_off = 0
+[    2.600831] exynos_pd: pd-g3d sync_state: children need sync
+[    2.600834] exynos_pd: pd-disp sync_state: children need sync
+[    2.600836] exynos_pd: pd-g2d sync_state: turn_off = 1
+[    2.600968] exynos_pd: pd-mfc sync_state: turn_off = 1
+[    2.601117] exynos_pd: pd-csis sync_state: turn_off = 1
+[    2.601321] exynos_pd: pd-pdp sync_state: children need sync
+[    2.601324] exynos_pd: pd-g3aa sync_state: turn_off = 1
+[    2.601459] exynos_pd: pd-ipp sync_state: turn_off = 1
+[    2.601663] exynos_pd: pd-pdp sync_state: turn_off = 1
+[    2.601824] exynos_pd: pd-itp sync_state: children need sync
+[    2.601827] exynos_pd: pd-mcsc sync_state: turn_off = 1
+[    2.602025] exynos_pd: pd-gdc sync_state: turn_off = 1
+[    2.602241] exynos_pd: pd-tnr sync_state: turn_off = 1
+[    2.602450] exynos_pd: pd-bo sync_state: turn_off = 1
+[    2.602572] exynos_pd: pd-tpu sync_state: turn_off = 1
+[    2.602730] exynos_pd: pd-aur sync_state: turn_off = 1
+[    2.602895] exynos_pd: pd-embedded_g3d sync_state: turn_off = 1
+[    2.602987] exynos_pd: pd-g3d sync_state: turn_off = 1
+[    2.603144] exynos_pd: pd-dpu sync_state: turn_off = 1
+[    2.603333] exynos_pd: pd-disp sync_state: turn_off = 1
+[    2.603442] exynos_pd: pd-dns sync_state: turn_off = 1
+[    2.603596] exynos_pd: pd-itp sync_state: turn_off = 1
+[    2.603705] ALSA device list:
+[    2.603710]   No soundcards found.
+[    2.603731] Warning: unable to open an initial console.
+[    2.606270] Freeing unused kernel memory: 10176K
+[    2.636745] Failed to set sysctl parameter 'kernel.softlockup_panic=1': parameter not found
+[    2.636818] Run /init as init process
+[    2.636820]   with arguments:
+[    2.636822]     /init
+[    2.636824]     kasan_multi_shot
+[    2.636825]     bootconfig
+[    2.636827]     bootconfig
+[    2.636828]   with environment:
+[    2.636830]     HOME=/
+[    2.636831]     TERM=linux
+[    2.636833]     stack_depot_disable=off
+[    2.636835]     reserve-fimc=0xffffff90f9fe0000
+[    2.636836]     softlockup_panic=1
+[    2.636839]     dyndbg=func alloc_contig_dump_pages +p
+[    2.636840]     page_pinner=on
+[    2.636842]     buildvariant=userdebug
+[    2.769720] odpm: S2MPG12: Applied new sampling frequency (type 0) in Hz: 1000.000000
+[    3.445009] 
+               
+               
+               
+                 __                _                     _     
+                / _|_ __ ___  __ _| |__   ___ _ __   ___| |__  
+               | |_| '__/ _ \/ _` | '_ \ / _ \ '_ \ / __| '_ \ 
+               |  _| | |  __/ (_| | |_) |  __/ | | | (__| | | |
+               |_| |_|  \___|\__, |_.__/ \___|_| |_|\___|_| |_|
+                                |_|                            
+               
+                          CPU benchmark • by kdrag0n
+               
+               ------------------------------------------------
+               
+               Frequency domains: 
+[    3.445162] cpu1 
+[    3.445211] cpu4 
+[    3.445256] cpu6 
+[    3.445294] 
+               Offline CPUs: 
+[    3.447617] cpu1 
+[    3.450384] psci: CPU1 killed (polled 0 ms)
+[    3.451031] cpu2 
+[    3.453409] psci: CPU2 killed (polled 0 ms)
+[    3.453787] cpu3 
+[    3.455458] psci: CPU3 killed (polled 0 ms)
+[    3.455836] cpu4 
+[    3.456520] psci: CPU4 killed (polled 10 ms)
+[    3.456888] cpu5 
+[    3.458650] psci: CPU5 killed (polled 0 ms)
+[    3.459029] cpu6 
+[    3.460257] psci: CPU6 killed (polled 0 ms)
+[    3.460636] cpu7 
+[    3.460801] psci: CPU7 killed (polled 0 ms)
+
+[   33.117080] S2MPG12_LDO7: disabling
+[   33.117437] S2MPG12_LDO8: disabling
+[   33.117775] S2MPG12_LDO9: disabling
+[   33.118117] S2MPG12_LDO10: disabling
+[   33.126553] slg51002 4-0075: No init registers are overridden
+[   33.488193] Detected VIPT I-cache on CPU1
+[   33.488288] GICv3: CPU1: found redistributor 100 region 0:0x0000000010460000
+[   33.488424] CPU1: Booted secondary processor 0x0000000100 [0x412fd050]
+[   33.492637] Detected PIPT I-cache on CPU4
+[   33.492652] GICv3: CPU4: found redistributor 400 region 0:0x00000000104c0000
+[   33.492689] CPU4: Booted secondary processor 0x0000000400 [0x411fd411]
+[   34.499609] 
+               ===== CPU 1 =====
+               Frequencies: 300 574 738 930 1098 1197 1328 1401 1598 1704 1803
+               
+                300: 
+[   91.372867] s2mpg13-spmic-thermal s2mpg13-spmic-thermal: PMIC_THERM[1] IRQ, 466 ot_irq:0
+[  583.814654]  1109     3.7 C/MHz     38 mW   20.7 J   29.0 I/mJ   541.2 s
+                574: 
+[  873.963120]  2127     3.7 C/MHz     55 mW   15.4 J   39.0 I/mJ   282.0 s
+                738: 
+[ 1101.391022]  2736     3.7 C/MHz     65 mW   14.2 J   42.2 I/mJ   219.3 s
+                930: 
+[ 1283.406647]  3450     3.7 C/MHz     76 mW   13.3 J   45.2 I/mJ   173.9 s
+               1098: 
+[ 1438.799991]  4074     3.7 C/MHz     87 mW   12.7 J   47.1 I/mJ   147.3 s
+               1197: 
+[ 1582.073972]  4440     3.7 C/MHz     93 mW   12.5 J   47.9 I/mJ   135.1 s
+               1328: 
+[ 1711.996498]  4926     3.7 C/MHz    102 mW   12.4 J   48.4 I/mJ   121.8 s
+               1401: 
+[ 1835.506165]  5200     3.7 C/MHz    107 mW   12.3 J   48.8 I/mJ   115.4 s
+               1598: 
+[ 1944.817448]  5930     3.7 C/MHz    145 mW   14.7 J   40.8 I/mJ   101.2 s
+               1704: 
+[ 2047.813468]  6325     3.7 C/MHz    169 mW   16.0 J   37.5 I/mJ    94.9 s
+               1803: 
+[ 2145.631167] psci: CPU1 killed (polled 0 ms)
+[ 2145.634310] Detected PIPT I-cache on CPU6
+[ 2145.634379] GICv3: CPU6: found redistributor 600 region 0:0x0000000010500000
+[ 2145.634519] CPU6: Booted secondary processor 0x0000000600 [0x411fd440]
+[ 2146.638299]  6690     3.7 C/MHz    260 mW   23.3 J   25.8 I/mJ    89.7 s
+               
+               
+               ===== CPU 4 =====
+               Frequencies: 400 553 696 799 910 1024 1197 1328 1491 1663 1836 1999 2130 2253 2348
+               
+                400: 
+[ 2319.863246]  3634     9.1 C/MHz     26 mW    4.3 J   139.0 I/mJ   165.1 s
+                553: 
+[ 2447.158371]  5035     9.1 C/MHz     38 mW    4.6 J   131.2 I/mJ   119.2 s
+                696: 
+[ 2549.902152]  6342     9.1 C/MHz     52 mW    4.9 J   122.6 I/mJ    94.6 s
+                799: 
+[ 2640.515552]  7274     9.1 C/MHz     63 mW    5.2 J   116.3 I/mJ    82.5 s
+                910: 
+[ 2721.098620]  8281     9.1 C/MHz     77 mW    5.6 J   107.2 I/mJ    72.5 s
+               1024: 
+[ 2793.534030]  9330     9.1 C/MHz     91 mW    5.8 J   102.7 I/mJ    64.3 s
+               1197: 
+[ 2856.713972] 10898     9.1 C/MHz    120 mW    6.6 J   90.8 I/mJ    55.1 s
+               1328: 
+[ 2914.468342] 12090     9.1 C/MHz    144 mW    7.2 J   83.9 I/mJ    49.6 s
+               1491: 
+[ 2966.800531] 13573     9.1 C/MHz    182 mW    8.1 J   74.4 I/mJ    44.2 s
+               1663: 
+[ 3014.540087] 15147     9.1 C/MHz    226 mW    9.0 J   66.9 I/mJ    39.6 s
+               1836: 
+[ 3058.578356] 16708     9.1 C/MHz    286 mW   10.3 J   58.4 I/mJ    35.9 s
+               1999: 
+[ 3099.663346] 18205     9.1 C/MHz    353 mW   11.6 J   51.6 I/mJ    33.0 s
+               2130: 
+[ 3138.712691] 19403     9.1 C/MHz    440 mW   13.6 J   44.1 I/mJ    30.9 s
+               2253: 
+[ 3176.088895] 20513     9.1 C/MHz    538 mW   15.7 J   38.1 I/mJ    29.3 s
+               2348: 
+[ 3212.289486] psci: CPU4 killed (polled 0 ms)
+[ 3213.294506] 21377     9.1 C/MHz    634 mW   17.8 J   33.7 I/mJ    28.1 s
+               
+               
+               ===== CPU 6 =====
+               Frequencies: 500 851 984 1106 1277 1426 1582 1745 1826 2048 2188 2252 2401 2507 2630 2704 2802 2850
+               
+                500: 
+[ 3350.660050]  4643     9.3 C/MHz     47 mW    6.1 J   99.0 I/mJ   129.2 s
+                851: 
+[ 3434.555889]  7919     9.3 C/MHz     86 mW    6.5 J   92.0 I/mJ    75.8 s
+                984: 
+[ 3508.331382]  9139     9.3 C/MHz    108 mW    7.1 J   84.7 I/mJ    65.7 s
+               1106: 
+[ 3574.836238] 10278     9.3 C/MHz    132 mW    7.7 J   78.1 I/mJ    58.4 s
+               1277: 
+[ 3633.462156] 11881     9.3 C/MHz    171 mW    8.6 J   69.6 I/mJ    50.5 s
+               1426: 
+[ 3686.879846] 13248     9.3 C/MHz    210 mW    9.5 J   63.1 I/mJ    45.3 s
+               1582: 
+[ 3735.814246] 14704     9.3 C/MHz    257 mW   10.5 J   57.1 I/mJ    40.8 s
+               1745: 
+[ 3780.920187] 16225     9.3 C/MHz    316 mW   11.7 J   51.3 I/mJ    37.0 s
+               1826: 
+[ 3824.358647] 16992     9.3 C/MHz    383 mW   13.5 J   44.3 I/mJ    35.3 s
+               2048: 
+[ 3863.997557] 19041     9.3 C/MHz    497 mW   15.7 J   38.3 I/mJ    31.5 s
+               2188: 
+[ 3901.633169] 20334     9.3 C/MHz    588 mW   17.4 J   34.6 I/mJ    29.5 s
+               2252: 
+[ 3938.402531] 20948     9.3 C/MHz    640 mW   18.3 J   32.7 I/mJ    28.6 s
+               2401: 
+[ 3973.424124] 22310     9.3 C/MHz    772 mW   20.8 J   28.9 I/mJ    26.9 s
+               2507: 
+[ 4007.304159] 23297     9.3 C/MHz    900 mW   23.2 J   25.9 I/mJ    25.8 s
+               2630: 
+[ 4039.978709] 24442     9.3 C/MHz   1055 mW   25.9 J   23.2 I/mJ    24.6 s
+               2704: 
+[ 4071.977433] 25135     9.3 C/MHz   1203 mW   28.7 J   20.9 I/mJ    23.9 s
+               2802: 
+[ 4103.128406] 26055     9.3 C/MHz   1433 mW   33.0 J   18.2 I/mJ    23.0 s
+               2850: 
+[ 4133.901881] psci: CPU6 killed (polled 0 ms)
+[ 4133.911401] 26499     9.3 C/MHz   1568 mW   35.5 J   16.9 I/mJ    22.6 s
+               
+               
+               Benchmark finished!
+[ 4133.973825] 
+               real	68m51.199s
+               user	62m20.677s
+               sys	0m0.161s
