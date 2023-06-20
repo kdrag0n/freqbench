@@ -1,0 +1,212 @@
+           CPU0       
+  4:       6036   PDC-GIC  19 Level     arch_timer
+  6:     178010   PDC-GIC  38 Level     arch_mem_timer
+  8:          0   PDC-GIC  21 Level     arm-pmu
+  9:          0   PDC-GIC  82 Level     arm_dsu_0
+ 26:          0   PDC-GIC 323 Level     ngd_slim_irq
+ 28:          0   PDC-GIC  32 Edge      apps_wdog_bark
+ 30:          0   PDC-GIC 524 Level     eud_irq
+ 31:          0   PDC-GIC  22 Level     KRYO L1-L2 ECC FAULTIRQ
+ 32:          0   PDC-GIC  67 Level     KRYO L3-SCU ECC FAULTIRQ
+ 33:          0   PDC-GIC 538 Level     tsens-upper-lower
+ 34:          0   PDC-GIC 540 Level     tsens-critical
+ 35:          0   PDC-GIC 539 Level     tsens-upper-lower
+ 36:          0   PDC-GIC 541 Level     tsens-critical
+ 37:        946   PDC-GIC  37 Level     apps_rsc
+ 38:          0   PDC-GIC 161 Level     display_rsc
+ 39:          0   PDC-GIC 620 Edge      qcom,qmp-npu-low
+ 40:          0   PDC-GIC 621 Edge      qcom,qmp-npu-high
+ 41:          6   PDC-GIC 421 Edge      qcom,qmp-aop
+ 42:          0   PDC-GIC 483 Edge      smp2p
+ 43:          0   PDC-GIC 204 Edge      smp2p
+ 44:          0   PDC-GIC 608 Edge      smp2p
+ 47:        390   PDC-GIC 297 Edge      1d84000.ufshc
+ 48:          0   PDC-GIC 194 Edge      adsp
+ 49:          0   PDC-GIC 304 Level     sps
+ 51:          0   PDC-GIC 610 Edge      cdsp
+ 52:          0   PDC-GIC 298 Edge      modem
+ 69:          0   PDC-GIC 397 Level     arm-smmu-context-fault
+ 70:          5   PDC-GIC 635 Level     i2c_geni
+ 71:          3   PDC-GIC 637 Level     i2c_geni
+ 72:          0   PDC-GIC 636 Level     msm_serial_geni0
+ 74:       1884   PDC-GIC 386 Level     i2c_geni
+ 75:        208   PDC-GIC 388 Level     i2c_geni
+ 76:          0   PDC-GIC 206 Level     msm_vidc
+ 77:          0   PDC-GIC 115 Edge      msm_drm
+ 78:          0   PDC-GIC 509 Edge      csiphy
+ 79:          0   PDC-GIC 510 Edge      csiphy
+ 80:          0   PDC-GIC 511 Edge      csiphy
+ 81:          0   PDC-GIC 639 Edge      csiphy
+ 82:          0   PDC-GIC 492 Edge      cci
+ 83:          0   PDC-GIC 493 Edge      cci
+ 84:          1   PDC-GIC 500 Edge      cpas-cdm
+ 85:          0   PDC-GIC 496 Edge      csid
+ 86:          2   PDC-GIC 497 Edge      ife
+ 87:          0   PDC-GIC 498 Edge      csid
+ 88:          2   PDC-GIC 499 Edge      ife
+ 89:          0   PDC-GIC 470 Edge      csid-lite
+ 90:          2   PDC-GIC 466 Edge      ife-lite
+ 91:          0   PDC-GIC 495 Edge      a5
+ 92:          0   PDC-GIC 506 Edge      jpeg
+ 93:          0   PDC-GIC 507 Edge      jpegdma
+ 94:          2   PDC-GIC 494 Edge      fd
+ 95:          1   PDC-GIC 508 Edge      lrme
+ 96:          0   PDC-GIC 491 Edge      cpas_camnoc
+ 97:          0   PDC-GIC 261 Level     arm-smmu global fault
+ 98:          0   PDC-GIC 263 Level     arm-smmu global fault
+ 99:          0   PDC-GIC 396 Level     arm-smmu-context-fault
+100:          0   PDC-GIC 398 Level     arm-smmu-context-fault
+101:          0   PDC-GIC 399 Level     arm-smmu-context-fault
+106:          0   PDC-GIC  97 Level     arm-smmu global fault
+108:          0   PDC-GIC 129 Level     arm-smmu-context-fault
+110:          0   PDC-GIC 131 Level     arm-smmu-context-fault
+111:          0   PDC-GIC 132 Level     arm-smmu-context-fault
+112:          0   PDC-GIC 133 Level     arm-smmu-context-fault
+113:          0   PDC-GIC 134 Level     arm-smmu-context-fault
+114:          0   PDC-GIC 135 Level     arm-smmu-context-fault
+115:          0   PDC-GIC 136 Level     arm-smmu-context-fault
+116:          0   PDC-GIC 137 Level     arm-smmu-context-fault
+117:          0   PDC-GIC 138 Level     arm-smmu-context-fault
+118:          0   PDC-GIC 139 Level     arm-smmu-context-fault
+119:          0   PDC-GIC 140 Level     arm-smmu-context-fault
+120:          0   PDC-GIC 141 Level     arm-smmu-context-fault
+121:          0   PDC-GIC 142 Level     arm-smmu-context-fault
+122:          0   PDC-GIC 143 Level     arm-smmu-context-fault
+123:          0   PDC-GIC 144 Level     arm-smmu-context-fault
+124:          0   PDC-GIC 145 Level     arm-smmu-context-fault
+125:          0   PDC-GIC 146 Level     arm-smmu-context-fault
+126:          0   PDC-GIC 147 Level     arm-smmu-context-fault
+127:          0   PDC-GIC 148 Level     arm-smmu-context-fault
+128:          0   PDC-GIC 149 Level     arm-smmu-context-fault
+129:          0   PDC-GIC 150 Level     arm-smmu-context-fault
+130:          0   PDC-GIC 213 Level     arm-smmu-context-fault
+131:          0   PDC-GIC 214 Level     arm-smmu-context-fault
+132:          0   PDC-GIC 215 Level     arm-smmu-context-fault
+133:          0   PDC-GIC 216 Level     arm-smmu-context-fault
+134:          0   PDC-GIC 217 Level     arm-smmu-context-fault
+135:          0   PDC-GIC 218 Level     arm-smmu-context-fault
+136:          0   PDC-GIC 219 Level     arm-smmu-context-fault
+137:          0   PDC-GIC 220 Level     arm-smmu-context-fault
+138:          0   PDC-GIC 221 Level     arm-smmu-context-fault
+139:          0   PDC-GIC 222 Level     arm-smmu-context-fault
+140:          0   PDC-GIC 223 Level     arm-smmu-context-fault
+141:          0   PDC-GIC 224 Level     arm-smmu-context-fault
+142:          0   PDC-GIC 347 Level     arm-smmu-context-fault
+143:          0   PDC-GIC 348 Level     arm-smmu-context-fault
+188:          0  pmic_arb 8388807 Edge      pon_kpdpwr_status
+189:          0  pmic_arb 8454343 Edge      pon_resin_status
+191:          0  pmic_arb 8716487 Edge      pon_kpdpwr_resin_bark
+192:        447  pmic_arb 51380437 Edge      pm-adc5
+193:          0  pmic_arb 55574742 Edge      thr-int-en
+194:          0  pmic_arb 24117455 Edge      sig-tx
+195:          0  pmic_arb 24182991 Edge      sig-rx
+196:          0  pmic_arb 24248527 Edge      msg-tx
+197:          0  pmic_arb 24314063 Edge      msg-rx
+198:          0  pmic_arb 24379599 Edge      msg-tx-failed
+199:          0  pmic_arb 24445135 Edge      msg-tx-discarded
+200:          0  pmic_arb 24510671 Edge      msg-rx-discarded
+202:          0  pmic_arb 30408915 Edge      bcl-lvl0
+203:          0  pmic_arb 30474451 Edge      bcl-lvl1
+204:          0  pmic_arb 30539987 Edge      bcl-lvl2
+205:          0  pmic_arb 37748948 Edge      qcom,temp-alarm
+208:          0  pmic_arb 203423971 Level     i2c_pmic_stat_irq
+212:          0  pmic_arb 1111490794 Edge      qcom,temp-alarm
+213:          0  pmic_arb 1137705197 Edge      bcl-lvl0
+214:          0  pmic_arb 1137770733 Edge      bcl-lvl1
+215:          0  pmic_arb 1137836269 Edge      bcl-lvl2
+216:          5  pmic_arb 1125122283 Edge      pm-adc5
+217:          0  pmic_arb 1129316588 Edge      thr-int-en
+219:          0  pmic_arb 1276117232 Edge      volume_up
+230:          0  pmic_arb 1563427082 Edge      qpnp_flash_led_fault_irq
+231:          0  pmic_arb 1563623690 Edge      qpnp_flash_led_all_ramp_down_done_irq
+232:          0  pmic_arb 1563689226 Edge      qpnp_flash_led_all_ramp_up_done_irq
+244:          6  msmgpio-dc   9 Edge      goodix_ts
+246:          0  msmgpio-dc  10 Edge      TE_GPIO
+268:          2  msmgpio-dc  37 Level     nq-nci
+296:          0  msmgpio-dc  56 Edge      tfa98xx
+346:          0  msmgpio-dc  93 Edge      akm09970_irq
+374:          0   PDC-GIC 521 Edge      dp_hs_phy_irq
+375:          0   PDC-GIC 162 Edge      pwr_event_irq
+376:          0   PDC-GIC 518 Level     ss_phy_irq
+377:          0   PDC-GIC 520 Edge      dm_hs_phy_irq
+378:          0   PDC-GIC 332 Level     kgsl-3d0
+379:          0   PDC-GIC 336 Level     HFI
+380:          0   PDC-GIC 337 Level     GMU
+381:          0   PDC-GIC 615 Edge      error_irq
+382:          0   PDC-GIC 617 Edge      wdg_bite_irq
+383:          0   PDC-GIC 619 Level     ipc_irq
+384:          0   PDC-GIC  64 Level     limits_sensor-00
+385:          0   PDC-GIC  65 Level     limits_sensor-01
+386:          0     smp2p   2 Edge      adsp
+387:          0     smp2p   0 Edge      adsp
+388:          0     smp2p   1 Edge      error_ready_interrupt
+389:          0     smp2p   3 Edge      adsp
+390:          0     smp2p   2 Edge      cdsp
+391:          0     smp2p   0 Edge      cdsp
+392:          0     smp2p   1 Edge      error_ready_interrupt
+393:          0     smp2p   3 Edge      cdsp
+394:          0     smp2p   2 Edge      modem
+395:          0     smp2p   0 Edge      modem
+396:          0     smp2p   1 Edge      error_ready_interrupt
+397:          0     smp2p   3 Edge      modem
+398:          0     smp2p   7 Edge      modem
+399:          0     smp2p   0 Edge      smp2p_sleepstate
+400:          0   PDC-GIC 165 Edge      dwc3
+402:          0  pmic_arb 101777626 Edge      qpnp_rtc_alarm
+403:          0     smp2p   0 Edge      ipa_smp2p_clk_vote
+405:          0  pmic_arb 75563224 Edge      qg-vbat-low
+406:          0  pmic_arb 75628760 Edge      qg-vbat-empty
+407:         26  pmic_arb 75694296 Edge      qg-fifo-done
+408:          0  pmic_arb 75759832 Edge      qg-good-ocv
+409:          0  pmic_arb 16777416 Edge      chgr-error
+410:          0  pmic_arb 16842952 Edge      chg-state-change
+417:          0  pmic_arb 17825993 Edge      otg-fail
+421:          0  pmic_arb 18088137 Edge      high-duty-cycle
+422:          0  pmic_arb 18153673 Edge      input-current-limiting
+424:          0  pmic_arb 18284745 Edge      switcher-power-ok
+425:          0  pmic_arb 18874570 Edge      bat-temp
+426:          0  pmic_arb 19005642 Edge      bat-ov
+427:          0  pmic_arb 19071178 Edge      bat-low
+428:          0  pmic_arb 19136714 Edge      bat-therm-or-id-missing
+429:          0  pmic_arb 19202250 Edge      bat-terminal-missing
+432:          0  pmic_arb 19923147 Edge      usbin-collapse
+433:          0  pmic_arb 19988683 Edge      usbin-vashdn
+434:          0  pmic_arb 20054219 Edge      usbin-uv
+435:          0  pmic_arb 20119755 Edge      usbin-ov
+436:          0  pmic_arb 20185291 Edge      usbin-plugin
+438:          0  pmic_arb 20316363 Edge      usbin-src-change
+439:          0  pmic_arb 20381899 Edge      usbin-icl-change
+441:          0  pmic_arb 21102796 Edge      dcin-uv
+442:          0  pmic_arb 21168332 Edge      dcin-ov
+443:          0  pmic_arb 21233868 Edge      dcin-plugin
+445:          0  pmic_arb 21364940 Edge      dcin-pon
+446:          0  pmic_arb 21430476 Edge      dcin-en
+447:          0  pmic_arb 22020301 Edge      typec-or-rid-detect-change
+449:          0  pmic_arb 22151373 Edge      typec-cc-state-change
+450:          0  pmic_arb 22216909 Edge      typec-vconn-oc
+452:          0  pmic_arb 22347981 Edge      typec-attach-detach
+453:          0  pmic_arb 22413517 Edge      typec-legacy-cable-detect
+455:          0  pmic_arb 23068878 Edge      wdog-snarl
+456:          0  pmic_arb 23134414 Edge      wdog-bark
+458:          0  pmic_arb 23265486 Edge      aicl-done
+459:          0  pmic_arb 23331022 Edge      smb-en
+461:          0  pmic_arb 23462094 Edge      temp-change
+463:          0  pmic_arb 185663708 Edge      sdam-sts
+464:          0  i2c_pmic_irq_chip 4097 Edge      switcher-off-window
+465:          0  i2c_pmic_irq_chip 4098 Edge      switcher-off-fault
+466:          0  i2c_pmic_irq_chip 4100 Edge      tsd-fault
+467:          0  i2c_pmic_irq_chip 4104 Edge      irev-fault
+468:          0  i2c_pmic_irq_chip 4112 Edge      vph-ov-hard
+469:          0  i2c_pmic_irq_chip 4128 Edge      vph-ov-soft
+470:          0  i2c_pmic_irq_chip 4160 Edge      ilim
+471:          0  i2c_pmic_irq_chip 4224 Edge      temp-alarm
+472:          0       sde  12 Edge      dp_display_isr
+473:          0       sde   4 Edge      dsi_ctrl
+IPI0:       179       Rescheduling interrupts
+IPI1:         9       Function call interrupts
+IPI2:         0       CPU stop interrupts
+IPI3:         0       CPU stop (for crash dump) interrupts
+IPI4:         0       Timer broadcast interrupts
+IPI5:         0       IRQ work interrupts
+IPI6:         0       CPU wake-up interrupts
+Err:          0
