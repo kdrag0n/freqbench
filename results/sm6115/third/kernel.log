@@ -1,0 +1,2148 @@
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x51af8014]
+[    0.000000] Linux version 4.19.164-hanikrnlᵇᵉᵉʰᶦᵛᵉ-g0314dcbce1af (hani@dungeon) (Neutron clang version 18.0.0 (https://github.com/llvm/llvm-project.git f2b241474f21cd549c233f020021d41bb803f18a), Neutron LLD 18.0.0) #1 SMP PREEMPT Tue Dec 19 06:26:28 UTC 2023
+[    0.000000] Machine model: Qualcomm Technologies, Inc. BENGAL IDP
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000fec00000, size 16 MiB
+[    0.000000] OF: reserved mem: initialized node qseecom_ta_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000fd800000, size 20 MiB
+[    0.000000] OF: reserved mem: initialized node qseecom_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000fc800000, size 16 MiB
+[    0.000000] OF: reserved mem: initialized node user_contig_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000f4800000, size 128 MiB
+[    0.000000] OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000f4000000, size 8 MiB
+[    0.000000] OF: reserved mem: initialized node adsp_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000ee400000, size 92 MiB
+[    0.000000] OF: reserved mem: initialized node secure_display_region, compatible id shared-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000045700000, size 6 MiB
+[    0.000000] OF: reserved mem: initialized node hyp_region@45700000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000045e00000, size 1 MiB
+[    0.000000] OF: reserved mem: initialized node xbl_aop_region@45e00000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000045fff000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node sec_apps_region@45fff000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000046000000, size 2 MiB
+[    0.000000] OF: reserved mem: initialized node smem_region@46000000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x000000004ab00000, size 105 MiB
+[    0.000000] OF: reserved mem: initialized node modem_region@4ab00000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000051400000, size 5 MiB
+[    0.000000] OF: reserved mem: initialized node pil_video_region@51400000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000051900000, size 1 MiB
+[    0.000000] OF: reserved mem: initialized node wlan_msa_region@51900000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000051a00000, size 10 MiB
+[    0.000000] OF: reserved mem: initialized node cdsp_regions@51a00000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000053800000, size 34 MiB
+[    0.000000] OF: reserved mem: initialized node pil_adsp_region@53800000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000055a00000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node ipa_fw_region@55A00000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000055a10000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node ipa_gsi_region@55A10000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000055a15000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node gpu_region@55A15000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000060000000, size 57 MiB
+[    0.000000] OF: reserved mem: initialized node removed_region@60000000, compatible id removed-dma-pool
+[    0.000000] On node 0 totalpages: 982952
+[    0.000000]   Normal zone: 15359 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 982952 pages, LIFO batch:63
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.0 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.1
+[    0.000000] random: fast init done
+[    0.000000] percpu: Embedded 25 pages/cpu s63520 r8192 d30688 u102400
+[    0.000000] pcpu-alloc: s63520 r8192 d30688 u102400 alloc=25*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: enabling workaround for ARM erratum 845719
+[    0.000000] SSBD disabled by kernel configuration
+[    0.000000] Speculative Store Bypass Disable disabled from command-line
+[    0.000000] CPU features: kernel page table isolation disabled by kernel configuration
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 967593
+[    0.000000] Kernel command line: rcupdate.rcu_expedited=1 rcu_nocbs=0-7 nosoftlockup mce=ignore_ce kpti=off,memory, mitigations=off cgroup.memory=nokmem,nosocket console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x4a90000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=2048 loop.max_part=7 androidboot.init_fatal_reboot_target=recovery kpti=off buildvariant=userdebug rcu_nocbs=0-7 isolcpus=1-7 nohz_full=1-7 loglevel=0 printk.devkmsg=on androidboot.verifiedbootstate=orange androidboot.keymaster=1  androidboot.bootdevice=4804000.ufshc androidboot.fstab_suffix=default androidboot.boot_devices=soc/4804000.ufshc androidboot.serialno=REDACTED androidboot.baseband=msm msm_drm.dsi_display0=qcom,mdss_dsi_ft8719_truly_v2_video: msm_drm.dsi_wp=295310 androidboot.dtbo_idx=0 androidboot.dtb_idx=0 androidboot.efuse=1 androidboot.cpuid=REDACTED androidboot.secureboot=1 androidboot.dp=0x0 po
+[    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes)
+[    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.000000] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    0.000000] Memory: 3479796K/3931808K available (38012K kernel code, 2624K rwdata, 6056K rodata, 768K init, 6007K bss, 165292K reserved, 286720K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU dyntick-idle grace-period acceleration is enabled.
+[    0.000000] 	All grace periods are expedited (rcu_expedited).
+[    0.000000] 	Tasks RCU enabled.
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: Distributor has no Range Selector support
+[    0.000000] GICv3: no VLPI support, no direct LPI support
+[    0.000000] NO_HZ: Full dynticks CPUs: 1-7.
+[    0.000000] rcu: 	Offload RCU callbacks from CPUs: 0-7.
+[    0.000000] arch_timer: cp15 and mmio timer(s) running at 19.20MHz (virt/virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[    0.000003] sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+[    0.000012] clocksource: Switched to clocksource arch_sys_counter
+[    0.001598] Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=192000)
+[    0.001612] pid_max: default: 32768 minimum: 301
+[    0.001670] Security Framework initialized
+[    0.001676] SELinux:  Initializing.
+[    0.001742] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.001755] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.002682] ASID allocator initialised with 65536 entries
+[    0.002728] rcu: Hierarchical SRCU implementation.
+[    0.005450] shmbridge is enabled
+[    0.005646] EFI services will not be available.
+[    0.005896] smp: Bringing up secondary CPUs ...
+[    0.007790] Detected VIPT I-cache on CPU1
+[    0.009686] Detected VIPT I-cache on CPU2
+[    0.011636] Detected VIPT I-cache on CPU3
+[    0.014243] CPU features: enabling workaround for ARM erratum 858921
+[    0.014277] spectrev2 mitigation disabled by kernel configuration
+[    0.014313] Detected VIPT I-cache on CPU4
+[    0.014524] arch_timer: Enabling local workaround for ARM erratum 858921
+[    0.014550] arch_timer: CPU4: Trapping CNTVCT access
+[    0.016598] Detected VIPT I-cache on CPU5
+[    0.016686] arch_timer: Enabling local workaround for ARM erratum 858921
+[    0.016709] arch_timer: CPU5: Trapping CNTVCT access
+[    0.018736] Detected VIPT I-cache on CPU6
+[    0.018829] arch_timer: Enabling local workaround for ARM erratum 858921
+[    0.018852] arch_timer: CPU6: Trapping CNTVCT access
+[    0.020872] Detected VIPT I-cache on CPU7
+[    0.020965] arch_timer: Enabling local workaround for ARM erratum 858921
+[    0.020988] arch_timer: CPU7: Trapping CNTVCT access
+[    0.021198] smp: Brought up 1 node, 8 CPUs
+[    0.021204] SMP: Total of 8 processors activated.
+[    0.021208] CPU features: detected: GIC system register CPU interface
+[    0.021211] CPU features: detected: 32-bit EL0 Support
+[    0.021213] CPU features: detected: CRC32 instructions
+[    0.021494] CPU: All CPU(s) started at EL1
+[    0.052598] Registered cp15_barrier emulation handler
+[    0.052615] Registered setend emulation handler
+[    0.052844] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.052852] futex hash table entries: 2048 (order: 5, 131072 bytes)
+[    0.067605] pinctrl core: initialized pinctrl subsystem
+[    0.067921] DMI not present or invalid.
+[    0.068067] NET: Registered protocol family 16
+[    0.069153] audit: initializing netlink subsys (disabled)
+[    0.069519] audit: type=2000 audit(0.059:1): state=initialized audit_enabled=0 res=1
+[    0.069554] cpuidle: using governor qcom
+[    0.069634] NET: Registered protocol family 42
+[    0.070048] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.071269] DMA: preallocated 256 KiB pool for atomic allocations
+[    0.071925] DMA: preallocated 256 KiB pool for atomic allocations
+[    0.071956] Failed to create IPC log0
+[    0.071958] Failed to create IPC log1
+[    0.071959] Failed to create IPC log2
+[    0.071960] Failed to create IPC log3
+[    0.071962] Failed to create IPC log4
+[    0.072036] exit: IPA_USB init success!
+[    0.079141] console [pstore-1] enabled
+[    0.079211] pstore: Registered ramoops as persistent store backend
+[    0.079214] ramoops: attached 0x400000@0x64000000, ecc: 0/0
+[    0.082088] platform 61800000.qseecom: assigned reserved memory node qseecom_region
+[    0.083334] platform ab00000.qcom,lpass: assigned reserved memory node pil_adsp_region@53800000
+[    0.083453] platform b300000.qcom,turing: assigned reserved memory node cdsp_regions@51a00000
+[    0.083997] ------------[ cut here ]------------
+[    0.084079] WARNING: CPU: 0 PID: 1 at drivers/irqchip/irq-gic-v3.c:1057 gic_irq_domain_alloc.17604+0x68c/0x6a0
+[    0.084081] Modules linked in:
+[    0.084090] CPU: 0 PID: 1 Comm: swapper/0 Not tainted 4.19.164-hanikrnlᵇᵉᵉʰᶦᵛᵉ-g0314dcbce1af #1
+[    0.084092] Hardware name: Qualcomm Technologies, Inc. BENGAL IDP (DT)
+[    0.084096] pstate: 60000005 (nZCv daif -PAN -UAO)
+[    0.084100] pc : gic_irq_domain_alloc.17604+0x68c/0x6a0
+[    0.084103] lr : gic_irq_domain_alloc.17604+0x68c/0x6a0
+[    0.084105] sp : ffffffd2ba89f5b0
+[    0.084107] x29: ffffffd2ba89f5c0 x28: 0000000000000000 
+[    0.084111] x27: 0000000000000002 x26: ffffff9f13b0e000 
+[    0.084114] x25: ffffffd2b9f19c00 x24: ffffffd2ba8a8000 
+[    0.084118] x23: ffffff9f13e13000 x22: 0000000000000133 
+[    0.084121] x21: ffffffd2ba81d000 x20: 000000000000001c 
+[    0.084125] x19: 0000000000000001 x18: 00000000ffffd26c 
+[    0.084128] x17: 00000000001fd26c x16: ffffff9f144a8000 
+[    0.084132] x15: ffffff9f13cacfa8 x14: 0000000000000086 
+[    0.084135] x13: ffffff9f144a88e0 x12: 0000000000000000 
+[    0.084139] x11: ffffffffffffffff x10: 0000000000000000 
+[    0.084142] x9 : ffffff9f13cc5678 x8 : 00000000000000a8 
+[    0.084146] x7 : 0000000000000000 x6 : ffffff9f13eea044 
+[    0.084149] x5 : 0000000000000044 x4 : 0000000000000006 
+[    0.084152] x3 : 0000000000002d2d x2 : ffffffffffffff73 
+[    0.084155] x1 : 0000000000000000 x0 : 0000000000000024 
+[    0.084160] 
+               SP: 0xffffffd2ba89f530:
+[    0.084162] f530  ba8a8000 ffffffd2 b9f19c00 ffffffd2 13b0e000 ffffff9f 00000002 00000000
+[    0.084172] f550  00000000 00000000 ba89f5c0 ffffffd2 119aa1ac ffffff9f ba89f5b0 ffffffd2
+[    0.084181] f570  119aa1ac ffffff9f 60000005 00000000 ba89f510 ffffffd2 ffffffc8 ffffff80
+[    0.084189] f590  ffffffff ffffffff 119aa1ac ffffff9f ba89f5c0 ffffffd2 119aa1ac ffffff9f
+[    0.084198] f5b0  ba89f5e0 ffffffd2 ba89f590 ffffffd2 ba89f670 ffffffd2 119c48c4 ffffff9f
+[    0.084206] f5d0  00000000 00000000 00000002 00000000 13b0e000 ffffff9f b9f19c00 ffffffd2
+[    0.084214] f5f0  ba8a8000 ffffffd2 13e13000 ffffff9f 0000001c 00000000 0000001c 00000000
+[    0.084223] f610  ba89f758 ffffffd2 ba820400 ffffffd2 bf6e4cf8 ffffffd2 00000003 00000000
+[    0.084231] Call trace:
+[    0.084235]  gic_irq_domain_alloc.17604+0x68c/0x6a0
+[    0.084240]  msm_mpm_gic_chip_alloc+0x1c4/0x200
+[    0.084246]  irq_create_fwspec_mapping+0xc20/0x13f0
+[    0.084251]  of_irq_to_resource_table+0x124/0x330
+[    0.084255]  of_platform_bus_create+0x448/0x840
+[    0.084259]  of_platform_bus_create+0x6a0/0x840
+[    0.084264]  of_platform_default_populate_init+0x408/0x468
+[    0.084269]  do_initcalls+0x688/0xe84
+[    0.084272]  kernel_init_freeable+0x298/0x348
+[    0.084276]  kernel_init+0x14/0x3d0
+[    0.084280]  ret_from_fork+0x10/0x18
+[    0.084287] ---[ end trace 0b24ea006f676d50 ]---
+[    0.084319] ------------[ cut here ]------------
+[    0.084393] WARNING: CPU: 0 PID: 1 at drivers/irqchip/irq-gic-v3.c:1057 gic_irq_domain_alloc.17604+0x68c/0x6a0
+[    0.084394] Modules linked in:
+[    0.084399] CPU: 0 PID: 1 Comm: swapper/0 Tainted: G        W         4.19.164-hanikrnlᵇᵉᵉʰᶦᵛᵉ-g0314dcbce1af #1
+[    0.084401] Hardware name: Qualcomm Technologies, Inc. BENGAL IDP (DT)
+[    0.084404] pstate: 60000005 (nZCv daif -PAN -UAO)
+[    0.084408] pc : gic_irq_domain_alloc.17604+0x68c/0x6a0
+[    0.084411] lr : gic_irq_domain_alloc.17604+0x68c/0x6a0
+[    0.084413] sp : ffffffd2ba89f5b0
+[    0.084415] x29: ffffffd2ba89f5c0 x28: 0000000000000000 
+[    0.084418] x27: 000000000000001c x26: ffffff9f13b0e000 
+[    0.084422] x25: ffffffd2b9f19cc0 x24: ffffffd2ba8a8000 
+[    0.084425] x23: ffffff9f13e13000 x22: 00000000000000de 
+[    0.084429] x21: ffffffd2ba81d000 x20: 000000000000001d 
+[    0.084432] x19: 0000000000000001 x18: 00000000ffffc6dc 
+[    0.084435] x17: 00000000001fc6dc x16: ffffff9f144a8000 
+[    0.084439] x15: ffffff9f13cacfa8 x14: 0000000000000086 
+[    0.084442] x13: ffffff9f144a88e0 x12: 0000000000000000 
+[    0.084446] x11: ffffffffffffffff x10: 0000000000000000 
+[    0.084449] x9 : ffffff9f13cc5678 x8 : 00000000000000a8 
+[    0.084452] x7 : 0000000000000000 x6 : ffffff9f13eeabd4 
+[    0.084456] x5 : 0000000000000044 x4 : 0000000000000006 
+[    0.084459] x3 : 0000000000002d2d x2 : ffffffffffffff45 
+[    0.084462] x1 : 0000000000000000 x0 : 0000000000000024 
+[    0.084466] 
+               SP: 0xffffffd2ba89f530:
+[    0.084467] f530  ba8a8000 ffffffd2 b9f19cc0 ffffffd2 13b0e000 ffffff9f 0000001c 00000000
+[    0.084476] f550  00000000 00000000 ba89f5c0 ffffffd2 119aa1ac ffffff9f ba89f5b0 ffffffd2
+[    0.084484] f570  119aa1ac ffffff9f 60000005 00000000 ba89f510 ffffffd2 ffffffc8 ffffff80
+[    0.084493] f590  ffffffff ffffffff 119aa1ac ffffff9f ba89f5c0 ffffffd2 119aa1ac ffffff9f
+[    0.084501] f5b0  ba89f5e0 ffffffd2 ba89f590 ffffffd2 ba89f670 ffffffd2 119c48c4 ffffff9f
+[    0.084510] f5d0  00000000 00000000 0000001c 00000000 13b0e000 ffffff9f b9f19cc0 ffffffd2
+[    0.084518] f5f0  ba8a8000 ffffffd2 13e13000 ffffff9f 0000001d 00000000 0000001d 00000000
+[    0.084526] f610  ba89f758 ffffffd2 ba820400 ffffffd2 bf6e4cf8 ffffffd2 00000003 00000000
+[    0.084535] Call trace:
+[    0.084538]  gic_irq_domain_alloc.17604+0x68c/0x6a0
+[    0.084542]  msm_mpm_gic_chip_alloc+0x1c4/0x200
+[    0.084547]  irq_create_fwspec_mapping+0xc20/0x13f0
+[    0.084550]  of_irq_to_resource_table+0x124/0x330
+[    0.084554]  of_platform_bus_create+0x448/0x840
+[    0.084557]  of_platform_bus_create+0x6a0/0x840
+[    0.084560]  of_platform_default_populate_init+0x408/0x468
+[    0.084564]  do_initcalls+0x688/0xe84
+[    0.084567]  kernel_init_freeable+0x298/0x348
+[    0.084570]  kernel_init+0x14/0x3d0
+[    0.084573]  ret_from_fork+0x10/0x18
+[    0.084575] ---[ end trace 0b24ea006f676d51 ]---
+[    0.085293] platform soc:qcom,smem: assigned reserved memory node smem_region@46000000
+[    0.085519] platform soc:qcom,msm-adsprpc-mem: assigned reserved memory node adsp_region
+[    0.086862] platform 5ab0000.qcom,venus: assigned reserved memory node pil_video_region@51400000
+[    0.087052] platform 6080000.qcom,mss: assigned reserved memory node modem_region@4ab00000
+[    0.087731] ------------[ cut here ]------------
+[    0.087799] WARNING: CPU: 0 PID: 1 at drivers/irqchip/irq-gic-v3.c:1057 gic_irq_domain_alloc.17604+0x68c/0x6a0
+[    0.087800] Modules linked in:
+[    0.087807] CPU: 0 PID: 1 Comm: swapper/0 Tainted: G        W         4.19.164-hanikrnlᵇᵉᵉʰᶦᵛᵉ-g0314dcbce1af #1
+[    0.087809] Hardware name: Qualcomm Technologies, Inc. BENGAL IDP (DT)
+[    0.087813] pstate: 60000005 (nZCv daif -PAN -UAO)
+[    0.087817] pc : gic_irq_domain_alloc.17604+0x68c/0x6a0
+[    0.087820] lr : gic_irq_domain_alloc.17604+0x68c/0x6a0
+[    0.087822] sp : ffffffd2ba89f5b0
+[    0.087824] x29: ffffffd2ba89f5c0 x28: 0000000000000000 
+[    0.087828] x27: 0000000000000002 x26: ffffff9f13b0e000 
+[    0.087831] x25: ffffffd2b9ee6c40 x24: ffffffd2ba8a8000 
+[    0.087835] x23: ffffff9f13e13000 x22: 0000000000000121 
+[    0.087838] x21: ffffffd2ba81d000 x20: 0000000000000030 
+[    0.087842] x19: 0000000000000001 x18: 00000000ffffb8e8 
+[    0.087845] x17: 00000000001fb8e8 x16: ffffff9f144a8000 
+[    0.087849] x15: ffffff9f13cacfa8 x14: 0000000000000086 
+[    0.087852] x13: ffffff9f144a88e0 x12: 0000000000000000 
+[    0.087855] x11: ffffffffffffffff x10: 0000000000000000 
+[    0.087859] x9 : ffffff9f13cc5678 x8 : 00000000000000a8 
+[    0.087862] x7 : 0000000000000000 x6 : ffffff9f13eeb9c8 
+[    0.087865] x5 : 0000000000000044 x4 : 0000000000000006 
+[    0.087869] x3 : 0000000000002d2d x2 : ffffffffffffff13 
+[    0.087872] x1 : 0000000000000000 x0 : 0000000000000024 
+[    0.087876] 
+               SP: 0xffffffd2ba89f530:
+[    0.087878] f530  ba8a8000 ffffffd2 b9ee6c40 ffffffd2 13b0e000 ffffff9f 00000002 00000000
+[    0.087888] f550  00000000 00000000 ba89f5c0 ffffffd2 119aa1ac ffffff9f ba89f5b0 ffffffd2
+[    0.087896] f570  119aa1ac ffffff9f 60000005 00000000 ba89f510 ffffffd2 ffffffc8 ffffff80
+[    0.087905] f590  ffffffff ffffffff 119aa1ac ffffff9f ba89f5c0 ffffffd2 119aa1ac ffffff9f
+[    0.087913] f5b0  ba89f5e0 ffffffd2 ba89f590 ffffffd2 ba89f670 ffffffd2 119c48c4 ffffff9f
+[    0.087922] f5d0  00000000 00000000 00000002 00000000 13b0e000 ffffff9f b9ee6c40 ffffffd2
+[    0.087930] f5f0  ba8a8000 ffffffd2 13e13000 ffffff9f 00000030 00000000 00000030 00000000
+[    0.087938] f610  ba89f758 ffffffd2 ba820400 ffffffd2 bf6e4cf8 ffffffd2 00000003 00000000
+[    0.087946] Call trace:
+[    0.087950]  gic_irq_domain_alloc.17604+0x68c/0x6a0
+[    0.087954]  msm_mpm_gic_chip_alloc+0x1c4/0x200
+[    0.087959]  irq_create_fwspec_mapping+0xc20/0x13f0
+[    0.087964]  of_irq_to_resource_table+0x124/0x330
+[    0.087968]  of_platform_bus_create+0x448/0x840
+[    0.087971]  of_platform_bus_create+0x6a0/0x840
+[    0.087975]  of_platform_default_populate_init+0x408/0x468
+[    0.087979]  do_initcalls+0x688/0xe84
+[    0.087982]  kernel_init_freeable+0x298/0x348
+[    0.087986]  kernel_init+0x14/0x3d0
+[    0.087989]  ret_from_fork+0x10/0x18
+[    0.087991] ---[ end trace 0b24ea006f676d52 ]---
+[    0.088038] ------------[ cut here ]------------
+[    0.088098] WARNING: CPU: 0 PID: 1 at drivers/irqchip/irq-gic-v3.c:1057 gic_irq_domain_alloc.17604+0x68c/0x6a0
+[    0.088099] Modules linked in:
+[    0.088103] CPU: 0 PID: 1 Comm: swapper/0 Tainted: G        W         4.19.164-hanikrnlᵇᵉᵉʰᶦᵛᵉ-g0314dcbce1af #1
+[    0.088105] Hardware name: Qualcomm Technologies, Inc. BENGAL IDP (DT)
+[    0.088108] pstate: 60000005 (nZCv daif -PAN -UAO)
+[    0.088112] pc : gic_irq_domain_alloc.17604+0x68c/0x6a0
+[    0.088115] lr : gic_irq_domain_alloc.17604+0x68c/0x6a0
+[    0.088117] sp : ffffffd2ba89f5b0
+[    0.088119] x29: ffffffd2ba89f5c0 x28: 0000000000000000 
+[    0.088122] x27: 0000000000000030 x26: ffffff9f13b0e000 
+[    0.088126] x25: ffffffd2b9ee6d00 x24: ffffffd2ba8a8000 
+[    0.088129] x23: ffffff9f13e13000 x22: 0000000000000123 
+[    0.088133] x21: ffffffd2ba81d000 x20: 0000000000000031 
+[    0.088136] x19: 0000000000000001 x18: 00000000ffffad48 
+[    0.088140] x17: 00000000001fad48 x16: ffffff9f144a8000 
+[    0.088143] x15: ffffff9f13cacfa8 x14: 0000000000000086 
+[    0.088147] x13: ffffff9f144a88e0 x12: 0000000000000000 
+[    0.088150] x11: ffffffffffffffff x10: 0000000000000000 
+[    0.088153] x9 : ffffff9f13cc5678 x8 : 00000000000000a8 
+[    0.088157] x7 : 0000000000000000 x6 : ffffff9f13eec568 
+[    0.088160] x5 : 0000000000000044 x4 : 0000000000000006 
+[    0.088163] x3 : 0000000000002d2d x2 : fffffffffffffee5 
+[    0.088166] x1 : 0000000000000000 x0 : 0000000000000024 
+[    0.088170] 
+               SP: 0xffffffd2ba89f530:
+[    0.088171] f530  ba8a8000 ffffffd2 b9ee6d00 ffffffd2 13b0e000 ffffff9f 00000030 00000000
+[    0.088180] f550  00000000 00000000 ba89f5c0 ffffffd2 119aa1ac ffffff9f ba89f5b0 ffffffd2
+[    0.088188] f570  119aa1ac ffffff9f 60000005 00000000 ba89f510 ffffffd2 ffffffc8 ffffff80
+[    0.088197] f590  ffffffff ffffffff 119aa1ac ffffff9f ba89f5c0 ffffffd2 119aa1ac ffffff9f
+[    0.088205] f5b0  ba89f5e0 ffffffd2 ba89f590 ffffffd2 ba89f670 ffffffd2 119c48c4 ffffff9f
+[    0.088214] f5d0  00000000 00000000 00000030 00000000 13b0e000 ffffff9f b9ee6d00 ffffffd2
+[    0.088222] f5f0  ba8a8000 ffffffd2 13e13000 ffffff9f 00000031 00000000 00000031 00000000
+[    0.088230] f610  ba89f758 ffffffd2 ba820400 ffffffd2 bf6e4cf8 ffffffd2 00000003 00000000
+[    0.088238] Call trace:
+[    0.088242]  gic_irq_domain_alloc.17604+0x68c/0x6a0
+[    0.088246]  msm_mpm_gic_chip_alloc+0x1c4/0x200
+[    0.088249]  irq_create_fwspec_mapping+0xc20/0x13f0
+[    0.088252]  of_irq_to_resource_table+0x124/0x330
+[    0.088256]  of_platform_bus_create+0x448/0x840
+[    0.088259]  of_platform_bus_create+0x6a0/0x840
+[    0.088263]  of_platform_default_populate_init+0x408/0x468
+[    0.088266]  do_initcalls+0x688/0xe84
+[    0.088269]  kernel_init_freeable+0x298/0x348
+[    0.088272]  kernel_init+0x14/0x3d0
+[    0.088275]  ret_from_fork+0x10/0x18
+[    0.088277] ---[ end trace 0b24ea006f676d53 ]---
+[    0.088521] platform soc:qcom,ipa_fws: assigned reserved memory node ipa_fw_region@55A00000
+[    0.099054] ------------[ cut here ]------------
+[    0.099137] WARNING: CPU: 0 PID: 1 at drivers/irqchip/irq-gic-v3.c:1057 gic_irq_domain_alloc.17604+0x68c/0x6a0
+[    0.099140] Modules linked in:
+[    0.099148] CPU: 0 PID: 1 Comm: swapper/0 Tainted: G        W         4.19.164-hanikrnlᵇᵉᵉʰᶦᵛᵉ-g0314dcbce1af #1
+[    0.099150] Hardware name: Qualcomm Technologies, Inc. BENGAL IDP (DT)
+[    0.099154] pstate: 60000005 (nZCv daif -PAN -UAO)
+[    0.099158] pc : gic_irq_domain_alloc.17604+0x68c/0x6a0
+[    0.099162] lr : gic_irq_domain_alloc.17604+0x68c/0x6a0
+[    0.099164] sp : ffffffd2ba89f5b0
+[    0.099166] x29: ffffffd2ba89f5c0 x28: 0000000000000000 
+[    0.099169] x27: 0000000000000001 x26: ffffff9f13b0e000 
+[    0.099173] x25: ffffffd2b9938ac0 x24: ffffffd2ba8a8000 
+[    0.099177] x23: ffffff9f13e13000 x22: 00000000000000f5 
+[    0.099180] x21: ffffffd2ba81d000 x20: 000000000000009c 
+[    0.099184] x19: 0000000000000001 x18: 00000000ffffa114 
+[    0.099187] x17: 00000000001fa114 x16: ffffff9f144a8000 
+[    0.099191] x15: ffffff9f13cacfa8 x14: 0000000000000086 
+[    0.099194] x13: ffffff9f144a88e0 x12: 0000000000000000 
+[    0.099198] x11: ffffffffffffffff x10: 0000000000000000 
+[    0.099201] x9 : ffffff9f13cc5678 x8 : 00000000000000a8 
+[    0.099204] x7 : 0000000000000000 x6 : ffffff9f13eed19c 
+[    0.099208] x5 : 0000000000000044 x4 : 0000000000000006 
+[    0.099211] x3 : 0000000000002d2d x2 : fffffffffffffeb6 
+[    0.099214] x1 : 0000000000000000 x0 : 0000000000000024 
+[    0.099219] 
+               SP: 0xffffffd2ba89f530:
+[    0.099221] f530  ba8a8000 ffffffd2 b9938ac0 ffffffd2 13b0e000 ffffff9f 00000001 00000000
+[    0.099232] f550  00000000 00000000 ba89f5c0 ffffffd2 119aa1ac ffffff9f ba89f5b0 ffffffd2
+[    0.099240] f570  119aa1ac ffffff9f 60000005 00000000 ba89f510 ffffffd2 ffffffc8 ffffff80
+[    0.099249] f590  ffffffff ffffffff 119aa1ac ffffff9f ba89f5c0 ffffffd2 119aa1ac ffffff9f
+[    0.099257] f5b0  ba89f5e0 ffffffd2 ba89f590 ffffffd2 ba89f670 ffffffd2 119c48c4 ffffff9f
+[    0.099266] f5d0  00000000 00000000 00000001 00000000 13b0e000 ffffff9f b9938ac0 ffffffd2
+[    0.099274] f5f0  ba8a8000 ffffffd2 13e13000 ffffff9f 0000009c 00000000 0000009c 00000000
+[    0.099282] f610  ba89f758 ffffffd2 ba820400 ffffffd2 bf6e4cf8 ffffffd2 00000003 00000000
+[    0.099291] Call trace:
+[    0.099295]  gic_irq_domain_alloc.17604+0x68c/0x6a0
+[    0.099300]  msm_mpm_gic_chip_alloc+0x1c4/0x200
+[    0.099306]  irq_create_fwspec_mapping+0xc20/0x13f0
+[    0.099311]  of_irq_to_resource_table+0x124/0x330
+[    0.099315]  of_platform_bus_create+0x448/0x840
+[    0.099319]  of_platform_bus_create+0x6a0/0x840
+[    0.099324]  of_platform_default_populate_init+0x408/0x468
+[    0.099328]  do_initcalls+0x688/0xe84
+[    0.099331]  kernel_init_freeable+0x298/0x348
+[    0.099336]  kernel_init+0x14/0x3d0
+[    0.099340]  ret_from_fork+0x10/0x18
+[    0.099342] ---[ end trace 0b24ea006f676d54 ]---
+[    0.108366] Unable to find DT property: qcom,msm-imem-download_mode
+[    0.109538] Unable to find DT property: qcom,msm-imem-emergency_download_mode
+[    0.111068] qcom_glink_rpm soc:rpm-glink: failed to register early notif -22
+[    0.111624] qcom_smd_rpm_probe: RPM-SMD running version 0
+[    0.114115] sps:sps is ready.
+[    0.114253] spmi spmi-0: PMIC arbiter version v5 (0x50010000)
+[    0.116988] LCDB: qpnp_lcdb_regulator_probe: Failed to parse dt rc=-517
+[    0.118717] (NULL device *): msm_gsi_probe:4554 failed to create IPC log, continue...
+[    0.129905] debugfs file mm_event_task creation failed
+[    0.130061] cryptd: max_cpu_qlen set to 1000
+[    0.133131] Minidump: Enabled with max number of regions 200
+[    0.133286] Failed to setup PIL ipc logging
+[    0.133354] KPI: Bootloader start count = 73854
+[    0.133356] KPI: Bootloader end count = 130787
+[    0.133358] KPI: Bootloader display count = 1139363343
+[    0.133360] KPI: Bootloader load kernel count = 2183904001
+[    0.133363] KPI: Kernel MPM timestamp = 143284
+[    0.133365] KPI: Kernel MPM Clock frequency = 32768
+[    0.133381] socinfo_print: v0.15, id=444, ver=1.0, raw_id=333, raw_ver=0, hw_plat=34, hw_plat_ver=65536
+                accessory_chip=0, hw_plat_subtype=0, pmic_model=65581, pmic_die_revision=65537 foundry_id=3 serial_number=3071626057 num_pmics=2 chip_family=0x6a raw_device_family=0x9 raw_device_number=0x2 nproduct_id=0x41c num_clusters=0x1 ncluster_array_offset=0xb0 num_defective_parts=0xc ndefective_parts_array_offset=0xb4 nmodem_supported=0xff
+[    0.134832] arm-smmu 59a0000.kgsl-smmu: Couldn't get clock: gcc_gpu_memnoc_gfx
+[    0.135322] AXI: msm_bus_scale_register_client(): msm_bus_scale_register_client: Bus driver not ready.
+[    0.135326] arm-smmu c600000.apps-smmu: Bus client registration failed
+[    0.135630] Error: Driver 'arm-smmu' is already registered, aborting...
+[    0.135669] pcba config =25.
+[    0.135841] SCSI subsystem initialized
+[    0.135937] usbcore: registered new interface driver usbfs
+[    0.135961] usbcore: registered new interface driver hub
+[    0.136078] usbcore: registered new device driver usb
+[    0.136258] usb_phy_generic soc:usb_nop_phy: soc:usb_nop_phy supply vcc not found, using dummy regulator
+[    0.136274] usb_phy_generic soc:usb_nop_phy: Linked as a consumer to regulator.0
+[    0.136724] xiaomi_touch_probe enter
+[    0.136727] xiaomi_touch_parse_dt touch,name:xiaomi-touch
+[    0.136803] xiaomi_touch_probe over
+[    0.137131] qcom,qpnp-power-on 1c40000.qcom,spmi:qcom,pmi632@2:qcom,power-on@800: PMIC@SID2 Power-on reason: Triggered from CBL (External Power Supply) and 'cold' boot
+[    0.137154] qcom,qpnp-power-on 1c40000.qcom,spmi:qcom,pmi632@2:qcom,power-on@800: PMIC@SID2: Power-off reason: Triggered from SOFT (Software)
+[    0.137322] qcom,qpnp-power-on 1c40000.qcom,spmi:qcom,pm6125@0:qcom,power-on@800: PMIC@SID0 Power-on reason: Triggered from Hard Reset and 'cold' boot
+[    0.137344] qcom,qpnp-power-on 1c40000.qcom,spmi:qcom,pm6125@0:qcom,power-on@800: PMIC@SID0: Power-off reason: Triggered from PS_HOLD (PS_HOLD/MSM Controlled Shutdown)
+[    0.137496] input: qpnp_pon as /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:qcom,power-on@800/input/input0
+[    0.138215] media: Linux media interface: v0.10
+[    0.138235] videodev: Linux video capture interface: v2.00
+[    0.142135] thermal_sys: of_parse_thermal_message board sensor: VIRTUAL-SENSOR
+[    0.144649] tsens_tm_probe : unable to create IPC Logging 0 for tsens 0x0000000004411000
+[    0.144653] tsens_tm_probe : unable to create IPC Logging 1 for tsens 0x0000000004411000
+[    0.144656] tsens_tm_probe : unable to create IPC Logging 2 for tsens 0x0000000004411000
+[    0.145760] qcom-cpufreq-hw f521000.qcom,cpufreq-hw: CPUFreq resource init failed
+[    0.146946] platform soc:qcom,ion:qcom,ion-heap@10: assigned reserved memory node secure_display_region
+[    0.147029] platform soc:qcom,ion:qcom,ion-heap@26: assigned reserved memory node user_contig_region
+[    0.147104] platform soc:qcom,ion:qcom,ion-heap@27: assigned reserved memory node qseecom_region
+[    0.147178] platform soc:qcom,ion:qcom,ion-heap@19: assigned reserved memory node qseecom_ta_region
+[    0.150078] ION heap system created
+[    0.160128] ION heap secure_heap created
+[    0.160142] ION heap secure_display created at 0x00000000ee400000 with size 5c00000
+[    0.160146] ION heap user_contig created at 0x00000000fc800000 with size 1000000
+[    0.160150] ION heap qsecom created at 0x00000000fd800000 with size 1400000
+[    0.160153] ION heap qsecom_ta created at 0x00000000fec00000 with size 1000000
+[    0.161236] PMIC@SID2: PMI632 v2.0 options: 0, 0, 0, 0
+[    0.161350] PMIC@SID0: PM6125 v1.1 options: 0, 0, 0, 0
+[    0.161962] AXI: msm_bus_scale_register_client(): msm_bus_scale_register_client: Bus driver not ready.
+[    0.161965] ipa ipa3_pre_init:6862 fail to register with bus mgr!
+[    0.161977] ipa ipa3_plat_drv_probe:8421 ipa3_init failed
+[    0.171150] SDAM base=0xb600 size=128 registered successfully
+[    0.171231] Advanced Linux Sound Architecture Driver Initialized.
+[    0.171519] Bluetooth: Core ver 2.22
+[    0.171532] NET: Registered protocol family 31
+[    0.171534] Bluetooth: HCI device and connection manager initialized
+[    0.171540] Bluetooth: HCI socket layer initialized
+[    0.171544] Bluetooth: L2CAP socket layer initialized
+[    0.171548] Bluetooth: SCO socket layer initialized
+[    0.171553] NetLabel: Initializing
+[    0.171555] NetLabel:  domain hash size = 128
+[    0.171557] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.171596] NetLabel:  unlabeled traffic allowed by default
+[    0.176896] qcom-clk-smd-rpm soc:qcom,rpmcc: Registered RPM clocks
+[    0.177225] pm6125_s3_level: Bringing 1uV into 16-16uV
+[    0.177429] pm6125_s3_floor_level: Bringing 1uV into 16-16uV
+[    0.177670] gpu_cx_gdsc: supplied by pm6125_s3_level
+[    0.177682] gpu_gx_gdsc: supplied by pm6125_s3_level
+[    0.177803] pm6125_s3_level_ao: Bringing 1uV into 16-16uV
+[    0.178112] pm6125_s5_level: Bringing 1uV into 16-16uV
+[    0.178279] pm6125_s5_floor_level: Bringing 1uV into 16-16uV
+[    0.178654] pm6125_s5_level_ao: Bringing 1uV into 16-16uV
+[    0.179780] pm6125_l2_level: Bringing 1uV into 16-16uV
+[    0.179994] pm6125_l3_level: Bringing 1uV into 16-16uV
+[    0.200220] LCDB: qpnp_lcdb_regulator_probe: LCDB module successfully registered! lcdb_en=1 ldo_voltage=5500mV ncp_voltage=5500mV bst_voltage=5650mV
+[    0.200391] bengal-dispcc 5f00000.qcom,dispcc: Linked as a consumer to regulator.14
+[    0.200435] bengal-dispcc 5f00000.qcom,dispcc: Dropping the link to regulator.14
+[    0.200570] gcc-bengal 1400000.qcom,gcc: Linked as a consumer to regulator.14
+[    0.200585] gcc-bengal 1400000.qcom,gcc: Linked as a consumer to regulator.16
+[    0.200598] gcc-bengal 1400000.qcom,gcc: Linked as a consumer to regulator.17
+[    0.208811] gcc-bengal 1400000.qcom,gcc: Registered GCC clocks
+[    0.208895] bengal-gpucc 5990000.qcom,gpucc: Linked as a consumer to regulator.14
+[    0.208910] bengal-gpucc 5990000.qcom,gpucc: Linked as a consumer to regulator.17
+[    0.209775] gpu_cc_gx_gfx3d_clk_src: set OPP pair(320000000 Hz: 48 uV) on 5900000.qcom,kgsl-3d0
+[    0.209798] gpu_cc_gx_gfx3d_clk_src: set OPP pair(980000000 Hz: 416 uV) on 5900000.qcom,kgsl-3d0
+[    0.209850] bengal-gpucc 5990000.qcom,gpucc: Registered GPUCC clocks
+[    0.210112] arm-smmu 59a0000.kgsl-smmu: Linked as a consumer to regulator.11
+[    0.210170] arm-smmu 59a0000.kgsl-smmu: 	non-coherent table walk
+[    0.210173] arm-smmu 59a0000.kgsl-smmu: 	(IDR0.CTTW overridden by FW configuration)
+[    0.210178] arm-smmu 59a0000.kgsl-smmu: 	stream matching with 4 register groups
+[    0.221514] AXI: msm_bus_scale_register_client(): msm_bus_scale_register_client: Bus driver not ready.
+[    0.221526] arm-smmu c600000.apps-smmu: Bus client registration failed
+[    0.221674] qcom-cpufreq-hw f521000.qcom,cpufreq-hw: index=0 freq=300000 volt=588000, core_count 7
+[    0.221698] qcom-cpufreq-hw f521000.qcom,cpufreq-hw: index=1 freq=614400 volt=588000, core_count 7
+[    0.221709] qcom-cpufreq-hw f521000.qcom,cpufreq-hw: index=2 freq=864000 volt=636000, core_count 7
+[    0.221719] qcom-cpufreq-hw f521000.qcom,cpufreq-hw: index=3 freq=1017600 volt=676000, core_count 7
+[    0.221728] qcom-cpufreq-hw f521000.qcom,cpufreq-hw: index=4 freq=1305600 volt=748000, core_count 7
+[    0.221741] qcom-cpufreq-hw f521000.qcom,cpufreq-hw: index=5 freq=1420800 volt=772000, core_count 7
+[    0.221750] qcom-cpufreq-hw f521000.qcom,cpufreq-hw: index=6 freq=1612800 volt=832000, core_count 7
+[    0.221761] qcom-cpufreq-hw f521000.qcom,cpufreq-hw: index=7 freq=1804800 volt=892000, core_count 7
+[    0.221769] qcom-cpufreq-hw f521000.qcom,cpufreq-hw: index=8 freq=1804800 volt=892000, core_count 7
+[    0.221795] qcom-cpufreq-hw f521000.qcom,cpufreq-hw: index=0 freq=300000 volt=588000, core_count 7
+[    0.221814] qcom-cpufreq-hw f521000.qcom,cpufreq-hw: index=1 freq=652800 volt=588000, core_count 7
+[    0.221824] qcom-cpufreq-hw f521000.qcom,cpufreq-hw: index=2 freq=902400 volt=632000, core_count 7
+[    0.221833] qcom-cpufreq-hw f521000.qcom,cpufreq-hw: index=3 freq=1056000 volt=668000, core_count 7
+[    0.221844] qcom-cpufreq-hw f521000.qcom,cpufreq-hw: index=4 freq=1401600 volt=740000, core_count 7
+[    0.221854] qcom-cpufreq-hw f521000.qcom,cpufreq-hw: index=5 freq=1536000 volt=764000, core_count 7
+[    0.221863] qcom-cpufreq-hw f521000.qcom,cpufreq-hw: index=6 freq=1612800 volt=780000, core_count 7
+[    0.221872] qcom-cpufreq-hw f521000.qcom,cpufreq-hw: index=7 freq=1804800 volt=848000, core_count 7
+[    0.221882] qcom-cpufreq-hw f521000.qcom,cpufreq-hw: index=8 freq=2016000 volt=916000, core_count 7
+[    0.221890] qcom-cpufreq-hw f521000.qcom,cpufreq-hw: index=9 freq=2016000 volt=916000, core_count 7
+[    0.222252] cpufreq: driver qcom-cpufreq-hw up and running
+[    0.222866] AXI: msm_bus_scale_register_client(): msm_bus_scale_register_client: Bus driver not ready.
+[    0.222868] ipa ipa3_pre_init:6862 fail to register with bus mgr!
+[    0.222877] ipa ipa3_plat_drv_probe:8421 ipa3_init failed
+[    0.223068] bengal-dispcc 5f00000.qcom,dispcc: Linked as a consumer to regulator.14
+[    0.224772] bengal-dispcc 5f00000.qcom,dispcc: Registered Display CC clocks
+[    0.225165] AXI: msm_bus_scale_register_client(): msm_bus_scale_register_client: Bus driver not ready.
+[    0.225168] arm-smmu c600000.apps-smmu: Bus client registration failed
+[    0.225463] AXI: msm_bus_scale_register_client(): msm_bus_scale_register_client: Bus driver not ready.
+[    0.225466] ipa ipa3_pre_init:6862 fail to register with bus mgr!
+[    0.225473] ipa ipa3_plat_drv_probe:8421 ipa3_init failed
+[    0.225895] clocksource: Switched to clocksource arch_sys_counter
+[    0.225968] VFS: Disk quotas dquot_6.6.0
+[    0.225999] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.226020] msm_bus_fabric_init_driver
+[    0.230611] msm_bus_dev_init_qos: Skipping QOS init for 26
+[    0.230657] msm_bus_device 1880000.ad-hoc-bus: Bus scaling driver probe successful
+[    0.232039] mdss_pll_probe: MDSS pll label = MDSS DSI 0 PLL
+[    0.232043] mdss_pll_probe: mdss_pll_probe: label=MDSS DSI 0 PLL PLL SSC enabled
+[    0.232242] mdss_pll 5e94400.qcom,mdss_dsi0_pll: Linked as a consumer to regulator.10
+[    0.233692] dsi_pll_clock_register_14nm: Registered DSI PLL ndx=0 clocks successfully
+[    0.234108] NET: Registered protocol family 2
+[    0.234488] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes)
+[    0.234516] TCP established hash table entries: 32768 (order: 6, 262144 bytes)
+[    0.234671] TCP bind hash table entries: 32768 (order: 7, 524288 bytes)
+[    0.234931] TCP: Hash tables configured (established 32768 bind 32768)
+[    0.235006] UDP hash table entries: 2048 (order: 4, 65536 bytes)
+[    0.235046] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes)
+[    0.235168] NET: Registered protocol family 1
+[    0.236023] arm-smmu c600000.apps-smmu: 	non-coherent table walk
+[    0.236027] arm-smmu c600000.apps-smmu: 	(IDR0.CTTW overridden by FW configuration)
+[    0.236030] arm-smmu c600000.apps-smmu: 	stream matching with 50 register groups
+[    0.236785] qsmmuv500-tbu c789000.mm_rt_tbu: Linked as a consumer to regulator.8
+[    0.236952] qsmmuv500-tbu c78d000.mm_nrt_tbu: Linked as a consumer to regulator.9
+[    0.237108] qsmmuv500-tbu c791000.cdsp_tbu: Linked as a consumer to regulator.7
+[    0.252554] ipa ipa3_smp2p_probe:8290 fail to get smp2p clk resp bit -517
+[    0.253038] ipa soc:ipa_smmu_ap: Linked as a consumer to c600000.apps-smmu
+[    0.271149] ipa soc:ipa_smmu_wlan: Linked as a consumer to c600000.apps-smmu
+[    0.272002] ipa soc:ipa_smmu_uc: Linked as a consumer to c600000.apps-smmu
+[    0.272659] qupv3_geni_se 4ac0000.qcom,qupv3_0_geni_se: Linked as a consumer to c600000.apps-smmu
+[    0.285182] qupv3_geni_se 4ac0000.qcom,qupv3_0_geni_se: geni_se_probe Failed to allocate log context
+[    0.285401] ipa ipa3_smp2p_probe:8290 fail to get smp2p clk resp bit -517
+[    0.286047] Trying to unpack rootfs image as initramfs...
+[    0.601721] Freeing initrd memory: 7492K
+[    0.605919] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+[    0.652806] Initialise system trusted keyrings
+[    0.653070] workingset: timestamp_bits=61 max_order=20 bucket_order=0
+[    0.657551] exFAT: file-system version 5.8-2arter97
+[    0.657646] Registering sdcardfs 0.1
+[    0.657856] fuse: init (API version 7.31)
+[    0.720140] Key type asymmetric registered
+[    0.720152] Asymmetric key parser 'x509' registered
+[    0.720191] io scheduler noop registered
+[    0.720556] io scheduler cfq registered (default)
+[    0.720559] io scheduler mq-deadline registered
+[    0.720563] io scheduler kyber registered
+[    0.720647] io scheduler bfq registered
+[    0.735720] gpi_dma 4a00000.qcom,gpi-dma: Linked as a consumer to c600000.apps-smmu
+[    0.746989] subsys-pil-tz ab00000.qcom,lpass: Linked as a consumer to regulator.25
+[    0.747030] subsys-pil-tz ab00000.qcom,lpass: Linked as a consumer to regulator.24
+[    0.748540] subsys-pil-tz b300000.qcom,turing: Linked as a consumer to regulator.14
+[    0.749440] subsys-pil-tz 5ab0000.qcom,venus: Linked as a consumer to regulator.5
+[    0.749582] minidump-id not found for venus
+[    0.749637] subsys-pil-tz 5ab0000.qcom,venus: for venus segments only will be dumped.
+[    0.749714] subsys-pil-tz 5ab0000.qcom,venus: for md_venus segments only will be dumped.
+[    0.750001] subsys-pil-tz 6080000.qcom,mss: Linked as a consumer to regulator.14
+[    0.751149] minidump-id not found for ipa_fws
+[    0.751216] subsys-pil-tz soc:qcom,ipa_fws: for ipa_fws segments only will be dumped.
+[    0.751277] subsys-pil-tz soc:qcom,ipa_fws: for md_ipa_fws segments only will be dumped.
+[    0.751705] minidump-id not found for a610_zap
+[    0.751746] subsys-pil-tz soc:qcom,kgsl-hyp: for a610_zap segments only will be dumped.
+[    0.751813] subsys-pil-tz soc:qcom,kgsl-hyp: for md_a610_zap segments only will be dumped.
+[    0.756870] memshare_child soc:qcom,memshare:qcom,client_1: for memshare_GPS segments only will be dumped.
+[    0.757263] memshare_child soc:qcom,memshare:qcom,client_2: for memshare_FTM segments only will be dumped.
+[    0.757383] memshare_child soc:qcom,memshare:qcom,client_3: for memshare_DIAG segments only will be dumped.
+[    0.760281] scm_call failed: func id 0xc2000502, ret: -2, syscall returns: 0xffffffffffffffff, 0x0, 0x0
+[    0.760300] msm-eud 1610000.qcom,msm-eud: TCSR scm_io_write failed with rc:-22
+[    0.764686] icnss: Unable to create log context
+[    0.764696] icnss: Unable to create log long context
+[    0.765086] icnss c800000.qcom,icnss: Linked as a consumer to c600000.apps-smmu
+[    0.767145] icnss: Recursive recovery allowed for WLAN
+[    0.767233] icnss c800000.qcom,icnss: Linked as a consumer to regulator.30
+[    0.767279] icnss c800000.qcom,icnss: Linked as a consumer to regulator.38
+[    0.767306] icnss c800000.qcom,icnss: Linked as a consumer to regulator.39
+[    0.767428] icnss c800000.qcom,icnss: Linked as a consumer to regulator.45
+[    0.767790] icnss c800000.qcom,icnss: for wcss_msa0 segments only will be dumped.
+[    0.768044] icnss: Unable to create debugfs -19
+[    0.768157] icnss: Platform driver probed successfully
+[    0.772861] msm_geni_serial 4a8c000.qcom,qup_uart: Wakeup byte 0xfd
+[    0.773312] msm_geni_serial 4a8c000.qcom,qup_uart: Serial port0 added.FifoSize 64 is_console0
+[    0.773323] msm_geni_serial 4a8c000.qcom,qup_uart: Failed to create dbg dir
+[    0.773332] msm_geni_serial 4a8c000.qcom,qup_uart: Err in Rx IPC Log
+[    0.773336] msm_geni_serial 4a8c000.qcom,qup_uart: Err in Tx IPC Log
+[    0.773340] msm_geni_serial 4a8c000.qcom,qup_uart: Err in Pwr IPC Log
+[    0.773345] msm_geni_serial 4a8c000.qcom,qup_uart: Err in Misc IPC Log
+[    0.773348] msm_geni_serial 4a8c000.qcom,qup_uart: Err in single IPC Log
+[    0.773351] msm_geni_serial 4a8c000.qcom,qup_uart: Err in irqstatus IPC Log
+[    0.775353] 4a8c000.qcom,qup_uart: ttyHS0 at MMIO 0x4a8c000 (irq = 140, base_baud = 0) is a MSM
+[    0.776541] msm_geni_serial_init: Driver initialized
+[    0.780323] random: crng init done
+[    0.803323] brd: module loaded
+[    0.818502] loop: module loaded
+[    0.818772] zram: Added device: zram0
+[    0.819550] QSEECOM: qseecom_init_control: qseecom.qsee_version = 0x1402000
+[    0.819644] QSEECOM: qseecom_retrieve_ce_data: Device does not support PFE
+[    0.827260] Kprofiles 4.0.2 loaded. Visit https://github.com/dakkshesh07/Kprofiles/blob/main/README.md for information.
+[    0.827272] Copyright (C) 2021-2022 Dakkshesh <dakkshesh5@gmail.com>.
+[    0.827665] simtray_probe enter
+[    0.828669] dpdt_probe enter
+[    0.829844] fpc1020 soc:fpc1020: fpc1020_probe: ok
+[    0.830185] fpc1020_init OK
+[    0.830946] input: uinput-goodix as /devices/virtual/input/input1
+[    0.830957] gf_spi: version V1.2.11
+[    0.831275] gf_spi: status = 0x0
+[    0.831354] focaltech_fp: FocalTech fingerprint device control driver registered.
+[    0.831847] [DBG][cdfinger]:  606: <cdfinger_probe>enter
+[    0.831853] [DBG][cdfinger]:  279: <cdfinger_parse_dts>enter
+[    0.832027] cdfinger_fp soc:cdfinger_fingerprint: soc:cdfinger_fingerprint supply vdd not found, using dummy regulator
+[    0.832070] cdfinger_fp soc:cdfinger_fingerprint: Linked as a consumer to regulator.0
+[    0.832238] input: cdfinger_input as /devices/virtual/input/input2
+[    0.832556] st21nfc_dev_init: Loading st21nfc driver (version 2.0.15)
+[    0.834026] qce 1b20000.qcedev: Linked as a consumer to c600000.apps-smmu
+[    0.837645] qce 1b20000.qcedev: QTI Crypto 5.5.1 device found @0x1b20000
+[    0.837677] sps_register_bam_device : unable to create IPC Logging 0 for bam 0x0000000001b04000
+[    0.837685] sps_register_bam_device : unable to create IPC Logging 1 for bam 0x0000000001b04000
+[    0.837689] sps_register_bam_device : unable to create IPC Logging 2 for bam 0x0000000001b04000
+[    0.837692] sps_register_bam_device : unable to create IPC Logging 3 for bam 0x0000000001b04000
+[    0.837696] sps_register_bam_device : unable to create IPC Logging 4 for bam 0x0000000001b04000
+[    0.837700] sps:BAM 0x0000000001b04000 is registered.
+[    0.837942] sps:BAM 0x0000000001b04000 (va:0x00000000b3ca78fa) enabled: ver:0x27, number of pipes:16
+[    0.838307] QCE50: qce_sps_init:  QTI MSM CE-BAM at 0x0000000001b04000 irq 14
+[    0.840455] qce 1b20000.qcedev:qcom_cedev_ns_cb: Linked as a consumer to c600000.apps-smmu
+[    0.842068] qce 1b20000.qcedev:qcom_cedev_s_cb: Linked as a consumer to c600000.apps-smmu
+[    0.846137] Error: Driver 'qcrypto' is already registered, aborting...
+[    0.848371] ufshcd-qcom 4804000.ufshc: ufshcd_populate_vreg: Unable to find vccq-supply regulator, assuming enabled
+[    0.848390] ufshcd-qcom 4804000.ufshc: no vccq2-voltage-level property.
+[    0.848555] ufshcd-qcom 4804000.ufshc: Linked as a consumer to regulator.2
+[    0.848863] ufshcd-qcom 4804000.ufshc: Linked as a consumer to regulator.46
+[    0.848890] ufshcd-qcom 4804000.ufshc: Linked as a consumer to regulator.33
+[    0.850328] ufshcd-qcom 4804000.ufshc: Linked as a consumer to regulator.40
+[    0.850417] ufs_qcom_phy_qmp_v3_660 4807000.ufsphy_mem: Linked as a consumer to regulator.34
+[    0.850449] ufs_qcom_phy_qmp_v3_660 4807000.ufsphy_mem: Linked as a consumer to regulator.26
+[    0.850684] ufshcd-qcom 4804000.ufshc: ufs_qcom_parse_reg_info: Unable to find qcom,vccq-parent-supply regulator, assuming enabled
+[    0.854471] scsi host0: ufshcd
+[    0.863109] SCSI Media Changer driver v0.25 
+[    0.865218] spi_geni 4a80000.spi: spi_geni_probe: completed
+[    0.866130] spi_geni 4a88000.spi: spi_geni_probe: completed
+[    0.867335] Ethernet Channel Bonding Driver: v3.7.1 (April 27, 2011)
+[    0.869195] wireguard: WireGuard 1.0.0 loaded. See www.wireguard.com for information.
+[    0.869199] wireguard: Copyright (C) 2015-2019 Jason A. Donenfeld <Jason@zx2c4.com>. All Rights Reserved.
+[    0.869601] libphy: Fixed MDIO Bus: probed
+[    0.869607] tun: Universal TUN/TAP device driver, 1.6
+[    0.869704] PPP generic driver version 2.4.2
+[    0.869817] PPP BSD Compression module registered
+[    0.869821] PPP Deflate Compression module registered
+[    0.869893] PPP MPPE Compression module registered
+[    0.869900] NET: Registered protocol family 24
+[    0.869930] PPTP driver version 0.8.5
+[    0.870736] cnss_utils: Unable to create debugfs -19
+[    0.870829] wcnss_pre_alloc_init: Failed to create debugfs dir
+[    0.870833] CLD80211: Initializing
+[    0.870964] usbcore: registered new interface driver r8152
+[    0.881930] ufshcd-qcom 4804000.ufshc: ufshcd_print_pwr_info:[RX, TX]: gear=[1, 1], lane[1, 1], pwr[SLOWAUTO_MODE, SLOWAUTO_MODE], rate = 0
+[    0.889401] msm_sharedmem: msm_sharedmem_probe: Device created for client 'rmtfs'
+[    0.893411] msm-qusb-phy 1613000.qusb: 1613000.qusb supply USB3_GDSC not found, using dummy regulator
+[    0.893464] msm-qusb-phy 1613000.qusb: Linked as a consumer to regulator.0
+[    0.893502] msm-qusb-phy 1613000.qusb: Linked as a consumer to regulator.26
+[    0.893527] msm-qusb-phy 1613000.qusb: Linked as a consumer to regulator.37
+[    0.893553] msm-qusb-phy 1613000.qusb: Linked as a consumer to regulator.34
+[    0.895675] msm-usb-ssphy-qmp 1615000.ssphy: Linked as a consumer to regulator.26
+[    0.895705] msm-usb-ssphy-qmp 1615000.ssphy: Linked as a consumer to regulator.34
+[    0.897729] msm-dwc3 4e00000.ssusb: Linked as a consumer to c600000.apps-smmu
+[    0.899072] msm-dwc3 4e00000.ssusb: Linked as a consumer to regulator.3
+[    0.901316] dwc3 4e00000.dwc3: Failed to get clk 'ref': -2
+[    0.901579] dwc3 4e00000.dwc3: changing max_speed on rev 00000000
+[    0.902200] dwc3 4e00000.dwc3: Error getting ipc_log_ctxt
+[    0.902204] dwc3 4e00000.dwc3: Error getting ipc_log_ctxt for ep_events
+[    0.904051] Invalid index Defaulting curr to 0
+[    0.905960] msm-dwc3 4e00000.ssusb: Dropping the link to regulator.3
+[    0.909004] usbcore: registered new interface driver usb-storage
+[    0.909088] usbcore: registered new interface driver usb_ehset_test
+[    0.909118] usbcore: registered new interface driver lvs
+[    0.910410] usbcore: registered new interface driver xpad
+[    0.910462] ret : 0
+[    0.912474] rtc-pm8xxx 1c40000.qcom,spmi:qcom,pm6125@0:qcom,pm6125_rtc: rtc core: registered pm8xxx_rtc as rtc0
+[    0.912577] rtc-pm8xxx 1c40000.qcom,spmi:qcom,pm6125@0:qcom,pm6125_rtc: setting system clock to 1971-12-02 20:03:47 UTC (60552227)
+[    0.913053] i2c /dev entries driver
+[    0.914028] i2c_geni 4a84000.i2c: Bus frequency is set to 400000Hz
+[    0.916647] bengal-pinctrl 400000.pinctrl: invalid group "gpior25" for function "gpio"
+[    0.917777] I2C PMIC: i2c_pmic_read: i2c_pmic_read failed for 3 retries, rc = -107
+[    0.917781] I2C PMIC: i2c_pmic_determine_initial_status: Couldn't read irq data rc=-107
+[    0.917785] I2C PMIC: i2c_pmic_probe: Couldn't determine initial status rc=-107
+[    0.917816] i2c_pmic: probe of 0-0028 failed with error -107
+[    0.918198] virtualsar,sar 0-0033: virtualsar_probe
+[    0.918230] parse irq gpio incorrectly
+                
+[    0.918374] input: vitural-sar as /devices/virtual/input/input3
+[    0.918549] after sar_irq_enable,probe end 
+[    0.918878] hyper backlight ic is sgm37603 !
+[    0.919054] i2c i2c-0: Failed to register i2c client lm36923 at 0x36 (-16)
+[    0.919060] i2c i2c-0: of_i2c: Failure registering /soc/i2c@4a84000/lm36923@36
+[    0.919063] i2c i2c-0: Failed to create I2C device for /soc/i2c@4a84000/lm36923@36
+[    0.921049] rc_core: IR Remote Control driver registered, major 507
+[    0.921131] liping led!
+[    0.921260] ir-spi spi0.0: lirc_dev: driver ir-spi registered at minor = 0
+[    0.921332] dvbdev: DVB: registering new adapter (Qualcomm Technologies, Inc. DVB adapter)
+[    0.931083] ERROR: could not get clock /soc/i2c@4a84000/st21nfc@08:nfc_ref_clk(0)
+[    0.941176] Couldn't parse device tree rc=-517
+[    0.959424] reg-cooling-device soc:qcom,rpm-smd:rpm-regulator-smpa3:cx-cdev-lvl: Linked as a consumer to regulator.15
+[    0.959994] reg-cooling-device soc:qcom,rpm-smd:rpm-regulator-smpa5:mx-cdev-lvl: Linked as a consumer to regulator.17
+[    0.967536] device-mapper: uevent: version 1.0.3
+[    0.967816] device-mapper: ioctl: 4.39.0-ioctl (2018-04-03) initialised: dm-devel@redhat.com
+[    0.968429] bt_power_populate_dt_pinfo: bt-reset-gpio not provided in devicetree
+[    0.968435] bt_power_populate_dt_pinfo: wl-reset-gpio not provided in devicetree
+[    0.968500] bt_dt_parse_vreg_info: qca,bt-vdd-ldo: is not provided in device tree
+[    0.968504] bt_dt_parse_vreg_info: qca,bt-chip-pwd: is not provided in device tree
+[    0.968507] bt_dt_parse_vreg_info: qca,bt-vdd-aon: is not provided in device tree
+[    0.968510] bt_dt_parse_vreg_info: qca,bt-vdd-dig: is not provided in device tree
+[    0.968515] bt_dt_parse_vreg_info: qca,bt-vdd-rfa1: is not provided in device tree
+[    0.968519] bt_dt_parse_vreg_info: qca,bt-vdd-rfa2: is not provided in device tree
+[    0.968522] bt_dt_parse_vreg_info: qca,bt-vdd-asd: is not provided in device tree
+[    0.968524] bt_dt_parse_clk_info: clocks is not provided in device tree
+[    0.972084] sdhci: Secure Digital Host Controller Interface driver
+[    0.972089] sdhci: Copyright(c) Pierre Ossman
+[    0.972091] sdhci-pltfm: SDHCI platform and OF driver helper
+[    0.974415] qpnp_vibrator_ldo_probe: Vibrator LDO successfully registered: uV = 3000000, overdrive = disabled
+[    0.975444] usbcore: registered new interface driver usbhid
+[    0.975448] usbhid: USB HID core driver
+[    0.975723] ashmem: initialized
+[    0.975819] wlan_hdd_state wlan major(504) initialized
+[    0.981119] sdhci_msm 4784000.sdhci: core_reset unavailable,err = -2
+[    0.981132] sdhci_msm 4784000.sdhci: Reset data parsing error
+[    0.985593] sdhci_msm 4784000.sdhci: Linked as a consumer to regulator.44
+[    0.985696] sdhci_msm 4784000.sdhci: Linked as a consumer to regulator.27
+[    0.998770] adc_probe : unable to create IPC Logging 0 for qcom,pmi632@2 ADC
+[    0.998782] adc_probe : unable to create IPC Logging 1 for qcom,pmi632@2 ADC
+[    0.999926] adc_probe : unable to create IPC Logging 0 for qcom,pm6125@0 ADC
+[    0.999930] adc_probe : unable to create IPC Logging 1 for qcom,pm6125@0 ADC
+[    1.000651] [l2 counters error]: Registered L2 cache PMU cluster 0
+[    1.000756] [l2 counters error]: Registered L2 cache PMU cluster 1
+[    1.000783] l2cache-pmu soc:l2cache_pmu: CPU0 associated with cluster 0
+[    1.000886] ufshcd-qcom 4804000.ufshc: ufshcd_print_pwr_info:[RX, TX]: gear=[3, 3], lane[1, 1], pwr[FAST MODE, FAST MODE], rate = 2
+[    1.000935] l2cache-pmu soc:l2cache_pmu: CPU1 associated with cluster 0
+[    1.000968] l2cache-pmu soc:l2cache_pmu: CPU2 associated with cluster 0
+[    1.001021] l2cache-pmu soc:l2cache_pmu: CPU3 associated with cluster 0
+[    1.001046] l2cache-pmu soc:l2cache_pmu: CPU4 associated with cluster 1
+[    1.001321] l2cache-pmu soc:l2cache_pmu: CPU5 associated with cluster 1
+[    1.001344] l2cache-pmu soc:l2cache_pmu: CPU6 associated with cluster 1
+[    1.001366] l2cache-pmu soc:l2cache_pmu: CPU7 associated with cluster 1
+[    1.001507] scsi 0:0:0:49488: Well-known LUN    SAMSUNG  KM5C7001DM-B622  0800 PQ: 0 ANSI: 6
+[    1.001638] l2cache-pmu soc:l2cache_pmu: Registered L2 cache PMU using 2 HW PMUs
+[    1.002193] scsi 0:0:0:49476: Well-known LUN    SAMSUNG  KM5C7001DM-B622  0800 PQ: 0 ANSI: 6
+[    1.002696] scsi 0:0:0:49456: Well-known LUN    SAMSUNG  KM5C7001DM-B622  0800 PQ: 0 ANSI: 6
+[    1.003218] scsi 0:0:0:0: Direct-Access     SAMSUNG  KM5C7001DM-B622  0800 PQ: 0 ANSI: 6
+[    1.003567] scsi 0:0:0:1: Direct-Access     SAMSUNG  KM5C7001DM-B622  0800 PQ: 0 ANSI: 6
+[    1.004986] scsi 0:0:0:2: Direct-Access     SAMSUNG  KM5C7001DM-B622  0800 PQ: 0 ANSI: 6
+[    1.005977] scsi 0:0:0:3: Direct-Access     SAMSUNG  KM5C7001DM-B622  0800 PQ: 0 ANSI: 6
+[    1.006296] scsi 0:0:0:4: Direct-Access     SAMSUNG  KM5C7001DM-B622  0800 PQ: 0 ANSI: 6
+[    1.006599] scsi 0:0:0:5: Direct-Access     SAMSUNG  KM5C7001DM-B622  0800 PQ: 0 ANSI: 6
+[    1.008574] sd 0:0:0:0: Power-on or device reset occurred
+[    1.008602] sd 0:0:0:1: Power-on or device reset occurred
+[    1.009118] sd 0:0:0:1: [sdb] Write Protect is off
+[    1.009125] sd 0:0:0:1: [sdb] Mode Sense: 00 32 00 10
+[    1.009138] sd 0:0:0:0: [sda] Write Protect is off
+[    1.009142] sd 0:0:0:0: [sda] Mode Sense: 00 32 00 10
+[    1.009280] sd 0:0:0:1: [sdb] Optimal transfer size 524288 bytes
+[    1.009452] sd 0:0:0:0: [sda] Optimal transfer size 524288 bytes
+[    1.011917]  sdb: sdb1 sdb2
+[    1.012510]  sda: sda1 sda2 sda3 sda4 sda5 sda6 sda7 sda8 sda9 sda10 sda11
+[    1.013620] sd 0:0:0:2: Power-on or device reset occurred
+[    1.013833] sd 0:0:0:3: Power-on or device reset occurred
+[    1.014118] sd 0:0:0:2: [sdc] Write Protect is off
+[    1.014124] sd 0:0:0:2: [sdc] Mode Sense: 00 32 00 10
+[    1.014271] sd 0:0:0:2: [sdc] Optimal transfer size 524288 bytes
+[    1.014491] sd 0:0:0:3: [sdd] Write Protect is off
+[    1.014494] sd 0:0:0:3: [sdd] Mode Sense: 00 32 00 10
+[    1.014642] sd 0:0:0:3: [sdd] Optimal transfer size 524288 bytes
+[    1.015877]  sdc: sdc1 sdc2
+[    1.016769]  sdd: sdd1 sdd2 sdd3
+[    1.017495] sd 0:0:0:4: Power-on or device reset occurred
+[    1.017752] sd 0:0:0:5: Power-on or device reset occurred
+[    1.017985] sd 0:0:0:4: [sde] Write Protect is off
+[    1.017990] sd 0:0:0:4: [sde] Mode Sense: 00 32 00 10
+[    1.018136] sd 0:0:0:4: [sde] Optimal transfer size 524288 bytes
+[    1.018361] sd 0:0:0:5: [sdf] Write Protect is off
+[    1.018365] sd 0:0:0:5: [sdf] Mode Sense: 00 32 00 10
+[    1.018503] sd 0:0:0:5: [sdf] Optimal transfer size 524288 bytes
+[    1.019194] usbcore: registered new interface driver snd-usb-audio
+[    1.020239]  sde: sde1 sde2 sde3 sde4 sde5 sde6 sde7 sde8 sde9 sde10 sde11 sde12 sde13 sde14 sde15 sde16 sde17 sde18 sde19 sde20 sde21 sde22 sde23 sde24 sde25 sde26 sde27 sde28 sde29 sde30 sde31 sde32 sde33 sde34 sde35 sde36 sde37 sde38 sde39 sde40 sde41 sde42 sde43 sde44 sde45 sde46 sde47 sde48 sde49 sde50 sde51 sde52 sde53 sde54 sde55 sde56
+[    1.022868] uaudio-qmi soc:usb_audio_qmi_dev: Linked as a consumer to c600000.apps-smmu
+[    1.023628] mmc0: SDHCI controller on 4784000.sdhci [4784000.sdhci] using 64-bit ADMA in legacy mode
+[    1.024238]  sdf: sdf1 sdf2 sdf3 sdf4 sdf5 sdf6 sdf7
+[    1.030441] msm_vidc_v4l2 5a00000.qcom,vidc:non_secure_cb: Linked as a consumer to c600000.apps-smmu
+[    1.031351] msm_vidc_v4l2 5a00000.qcom,vidc:secure_bitstream_cb: Linked as a consumer to c600000.apps-smmu
+[    1.032614] msm_vidc_v4l2 5a00000.qcom,vidc:secure_pixel_cb: Linked as a consumer to c600000.apps-smmu
+[    1.033671] msm_vidc_v4l2 5a00000.qcom,vidc:secure_non_pixel_cb: Linked as a consumer to c600000.apps-smmu
+[    1.040830] apr_probe: Unable to create ipc log context
+[    1.046153] wsa881x-i2c-codec 0-000e: No cache used with register defaults set!
+[    1.046699] Failed reading reg=5 - retry(0)
+[    1.047310] aw87359_pa_init enter
+[    1.047312] aw87359_pa_init: driver version: v1.0.4
+[    1.047363] aw87359_i2c_probe Enter
+[    1.047585] aw87359_read_chipid: This Chip is aw87359 chipid=0x59
+[    1.047597] aw87359_hw_off enter
+[    1.047633] aw87519_pa_init enter
+[    1.047635] aw87519_pa_init: driver version: v1.0.7
+[    1.047807] aw87519_i2c_probe Enter
+[    1.047830] aw87519_pa 0-0059: aw87519_parse_dt: reset gpio provided ok
+[    1.047849] aw87519_hw_reset enter
+[    1.052722] aw87519_read_chipid This Chip is  AW87519 chipid=0x59
+[    1.052737] aw87519_hw_off enter
+[    1.060296] Failed reading reg=5 - retry(1)
+[    1.090352] Failed reading reg=5 - retry(2)
+[    1.098346] dsi_phy 5e94400.qcom,mdss_dsi_phy0: 5e94400.qcom,mdss_dsi_phy0 supply gdsc not found, using dummy regulator
+[    1.098393] dsi_phy 5e94400.qcom,mdss_dsi_phy0: Linked as a consumer to regulator.0
+[    1.098426] dsi_phy 5e94400.qcom,mdss_dsi_phy0: Linked as a consumer to regulator.17
+[    1.098467] [drm:dsi_phy_driver_probe] [msm-dsi-info]: DSI_0: Probe successful
+[    1.100177] drm_dsi_ctrl 5e94000.qcom,mdss_dsi0_ctrl: 5e94000.qcom,mdss_dsi0_ctrl supply refgen not found, using dummy regulator
+[    1.100200] drm_dsi_ctrl 5e94000.qcom,mdss_dsi0_ctrl: Linked as a consumer to regulator.0
+[    1.100228] drm_dsi_ctrl 5e94000.qcom,mdss_dsi0_ctrl: Linked as a consumer to regulator.40
+[    1.100241] AXI: get_pdata(): Error: Client name not found
+[    1.100244] AXI: msm_bus_cl_get_pdata(): client has to provide missing entry for successful registration
+[    1.100285] [drm:dsi_ctrl_dev_probe] [msm-dsi-info]: dsi-ctrl-0: Probe successful
+[    1.102513] OF: graph: no port node found in /soc/qcom,dsi-display-primary
+[    1.102695] [drm:dsi_panel_get] *ERROR* [msm-dsi-error]: kook: [ft8719 v2 video mode dsi truly panel], gpio=1252
+[    1.106262] msm_drm 5e00000.qcom,mdss_mdp: Linked as a consumer to regulator.10
+[    1.108733] [drm:sde_dbg_init:4760] evtlog_status: enable:11, panic:1, dump:2
+[    1.108865] msm-dsi-display soc:qcom,dsi-display-primary: Linked as a consumer to regulator.31
+[    1.108911] msm-dsi-display soc:qcom,dsi-display-primary: Linked as a consumer to regulator.47
+[    1.108940] msm-dsi-display soc:qcom,dsi-display-primary: Linked as a consumer to regulator.48
+[    1.109418] [drm:dsi_display_bind] [msm-dsi-info]: Successfully bind display panel 'qcom,mdss_dsi_ft8719_truly_v2_video'
+[    1.109763] hyper:dsi_display_feature_create_sysfs success
+[    1.109782] hyper:dsi_display_whitepoint_create_sysfs success
+[    1.109809] msm_drm 5e00000.qcom,mdss_mdp: bound soc:qcom,dsi-display-primary (ops 0xffffff9f13aca9d8)
+[    1.109910] [drm] mapped mdp address space @0000000060407b7a
+[    1.114615] [drm:_sde_kms_hw_init_blocks:3623] sde hardware revision:0x60030000
+[    1.116160] msmdrm_smmu 5e00000.qcom,mdss_mdp:qcom,smmu_sde_unsec_cb: Linked as a consumer to c600000.apps-smmu
+[    1.116592] [drm] probing device qcom,smmu_sde_unsec
+[    1.116597] [drm] Created domain mdp_ns, secure=0
+[    1.117579] msmdrm_smmu 5e00000.qcom,mdss_mdp:qcom,smmu_sde_sec_cb: Linked as a consumer to c600000.apps-smmu
+[    1.118375] [drm] probing device qcom,smmu_sde_sec
+[    1.118380] [drm] Created domain mdp_s, secure=1
+[    1.118878] WARNING: CPU: 0 PID: 1 at mm/page_alloc.c:4763 __alloc_pages_nodemask+0x10c/0x2730
+[    1.118881] Modules linked in:
+[    1.118890] CPU: 0 PID: 1 Comm: swapper/0 Tainted: G        W         4.19.164-hanikrnlᵇᵉᵉʰᶦᵛᵉ-g0314dcbce1af #1
+[    1.118892] Hardware name: Qualcomm Technologies, Inc. BENGAL IDP (DT)
+[    1.118895] pstate: 20000005 (nzCv daif -PAN -UAO)
+[    1.118899] pc : __alloc_pages_nodemask+0x10c/0x2730
+[    1.118904] lr : kmalloc_order+0x1c/0x40
+[    1.118905] sp : ffffffd2ba89f070
+[    1.118907] x29: ffffffd2ba89f190 x28: ffffffd29b91a004 
+[    1.118910] x27: 0000000000000006 x26: ffffffd29bf68700 
+[    1.118912] x25: 0000000000000010 x24: ffffffd29bf67640 
+[    1.118915] x23: ffffffd2bf833318 x22: 0000000000000000 
+[    1.118918] x21: ffffffd29b919800 x20: ffffffd29b91a418 
+[    1.118920] x19: 00000000006080c0 x18: ffffffd29bf8af08 
+[    1.118923] x17: 000000000007f150 x16: 00000000000000dc 
+[    1.118925] x15: ffffff9f1357c208 x14: ffffff9f1390b19c 
+[    1.118928] x13: 0000000000000030 x12: 0000000000000000 
+[    1.118930] x11: ffffffd2bb349920 x10: 0000000000000030 
+[    1.118934] x9 : 0000000000000040 x8 : 00000033a7710000 
+[    1.118938] x7 : 622d306c656e6170 x6 : ffffffd29b91a014 
+[    1.118940] x5 : 0000000000000018 x4 : 0000000000000000 
+[    1.118943] x3 : 0000000000000000 x2 : 000000000000000f 
+[    1.118945] x1 : 000000000000000f x0 : 000000000060c0c0 
+[    1.118949] 
+               SP: 0xffffffd2ba89eff0:
+[    1.118950] eff0  9bf67640 ffffffd2 00000010 00000000 9bf68700 ffffffd2 00000006 00000000
+[    1.118960] f010  9b91a004 ffffffd2 ba89f190 ffffffd2 11377bec ffffff9f ba89f070 ffffffd2
+[    1.118966] f030  1131c98c ffffff9f 20000005 00000000 00000000 00000000 0000001d 00000000
+[    1.118972] f050  ffffffff ffffffff 9bf6bf68 ffffffd2 ba89f190 ffffffd2 1131c98c ffffff9f
+[    1.118979] f070  ba89f0c0 ffffffd2 1357ce90 ffffff9f 0000000a 00000000 00000000 00000000
+[    1.118985] f090  9eb06291 ffffffd2 9eb0721c ffffffd2 ffff0a00 00000000 32343031 00000000
+[    1.118992] f0b0  ba89f130 ffffffd2 000001ed 00000000 ba89f140 ffffffd2 135800c0 ffffff9f
+[    1.118999] f0d0  13b09ef8 ffffff9f 1389aea1 ffffff9f ffffff08 ffff0a00 1389aea5 ffffff9f
+[    1.119006] Call trace:
+[    1.119009]  __alloc_pages_nodemask+0x10c/0x2730
+[    1.119012]  kmalloc_order+0x1c/0x40
+[    1.119016]  __kmalloc+0x1f4/0x2b0
+[    1.119023]  thermal_cooling_device_setup_sysfs+0x5c/0x140
+[    1.119028]  __thermal_cooling_device_register+0x148/0x1010
+[    1.119034]  backlight_device_register+0x190/0x340
+[    1.119041]  sde_connector_init+0x2f0/0xef0
+[    1.119045]  sde_kms_hw_init+0x1718/0x2710
+[    1.119050]  msm_drm_bind+0x550/0xa80
+[    1.119057]  component_master_add_with_match+0x20c/0x320
+[    1.119060]  msm_pdev_probe+0xc4/0x2b0
+[    1.119065]  platform_drv_probe+0x40/0x110
+[    1.119068]  driver_probe_device+0x560/0x1600
+[    1.119071]  driver_attach+0x22c/0x290
+[    1.119074]  bus_add_driver+0x170/0x2b0
+[    1.119077]  driver_register+0x74/0x150
+[    1.119083]  msm_drm_register+0x68/0x70
+[    1.119088]  do_initcalls+0xbc8/0xe84
+[    1.119092]  kernel_init_freeable+0x298/0x348
+[    1.119096]  kernel_init+0x14/0x3d0
+[    1.119101]  ret_from_fork+0x10/0x18
+[    1.119103] ---[ end trace 0b24ea006f676d55 ]---
+[    1.119262] [drm:dsi_panel_get_mode] [msm-dsi-info]: default topology: lm: 1 comp_enc:0 intf: 1
+[    1.120110] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    1.120112] [drm] No driver support for vblank timestamp query.
+[    1.120358] [drm] Initialized msm_drm 1.3.0 20130625 for 5e00000.qcom,mdss_mdp on minor 0
+[    1.120400] [drm] cont_splash enabled in 1 of 1 display(s)
+[    1.120634] [drm:dsi_ctrl_isr_configure] [msm-dsi-info]: dsi-ctrl-0: IRQ 220 registered
+[    1.130264] Failed reading reg=5 - retry(3)
+[    1.165033] msm_cam_smmu soc:qcom,cam_smmu:msm_cam_smmu_tfe: Linked as a consumer to c600000.apps-smmu
+[    1.165902] msm_cam_smmu soc:qcom,cam_smmu:msm_cam_smmu_ope: Linked as a consumer to c600000.apps-smmu
+[    1.166557] msm_cam_smmu soc:qcom,cam_smmu:msm_cam_smmu_cpas_cdm: Linked as a consumer to c600000.apps-smmu
+[    1.168422] cam-cpas 5c11000.qcom,cam-cpas: Linked as a consumer to regulator.1
+[    1.173550] msm_cam_cdm 5c23000.qcom,cpas-cdm0: Linked as a consumer to regulator.1
+[    1.177639] msm_cam_cdm 5c42000.qcom,ope-cdm0: Linked as a consumer to regulator.1
+[    1.180265] Failed reading reg=5 - retry(4)
+[    1.182384] tpg_v1 5c66000.qcom,tpg0: Linked as a consumer to regulator.1
+[    1.184252] tpg_v1 5c68000.qcom,tpg0: Linked as a consumer to regulator.1
+[    1.186603] csid_530 5c6e000.qcom,tfe_csid0: Linked as a consumer to regulator.1
+[    1.186784] csid_530 5c75000.qcom,tfe_csid1: Linked as a consumer to regulator.1
+[    1.186926] csid_530 5c7c000.qcom,tfe_csid2: Linked as a consumer to regulator.1
+[    1.187894] cam_tfe 5c6e000.qcom,tfe0: Linked as a consumer to regulator.1
+[    1.190819] cam_tfe 5c75000.qcom,tfe1: Linked as a consumer to regulator.1
+[    1.193526] cam_tfe 5c7c000.qcom,tfe2: Linked as a consumer to regulator.1
+[    1.198960] cam-cci-driver 5c1b000.qcom,cci0: Linked as a consumer to regulator.1
+[    1.202815] cam-csiphy-driver 5c52000.qcom,csiphy0: Linked as a consumer to regulator.1
+[    1.202989] cam-csiphy-driver 5c53000.qcom,csiphy1: Linked as a consumer to regulator.1
+[    1.203112] cam-csiphy-driver 5c54000.qcom,csiphy2: Linked as a consumer to regulator.1
+[    1.209715] ope 5c42000.qcom,ope: Linked as a consumer to regulator.1
+[    1.214686] GACT probability NOT on
+[    1.214701] Mirror/redirect action on
+[    1.214710] netem: version 1.3
+[    1.214712] u32 classifier
+[    1.214714]     Actions configured
+[    1.215277] xt_time: kernel timezone is -0000
+[    1.215352] gre: GRE over IPv4 demultiplexor driver
+[    1.215354] IPv4 over IPsec tunneling driver
+[    1.215992] Initializing XFRM netlink socket
+[    1.216003] IPsec XFRM device driver
+[    1.216226] NET: Registered protocol family 10
+[    1.216858] Segment Routing with IPv6
+[    1.216910] mip6: Mobile IPv6
+[    1.217361] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    1.217761] NET: Registered protocol family 17
+[    1.217773] NET: Registered protocol family 15
+[    1.217848] l2tp_core: L2TP core driver, V2.0
+[    1.217857] l2tp_ppp: PPPoL2TP kernel driver, V2.0
+[    1.217858] l2tp_ip: L2TP IP encapsulation support (L2TPv3)
+[    1.217870] l2tp_netlink: L2TP netlink interface
+[    1.217893] l2tp_eth: L2TP ethernet pseudowire support (L2TPv3)
+[    1.217894] l2tp_ip6: L2TP IP encapsulation support for IPv6 (L2TPv3)
+[    1.217929] sctp: Hash tables configured (bind 256/256)
+[    1.218084] Key type dns_resolver registered
+[    1.221463] kgsl-3d 5900000.qcom,kgsl-3d0: Linked as a consumer to regulator.11
+[    1.221479] kgsl-3d 5900000.qcom,kgsl-3d0: Linked as a consumer to regulator.12
+[    1.223002] platform 59a0000.qcom,kgsl-iommu:gfx3d_user: Linked as a consumer to 59a0000.kgsl-smmu
+[    1.223506] platform 59a0000.qcom,kgsl-iommu:gfx3d_secure: Linked as a consumer to 59a0000.kgsl-smmu
+[    1.240276] Failed reading reg=5 rc=-107
+[    1.240286] wsa881x-i2c-codec 0-000e: failed to read wsa881x with addr e
+[    1.240290] wsa881x-i2c-codec 0-000e: failed to ping wsa with addr:e, ret = -107
+[    1.240467] wsa881x-i2c-codec: probe of 0-000e failed with error -107
+[    1.247818] msm-dwc3 4e00000.ssusb: Linked as a consumer to regulator.3
+[    1.248578] dwc3 4e00000.dwc3: Failed to get clk 'ref': -2
+[    1.248685] dwc3 4e00000.dwc3: changing max_speed on rev 00000000
+[    1.248992] dwc3 4e00000.dwc3: Error getting ipc_log_ctxt
+[    1.248996] dwc3 4e00000.dwc3: Error getting ipc_log_ctxt for ep_events
+[    1.249380] usb_bam_init: setting SPS_BAM_SMMU_EN flag with (4f04000.qcom,usbbam)
+[    1.249391] sps_register_bam_device : unable to create IPC Logging 0 for bam 0x0000000004f04000
+[    1.249395] sps_register_bam_device : unable to create IPC Logging 1 for bam 0x0000000004f04000
+[    1.249398] sps_register_bam_device : unable to create IPC Logging 2 for bam 0x0000000004f04000
+[    1.249400] sps_register_bam_device : unable to create IPC Logging 3 for bam 0x0000000004f04000
+[    1.249403] sps_register_bam_device : unable to create IPC Logging 4 for bam 0x0000000004f04000
+[    1.249405] sps:BAM 0x0000000004f04000 is registered.
+[    1.250200] Invalid index Defaulting curr to 0
+[    1.250917] ipa_rm ipa_rm_delete_resource:139 IPA RM was not initialized
+[    1.250922] usb_bam_ipa_delete_resources: Failed to delete USB_PROD resource
+[    1.250926] ipa_rm ipa_rm_delete_resource:139 IPA RM was not initialized
+[    1.250927] usb_bam_ipa_delete_resources: Failed to delete USB_CONS resource
+[    1.251207] msm-dwc3 4e00000.ssusb: Dropping the link to regulator.3
+[    1.251833] sec-charger-config=0
+[    1.252265] QCOM-BATT: qcom_batt_create_debugfs: Couldn't create battery debugfs rc=-19
+[    1.252319] PL_DISABLE: CHG_STATE_VOTER,0 voting on of val=1
+[    1.252322] PL_DISABLE: effective vote is now 1 voted by CHG_STATE_VOTER,0
+[    1.252326] PL_DISABLE: TAPER_END_VOTER,1 same vote off of val=0
+[    1.252328] PL_DISABLE: TAPER_END_VOTER,1 Ignoring similar vote off of val=0
+[    1.252330] PL_DISABLE: PARALLEL_PSY_VOTER,2 voting on of val=1
+[    1.252336] PL_DISABLE: PL_INDIRECT_VOTER,3 voting on of val=1
+[    1.252399] PL_DISABLE: PL_DELAY_VOTER,4 voting on of val=1
+[    1.252755] USB_ICL: DEFAULT_VOTER,0 same vote off of val=0
+[    1.252757] USB_ICL: DEFAULT_VOTER,0 voting off of val=0
+[    1.252759] USB_ICL: effective vote is now -22 voted by (null),-22
+[    1.252762] DC_SUSPEND: DEFAULT_VOTER,0 same vote off of val=0
+[    1.252764] DC_SUSPEND: DEFAULT_VOTER,0 voting off of val=0
+[    1.252765] DC_SUSPEND: effective vote is now 0 voted by DEFAULT_VOTER,0
+[    1.252768] FCC: HW_LIMIT_VOTER,0 voting off of val=-22
+[    1.252770] FCC: effective vote is now -22 voted by (null),-22
+[    1.252773] FV: HW_LIMIT_VOTER,0 voting off of val=-22
+[    1.252774] FV: effective vote is now -22 voted by (null),-22
+[    1.252777] FCC: BATT_PROFILE_VOTER,1 voting on of val=2000000
+[    1.252779] FCC: effective vote is now 2000000 voted by BATT_PROFILE_VOTER,1
+[    1.252781] FV: BATT_PROFILE_VOTER,1 voting on of val=4500000
+[    1.252783] FV: effective vote is now 4500000 voted by BATT_PROFILE_VOTER,1
+[    1.252785] USB_ICL: HW_LIMIT_VOTER,1 voting on of val=3000000
+[    1.252787] USB_ICL: effective vote is now 3000000 voted by HW_LIMIT_VOTER,1
+[    1.252809] CHG_DISABLE: DEFAULT_VOTER,0 same vote off of val=0
+[    1.252811] CHG_DISABLE: DEFAULT_VOTER,0 voting off of val=0
+[    1.252812] CHG_DISABLE: effective vote is now 0 voted by DEFAULT_VOTER,0
+[    1.253646] dhx---faling:0
+[    1.253677] USB_ICL: AICL_THRESHOLD_VOTER,2 same vote off of val=0
+[    1.253679] USB_ICL: AICL_THRESHOLD_VOTER,2 Ignoring similar vote off of val=0
+[    1.253733] qcom,qpnp-smb5 1c40000.qcom,spmi:qcom,pmi632@2:qcom,qpnp-smb5: Linked as a consumer to regulator.49
+[    1.253747] TEMP_CHANGE_IRQ_DISABLE: DEFAULT_VOTER,0 voting on of val=1
+[    1.253749] TEMP_CHANGE_IRQ_DISABLE: effective vote is now 1 voted by DEFAULT_VOTER,0
+[    1.253765] USB_ICL: SW_ICL_MAX_VOTER,3 voting on of val=100000
+[    1.253767] USB_ICL: effective vote is now 100000 voted by SW_ICL_MAX_VOTER,3
+[    1.253781] AWAKE: DETACH_DETECT_VOTER,0 voting on of val=1
+[    1.253783] AWAKE: effective vote is now 1 voted by DETACH_DETECT_VOTER,0
+[    1.253861] pmi632_charger: smblib_eval_chg_termination: Couldn't read SOC value, rc=-22
+[    1.254903] current_now=-22
+[    1.255014] PL_DISABLE: ICL_CHANGE_VOTER,6 voting on of val=1
+[    1.255018] PL_ENABLE_INDIRECT: USBIN_I_VOTER,0 same vote off of val=0
+[    1.255020] PL_ENABLE_INDIRECT: USBIN_I_VOTER,0 voting off of val=0
+[    1.255022] PL_ENABLE_INDIRECT: effective vote is now 0 voted by USBIN_I_VOTER,0
+[    1.255024] PL_DISABLE: PL_INDIRECT_VOTER,3 same vote on of val=1
+[    1.255026] PL_DISABLE: PL_INDIRECT_VOTER,3 Ignoring similar vote on of val=1
+[    1.255152] USB_ICL_IRQ_DISABLE: USB_SUSPEND_VOTER,0 same vote off of val=0
+[    1.255154] USB_ICL_IRQ_DISABLE: USB_SUSPEND_VOTER,0 voting off of val=0
+[    1.255156] USB_ICL_IRQ_DISABLE: effective vote is now 0 voted by USB_SUSPEND_VOTER,0
+[    1.255185] PL_DISABLE: ICL_CHANGE_VOTER,6 voting off of val=0
+[    1.255193] QCOM-BATT: pl_fcc_vote_callback: cp_fcc_ua=2000000 total_fcc_ua=2000000 forced_main_fcc=0
+[    1.255198] FCC_MAIN: MAIN_FCC_VOTER,0 voting on of val=2000000
+[    1.255200] FCC_MAIN: effective vote is now 2000000 voted by MAIN_FCC_VOTER,0
+[    1.255224] QCOM-BATT: pl_disable_vote_callback: parallel charging disabled
+[    1.255246] PL_DISABLE: TAPER_END_VOTER,1 same vote off of val=0
+[    1.255247] PL_DISABLE: TAPER_END_VOTER,1 Ignoring similar vote off of val=0
+[    1.255250] PL_DISABLE: PL_TAPER_EARLY_BAD_VOTER,7 same vote off of val=0
+[    1.255252] PL_DISABLE: PL_TAPER_EARLY_BAD_VOTER,7 Ignoring similar vote off of val=0
+[    1.255255] PL_DISABLE: ICL_LIMIT_VOTER,8 same vote off of val=0
+[    1.255256] PL_DISABLE: ICL_LIMIT_VOTER,8 Ignoring similar vote off of val=0
+[    1.255268] PL_DISABLE: CHG_STATE_VOTER,0 same vote on of val=1
+[    1.255270] PL_DISABLE: CHG_STATE_VOTER,0 Ignoring similar vote on of val=1
+[    1.255290] PL_ENABLE_INDIRECT: USBIN_I_VOTER,0 same vote off of val=0
+[    1.255291] PL_ENABLE_INDIRECT: USBIN_I_VOTER,0 Ignoring similar vote off of val=0
+[    1.255295] QCOM-BATT: pl_fcc_vote_callback: cp_fcc_ua=2000000 total_fcc_ua=2000000 forced_main_fcc=0
+[    1.255298] FCC_MAIN: MAIN_FCC_VOTER,0 same vote on of val=2000000
+[    1.255299] FCC_MAIN: MAIN_FCC_VOTER,0 Ignoring similar vote on of val=2000000
+[    1.255310] QCOM-BATT: pl_disable_vote_callback: parallel charging disabled
+[    1.256186] bcl_soc:bcl_read_soc battery percentage read error:-61
+[    1.260677] USB_LIMITED_IRQ_DISABLE: CHARGER_TYPE_VOTER,0 voting on of val=1
+[    1.260682] USB_LIMITED_IRQ_DISABLE: effective vote is now 1 voted by CHARGER_TYPE_VOTER,0
+[    1.260688] USB_HDC_IRQ_DISABLE: CHARGER_TYPE_VOTER,0 voting on of val=1
+[    1.260690] USB_HDC_IRQ_DISABLE: effective vote is now 1 voted by CHARGER_TYPE_VOTER,0
+[    1.260697] PL_DISABLE: ICL_CHANGE_VOTER,6 voting on of val=1
+[    1.260700] PL_ENABLE_INDIRECT: USBIN_I_VOTER,0 same vote off of val=0
+[    1.260703] PL_ENABLE_INDIRECT: USBIN_I_VOTER,0 Ignoring similar vote off of val=0
+[    1.260802] USB_ICL_IRQ_DISABLE: USB_SUSPEND_VOTER,0 same vote off of val=0
+[    1.260804] USB_ICL_IRQ_DISABLE: USB_SUSPEND_VOTER,0 Ignoring similar vote off of val=0
+[    1.260837] PL_DISABLE: ICL_CHANGE_VOTER,6 voting off of val=0
+[    1.260901] SMB5 status - usb:present=0 type=0 batt:present = 1 health = 1 charge = 1
+[    1.260973] QPNP SMB5 probed successfully
+[    1.261342] QG-K: qg_parse_dt: PMIC subtype 37 Digital major 2
+[    1.261374] QG-K: qg_parse_s2_dt: DT: S2 FIFO length=5 low_vbat_length=2 acc_length=128 acc_interval=100
+[    1.261389] QG-K: qg_parse_cl_dt: DT: cl_min_start_soc=10 cl_max_start_soc=15 cl_min_temp=150 cl_max_temp=500 chip->cl->dt.cl_wt_enable=0
+[    1.261393] QG-K: qg_parse_dt: DT: OCV timer_expiry =-22min ocv_tol_threshold=-22uV
+[    1.261421] QG-K: qg_parse_dt: DT: vbatt_empty_mv=3200mV vbatt_low_mv=3500mV delta_soc=1 ext-sns=0
+[    1.261453] QG-K: qg_set_wa_flags: wa_flags = 2
+[    1.261483] QG-K: qg_master_hold: Master hold = 1
+[    1.261567] QG-K: qg_process_accumulator: ACC v_avg=4105088uV i_avg=485229uA interval=300 count=15
+[    1.261641] QG-K: qg_master_hold: Master hold = 0
+[    1.274443] QG-K: qg_vbat_thresholds_config: VBAT LOW threshold updated to 3500mV temp=188
+[    1.275507] QG-K: get_batt_id_ohm: batt_id_mv=763, batt_id_ohm=68634
+[    1.276498] QG-K: get_batt_id_ohm: batt_id_mv=763, batt_id_ohm=68634
+[    1.277228] batt_id_kohm=68
+[    1.277237] of_batterydata_get_best_profile: NVT found
+[    1.277559] QG-K: qg_batterydata_init: QG Battery-profile loaded
+[    1.277571] QG-K: qg_load_battery_profile: profile=NVT FV=4450000uV FCC=3000ma
+[    1.277574] QG-K: qg_setup_battery: battery_missing=0 batt_id_ohm=68634 Ohm profile_loaded=1 profile=NVT
+[    1.277614] QG-K: qg_register_device: '/dev/qg' successfully created
+[    1.277628] QG-K: qg_sanitize_sdam: SDAM valid
+[    1.277728] QG-K: qg_determine_pon_soc: S7_PON_OCV OCV=4162506
+[    1.277739] QG-K: qg_determine_pon_soc: S3_GOOD_OCV OCV=6377865
+[    1.277750] QG-K: qg_determine_pon_soc: S3_LAST_OCV OCV=6377865
+[    1.277761] QG-K: qg_determine_pon_soc: SDAM_PON_OCV OCV=4155305
+[    1.278445] mmc0: new ultra high speed SDR104 SDXC card at address aaaa
+[    1.278949] QG-K: qg_determine_pon_soc: Shutdown: Valid=1 SOC=80 OCV=4194600uV time=60552150secs temp=180, time_now=60552227secs temp_now=188 S7_soc=78
+[    1.278951] QG-K: qg_determine_pon_soc: Using SHUTDOWN_SOC @ PON
+[    1.279676] sdhci_msm_pm_qos_cpu_init (): voted for group #0 (mask=0xf) latency=-1
+[    1.279680] sdhci_msm_pm_qos_cpu_init (): voted for group #1 (mask=0xf0) latency=-1
+[    1.279692] mmcblk0: mmc0:aaaa SC64G 59.5 GiB 
+[    1.280182] thermal test,the thermal_level=0
+[    1.280188] CHG_DISABLE: THERMAL_DAEMON_VOTER,1 same vote off of val=0
+[    1.280190] CHG_DISABLE: THERMAL_DAEMON_VOTER,1 Ignoring similar vote off of val=0
+[    1.280195] FCC: THERMAL_DAEMON_VOTER,3 voting on of val=3000000
+[    1.280199] pmi632_charger: smblib_set_prop_system_temp_level: system_temp_level = 0, ibat =3000000
+[    1.280201] thermal test,the thermal_level=0
+[    1.280203] CHG_DISABLE: THERMAL_DAEMON_VOTER,1 same vote off of val=0
+[    1.280205] CHG_DISABLE: THERMAL_DAEMON_VOTER,1 Ignoring similar vote off of val=0
+[    1.280207] FCC: THERMAL_DAEMON_VOTER,3 same vote on of val=3000000
+[    1.280209] FCC: THERMAL_DAEMON_VOTER,3 Ignoring similar vote on of val=3000000
+[    1.280211] pmi632_charger: smblib_set_prop_system_temp_level: system_temp_level = 0, ibat =3000000
+[    1.280267] QG-K: qg_store_soc_params: SDAM write param 0 value=1
+[    1.280278] QG-K: qg_store_soc_params: SDAM write param 1 value=80
+[    1.280289] QG-K: qg_store_soc_params: SDAM write param 2 value=188
+[    1.280300] QG-K: qg_store_soc_params: SDAM write param 3 value=0
+[    1.280314] QG-K: qg_store_soc_params: SDAM write param 4 value=4194600
+[    1.280327] QG-K: qg_store_soc_params: SDAM write param 5 value=0
+[    1.280340] QG-K: qg_store_soc_params: SDAM write param 6 value=60552227
+[    1.280351] QG-K: qg_determine_pon_soc: using SHUTDOWN_SOC @ PON ocv_uv=4194600uV soc=80
+[    1.281087] current_now=-22
+[    1.281551] bcl_soc:bcl_read_soc battery percentage read error:-61
+[    1.282439] PL_DISABLE: TAPER_END_VOTER,1 same vote off of val=0
+[    1.282442] PL_DISABLE: TAPER_END_VOTER,1 Ignoring similar vote off of val=0
+[    1.282446] PL_DISABLE: PL_TAPER_EARLY_BAD_VOTER,7 same vote off of val=0
+[    1.282448] PL_DISABLE: PL_TAPER_EARLY_BAD_VOTER,7 Ignoring similar vote off of val=0
+[    1.282451] PL_DISABLE: ICL_LIMIT_VOTER,8 same vote off of val=0
+[    1.282453] PL_DISABLE: ICL_LIMIT_VOTER,8 Ignoring similar vote off of val=0
+[    1.282465] PL_DISABLE: CHG_STATE_VOTER,0 same vote on of val=1
+[    1.282466] PL_DISABLE: CHG_STATE_VOTER,0 Ignoring similar vote on of val=1
+[    1.282489] PL_ENABLE_INDIRECT: USBIN_I_VOTER,0 same vote off of val=0
+[    1.282491] PL_ENABLE_INDIRECT: USBIN_I_VOTER,0 Ignoring similar vote off of val=0
+[    1.282501] QCOM-BATT: pl_fcc_vote_callback: cp_fcc_ua=2000000 total_fcc_ua=2000000 forced_main_fcc=0
+[    1.282507] FCC_MAIN: MAIN_FCC_VOTER,0 same vote on of val=2000000
+[    1.282509] FCC_MAIN: MAIN_FCC_VOTER,0 Ignoring similar vote on of val=2000000
+[    1.282525] QCOM-BATT: pl_disable_vote_callback: parallel charging disabled
+[    1.282553]  mmcblk0: p1
+[    1.283122] FV: BATT_PROFILE_VOTER,1 voting on of val=4450000
+[    1.283125] FV: effective vote is now 4450000 voted by BATT_PROFILE_VOTER,1
+[    1.283139] FCC: BATT_PROFILE_VOTER,1 voting on of val=3000000
+[    1.283141] FCC: effective vote is now 3000000 voted by BATT_PROFILE_VOTER,1
+[    1.283147] QCOM-BATT: pl_fcc_vote_callback: cp_fcc_ua=3000000 total_fcc_ua=3000000 forced_main_fcc=0
+[    1.283150] FCC_MAIN: MAIN_FCC_VOTER,0 voting on of val=3000000
+[    1.283152] FCC_MAIN: effective vote is now 3000000 voted by MAIN_FCC_VOTER,0
+[    1.283173] QCOM-BATT: pl_disable_vote_callback: parallel charging disabled
+[    1.283287] QG-K: qg_status_change_work: charge_status=2 charge_done=0
+[    1.283556] QG-K: qg_request_interrupt: IRQ qg-vbat-low registered wakeable=1
+[    1.283755] QG-K: qg_request_interrupt: IRQ qg-vbat-empty registered wakeable=1
+[    1.283888] QG-K: qg_request_interrupt: IRQ qg-fifo-done registered wakeable=1
+[    1.284011] QG-K: qg_request_interrupt: IRQ qg-good-ocv registered wakeable=1
+[    1.284074] QG-K: qpnp_qg_probe: QG initialized! battery_profile=NVT SOC=80 QG_subtype=3 QG_version=QG_PMIC5 QG_mode=QG_V_I
+[    1.290145] USB_ICL: DEBUG_BOARD_VOTER,9 same vote off of val=0
+[    1.290147] USB_ICL: DEBUG_BOARD_VOTER,9 Ignoring similar vote off of val=0
+[    1.290151] DC_SUSPEND: DEBUG_BOARD_VOTER,1 same vote off of val=0
+[    1.290152] DC_SUSPEND: DEBUG_BOARD_VOTER,1 Ignoring similar vote off of val=0
+[    1.290883] batt_id_kohm=68
+[    1.290892] of_batterydata_get_best_profile: NVT found
+[    1.291238] current_now=596008
+[    1.291361] PL_DISABLE: TAPER_END_VOTER,1 same vote off of val=0
+[    1.291363] PL_DISABLE: TAPER_END_VOTER,1 Ignoring similar vote off of val=0
+[    1.291368] PL_DISABLE: PL_TAPER_EARLY_BAD_VOTER,7 same vote off of val=0
+[    1.291370] PL_DISABLE: PL_TAPER_EARLY_BAD_VOTER,7 Ignoring similar vote off of val=0
+[    1.291373] PL_DISABLE: ICL_LIMIT_VOTER,8 same vote off of val=0
+[    1.291374] PL_DISABLE: ICL_LIMIT_VOTER,8 Ignoring similar vote off of val=0
+[    1.291387] PL_DISABLE: CHG_STATE_VOTER,0 same vote on of val=1
+[    1.291389] PL_DISABLE: CHG_STATE_VOTER,0 Ignoring similar vote on of val=1
+[    1.291413] PL_ENABLE_INDIRECT: USBIN_I_VOTER,0 same vote off of val=0
+[    1.291415] PL_ENABLE_INDIRECT: USBIN_I_VOTER,0 Ignoring similar vote off of val=0
+[    1.291425] QCOM-BATT: pl_fcc_vote_callback: cp_fcc_ua=3000000 total_fcc_ua=3000000 forced_main_fcc=0
+[    1.291431] FCC_MAIN: MAIN_FCC_VOTER,0 same vote on of val=3000000
+[    1.291433] FCC_MAIN: MAIN_FCC_VOTER,0 Ignoring similar vote on of val=3000000
+[    1.291448] QCOM-BATT: pl_disable_vote_callback: parallel charging disabled
+[    1.295718] QG-K: qg_charge_full_update: msoc=80 health=1 charge_full=0 charge_done=0
+[    1.295814] QG-K: qg_status_change_work: charge_status=2 charge_done=0
+[    1.296818] QG-K: qg_charge_full_update: msoc=80 health=1 charge_full=0 charge_done=0
+[    1.306824] msm-dwc3 4e00000.ssusb: Linked as a consumer to regulator.3
+[    1.307610] dwc3 4e00000.dwc3: Failed to get clk 'ref': -2
+[    1.307707] dwc3 4e00000.dwc3: changing max_speed on rev 00000000
+[    1.308005] dwc3 4e00000.dwc3: Error getting ipc_log_ctxt
+[    1.308008] dwc3 4e00000.dwc3: Error getting ipc_log_ctxt for ep_events
+[    1.308377] usb_bam_init: setting SPS_BAM_SMMU_EN flag with (4f04000.qcom,usbbam)
+[    1.308391] sps_register_bam_device : unable to create IPC Logging 0 for bam 0x0000000004f04000
+[    1.308395] sps_register_bam_device : unable to create IPC Logging 1 for bam 0x0000000004f04000
+[    1.308397] sps_register_bam_device : unable to create IPC Logging 2 for bam 0x0000000004f04000
+[    1.308400] sps_register_bam_device : unable to create IPC Logging 3 for bam 0x0000000004f04000
+[    1.308402] sps_register_bam_device : unable to create IPC Logging 4 for bam 0x0000000004f04000
+[    1.308405] sps:BAM 0x0000000004f04000 is registered.
+[    1.309177] msm-dwc3 4e00000.ssusb: Linked as a consumer to regulator.49
+[    1.311977] registered taskstats version 1
+[    1.311980] Loading compiled-in X.509 certificates
+[    1.312134] Key type ._fscrypt registered
+[    1.312136] Key type .fscrypt registered
+[    1.312138] Key type fscrypt-provisioning registered
+[    1.312412] pstore: Using compression: deflate
+[    1.314533] lrng_drng_mgr: Initial DRNG initialized triggering first seeding
+[    1.314562] Error: swapper/0: fastrpc_device_init: failed to create debugfs root dir
+[    1.315230] fastrpc soc:qcom,msm-adsprpc-mem: for adsp_rh segments only will be dumped.
+[    1.315371] adsprpc: init_secure_vmid_list: secure VMID = 22
+[    1.315374] adsprpc: init_secure_vmid_list: secure VMID = 37
+[    1.315399] adsprpc: fastrpc_probe: service location enabled for avs/audio (audio_pdr_adsprpc)
+[    1.315403] adsprpc: fastrpc_probe: service location enabled for tms/servreg (sensors_pdr_adsprpc)
+[    1.315958] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb1: Linked as a consumer to c600000.apps-smmu
+[    1.316965] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb2: Linked as a consumer to c600000.apps-smmu
+[    1.317724] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb3: Linked as a consumer to c600000.apps-smmu
+[    1.318437] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb4: Linked as a consumer to c600000.apps-smmu
+[    1.319178] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb5: Linked as a consumer to c600000.apps-smmu
+[    1.319838] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb6: Linked as a consumer to c600000.apps-smmu
+[    1.320696] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb9: Linked as a consumer to c600000.apps-smmu
+[    1.321479] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb10: Linked as a consumer to c600000.apps-smmu
+[    1.322138] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb11: Linked as a consumer to c600000.apps-smmu
+[    1.322348] msm-dwc3 4e00000.ssusb: DWC3 exited from low power mode
+[    1.323049] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb12: Linked as a consumer to c600000.apps-smmu
+[    1.323845] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb13: Linked as a consumer to c600000.apps-smmu
+[    1.324585] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb14: Linked as a consumer to c600000.apps-smmu
+[    1.325644] msm-dwc3 4e00000.ssusb: DWC3 in low power mode
+[    1.327102] adsprpc: fastrpc_device_init: SSR notifier registered for adsp
+[    1.327107] adsprpc: fastrpc_device_init: SSR notifier registered for modem
+[    1.327112] adsprpc: fastrpc_device_init: SSR notifier registered for slpi
+[    1.327115] adsprpc: fastrpc_device_init: SSR notifier registered for cdsp
+[    1.328004] i2c_pmic 0-0009: ignoring dependency for device, assuming no driver
+[    1.328410] ngd_msm_ctrl a5c0000.slim: error creating ipc_logging context
+[    1.328415] ngd_msm_ctrl a5c0000.slim: error creating ipc_error_logging context
+[    1.330971] input: gpio-keys as /devices/platform/soc/soc:gpio_keys/input/input4
+[    1.332108] [NVT-ts] nvt_driver_init 2736: start
+[    1.332159] [NVT-ts] nvt_ts_probe 1778: start
+[    1.332162] [NVT-ts] check_dt 2518: chenwenmin  
+[    1.332166] [NVT-ts] check_dt 2521: chenwenmin  panel count=3
+[    1.332173] [NVT-ts] check_dt 2529: chenwenmin node=000000006cfbc64c name=qcom,mdss_dsi_td4330_truly_v2_video
+[    1.332189] [NVT-ts] check_dt 2532: chenwenmin IS_ERR(panel)=1 
+[    1.332192] [NVT-ts] check_dt 2533: chenwenmin panel=000000001457978b 
+[    1.332196] [NVT-ts] check_dt 2529: chenwenmin node=00000000620dadf2 name=qcom,mdss_dsi_nt36672d_tianma_v2_video
+[    1.332207] [NVT-ts] check_dt 2532: chenwenmin IS_ERR(panel)=1 
+[    1.332209] [NVT-ts] check_dt 2533: chenwenmin panel=000000001457978b 
+[    1.332212] [NVT-ts] check_dt 2529: chenwenmin node=00000000bbb701cd name=qcom,mdss_dsi_nt36672d_xinli_v2_video
+[    1.332222] [NVT-ts] check_dt 2532: chenwenmin IS_ERR(panel)=1 
+[    1.332224] [NVT-ts] check_dt 2533: chenwenmin panel=000000001457978b 
+[    1.332226] [NVT-ts] check_dt 2549: chenwenmin no find drm_panel
+[    1.332230] [NVT-ts] nvt_ts_probe 1781: nvt_ts_probe: novatek not actived
+[    1.332253] [NVT-ts] nvt_driver_init 2745: finished
+[    1.332556] [FTS_TS/I]fts_ts_probe:Touch Screen(SPI BUS) driver prboe...
+[    1.332559] [FTS_TS/I]fill_ctrl_data:read spi-cs-clk-delay failed!(-22)
+
+[    1.332565] [FTS_TS/I]fts_ts_probe_entry:Focaltech V3.2 20200422
+[    1.332570] [FTS_TS/I]fts_get_dt_coords:display x(0 1080) y(0 2340)
+[    1.332590] [FTS_TS/I]fts_parse_dt:max touch number:10, irq gpio:1260, reset gpio:1270
+[    1.332602] [FTS_TS/I]drm_check_dt:find drm_panel successfully
+[    1.332673] i2c_pmic 0-0009: ignoring dependency for device, assuming no driver
+[    1.333692] input: fts_ts as /devices/platform/soc/4a88000.spi/spi_master/spi1/spi1.0/input/input5
+[    1.333761] 1727 fts_ts_probe_entry wo shi miaozhichao
+[    1.333763] [FTS_TS/I]fts_ts_get_regulator:get/put regulator : 1
+[    1.333805] fts_ts spi1.0: Linked as a consumer to regulator.31
+[    1.333846] fts_ts spi1.0: Linked as a consumer to regulator.47
+[    1.333864] fts_ts spi1.0: Linked as a consumer to regulator.48
+[    1.333867] [FTS_TS/I]fts_ts_enable_regulator:enable touch regulator
+[    1.362866] spi_geni 4a88000.spi: tx_fifo 16 rx_fifo 16 tx_width 32
+[    1.391313] [FTS_TS/I]fts_get_ic_information:get ic information, chip id = 0x8719
+[    1.391324] [FTS_TS/I]fts_create_apk_debug_channel:Create proc entry success!
+[    1.391342] [FTS_TS/I]fts_create_sysfs:[EX]: sysfs_create_group() succeeded!!
+[    1.391347] [FTS_TS/I]fts_extra_proc_init:create proc/fts_tp_info Succeeded!
+
+[    1.391349] [FTS_TS][TEST]fts_tp_data_dump_proc_init: Enter
+[    1.391353] [FTS_TS/I]fts_tp_data_dump_proc_init:create /proc/tp_data_dump
+[    1.391366] [FTS_TS][TEST]fts_test_init: Enter
+[    1.391367] [FTS_TS][TEST]fts_tp_differ_proc: Enter
+[    1.391372] [FTS_TS/I][TEST]fts_test_func_init:init test function
+[    1.391377] [FTS_TS/I][TEST]fts_test_func_init:match test function,type:d
+[    1.391383] [FTS_TS][TEST]fts_test_init:create proc entry self_test success
+[    1.391386] [FTS_TS][TEST]fts_test_init:sysfs(test) create successfully
+[    1.391388] [FTS_TS][TEST]fts_test_init: Exit(2371)
+[    1.391391] [FTS_TS/I]focal_proc_tp_lockdown_info:Sucess to creat focal_tp_lockdown_info /proc
+[    1.391406] [FTS_TS/I]fts_irq_registration:irq:279, flag:2002
+[    1.391581] [FTS_TS/I]fts_fwupg_init:fw upgrade init function
+[    1.391584] [FTS_TS/I]fts_fwupg_init:match upgrade setting,type(ID):0x8719
+[    1.391596] [FTS_TS/I]fts_fwupg_work:fw upgrade work function
+[    1.391600] [FTS_TS/I]fts_ts_probe:Touch Screen(SPI BUS) driver prboe successfully
+[    1.391665] i2c_pmic 0-0009: ignoring dependency for device, assuming no driver
+[    1.392973] lpm_levels: Cluster (system) stats not registered
+[    1.392976] lpm_levels: Cluster (perf) stats not registered
+[    1.392978] lpm_levels: Cluster (pwr) stats not registered
+[    1.393547] i2c_pmic 0-0009: ignoring dependency for device, assuming no driver
+[    1.398102] rmnet_ipa3 started initialization
+[    1.398872] RNDIS_IPA module is loaded.
+[    1.399367] i2c_pmic 0-0009: ignoring dependency for device, assuming no driver
+[    1.401593] i2c_pmic 0-0009: ignoring dependency for device, assuming no driver
+[    1.402654] msm notifier probed successfully
+[    1.403406] OF: /soc/qcom,mdss_rotator: could not get #list-cells for /soc/qcom,mdss_mdp
+[    1.403419] sde_mdp_parse_dt_prop_len: <SDEROT_INFO> prop qcom,mdss-rot-vbif-memtype : doesn't exist in device tree
+[    1.403428] sde_mdp_parse_dt_prop_len: <SDEROT_INFO> prop qcom,mdss-inline-rot-qos-lut : doesn't exist in device tree
+[    1.403431] sde_mdp_parse_dt_prop_len: <SDEROT_INFO> prop qcom,mdss-inline-rot-danger-lut : doesn't exist in device tree
+[    1.403433] sde_mdp_parse_dt_prop_len: <SDEROT_INFO> prop qcom,mdss-inline-rot-safe-lut : doesn't exist in device tree
+[    1.403876] sde_smmu 5e00000.qcom,mdss_rotator:qcom,smmu_rot_unsec_cb: Linked as a consumer to c600000.apps-smmu
+[    1.404006] i2c_pmic 0-0009: ignoring dependency for device, assuming no driver
+[    1.404724] sde_smmu_probe: <SDEROT_INFO> iommu v2 domain[0] mapping and clk register successful!
+[    1.404970] sde_smmu 5e00000.qcom,mdss_rotator:qcom,smmu_rot_sec_cb: Linked as a consumer to c600000.apps-smmu
+[    1.405425] i2c_pmic 0-0009: ignoring dependency for device, assuming no driver
+[    1.406102] sde_smmu_probe: <SDEROT_INFO> iommu v2 domain[1] mapping and clk register successful!
+[    1.406396] i2c_pmic 0-0009: ignoring dependency for device, assuming no driver
+[    1.406898] No change in context(0==0), skip
+[    1.407765] sde_rotator 5e00000.qcom,mdss_rotator: <SDEROT_INFO> SDE v4l2 rotator probe success
+[    1.408857] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    1.408975] i2c_pmic 0-0009: ignoring dependency for device, assuming no driver
+[    1.409797] WARNING: CPU: 0 PID: 1 at lib/scatterlist.c:761 mpi_read_raw_from_sgl+0x398/0x3d0
+[    1.409799] Modules linked in:
+[    1.409806] CPU: 0 PID: 1 Comm: swapper/0 Tainted: G        W         4.19.164-hanikrnlᵇᵉᵉʰᶦᵛᵉ-g0314dcbce1af #1
+[    1.409808] Hardware name: Qualcomm Technologies, Inc. BENGAL IDP (DT)
+[    1.409811] pstate: 80000005 (Nzcv daif -PAN -UAO)
+[    1.409813] pc : mpi_read_raw_from_sgl+0x398/0x3d0
+[    1.409815] lr : mpi_read_raw_from_sgl+0x280/0x3d0
+[    1.409817] sp : ffffffd2ba89f700
+[    1.409818] x29: ffffffd2ba89f750 x28: ffffff9f13cd32c0 
+[    1.409821] x27: 000000000000001c x26: ffffffd2978e6fc2 
+[    1.409824] x25: ffffff9f13b08cb6 x24: 0000000000000000 
+[    1.409826] x23: 0000000000000000 x22: ffffffd297f04c00 
+[    1.409829] x21: 0000000000000100 x20: 0000000000000800 
+[    1.409831] x19: 0000000000000100 x18: 000000000000000a 
+[    1.409834] x17: 000000000000001f x16: 0000000000000002 
+[    1.409836] x15: 0000000000000002 x14: 0000000000000004 
+[    1.409839] x13: ffffffbf00000000 x12: ffffffbf46000000 
+[    1.409842] x11: 0000000000000087 x10: 0000000000000000 
+[    1.409844] x9 : 0000000000000100 x8 : 0000000000000000 
+[    1.409847] x7 : ffffffd2ba89f6bc x6 : ffffff9f13959987 
+[    1.409849] x5 : 0000000000000000 x4 : ffffff9f1394c628 
+[    1.409852] x3 : ffffff9f1394c618 x2 : 0000000000000009 
+[    1.409854] x1 : 0000000000000100 x0 : 0000000000000001 
+[    1.409857] 
+               SP: 0xffffffd2ba89f680:
+[    1.409859] f680  00000000 00000000 13b08cb6 ffffff9f 978e6fc2 ffffffd2 0000001c 00000000
+[    1.409867] f6a0  13cd32c0 ffffff9f ba89f750 ffffffd2 11999f00 ffffff9f ba89f700 ffffffd2
+[    1.409873] f6c0  1199a018 ffffff9f 80000005 00000000 00000020 00000000 00000100 00000000
+[    1.409879] f6e0  ffffffff ffffffff 11999f00 ffffff9f ba89f750 ffffffd2 1199a018 ffffff9f
+[    1.409885] f700  00000009 00000000 4a5fc100 ffffffbf 97f04c00 ffffffd2 00000100 00000000
+[    1.409891] f720  00000000 00000000 ba89f8b8 ffffffd2 00000000 00000001 00000001 00000000
+[    1.409897] f740  00000c00 00000100 00000005 00000000 ba89f7a0 ffffffd2 11835310 ffffff9f
+[    1.409903] f760  00000009 00000000 00000100 00000000 978e4780 ffffffd2 97f53300 ffffffd2
+[    1.409909] Call trace:
+[    1.409912]  mpi_read_raw_from_sgl+0x398/0x3d0
+[    1.409916]  rsa_verify+0x60/0x2c0
+[    1.409919]  pkcs1pad_verify+0xf0/0x260
+[    1.409922]  public_key_verify_signature+0x1b8/0x280
+[    1.409925]  x509_check_for_self_signed+0xd8/0x1c0
+[    1.409927]  x509_cert_parse+0x190/0x2a0
+[    1.409929]  x509_key_preparse+0x28/0x260
+[    1.409931]  asymmetric_key_preparse+0x7c/0x120
+[    1.409934]  key_create_or_update+0x1ac/0x4e0
+[    1.409938]  regulatory_init_db+0x26c/0x2e4
+[    1.409941]  do_initcalls+0xd88/0xe84
+[    1.409943]  kernel_init_freeable+0x298/0x348
+[    1.409947]  kernel_init+0x14/0x3d0
+[    1.409951]  ret_from_fork+0x10/0x18
+[    1.409952] ---[ end trace 0b24ea006f676d57 ]---
+[    1.410000] WARNING: CPU: 0 PID: 1 at lib/scatterlist.c:761 sg_miter_next+0x1f0/0x200
+[    1.410000] Modules linked in:
+[    1.410004] CPU: 0 PID: 1 Comm: swapper/0 Tainted: G        W         4.19.164-hanikrnlᵇᵉᵉʰᶦᵛᵉ-g0314dcbce1af #1
+[    1.410005] Hardware name: Qualcomm Technologies, Inc. BENGAL IDP (DT)
+[    1.410007] pstate: 60000005 (nZCv daif -PAN -UAO)
+[    1.410010] pc : sg_miter_next+0x1f0/0x200
+[    1.410012] lr : mpi_read_raw_from_sgl+0x170/0x3d0
+[    1.410013] sp : ffffffd2ba89f6e0
+[    1.410014] x29: ffffffd2ba89f6e0 x28: ffffff9f13cd32c0 
+[    1.410017] x27: 000000000000001c x26: ffffffd2978e6fc2 
+[    1.410020] x25: ffffff9f13b08cb6 x24: 0000000000000020 
+[    1.410022] x23: 0000000000000000 x22: 0000000000000000 
+[    1.410025] x21: 00000000ffffffff x20: 0000000000000100 
+[    1.410027] x19: ffffffd2ba89f708 x18: 000000000000000a 
+[    1.410030] x17: 000000000000001f x16: 0000000000000002 
+[    1.410032] x15: 0000000000000002 x14: 0000000000000014 
+[    1.410035] x13: ffffffd297f05000 x12: 0000000000000000 
+[    1.410037] x11: 0000000000000102 x10: 0000000000000100 
+[    1.410040] x9 : 0000000000000d00 x8 : 0000000000000000 
+[    1.410042] x7 : ffffffd2ba89f6bc x6 : ffffff9f13959987 
+[    1.410044] x5 : 0000000000000000 x4 : ffffff9f1394c628 
+[    1.410047] x3 : ffffff9f1394c618 x2 : 0000000000000009 
+[    1.410049] x1 : 00000000006000c0 x0 : ffffffd2ba89f708 
+[    1.410052] 
+               SP: 0xffffffd2ba89f660:
+[    1.410053] f660  00000020 00000000 13b08cb6 ffffff9f 978e6fc2 ffffffd2 0000001c 00000000
+[    1.410059] f680  13cd32c0 ffffff9f ba89f6e0 ffffffd2 11999df0 ffffff9f ba89f6e0 ffffffd2
+[    1.410066] f6a0  11905c00 ffffff9f 60000005 00000000 11999f00 ffffff9f ba89f700 ffffffd2
+[    1.410072] f6c0  ffffffff ffffffff 80000005 00000000 ba89f6e0 ffffffd2 11905c00 ffffff9f
+[    1.410078] f6e0  ba89f750 ffffffd2 11999df0 ffffff9f 978ed180 ffffffd2 978ed180 ffffffd2
+[    1.410084] f700  00000009 00000000 4a5fc100 ffffffbf 97f04c00 ffffffd2 00000100 00000000
+[    1.410090] f720  00000100 00000000 ba89f8b8 ffffffd2 00000000 00000001 00000001 00000000
+[    1.410096] f740  00000d00 00000000 00000005 00000000 ba89f7a0 ffffffd2 11835310 ffffff9f
+[    1.410101] Call trace:
+[    1.410104]  sg_miter_next+0x1f0/0x200
+[    1.410106]  mpi_read_raw_from_sgl+0x170/0x3d0
+[    1.410108]  rsa_verify+0x60/0x2c0
+[    1.410110]  pkcs1pad_verify+0xf0/0x260
+[    1.410113]  public_key_verify_signature+0x1b8/0x280
+[    1.410115]  x509_check_for_self_signed+0xd8/0x1c0
+[    1.410117]  x509_cert_parse+0x190/0x2a0
+[    1.410119]  x509_key_preparse+0x28/0x260
+[    1.410121]  asymmetric_key_preparse+0x7c/0x120
+[    1.410123]  key_create_or_update+0x1ac/0x4e0
+[    1.410125]  regulatory_init_db+0x26c/0x2e4
+[    1.410127]  do_initcalls+0xd88/0xe84
+[    1.410130]  kernel_init_freeable+0x298/0x348
+[    1.410132]  kernel_init+0x14/0x3d0
+[    1.410135]  ret_from_fork+0x10/0x18
+[    1.410136] ---[ end trace 0b24ea006f676d58 ]---
+[    1.410681] WARNING: CPU: 0 PID: 1 at lib/scatterlist.c:761 sg_copy_from_buffer+0x214/0x220
+[    1.410682] Modules linked in:
+[    1.410685] CPU: 0 PID: 1 Comm: swapper/0 Tainted: G        W         4.19.164-hanikrnlᵇᵉᵉʰᶦᵛᵉ-g0314dcbce1af #1
+[    1.410687] Hardware name: Qualcomm Technologies, Inc. BENGAL IDP (DT)
+[    1.410689] pstate: 40000005 (nZcv daif -PAN -UAO)
+[    1.410691] pc : sg_copy_from_buffer+0x214/0x220
+[    1.410693] lr : sg_copy_from_buffer+0x190/0x220
+[    1.410694] sp : ffffffd2ba89f740
+[    1.410696] x29: ffffffd2ba89f770 x28: ffffffbf46000000 
+[    1.410699] x27: ffffff9f13b0e000 x26: 0000000000000000 
+[    1.410701] x25: 0000000000000e00 x24: 0000000000000020 
+[    1.410704] x23: ffffffd297f04e00 x22: ffffffd2ba89f898 
+[    1.410706] x21: 0000000000000001 x20: 0000000000000020 
+[    1.410709] x19: ffffffd297f04fe0 x18: 6ddd548dc18ce149 
+[    1.410711] x17: ffffffbf4a5fc100 x16: 0000000000000000 
+[    1.410714] x15: ffffffbf00000000 x14: ffffffd2ba8a8000 
+[    1.410716] x13: ffffffbf00000000 x12: 0000000000000020 
+[    1.410719] x11: 0000000000000e00 x10: 0000000000000100 
+[    1.410721] x9 : dead0000000000ff x8 : 0000000000000000 
+[    1.410724] x7 : 8b83031c86375b25 x6 : ffffffd297f04e20 
+[    1.410726] x5 : 0000000000000040 x4 : 0000000000000000 
+[    1.410728] x3 : 0000000000000020 x2 : 0000000000000020 
+[    1.410731] x1 : ffffffd297f05000 x0 : 0000000000000020 
+[    1.410734] 
+               SP: 0xffffffd2ba89f6c0:
+[    1.410735] f6c0  00000020 00000000 00000e00 00000000 00000000 00000000 13b0e000 ffffff9f
+[    1.410741] f6e0  46000000 ffffffbf ba89f770 ffffffd2 11906110 ffffff9f ba89f740 ffffffd2
+[    1.410747] f700  11906194 ffffff9f 40000005 00000000 00000000 00000000 00000000 00000000
+[    1.410753] f720  ffffffff ffffffff 11376ab0 ffffff9f ba89f770 ffffffd2 11906194 ffffff9f
+[    1.410759] f740  ba89f7a0 ffffffd2 00117f04 00000000 00000001 00000000 4a5fc100 ffffffbf
+[    1.410765] f760  00000009 00000100 ba8a8000 ffffffd2 ba89f7d0 ffffffd2 11837030 ffffff9f
+[    1.410771] f780  13cd32c0 ffffff9f 0000001c 00000000 978e6fc2 ffffffd2 13b08cb6 ffffff9f
+[    1.410777] f7a0  00000009 00000000 000000df 00000000 97f04f01 ffffffd2 ba89f898 ffffffd2
+[    1.410783] Call trace:
+[    1.410786]  sg_copy_from_buffer+0x214/0x220
+[    1.410788]  pkcs1pad_verify+0x250/0x260
+[    1.410791]  public_key_verify_signature+0x1b8/0x280
+[    1.410793]  x509_check_for_self_signed+0xd8/0x1c0
+[    1.410795]  x509_cert_parse+0x190/0x2a0
+[    1.410797]  x509_key_preparse+0x28/0x260
+[    1.410799]  asymmetric_key_preparse+0x7c/0x120
+[    1.410801]  key_create_or_update+0x1ac/0x4e0
+[    1.410803]  regulatory_init_db+0x26c/0x2e4
+[    1.410805]  do_initcalls+0xd88/0xe84
+[    1.410808]  kernel_init_freeable+0x298/0x348
+[    1.410810]  kernel_init+0x14/0x3d0
+[    1.410813]  ret_from_fork+0x10/0x18
+[    1.410814] ---[ end trace 0b24ea006f676d59 ]---
+[    1.410847] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    1.412651] regulator_proxy_consumer_remove_all: removing regulator proxy consumer requests
+[    1.412994] ALSA device list:
+[    1.412996]   No soundcards found.
+[    1.413036] Warning: unable to open an initial console.
+[    1.413197] Freeing unused kernel memory: 768K
+[    1.413259] Run /init as init process
+[    1.900146] fts_ts spi1.0: Falling back to syfs fallback for: focaltech_ts_fw.bin
+[    2.463112] psci: CPU1 killed (polled 0 ms)
+[    2.466440] psci: CPU2 killed (polled 0 ms)
+[    2.469844] psci: CPU3 killed (polled 0 ms)
+[    2.472439] psci: CPU4 killed (polled 0 ms)
+[    2.474438] psci: CPU5 killed (polled 0 ms)
+[    2.478184] psci: CPU6 killed (polled 0 ms)
+[    2.479954] psci: CPU7 killed (polled 0 ms)
+[    3.280781] AWAKE: DETACH_DETECT_VOTER,0 voting off of val=0
+[    3.280798] AWAKE: effective vote is now 0 voted by DETACH_DETECT_VOTER,0
+[    3.280821] batt_id_kohm=68
+[    3.280843] of_batterydata_get_best_profile: NVT found
+[    6.080804] aw87519_cfg_work_routine enter
+[    6.080819] aw87519_kspk_update enter
+[    6.080832] aw87519_drcv_update enter
+[    6.080841] aw87519_hvload_update enter
+[    6.080851] aw87359_cfg_work_routine enter
+[    6.080858] aw87359_dspk_update enter
+[    6.080866] aw87359_drcv_update enter
+[    6.080874] aw87359_abspk_update enter
+[    6.080883] aw87359_abrcv_update enter
+[    6.081199] aw87519_pa 0-0059: Falling back to syfs fallback for: aw87519_kspk.bin
+[    6.081576] aw87519_pa 0-0059: Falling back to syfs fallback for: aw87519_drcv.bin
+[    6.081881] aw87519_pa 0-0059: Falling back to syfs fallback for: aw87519_hvload.bin
+[    6.082177] aw87359_pa 0-0058: Falling back to syfs fallback for: aw87359_dspk.bin
+[    6.082503] aw87359_pa 0-0058: Falling back to syfs fallback for: aw87359_drcv.bin
+[    6.082807] aw87359_pa 0-0058: Falling back to syfs fallback for: aw87359_abspk.bin
+[    6.083301] aw87359_pa 0-0058: Falling back to syfs fallback for: aw87359_abrcv.bin
+[   31.840849] macro_iovdd: disabling
+[   64.480918] [FTS_TS/I]fts_get_fw_file_via_request_firmware:firmware(focaltech_ts_fw.bin) request fail,ret=-11
+[   64.480935] [FTS_TS/I]fts_fwupg_get_fw_file:upgrade fw file len:0
+[   64.480943] [FTS_TS/E]fts_fwupg_get_fw_file:fw file len(0) fail
+[   64.480950] [FTS_TS/E]fts_fwupg_work:get file fail, can't upgrade
+[   65.063479] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[   65.063567] QG-K: qg_process_fifo: FIFO length=5
+[   65.063642] QG-K: qg_process_fifo: FIFO 0 raw_v=21096 uV=4106062 raw_i=3032 uA=462646 interval=100 count=128
+[   65.063688] QG-K: qg_process_fifo: FIFO 1 raw_v=21102 uV=4107229 raw_i=2951 uA=450287 interval=100 count=128
+[   65.063734] QG-K: qg_process_fifo: FIFO 2 raw_v=21100 uV=4106840 raw_i=2953 uA=450592 interval=100 count=128
+[   65.063779] QG-K: qg_process_fifo: FIFO 3 raw_v=21098 uV=4106451 raw_i=2952 uA=450439 interval=100 count=128
+[   65.063825] QG-K: qg_process_fifo: FIFO 4 raw_v=21096 uV=4106062 raw_i=2950 uA=450134 interval=100 count=128
+[   65.065378] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63801
+[   65.065399] QG_WS: FIFO_DONE_VOTER,0 voting on of val=1
+[   65.065410] QG_WS: effective vote is now 1 voted by FIFO_DONE_VOTER,0
+[   69.600953] aw87359_abrcv_cfg_loaded enter
+[   69.600967] aw87359_abrcv_cfg_loaded: failed to read aw87359_abrcv.bin
+[   69.600980] aw87359_abrcv_cfg_loaded:restart hrtimer to load firmware
+[   69.601189] aw87359_abspk_cfg_loaded enter
+[   69.601198] aw87359_abspk_cfg_loaded: failed to read aw87359_abspk.bin
+[   69.601205] aw87359_abspk_cfg_loaded:restart hrtimer to load firmware
+[   69.601358] aw87359_drcv_cfg_loaded enter
+[   69.601367] aw87359_drcv_cfg_loaded: failed to read aw87359_drcv.bin
+[   69.601375] aw87359_drcv_cfg_loaded:restart hrtimer to load firmware
+[   69.601533] aw87359_dspk_cfg_loaded enter
+[   69.601542] aw87359_dspk_cfg_loaded: failed to read aw87359_dspk.bin
+[   69.601550] aw87359_dspk_cfg_loaded:restart hrtimer to load firmware
+[   69.601698] aw87519_hvload_cfg_loaded enter
+[   69.601707] aw87519_hvload_cfg_loaded: failed to read aw87519_hvload.bin
+[   69.601717] aw87519_hvload_cfg_loaded:restart hrtimer to load firmware
+[   69.601868] aw87519_drcv_cfg_loaded enter
+[   69.601877] aw87519_drcv_cfg_loaded: failed to read aw87519_drcv.bin
+[   69.601885] aw87519_drcv_cfg_loaded:restart hrtimer to load firmware
+[   69.602037] aw87519_kspk_cfg_loaded enter
+[   69.602047] aw87519_kspk_cfg_loaded: failed to read aw87519_kspk.bin
+[   69.602054] aw87519_kspk_cfg_loaded:restart hrtimer to load firmware
+[   71.600752] aw87519_cfg_work_routine enter
+[   71.600766] aw87519_kspk_update enter
+[   71.600781] aw87519_drcv_update enter
+[   71.600790] aw87519_hvload_update enter
+[   71.600800] aw87359_cfg_work_routine enter
+[   71.600807] aw87359_dspk_update enter
+[   71.600815] aw87359_drcv_update enter
+[   71.600823] aw87359_abspk_update enter
+[   71.600831] aw87359_abrcv_update enter
+[   71.601080] aw87519_pa 0-0059: Falling back to syfs fallback for: aw87519_kspk.bin
+[   71.601457] aw87519_pa 0-0059: Falling back to syfs fallback for: aw87519_drcv.bin
+[   71.601764] aw87519_pa 0-0059: Falling back to syfs fallback for: aw87519_hvload.bin
+[   71.602065] aw87359_pa 0-0058: Falling back to syfs fallback for: aw87359_dspk.bin
+[   71.602377] aw87359_pa 0-0058: Falling back to syfs fallback for: aw87359_drcv.bin
+[   71.602682] aw87359_pa 0-0058: Falling back to syfs fallback for: aw87359_abspk.bin
+[   71.602977] aw87359_pa 0-0058: Falling back to syfs fallback for: aw87359_abrcv.bin
+[   82.903356] Detected VIPT I-cache on CPU1
+[  105.440488] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  105.440505] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  115.680422] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  115.680438] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  125.920544] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  125.920560] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  128.916576] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[  128.916657] QG-K: qg_process_fifo: FIFO length=5
+[  128.916731] QG-K: qg_process_fifo: FIFO 0 raw_v=21095 uV=4105867 raw_i=2951 uA=450287 interval=100 count=128
+[  128.916777] QG-K: qg_process_fifo: FIFO 1 raw_v=21093 uV=4105478 raw_i=2953 uA=450592 interval=100 count=128
+[  128.916823] QG-K: qg_process_fifo: FIFO 2 raw_v=21089 uV=4104699 raw_i=2973 uA=453644 interval=100 count=128
+[  128.916868] QG-K: qg_process_fifo: FIFO 3 raw_v=21088 uV=4104505 raw_i=2974 uA=453796 interval=100 count=128
+[  128.916913] QG-K: qg_process_fifo: FIFO 4 raw_v=21086 uV=4104115 raw_i=2975 uA=453949 interval=100 count=128
+[  128.918348] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63853
+[  128.918367] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[  128.918379] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[  136.160581] aw87359_abrcv_cfg_loaded enter
+[  136.160595] aw87359_abrcv_cfg_loaded: failed to read aw87359_abrcv.bin
+[  136.160606] aw87359_abrcv_cfg_loaded:restart hrtimer to load firmware
+[  136.160762] aw87359_abspk_cfg_loaded enter
+[  136.160771] aw87359_abspk_cfg_loaded: failed to read aw87359_abspk.bin
+[  136.160778] aw87359_abspk_cfg_loaded:restart hrtimer to load firmware
+[  136.160928] aw87359_drcv_cfg_loaded enter
+[  136.160937] aw87359_drcv_cfg_loaded: failed to read aw87359_drcv.bin
+[  136.160944] aw87359_drcv_cfg_loaded:restart hrtimer to load firmware
+[  136.161095] aw87359_dspk_cfg_loaded enter
+[  136.161104] aw87359_dspk_cfg_loaded: failed to read aw87359_dspk.bin
+[  136.161110] aw87359_dspk_cfg_loaded:restart hrtimer to load firmware
+[  136.161259] aw87519_hvload_cfg_loaded enter
+[  136.161268] aw87519_hvload_cfg_loaded: failed to read aw87519_hvload.bin
+[  136.161277] aw87519_hvload_cfg_loaded:restart hrtimer to load firmware
+[  136.161423] aw87519_drcv_cfg_loaded enter
+[  136.161431] aw87519_drcv_cfg_loaded: failed to read aw87519_drcv.bin
+[  136.161438] aw87519_drcv_cfg_loaded:restart hrtimer to load firmware
+[  136.161602] aw87519_kspk_cfg_loaded enter
+[  136.161610] aw87519_kspk_cfg_loaded: failed to read aw87519_kspk.bin
+[  136.161617] aw87519_kspk_cfg_loaded:restart hrtimer to load firmware
+[  136.161734] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  136.161746] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  138.160318] aw87519_cfg_work_routine enter
+[  138.160332] aw87519_kspk_update enter
+[  138.160344] aw87519_drcv_update enter
+[  138.160353] aw87519_hvload_update enter
+[  138.160362] aw87359_cfg_work_routine enter
+[  138.160369] aw87359_dspk_update enter
+[  138.160377] aw87359_drcv_update enter
+[  138.160385] aw87359_abspk_update enter
+[  138.160394] aw87359_abrcv_update enter
+[  138.160624] aw87519_pa 0-0059: Falling back to syfs fallback for: aw87519_kspk.bin
+[  138.160994] aw87519_pa 0-0059: Falling back to syfs fallback for: aw87519_drcv.bin
+[  138.161300] aw87519_pa 0-0059: Falling back to syfs fallback for: aw87519_hvload.bin
+[  138.161594] aw87359_pa 0-0058: Falling back to syfs fallback for: aw87359_dspk.bin
+[  138.161903] aw87359_pa 0-0058: Falling back to syfs fallback for: aw87359_drcv.bin
+[  138.162204] aw87359_pa 0-0058: Falling back to syfs fallback for: aw87359_abspk.bin
+[  138.162500] aw87359_pa 0-0058: Falling back to syfs fallback for: aw87359_abrcv.bin
+[  146.400424] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  146.400441] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  156.640422] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  156.640437] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  166.880489] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  166.880506] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  177.120479] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  177.120496] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  187.360475] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  187.360491] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  192.771227] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[  192.771308] QG-K: qg_process_fifo: FIFO length=5
+[  192.771381] QG-K: qg_process_fifo: FIFO 0 raw_v=21085 uV=4103921 raw_i=2977 uA=454254 interval=100 count=128
+[  192.771427] QG-K: qg_process_fifo: FIFO 1 raw_v=21084 uV=4103726 raw_i=2978 uA=454407 interval=100 count=128
+[  192.771473] QG-K: qg_process_fifo: FIFO 2 raw_v=21083 uV=4103531 raw_i=2976 uA=454101 interval=100 count=128
+[  192.771518] QG-K: qg_process_fifo: FIFO 3 raw_v=21081 uV=4103142 raw_i=2977 uA=454254 interval=100 count=128
+[  192.771563] QG-K: qg_process_fifo: FIFO 4 raw_v=21079 uV=4102753 raw_i=2978 uA=454407 interval=100 count=128
+[  192.772990] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63854
+[  192.773009] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[  192.773021] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[  197.600503] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  197.600519] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  202.720556] aw87359_abrcv_cfg_loaded enter
+[  202.720570] aw87359_abrcv_cfg_loaded: failed to read aw87359_abrcv.bin
+[  202.720725] aw87359_abspk_cfg_loaded enter
+[  202.720733] aw87359_abspk_cfg_loaded: failed to read aw87359_abspk.bin
+[  202.720896] aw87359_drcv_cfg_loaded enter
+[  202.720905] aw87359_drcv_cfg_loaded: failed to read aw87359_drcv.bin
+[  202.721060] aw87359_dspk_cfg_loaded enter
+[  202.721068] aw87359_dspk_cfg_loaded: failed to read aw87359_dspk.bin
+[  202.721215] aw87519_hvload_cfg_loaded enter
+[  202.721224] aw87519_hvload_cfg_loaded: failed to read aw87519_hvload.bin
+[  202.721366] aw87519_drcv_cfg_loaded enter
+[  202.721374] aw87519_drcv_cfg_loaded: failed to read aw87519_drcv.bin
+[  202.721524] aw87519_kspk_cfg_loaded enter
+[  202.721532] aw87519_kspk_cfg_loaded: failed to read aw87519_kspk.bin
+[  207.840441] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  207.840457] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  218.080456] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  218.080472] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  228.320557] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  228.320574] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  238.560422] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  238.560438] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  248.800517] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  248.800534] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  256.616090] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[  256.616171] QG-K: qg_process_fifo: FIFO length=5
+[  256.616245] QG-K: qg_process_fifo: FIFO 0 raw_v=21078 uV=4102558 raw_i=2977 uA=454254 interval=100 count=128
+[  256.616292] QG-K: qg_process_fifo: FIFO 1 raw_v=21077 uV=4102364 raw_i=2975 uA=453949 interval=100 count=128
+[  256.616337] QG-K: qg_process_fifo: FIFO 2 raw_v=21076 uV=4102169 raw_i=2976 uA=454101 interval=100 count=128
+[  256.616382] QG-K: qg_process_fifo: FIFO 3 raw_v=21075 uV=4101974 raw_i=2977 uA=454254 interval=100 count=128
+[  256.616428] QG-K: qg_process_fifo: FIFO 4 raw_v=21073 uV=4101585 raw_i=2976 uA=454101 interval=100 count=128
+[  256.617852] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63844
+[  256.617871] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[  256.617882] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[  259.040487] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  259.040504] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  269.280428] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  269.280445] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  279.520447] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  279.520463] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  289.760443] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  289.760459] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  300.000425] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  300.000441] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  305.120421] servloc: init_service_locator: init_service_locator: wait for locator service timed out
+[  305.120449] servloc: pd_locator_work: Unable to connect to service locator!, rc = -62
+[  305.120495] servloc: pd_locator_work: Unable to connect to service locator!, rc = -62
+[  305.120515] audio_notifer_reg_service: service SSR_ADSP is in use
+[  305.120555] servloc: pd_locator_work: Unable to connect to service locator!, rc = -62
+[  305.120568] adsprpc: fastrpc_get_service_location_notify: PDR notifier locator for adsp is down for audio_pdr_adsprpc
+[  305.120606] servloc: pd_locator_work: Unable to connect to service locator!, rc = -62
+[  305.120616] adsprpc: fastrpc_get_service_location_notify: PDR notifier locator for adsp is down for sensors_pdr_adsprpc
+[  305.120639] servloc: pd_locator_work: Unable to connect to service locator!, rc = -62
+[  310.240459] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  310.240476] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  320.459619] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[  320.459700] QG-K: qg_process_fifo: FIFO length=5
+[  320.459774] QG-K: qg_process_fifo: FIFO 0 raw_v=21072 uV=4101390 raw_i=2977 uA=454254 interval=100 count=128
+[  320.459821] QG-K: qg_process_fifo: FIFO 1 raw_v=21071 uV=4101196 raw_i=2979 uA=454559 interval=100 count=128
+[  320.459867] QG-K: qg_process_fifo: FIFO 2 raw_v=21069 uV=4100806 raw_i=2978 uA=454407 interval=100 count=128
+[  320.459912] QG-K: qg_process_fifo: FIFO 3 raw_v=21069 uV=4100806 raw_i=2979 uA=454559 interval=100 count=128
+[  320.459957] QG-K: qg_process_fifo: FIFO 4 raw_v=21068 uV=4100612 raw_i=2977 uA=454254 interval=100 count=128
+[  320.461441] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63843
+[  320.461459] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[  320.461471] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[  320.480480] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  320.480493] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  330.720434] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  330.720451] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  340.960423] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  340.960439] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  351.200510] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  351.200526] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  361.440422] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  361.440439] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  371.680513] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  371.680529] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  381.920503] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  381.920520] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  384.302897] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[  384.302978] QG-K: qg_process_fifo: FIFO length=5
+[  384.303052] QG-K: qg_process_fifo: FIFO 0 raw_v=21066 uV=4100223 raw_i=2978 uA=454407 interval=100 count=128
+[  384.303098] QG-K: qg_process_fifo: FIFO 1 raw_v=21065 uV=4100028 raw_i=2978 uA=454407 interval=100 count=128
+[  384.303144] QG-K: qg_process_fifo: FIFO 2 raw_v=21064 uV=4099833 raw_i=2979 uA=454559 interval=100 count=128
+[  384.303189] QG-K: qg_process_fifo: FIFO 3 raw_v=21063 uV=4099639 raw_i=2979 uA=454559 interval=100 count=128
+[  384.303234] QG-K: qg_process_fifo: FIFO 4 raw_v=21062 uV=4099444 raw_i=2981 uA=454864 interval=100 count=128
+[  384.304659] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63843
+[  384.304677] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[  384.304688] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[  392.160426] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  392.160443] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  402.400696] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  402.400707] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  412.640335] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  412.640344] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  422.880310] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  422.880319] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  433.120379] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  433.120388] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  443.360350] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  443.360360] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  448.138402] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[  448.138470] QG-K: qg_process_fifo: FIFO length=5
+[  448.138534] QG-K: qg_process_fifo: FIFO 0 raw_v=21060 uV=4099055 raw_i=2980 uA=454712 interval=100 count=128
+[  448.138568] QG-K: qg_process_fifo: FIFO 1 raw_v=21060 uV=4099055 raw_i=2969 uA=453033 interval=100 count=128
+[  448.138601] QG-K: qg_process_fifo: FIFO 2 raw_v=21055 uV=4098082 raw_i=3011 uA=459442 interval=100 count=128
+[  448.138635] QG-K: qg_process_fifo: FIFO 3 raw_v=21054 uV=4097887 raw_i=3012 uA=459595 interval=100 count=128
+[  448.138668] QG-K: qg_process_fifo: FIFO 4 raw_v=21053 uV=4097692 raw_i=3014 uA=459900 interval=100 count=128
+[  448.139996] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63835
+[  448.140006] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[  448.140012] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[  453.600311] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  453.600319] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  463.840311] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  463.840320] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  474.080353] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  474.080363] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  484.320347] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  484.320356] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  494.560376] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  494.560385] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  504.800683] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  504.800692] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  511.972474] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[  511.972538] QG-K: qg_process_fifo: FIFO length=5
+[  511.972602] QG-K: qg_process_fifo: FIFO 0 raw_v=21052 uV=4097498 raw_i=3013 uA=459747 interval=100 count=128
+[  511.972636] QG-K: qg_process_fifo: FIFO 1 raw_v=21051 uV=4097303 raw_i=3014 uA=459900 interval=100 count=128
+[  511.972670] QG-K: qg_process_fifo: FIFO 2 raw_v=21049 uV=4096914 raw_i=3013 uA=459747 interval=100 count=128
+[  511.972704] QG-K: qg_process_fifo: FIFO 3 raw_v=21049 uV=4096914 raw_i=3014 uA=459900 interval=100 count=128
+[  511.972737] QG-K: qg_process_fifo: FIFO 4 raw_v=21047 uV=4096524 raw_i=3014 uA=459900 interval=100 count=128
+[  511.974059] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63834
+[  511.974070] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[  511.974076] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[  515.040364] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  515.040373] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  525.280311] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  525.280320] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  535.520355] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  535.520365] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  545.760315] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  545.760324] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  556.000330] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  556.000340] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  566.240682] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  566.240691] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  575.799814] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[  575.799875] QG-K: qg_process_fifo: FIFO length=5
+[  575.799935] QG-K: qg_process_fifo: FIFO 0 raw_v=21046 uV=4096330 raw_i=3014 uA=459900 interval=100 count=128
+[  575.799965] QG-K: qg_process_fifo: FIFO 1 raw_v=21045 uV=4096135 raw_i=3014 uA=459900 interval=100 count=128
+[  575.799996] QG-K: qg_process_fifo: FIFO 2 raw_v=21044 uV=4095941 raw_i=3015 uA=460052 interval=100 count=128
+[  575.800053] QG-K: qg_process_fifo: FIFO 3 raw_v=21044 uV=4095941 raw_i=2995 uA=457001 interval=100 count=128
+[  575.800084] QG-K: qg_process_fifo: FIFO 4 raw_v=21042 uV=4095551 raw_i=3021 uA=460968 interval=100 count=128
+[  575.801374] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63827
+[  575.801381] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[  575.801385] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[  576.480278] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  576.480286] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  586.720289] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  586.720296] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  596.960309] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  596.960317] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  607.200350] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  607.200357] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  617.440338] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  617.440345] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  627.680283] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  627.680291] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  637.920283] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  637.920291] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  639.624313] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[  639.624375] QG-K: qg_process_fifo: FIFO length=5
+[  639.624435] QG-K: qg_process_fifo: FIFO 0 raw_v=21038 uV=4094773 raw_i=3047 uA=464935 interval=100 count=128
+[  639.624466] QG-K: qg_process_fifo: FIFO 1 raw_v=21037 uV=4094578 raw_i=3046 uA=464783 interval=100 count=128
+[  639.624496] QG-K: qg_process_fifo: FIFO 2 raw_v=21035 uV=4094189 raw_i=3048 uA=465088 interval=100 count=128
+[  639.624527] QG-K: qg_process_fifo: FIFO 3 raw_v=21034 uV=4093994 raw_i=3048 uA=465088 interval=100 count=128
+[  639.624558] QG-K: qg_process_fifo: FIFO 4 raw_v=21032 uV=4093605 raw_i=3047 uA=464935 interval=100 count=128
+[  639.625847] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63824
+[  639.625855] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[  639.625859] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[  648.160279] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  648.160286] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  658.400305] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  658.400313] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  668.640281] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  668.640288] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  678.880679] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  678.880687] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  689.120307] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  689.120314] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  699.360268] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  699.360275] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  703.451140] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[  703.451200] QG-K: qg_process_fifo: FIFO length=5
+[  703.451258] QG-K: qg_process_fifo: FIFO 0 raw_v=21031 uV=4093410 raw_i=3048 uA=465088 interval=100 count=128
+[  703.451288] QG-K: qg_process_fifo: FIFO 1 raw_v=21030 uV=4093216 raw_i=3048 uA=465088 interval=100 count=128
+[  703.451317] QG-K: qg_process_fifo: FIFO 2 raw_v=21031 uV=4093410 raw_i=3021 uA=460968 interval=100 count=128
+[  703.451346] QG-K: qg_process_fifo: FIFO 3 raw_v=21029 uV=4093021 raw_i=3036 uA=463257 interval=100 count=128
+[  703.451376] QG-K: qg_process_fifo: FIFO 4 raw_v=21024 uV=4092048 raw_i=3073 uA=468902 interval=100 count=128
+[  703.452666] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63826
+[  703.452673] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[  703.452677] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[  709.600280] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  709.600287] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  719.840287] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  719.840293] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  730.080267] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  730.080274] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  740.320294] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  740.320301] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  750.560279] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  750.560286] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  760.800266] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  760.800273] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  767.276317] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[  767.276378] QG-K: qg_process_fifo: FIFO length=5
+[  767.276436] QG-K: qg_process_fifo: FIFO 0 raw_v=21024 uV=4092048 raw_i=3075 uA=469208 interval=100 count=128
+[  767.276466] QG-K: qg_process_fifo: FIFO 1 raw_v=21022 uV=4091659 raw_i=3075 uA=469208 interval=100 count=128
+[  767.276495] QG-K: qg_process_fifo: FIFO 2 raw_v=21020 uV=4091269 raw_i=3076 uA=469360 interval=100 count=128
+[  767.276525] QG-K: qg_process_fifo: FIFO 3 raw_v=21019 uV=4091075 raw_i=3075 uA=469208 interval=100 count=128
+[  767.276554] QG-K: qg_process_fifo: FIFO 4 raw_v=21019 uV=4091075 raw_i=3077 uA=469513 interval=100 count=128
+[  767.277829] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63825
+[  767.277836] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[  767.277839] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[  771.040267] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  771.040273] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  781.280648] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  781.280655] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  791.520260] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  791.520266] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  801.760276] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  801.760282] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  812.000276] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  812.000281] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  822.240257] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  822.240263] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  831.100698] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[  831.100755] QG-K: qg_process_fifo: FIFO length=5
+[  831.100811] QG-K: qg_process_fifo: FIFO 0 raw_v=21022 uV=4091659 raw_i=3017 uA=460357 interval=100 count=128
+[  831.100839] QG-K: qg_process_fifo: FIFO 1 raw_v=21013 uV=4089907 raw_i=3115 uA=475311 interval=100 count=128
+[  831.100867] QG-K: qg_process_fifo: FIFO 2 raw_v=21010 uV=4089323 raw_i=3131 uA=477753 interval=100 count=128
+[  831.100895] QG-K: qg_process_fifo: FIFO 3 raw_v=21008 uV=4088934 raw_i=3131 uA=477753 interval=100 count=128
+[  831.100923] QG-K: qg_process_fifo: FIFO 4 raw_v=21006 uV=4088544 raw_i=3133 uA=478058 interval=100 count=128
+[  831.104544] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63824
+[  831.104551] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[  831.104554] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[  832.480253] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  832.480258] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  842.720258] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  842.720264] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  852.960646] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  852.960652] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  863.200281] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  863.200287] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  873.440262] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  873.440268] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  883.680258] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  883.680263] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  893.920264] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  893.920270] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  894.917956] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[  894.918012] QG-K: qg_process_fifo: FIFO length=5
+[  894.918069] QG-K: qg_process_fifo: FIFO 0 raw_v=21005 uV=4088350 raw_i=3134 uA=478210 interval=100 count=128
+[  894.918097] QG-K: qg_process_fifo: FIFO 1 raw_v=21008 uV=4088934 raw_i=3076 uA=469360 interval=100 count=128
+[  894.918125] QG-K: qg_process_fifo: FIFO 2 raw_v=21005 uV=4088350 raw_i=3104 uA=473633 interval=100 count=128
+[  894.918152] QG-K: qg_process_fifo: FIFO 3 raw_v=20999 uV=4087182 raw_i=3158 uA=481872 interval=100 count=128
+[  894.918180] QG-K: qg_process_fifo: FIFO 4 raw_v=20998 uV=4086987 raw_i=3156 uA=481567 interval=100 count=128
+[  894.919437] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63817
+[  894.919442] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[  894.919445] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[  904.160252] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  904.160257] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  914.400249] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  914.400254] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  924.640253] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  924.640259] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  934.880256] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  934.880262] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  945.120255] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  945.120260] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  955.360243] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  955.360248] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  958.724080] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[  958.724136] QG-K: qg_process_fifo: FIFO length=5
+[  958.724191] QG-K: qg_process_fifo: FIFO 0 raw_v=20996 uV=4086598 raw_i=3159 uA=482025 interval=100 count=128
+[  958.724218] QG-K: qg_process_fifo: FIFO 1 raw_v=20995 uV=4086403 raw_i=3160 uA=482178 interval=100 count=128
+[  958.724245] QG-K: qg_process_fifo: FIFO 2 raw_v=21002 uV=4087766 raw_i=3042 uA=464172 interval=100 count=128
+[  958.724272] QG-K: qg_process_fifo: FIFO 3 raw_v=20989 uV=4085235 raw_i=3208 uA=489502 interval=100 count=128
+[  958.724299] QG-K: qg_process_fifo: FIFO 4 raw_v=20986 uV=4084652 raw_i=3217 uA=490875 interval=100 count=128
+[  958.725548] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63806
+[  958.725553] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[  958.725555] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[  965.600264] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  965.600269] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  975.840279] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  975.840284] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  986.080254] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  986.080260] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[  996.320660] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[  996.320666] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1006.560253] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1006.560258] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1016.800250] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1016.800256] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1022.518844] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[ 1022.518901] QG-K: qg_process_fifo: FIFO length=5
+[ 1022.518955] QG-K: qg_process_fifo: FIFO 0 raw_v=20985 uV=4084457 raw_i=3214 uA=490417 interval=100 count=128
+[ 1022.518981] QG-K: qg_process_fifo: FIFO 1 raw_v=20983 uV=4084068 raw_i=3218 uA=491028 interval=100 count=128
+[ 1022.519009] QG-K: qg_process_fifo: FIFO 2 raw_v=20990 uV=4085430 raw_i=3102 uA=473327 interval=100 count=128
+[ 1022.519036] QG-K: qg_process_fifo: FIFO 3 raw_v=20979 uV=4083289 raw_i=3242 uA=494690 interval=100 count=128
+[ 1022.519063] QG-K: qg_process_fifo: FIFO 4 raw_v=20972 uV=4081927 raw_i=3297 uA=503082 interval=100 count=128
+[ 1022.520191] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63794
+[ 1022.520196] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[ 1022.520198] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[ 1027.040252] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1027.040257] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1037.280240] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1037.280245] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1047.520273] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1047.520278] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1050.466916] psci: CPU1 killed (polled 0 ms)
+[ 1050.470349] Detected VIPT I-cache on CPU4
+[ 1050.470436] arch_timer: CPU4: Trapping CNTVCT access
+[ 1057.760913] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1057.760930] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1068.000732] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1068.000749] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1078.240731] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1078.240748] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1086.312588] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[ 1086.312676] QG-K: qg_process_fifo: FIFO length=5
+[ 1086.312752] QG-K: qg_process_fifo: FIFO 0 raw_v=20970 uV=4081537 raw_i=3300 uA=503540 interval=100 count=128
+[ 1086.312798] QG-K: qg_process_fifo: FIFO 1 raw_v=20969 uV=4081343 raw_i=3299 uA=503387 interval=100 count=128
+[ 1086.312843] QG-K: qg_process_fifo: FIFO 2 raw_v=20987 uV=4084846 raw_i=3042 uA=464172 interval=100 count=128
+[ 1086.312889] QG-K: qg_process_fifo: FIFO 3 raw_v=20986 uV=4084652 raw_i=3051 uA=465545 interval=100 count=128
+[ 1086.312934] QG-K: qg_process_fifo: FIFO 4 raw_v=20985 uV=4084457 raw_i=3051 uA=465545 interval=100 count=128
+[ 1086.314390] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63793
+[ 1086.314409] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[ 1086.314420] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[ 1088.480813] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1088.480831] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1098.720770] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1098.720787] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1108.960766] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1108.960783] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1119.200812] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1119.200830] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1129.440730] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1129.440747] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1139.680732] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1139.680749] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1149.920829] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1149.920847] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1150.110909] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[ 1150.110997] QG-K: qg_process_fifo: FIFO length=5
+[ 1150.111072] QG-K: qg_process_fifo: FIFO 0 raw_v=20985 uV=4084457 raw_i=3053 uA=465851 interval=100 count=128
+[ 1150.111119] QG-K: qg_process_fifo: FIFO 1 raw_v=20982 uV=4083873 raw_i=3051 uA=465545 interval=100 count=128
+[ 1150.111164] QG-K: qg_process_fifo: FIFO 2 raw_v=20982 uV=4083873 raw_i=3052 uA=465698 interval=100 count=128
+[ 1150.111210] QG-K: qg_process_fifo: FIFO 3 raw_v=20981 uV=4083678 raw_i=3050 uA=465393 interval=100 count=128
+[ 1150.111255] QG-K: qg_process_fifo: FIFO 4 raw_v=20979 uV=4083289 raw_i=3054 uA=466003 interval=100 count=128
+[ 1150.112971] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63798
+[ 1150.112994] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[ 1150.113005] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[ 1160.160731] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1160.160748] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1170.400797] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1170.400815] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1180.640766] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1180.640783] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1190.880778] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1190.880795] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1201.120809] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1201.120826] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1211.360835] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1211.360851] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1213.908199] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[ 1213.908287] QG-K: qg_process_fifo: FIFO length=5
+[ 1213.908362] QG-K: qg_process_fifo: FIFO 0 raw_v=20979 uV=4083289 raw_i=3053 uA=465851 interval=100 count=128
+[ 1213.908408] QG-K: qg_process_fifo: FIFO 1 raw_v=20977 uV=4082900 raw_i=3054 uA=466003 interval=100 count=128
+[ 1213.908453] QG-K: qg_process_fifo: FIFO 2 raw_v=20976 uV=4082705 raw_i=3056 uA=466308 interval=100 count=128
+[ 1213.908499] QG-K: qg_process_fifo: FIFO 3 raw_v=20975 uV=4082511 raw_i=3053 uA=465851 interval=100 count=128
+[ 1213.908544] QG-K: qg_process_fifo: FIFO 4 raw_v=20973 uV=4082121 raw_i=3055 uA=466156 interval=100 count=128
+[ 1213.909998] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63797
+[ 1213.910017] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[ 1213.910105] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[ 1221.600731] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1221.600748] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1231.840830] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1231.840847] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1242.080815] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1242.080832] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1252.320863] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1252.320881] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1262.560692] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1262.560709] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1272.800775] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1272.800793] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1277.697629] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[ 1277.697717] QG-K: qg_process_fifo: FIFO length=5
+[ 1277.697792] QG-K: qg_process_fifo: FIFO 0 raw_v=20972 uV=4081927 raw_i=3053 uA=465851 interval=100 count=128
+[ 1277.697838] QG-K: qg_process_fifo: FIFO 1 raw_v=20971 uV=4081732 raw_i=3056 uA=466308 interval=100 count=128
+[ 1277.697883] QG-K: qg_process_fifo: FIFO 2 raw_v=20970 uV=4081537 raw_i=3047 uA=464935 interval=100 count=128
+[ 1277.697928] QG-K: qg_process_fifo: FIFO 3 raw_v=20969 uV=4081343 raw_i=3046 uA=464783 interval=100 count=128
+[ 1277.697974] QG-K: qg_process_fifo: FIFO 4 raw_v=20961 uV=4079786 raw_i=3135 uA=478363 interval=100 count=128
+[ 1277.699428] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63789
+[ 1277.699447] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[ 1277.699459] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[ 1283.040812] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1283.040829] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1293.280759] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1293.280776] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1303.520774] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1303.520792] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1313.760692] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1313.760709] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1324.000718] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1324.000735] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1334.240773] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1334.240790] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1341.481685] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[ 1341.481772] QG-K: qg_process_fifo: FIFO length=5
+[ 1341.481847] QG-K: qg_process_fifo: FIFO 0 raw_v=20959 uV=4079396 raw_i=3137 uA=478668 interval=100 count=128
+[ 1341.481894] QG-K: qg_process_fifo: FIFO 1 raw_v=20957 uV=4079007 raw_i=3138 uA=478821 interval=100 count=128
+[ 1341.481939] QG-K: qg_process_fifo: FIFO 2 raw_v=20956 uV=4078812 raw_i=3137 uA=478668 interval=100 count=128
+[ 1341.481984] QG-K: qg_process_fifo: FIFO 3 raw_v=20954 uV=4078423 raw_i=3139 uA=478973 interval=100 count=128
+[ 1341.482030] QG-K: qg_process_fifo: FIFO 4 raw_v=20953 uV=4078229 raw_i=3138 uA=478821 interval=100 count=128
+[ 1341.483716] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63784
+[ 1341.483738] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[ 1341.483750] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[ 1344.480709] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1344.480725] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1354.720768] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1354.720785] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1364.960785] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1364.960802] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1375.200702] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1375.200719] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1385.440702] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1385.440719] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1395.680784] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1395.680802] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1405.261989] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[ 1405.262077] QG-K: qg_process_fifo: FIFO length=5
+[ 1405.262152] QG-K: qg_process_fifo: FIFO 0 raw_v=20957 uV=4079007 raw_i=3053 uA=465851 interval=100 count=128
+[ 1405.262198] QG-K: qg_process_fifo: FIFO 1 raw_v=20947 uV=4077061 raw_i=3179 uA=485077 interval=100 count=128
+[ 1405.262244] QG-K: qg_process_fifo: FIFO 2 raw_v=20943 uV=4076282 raw_i=3205 uA=489044 interval=100 count=128
+[ 1405.262289] QG-K: qg_process_fifo: FIFO 3 raw_v=20942 uV=4076088 raw_i=3207 uA=489349 interval=100 count=128
+[ 1405.262335] QG-K: qg_process_fifo: FIFO 4 raw_v=20941 uV=4075893 raw_i=3205 uA=489044 interval=100 count=128
+[ 1405.264030] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63780
+[ 1405.264052] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[ 1405.264064] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[ 1405.920743] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1405.920761] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1416.160744] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1416.160762] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1426.400902] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1426.400919] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1436.640723] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1436.640739] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1446.880706] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1446.880722] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1457.120850] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1457.120867] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1467.360705] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1467.360722] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1469.041463] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[ 1469.041550] QG-K: qg_process_fifo: FIFO length=5
+[ 1469.041625] QG-K: qg_process_fifo: FIFO 0 raw_v=20939 uV=4075504 raw_i=3205 uA=489044 interval=100 count=128
+[ 1469.041671] QG-K: qg_process_fifo: FIFO 1 raw_v=20946 uV=4076866 raw_i=3073 uA=468902 interval=100 count=128
+[ 1469.041717] QG-K: qg_process_fifo: FIFO 2 raw_v=20932 uV=4074141 raw_i=3257 uA=496979 interval=100 count=128
+[ 1469.041762] QG-K: qg_process_fifo: FIFO 3 raw_v=20930 uV=4073752 raw_i=3258 uA=497131 interval=100 count=128
+[ 1469.041807] QG-K: qg_process_fifo: FIFO 4 raw_v=20928 uV=4073363 raw_i=3262 uA=497742 interval=100 count=128
+[ 1469.043510] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63779
+[ 1469.043532] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[ 1469.043543] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[ 1477.600831] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1477.600848] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1487.840902] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1487.840920] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1498.080701] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1498.080718] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1508.320741] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1508.320759] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1518.560785] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1518.560802] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1528.800702] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1528.800719] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1532.818286] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[ 1532.818375] QG-K: qg_process_fifo: FIFO length=5
+[ 1532.818451] QG-K: qg_process_fifo: FIFO 0 raw_v=20926 uV=4072973 raw_i=3258 uA=497131 interval=100 count=128
+[ 1532.818497] QG-K: qg_process_fifo: FIFO 1 raw_v=20933 uV=4074336 raw_i=3133 uA=478058 interval=100 count=128
+[ 1532.818543] QG-K: qg_process_fifo: FIFO 2 raw_v=20911 uV=4070054 raw_i=3416 uA=521240 interval=100 count=128
+[ 1532.818589] QG-K: qg_process_fifo: FIFO 3 raw_v=20909 uV=4069665 raw_i=3416 uA=521240 interval=100 count=128
+[ 1532.818634] QG-K: qg_process_fifo: FIFO 4 raw_v=20910 uV=4069859 raw_i=3362 uA=513000 interval=100 count=128
+[ 1532.820282] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63776
+[ 1532.820301] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[ 1532.820312] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[ 1539.040885] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1539.040905] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1549.280784] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1549.280801] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1559.520733] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1559.520749] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1569.760710] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1569.760727] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1580.000902] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1580.000919] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1590.240743] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1590.240761] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1596.590872] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[ 1596.590960] QG-K: qg_process_fifo: FIFO length=5
+[ 1596.591035] QG-K: qg_process_fifo: FIFO 0 raw_v=20920 uV=4071806 raw_i=3223 uA=491791 interval=100 count=128
+[ 1596.591081] QG-K: qg_process_fifo: FIFO 1 raw_v=20898 uV=4067524 raw_i=3482 uA=531311 interval=100 count=128
+[ 1596.591126] QG-K: qg_process_fifo: FIFO 2 raw_v=20895 uV=4066940 raw_i=3482 uA=531311 interval=100 count=128
+[ 1596.591172] QG-K: qg_process_fifo: FIFO 3 raw_v=20914 uV=4070638 raw_i=3212 uA=490112 interval=100 count=128
+[ 1596.591217] QG-K: qg_process_fifo: FIFO 4 raw_v=20894 uV=4066745 raw_i=3480 uA=531006 interval=100 count=128
+[ 1596.592904] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63772
+[ 1596.592926] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[ 1596.592939] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[ 1600.480817] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1600.480834] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1610.720776] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1610.720794] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1620.960816] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1620.960833] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1631.200701] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1631.200717] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1641.440784] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1641.440801] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1651.680710] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1651.680727] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1660.361537] QG-K: qg_fifo_update_done_handler: IRQ triggered
+[ 1660.361623] QG-K: qg_process_fifo: FIFO length=5
+[ 1660.361698] QG-K: qg_process_fifo: FIFO 0 raw_v=20887 uV=4065383 raw_i=3535 uA=539398 interval=100 count=128
+[ 1660.361744] QG-K: qg_process_fifo: FIFO 1 raw_v=20888 uV=4065577 raw_i=3476 uA=530395 interval=100 count=128
+[ 1660.361790] QG-K: qg_process_fifo: FIFO 2 raw_v=20901 uV=4068107 raw_i=3304 uA=504150 interval=100 count=128
+[ 1660.361835] QG-K: qg_process_fifo: FIFO 3 raw_v=20872 uV=4062463 raw_i=3674 uA=560608 interval=100 count=128
+[ 1660.361880] QG-K: qg_process_fifo: FIFO 4 raw_v=20869 uV=4061879 raw_i=3675 uA=560760 interval=100 count=128
+[ 1660.363072] QG-K: qg_fifo_update_done_handler: FIFO_done time_delta_ms=63770
+[ 1660.363089] QG_WS: FIFO_DONE_VOTER,0 same vote on of val=1
+[ 1660.363100] QG_WS: FIFO_DONE_VOTER,0 Ignoring similar vote on of val=1
+[ 1661.920918] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1661.920939] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1672.160782] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1672.160799] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1682.400700] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1682.400717] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1692.640719] QG_WS: TTF_AWAKE_VOTER,1 same vote off of val=0
+[ 1692.640735] QG_WS: TTF_AWAKE_VOTER,1 Ignoring similar vote off of val=0
+[ 1697.675522] psci: CPU4 killed (polled 0 ms)
