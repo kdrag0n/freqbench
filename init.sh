@@ -172,17 +172,23 @@ try_write /sys/module/qpnp_fg/parameters/sram_update_period_ms 1000
 # On Snapdragon 888 (Qualcomm kernel 5.4) devices and newer, the DSP is
 # responsible for power and charging, so we need to initialize it before we can
 # read power usage from the fuel gauge.
-if uname -r | grep -q '^5\.' && grep -q Qualcomm /proc/cpuinfo; then
+if uname -r | grep -q '^5\.' && (grep -q Qualcomm /proc/cpuinfo || grep -q qcom /proc/cmdline);
+then
     # qrtr nameserver is required for DSP services to work properly
     qrtr-ns &
 
     echo "Booting DSP..."
+    mkdir /firmware
+    slot="$(grep -q slot_suffix /proc/cmdline && cat /proc/cmdline | sed 's/\(.*\)slot_suffix=\(_[ab]\)\(.*\)/\2/g')"
+    modem_part="$(find_part_by_name modem$slot)"
+    mount -o ro,noatime "$modem_part" /firmware
     echo -n 1 > /sys/kernel/boot_adsp/boot
     sleep 3
     if [[ "$(cat /sys/class/subsys/subsys_adsp/device/subsys*/state)" != "ONLINE" ]]; then
         echo "Failed to boot aDSP!"
         exit 1
     fi
+    umount /firmware
 fi
 
 cat /proc/interrupts > /tmp/pre_bench_interrupts.txt
