@@ -1,0 +1,1534 @@
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x412fd050]
+[    0.000000] Linux version 5.4.268-qgki-gcc6a9ab308ab (nobody@android-build) (Android (10087095, +pgo, +bolt, +lto, -mlgo, based on r487747c) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362), LLD 17.0.2) #1 SMP PREEMPT Sat Apr 13 23:16:54 CST 2024
+[    0.000000] memblock_reserve: 0x9c9f4 setup_arch+0x64/0x1e4
+[    0.000000] Machine model: Qualcomm Technologies, Inc. LahainaP QRD
+[    0.000000] Memory limit set/overridden to 7055MB
+[    0.000000] OF: fdt: Reserved memory: failed to reserve memory for node 'demura_region_0': base 0x0000000000000000, size 0 MiB
+[    0.000000] OF: fdt: Reserved memory: failed to reserve memory for node 'demura_region_1': base 0x0000000000000000, size 0 MiB
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000ff400000, size 8 MiB
+[    0.000000] OF: reserved mem: initialized node sdsp_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000fc400000, size 48 MiB
+[    0.000000] OF: reserved mem: initialized node mem_dump_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000ce000000, size 32 MiB
+[    0.000000] OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000f6000000, size 100 MiB
+[    0.000000] OF: reserved mem: initialized node non_secure_display_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000f4c00000, size 20 MiB
+[    0.000000] OF: reserved mem: initialized node qseecom_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000f4800000, size 4 MiB
+[    0.000000] OF: reserved mem: initialized node cdsp_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000f3800000, size 16 MiB
+[    0.000000] OF: reserved mem: initialized node user_contig_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000f2c00000, size 12 MiB
+[    0.000000] OF: reserved mem: initialized node adsp_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000f1c00000, size 16 MiB
+[    0.000000] OF: reserved mem: initialized node qseecom_ta_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000e7800000, size 164 MiB
+[    0.000000] OF: reserved mem: initialized node secure_display_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created DMA memory pool at 0x00000000df700000, size 8 MiB
+[    0.000000] OF: reserved mem: initialized node memshare_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000e6400000, size 20 MiB
+[    0.000000] OF: reserved mem: initialized node cnss_wlan_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000e4800000, size 28 MiB
+[    0.000000] OF: reserved mem: initialized node audio_cma_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000e3800000, size 16 MiB
+[    0.000000] OF: reserved mem: initialized node sp_region, compatible id shared-dma-pool
+[    0.000000] On node 0 totalpages: 1632848
+[    0.000000]   Normal zone: 25514 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 1632848 pages, LIFO batch:63
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.0
+[    0.000000] psci: OSI mode supported.
+[    0.000000] psci: Switched to OSI mode.
+[    0.000000] percpu: Embedded 30 pages/cpu s93336 r0 d29544 u122880
+[    0.000000] pcpu-alloc: s93336 r0 d29544 u122880 alloc=30*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+[    0.000000] CPU features: detected: GIC system register CPU interface
+[    0.000000] CPU features: kernel page table isolation disabled by kernel configuration
+[    0.000000] CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1607334
+[    0.000000] Kernel command line: isolcpus=1-7 nohz_full=1-7 loglevel=0 printk.devkmsg=on log_buf_len=256K earlycon=msm_geni_serial,0x98c000 rcupdate.rcu_expedited=1 rcu_nocbs=0-7 kpti=off console=ttyMSM0,115200n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=0 loop.max_part=7 cgroup.memory=nokmem,nosocket pcie_ports=compat loop.max_part=7 iptable_raw.raw_before_defrag=1 ip6table_raw.raw_before_defrag=1 buildvariant=userdebug console=ttyMSM0,115200n8 androidboot.console=ttyMSM0 isolcpus=1-7 nohz_full=1-7 loglevel=0 printk.devkmsg=on msm_rtb.filter=0x237 ehci-hcd.park=3 service_locator.enable=1 androidboot.memcg=1 cgroup.memory=nokmem lpm_levels.sleep_disabled=1 usbcore.autosuspend=7 androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 androidboot.boot_devices=soc/1d84000.ufshc loop.max_
+[    0.000000] Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+[    0.000000] mem auto-init: stack:all(zero), heap alloc:on, heap free:off
+[    0.000000] Memory: 5774596K/6531392K available (28990K kernel code, 4112K rwdata, 17120K rodata, 2048K init, 11534K bss, 261180K reserved, 495616K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+
+[    0.000000] **********************************************************
+[    0.000000] **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+[    0.000000] **                                                      **
+[    0.000000] ** trace_printk() being used. Allocating extra memory.  **
+[    0.000000] **                                                      **
+[    0.000000] ** This means that this is a DEBUG kernel and it is     **
+[    0.000000] ** unsafe for production use.                           **
+[    0.000000] **                                                      **
+[    0.000000] ** If you see this message and you are not debugging    **
+[    0.000000] ** the kernel, report this immediately to your vendor!  **
+[    0.000000] **                                                      **
+[    0.000000] **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+[    0.000000] **********************************************************
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU priority boosting: priority 1 delay 500 ms.
+[    0.000000] 	All grace periods are expedited (rcu_expedited).
+[    0.000000] 	Trampoline variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: 988 SPIs implemented
+[    0.000000] GICv3: 0 Extended SPIs implemented
+[    0.000000] GICv3: Distributor has no Range Selector support
+[    0.000000] GICv3: 16 PPIs implemented
+[    0.000000] GICv3: no VLPI support, no direct LPI support
+[    0.000000] NO_HZ: Full dynticks CPUs: 1-7.
+[    0.000000] rcu: 	Offload RCU callbacks from CPUs: 0-7.
+[    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.000000] arch_timer: cp15 and mmio timer(s) running at 19.20MHz (virt/virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[    0.000003] sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+[    0.000011] clocksource: Switched to clocksource arch_sys_counter
+[    0.004413] Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=76800)
+[    0.004420] pid_max: default: 32768 minimum: 301
+[    0.004474] LSM: Security Framework initializing
+[    0.004498] SELinux:  Initializing.
+[    0.004582] Mount-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.004602] Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.006043] cblist_init_generic: Setting adjustable number of callback queues.
+[    0.006056] cblist_init_generic: Setting shift to 3 and lim to 1.
+[    0.006125] ASID allocator initialised with 65536 entries
+[    0.006224] rcu: Hierarchical SRCU implementation.
+[    0.006227] rcu: 	Max phase no-delay instances is 1000.
+[    0.006656] dynamic_debug:dynamic_debug_init: Ignore empty _ddebug table in a CONFIG_DYNAMIC_DEBUG_CORE build
+[    0.008384] scm_mem_protection_init_do: SCM call failed
+[    0.008654] smp: Bringing up secondary CPUs ...
+[    0.017637] CPU features: detected: Spectre-BHB
+[    0.017677] CPU features: Unsupported CPU feature variation detected.
+[    0.025761] smp: Brought up 1 node, 8 CPUs
+[    0.025766] SMP: Total of 8 processors activated.
+[    0.025770] CPU features: detected: Privileged Access Never
+[    0.025773] CPU features: detected: LSE atomic instructions
+[    0.025775] CPU features: detected: User Access Override
+[    0.025777] CPU features: detected: 32-bit EL0 Support
+[    0.025780] CPU features: detected: Common not Private translations
+[    0.025782] CPU features: detected: RAS Extension Support
+[    0.025785] CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+[    0.025788] CPU features: detected: CRC32 instructions
+[    0.042260] CPU: All CPU(s) started at EL1
+[    0.042312] alternatives: patching kernel code
+[    0.103885] Registered cp15_barrier emulation handler
+[    0.103900] Registered setend emulation handler
+[    0.104013] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.104055] futex hash table entries: 2048 (order: 5, 131072 bytes, linear)
+[    0.116128] pinctrl core: initialized pinctrl subsystem
+[    0.116781] NET: Registered protocol family 16
+[    0.118274] DMA: preallocated 256 KiB pool for atomic allocations
+[    0.118284] audit: initializing netlink subsys (disabled)
+[    0.118795] cpuidle: using governor teo
+[    0.118848] NET: Registered protocol family 42
+[    0.118929] audit: type=2000 audit(0.115:1): state=initialized audit_enabled=0 res=1
+[    0.119423] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.120091] Serial: AMBA PL011 UART driver
+[    0.120202] DMA: preallocated 256 KiB pool for atomic allocations
+[    0.385383] pm8350_s5_level: supplied by pm8350_s9_level
+[    0.385545] pm8350_s5_lvl_ao: supplied by pm8350_s9_level_ao
+[    0.742099] pm8350c_s6_level: supplied by pm8350_s5_level
+[    0.742286] pm8350c_s6_level_ao: supplied by pm8350_s5_lvl_ao
+[    0.759082] pm8350_s9_mmcx_sup_level: supplied by pm8350c_s6_mmcx_sup_level
+[    0.759096] pm8350_s5_mmcx_sup_level: supplied by pm8350_s9_mmcx_sup_level
+[    0.759111] pm8350c_s8_level: supplied by pm8350_s5_mmcx_sup_level
+[    0.759284] pm8350c_s8_level_ao: supplied by pm8350_s5_lvl_ao
+[    1.033850] msm-dcc 117f000.dcc_v2: DCC list passed 3
+[    1.034055] msm-dcc 117f000.dcc_v2: All values written to enable.
+[    1.034159] msm-dcc 117f000.dcc_v2: DCC list passed 4
+[    1.034438] msm-dcc 117f000.dcc_v2: All values written to enable.
+[    1.034735] msm-dcc 117f000.dcc_v2: DCC list passed 6
+[    1.035067] msm-dcc 117f000.dcc_v2: All values written to enable.
+[    1.059308] spmi spmi-0: PMIC arbiter version v5 (0x50020000)
+[    1.079183] sps:sps is ready
+[    1.096136] hh-watchdog hypervisor:qcom,hh-watchdog: QCOM Apps Watchdog Initialized
+[    1.248065] cryptd: max_cpu_qlen set to 1000
+[    1.324736] oledb: Bringing 0uV into 5000000-5000000uV
+[    1.324876] ab: Bringing 0uV into 4600000-4600000uV
+[    1.324954] ibb: Bringing 0uV into 1400000-1400000uV
+[    1.341654] gcc_pcie_0_gdsc: supplied by pm8350c_s6_level
+[    1.341804] gcc_pcie_1_gdsc: supplied by pm8350c_s6_level
+[    1.341945] gcc_ufs_card_gdsc: supplied by pm8350c_s6_level
+[    1.342082] gcc_ufs_phy_gdsc: supplied by pm8350c_s6_level
+[    1.343036] gpu_cc_cx_gdsc: supplied by pm8350c_s6_level
+[    1.343286] gpu_cc_gx_gdsc: supplied by pm8350_s6_level
+[    1.344161] qmp-aop-clk soc:qcom,aopclk: Registered clocks with AOP
+[    1.376117] lahaina-gcc 100000.qcom,gcc: Registered GCC clocks
+[    1.388769] gpu_cc-lahaina 3d90000.qcom,gpucc: Registered GPU CC clocks
+[    1.489574] Rate 19200000 for cam_cc_sleep_clk_src is greater than highest Fmax
+[    1.489579] Rate 19200000 for cam_cc_sleep_clk_src is greater than highest Fmax
+[    1.494828] lahaina-cam_cc ad00000.qcom,camcc: Registered CAM CC clocks
+[    1.520930] video_cc-lahaina abf0000.qcom,videocc: Registered VIDEO CC clocks
+[    1.527626] KPI: Bootloader start count = 75365
+[    1.527629] KPI: Bootloader end count = 792221
+[    1.527631] KPI: Bootloader display count = 3603422531
+[    1.527634] KPI: Bootloader load kernel count = 3261076552
+[    1.527637] KPI: Kernel MPM timestamp = 853761
+[    1.527639] KPI: Kernel MPM Clock frequency = 32768
+[    1.527984] Minidump: Enabled with max number of regions 200
+[    1.539825] Built 1 zonelists, mobility grouping on.  Total pages: 1561915
+[    1.651639] mem-offline: Added memory blocks ranging from mem18 - mem27
+[    1.656321] iommu: Default domain type: Translated 
+[    1.664791] arm-smmu 3da0000.kgsl-smmu: 	coherent table walk
+[    1.664798] arm-smmu 3da0000.kgsl-smmu: 	stream matching with 6 register groups
+[    1.667011] SCSI subsystem initialized
+[    1.667106] usbcore: registered new interface driver usbfs
+[    1.667124] usbcore: registered new interface driver hub
+[    1.667149] usbcore: registered new device driver usb
+[    1.667459] usb_phy_generic soc:usb_nop_phy: soc:usb_nop_phy supply vcc not found, using dummy regulator
+[    1.668267] qcom,qpnp-power-on c440000.qcom,spmi:qcom,pmk8350@0:pon_pbs@800: IRQ pmic-wd-bark not found
+[    1.668468] qcom,qpnp-power-on c440000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300: IRQ pmic-wd-bark not found
+[    1.668553] input: qpnp_pon as /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300/input/input0
+[    1.669081] mc: Linux media interface: v0.10
+[    1.669100] videodev: Linux video capture interface: v2.00
+[    1.669168] thermal_sys: Registered thermal governor 'step_wise'
+[    1.669170] thermal_sys: Registered thermal governor 'user_space'
+[    1.669173] thermal_sys: Registered thermal governor 'power_allocator'
+[    1.680492] Error creating thermal debugfs directory. err:-19
+[    1.702262] EDAC MC: Ver: 3.0.0
+[    1.702559] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=0 freq=300000 volt=560000, core_count 4
+[    1.702573] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=1 freq=403200 volt=560000, core_count 4
+[    1.702578] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=2 freq=499200 volt=560000, core_count 4
+[    1.702583] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=3 freq=595200 volt=560000, core_count 4
+[    1.702588] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=4 freq=691200 volt=560000, core_count 4
+[    1.702592] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=5 freq=806400 volt=576000, core_count 4
+[    1.702597] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=6 freq=902400 volt=592000, core_count 4
+[    1.702602] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=7 freq=998400 volt=612000, core_count 4
+[    1.702606] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=8 freq=1094400 volt=624000, core_count 4
+[    1.702611] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=9 freq=1209600 volt=648000, core_count 4
+[    1.702616] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=10 freq=1305600 volt=676000, core_count 4
+[    1.702620] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=11 freq=1401600 volt=700000, core_count 4
+[    1.702625] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=12 freq=1497600 volt=724000, core_count 4
+[    1.702630] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=13 freq=1612800 volt=756000, core_count 4
+[    1.702634] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=14 freq=1708800 volt=776000, core_count 4
+[    1.702639] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=15 freq=1804800 volt=804000, core_count 4
+[    1.702644] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=16 freq=1804800 volt=804000, core_count 4
+[    1.702692] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=0 freq=710400 volt=568000, core_count 4
+[    1.702701] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=1 freq=844800 volt=592000, core_count 4
+[    1.702706] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=2 freq=960000 volt=612000, core_count 4
+[    1.702710] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=3 freq=1075200 volt=632000, core_count 4
+[    1.702715] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=4 freq=1209600 volt=644000, core_count 4
+[    1.702720] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=5 freq=1324800 volt=668000, core_count 4
+[    1.702724] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=6 freq=1440000 volt=684000, core_count 4
+[    1.702729] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=7 freq=1555200 volt=708000, core_count 4
+[    1.702734] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=8 freq=1670400 volt=732000, core_count 4
+[    1.702738] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=9 freq=1766400 volt=752000, core_count 4
+[    1.702743] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=10 freq=1881600 volt=800000, core_count 4
+[    1.702748] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=11 freq=1996800 volt=804000, core_count 4
+[    1.702755] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=12 freq=2112000 volt=832000, core_count 4
+[    1.702760] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=13 freq=2227200 volt=864000, core_count 4
+[    1.702764] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=14 freq=2342400 volt=892000, core_count 4
+[    1.702769] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=15 freq=2419200 volt=940000, core_count 4
+[    1.702773] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=16 freq=2419200 volt=940000, core_count 4
+[    1.702806] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=0 freq=844800 volt=544000, core_count 4
+[    1.702814] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=1 freq=960000 volt=564000, core_count 4
+[    1.702819] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=2 freq=1075200 volt=572000, core_count 4
+[    1.702824] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=3 freq=1190400 volt=592000, core_count 4
+[    1.702828] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=4 freq=1305600 volt=600000, core_count 4
+[    1.702833] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=5 freq=1420800 volt=620000, core_count 4
+[    1.702837] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=6 freq=1555200 volt=640000, core_count 4
+[    1.702842] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=7 freq=1670400 volt=656000, core_count 4
+[    1.702847] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=8 freq=1785600 volt=676000, core_count 4
+[    1.702851] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=9 freq=1900800 volt=696000, core_count 4
+[    1.702856] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=10 freq=2035200 volt=720000, core_count 4
+[    1.702861] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=11 freq=2150400 volt=748000, core_count 4
+[    1.702865] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=12 freq=2265600 volt=780000, core_count 4
+[    1.702870] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=13 freq=2380800 volt=816000, core_count 4
+[    1.702875] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=14 freq=2496000 volt=836000, core_count 4
+[    1.702879] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=15 freq=2592000 volt=868000, core_count 4
+[    1.702884] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=16 freq=2688000 volt=892000, core_count 4
+[    1.702889] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=17 freq=2764800 volt=916000, core_count 4
+[    1.702893] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=18 freq=2841600 volt=948000, core_count 4
+[    1.702898] qcom-cpufreq-hw 18591000.qcom,cpufreq-hw: index=19 freq=2841600 volt=948000, core_count 4
+[    1.702963] cpu cpu0: EM: created perf domain
+[    1.703309] cpu cpu4: EM: created perf domain
+[    1.703716] cpu cpu7: EM: created perf domain
+[    1.704063] core_ctl: Creating CPU group 0
+[    1.704066] core_ctl: Init CPU0 state
+[    1.704067] core_ctl: Init CPU1 state
+[    1.704069] core_ctl: Init CPU2 state
+[    1.704071] core_ctl: Init CPU3 state
+[    1.704248] core_ctl: Creating CPU group 4
+[    1.704251] core_ctl: Init CPU4 state
+[    1.704252] core_ctl: Init CPU5 state
+[    1.704254] core_ctl: Init CPU6 state
+[    1.719856] shmbridge is enabled
+[    1.720487] core_ctl: Creating CPU group 7
+[    1.720489] core_ctl: Init CPU7 state
+[    1.723641] IPA framework init
+[    1.724951] dev-cpufreq: No tables parsed from DT.
+[    1.725346] SDAM base=0x7100 size=128 registered successfully
+[    1.725431] SDAM base=0x7400 size=128 registered successfully
+[    1.725517] SDAM base=0x7c00 size=128 registered successfully
+[    1.725597] SDAM base=0x7d00 size=128 registered successfully
+[    1.725687] SDAM base=0x8400 size=128 registered successfully
+[    1.725767] SDAM base=0x8500 size=128 registered successfully
+[    1.725850] SDAM base=0x8600 size=128 registered successfully
+[    1.725933] SDAM base=0x9d00 size=128 registered successfully
+[    1.726002] Advanced Linux Sound Architecture Driver Initialized.
+[    1.726817] IPA clients manager init
+[    1.726819] ipa_usb driver init
+[    1.726909] ipa_usb registered successfully
+[    1.726911] exit: IPA_USB init success!
+[    1.726914] ipa_wdi3 registered successfully
+[    1.726917] ipa_gsb registered successfully
+[    1.726920] ipa_uc_offload registered successfully
+[    1.726923] ipa_mhi registered successfully
+[    1.726926] ipa_wigig registered successfully
+[    1.727259] Bluetooth: Core ver 2.22
+[    1.727271] NET: Registered protocol family 31
+[    1.727273] Bluetooth: HCI device and connection manager initialized
+[    1.727280] Bluetooth: HCI socket layer initialized
+[    1.727284] Bluetooth: L2CAP socket layer initialized
+[    1.727288] Bluetooth: SCO socket layer initialized
+[    1.727406] pcie:pcie_init.
+[    1.734737] platform soc:qcom,ion:qcom,ion-heap@22: assigned reserved memory node sdsp_region
+[    1.742457] platform soc:qcom,ion:qcom,ion-heap@13: assigned reserved memory node sp_region
+[    1.744707] clocksource: Switched to clocksource arch_sys_counter
+[    1.761271] platform soc:qcom,ion:qcom,ion-heap@26: assigned reserved memory node user_contig_region
+[    1.763869] platform soc:qcom,ion:qcom,ion-heap@27: assigned reserved memory node qseecom_region
+[    1.766452] platform soc:qcom,ion:qcom,ion-heap@19: assigned reserved memory node qseecom_ta_region
+[    1.769058] platform soc:qcom,ion:qcom,ion-heap@10: assigned reserved memory node secure_display_region
+[    1.771644] platform soc:qcom,ion:qcom,ion-heap@5: assigned reserved memory node audio_cma_region
+[    1.774246] platform soc:qcom,ion:qcom,ion-heap@3: assigned reserved memory node non_secure_display_region
+[    1.788270] ION heap system created
+[    1.788482] ION heap adsp created
+[    1.788504] ION heap secure_heap created
+[    1.905420] VFS: Disk quotas dquot_6.6.0
+[    1.905467] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.907454] debugcc-lahaina soc:qcom,cc-debug: Registered debug measure clocks
+[    1.909470] NET: Registered protocol family 2
+[    1.909619] IP idents hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    1.911536] tcp_listen_portaddr_hash hash table entries: 4096 (order: 4, 65536 bytes, linear)
+[    1.911649] TCP established hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    1.912006] TCP bind hash table entries: 65536 (order: 8, 1048576 bytes, linear)
+[    1.912753] TCP: Hash tables configured (established 65536 bind 65536)
+[    1.912845] UDP hash table entries: 4096 (order: 5, 131072 bytes, linear)
+[    1.912936] UDP-Lite hash table entries: 4096 (order: 5, 131072 bytes, linear)
+[    1.913113] NET: Registered protocol family 1
+[    1.913527] NET: Registered protocol family 44
+[    1.913536] PCI: CLS 0 bytes, default 64
+[    1.913743] Trying to unpack rootfs image as initramfs...
+[    1.928802] platform soc:qcom,ion:qcom,ion-heap@14: ion_secure_carveout: creating heap@0x80c00000, size 0x4600000
+[    1.928807] ION heap secure_carveout created
+[    1.928815] ION heap spss created
+[    1.928818] ION heap user_contig created
+[    1.928821] ION heap qsecom created
+[    1.928823] ION heap qsecom_ta created
+[    1.928826] ION heap secure_display created
+[    1.928829] ION heap audio_ml created
+[    1.928831] ION heap display created
+[    2.345779] Freeing initrd memory: 15952K
+[    2.347300] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 counters available
+[    2.353284] Initialise system trusted keyrings
+[    2.353311] workingset: timestamp_bits=46 max_order=22 bucket_order=0
+[    2.357468] fuse: init (API version 7.31)
+[    2.369740] Key type asymmetric registered
+[    2.369745] Asymmetric key parser 'x509' registered
+[    2.369772] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 245)
+[    2.369777] io scheduler mq-deadline registered
+[    2.369780] io scheduler kyber registered
+[    2.369865] io scheduler bfq registered
+[    2.391634] v0.15, id=415, ver=2.0, raw_id=309, raw_ver=2, hw_plat=11, hw_plat_ver=65536
+                accessory_chip=0, hw_plat_subtype=0, pmic_model=65583, pmic_die_revision=131072 foundry_id=3 serial_number=925032040 num_pmics=6 chip_family=0x69 raw_device_family=0x6 raw_device_number=0xf nproduct_id=0x41d num_clusters=0x1 ncluster_array_offset=0xb0 num_defective_parts=0xf ndefective_parts_array_offset=0xb4 nmodem_supported=0xffffffff
+[    2.393497] lahaina-llcc 9200000.cache-controller: IRQ index 0 not found
+[    2.395067] msm_mem_dump soc:mem_dump: assigned reserved memory node mem_dump_region
+[    2.408513] MSM Memory Dump base table set up
+[    2.408522] MSM Memory Dump apps data table set up
+[    2.409750] llcc_perfmon: Revision 2, has 1 memory controllers connected with LLCC
+[    2.413128] PMIC PON log: Reset Trigger: PS_HOLD
+[    2.413147] PMIC PON log: Reset Type: HARD_RESET
+[    2.413195] PMIC PON log: PON Trigger: HARD_RESET
+[    2.413212] PMIC PON log: PON Trigger: USB_CHARGER
+[    2.413286] PMIC PON log: Reset Trigger: PS_HOLD
+[    2.413302] PMIC PON log: Reset Type: HARD_RESET
+[    2.413347] PMIC PON log: PON Trigger: HARD_RESET
+[    2.413419] PMIC PON log: Reset Trigger: PS_HOLD
+[    2.413435] PMIC PON log: Reset Type: HARD_RESET
+[    2.413480] PMIC PON log: PON Trigger: HARD_RESET
+[    2.413496] PMIC PON log: PON Trigger: USB_CHARGER
+[    2.415988] cdsprm: Init successful
+[    2.416582] 88e0000.qcom,msm-eud: ttyEUD0 at MMIO 0x0 (irq = 41, base_baud = 0) is a EUD UART
+[    2.417715] qbt:qbt_handler_init: entry
+[    2.417949] qbt:qbt_probe: entry
+[    2.418137] input: qbt_key_input as /devices/virtual/input/input1
+[    2.418191] gpio gpiochip0: (f000000.pinctrl): allocate IRQ 339, hwirq 39
+[    2.418196] gpio gpiochip0: (f000000.pinctrl): found parent hwirq 92
+[    2.418206] gpio gpiochip0: (f000000.pinctrl): alloc_irqs_parent for 339 parent hwirq 92
+[    2.418298] qbt:setup_fd_gpio_irq: rc 0
+[    2.418334] gpio gpiochip0: (f000000.pinctrl): allocate IRQ 340, hwirq 38
+[    2.418338] gpio gpiochip0: (f000000.pinctrl): found parent hwirq 99
+[    2.418343] gpio gpiochip0: (f000000.pinctrl): alloc_irqs_parent for 340 parent hwirq 99
+[    2.418350] qbt:setup_ipc_irq: irq 340 gpio 346
+[    2.418608] qbt:qbt_touch_connect: Connected device: input1
+[    2.418611] qbt:qbt_probe: exit : 0
+[    2.425369] msm_geni_serial_init: Driver initialized
+[    2.426426] Error: swapper/0: fastrpc_device_init: failed to create debugfs root dir
+[    2.426780] Info: adsprpc (3067): swapper/0: fastrpc_get_dsp_status: adsprpc: fastrpc_get_dsp_status: cdsp node found with ret:1
+[    2.426927] fastrpc soc:qcom,msm-adsprpc-mem: assigned reserved memory node adsp_region
+[    2.426934] fastrpc soc:qcom,msm-adsprpc-mem: for adsp_rh segments only will be dumped.
+[    2.427019] Info: adsprpc (6752): swapper/0: init_secure_vmid_list: secure VMID = 22
+[    2.427022] Info: adsprpc (6752): swapper/0: init_secure_vmid_list: secure VMID = 37
+[    2.427026] adsprpc: fastrpc_init_privileged_gids: privileged GID: 2908
+[    2.427067] adsprpc: fastrpc_setup_service_locator: service location enabled for avs/audio (audio_pdr_adsprpc)
+[    2.427090] adsprpc: fastrpc_setup_service_locator: service location enabled for tms/servreg (sensors_pdr_adsprpc)
+[    2.482314] adsprpc: fastrpc_device_init: SSR notifier registered for adsp
+[    2.482318] adsprpc: fastrpc_device_init: SSR notifier registered for modem
+[    2.482322] adsprpc: fastrpc_device_init: SSR notifier registered for slpi
+[    2.482325] adsprpc: fastrpc_device_init: SSR notifier registered for cdsp
+[    2.501045] adreno-a6xx-gmu 3d6a000.qcom,gmu: Adding to iommu group 0
+[    2.506704] brd: module loaded
+[    2.510272] loop: module loaded
+[    2.510475] zram: Added device: zram0
+[    2.510646] platform soc:qcom,ion:qcom,ion-heap@19: assigned reserved memory node qseecom_ta_region
+[    2.511160] platform soc:qcom,ion:qcom,ion-heap@27: assigned reserved memory node qseecom_region
+[    2.511270] platform soc:qcom,ion:qcom,ion-heap@26: assigned reserved memory node user_contig_region
+[    2.511417] qseecom soc:qseecom@c1700000: assigned reserved memory node qseecom_region
+[    2.511466] QSEECOM: qseecom_init_control: qseecom.qsee_version = 0x1402000
+[    2.511516] QSEECOM: qseecom_retrieve_ce_data: Device does not support PFE/FDE
+[    2.514366] tun: Universal TUN/TAP device driver, 1.6
+[    2.514405] PPP generic driver version 2.4.2
+[    2.514454] PPP BSD Compression module registered
+[    2.514457] PPP Deflate Compression module registered
+[    2.514481] PPP MPPE Compression module registered
+[    2.514485] NET: Registered protocol family 24
+[    2.514488] PPTP driver version 0.8.5
+[    2.515507] cnss_utils: Unable to create debugfs -19
+[    2.515511] CLD80211: Initializing
+[    2.515936] usbcore: registered new interface driver r8152
+[    2.515954] usbcore: registered new interface driver lan78xx
+[    2.515969] usbcore: registered new interface driver asix
+[    2.515985] usbcore: registered new interface driver ax88179_178a
+[    2.516000] usbcore: registered new interface driver cdc_ether
+[    2.519877] msm_sharedmem: msm_sharedmem_probe: Device created for client 'rmtfs'
+[    2.524228] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.524231] ehci-pci: EHCI PCI platform driver
+[    2.524255] ehci-platform: EHCI generic platform driver
+[    2.525786] usbcore: registered new interface driver uas
+[    2.525804] usbcore: registered new interface driver usb-storage
+[    2.525821] usbcore: registered new interface driver usb_ehset_test
+[    2.525836] usbcore: registered new interface driver lvs
+[    2.526351] dummy_hcd dummy_hcd.0: USB Host+Gadget Emulator, driver 02 May 2005
+[    2.526360] dummy_hcd dummy_hcd.0: Dummy host controller
+[    2.526367] dummy_hcd dummy_hcd.0: new USB bus registered, assigned bus number 1
+[    2.526740] hub 1-0:1.0: USB hub found
+[    2.526766] hub 1-0:1.0: 1 port detected
+[    2.527924] usbcore: registered new interface driver xpad
+[    2.527951] usbcore: registered new interface driver usbtouchscreen
+[    2.529542] input: qcom-hv-haptics as /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440000.qcom,spmi:qcom,pm8350b@3:qcom,hv-haptics@f000/input/input2
+[    2.530781] rtc-pm8xxx c440000.qcom,spmi:qcom,pmk8350@0:rtc@6100: registered as rtc0
+[    2.530850] rtc-pm8xxx c440000.qcom,spmi:qcom,pmk8350@0:rtc@6100: setting system clock to 1970-01-01T01:01:01 UTC (3661)
+[    2.531033] i2c /dev entries driver
+[    2.531623] synx: synx device initialization start
+[    2.531679] synx: synx device initialization success
+[    2.531685] msm_cvp:  err: Failed to create debugfs for msm_cvp
+[    2.532422] uvcvideo: Unable to create debugfs directory
+[    2.532444] usbcore: registered new interface driver uvcvideo
+[    2.532447] USB Video Class driver (1.1.1)
+[    2.532450] gspca_main: v2.14.0 registered
+[    2.553588] device-mapper: uevent: version 1.0.3
+[    2.553697] device-mapper: ioctl: 4.41.0-ioctl (2019-09-16) initialised: dm-devel@redhat.com
+[    2.554206] bt_dt_parse_vreg_info: qcom,bt-vdd-io is not provided in device tree
+[    2.554270] bt_dt_parse_vreg_info: qcom,bt-vdd-rfacmn is not provided in device tree
+[    2.554282] bt_dt_parse_vreg_info: qcom,bt-vdd-rfa-0p8 is not provided in device tree
+[    2.554448] bt_dt_parse_vreg_info: qcom,bt-vdd-ipa-2p2 is not provided in device tree
+[    2.554487] bt-debug-gpio not provided in devicetree
+[    2.554492] xo-reset-gpio not provided in devicetree
+[    2.554495] bt_dt_parse_clk_info: clocks is not provided in device tree
+[    2.554497] bt_power_populate_dt_pinfo: clock not provided in device tree
+[    2.554586] TCS CMD base address is 0x000000000b2e5510 with length 0x0000000000000690
+[    2.555402] EDAC DEVICE0: Giving out device to module soc:erp controller cache: DEV soc:erp (INTERRUPT)
+[    2.556263] qcom_llcc_edac qcom_llcc_edac: No ECC IRQ; defaulting to polling mode
+[    2.556292] EDAC DEVICE1: Giving out device to module qcom_llcc_edac controller llcc: DEV qcom_llcc_edac (POLLED)
+[    2.558254] sdhci: Secure Digital Host Controller Interface driver
+[    2.558256] sdhci: Copyright(c) Pierre Ossman
+[    2.558258] sdhci-pltfm: SDHCI platform and OF driver helper
+[    2.563050] hidraw: raw HID events driver (C) Jiri Kosina
+[    2.563568] usbcore: registered new interface driver usbhid
+[    2.563570] usbhid: USB HID core driver
+[    2.563737] ashmem: initialized
+[    2.563800] wlan_hdd_state wlan major(498) initialized
+[    2.564477] hh_msgq: Registered client for label: 0
+[    2.621363] qcom-llcc-pmu 9095000.llcc-pmu: Registered llcc_pmu, type: 8
+[    2.622145] gnss: GNSS driver registered with major 496
+[    2.622766] usbcore: registered new interface driver snd-usb-audio
+[    2.623510] msm_vidc:   err : ffffffff: .....: Failed to create debugfs for msm_vidc
+[    2.765895] msm-dai-tdm soc:qcom,msm-dai-tdm-hsif0-tx: msm_dai_tdm_q6_probe: group id not supported 0x916f
+[    2.765902] msm-dai-tdm: probe of soc:qcom,msm-dai-tdm-hsif0-tx failed with error -22
+[    2.873271] dsi_phy ae94400.qcom,mdss_dsi_phy0: ae94400.qcom,mdss_dsi_phy0 supply gdsc not found, using dummy regulator
+[    2.873400] [drm:dsi_pll_init] [msm-dsi-info]: DSI_PLL_0: DSI pll label = dsi_pll_5nm
+[    2.873405] [drm:dsi_pll_init] [msm-dsi-info]: DSI_PLL_0: PLL SSC enabled
+[    2.873415] dsi_pll_init: PLL base=(____ptrval____)
+[    2.873501] dsi_pll_5nm_get_gdsc_status: reg:0xf822f000 status:1
+[    2.873508] vco_5nm_recalc_rate: handoff_resources true
+[    2.873972] dsi_pll_5nm_get_gdsc_status: reg:0xf822f000 status:1
+[    2.873978] vco_5nm_recalc_rate: handoff_resources true
+[    2.874719] dsi_pll_clock_register_5nm: Registered DSI PLL ndx=0, clocks successfully
+[    2.874833] [drm:dsi_phy_driver_probe] [msm-dsi-info]: DSI_0: Probe successful
+[    2.874917] dsi_phy ae96400.qcom,mdss_dsi_phy1: ae96400.qcom,mdss_dsi_phy1 supply gdsc not found, using dummy regulator
+[    2.875016] [drm:dsi_pll_init] [msm-dsi-info]: DSI_PLL_0: DSI pll label = dsi_pll_5nm
+[    2.875020] [drm:dsi_pll_init] [msm-dsi-info]: DSI_PLL_1: PLL SSC enabled
+[    2.875028] dsi_pll_init: PLL base=(____ptrval____)
+[    2.875096] dsi_pll_5nm_get_gdsc_status: reg:0xf822f000 status:1
+[    2.880146] vco_5nm_recalc_rate: PLL not enabled
+[    2.880149] vco_5nm_recalc_rate: handoff_resources false
+[    2.880651] dsi_pll_5nm_get_gdsc_status: reg:0xf822f000 status:1
+[    2.885680] vco_5nm_recalc_rate: PLL not enabled
+[    2.885685] vco_5nm_recalc_rate: handoff_resources false
+[    2.886306] dsi_pll_clock_register_5nm: Registered DSI PLL ndx=1, clocks successfully
+[    2.886312] [drm:dsi_phy_driver_probe] [msm-dsi-info]: DSI_1: Probe successful
+[    2.890489] DATARMNETb1c42acd9c(): rmnet_offload initializing
+[    2.890493] DATARMNET163e93649e(): Starting rmnet SHS module 9731 
+[    2.890565] u32 classifier
+[    2.890567]     input device check on
+[    2.890569]     Actions configured
+[    2.891225] xt_time: kernel timezone is -0000
+[    2.891295] ipip: IPv4 and MPLS over IPv4 tunneling driver
+[    2.891566] gre: GRE over IPv4 demultiplexor driver
+[    2.891570] ip_gre: GRE over IPv4 tunneling driver
+[    2.892165] IPv4 over IPsec tunneling driver
+[    2.892535] iptable_raw: Enabling raw table before defrag
+[    2.892651] Initializing XFRM netlink socket
+[    2.892662] IPsec XFRM device driver
+[    2.892914] NET: Registered protocol family 10
+[    2.893837] Segment Routing with IPv6
+[    2.893923] mip6: Mobile IPv6
+[    2.893992] ip6table_raw: Enabling raw table before defrag
+[    2.894361] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    2.894842] ip6_gre: GRE over IPv6 tunneling driver
+[    2.895089] NET: Registered protocol family 17
+[    2.895103] NET: Registered protocol family 15
+[    2.895310] Bluetooth: RFCOMM TTY layer initialized
+[    2.895318] Bluetooth: RFCOMM socket layer initialized
+[    2.895320] Bluetooth: RFCOMM ver 1.11
+[    2.895324] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    2.895338] Bluetooth: HIDP socket layer initialized
+[    2.895349] l2tp_core: L2TP core driver, V2.0
+[    2.895355] l2tp_ppp: PPPoL2TP kernel driver, V2.0
+[    2.895358] tipc: Activated (version 2.0.0)
+[    2.895427] NET: Registered protocol family 30
+[    2.895486] tipc: Started in single node mode
+[    2.895793] qcom_haven_qrtr soc:qrtr-haven: failed to raise doorbell -11
+[    2.897866] registered taskstats version 1
+[    2.897869] Loading compiled-in X.509 certificates
+[    2.897926] Key type ._fscrypt registered
+[    2.897928] Key type .fscrypt registered
+[    2.897930] Key type fscrypt-provisioning registered
+[    2.904410] spss_utils [spss_parse_dt]: iar_buf_addr [0x8b6c3000].
+[    2.905534] lrng_drng_mgr: Initial DRNG initialized triggering first seeding
+[    2.905726] Unable to map memory for DT property: dload_mode
+[    2.914797] disp_cc_pll1 PLL is already enabled
+[    2.914955] disp_cc-lahaina af00000.qcom,dispcc: Registered DISP CC clocks
+[    2.915207] cam_cc_bps_gdsc: supplied by pm8350c_s8_level
+[    2.915405] cam_cc_ife_0_gdsc: supplied by pm8350c_s8_level
+[    2.915596] cam_cc_ife_1_gdsc: supplied by pm8350c_s8_level
+[    2.915785] cam_cc_ife_2_gdsc: supplied by pm8350c_s8_level
+[    2.915981] cam_cc_ipe_0_gdsc: supplied by pm8350c_s8_level
+[    2.917657] cam_cc_sbi_gdsc: supplied by pm8350c_s8_level
+[    2.917971] cam_cc_titan_top_gdsc: supplied by pm8350c_s8_level
+[    2.918180] disp_cc_mdss_core_gdsc: supplied by pm8350c_s8_level
+[    2.918724] video_cc_mvs0_gdsc: supplied by pm8350c_s8_level
+[    2.918928] video_cc_mvs0c_gdsc: supplied by pm8350c_s8_level
+[    2.919123] video_cc_mvs1_gdsc: supplied by pm8350c_s8_level
+[    2.919318] video_cc_mvs1c_gdsc: supplied by pm8350c_s8_level
+[    2.921727] msm_drm ae00000.qcom,mdss_mdp: qcom,sde_rscc not probed yet
+[    2.922334] OF: graph: no port node found in /soc/qcom,dsi-display-primary
+[    2.922348] [drm:dsi_ctrl_get] *ERROR* [msm-dsi-error]: inv: Device with of node not found rc=-517
+[    2.922910] [drm] [msm-dsi-warn]: default panel not found
+[    2.930519] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[    2.930819] rmnet_ipa3 started initialization
+[    2.940644] lrng_es_mgr: LRNG fully operational
+[    2.940647] lrng_es_mgr: LRNG fully seeded with 256 bits of entropy
+[    2.956050] arm-smmu 15000000.apps-smmu: 	coherent table walk
+[    2.956056] arm-smmu 15000000.apps-smmu: 	stream matching with 89 register groups
+[    2.957480] msm-dwc3 a600000.ssusb: Adding to iommu group 1
+[    2.959460] dwc3 a600000.dwc3: changing max_speed on rev 00000000
+[    2.961390] usb_bam_init: setting SPS_BAM_SMMU_EN flag with (a704000.qcom,usbbam)
+[    2.961467] sps:BAM 0x000000000a704000 is registered
+[    2.961743] msm-dwc3 a600000.ssusb: Nominal values not found.
+[    2.961746] msm-dwc3 a600000.ssusb: Dynamic voting failed
+[    2.961831] msm-dwc3 a600000.ssusb: IRQ hs_phy_irq not found
+[    2.962504] msm-dwc3 a600000.ssusb: IRQ dp_hs_phy_irq1 not found
+[    2.962508] msm-dwc3 a600000.ssusb: IRQ dm_hs_phy_irq1 not found
+[    2.962512] msm-dwc3 a600000.ssusb: IRQ ss_phy_irq1 not found
+[    2.963502] msm_vidc:   err : ffffffff: .....: no device Registered
+[    2.964055] msm_vidc:   err : ffffffff: .....: Failed to create debugfs for msm_vidc
+[    2.966001] msm_vidc_v4l2 aa00000.qcom,vidc:non_secure_cb: Adding to iommu group 2
+[    2.968255] msm_vidc_v4l2 aa00000.qcom,vidc:secure_non_pixel_cb: Adding to iommu group 3
+[    2.970325] msm_vidc_v4l2 aa00000.qcom,vidc:secure_bitstream_cb: Adding to iommu group 4
+[    2.972407] msm_vidc_v4l2 aa00000.qcom,vidc:secure_pixel_cb: Adding to iommu group 5
+[    2.978394] kgsl-3d 3d00000.qcom,kgsl-3d0: bound 3d6a000.qcom,gmu (ops a6xx_gmu_component_ops)
+[    2.983984] platform 3da0000.qcom,kgsl-iommu:gfx3d_user: Adding to iommu group 6
+[    2.985402] platform 3da0000.qcom,kgsl-iommu:gfx3d_lpac: Adding to iommu group 7
+[    2.985879] msm_cvp:  err: Failed to create debugfs for msm_cvp
+[    2.990694] msm_cvp ab00000.qcom,cvp:cvp_non_secure_cb: Adding to iommu group 8
+[    2.990795] platform 3da0000.qcom,kgsl-iommu:gfx3d_secure: Adding to iommu group 9
+[    2.995349] msm_cvp ab00000.qcom,cvp:cvp_secure_nonpixel_cb: Adding to iommu group 10
+[    2.997406] msm_cvp ab00000.qcom,cvp:cvp_secure_pixel_cb: Adding to iommu group 11
+[    2.998881] msm_cvp ab00000.qcom,cvp:qcom,msm-cvp,mem_cdsp: assigned reserved memory node cdsp_region
+[    2.999558] sdpm-clk-notify 636000.mx_sdpm: 636000.mx_sdpm supply gcc_gp1 not found, using dummy regulator
+[    2.999950] sdpm-clk-notify 634000.cx_sdpm: 634000.cx_sdpm supply ufs_phy not found, using dummy regulator
+[    3.006045] gpi_dma 900000.qcom,gpi-dma: Adding to iommu group 12
+[    3.007400] gpi_dma a00000.qcom,gpi-dma: Adding to iommu group 13
+[    3.008845] gpi_dma 800000.qcom,gpi-dma: Adding to iommu group 14
+[    3.010226] minidump-id not found for ipa_fws
+[    3.010284] subsys-pil-tz soc:qcom,ipa_fws: for ipa_fws segments only will be dumped.
+[    3.010345] subsys-pil-tz soc:qcom,ipa_fws: for md_ipa_fws segments only will be dumped.
+[    3.010643] minidump-id not found for evass
+[    3.010684] subsys-pil-tz abb0000.qcom,evass: for evass segments only will be dumped.
+[    3.010727] subsys-pil-tz abb0000.qcom,evass: for md_evass segments only will be dumped.
+[    3.011000] minidump-id not found for trustedvm
+[    3.011043] subsys-pil-tz soc:qcom,trustedvm@d0800000: for trustedvm segments only will be dumped.
+[    3.011085] subsys-pil-tz soc:qcom,trustedvm@d0800000: for md_trustedvm segments only will be dumped.
+[    3.011348] minidump-id not found for a660_zap
+[    3.011396] subsys-pil-tz soc:qcom,kgsl-hyp: for a660_zap segments only will be dumped.
+[    3.011439] subsys-pil-tz soc:qcom,kgsl-hyp: for md_a660_zap segments only will be dumped.
+[    3.011803] hh_msgq: Registered client for label: 1
+[    3.012270] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb1: Adding to iommu group 15
+[    3.012760] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb2: Adding to iommu group 16
+[    3.013234] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb3: Adding to iommu group 17
+[    3.013717] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb4: Adding to iommu group 18
+[    3.014195] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb5: Adding to iommu group 19
+[    3.014679] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb6: Adding to iommu group 20
+[    3.015154] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb7: Adding to iommu group 21
+[    3.015633] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb8: Adding to iommu group 22
+[    3.016514] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb9: Adding to iommu group 23
+[    3.016986] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb10: Adding to iommu group 24
+[    3.017453] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb11: Adding to iommu group 25
+[    3.017935] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb12: Adding to iommu group 26
+[    3.018424] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb13: Adding to iommu group 27
+[    3.018887] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb14: Adding to iommu group 28
+[    3.019360] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb15: Adding to iommu group 29
+[    3.019846] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb16: Adding to iommu group 30
+[    3.020413] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb17: Adding to iommu group 31
+[    3.020891] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb18: Adding to iommu group 32
+[    3.021364] fastrpc soc:qcom,msm_fastrpc:qcom,msm_fastrpc_compute_cb19: Adding to iommu group 33
+[    3.054391] qce 1de0000.qcedev: Adding to iommu group 34
+[    3.054652] QCE50: __qce_get_device_tree_data: CE operating frequency is not defined, setting to default 100MHZ
+[    3.054838] qce 1de0000.qcedev: QTI Crypto 5.6.0 device found @0x1de0000
+[    3.054924] sps:BAM 0x0000000001dc4000 is registered
+[    3.054996] sps:BAM 0x0000000001dc4000 (va:0x000000008a101133) enabled: ver:0x27, number of pipes:16
+[    3.055112] QCE50: qce_sps_init:  QTI MSM CE-BAM at 0x0000000001dc4000 irq 42
+[    3.057259] qce 1de0000.qcedev:qcom_cedev_ns_cb: Adding to iommu group 35
+[    3.059434] qce 1de0000.qcedev:qcom_cedev_s_cb: Adding to iommu group 36
+[    3.059960] qcrypto 1de0000.qcrypto: Adding to iommu group 37
+[    3.060185] QCE50: __qce_get_device_tree_data: CE operating frequency is not defined, setting to default 100MHZ
+[    3.060366] qcrypto 1de0000.qcrypto: QTI Crypto 5.6.0 device found @0x1de0000
+[    3.060499] QCE50: qce_sps_init:  QTI MSM CE-BAM at 0x0000000001dc4000 irq 42
+[    3.060765] qcrypto 1de0000.qcrypto: qcrypto-ecb-aes
+[    3.060898] qcrypto 1de0000.qcrypto: qcrypto-cbc-aes
+[    3.061013] qcrypto 1de0000.qcrypto: qcrypto-ctr-aes
+[    3.061125] qcrypto 1de0000.qcrypto: qcrypto-ecb-des
+[    3.061233] qcrypto 1de0000.qcrypto: qcrypto-cbc-des
+[    3.061348] qcrypto 1de0000.qcrypto: qcrypto-ecb-3des
+[    3.061458] qcrypto 1de0000.qcrypto: qcrypto-cbc-3des
+[    3.061572] qcrypto 1de0000.qcrypto: qcrypto-xts-aes
+[    3.061676] qcrypto 1de0000.qcrypto: qcrypto-sha1
+[    3.061783] qcrypto 1de0000.qcrypto: qcrypto-sha256
+[    3.061889] qcrypto 1de0000.qcrypto: qcrypto-aead-hmac-sha1-cbc-aes
+[    3.061999] qcrypto 1de0000.qcrypto: qcrypto-aead-hmac-sha1-cbc-des
+[    3.062104] qcrypto 1de0000.qcrypto: qcrypto-aead-hmac-sha1-cbc-3des
+[    3.062211] qcrypto 1de0000.qcrypto: qcrypto-aead-hmac-sha256-cbc-aes
+[    3.062323] qcrypto 1de0000.qcrypto: qcrypto-aead-hmac-sha256-cbc-des
+[    3.062429] qcrypto 1de0000.qcrypto: qcrypto-aead-hmac-sha256-cbc-3des
+[    3.062536] qcrypto 1de0000.qcrypto: qcrypto-hmac-sha1
+[    3.062649] qcrypto 1de0000.qcrypto: qcrypto-hmac-sha256
+[    3.062754] qcrypto 1de0000.qcrypto: qcrypto-aes-ccm
+[    3.062865] qcrypto 1de0000.qcrypto: qcrypto-rfc4309-aes-ccm
+[    3.065230] uaudio-qmi soc:usb_audio_qmi_dev: Adding to iommu group 38
+[    3.066618] msm_cam_smmu soc:qcom,cam_smmu:msm_cam_smmu_ife: Adding to iommu group 39
+[    3.067173] msm_cam_smmu soc:qcom,cam_smmu:msm_cam_smmu_jpeg: Adding to iommu group 40
+[    3.067773] msm_cam_smmu soc:qcom,cam_smmu:msm_cam_smmu_icp: Adding to iommu group 41
+[    3.068327] msm_cam_smmu soc:qcom,cam_smmu:msm_cam_smmu_cpas_cdm: Adding to iommu group 42
+[    3.069448] [drm:sde_power_parse_ib_votes:474]: error reading min core ib vote. rc=-22, np=bf338440
+[    3.069452] [drm:sde_power_parse_ib_votes:482]: error reading min llcc ib vote. rc=-22
+[    3.069455] [drm:sde_power_parse_ib_votes:490]: error reading min dram ib vote. rc=-22
+[    3.069666] [sde_rsc_hw:rsc_hw_init_v3:537]: sde rsc init successfully done
+[    3.069684] [sde_rsc:sde_rsc_probe:1799]: sde rsc index:0 probed successfully
+[    3.070149] msmdrm_smmu soc:qcom,smmu_sde_unsec_cb: Adding to iommu group 43
+[    3.070237] [drm] probing device qcom,smmu_sde_unsec
+[    3.070241] [drm] Created domain mdp_ns, secure=0
+[    3.071025] msmdrm_smmu soc:qcom,smmu_sde_sec_cb: Adding to iommu group 44
+[    3.071112] [drm] probing device qcom,smmu_sde_sec
+[    3.071116] [drm] Created domain mdp_s, secure=1
+[    3.071409] spss_utils [spss_parse_dt]: iar_buf_addr [0x8b6c3000].
+[    3.073908] qupv3_geni_se 9c0000.qcom,qupv3_0_geni_se: Adding to iommu group 45
+[    3.074475] qupv3_geni_se ac0000.qcom,qupv3_1_geni_se: Adding to iommu group 46
+[    3.075058] qupv3_geni_se 8c0000.qcom,qupv3_2_geni_se: Adding to iommu group 47
+[    3.076488] minidump-id not found for spss
+[    3.076539] subsys-pil-tz: pil_tz_generic_probe(): spss is brought out of reset by UEFI
+[    3.079956] ufshcd-qcom 1d84000.ufshc: Adding to iommu group 48
+[    3.080243] ufshcd-qcom 1d84000.ufshc: ufshcd_populate_vreg: unable to find vdd-hba-max-microamp
+[    3.080265] ufshcd-qcom 1d84000.ufshc: ufshcd_populate_vreg: Unable to find vccq2-supply regulator, assuming enabled
+[    3.081071] ufshcd-qcom 1d84000.ufshc: -- Registered bus voting! (0) --
+[    3.081977] scsi host0: ufshcd
+[    3.088928] ufshcd-qcom 1d84000.ufshc: *** This is drivers/scsi/ufs/ufshcd.c ***
+[    3.091154] minidump-id not found for slpi
+[    3.092046] pci-msm 1c00000.qcom,pcie: PCIe: msm_pcie_probe
+[    3.092705] pci-msm 1c00000.qcom,pcie: 1c00000.qcom,pcie supply vreg-3p3 not found, using dummy regulator
+[    3.092917] pci-msm 1c00000.qcom,pcie: 1c00000.qcom,pcie supply vreg-mx not found, using dummy regulator
+[    3.093120] gpio gpiochip0: (f000000.pinctrl): allocate IRQ 358, hwirq 96
+[    3.093125] gpio gpiochip0: (f000000.pinctrl): found parent hwirq 148
+[    3.093133] gpio gpiochip0: (f000000.pinctrl): alloc_irqs_parent for 358 parent hwirq 148
+[    3.093189] msm_pcie_get_reg: PCIe: RC0: no mhi resource found.
+[    3.093194] msm_pcie_get_reg: PCIe: RC0: no tcsr resource found.
+[    3.093200] msm_pcie_get_reg: PCIe: RC0: no rumi resource found.
+[    3.093822] pci-msm 1c08000.qcom,pcie: PCIe: msm_pcie_probe
+[    3.094198] pci-msm 1c08000.qcom,pcie: 1c08000.qcom,pcie supply vreg-3p3 not found, using dummy regulator
+[    3.094394] pci-msm 1c08000.qcom,pcie: 1c08000.qcom,pcie supply vreg-mx not found, using dummy regulator
+[    3.094586] gpio gpiochip0: (f000000.pinctrl): allocate IRQ 359, hwirq 99
+[    3.094591] gpio gpiochip0: (f000000.pinctrl): found parent hwirq 150
+[    3.094596] gpio gpiochip0: (f000000.pinctrl): alloc_irqs_parent for 359 parent hwirq 150
+[    3.094650] msm_pcie_get_reg: PCIe: RC1: no mhi resource found.
+[    3.094655] msm_pcie_get_reg: PCIe: RC1: no tcsr resource found.
+[    3.094661] msm_pcie_get_reg: PCIe: RC1: no rumi resource found.
+[    3.094670] msm_pcie_probe: PCIe: RC1 could not get pinctrl sleep state
+[    3.100499] [drm:sde_dbg_init:2392] evtlog_status: enable:11, panic:1, dump:2
+[    3.101776] sdhci_msm 8804000.sdhci: Adding to iommu group 49
+[    3.101893] sdhci_msm 8804000.sdhci: Got CD GPIO
+[    3.101978] sdhci_msm 8804000.sdhci: core_reset unavailable,err = -2
+[    3.102054] sdhci_msm 8804000.sdhci: TCXO clk not present (-2)
+[    3.103655] OF: graph: no port node found in /soc/qcom,dsi-display-primary
+[    3.103668] [drm:dsi_ctrl_get] *ERROR* [msm-dsi-error]: inv: Device with of node not found rc=-517
+[    3.105022] i2c_geni 990000.i2c: Bus frequency is set to 400000Hz.
+[    3.107297] i2c_geni 990000.i2c: I2C probed
+[    3.107782] i2c_geni a94000.i2c: Multi-EE usecase
+[    3.107786] i2c_geni a94000.i2c: Bus frequency is set to 400000Hz.
+[    3.132058] gpio gpiochip0: (f000000.pinctrl): allocate IRQ 365, hwirq 92
+[    3.132063] gpio gpiochip0: (f000000.pinctrl): found parent hwirq 76
+[    3.132070] gpio gpiochip0: (f000000.pinctrl): alloc_irqs_parent for 365 parent hwirq 76
+[    3.132297] mmc1: SDHCI controller on 8804000.sdhci [8804000.sdhci] using ADMA 64-bit
+[    3.132304] sdhci_msm 8804000.sdhci: IRQ sdiowakeup_irq not found
+[    3.151577] ufshcd-qcom 1d84000.ufshc: ufshcd_print_pwr_info:[RX, TX]: gear=[1, 1], lane[1, 1], pwr[SLOWAUTO_MODE, SLOWAUTO_MODE], rate = 0
+[    3.216185] rtc6226: rtc6226_i2c_probe: rtc6226,vdd-load val 0
+[    3.216194] rtc6226: rtc6226_pinctrl_init: target does not use pinctrl
+[    3.216197] rtc6226: rtc6226_i2c_probe: rtc6226_pinctrl_init returned -19
+[    3.221020] I2C PMIC: i2c_pmic_probe: I2C PMIC probe successful
+[    3.225298] pm8008i_l1: Bringing 1200000uV into 1104000-1104000uV
+[    3.226956] pm8008i_l1: supplied by pm8350_s12
+[    3.228327] pm8008i_l2: Bringing 1200000uV into 1152000-1152000uV
+[    3.229978] pm8008i_l2: supplied by pm8350_s12
+[    3.231967] pm8008i_l3: supplied by pm8350c_bob
+[    3.233968] pm8008i_l4: supplied by pm8350c_bob
+[    3.235953] pm8008i_l5: supplied by pm8350c_s1
+[    3.237947] pm8008i_l6: supplied by pm8350c_bob
+[    3.239939] pm8008i_l7: supplied by pm8350c_bob
+[    3.240506] I2C PMIC: i2c_pmic_probe: I2C PMIC probe successful
+[    3.244686] I2C PMIC: i2c_pmic_probe: I2C PMIC probe successful
+[    3.248963] pm8008j_l1: Bringing 1200000uV into 1152000-1152000uV
+[    3.250619] pm8008j_l1: supplied by pm8350_s12
+[    3.251965] pm8008j_l2: Bringing 1200000uV into 1056000-1056000uV
+[    3.253617] pm8008j_l2: supplied by pm8350_s12
+[    3.254962] pm8008j_l3: Bringing 2800000uV into 1800000-1800000uV
+[    3.256656] pm8008j_l3: supplied by pm8350c_s1
+[    3.258001] pm8008j_l4: Bringing 2800000uV into 1800000-1800000uV
+[    3.259682] pm8008j_l4: supplied by pm8350c_s1
+[    3.261026] pm8008j_l5: Bringing 1800000uV into 2696000-2696000uV
+[    3.262715] pm8008j_l5: supplied by pm8350c_bob
+[    3.264467] pm8008j_l6: supplied by pm8350c_bob
+[    3.265816] pm8008j_l7: Bringing 2800000uV into 2808000-2808000uV
+[    3.267473] pm8008j_l7: supplied by pm8350c_bob
+[    3.268049] I2C PMIC: i2c_pmic_probe: I2C PMIC probe successful
+[    3.270881] ssusb redriver 1-001c: Couldn't create eq file
+[    3.270885] ssusb redriver 1-001c: Couldn't create flat_gain file
+[    3.270888] ssusb redriver 1-001c: Couldn't create output_comp file
+[    3.270890] ssusb redriver 1-001c: Couldn't create loss_match file
+[    3.270920] i2c_geni a94000.i2c: I2C probed
+[    3.271728] msm_geni_serial 890000.qcom,qup_uart: Wakeup byte 0xfd
+[    3.271777] gpio gpiochip0: (f000000.pinctrl): allocate IRQ 366, hwirq 71
+[    3.271781] gpio gpiochip0: (f000000.pinctrl): found parent hwirq 134
+[    3.271786] gpio gpiochip0: (f000000.pinctrl): alloc_irqs_parent for 366 parent hwirq 134
+[    3.271863] msm_geni_serial 890000.qcom,qup_uart: Serial port0 added.FifoSize 64 is_console0
+[    3.272232] 890000.qcom,qup_uart: ttyHS0 at MMIO 0x890000 (irq = 197, base_baud = 0) is a MSM
+[    3.272696] i2c_geni 884000.i2c: Bus frequency is set to 1000000Hz.
+[    3.273460] gpio gpiochip0: (f000000.pinctrl): allocate IRQ 367, hwirq 87
+[    3.273465] gpio gpiochip0: (f000000.pinctrl): found parent hwirq 138
+[    3.273471] gpio gpiochip0: (f000000.pinctrl): alloc_irqs_parent for 367 parent hwirq 138
+[    3.273489] nfc_parse_dt: irq 395
+[    3.273507] nfc_parse_dt: ven 370, dwl req 394, clkreq 371
+[    3.273512] qcom,sn-nci 2-0028: error reading NFC VDDIO min and max value
+[    3.273517] qcom,sn-nci 2-0028: error reading NFC current value
+[    3.273613] nfc_i2c_dev_probe : requesting IRQ 367
+[    3.273663] nfc_ldo_config: regulator entry not present
+[    3.273688] i2c_geni 884000.i2c: I2C probed
+[    3.278959] ipa 1e00000.qcom,ipa:ipa_smmu_ap: Adding to iommu group 50
+[    3.279455] ipa 1e00000.qcom,ipa:ipa_smmu_wlan: Adding to iommu group 51
+[    3.279993] ipa 1e00000.qcom,ipa:ipa_smmu_uc: Adding to iommu group 52
+[    3.280635] ipa 1e00000.qcom,ipa:ipa_smmu_11ad: Adding to iommu group 53
+[    3.281160] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[    3.281166] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[    3.282188] minidump-id not found for venus
+[    3.286495] spss_utils [spss_parse_dt]: iar_buf_addr [0x8b6c3000].
+[    3.286571] spss_utils [spss_probe]: Probe completed successfully, [spss1t].
+[    3.288225] [drm:dsi_ctrl_dev_probe] [msm-dsi-info]: dsi-ctrl-0: Probe successful
+[    3.288634] [drm:dsi_ctrl_dev_probe] [msm-dsi-info]: dsi-ctrl-1: Probe successful
+[    3.289580] OF: graph: no port node found in /soc/qcom,dsi-display-primary
+[    3.330614] msm_drm ae00000.qcom,mdss_mdp: bound soc:qcom,smmu_sde_unsec_cb (ops msm_smmu_comp_ops)
+[    3.330621] msm_drm ae00000.qcom,mdss_mdp: bound soc:qcom,smmu_sde_sec_cb (ops msm_smmu_comp_ops)
+[    3.330633] msm_drm ae00000.qcom,mdss_mdp: bound ae90000.qcom,dp_display (ops dp_display_comp_ops)
+[    3.330640] msm_drm ae00000.qcom,mdss_mdp: bound soc:qcom,wb-display@0 (ops sde_wb_comp_ops)
+[    3.330791] gpio gpiochip0: (f000000.pinctrl): allocate IRQ 368, hwirq 82
+[    3.330795] gpio gpiochip0: (f000000.pinctrl): found parent hwirq 140
+[    3.330802] gpio gpiochip0: (f000000.pinctrl): alloc_irqs_parent for 368 parent hwirq 140
+[    3.330902] msm_drm ae00000.qcom,mdss_mdp: bound soc:qcom,dsi-display-primary (ops dsi_display_comp_ops)
+[    3.330909] msm_drm ae00000.qcom,mdss_mdp: bound soc:qcom,dsi-display-secondary (ops dsi_display_comp_ops)
+[    3.330920] msm_drm ae00000.qcom,mdss_mdp: bound af20000.qcom,sde_rscc (ops sde_rsc_comp_ops)
+[    3.330956] [drm] mapped mdp address space @0000000037d3e780
+[    3.334127] [drm:_sde_kms_hw_init_blocks:4723] sde hardware revision:0x70000000
+[    3.334243] [drm:msm_smmu_new] *ERROR* unable to find domain 1 compat: qcom,smmu_sde_nrt_unsec
+[    3.334250] [drm:msm_smmu_new] *ERROR* unable to find domain 3 compat: qcom,smmu_sde_nrt_sec
+[    3.337144] [drm:dp_parser_get_vreg][msm-dp-warn][64  ]no supply entry present: ???
+[    3.337148] [drm:dp_parser_get_vreg][msm-dp-warn][64  ]no supply entry present: ???
+[    3.337151] [drm:dp_parser_get_vreg][msm-dp-warn][64  ]no supply entry present: ???
+[    3.337155] [drm:dp_parser_get_vreg][msm-dp-warn][64  ]no supply entry present: qcom,pll-supply-entries
+[    3.338793] [drm:dp_pll_get][msm-dp-info][64  ]revision=DP_PLL_5NM_V1, ssc_en=0, bonding_en=0
+[    3.339146] [drm:dp_power_clk_init][msm-dp-err][64  ]Unable to get DP link clk RCG: -2
+[    3.339151] [drm:dp_power_clk_init][msm-dp-err][64  ]Unable to get DP link parent: -2
+[    3.339677] [drm:dp_display_initialize_hdcp][msm-dp-info][64  ]HDCP 1.3 initialized
+[    3.339941] [drm:dp_display_initialize_hdcp][msm-dp-info][64  ]HDCP 2.2 initialized
+[    3.339947] [drm:dp_debug_init][msm-dp-warn][64  ]Not creating debug root dir.
+[    3.341043] NFC chip_type = a4
+[    3.341046] NFC fw version = 1.10.68
+[    3.341107] nfc_i2c_dev_probe success
+[    3.345272] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    3.345274] [drm] No driver support for vblank timestamp query.
+[    3.345573] [drm] Initialized msm_drm 1.4.0 20130625 for ae00000.qcom,mdss_mdp on minor 0
+[    3.345576] [drm] cont_splash enabled in 1 of 1 display(s)
+[    3.345689] [drm:dsi_ctrl_isr_configure] [msm-dsi-info]: dsi-ctrl-0: IRQ 370 registered
+[    3.347952] synx: registered bind ops type 0 for cam_sync
+[    3.347962] cam_req_mgr soc:qcom,cam-req-mgr: bound soc:qcom,cam-sync (ops cam_sync_component_ops)
+[    3.347970] cam_req_mgr soc:qcom,cam-req-mgr: bound soc:qcom,cam_smmu (ops cam_smmu_component_ops)
+[    3.347990] cam_req_mgr soc:qcom,cam-req-mgr: bound soc:qcom,cam_smmu:msm_cam_smmu_ife (ops cam_smmu_cb_component_ops)
+[    3.348004] cam_req_mgr soc:qcom,cam-req-mgr: bound soc:qcom,cam_smmu:msm_cam_smmu_jpeg (ops cam_smmu_cb_component_ops)
+[    3.348030] cam_req_mgr soc:qcom,cam-req-mgr: bound soc:qcom,cam_smmu:msm_cam_icp_fw (ops cam_smmu_fw_dev_component_ops)
+[    3.348060] cam_req_mgr soc:qcom,cam-req-mgr: bound soc:qcom,cam_smmu:msm_cam_smmu_icp (ops cam_smmu_cb_component_ops)
+[    3.348075] cam_req_mgr soc:qcom,cam-req-mgr: bound soc:qcom,cam_smmu:msm_cam_smmu_cpas_cdm (ops cam_smmu_cb_component_ops)
+[    3.348085] cam_req_mgr soc:qcom,cam-req-mgr: bound soc:qcom,cam_smmu:msm_cam_smmu_secure (ops cam_smmu_cb_component_ops)
+[    3.352639] cam_req_mgr soc:qcom,cam-req-mgr: bound ac40000.qcom,cam-cpas (ops cam_cpas_dev_component_ops)
+[    3.352790] cam_req_mgr soc:qcom,cam-req-mgr: bound soc:qcom,cam-cdm-intf (ops cam_cdm_intf_component_ops)
+[    3.356309] cam_req_mgr soc:qcom,cam-req-mgr: bound ac4d000.qcom,cpas-cdm0 (ops cam_hw_cdm_component_ops)
+[    3.360393] cam_req_mgr soc:qcom,cam-req-mgr: bound acb4200.qcom,ife-cdm0 (ops cam_hw_cdm_component_ops)
+[    3.364381] ufshcd-qcom 1d84000.ufshc: Undefined ref clk gating wait time, use default 255us
+[    3.364559] cam_req_mgr soc:qcom,cam-req-mgr: bound acc3200.qcom,ife-cdm1 (ops cam_hw_cdm_component_ops)
+[    3.368631] cam_req_mgr soc:qcom,cam-req-mgr: bound acef200.qcom,ife-cdm2 (ops cam_hw_cdm_component_ops)
+[    3.369869] cam_req_mgr soc:qcom,cam-req-mgr: bound ac97000.qcom,tpg0 (ops cam_top_tpg_component_ops)
+[    3.371027] cam_req_mgr soc:qcom,cam-req-mgr: bound ac98000.qcom,tpg1 (ops cam_top_tpg_component_ops)
+[    3.371325] cam_req_mgr soc:qcom,cam-req-mgr: bound acb5200.qcom,csid0 (ops cam_ife_csid_component_ops)
+[    3.371609] cam_req_mgr soc:qcom,cam-req-mgr: bound acc4200.qcom,csid1 (ops cam_ife_csid_component_ops)
+[    3.371884] cam_req_mgr soc:qcom,cam-req-mgr: bound acf0200.qcom,csid2 (ops cam_ife_csid_component_ops)
+[    3.372144] cam_req_mgr soc:qcom,cam-req-mgr: bound acd9200.qcom,csid-lite0 (ops cam_ife_csid_component_ops)
+[    3.372368] cam_req_mgr soc:qcom,cam-req-mgr: bound acdb400.qcom,csid-lite1 (ops cam_ife_csid_component_ops)
+[    3.373719] cam_req_mgr soc:qcom,cam-req-mgr: bound acb4000.qcom,ife0 (ops cam_vfe_component_ops)
+[    3.375035] cam_req_mgr soc:qcom,cam-req-mgr: bound acc3000.qcom,ife1 (ops cam_vfe_component_ops)
+[    3.376378] cam_req_mgr soc:qcom,cam-req-mgr: bound acef000.qcom,ife2 (ops cam_vfe_component_ops)
+[    3.377550] cam_req_mgr soc:qcom,cam-req-mgr: bound acd9000.qcom,ife-lite0 (ops cam_vfe_component_ops)
+[    3.378841] cam_req_mgr soc:qcom,cam-req-mgr: bound acdb200.qcom,ife-lite1 (ops cam_vfe_component_ops)
+[    3.379315] cam_req_mgr soc:qcom,cam-req-mgr: bound soc:qcom,cam-isp (ops cam_isp_dev_component_ops)
+[    3.379325] cam_req_mgr soc:qcom,cam-req-mgr: bound soc:qcom,cam-res-mgr (ops cam_res_mgr_component_ops)
+[    3.380100] cam_req_mgr soc:qcom,cam-req-mgr: bound ac4f000.qcom,cci0 (ops cam_cci_component_ops)
+[    3.380805] cam_req_mgr soc:qcom,cam-req-mgr: bound ac50000.qcom,cci1 (ops cam_cci_component_ops)
+[    3.381139] cam_req_mgr soc:qcom,cam-req-mgr: bound ac6a000.qcom,csiphy0 (ops cam_csiphy_component_ops)
+[    3.381435] cam_req_mgr soc:qcom,cam-req-mgr: bound ac6c000.qcom,csiphy1 (ops cam_csiphy_component_ops)
+[    3.381730] cam_req_mgr soc:qcom,cam-req-mgr: bound ac6e000.qcom,csiphy2 (ops cam_csiphy_component_ops)
+[    3.382026] cam_req_mgr soc:qcom,cam-req-mgr: bound ac70000.qcom,csiphy3 (ops cam_csiphy_component_ops)
+[    3.382318] cam_req_mgr soc:qcom,cam-req-mgr: bound ac72000.qcom,csiphy4 (ops cam_csiphy_component_ops)
+[    3.382607] cam_req_mgr soc:qcom,cam-req-mgr: bound ac74000.qcom,csiphy5 (ops cam_csiphy_component_ops)
+[    3.382898] cam_req_mgr soc:qcom,cam-req-mgr: bound ac4f000.qcom,cci0:qcom,actuator0 (ops cam_actuator_component_ops)
+[    3.383011] cam_req_mgr soc:qcom,cam-req-mgr: bound ac4f000.qcom,cci0:qcom,actuator1 (ops cam_actuator_component_ops)
+[    3.383122] cam_req_mgr soc:qcom,cam-req-mgr: bound ac50000.qcom,cci1:qcom,actuator2 (ops cam_actuator_component_ops)
+[    3.384264] cam_req_mgr soc:qcom,cam-req-mgr: bound ac4f000.qcom,cci0:qcom,cam-sensor0 (ops cam_sensor_component_ops)
+[    3.385194] cam_req_mgr soc:qcom,cam-req-mgr: bound ac4f000.qcom,cci0:qcom,cam-sensor1 (ops cam_sensor_component_ops)
+[    3.385793] cam_req_mgr soc:qcom,cam-req-mgr: bound ac4f000.qcom,cci0:qcom,cam-sensor3 (ops cam_sensor_component_ops)
+[    3.386635] cam_req_mgr soc:qcom,cam-req-mgr: bound ac50000.qcom,cci1:qcom,cam-sensor2 (ops cam_sensor_component_ops)
+[    3.386973] cam_req_mgr soc:qcom,cam-req-mgr: bound ac50000.qcom,cci1:qcom,cam-sensor4 (ops cam_sensor_component_ops)
+[    3.387128] ufshcd-qcom 1d84000.ufshc: ufshcd_print_pwr_info:[RX, TX]: gear=[4, 4], lane[2, 2], pwr[FAST MODE, FAST MODE], rate = 2
+[    3.387760] cam_req_mgr soc:qcom,cam-req-mgr: bound ac50000.qcom,cci1:qcom,cam-sensor5 (ops cam_sensor_component_ops)
+[    3.388134] cam_req_mgr soc:qcom,cam-req-mgr: bound ac4f000.qcom,cci0:qcom,eeprom0 (ops cam_eeprom_component_ops)
+[    3.388581] cam_req_mgr soc:qcom,cam-req-mgr: bound ac4f000.qcom,cci0:qcom,eeprom1 (ops cam_eeprom_component_ops)
+[    3.388936] cam_req_mgr soc:qcom,cam-req-mgr: bound ac4f000.qcom,cci0:qcom,eeprom3 (ops cam_eeprom_component_ops)
+[    3.389287] cam_req_mgr soc:qcom,cam-req-mgr: bound ac50000.qcom,cci1:qcom,eeprom2 (ops cam_eeprom_component_ops)
+[    3.389482] cam_req_mgr soc:qcom,cam-req-mgr: bound ac50000.qcom,cci1:qcom,eeprom4 (ops cam_eeprom_component_ops)
+[    3.390000] cam_req_mgr soc:qcom,cam-req-mgr: bound ac50000.qcom,cci1:qcom,eeprom5 (ops cam_eeprom_component_ops)
+[    3.390445] cam_req_mgr soc:qcom,cam-req-mgr: bound soc:qcom,camera-flash@4 (ops cam_flash_component_ops)
+[    3.390512] cam_req_mgr soc:qcom,cam-req-mgr: bound soc:qcom,camera-flash@5 (ops cam_flash_component_ops)
+[    3.390576] cam_req_mgr soc:qcom,cam-req-mgr: bound soc:qcom,camera-flash@6 (ops cam_flash_component_ops)
+[    3.390763] cam_req_mgr soc:qcom,cam-req-mgr: bound ac00000.qcom,a5 (ops cam_a5_component_ops)
+[    3.390923] cam_req_mgr soc:qcom,cam-req-mgr: bound ac9a000.qcom,ipe0 (ops cam_ipe_component_ops)
+[    3.391078] cam_req_mgr soc:qcom,cam-req-mgr: bound ac7a000.qcom,bps (ops cam_bps_component_ops)
+[    3.392331] scsi 0:0:0:49488: Well-known LUN    WDC      SDINFDK4-256G    1260 PQ: 0 ANSI: 6
+[    3.393967] cam_req_mgr soc:qcom,cam-req-mgr: bound soc:qcom,cam-icp (ops cam_icp_component_ops)
+[    3.394143] cam_req_mgr soc:qcom,cam-req-mgr: bound ac53000.qcom,jpegenc (ops cam_jpeg_enc_component_ops)
+[    3.394301] cam_req_mgr soc:qcom,cam-req-mgr: bound ac57000.qcom,jpegdma (ops cam_jpeg_dma_component_ops)
+[    3.395790] cam_req_mgr soc:qcom,cam-req-mgr: bound soc:qcom,cam-jpeg (ops cam_jpeg_dev_component_ops)
+[    3.398839] ngd_msm_ctrl 3ac0000.slim: Adding to iommu group 54
+[    3.401217] gpio gpiochip2: (c440000.qcom,spmi:qcom,pm8350@1:pinctrl@8800): allocate IRQ 371, hwirq 5
+[    3.401222] gpio gpiochip2: (c440000.qcom,spmi:qcom,pm8350@1:pinctrl@8800): found parent hwirq 141
+[    3.401230] gpio gpiochip2: (c440000.qcom,spmi:qcom,pm8350@1:pinctrl@8800): alloc_irqs_parent for 371 parent hwirq 141
+[    3.401398] input: gpio-keys as /devices/platform/soc/soc:gpio_keys/input/input3
+[    3.401910] gpio gpiochip0: (f000000.pinctrl): allocate IRQ 372, hwirq 23
+[    3.401914] gpio gpiochip0: (f000000.pinctrl): found parent hwirq 84
+[    3.401921] gpio gpiochip0: (f000000.pinctrl): alloc_irqs_parent for 372 parent hwirq 84
+[    3.401935] [FTS_TS/I]fts_ts_i2c_probe:Touch Screen(I2C BUS) driver prboe...
+[    3.401942] [FTS_TS/I]fts_ts_probe_entry:Focaltech V3.2 20200422
+[    3.401947] [FTS_TS/I]fts_get_dt_coords:display x(0 1080) y(0 2340)
+[    3.401964] [FTS_TS/I]fts_parse_dt:max touch number:5, irq gpio:331, reset gpio:330
+[    3.402149] input: fts_ts as /devices/platform/soc/990000.i2c/i2c-0/0-0038/input/input4
+[    3.402155] qbt:qbt_touch_connect: Connected device: input4
+[    3.402196] [FTS_TS/I]fts_create_apk_debug_channel:Create proc entry success!
+[    3.402217] [FTS_TS/I]fts_create_sysfs:[EX]: sysfs_create_group() succeeded!!
+[    3.402230] Selected trusted touch mode to VM mode
+[    3.402232] Trusted touch environment:pvm
+[    3.402481] fts_ts 0-0038: 0-0038 supply vcc_i2c not found, using dummy regulator
+[    3.403214] msm_pcie_enable: PCIe: Assert the reset of endpoint of RC0.
+[    3.404135] scsi 0:0:0:49488: Attached scsi generic sg0 type 30
+[    3.406754] msm_pcie_enable: PCIe: RC0: PCIE20_PARF_INT_ALL_MASK: 0x7f80c202
+[    3.408129] scsi 0:0:0:49476: Well-known LUN    WDC      SDINFDK4-256G    1260 PQ: 0 ANSI: 6
+[    3.408872] pcie_phy_init: PCIe RC0 PHY is ready!
+[    3.411127] scsi 0:0:0:49476: Attached scsi generic sg1 type 30
+[    3.413722] scsi 0:0:0:49456: Well-known LUN    WDC      SDINFDK4-256G    1260 PQ: 0 ANSI: 6
+[    3.416725] scsi 0:0:0:49456: Attached scsi generic sg2 type 30
+[    3.418898] msm_pcie_enable: PCIe: Release the reset of endpoint of RC0.
+[    3.420768] scsi 0:0:0:0: Direct-Access     WDC      SDINFDK4-256G    1260 PQ: 0 ANSI: 6
+[    3.423933] scsi 0:0:0:0: Attached scsi generic sg3 type 0
+[    3.424726] sd 0:0:0:0: Power-on or device reset occurred
+[    3.431250] scsi 0:0:0:1: Direct-Access     WDC      SDINFDK4-256G    1260 PQ: 0 ANSI: 6
+[    3.434278] scsi 0:0:0:1: Attached scsi generic sg4 type 0
+[    3.435511] msm_pcie_link_train: PCIe RC0 link initialized
+[    3.435552] pci-msm 1c00000.qcom,pcie: host bridge /soc/qcom,pcie@1c00000 ranges:
+[    3.435563] pci-msm 1c00000.qcom,pcie:   No bus range found for /soc/qcom,pcie@1c00000, using [bus 00-ff]
+[    3.435578] pci-msm 1c00000.qcom,pcie:    IO 0x60200000..0x602fffff -> 0x60200000
+[    3.435588] pci-msm 1c00000.qcom,pcie:   MEM 0x60300000..0x63ffffff -> 0x60300000
+[    3.435785] MSI interrupts mask disabled:1
+[    3.435793] pci-msm 1c00000.qcom,pcie: MSI: qgic controller is present
+[    3.436129] sd 0:0:0:1: Power-on or device reset occurred
+[    3.437268] pci-msm 1c00000.qcom,pcie: PCI host bridge to bus 0000:00
+[    3.437275] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    3.437282] pci_bus 0000:00: root bus resource [io  0x0000-0xfffff] (bus address [0x60200000-0x602fffff])
+[    3.437286] pci_bus 0000:00: root bus resource [mem 0x60300000-0x63ffffff]
+[    3.437350] pci 0000:00:00.0: [17cb:010c] type 01 class 0x060400
+[    3.437449] pci 0000:00:00.0: reg 0x10: [mem 0x00000000-0x00000fff 64bit]
+[    3.437730] pci 0000:00:00.0: PME# supported from D0 D3hot D3cold
+[    3.442184] sd 0:0:0:0: [sda] 58814464 4096-byte logical blocks: (241 GB/224 GiB)
+[    3.444389] scsi 0:0:0:2: Direct-Access     WDC      SDINFDK4-256G    1260 PQ: 0 ANSI: 6
+[    3.447609] sd 0:0:0:0: [sda] Write Protect is off
+[    3.447614] sd 0:0:0:0: [sda] Mode Sense: 00 32 00 10
+[    3.452087] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    3.453975] scsi 0:0:0:2: Attached scsi generic sg5 type 0
+[    3.455598] sd 0:0:0:2: Power-on or device reset occurred
+[    3.456821] pci 0000:00:00.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[    3.457055] pci 0000:01:00.0: [17cb:1103] type 00 class 0x028000
+[    3.457184] pci 0000:01:00.0: reg 0x10: [mem 0x00000000-0x001fffff 64bit]
+[    3.457617] pci 0000:01:00.0: PME# supported from D0 D3hot D3cold
+[    3.457711] pci 0000:01:00.0: 4.000 Gb/s available PCIe bandwidth, limited by 5 GT/s x1 link at 0000:00:00.0 (capable of 7.876 Gb/s with 8 GT/s x1 link)
+[    3.457997] scsi 0:0:0:3: Direct-Access     WDC      SDINFDK4-256G    1260 PQ: 0 ANSI: 6
+[    3.464507] scsi 0:0:0:3: Attached scsi generic sg6 type 0
+[    3.464790] sd 0:0:0:1: [sdb] 2048 4096-byte logical blocks: (8.39 MB/8.00 MiB)
+[    3.467597] sd 0:0:0:3: Power-on or device reset occurred
+[    3.470318] sd 0:0:0:1: [sdb] Write Protect is off
+[    3.470324] sd 0:0:0:1: [sdb] Mode Sense: 00 32 00 10
+[    3.472512] scsi 0:0:0:4: Direct-Access     WDC      SDINFDK4-256G    1260 PQ: 0 ANSI: 6
+[    3.476479] pci_bus 0000:01: busn_res: [bus 01-ff] end is updated to 01
+[    3.476500] pci 0000:00:00.0: bridge window [io  0x1000-0x0fff] to [bus 01] add_size 1000
+[    3.476508] pci 0000:00:00.0: bridge window [mem 0x00100000-0x000fffff 64bit pref] to [bus 01] add_size 200000 add_align 100000
+[    3.476522] pci 0000:00:00.0: BAR 8: assigned [mem 0x60400000-0x605fffff]
+[    3.476528] pci 0000:00:00.0: BAR 9: assigned [mem 0x60600000-0x607fffff 64bit pref]
+[    3.476534] pci 0000:00:00.0: BAR 0: assigned [mem 0x60300000-0x60300fff 64bit]
+[    3.476565] pci 0000:00:00.0: BAR 7: assigned [io  0x1000-0x1fff]
+[    3.476574] pci 0000:01:00.0: BAR 0: assigned [mem 0x60400000-0x605fffff 64bit]
+[    3.476620] pci 0000:00:00.0: PCI bridge to [bus 01]
+[    3.476629] pci 0000:00:00.0:   bridge window [io  0x1000-0x1fff]
+[    3.476645] pci 0000:00:00.0:   bridge window [mem 0x60400000-0x605fffff]
+[    3.476658] pci 0000:00:00.0:   bridge window [mem 0x60600000-0x607fffff 64bit pref]
+[    3.477085] pci-msm-rc 0000:00:00.0: Adding to iommu group 55
+[    3.478082] msm_pcie_enumerate: PCIe: RC0: has already been enumerated.
+[    3.478140] sd 0:0:0:1: [sdb] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    3.481474] cnss_pci 0000:01:00.0: Adding to iommu group 56
+[    3.481530] cnss_pci 0000:01:00.0: assigned reserved memory node cnss_wlan_region
+[    3.481782] cnss2 b0000000.qcom,cnss-qca6490: for wlan segments only will be dumped.
+[    3.481875] cnss_pci 0000:01:00.0: BAR 0: assigned [mem 0x60400000-0x605fffff 64bit]
+[    3.481949] pci-msm-rc 0000:00:00.0: enabling device (0006 -> 0007)
+[    3.482086] cnss_pci 0000:01:00.0: enabling device (0000 -> 0002)
+[    3.482639] sd 0:0:0:2: [sdc] 2048 4096-byte logical blocks: (8.39 MB/8.00 MiB)
+[    3.484150] scsi 0:0:0:4: Attached scsi generic sg7 type 0
+[    3.488173] sd 0:0:0:2: [sdc] Write Protect is off
+[    3.488180] sd 0:0:0:2: [sdc] Mode Sense: 00 32 00 10
+[    3.492031] sd 0:0:0:4: Power-on or device reset occurred
+[    3.492112] scsi 0:0:0:5: Direct-Access     WDC      SDINFDK4-256G    1260 PQ: 0 ANSI: 6
+[    3.499131] sd 0:0:0:2: [sdc] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    3.500200] scsi 0:0:0:5: Attached scsi generic sg8 type 0
+[    3.502294] sd 0:0:0:5: Power-on or device reset occurred
+[    3.507092] scsi 0:0:0:6: Direct-Access     WDC      SDINFDK4-256G    1260 PQ: 0 ANSI: 6
+[    3.508159] sd 0:0:0:3: [sdd] 8192 4096-byte logical blocks: (33.6 MB/32.0 MiB)
+[    3.513939] sd 0:0:0:3: [sdd] Write Protect is off
+[    3.513944] sd 0:0:0:3: [sdd] Mode Sense: 00 32 00 10
+[    3.516448] sd 0:0:0:5: [sdf] 8192 4096-byte logical blocks: (33.6 MB/32.0 MiB)
+[    3.519721] sd 0:0:0:5: [sdf] Write Protect is off
+[    3.519727] sd 0:0:0:5: [sdf] Mode Sense: 00 32 00 10
+[    3.524150] scsi 0:0:0:6: Attached scsi generic sg9 type 0
+[    3.525413] sd 0:0:0:5: [sdf] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    3.527982]  sda: sda1 sda2 sda3 sda4 sda5 sda6 sda7 sda8 sda9 sda10 sda11 sda12 sda13
+[    3.531726] sd 0:0:0:3: [sdd] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    3.532103] sd 0:0:0:6: Power-on or device reset occurred
+[    3.534677] scsi 0:0:0:7: Direct-Access     WDC      SDINFDK4-256G    1260 PQ: 0 ANSI: 6
+[    3.539819] sd 0:0:0:4: [sde] 1572864 4096-byte logical blocks: (6.44 GB/6.00 GiB)
+[    3.548484] sd 0:0:0:4: [sde] Write Protect is off
+[    3.548489] sd 0:0:0:4: [sde] Mode Sense: 00 32 00 10
+[    3.560970] scsi 0:0:0:7: Attached scsi generic sg10 type 0
+[    3.561470] ufshcd-qcom 1d84000.ufshc: ufshcd_query_attr: opcode 0x03 for idn 255 failed, index 0, err = 253
+[    3.562477] ufshcd-qcom 1d84000.ufshc: __ufshcd_query_descriptor: opcode 0x01 for idn 0 failed, index 0, err = 251
+[    3.563261] ufshcd-qcom 1d84000.ufshc: __ufshcd_query_descriptor: opcode 0x01 for idn 0 failed, index 0, err = 251
+[    3.564712] sd 0:0:0:4: [sde] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    3.565216] ufshcd-qcom 1d84000.ufshc: __ufshcd_query_descriptor: opcode 0x01 for idn 0 failed, index 0, err = 251
+[    3.565227] sd 0:0:0:7: Power-on or device reset occurred
+[    3.565243] ufsf_read_desc:184 err: reading Device Desc failed. err = 251
+[    3.565248] ufstw_init:713 err: tw_enabled_lun count zero
+[    3.565250] ufstw_init:728 err: Turbo write initialization failed
+[    3.568712]  sdf: sdf1 sdf2 sdf3 sdf4 sdf5
+[    3.581960] sd 0:0:0:6: [sdg] 1048576 4096-byte logical blocks: (4.29 GB/4.00 GiB)
+[    3.590010]  sdb: sdb1 sdb2
+[    3.594956] sd 0:0:0:6: [sdg] Write Protect is off
+[    3.594961] sd 0:0:0:6: [sdg] Mode Sense: 00 32 00 10
+[    3.595338] sd 0:0:0:5: [sdf] Attached SCSI disk
+[    3.604066] msm_pcie_disable: PCIe: Assert the reset of endpoint of RC0.
+[    3.608623] sd 0:0:0:6: [sdg] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    3.609004] sd 0:0:0:0: [sda] Attached SCSI disk
+[    3.611943]  sdc: sdc1 sdc2
+[    3.612236] sd 0:0:0:7: [sdh] 1048576 4096-byte logical blocks: (4.29 GB/4.00 GiB)
+[    3.615858] sd 0:0:0:7: [sdh] Write Protect is off
+[    3.615863] sd 0:0:0:7: [sdh] Mode Sense: 00 32 00 10
+[    3.621675] [FTS_TS/I]fts_get_ic_information:get ic information, chip id = 0x5452
+[    3.621689] [FTS_TS/I]fts_irq_registration:irq:372, flag:2002
+[    3.621931] [FTS_TS/I]fts_fwupg_init:fw upgrade init function
+[    3.621935] [FTS_TS/I]fts_fwupg_init:match upgrade function,type:81
+[    3.621965] [FTS_TS/I]fts_ts_i2c_probe:Touch Screen(I2C BUS) driver prboe successfully
+[    3.622640] [NVT-ts] nvt_driver_init 3337: start
+[    3.622664] [NVT-ts] nvt_driver_init 3345: finished
+[    3.623591] bimc-bwmon: Zone thres larger than hw limit: hi:0 med:4000 lo:0
+[    3.624466] [FTS_TS/I]fts_fwupg_work:fw upgrade work function
+[    3.624537] bimc-bwmon: Zone thres larger than hw limit: hi:0 med:4000 lo:0
+[    3.627173] sd 0:0:0:7: [sdh] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    3.627213] bimc-bwmon: Zone thres larger than hw limit: hi:0 med:4000 lo:0
+[    3.632694]  sdd: sdd1 sdd2 sdd3
+[    3.635503] RNDIS_IPA module is loaded.
+[    3.636507] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    3.636686] fts_ts 0-0038: Direct firmware load for focaltech_ts_fw_gvo.bin failed with error -2
+[    3.636691] fts_ts 0-0038: Falling back to sysfs fallback for: focaltech_ts_fw_gvo.bin
+[    3.637440] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    3.637915] cfg80211: Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+[    3.637976] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    3.637980] platform regulatory.0: Falling back to sysfs fallback for: regulatory.db
+[    3.638660] lahaina-gcc 100000.qcom,gcc: sync-state
+[    3.638959] gpu_cc-lahaina 3d90000.qcom,gpucc: sync-state
+[    3.639006] lahaina-cam_cc ad00000.qcom,camcc: sync-state
+[    3.639102] video_cc-lahaina abf0000.qcom,videocc: sync-state
+[    3.639686] disp_cc-lahaina af00000.qcom,dispcc: sync-state
+[    3.639852] ALSA device list:
+[    3.639856]   No soundcards found.
+[    3.639882] Warning: unable to open an initial console.
+[    3.642428] sd 0:0:0:1: [sdb] Attached SCSI disk
+[    3.652705] sd 0:0:0:2: [sdc] Attached SCSI disk
+[    3.663609]  sde: sde1 sde2 sde3 sde4 sde5 sde6 sde7 sde8 sde9 sde10 sde11 sde12 sde13 sde14 sde15 sde16 sde17 sde18 sde19 sde20 sde21 sde22 sde23 sde24 sde25 sde26 sde27 sde28 sde29 sde30 sde31 sde32 sde33 sde34 sde35 sde36 sde37 sde38 sde39 sde40 sde41 sde42 sde43 sde44 sde45 sde46 sde47 sde48 sde49 sde50 sde51 sde52 sde53 sde54 sde55 sde56 sde57 sde58 sde59 sde60 sde61 sde62 sde63 sde64 sde65 sde66
+[    3.670350] sd 0:0:0:3: [sdd] Attached SCSI disk
+[    3.692202] sd 0:0:0:4: [sde] Attached SCSI disk
+[    3.694269] sd 0:0:0:6: [sdg] Attached SCSI disk
+[    3.701417] sd 0:0:0:7: [sdh] Attached SCSI disk
+[    3.702405] Freeing unused kernel memory: 2048K
+[    3.708383] Run /init as init process
+[    3.891605] Booting DSP...
+[    3.893771] ERROR qrtr-ns: nameserver already running, going dormant: Address in use
+[    4.962415] subsys-pil-tz 17300000.qcom,lpass: adsp: loading from 0x0000000086100000 to 0x0000000088200000
+[    5.054336] subsys-pil-tz 17300000.qcom,lpass: adsp: Brought out of reset
+[    5.054349] subsys-pil-tz: subsys_powerup(): pil_boot is successful from adsp and waiting for error ready
+[    5.078460] subsys-pil-tz: subsys_err_ready_intr_handler(): Subsystem error monitoring/handling services are up fromadsp
+[    5.078475] subsys-pil-tz 17300000.qcom,lpass: adsp: Power/Clock ready interrupt received
+[    5.079179] adsprpc: fastrpc_restart_notifier_cb: adsp subsystem is up
+[    5.079536] qcom_smd_qrtr_probe:Entered
+[    5.079681] qcom_smd_qrtr_probe:SMD QRTR driver probed
+[    5.080652] sysmon-qmi: ssctl_new_server: Connection established between QMI handle and adsp's SSCTL service
+[    5.085493] Info: adsprpc (5217): kworker/0:8: fastrpc_rpmsg_probe: opened rpmsg channel for adsp
+[    5.086501] apr_tal_rpmsg soc:adsp.apr_audio_svc.-1.-1: apr_tal_rpmsg_probe: Channel[apr_audio_svc] state[Up]
+[    6.304790] OF: graph: no port node found in /soc/qcom,pmic_glink/qcom,ucsi/port
+[    6.304796] OF: graph: no port node found in /soc/qcom,pmic_glink/qcom,ucsi/port
+[    6.339629] msm-usb-ssphy-qmp 88e8000.ssphy: USB DP QMP PHY: Update TYPEC CTRL(2)
+[    6.396445] msm-dwc3 a600000.ssusb: DWC3 exited from low power mode
+[    8.276374] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[    8.280105] sd 0:0:0:1: [sdb] Synchronizing SCSI cache
+[    8.292107] sd 0:0:0:2: [sdc] Synchronizing SCSI cache
+[    8.316103] sd 0:0:0:5: [sdf] Synchronizing SCSI cache
+[    8.328100] sd 0:0:0:3: [sdd] Synchronizing SCSI cache
+[    8.684378] sd 0:0:0:6: [sdg] Synchronizing SCSI cache
+[    8.696103] sd 0:0:0:7: [sdh] Synchronizing SCSI cache
+[    8.825532] 
+               
+               
+               
+                 __                _                     _     
+                / _|_ __ ___  __ _| |__   ___ _ __   ___| |__  
+               | |_| '__/ _ \/ _` | '_ \ / _ \ '_ \ / __| '_ \ 
+               |  _| | |  __/ (_| | |_) |  __/ | | | (__| | | |
+               |_| |_|  \___|\__, |_.__/ \___|_| |_|\___|_| |_|
+                                |_|                            
+               
+                          CPU benchmark • by kdrag0n
+               
+               ------------------------------------------------
+               
+               Frequency domains: 
+[    8.825686] cpu1 
+[    8.825754] cpu4 
+[    8.825818] cpu7 
+[    8.825873] 
+               Offline CPUs: 
+[    8.828852] cpu1 
+[    8.832263] cpu2 
+[    8.834580] cpu3 
+[    8.836869] cpu4 
+[    8.839196] cpu5 
+[    8.841537] cpu6 
+[    8.842455] IRQ 16: no longer affine to CPU6
+[    8.842988] cpu7 
+[    8.844418] IRQ 17: no longer affine to CPU7
+
+[   11.744717] sd 0:0:0:4: [sde] Synchronizing SCSI cache
+[   13.792505] ufshpb_init_handler:4035 err: Probing LU is not fully complete.
+[   13.792519] ufshpb_init:3831 err: No UFSHPB LU to init
+[   13.792530] ufshpb_init_handler:4042 err: UFSHPB driver init failed. (-19)
+[   13.868978] Sampling power every 1000 ms
+               Baseline power usage: 
+[   33.760775] gcc_ufs_card_gdsc: disabling
+[   33.760820] display_panel_avdd: disabling
+[   33.760835] hap-swr-slave-reg: disabling
+[   33.760907] pm8008i-chip-en: disabling
+[   33.765067] pm8008j-chip-en: disabling
+[   64.480739] cfg80211: failed to load regulatory.db
+[   64.481042] [FTS_TS/I]fts_get_fw_file_via_request_firmware:firmware(focaltech_ts_fw_gvo.bin) request fail,ret=-110
+[   64.481054] [FTS_TS/I]fts_fwupg_get_fw_file:upgrade fw file len:1
+[   64.481063] [FTS_TS/E]fts_fwupg_get_fw_file:fw file len(1) fail
+[   64.481071] [FTS_TS/E]fts_fwupg_work:get file fail, can't upgrade
+[   64.481316] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[   64.481329] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[   64.481360] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[   64.481405] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[   65.000906] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[   65.000926] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[   90.374256] 1291 mW
+               
+               
+               ===== CPU 1 =====
+               Frequencies: 300 403 499 595 691 806 902 998 1094 1209 1305 1401 1497 1612 1708 1804
+               
+                300: 
+[  125.920651] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[  125.920665] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[  125.920693] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[  125.920734] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[  126.440788] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[  126.440807] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[  187.360631] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[  187.360644] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[  187.360670] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[  187.360711] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[  187.880864] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[  187.880882] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[  248.800627] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[  248.800640] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[  248.800667] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[  248.800707] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[  249.320734] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[  249.320752] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[  310.240738] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[  310.240752] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[  310.240777] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[  310.240816] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[  310.760936] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[  310.760954] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[  316.384989] servloc: init_service_locator: init_service_locator: wait for locator service timed out
+[  316.385029] servloc: pd_locator_work: Unable to connect to service locator!, rc = -62
+[  316.385042] PMIC_GLINK: pmic_glink_serv_loc_cb: PDR service locator for client: (null) service: (efault) is down
+[  316.386790] servloc: pd_locator_work: Unable to connect to service locator!, rc = -62
+[  316.386804] adsprpc: fastrpc_get_service_location_notify: PDR notifier locator for adsp is down for audio_pdr_adsprpc
+[  316.386949] servloc: pd_locator_work: Unable to connect to service locator!, rc = -62
+[  316.386962] adsprpc: fastrpc_get_service_location_notify: PDR notifier locator for adsp is down for sensors_pdr_adsprpc
+[  316.387032] servloc: pd_locator_work: Unable to connect to service locator!, rc = -62
+[  316.387049] audio_notifier_reg_service: service SSR_ADSP is in use
+[  316.387089] servloc: pd_locator_work: Unable to connect to service locator!, rc = -62
+[  368.296563]  1113     3.7 C/MHz     -2 mW   -0.5 J   -615.0 I/mJ   269.6 s
+                403: 
+[  371.680655] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[  371.680666] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[  371.680685] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[  371.680714] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[  372.200705] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[  372.200719] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[  433.120493] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[  433.120503] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[  433.120523] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[  433.120553] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[  433.640610] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[  433.640623] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[  494.560494] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[  494.560504] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[  494.560524] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[  494.560553] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[  495.080638] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[  495.080651] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[  556.000494] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[  556.000504] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[  556.000523] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[  556.000553] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[  556.520520] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[  556.520533] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[  577.899227]  1496     3.7 C/MHz      1 mW    0.2 J   1676.7 I/mJ   200.5 s
+                499: 
+[  617.440510] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[  617.440518] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[  617.440534] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[  617.440558] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[  617.960385] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[  617.960396] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[  678.880419] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[  678.880427] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[  678.880443] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[  678.880467] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[  679.400343] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[  679.400354] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[  740.320421] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[  740.320429] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[  740.320445] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[  740.320468] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[  740.840367] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[  740.840378] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[  748.800129]  1853     3.7 C/MHz      0 mW    0.1 J   4632.3 I/mJ   161.9 s
+                595: 
+[  801.760372] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[  801.760379] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[  801.760393] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[  801.760413] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[  802.280021] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[  802.280100] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[  863.200371] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[  863.200378] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[  863.200392] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[  863.200412] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[  863.720018] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[  863.720096] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[  893.150399]  2209     3.7 C/MHz      2 mW    0.3 J   1197.3 I/mJ   135.8 s
+                691: 
+[  924.640411] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[  924.640417] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[  924.640429] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[  924.640446] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[  925.159905] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[  925.159913] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[  986.080386] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[  986.080392] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[  986.080404] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[  986.080421] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[  986.599985] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[  986.599993] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 1019.186423]  2566     3.7 C/MHz      5 mW    0.6 J   500.9 I/mJ   116.9 s
+                806: 
+[ 1047.520300] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 1047.520306] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 1047.520316] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 1047.520331] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 1048.039863] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 1048.039871] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 1108.960300] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 1108.960305] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 1108.960316] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 1108.960331] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 1109.479879] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 1109.479887] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 1127.932902]  2993     3.7 C/MHz     18 mW    1.8 J   164.2 I/mJ   100.2 s
+                902: 
+[ 1170.400280] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 1170.400285] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 1170.400294] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 1170.400307] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 1170.919687] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 1170.919693] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 1226.520097]  3350     3.7 C/MHz     19 mW    1.7 J   172.6 I/mJ    89.6 s
+                998: 
+[ 1231.840326] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 1231.840330] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 1231.840339] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 1231.840351] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 1232.359869] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 1232.359874] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 1293.280265] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 1293.280269] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 1293.280278] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 1293.280290] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 1293.799586] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 1293.799592] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 1315.963634]  3706     3.7 C/MHz      6 mW    0.5 J   607.8 I/mJ    81.0 s
+               1094: 
+[ 1354.720251] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 1354.720255] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 1354.720263] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 1354.720274] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 1355.239817] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 1355.239822] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 1398.295236]  4062     3.7 C/MHz     35 mW    2.6 J   115.4 I/mJ    73.9 s
+               1209: 
+[ 1416.160239] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 1416.160243] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 1416.160250] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 1416.160260] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 1416.679499] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 1416.679504] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 1473.498903]  4490     3.7 C/MHz     56 mW    3.8 J   79.7 I/mJ    66.8 s
+               1305: 
+[ 1477.600287] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 1477.600291] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 1477.600297] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 1477.600307] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 1478.119700] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 1478.119704] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 1539.040291] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 1539.040295] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 1539.040301] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 1539.040311] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 1539.559496] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 1539.559501] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 1543.634665]  4847     3.7 C/MHz     51 mW    3.1 J   95.4 I/mJ    61.9 s
+               1401: 
+[ 1600.480220] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 1600.480223] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 1600.480230] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 1600.480239] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 1600.999480] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 1600.999484] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 1609.706431]  5203     3.7 C/MHz     55 mW    3.2 J   94.4 I/mJ    57.7 s
+               1497: 
+[ 1661.920214] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 1661.920217] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 1661.920223] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 1661.920232] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 1662.439812] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 1662.439816] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 1672.730464]  5560     3.7 C/MHz     70 mW    3.8 J   79.4 I/mJ    54.0 s
+               1612: 
+[ 1723.360209] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 1723.360212] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 1723.360218] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 1723.360226] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 1723.879582] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 1723.879586] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 1731.690344]  5987     3.7 C/MHz     67 mW    3.4 J   89.3 I/mJ    50.1 s
+               1708: 
+[ 1784.800202] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 1784.800205] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 1784.800210] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 1784.800218] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 1785.319624] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 1785.319628] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 1787.601997]  6344     3.7 C/MHz     73 mW    3.5 J   86.3 I/mJ    47.3 s
+               1804: 
+[ 1841.490953] CPU features: detected: Hardware dirty bit management
+[ 1841.491396] cpu cpu4: failed to register opp energy model: -17
+[ 1842.501786]  6700     3.7 C/MHz     72 mW    3.2 J   92.9 I/mJ    44.8 s
+               
+               
+               ===== CPU 4 =====
+               Frequencies: 710 844 960 1075 1209 1324 1440 1555 1670 1766 1881 1996 2112 2227 2342 2419
+               
+                710: 
+[ 1846.240699] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 1846.240715] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 1846.240742] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 1846.240782] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 1846.761044] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 1846.761062] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 1897.508806]  6459     9.1 C/MHz    104 mW    4.8 J   62.2 I/mJ    46.5 s
+                844: 
+[ 1907.680807] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 1907.680821] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 1907.680849] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 1907.680889] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 1908.200894] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 1908.200912] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 1945.390924]  7683     9.1 C/MHz    101 mW    4.0 J   75.8 I/mJ    39.1 s
+                960: 
+[ 1969.120694] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 1969.120708] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 1969.120734] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 1969.120774] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 1969.641367] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 1969.641385] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 1988.196307]  8734     9.1 C/MHz    120 mW    4.1 J   72.5 I/mJ    34.4 s
+               1075: 
+[ 2027.933811]  9779     9.1 C/MHz    158 mW    4.9 J   61.7 I/mJ    30.7 s
+               1209: 
+[ 2030.560693] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 2030.560707] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 2030.560734] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 2030.560773] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 2031.080416] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 2031.080435] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 2063.600595] 11004     9.1 C/MHz    167 mW    4.6 J   65.9 I/mJ    27.3 s
+               1324: 
+[ 2092.000703] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 2092.000716] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 2092.000743] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 2092.000783] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 2092.520892] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 2092.520911] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 2097.230058] 12054     9.1 C/MHz    193 mW    4.8 J   62.5 I/mJ    24.9 s
+               1440: 
+[ 2128.823064] 13091     9.1 C/MHz    250 mW    5.7 J   52.4 I/mJ    22.9 s
+               1555: 
+[ 2153.440720] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 2153.440734] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 2153.440761] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 2153.440800] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 2153.960901] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 2153.960919] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 2158.379454] 14150     9.1 C/MHz    283 mW    6.0 J   50.0 I/mJ    21.2 s
+               1670: 
+[ 2186.904145] 15198     9.1 C/MHz    301 mW    5.9 J   50.4 I/mJ    19.8 s
+               1766: 
+[ 2214.423172] 16063     9.1 C/MHz    349 mW    6.5 J   46.0 I/mJ    18.7 s
+               1881: 
+[ 2214.880697] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 2214.880712] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 2214.880739] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 2214.880780] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 2215.400940] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 2215.400959] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 2240.922799] 17126     9.1 C/MHz    445 mW    7.8 J   38.4 I/mJ    17.5 s
+               1996: 
+[ 2266.407228] 18154     9.1 C/MHz    479 mW    7.9 J   37.9 I/mJ    16.5 s
+               2112: 
+[ 2276.320701] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 2276.320714] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 2276.320741] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 2276.320780] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 2276.841208] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 2276.841227] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 2290.872747] 19218     9.1 C/MHz    532 mW    8.3 J   36.1 I/mJ    15.6 s
+               2227: 
+[ 2314.305409] 20265     9.1 C/MHz    599 mW    8.9 J   33.8 I/mJ    14.8 s
+               2342: 
+[ 2336.734286] 21308     9.1 C/MHz    701 mW    9.9 J   30.4 I/mJ    14.1 s
+               2419: 
+[ 2337.760703] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 2337.760717] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 2337.760744] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 2337.760784] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 2338.280899] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 2338.280918] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 2359.174935] cpu cpu7: failed to register opp energy model: -17
+[ 2360.185518] 22001     9.1 C/MHz    826 mW   11.3 J   26.6 I/mJ    13.7 s
+               
+               
+               ===== CPU 7 =====
+               Frequencies: 844 960 1075 1190 1305 1420 1555 1670 1785 1900 2035 2150 2265 2380 2496 2592 2688 2764 2841
+               
+                844: 
+[ 2399.200711] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 2399.200727] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 2399.200755] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 2399.200795] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 2399.720940] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 2399.720959] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 2407.046697]  7844     9.3 C/MHz    177 mW    6.8 J   44.4 I/mJ    38.3 s
+                960: 
+[ 2449.840216]  8913     9.3 C/MHz    198 mW    6.7 J   44.9 I/mJ    33.7 s
+               1075: 
+[ 2460.640712] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 2460.640726] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 2460.640753] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 2460.640793] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 2461.161000] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 2461.161019] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 2489.578114]  9560     8.9 C/MHz    248 mW    7.8 J   38.6 I/mJ    31.4 s
+               1190: 
+[ 2522.080698] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 2522.080711] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 2522.080737] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 2522.080777] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 2522.600893] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 2522.600912] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 2525.244812] 11054     9.3 C/MHz    286 mW    7.8 J   38.6 I/mJ    27.2 s
+               1305: 
+[ 2558.874539] 12120     9.3 C/MHz    322 mW    8.0 J   37.6 I/mJ    24.8 s
+               1420: 
+[ 2583.520701] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 2583.520714] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 2583.520741] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 2583.520780] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 2584.040937] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 2584.040956] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 2597.594014]  9842     6.9 C/MHz    252 mW    7.7 J   39.0 I/mJ    30.5 s
+               1555: 
+[ 2641.404667]  8500     5.5 C/MHz    259 mW    9.2 J   32.7 I/mJ    35.3 s
+               1670: 
+[ 2644.960704] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 2644.960717] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 2644.960744] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 2644.960784] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 2645.480900] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 2645.480919] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 2671.977139] 13968     8.4 C/MHz    424 mW    9.1 J   32.9 I/mJ    21.5 s
+               1785: 
+[ 2703.570427] 13356     7.5 C/MHz    420 mW    9.4 J   31.8 I/mJ    22.5 s
+               1900: 
+[ 2706.400702] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 2706.400717] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 2706.400744] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 2706.400784] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 2706.920901] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 2706.920919] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 2735.162829] 12891     6.8 C/MHz    460 mW   10.7 J   28.0 I/mJ    23.3 s
+               2035: 
+[ 2759.628383] 18894     9.3 C/MHz    651 mW   10.3 J   29.0 I/mJ    15.9 s
+               2150: 
+[ 2767.840399] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 2767.840412] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 2767.840439] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 2767.840480] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 2768.361047] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 2768.361066] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 2783.074487] 19957     9.3 C/MHz    732 mW   11.0 J   27.2 I/mJ    15.0 s
+               2265: 
+[ 2806.522489] 21023     9.3 C/MHz    828 mW   11.8 J   25.4 I/mJ    14.3 s
+               2380: 
+[ 2828.951766] 22093     9.3 C/MHz    995 mW   13.5 J   22.2 I/mJ    13.6 s
+               2496: 
+[ 2829.280702] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 2829.280716] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 2829.280743] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 2829.280783] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 2829.800905] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 2829.800923] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 2850.362486] 23173     9.3 C/MHz   1043 mW   13.5 J   22.2 I/mJ    13.0 s
+               2592: 
+[ 2871.773578] 24060     9.3 C/MHz   1190 mW   14.9 J   20.2 I/mJ    12.5 s
+               2688: 
+[ 2890.720702] subsys-pil-tz soc:qcom,ipa_fws: ipa_fws: Failed to locate ipa_fws.mdt(rc:-110)
+[ 2890.720716] subsys-pil-tz: subsys_powerup(): pil_boot failed for ipa_fws
+[ 2890.720743] ipa ipa3_pil_load_ipa_fws:6886 Unable to PIL load FW for sub_sys=ipa_fws
+[ 2890.720783] gsi soc:qcom,msm_gsi: gsi_pending_irq_type:3052 no client registered
+[ 2891.240900] subsys-pil-tz soc:qcom,ipa_fws: Direct firmware load for ipa_fws.mdt failed with error -2
+[ 2891.240918] subsys-pil-tz soc:qcom,ipa_fws: Falling back to sysfs fallback for: ipa_fws.mdt
+[ 2892.164595] 24948     9.3 C/MHz   1316 mW   15.8 J   18.9 I/mJ    12.0 s
+               2764: 
+[ 2912.558553] 25670     9.3 C/MHz   1435 mW   16.8 J   17.9 I/mJ    11.7 s
+               2841: 
+[ 2932.983576] 26374     9.3 C/MHz   1599 mW   18.2 J   16.5 I/mJ    11.4 s
+               
+               
+               Benchmark finished!
+[ 2933.001262] 
+               real	48m45.004s
+               user	40m0.178s
+               sys	0m1.711s
