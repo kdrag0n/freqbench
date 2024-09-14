@@ -1,0 +1,146 @@
+           CPU0       
+ 18:          0     GICv3  25 Level     vgic
+ 20:          0     GICv3  27 Level     kvm guest vtimer
+ 23:        476     GICv3  30 Level     arch_timer
+ 25:          0  GICv3-23   0 Level     arm-pmu
+ 26:          0  GICv3-23   1 Level     arm-pmu
+ 27:          0     GICv3 109 Level     15200000.mbox
+ 28:          0     GICv3 110 Level     15220000.mbox
+ 29:          0     GICv3 111 Level     15240000.mbox
+ 30:          3     GICv3 112 Level     15110000.acpm_ipc
+ 31:          0     GICv3 666 Level     10840000.pinctrl
+ 32:          0     GICv3 681 Level     10c40000.pinctrl
+ 33:          0     GICv3 445 Level     12040000.pinctrl
+ 34:          0     GICv3 464 Level     13040000.pinctrl
+ 35:          0     GICv3 465 Level     13060000.pinctrl
+ 96:          0      gpa4   1 Edge      gpio-keys: KEY_VOLUMEDOWN
+ 97:          0      gpa6   2 Edge      gpio-keys: KEY_VOLUMEUP
+ 98:          0      gpa4   0 Edge      gpio-keys: KEY_POWER
+107:     296865     GICv3 790 Level     exynos-mct
+108:          0     GICv3 791 Level     exynos-mct
+109:          0     GICv3 792 Level     exynos-mct
+110:          0     GICv3 793 Level     exynos-mct
+111:          0     GICv3 794 Level     exynos-mct
+112:          0     GICv3 795 Level     exynos-mct
+113:          0     GICv3 796 Level     exynos-mct
+114:          0     GICv3 797 Level     exynos-mct
+116:          0     GICv3 190 Level     20a80000.s2mpu_s0_aur
+117:          0     GICv3 200 Level     1a670000.s2mpu_s0_bw
+118:          0     GICv3 269 Level     29c50000.s2mpu_s0_cpucl0
+119:          0     GICv3 311 Level     19870000.s2mpu_s0_dpuf0
+120:          0     GICv3 338 Level     19c70000.s2mpu_s0_dpuf1
+121:          0     GICv3 365 Level     16c70000.s2mpu_s0_eh
+122:          0     GICv3 376 Level     1a8a0000.s2mpu_s0_g2d
+123:          0     GICv3 386 Level     1ee70000.s2mpu_s0_g3d
+124:          0     GICv3 405 Level     1d4f0000.s2mpu_s0_gdc
+125:          0     GICv3 419 Level     1d8a0000.s2mpu_s0_gse
+126:          0     GICv3 427 Level     11070000.s2mpu_s0_hsi0
+127:          0     GICv3 458 Level     12090000.s2mpu_s0_hsi1
+128:          0     GICv3 492 Level     131f0000.s2mpu_s0_hsi2
+129:          0     GICv3 522 Level     1c140000.s2mpu_s0_ispfe
+130:          0     GICv3 526 Level     1c180000.s2mpu_s1_ispfe
+131:          0     GICv3 530 Level     1c1c0000.s2mpu_s2_ispfe
+132:          0     GICv3 545 Level     1d0d0000.s2mpu_s0_mcsc
+133:          0     GICv3 552 Level     1a4a0000.s2mpu_s0_mfc
+134:          0     GICv3 865 Level     101f0000.s2mpu_s0_misc
+135:          0     GICv3 709 Level     1c4d0000.s2mpu_s0_rgbp
+136:          0     GICv3 713 Level     1c510000.s2mpu_s1_rgbp
+137:          0     GICv3 717 Level     1ccb0000.s2mpu_s0_tnr
+138:          0     GICv3 721 Level     1ccf0000.s2mpu_s1_tnr
+139:          0     GICv3 725 Level     1cd30000.s2mpu_s2_tnr
+140:          0     GICv3 767 Level     1a370000.s2mpu_s0_tpu
+141:          0     GICv3 774 Level     1c8a0000.s2mpu_s0_yuvp
+142:          0     GICv3 411 Level     16470000.s2mpu_s0_gsa
+143:          0     GICv3 249 Level     30000000.pmu
+144:          0     GICv3 840 Level     10110000.pdma0
+145:          0     GICv3 838 Level     10130000.pdma1
+146:          0     GICv3  13 Edge      trusty
+147:         47     GICv3 407 Level     gsa-mb-irq
+148:          0      gpa6   1 Edge      16490000.gsa-ns:gsa_gsc@0
+149:          0     GICv3 799 Level     10060000.watchdog_cl0
+150:          0     GICv3 800 Level     10070000.watchdog_cl1
+153:          0     GICv3 198 Level     1a640000.sysmmu
+154:          0     GICv3 199 Level     1a640000.sysmmu
+155:          0     GICv3 374 Level     1a870000.sysmmu
+156:          0     GICv3 375 Level     1a870000.sysmmu
+157:          0     GICv3 309 Level     19840000.sysmmu
+158:          0     GICv3 310 Level     19840000.sysmmu
+159:          0     GICv3 336 Level     19c40000.sysmmu
+160:          0     GICv3 337 Level     19c40000.sysmmu
+161:          0     GICv3 520 Level     1c110000.sysmmu
+162:          0     GICv3 521 Level     1c110000.sysmmu
+163:          0     GICv3 524 Level     1c150000.sysmmu
+164:          0     GICv3 525 Level     1c150000.sysmmu
+165:          0     GICv3 528 Level     1c190000.sysmmu
+166:          0     GICv3 529 Level     1c190000.sysmmu
+167:          0     GICv3 417 Level     1d870000.sysmmu
+168:          0     GICv3 418 Level     1d870000.sysmmu
+169:          0     GICv3 765 Level     1a340000.sysmmu
+170:          0     GICv3 766 Level     1a340000.sysmmu
+171:          0     GICv3 772 Level     1c870000.sysmmu
+172:          0     GICv3 773 Level     1c870000.sysmmu
+173:          0     GICv3 715 Level     1cc80000.sysmmu
+174:          0     GICv3 716 Level     1cc80000.sysmmu
+175:          0     GICv3 719 Level     1ccc0000.sysmmu
+176:          0     GICv3 720 Level     1ccc0000.sysmmu
+177:          0     GICv3 723 Level     1cd00000.sysmmu
+178:          0     GICv3 724 Level     1cd00000.sysmmu
+179:          0     GICv3 707 Level     1c4a0000.sysmmu
+180:          0     GICv3 708 Level     1c4a0000.sysmmu
+181:          0     GICv3 711 Level     1c4e0000.sysmmu
+182:          0     GICv3 712 Level     1c4e0000.sysmmu
+183:          0     GICv3 867 Level     101c0000.sysmmu
+184:          0     GICv3 868 Level     101c0000.sysmmu
+185:          0     GICv3 550 Level     1a470000.sysmmu
+186:          0     GICv3 551 Level     1a470000.sysmmu
+187:          0     GICv3 543 Level     1d0a0000.sysmmu
+188:          0     GICv3 544 Level     1d0a0000.sysmmu
+189:          0     GICv3 425 Level     11040000.sysmmu
+190:          0     GICv3 426 Level     11040000.sysmmu
+191:          0     GICv3 409 Level     16440000.sysmmu
+192:          0     GICv3 410 Level     16440000.sysmmu
+193:          0     GICv3 403 Level     1d4c0000.sysmmu
+194:          0     GICv3 404 Level     1d4c0000.sysmmu
+195:          0     GICv3 363 Level     16c40000.sysmmu
+196:          0     GICv3 364 Level     16c40000.sysmmu
+197:          0     GICv3 188 Level     20a50000.sysmmu
+198:          0     GICv3 189 Level     20a50000.sysmmu
+199:          0     GICv3 164 Level     19090000.sysmmu
+200:          0     GICv3 165 Level     19090000.sysmmu
+201:        171     GICv3 498 Level     ufshcd
+202:          0     GICv3 694 Level     spi-s3c64xx
+203:          0     GICv3 438 Level     spi-s3c64xx
+204:          0     GICv3 439 Level     spi-s3c64xx
+205:          0     GICv3 440 Level     spi-s3c64xx
+206:          0     GICv3 441 Level     spi-s3c64xx
+207:          0     GICv3 442 Level     spi-s3c64xx
+208:          0     GICv3 674 Level     10880000.hsi2c
+209:          0     GICv3 675 Level     10890000.hsi2c
+210:          0     GICv3 676 Level     108a0000.hsi2c
+211:        296     GICv3 677 Level     108b0000.hsi2c
+212:          0     GICv3 678 Level     108c0000.hsi2c
+213:          0     GICv3 679 Level     108d0000.hsi2c
+214:          0     GICv3 689 Level     10c90000.hsi2c
+215:          3     GICv3 690 Level     10ca0000.hsi2c
+258:          0   s2mpg15     Edge      PMIC_THERM_IRQ
+266:          0   s2mpg15     Edge      PMIC_THERM_IRQ
+274:          0     GICv3 106 Level     s2mpg14-irq
+285:          0   s2mpg14     Edge      rtc-alarm0
+296:          0   s2mpg14     Edge      BUCK_OCP_IRQ
+297:          0   s2mpg14     Edge      BUCK_OCP_IRQ
+298:          0   s2mpg14     Edge      BUCK_OCP_IRQ
+299:          0   s2mpg14     Edge      BUCK_OCP_IRQ
+300:          0   s2mpg14     Edge      BUCK_OCP_IRQ
+301:          0   s2mpg14     Edge      BUCK_OCP_IRQ
+302:          0   s2mpg14     Edge      BUCK_OCP_IRQ
+303:          0   s2mpg14     Edge      BUCK_OCP_IRQ
+304:          0   s2mpg14     Edge      BUCK_OCP_IRQ
+320:          0     GICv3 210 Level     arm_dsu_0
+IPI0:        64       Rescheduling interrupts
+IPI1:       294       Function call interrupts
+IPI2:         0       CPU stop interrupts
+IPI3:         0       CPU stop (for crash dump) interrupts
+IPI4:         0       Timer broadcast interrupts
+IPI5:        62       IRQ work interrupts
+IPI6:         0       CPU wake-up interrupts
+Err:          0
