@@ -1,0 +1,1517 @@
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd801]
+[    0.000000] Linux version 6.1.75-g7910ee17f109 (sultan@sultan-box) (aarch64-linux-gnu-gcc (GCC) 14.1.0, GNU ld (GNU Binutils) 2.42) #1 SMP PREEMPT Fri Sep 13 20:52:06 PDT 2024
+[    0.000000] Machine model: ZUMA PRO CAIMAN MP board based on ZUMA PRO
+[    0.000000] Stack Depot is disabled
+[    0.000000] efi: UEFI not found.
+[    0.000000] OF: reserved mem: 0x00000009ff000000..0x00000009ffffffff ( 16384 KB ) map non-reusable faceauth_tpu
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000009df000000, size 512 MiB
+[    0.000000] OF: reserved mem: initialized node vframe, compatible id shared-dma-pool
+[    0.000000] OF: reserved mem: 0x00000009df000000..0x00000009feffffff ( 524288 KB ) map reusable vframe
+[    0.000000] OF: reserved mem: 0x00000000fe800000..0x00000000ffffffff ( 24576 KB ) map non-reusable tui
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000009dbc00000, size 52 MiB
+[    0.000000] OF: reserved mem: initialized node vscaler, compatible id shared-dma-pool
+[    0.000000] OF: reserved mem: 0x00000009dbc00000..0x00000009deffffff ( 53248 KB ) map reusable vscaler
+[    0.000000] OF: reserved mem: 0x00000000fe600000..0x00000000fe7fffff ( 2048 KB ) map non-reusable dpado-rmem
+[    0.000000] OF: reserved mem: 0x00000009d7100000..0x00000009dbbfffff ( 76800 KB ) map non-reusable famodel
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000009d6400000, size 12 MiB
+[    0.000000] OF: reserved mem: initialized node faprev, compatible id shared-dma-pool
+[    0.000000] OF: reserved mem: 0x00000009d6400000..0x00000009d6ffffff ( 12288 KB ) map reusable faprev
+[    0.000000] OF: reserved mem: 0x00000009d4400000..0x00000009d63fffff ( 32768 KB ) map non-reusable faceauth_dsp
+[    0.000000] OF: reserved mem: 0x00000009c9800000..0x00000009d43fffff ( 176128 KB ) map non-reusable farawimg
+[    0.000000] OF: reserved mem: 0x00000000fe3f0000..0x00000000fe5fffff ( 2112 KB ) map non-reusable mfc_fw
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000009c5000000, size 72 MiB
+[    0.000000] OF: reserved mem: initialized node vstream, compatible id shared-dma-pool
+[    0.000000] OF: reserved mem: 0x00000009c5000000..0x00000009c97fffff ( 73728 KB ) map reusable vstream
+[    0.000000] OF: reserved mem: 0x00000000197fd000..0x00000000197fffff ( 12 KB ) map non-reusable cp_aoc_rmem
+[    0.000000] OF: reserved mem: initialized node pkvm_guest_firmware, compatible id linux,pkvm-guest-firmware-memory
+[    0.000000] OF: reserved mem: 0x000000008b000000..0x000000008b094fff ( 596 KB ) nomap non-reusable pkvm_guest_firmware
+[    0.000000] OF: reserved mem: 0x0000000090000000..0x000000009005ffff ( 384 KB ) map non-reusable ect_binary
+[    0.000000] OF: reserved mem: 0x0000000090200000..0x00000000905fefff ( 4092 KB ) nomap non-reusable gsa@90200000
+[    0.000000] OF: reserved mem: 0x00000000905ff000..0x00000000905fffff ( 4 KB ) nomap non-reusable gsa@905FF000
+[    0.000000] OF: reserved mem: 0x0000000091300000..0x000000009135ffff ( 384 KB ) nomap non-reusable gxp_scratchpad@91300000
+[    0.000000] OF: reserved mem: 0x0000000091360000..0x000000009137ffff ( 128 KB ) nomap non-reusable iif_wait_table@91360000
+[    0.000000] OF: reserved mem: 0x0000000091380000..0x000000009139ffff ( 128 KB ) nomap non-reusable iif_signal_table@91380000
+[    0.000000] OF: reserved mem: 0x0000000091400000..0x0000000091cfffff ( 9216 KB ) nomap non-reusable gxp_secure_data@91400000
+[    0.000000] OF: reserved mem: 0x0000000091d00000..0x0000000091ffffff ( 3072 KB ) nomap non-reusable gxp_fw@91D00000
+[    0.000000] OF: reserved mem: 0x0000000092000000..0x00000000923fffff ( 4096 KB ) nomap non-reusable gxp_mcu_fw@92000000
+[    0.000000] OF: reserved mem: 0x0000000092e00000..0x0000000093ffffff ( 18432 KB ) nomap non-reusable tpu_fw@92e00000
+[    0.000000] OF: reserved mem: 0x0000000094000000..0x0000000096ffffff ( 49152 KB ) nomap non-reusable aoc@94000000
+[    0.000000] Reserved memory: created DMA memory pool at 0x0000000097000000, size 4 MiB
+[    0.000000] OF: reserved mem: initialized node xhci_dma@97000000, compatible id shared-dma-pool
+[    0.000000] OF: reserved mem: 0x0000000097000000..0x00000000973fffff ( 4096 KB ) nomap non-reusable xhci_dma@97000000
+[    0.000000] OF: reserved mem: 0x00000000b6200000..0x00000000bfffffff ( 161792 KB ) nomap non-reusable sec_dram
+[    0.000000] OF: reserved mem: 0x00000000c3000000..0x00000000c307ffff ( 512 KB ) map non-reusable seclog_mem
+[    0.000000] OF: reserved mem: 0x00000000d8100000..0x00000000d810ffff ( 64 KB ) nomap non-reusable header
+[    0.000000] OF: reserved mem: 0x00000000d8110000..0x00000000d880ffff ( 7168 KB ) nomap non-reusable log_kevents
+[    0.000000] OF: reserved mem: 0x00000000d8810000..0x00000000da00ffff ( 24576 KB ) nomap non-reusable log_s2d
+[    0.000000] OF: reserved mem: 0x00000000da010000..0x00000000daa0ffff ( 10240 KB ) nomap non-reusable log_array_reset
+[    0.000000] OF: reserved mem: 0x00000000dda10000..0x00000000dda1ffff ( 64 KB ) nomap non-reusable log_itmon
+[    0.000000] OF: reserved mem: 0x00000000dda20000..0x00000000de01ffff ( 6144 KB ) nomap non-reusable log_s2d_extract
+[    0.000000] OF: reserved mem: 0x00000000e0000000..0x00000000e37fffff ( 57344 KB ) nomap non-reusable sec_pt
+[    0.000000] OF: reserved mem: 0x00000000e8000000..0x00000000e9ffffff ( 32768 KB ) map non-reusable cp_rmem_1
+[    0.000000] OF: reserved mem: 0x00000000ea400000..0x00000000eaffffff ( 12288 KB ) map non-reusable cp_rmem
+[    0.000000] OF: reserved mem: 0x00000000f6200000..0x00000000f6200fff ( 4 KB ) map non-reusable cp_msi_rmem
+[    0.000000] OF: reserved mem: 0x00000000f8800000..0x00000000f97fffff ( 16384 KB ) nomap non-reusable abl@f8800000
+[    0.000000] OF: reserved mem: 0x00000000fd3f0000..0x00000000fd3fdfff ( 56 KB ) nomap non-reusable dss_log_reserved@fd3f0000
+[    0.000000] OF: reserved mem: 0x00000000fd3fe000..0x00000000fd3fefff ( 4 KB ) nomap non-reusable debug_kinfo_reserved@fd3fe000
+[    0.000000] OF: reserved mem: 0x00000000fd3ff000..0x00000000fd7fefff ( 4096 KB ) map non-reusable ramoops_mem@fd3ff000
+[    0.000000] OF: reserved mem: 0x00000000fd800000..0x00000000fd8fffff ( 1024 KB ) nomap non-reusable bldr_log_reserved@fd800000
+[    0.000000] kvm [0]: Reserved 86 MiB at 0xbf8800000
+[    0.000000] Zone ranges:
+[    0.000000]   DMA32    empty
+[    0.000000]   Normal   [mem 0x0000000080000000-0x0000000bffffffff]
+[    0.000000]   Device   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000080000000-0x000000008affffff]
+[    0.000000]   node   0: [mem 0x000000008b000000-0x000000008b094fff]
+[    0.000000]   node   0: [mem 0x000000008b095000-0x00000000901fffff]
+[    0.000000]   node   0: [mem 0x0000000090200000-0x00000000905fffff]
+[    0.000000]   node   0: [mem 0x0000000090600000-0x00000000912fffff]
+[    0.000000]   node   0: [mem 0x0000000091300000-0x000000009139ffff]
+[    0.000000]   node   0: [mem 0x00000000913a0000-0x00000000913fffff]
+[    0.000000]   node   0: [mem 0x0000000091400000-0x00000000923fffff]
+[    0.000000]   node   0: [mem 0x0000000092400000-0x0000000092dfffff]
+[    0.000000]   node   0: [mem 0x0000000092e00000-0x00000000973fffff]
+[    0.000000]   node   0: [mem 0x0000000097400000-0x00000000b61fffff]
+[    0.000000]   node   0: [mem 0x00000000b6200000-0x00000000bfffffff]
+[    0.000000]   node   0: [mem 0x00000000c0000000-0x00000000d80fffff]
+[    0.000000]   node   0: [mem 0x00000000d8100000-0x00000000daa0ffff]
+[    0.000000]   node   0: [mem 0x00000000daa10000-0x00000000dda0ffff]
+[    0.000000]   node   0: [mem 0x00000000dda10000-0x00000000de01ffff]
+[    0.000000]   node   0: [mem 0x00000000de020000-0x00000000dfffffff]
+[    0.000000]   node   0: [mem 0x00000000e0000000-0x00000000e37fffff]
+[    0.000000]   node   0: [mem 0x00000000e3800000-0x00000000f87fffff]
+[    0.000000]   node   0: [mem 0x00000000f8800000-0x00000000f97fffff]
+[    0.000000]   node   0: [mem 0x00000000f9800000-0x00000000fd3effff]
+[    0.000000]   node   0: [mem 0x00000000fd3f0000-0x00000000fd3fefff]
+[    0.000000]   node   0: [mem 0x00000000fd3ff000-0x00000000fd7fffff]
+[    0.000000]   node   0: [mem 0x00000000fd800000-0x00000000fd8fffff]
+[    0.000000]   node   0: [mem 0x00000000fd900000-0x00000000ffffffff]
+[    0.000000]   node   0: [mem 0x0000000880000000-0x0000000bffffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000080000000-0x0000000bffffffff]
+[    0.000000] cma: Reserved 16 MiB at 0x00000000fc000000
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.2
+[    0.000000] Load bootconfig: 3981 bytes 131 nodes
+[    0.000000] percpu: Embedded 28 pages/cpu s83752 r0 d30936 u114688
+[    0.000000] pcpu-alloc: s83752 r0 d30936 u114688 alloc=28*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+[    0.000000] Detected PIPT I-cache on CPU0
+[    0.000000] CPU features: SYS_ID_AA64MMFR1_EL1[11:8]: forced to 0
+[    0.000000] CPU features: SYS_ID_AA64PFR1_EL1[11:8]: forced to 0
+[    0.000000] CPU features: detected: Address authentication (architected QARMA3 algorithm)
+[    0.000000] CPU features: detected: GIC system register CPU interface
+[    0.000000] CPU features: detected: Hardware dirty bit management
+[    0.000000] CPU features: detected: Spectre-v4
+[    0.000000] alternatives: applying boot alternatives
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 4128768
+[    0.000000] Kernel command line: console=ttynull stack_depot_disable=on cgroup_disable=pressure kasan.page_alloc.sample=10 kasan.stacktrace=off kvm-arm.mode=protected bootconfig ioremap_guard rcu_nocbs=0-7 isolcpus=1-7 nohz_full=1-7 loglevel=0 printk.devkmsg=on root=/dev/ram0 rw clocksource=arch_sys_counter clk_ignore_unused loop.max_part=7 loop.hw_queue_depth=31 coherent_pool=4M firmware_class.path=/vendor/firmware irqaffinity=0 sysrq_always_enabled no_console_suspend softlockup_panic=1 kasan_multi_shot kvm-arm.protected_modules=exynos-pd,pkvm_s2mpu-v9 dyndbg="func alloc_contig_dump_pages +p" printk.devkmsg=on cma_sysfs.experimental=Y cgroup_disable=memory cgroup.memory=nokmem rcupdate.rcu_expedited=1 rcu_nocbs=all rcutree.enable_rcu_lazy swiotlb=noforce disable_dma32=on sysctl.kernel.sched_pelt_multiplier=4 kasan=off at24.write_timeout=100 log_buf_len=1024K bootconfig console=null exynos_drm.panel_name=google-cm4.22a8a00a tcpci_max77759.conf_sbu=0 arm64.nomte ufs_pixel
+[    0.000000] cgroup: Disabling pressure control group feature
+[    0.000000] sysrq: sysrq always enabled.
+[    0.000000] cgroup: Disabling memory control group subsystem
+[    0.000000] random: crng init done
+[    0.000000] printk: log_buf_len: 1048576 bytes
+[    0.000000] printk: early log buf free: 120776(92%)
+[    0.000000] Dentry cache hash table entries: 2097152 (order: 12, 16777216 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+[    0.000000] mem auto-init: stack:all(zero), heap alloc:on, heap free:off
+[    0.000000] Memory: 14823784K/16777216K available (26560K kernel code, 4106K rwdata, 23200K rodata, 11968K init, 1347K bss, 1273496K reserved, 679936K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000] trace event string verifier disabled
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=32 to nr_cpu_ids=8.
+[    0.000000] rcu: 	RCU priority boosting: priority 1 delay 500 ms.
+[    0.000000] 	All grace periods are expedited (rcu_expedited).
+[    0.000000] 	Trampoline variant of Tasks RCU enabled.
+[    0.000000] 	Tracing variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=8
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: GIC: Using split EOI/Deactivate mode
+[    0.000000] GICv3: 960 SPIs implemented
+[    0.000000] GICv3: 0 Extended SPIs implemented
+[    0.000000] Root IRQ handler: gic_handle_irq
+[    0.000000] GICv3: GICv3 features: 16 PPIs
+[    0.000000] GICv3: CPU0: found redistributor 0 region 0:0x0000000010440000
+[    0.000000] GICv3: GIC: PPI partition interrupt-partition-0[0] { /cpus/cpu@0[0] /cpus/cpu@100[1] /cpus/cpu@200[2] /cpus/cpu@300[3] /cpus/cpu@400[4] /cpus/cpu@500[5] /cpus/cpu@600[6] }
+[    0.000000] GICv3: GIC: PPI partition interrupt-partition-1[1] { /cpus/cpu@700[7] }
+[    0.000000] NO_HZ: Full dynticks CPUs: 1-7.
+[    0.000000] rcu: 	Offload RCU callbacks from CPUs: 0-7.
+[    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.000000] arch_timer: cp15 timer(s) running at 24.57MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x5ab00a189, max_idle_ns: 440795202599 ns
+[    0.000002] sched_clock: 56 bits at 25MHz, resolution 40ns, wraps every 4398046511099ns
+[    0.001023] kfence: initialized - using 524288 bytes for 63 objects at 0x(____ptrval____)-0x(____ptrval____)
+[    0.001250] Calibrating delay loop (skipped), value calculated using timer frequency.. 49.15 BogoMIPS (lpj=245760)
+[    0.001267] pid_max: default: 32768 minimum: 301
+[    0.001401] LSM: Security Framework initializing
+[    0.001460] SELinux:  Initializing.
+[    0.001731] Mount-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.001794] Mountpoint-cache hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.003963] cacheinfo: Unable to detect cache hierarchy for CPU 0
+[    0.004765] cblist_init_generic: Setting adjustable number of callback queues.
+[    0.004772] cblist_init_generic: Setting shift to 3 and lim to 1.
+[    0.004887] cblist_init_generic: Setting adjustable number of callback queues.
+[    0.004890] cblist_init_generic: Setting shift to 3 and lim to 1.
+[    0.005064] rcu: Hierarchical SRCU implementation.
+[    0.005070] rcu: 	Max phase no-delay instances is 1000.
+[    0.007018] EFI services will not be available.
+[    0.007147] watchdog: Disabling watchdog on nohz_full cores by default
+[    0.007533] smp: Bringing up secondary CPUs ...
+[    0.009024] Detected PIPT I-cache on CPU1
+[    0.009144] cacheinfo: Unable to detect cache hierarchy for CPU 1
+[    0.009169] GICv3: CPU1: found redistributor 100 region 0:0x0000000010460000
+[    0.009237] CPU1: Booted secondary processor 0x0000000100 [0x410fd801]
+[    0.010597] Detected PIPT I-cache on CPU2
+[    0.010705] cacheinfo: Unable to detect cache hierarchy for CPU 2
+[    0.010729] GICv3: CPU2: found redistributor 200 region 0:0x0000000010480000
+[    0.010777] CPU2: Booted secondary processor 0x0000000200 [0x410fd801]
+[    0.011783] Detected PIPT I-cache on CPU3
+[    0.011858] cacheinfo: Unable to detect cache hierarchy for CPU 3
+[    0.011878] GICv3: CPU3: found redistributor 300 region 0:0x00000000104a0000
+[    0.011926] CPU3: Booted secondary processor 0x0000000300 [0x410fd801]
+[    0.012861] Detected PIPT I-cache on CPU4
+[    0.012871] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x1001111011312122, CPU4: 0x1001111010312122
+[    0.012881] CPU features: Unsupported CPU feature variation detected.
+[    0.012944] cacheinfo: Unable to detect cache hierarchy for CPU 4
+[    0.012962] GICv3: CPU4: found redistributor 400 region 0:0x00000000104c0000
+[    0.013002] CPU4: Booted secondary processor 0x0000000400 [0x410fd811]
+[    0.013886] Detected PIPT I-cache on CPU5
+[    0.013897] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x1001111011312122, CPU5: 0x1001111010312122
+[    0.013973] cacheinfo: Unable to detect cache hierarchy for CPU 5
+[    0.013993] GICv3: CPU5: found redistributor 500 region 0:0x00000000104e0000
+[    0.014032] CPU5: Booted secondary processor 0x0000000500 [0x410fd811]
+[    0.014912] Detected PIPT I-cache on CPU6
+[    0.014922] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x1001111011312122, CPU6: 0x1001111010312122
+[    0.014997] cacheinfo: Unable to detect cache hierarchy for CPU 6
+[    0.015022] GICv3: CPU6: found redistributor 600 region 0:0x0000000010500000
+[    0.015058] CPU6: Booted secondary processor 0x0000000600 [0x410fd811]
+[    0.016287] Detected PIPT I-cache on CPU7
+[    0.016294] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x1001111011312122, CPU7: 0x1001111010312122
+[    0.016361] cacheinfo: Unable to detect cache hierarchy for CPU 7
+[    0.016386] GICv3: CPU7: found redistributor 700 region 0:0x0000000010520000
+[    0.016421] CPU7: Booted secondary processor 0x0000000700 [0x410fd821]
+[    0.016503] smp: Brought up 1 node, 8 CPUs
+[    0.016515] SMP: Total of 8 processors activated.
+[    0.016521] CPU features: detected: Branch Target Identification
+[    0.016529] CPU features: detected: ARMv8.4 Translation Table Level
+[    0.016535] CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+[    0.016540] CPU features: detected: Common not Private translations
+[    0.016544] CPU features: detected: CRC32 instructions
+[    0.016547] CPU features: detected: E0PD
+[    0.016549] CPU features: detected: Enhanced Counter Virtualization
+[    0.016552] CPU features: detected: Enhanced Privileged Access Never
+[    0.016555] CPU features: detected: Generic authentication (architected QARMA3 algorithm)
+[    0.016559] CPU features: detected: RCpc load-acquire (LDAPR)
+[    0.016564] CPU features: detected: LSE atomic instructions
+[    0.016567] CPU features: detected: Privileged Access Never
+[    0.016569] CPU features: detected: RAS Extension Support
+[    0.016571] CPU features: detected: Speculation barrier (SB)
+[    0.016573] CPU features: detected: Stage-2 Force Write-Back
+[    0.016575] CPU features: detected: TLB range maintenance instructions
+[    0.016577] CPU features: detected: WFx with timeout
+[    0.016581] CPU features: detected: Protected KVM
+[    0.016585] CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+[    0.016587] CPU features: detected: Scalable Vector Extension
+[    0.016635] CPU features: detected CPU7: Activity Monitors Unit (AMU)
+[    0.016635] CPU features: detected CPU4: Activity Monitors Unit (AMU)
+[    0.016636] CPU features: detected CPU6: Activity Monitors Unit (AMU)
+[    0.016635] CPU features: detected CPU3: Activity Monitors Unit (AMU)
+[    0.016635] CPU features: detected CPU2: Activity Monitors Unit (AMU)
+[    0.016636] CPU features: detected CPU0: Activity Monitors Unit (AMU)
+[    0.016635] CPU features: detected CPU5: Activity Monitors Unit (AMU)
+[    0.016636] CPU features: detected CPU1: Activity Monitors Unit (AMU)
+[    0.016679] SVE: maximum available vector length 16 bytes per vector
+[    0.016688] SVE: default vector length 16 bytes per vector
+[    0.016707] CPU: All CPU(s) started at EL2
+[    0.016758] alternatives: applying system-wide alternatives
+[    0.076382] Registered cp15_barrier emulation handler
+[    0.076410] Registered setend emulation handler
+[    0.076635] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.076688] futex hash table entries: 2048 (order: 5, 131072 bytes, linear)
+[    0.086801] pinctrl core: initialized pinctrl subsystem
+[    0.088536] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.092163] DMA: preallocated 4096 KiB GFP_KERNEL pool for atomic allocations
+[    0.092241] audit: initializing netlink subsys (disabled)
+[    0.093125] thermal_sys: Registered thermal governor 'step_wise'
+[    0.093131] thermal_sys: Registered thermal governor 'user_space'
+[    0.093135] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.093177] cpuidle: using governor menu
+[    0.094250] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.094314] audit: type=2000 audit(0.080:1): state=initialized audit_enabled=0 res=1
+[    0.094428] ASID allocator initialised with 65536 entries
+[    0.094542] Serial: AMBA PL011 UART driver
+[    0.095458] printk: console [ramoops-1] enabled
+[    0.095526] pstore: Registered ramoops as persistent store backend
+[    0.095531] ramoops: using 0x400000@0xfd3ff000, ecc: 0
+[    0.108681] platform funnel0: Fixed dependency cycle(s) with /ete7/out-ports/port/endpoint
+[    0.108706] platform funnel0: Fixed dependency cycle(s) with /ete6/out-ports/port/endpoint
+[    0.108719] platform funnel0: Fixed dependency cycle(s) with /ete5/out-ports/port/endpoint
+[    0.108732] platform funnel0: Fixed dependency cycle(s) with /ete4/out-ports/port/endpoint
+[    0.108745] platform funnel0: Fixed dependency cycle(s) with /ete3/out-ports/port/endpoint
+[    0.108759] platform funnel0: Fixed dependency cycle(s) with /ete2/out-ports/port/endpoint
+[    0.108771] platform funnel0: Fixed dependency cycle(s) with /ete1/out-ports/port/endpoint
+[    0.108784] platform funnel0: Fixed dependency cycle(s) with /ete0/out-ports/port/endpoint
+[    0.109035] amba 2a007000.funnel: Fixed dependency cycle(s) with /funnel0/out-ports/port/endpoint
+[    0.109282] amba 2a004000.etf: Fixed dependency cycle(s) with /funnel@2a009000/in-ports/port@0/endpoint
+[    0.109331] amba 2a004000.etf: Fixed dependency cycle(s) with /funnel@2a007000/out-ports/port/endpoint
+[    0.109463] amba 2a00a000.etr: Fixed dependency cycle(s) with /funnel@2a009000/out-ports/port/endpoint
+[    0.144404] platform 10050000.mct: Fixed dependency cycle(s) with /mct@10050000/mct-map
+[    0.144694] platform 100d0000.mct-v3: Fixed dependency cycle(s) with /mct-v3@100D0000/mct-v3-map
+[    0.159353] platform gs-drm-connector: Fixed dependency cycle(s) with /drmdsim@19440000/ports/port@0/endpoint
+[    0.161041] KASLR enabled
+[    0.207310] iommu: Default domain type: Translated 
+[    0.207322] iommu: DMA domain TLB invalidation policy: strict mode 
+[    0.207912] SCSI subsystem initialized
+[    0.208039] usbcore: registered new interface driver usbfs
+[    0.208066] usbcore: registered new interface driver hub
+[    0.208091] usbcore: registered new device driver usb
+[    0.208247] mc: Linux media interface: v0.10
+[    0.208305] videodev: Linux video capture interface: v2.00
+[    0.208398] pps_core: LinuxPPS API ver. 1 registered
+[    0.208403] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.208416] PTP clock support registered
+[    0.208443] EDAC MC: Ver: 3.0.0
+[    0.209676] Advanced Linux Sound Architecture Driver Initialized.
+[    0.211730] clocksource: Switched to clocksource arch_sys_counter
+[    0.212114] VFS: Disk quotas dquot_6.6.0
+[    0.212155] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.212915] NET: Registered PF_INET protocol family
+[    0.213470] IP idents hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.234319] tcp_listen_portaddr_hash hash table entries: 8192 (order: 5, 131072 bytes, linear)
+[    0.234464] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.234703] TCP established hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.235603] TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)
+[    0.239391] TCP: Hash tables configured (established 131072 bind 65536)
+[    0.239630] UDP hash table entries: 8192 (order: 6, 262144 bytes, linear)
+[    0.239909] UDP-Lite hash table entries: 8192 (order: 6, 262144 bytes, linear)
+[    0.240291] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.240360] NET: Registered PF_XDP protocol family
+[    0.240379] PCI: CLS 0 bytes, default 64
+[    0.301914] hw perfevents: enabled with armv8_pmuv3 PMU driver, 21 counters available
+[    0.303541] hw perfevents: enabled with armv9_cortex_x2 PMU driver, 32 counters available
+[    0.304411] kvm [1]: IPA Size Limit: 40 bits
+[    0.493386] kvm [1]: GICv3: no GICV resource entry
+[    0.493430] kvm [1]: disabling GICv2 emulation
+[    0.493459] kvm [1]: GIC system register CPU interface enabled
+[    0.493770] kvm [1]: vgic interrupt IRQ18
+[    0.494361] kvm [1]: Protected nVHE mode initialized successfully
+[    0.497589] Initialise system trusted keyrings
+[    0.511992] workingset: timestamp_bits=46 max_order=22 bucket_order=0
+[    0.518173] fuse: init (API version 7.37)
+[    0.605734] Key type asymmetric registered
+[    0.605754] Asymmetric key parser 'x509' registered
+[    0.605873] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 238)
+[    0.621914] io scheduler mq-deadline registered
+[    0.621926] io scheduler kyber registered
+[    0.622111] io scheduler bfq registered
+[    0.655594] printk: console [ttynull0] enabled
+[    0.656389] cacheinfo: Unable to detect cache hierarchy for CPU 0
+[    0.660905] brd: module loaded
+[    0.668493] loop: module loaded
+[    0.683163] Freeing initrd memory: 31280K
+[    0.685508] wireguard: WireGuard 1.0.0 loaded. See www.wireguard.com for information.
+[    0.685517] wireguard: Copyright (C) 2015-2019 Jason A. Donenfeld <Jason@zx2c4.com>. All Rights Reserved.
+[    0.685890] MACsec IEEE 802.1AE
+[    0.686467] tun: Universal TUN/TAP device driver, 1.6
+[    0.690590] usbcore: registered new interface driver uas
+[    0.690619] usbcore: registered new interface driver usb-storage
+[    0.690995] usbcore: registered new interface driver xpad
+[    0.691115] gspca_main: v2.14.0 registered
+[    0.691200] usbcore: registered new interface driver uvcvideo
+[    0.692231] device-mapper: uevent: version 1.0.3
+[    0.692420] device-mapper: ioctl: 4.47.0-ioctl (2022-07-28) initialised: dm-devel@redhat.com
+[    0.694047] sdhci: Secure Digital Host Controller Interface driver
+[    0.694057] sdhci: Copyright(c) Pierre Ossman
+[    0.694064] sdhci-pltfm: SDHCI platform and OF driver helper
+[    0.695139] SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ....
+[    0.695192] hid: raw HID events driver (C) Jiri Kosina
+[    0.695882] usbcore: registered new interface driver usbhid
+[    0.695913] usbhid: USB HID core driver
+[    0.696078] ashmem: initialized
+[    0.696970] gnss: GNSS driver registered with major 503
+[    0.699008] usbcore: registered new interface driver snd-usb-audio
+[    0.699546] GACT probability NOT on
+[    0.699577] Mirror/redirect action on
+[    0.699621] netem: version 1.3
+[    0.699693] u32 classifier
+[    0.699697]     input device check on
+[    0.699699]     Actions configured
+[    0.771027] xt_time: kernel timezone is -0000
+[    0.771156] ipip: IPv4 and MPLS over IPv4 tunneling driver
+[    0.771993] gre: GRE over IPv4 demultiplexor driver
+[    0.772003] ip_gre: GRE over IPv4 tunneling driver
+[    0.772679] IPv4 over IPsec tunneling driver
+[    0.773083] Initializing XFRM netlink socket
+[    0.773110] IPsec XFRM device driver
+[    0.773495] NET: Registered PF_INET6 protocol family
+[    0.775517] Segment Routing with IPv6
+[    0.775554] In-situ OAM (IOAM) with IPv6
+[    0.775669] mip6: Mobile IPv6
+[    0.776117] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    0.776636] ip6_gre: GRE over IPv6 tunneling driver
+[    0.776912] NET: Registered PF_PACKET protocol family
+[    0.776928] NET: Registered PF_KEY protocol family
+[    0.777130] NET: Registered PF_VSOCK protocol family
+[    0.779300] wc-mbox 15200000.mbox: probe completed successfully
+[    0.779570] wc-mbox 15220000.mbox: probe completed successfully
+[    0.779710] wc-mbox 15240000.mbox: probe completed successfully
+[    0.782279] loading exynos-pd from /lib/modules/ failed, fallback to the default path
+[    0.782349] kworker/u16:1 (109) used greatest stack depth: 13648 bytes left
+[    0.782457] Failed to load pkvm module exynos-pd: -2
+[    0.782463] kvm [1]: Clearing unused pKVM firmware memory
+[    0.785110] registered taskstats version 1
+[    0.785153] Loading compiled-in X.509 certificates
+[    0.785224] page_owner is disabled
+[    0.785583] Key type .fscrypt registered
+[    0.785587] Key type fscrypt-provisioning registered
+[    0.785810] pstore: Invalid compression size for deflate: 0
+[    0.788288] load_integrated_module: Initializing module "exynos_pmu_if"
+[    0.789861] exynos-pmu-if 15460000.exynos-pmu: exynos_pmu_if probe
+[    0.790252] load_integrated_module: Initializing module "gs_chipid"
+[    0.791789] gs-chipid 10000000.chipid: CPU[ZUMAPRO] CPU_REV[0x1] Detected
+[    0.792239] load_integrated_module: Initializing module "ect_parser"
+[    0.792490] ect_probe: Reserved memory for ect: addr=0x0000000090000000, size=60000
+[    0.792513] exynos-ect exynos-ect: Exynos ect driver probe done!
+[    0.792890] load_integrated_module: Initializing module "gs_acpm"
+[    0.793129] gs-acpm-ipc 15110000.acpm_ipc: acpm_ipc probe
+[    0.794310] [ACPM] acpm framework SRAM dump to dram base: 0x87500000
+[    0.794479] gs-acpm-ipc 15110000.acpm_ipc: acpm_ipc probe done.
+[    0.794808] gs-acpm 15440000.acpm: acpm probe
+[    0.794860] gs-acpm 15440000.acpm: acpm probe done.
+[    0.794998] load_integrated_module: Initializing module "cmupmucal"
+[    0.795240] ECT version: 3020
+[    0.796617] vclk initialize for cmucal
+[    0.801328] cannot found vclk node f
+[    0.801551] zuma_cal_data_init: cal data init
+[    0.803423] cmu_top_base : 0x26040000
+[    0.804298] async_dvfs_enable : Enabling Async DVFS
+[    0.804368] load_integrated_module: Initializing module "pinctrl_exynos_gs"
+[    0.820248] input: gpio_keys as /devices/platform/gpio_keys/input/input0
+[    0.821872] samsung-pinctrl 16140000.pinctrl: irq number not available
+[    0.822250] samsung-pinctrl 16280000.pinctrl: irq number not available
+[    0.822609] samsung-pinctrl 16290000.pinctrl: irq number not available
+[    0.822952] samsung-pinctrl 162a0000.pinctrl: irq number not available
+[    0.823329] samsung-pinctrl 162b0000.pinctrl: irq number not available
+[    0.823963] load_integrated_module: Initializing module "clk_exynos_gs"
+[    0.838336] ZUMA: Clock setup completed
+[    0.839047] load_integrated_module: Initializing module "exynos_mct_v3"
+[    0.840067] exynos-mct: osc-24576000 rtc-32768 incr_rtcclk:0x000002ee compen_val:0x00000000
+[    0.840612] clocksource: mct-frc: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 77769386669 ns
+[    0.841078] load_integrated_module: Initializing module "exynos_cpupm"
+[    0.842825] load_integrated_module: Initializing module "exynos_pm_qos"
+[    0.843224] load_integrated_module: Initializing module "exynos_pd"
+[    0.843491] exynos-pd 15461a80.pd-g3d: on
+[    0.843844] exynos-pd 15461c80.pd-embedded_g3d: on
+[    0.843887] exynos-pd 15461a80.pd-g3d: has new subdomain pd-embedded_g3d
+[    0.844232] exynos-pd 15461d00.pd-dpub: on
+[    0.844439] exynos-pd 15461d80.pd-dpuf0: on
+[    0.844467] exynos-pd 15461d00.pd-dpub: has new subdomain pd-dpuf0
+[    0.844764] exynos-pd 15461e00.pd-dpuf1: on
+[    0.844790] exynos-pd 15461d00.pd-dpub: has new subdomain pd-dpuf1
+[    0.845075] exynos-pd 15461e80.pd-g2d: on
+[    0.845284] exynos-pd 15461f00.pd-gdc: on
+[    0.845487] exynos-pd 15461f80.pd-gse: on
+[    0.845678] exynos-pd 15462000.pd-mcsc: on
+[    0.845869] exynos-pd 15462080.pd-mfc: on
+[    0.846070] exynos-pd 15462100.pd-rgbp: on
+[    0.846260] exynos-pd 15462180.pd-tnr: on
+[    0.846455] exynos-pd 15462200.pd-yuvp: on
+[    0.846657] exynos-pd 15462300.pd-aur: on
+[    0.846846] exynos-pd 15462380.pd-bw: on
+[    0.847029] exynos-pd 15462400.pd-eh: on
+[    0.847213] exynos-pd 15462480.pd-ispfe: on
+[    0.847445] exynos-pd 15462500.pd-tpu: on
+[    0.847636] exynos-pd 15462a80.pd-hsi0: on
+[    0.848043] load_integrated_module: Initializing module "pkvm_s2mpu_v9"
+[    1.074970] pkvm-s2mpu-v9 20a80000.s2mpu_s0_aur: registered with hypervisor [0/27]
+[    1.075628] pkvm-s2mpu-v9 1a670000.s2mpu_s0_bw: registered with hypervisor [1/27]
+[    1.076104] pkvm-s2mpu-v9 29c50000.s2mpu_s0_cpucl0: registered with hypervisor [2/27]
+[    1.076528] pkvm-s2mpu-v9 19870000.s2mpu_s0_dpuf0: registered with hypervisor [3/27]
+[    1.077002] pkvm-s2mpu-v9 19c70000.s2mpu_s0_dpuf1: registered with hypervisor [4/27]
+[    1.077450] pkvm-s2mpu-v9 16c70000.s2mpu_s0_eh: registered with hypervisor [5/27]
+[    1.077974] pkvm-s2mpu-v9 1a8a0000.s2mpu_s0_g2d: registered with hypervisor [6/27]
+[    1.078393] pkvm-s2mpu-v9 1ee70000.s2mpu_s0_g3d: registered with hypervisor [7/27]
+[    1.078915] pkvm-s2mpu-v9 1d4f0000.s2mpu_s0_gdc: registered with hypervisor [8/27]
+[    1.079418] pkvm-s2mpu-v9 1d8a0000.s2mpu_s0_gse: registered with hypervisor [9/27]
+[    1.079890] pkvm-s2mpu-v9 11070000.s2mpu_s0_hsi0: registered with hypervisor [10/27]
+[    1.080352] pkvm-s2mpu-v9 12090000.s2mpu_s0_hsi1: registered with hypervisor [11/27]
+[    1.080981] pkvm-s2mpu-v9 131f0000.s2mpu_s0_hsi2: registered with hypervisor [12/27]
+[    1.081643] pkvm-s2mpu-v9 1c140000.s2mpu_s0_ispfe: registered with hypervisor [13/27]
+[    1.082152] pkvm-s2mpu-v9 1c180000.s2mpu_s1_ispfe: registered with hypervisor [14/27]
+[    1.082609] pkvm-s2mpu-v9 1c1c0000.s2mpu_s2_ispfe: registered with hypervisor [15/27]
+[    1.083094] pkvm-s2mpu-v9 1d0d0000.s2mpu_s0_mcsc: registered with hypervisor [16/27]
+[    1.083571] pkvm-s2mpu-v9 1a4a0000.s2mpu_s0_mfc: registered with hypervisor [17/27]
+[    1.084036] pkvm-s2mpu-v9 101f0000.s2mpu_s0_misc: registered with hypervisor [18/27]
+[    1.084823] pkvm-s2mpu-v9 1c4d0000.s2mpu_s0_rgbp: registered with hypervisor [19/27]
+[    1.085315] pkvm-s2mpu-v9 1c510000.s2mpu_s1_rgbp: registered with hypervisor [20/27]
+[    1.085817] pkvm-s2mpu-v9 1ccb0000.s2mpu_s0_tnr: registered with hypervisor [21/27]
+[    1.086331] pkvm-s2mpu-v9 1ccf0000.s2mpu_s1_tnr: registered with hypervisor [22/27]
+[    1.086845] pkvm-s2mpu-v9 1cd30000.s2mpu_s2_tnr: registered with hypervisor [23/27]
+[    1.087295] pkvm-s2mpu-v9 1a370000.s2mpu_s0_tpu: registered with hypervisor [24/27]
+[    1.087730] pkvm-s2mpu-v9 1c8a0000.s2mpu_s0_yuvp: registered with hypervisor [25/27]
+[    1.088173] pkvm-s2mpu-v9 16470000.s2mpu_s0_gsa: registered with hypervisor [26/27]
+[    1.088187] List of devices successfully finalized for pkvm s2mpu
+[    1.089268] load_integrated_module: Initializing module "at24"
+[    1.089366] load_integrated_module: Initializing module "open_dice"
+[    1.089683] load_integrated_module: Initializing module "sg"
+[    1.089797] load_integrated_module: Initializing module "spidev"
+[    1.089919] load_integrated_module: Initializing module "i2c_dev"
+[    1.089925] i2c_dev: i2c /dev entries driver
+[    1.090007] load_integrated_module: Initializing module "arm_cmn"
+[    1.098493] load_integrated_module: Initializing module "sbb_mux"
+[    1.098546] sbb-mux: Initializing signal [0, '0']...
+[    1.098573] sbb-mux: Initializing signal [1, '1']...
+[    1.098584] sbb-mux: Initializing signal [2, 'kernel_test']...
+[    1.098605] sbb-mux: Initializing signal [3, 'userland_test']...
+[    1.098616] sbb-mux: Initializing signal [4, 'gp_region_0']...
+[    1.098627] sbb-mux: Initializing signal [5, 'gp_region_1']...
+[    1.098640] sbb-mux: Initializing signal [6, 'gp_region_2']...
+[    1.098649] sbb-mux: Initializing signal [7, 'gp_region_3']...
+[    1.098663] sbb-mux: Initializing signal [8, 'k_gp_region_0']...
+[    1.098677] sbb-mux: Initializing signal [9, 'k_gp_region_1']...
+[    1.098691] sbb-mux: Initializing signal [10, 'k_gp_region_2']...
+[    1.098702] sbb-mux: Initializing signal [11, 'k_gp_region_3']...
+[    1.098712] sbb-mux: Initializing signal [12, 'app_misc0']...
+[    1.098728] sbb-mux: Initializing signal [13, 'app_misc1']...
+[    1.098744] sbb-mux: Initializing signal [14, 'app_misc2']...
+[    1.098753] sbb-mux: Initializing signal [15, 'app_misc3']...
+[    1.098766] sbb-mux: Initializing signal [16, 'app_misc4']...
+[    1.098777] sbb-mux: Initializing signal [17, 'app_misc5']...
+[    1.098789] sbb-mux: Initializing signal [18, 'app_misc6']...
+[    1.098799] sbb-mux: Initializing signal [19, 'app_misc7']...
+[    1.098812] sbb-mux: Initializing signal [20, 'app_misc8']...
+[    1.098821] sbb-mux: Initializing signal [21, 'app_misc9']...
+[    1.098831] sbb-mux: Initializing signal [22, 'cam_misc0']...
+[    1.098844] sbb-mux: Initializing signal [23, 'cam_misc1']...
+[    1.098855] sbb-mux: Initializing signal [24, 'cam_misc2']...
+[    1.098867] sbb-mux: Initializing signal [25, 'cam_misc3']...
+[    1.098876] sbb-mux: Initializing signal [26, 'cam_misc4']...
+[    1.098890] sbb-mux: Initializing signal [27, 'cam_misc5']...
+[    1.098901] sbb-mux: Initializing signal [28, 'cam_misc6']...
+[    1.098910] sbb-mux: Initializing signal [29, 'cam_misc7']...
+[    1.098922] sbb-mux: Initializing signal [30, 'cam_misc8']...
+[    1.098931] sbb-mux: Initializing signal [31, 'cam_misc9']...
+[    1.098940] sbb-mux: Initializing signal [32, 'ufs_active_idle']...
+[    1.098954] sbb-mux: Initializing signal [33, 'ufs_power_on']...
+[    1.098963] sbb-mux: Initializing signal [34, 'ufs_io_outstanding']...
+[    1.098975] sbb-mux: Initializing signal [35, 'cp2ap_wake_isr']...
+[    1.098985] sbb-mux: Initializing signal [36, 'pcie_link_state']...
+[    1.099418] sbb-mux: Calling sbb_mux_drv_probe!
+[    1.099463] sbb-mux: Num GPIOs: 3.
+[    1.099524] sbb-mux: GPIO system id: 18.
+[    1.099593] Correctly initialized GPIO tracker #18 for GPIO C1_T0__XAPC_USI2_CTSn_CSn!
+[    1.099633] sbb-mux: GPIO system id: 61.
+[    1.099654] Correctly initialized GPIO tracker #61 for GPIO C1_T1__XAPC_USI9_RTSn_DI!
+[    1.099667] sbb-mux: GPIO system id: 62.
+[    1.099684] Correctly initialized GPIO tracker #62 for GPIO C1_T2__XAPC_USI9_CTSn_CSn!
+[    1.099858] sbb-mux: Registered! :D
+[    1.099907] load_integrated_module: Initializing module "pl330"
+[    1.103952] dma-pl330 10110000.pdma0: Loaded driver for PL330 DMAC-341330
+[    1.103963] dma-pl330 10110000.pdma0: 	DBUFF-32x4bytes Num_Chans-8 Num_Peri-32 Num_Events-32
+[    1.105313] dma-pl330 10130000.pdma1: Loaded driver for PL330 DMAC-341330
+[    1.105322] dma-pl330 10130000.pdma1: 	DBUFF-32x4bytes Num_Chans-8 Num_Peri-32 Num_Events-32
+[    1.105553] load_integrated_module: Initializing module "samsung_dma"
+[    1.105619] load_integrated_module: Initializing module "trusty_core"
+[    1.106269] trusty trusty: trusty version: Project: ripcurrentpro, Build: 11923337, Built: 08:57:20 Jun  4 2024
+[    1.106309] trusty trusty: selected api version: 5 (requested 5)
+[    1.119017] load_integrated_module: Initializing module "trusty_ipc"
+[    1.119180] load_integrated_module: Initializing module "gsa"
+[    1.119496] gsa 16490000.gsa-ns: linked to 16470000.s2mpu_s0_gsa
+[    1.120238] load_integrated_module: Initializing module "keydebug"
+[    1.120357] keydebug_parse_dt: DT:key_down_delay=6000 dbg_fn_delay=2000 keys_down num_keys=2
+[    1.120365] keydebug_parse_dt: DT:keys_down=116
+[    1.120368] keydebug_parse_dt: DT:keys_down=115
+[    1.121004] load_integrated_module: Initializing module "gs_perf_mon"
+[    1.125433] load_integrated_module: Initializing module "exynos_pd_dbg"
+[    1.127874] load_integrated_module: Initializing module "acpm_flexpmu_dbg"
+[    1.128177] ACPM-FLEXPMU-DBG:  exynos_flexpmu_dbg_probe: FLEXPMU_DBG buffer with size 1024 found
+[    1.128390] load_integrated_module: Initializing module "exynos_pm"
+[    1.128659] exynos-pm 154d0000.exynos-pm: can't request region for resource [mem 0x10400204-0x10400303]
+[    1.128676] exynos-pm 154d0000.exynos-pm: drvinit: unable to map gic dist registers, ret=-16
+[    1.129021] load_integrated_module: Initializing module "exynos_dm"
+[    1.129270] exynos-dm 17000000.exynos-dm: This doesn't need to send policy to ACPM
+[    1.129278] exynos-dm 17000000.exynos-dm: This doesn't need to send policy to ACPM
+[    1.129286] exynos-dm 17000000.exynos-dm: This doesn't need to send policy to ACPM
+[    1.129294] exynos-dm 17000000.exynos-dm: This doesn't need to send policy to ACPM
+[    1.129300] exynos-dm 17000000.exynos-dm: This doesn't need to send policy to ACPM
+[    1.129305] exynos-dm 17000000.exynos-dm: This doesn't need to send policy to ACPM
+[    1.129310] exynos-dm 17000000.exynos-dm: This doesn't need to send policy to ACPM
+[    1.129315] exynos-dm 17000000.exynos-dm: This doesn't need to send policy to ACPM
+[    1.129319] exynos-dm 17000000.exynos-dm: This doesn't need to send policy to ACPM
+[    1.129324] exynos-dm 17000000.exynos-dm: This doesn't need to send policy to ACPM
+[    1.129329] exynos-dm 17000000.exynos-dm: This doesn't need to send policy to ACPM
+[    1.129334] exynos-dm 17000000.exynos-dm: This doesn't need to send policy to ACPM
+[    1.129338] exynos-dm 17000000.exynos-dm: dm_type: 0(dm_cpu_cl0), available = true
+[    1.129345] exynos-dm 17000000.exynos-dm: dm_type: 1(dm_cpu_cl1), available = true
+[    1.129350] exynos-dm 17000000.exynos-dm: dm_type: 2(dm_cpu_cl2), available = true
+[    1.129354] exynos-dm 17000000.exynos-dm: dm_type: 3(dm_mif), available = true
+[    1.129359] exynos-dm 17000000.exynos-dm: dm_type: 4(dm_int), available = true
+[    1.129363] exynos-dm 17000000.exynos-dm: dm_type: 5(dm_intcam), available = true
+[    1.129367] exynos-dm 17000000.exynos-dm: dm_type: 6(dm_cam), available = true
+[    1.129371] exynos-dm 17000000.exynos-dm: dm_type: 7(dm_tpu), available = true
+[    1.129376] exynos-dm 17000000.exynos-dm: dm_type: 8(dm_tnr), available = true
+[    1.129380] exynos-dm 17000000.exynos-dm: dm_type: 9(dm_disp), available = true
+[    1.129384] exynos-dm 17000000.exynos-dm: dm_type: 10(dm_mfc), available = true
+[    1.129389] exynos-dm 17000000.exynos-dm: dm_type: 11(dm_bw), available = true
+[    1.129393] exynos-dm 17000000.exynos-dm: dm_type: 12(dm_dsu), available = true
+[    1.129397] exynos-dm 17000000.exynos-dm: dm_type: 13(dm_bci), available = true
+[    1.129599] load_integrated_module: Initializing module "slc_pt"
+[    1.130313] load_integrated_module: Initializing module "slc_dummy"
+[    1.130747] load_integrated_module: Initializing module "slc_pmon"
+[    1.130801] load_integrated_module: Initializing module "slc_acpm"
+[    1.131034] google,slc-acpm slc-acpm: channel 10
+[    1.131149] google,slc-acpm slc-acpm: found valid acpm firmware 1.8.
+[    1.131163] google,slc-acpm slc-acpm: Asynchronous notification enabled
+[    1.131328] slc-pmon: Error when fetching number of events (0).
+[    1.131470] load_integrated_module: Initializing module "gsa_gsc"
+[    1.132643] gsa-gsc 16490000.gsa-ns:gsa_gsc@0: Initiliazed
+[    1.132844] load_integrated_module: Initializing module "s3c2410_wdt"
+[    1.133630] s3c2410-wdt 10060000.watchdog_cl0: watchdog cluster0 probe
+[    1.133645] s3c2410-wdt 10060000.watchdog_cl0: It is not a multistage watchdog.
+[    1.133919] s3c2410-wdt 10060000.watchdog_cl0: NONCPU_INT_EN reg val: 32c
+[    1.133975] s3c2410-wdt 10060000.watchdog_cl0: probe: mapped reg_base=00000000f3c186f7
+[    1.134251] s3c2410-wdt 10060000.watchdog_cl0: Watchdog cluster 0 stop done, WTCON = 15718
+[    1.134322] s3c2410-wdt 10060000.watchdog_cl0: NONCPU_OUT set true done, val = 33fff10, en= 1
+[    1.134340] s3c2410-wdt 10060000.watchdog_cl0: NONCPU_INT_EN set true done, val = 32c, mask = 0
+[    1.134395] s3c2410-wdt 10060000.watchdog_cl0: Watchdog cluster 0 stop done, WTCON = 15718
+[    1.134423] (NULL device *): Add wdt start, wdt expire, wdt stop functions from s3c2410wdt_probe+0x8b4/0x9d8
+[    1.134469] s3c2410-wdt 10060000.watchdog_cl0: watchdog cluster 0, inactive, reset disabled, irq disabled
+[    1.134480] s3c2410-wdt 10060000.watchdog_cl0: DBGACK enabled
+[    1.134491] s3c2410-wdt 10060000.watchdog_cl0: windowed watchdog disabled, wtmincnt=1ff5e
+[    1.134500] Multistage watchdog disabled
+[    1.134791] s3c2410-wdt 10070000.watchdog_cl1: watchdog cluster1 probe
+[    1.134810] s3c2410-wdt 10070000.watchdog_cl1: NONCPU_INT_EN reg val: 1
+[    1.134852] s3c2410-wdt 10070000.watchdog_cl1: probe: mapped reg_base=000000006c6969b9
+[    1.134914] s3c2410-wdt 10070000.watchdog_cl1: Watchdog cluster 1 stop done, WTCON = 15700
+[    1.134929] s3c2410-wdt 10070000.watchdog_cl1: NONCPU_OUT set true done, val = 2010, en= 1
+[    1.134941] s3c2410-wdt 10070000.watchdog_cl1: Watchdog cluster 1 stop done, WTCON = 15700
+[    1.134951] s3c2410-wdt 10070000.watchdog_cl1: watchdog cluster 1, inactive, reset disabled, irq disabled
+[    1.134958] s3c2410-wdt 10070000.watchdog_cl1: DBGACK enabled
+[    1.134964] s3c2410-wdt 10070000.watchdog_cl1: windowed watchdog disabled, wtmincnt=1ff5e
+[    1.134969] Multistage watchdog enabled
+[    1.135413] load_integrated_module: Initializing module "pmic_class"
+[    1.135483] load_integrated_module: Initializing module "s2mpg15_mfd"
+[    1.135554] load_integrated_module: Initializing module "s2mpg14_mfd"
+[    1.135612] load_integrated_module: Initializing module "s2mpg14_regulator"
+[    1.135784] load_integrated_module: Initializing module "s2mpg14_powermeter"
+[    1.135932] load_integrated_module: Initializing module "s2mpg15_regulator"
+[    1.136082] load_integrated_module: Initializing module "s2mpg15_powermeter"
+[    1.136229] load_integrated_module: Initializing module "slg51002_regulator"
+[    1.136368] load_integrated_module: Initializing module "exynos_tty"
+[    1.136796] exynos-uart 155d0000.serial: set usi mode - 0x1
+[    1.136873] exynos-uart 155d0000.serial: error -ENXIO: IRQ index 1 not found
+[    1.136888] exynos-uart 155d0000.serial: No explicit src-clk. Use default src-clk
+[    1.136958] 155d0000.serial: ttySAC18 at MMIO 0x155d0000 (irq = 151, base_baud = 0) is a S3C6400/10
+[    1.137486] ------------[ cut here ]------------
+[    1.137494] WARNING: CPU: 0 PID: 1 at mm/vmalloc.c:3161 __vmalloc_node_range+0x78c/0x808
+[    1.137537] CPU: 0 PID: 1 Comm: swapper/0 Tainted: G S                 6.1.75-g7910ee17f109 #1
+[    1.137547] Hardware name: ZUMA PRO CAIMAN MP board based on ZUMA PRO (DT)
+[    1.137560] pstate: 40400005 (nZcv daif +PAN -UAO -TCO -DIT -SSBS BTYPE=--)
+[    1.137568] pc : __vmalloc_node_range+0x78c/0x808
+[    1.137575] lr : vzalloc+0x68/0x80
+[    1.137582] sp : ffffffc00805b850
+[    1.137584] x29: ffffffc00805b900 x28: 0000000000000000 x27: 0000000000003840
+[    1.137606] x26: 00000000000c8000 x25: 0000000000000012 x24: ffffffd5671a9f98
+[    1.137615] x23: 0000000000000012 x22: ffffffd567318ad0 x21: ffffff80055d3810
+[    1.137627] x20: ffffffc00805ba0e x19: ffffff8005b19a00 x18: ffffffc0080510a8
+[    1.137636] x17: 61625f6573616220 x16: 0000000000000100 x15: 0000000000000000
+[    1.137646] x14: 0000000000000020 x13: ffffffc00805ba11 x12: ffffffffffffffff
+[    1.137657] x11: ffffffc00805b830 x10: ffffffc00805ba14 x9 : 0000000000000000
+[    1.137666] x8 : ffffffd56447df6c x7 : 00000000ffffffff x6 : 0000000000000000
+[    1.137675] x5 : 0068000000000703 x4 : 0000000000000dc0 x3 : fffffffdf0000000
+[    1.137688] x2 : ffffffc008000000 x1 : 0000000000000001 x0 : 0000000000000000
+[    1.137701] Call trace:
+[    1.137705]  __vmalloc_node_range+0x78c/0x808
+[    1.137712]  vzalloc+0x68/0x80
+[    1.137719]  logbuffer_register+0x4c/0x160
+[    1.137741]  exynos_serial_probe+0x894/0xd84
+[    1.137760]  platform_probe+0x6c/0xe4
+[    1.137782]  really_probe+0xc0/0x2f4
+[    1.137792]  __driver_probe_device+0x7c/0x120
+[    1.137797]  driver_probe_device+0x40/0x120
+[    1.137805]  __driver_attach+0xf8/0x1a0
+[    1.137811]  bus_for_each_dev+0x7c/0xdc
+[    1.137818]  driver_attach+0x28/0x3c
+[    1.137824]  bus_add_driver+0x158/0x21c
+[    1.137829]  driver_register+0x78/0x13c
+[    1.137837]  __platform_driver_register+0x2c/0x3c
+[    1.137846]  exynos_serial_modinit+0x58/0x74
+[    1.137865]  do_one_initcall+0x5c/0x2e0
+[    1.137882]  load_integrated_module+0x1c0/0x1e0
+[    1.137905]  load_integrated_modules+0x44/0x68
+[    1.137925]  do_one_initcall+0x5c/0x2e0
+[    1.137930]  kernel_init_freeable+0x26c/0x2dc
+[    1.137944]  kernel_init+0x28/0x140
+[    1.137955]  ret_from_fork+0x10/0x20
+[    1.137962] ---[ end trace 0000000000000000 ]---
+[    1.137977] exynos-uart 155d0000.serial: probe: logbuffer get failed
+[    1.138274] exynos-uart 10870000.uart: usi offset is not specified
+[    1.138281] exynos-uart 10870000.uart: no lookup for usi-phandle.
+[    1.138341] exynos-uart 10870000.uart: error -ENXIO: IRQ index 1 not found
+[    1.138348] exynos-uart 10870000.uart: No explicit src-clk. Use default src-clk
+[    1.138371] 10870000.uart: ttySAC0 at MMIO 0x10870000 (irq = 152, base_baud = 0) is a S3C6400/10
+[    1.138765] load_integrated_module: Initializing module "samsung_iommu_group"
+[    1.141903] load_integrated_module: Initializing module "samsung_secure_iova"
+[    1.141983] load_integrated_module: Initializing module "iovad_best_fit_algo"
+[    1.142054] load_integrated_module: Initializing module "samsung_iommu_v9"
+[    1.143907] samsung-sysmmu-v9 1a640000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.145478] samsung-sysmmu-v9 1a870000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.146923] samsung-sysmmu-v9 19840000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.148349] samsung-sysmmu-v9 19c40000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.149853] samsung-sysmmu-v9 1c110000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.151300] samsung-sysmmu-v9 1c150000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.152958] samsung-sysmmu-v9 1c190000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.154463] samsung-sysmmu-v9 1d870000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.155870] samsung-sysmmu-v9 1a340000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.157358] samsung-sysmmu-v9 1c870000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.158884] samsung-sysmmu-v9 1cc80000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.160417] samsung-sysmmu-v9 1ccc0000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.161912] samsung-sysmmu-v9 1cd00000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.163543] samsung-sysmmu-v9 1c4a0000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.165448] samsung-sysmmu-v9 1c4e0000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.167794] samsung-sysmmu-v9 101c0000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.169907] samsung-sysmmu-v9 1a470000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.172025] samsung-sysmmu-v9 1d0a0000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.172806] samsung-sysmmu-v9 11040000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.173625] samsung-sysmmu-v9 16440000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.175754] samsung-sysmmu-v9 1d4c0000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.176530] samsung-sysmmu-v9 16c40000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.178903] samsung-sysmmu-v9 20a50000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.179682] samsung-sysmmu-v9 19090000.sysmmu: initialized IOMMU. Ver 9.0.0, no gate clock
+[    1.180075] load_integrated_module: Initializing module "bts"
+[    1.180473] exynos-bts exynos-bts: failed to get address_to_resource
+[    1.180482] exynos-bts exynos-bts: failed to get address_to_resource
+[    1.180490] exynos-bts exynos-bts: failed to get address_to_resource
+[    1.180497] exynos-bts exynos-bts: failed to get address_to_resource
+[    1.183220] bts_probe successfully done.
+[    1.183565] load_integrated_module: Initializing module "exynos_devfreq"
+[    1.184432] gs101-devfreq 17000010.devfreq_mif: MIF clock info exist
+[    1.186174] gs101-devfreq 17000010.devfreq_mif: failed to update frequency from PM QoS (-517)
+[    1.186187] gs101-devfreq 17000010.devfreq_mif: failed to update frequency from PM QoS (-517)
+[    1.186359] gs101-devfreq 17000010.devfreq_mif: MIF cdev is initialized!!
+[    1.186370] gs101-devfreq 17000010.devfreq_mif: devfreq is initialized!!
+[    1.186590] gs101-devfreq 17000020.devfreq_int: Not registered UM monitor data
+[    1.186596] gs101-devfreq 17000020.devfreq_int: ALT-DVFS is not declared by device tree.
+[    1.187453] gs101-devfreq 17000020.devfreq_int: failed to update frequency from PM QoS (-517)
+[    1.187464] gs101-devfreq 17000020.devfreq_int: failed to update frequency from PM QoS (-517)
+[    1.187589] gs101-devfreq 17000020.devfreq_int: INT cdev is initialized!!
+[    1.187594] gs101-devfreq 17000020.devfreq_int: devfreq is initialized!!
+[    1.187804] gs101-devfreq 17000030.devfreq_intcam: Not registered UM monitor data
+[    1.187812] gs101-devfreq 17000030.devfreq_intcam: ALT-DVFS is not declared by device tree.
+[    1.188290] gs101-devfreq 17000030.devfreq_intcam: DT min freq is lower than ECT min freq!
+[    1.188294] gs101-devfreq 17000030.devfreq_intcam: Nudged 67000 KHz to the lower 111000 KHz freq.
+[    1.188550] gs101-devfreq 17000030.devfreq_intcam: failed to update frequency from PM QoS (-517)
+[    1.188557] gs101-devfreq 17000030.devfreq_intcam: failed to update frequency from PM QoS (-517)
+[    1.188628] gs101-devfreq 17000030.devfreq_intcam: INTCAM cdev is initialized!!
+[    1.188634] gs101-devfreq 17000030.devfreq_intcam: devfreq is initialized!!
+[    1.188851] gs101-devfreq 17000040.devfreq_disp: Not registered UM monitor data
+[    1.188856] gs101-devfreq 17000040.devfreq_disp: ALT-DVFS is not declared by device tree.
+[    1.189678] gs101-devfreq 17000040.devfreq_disp: failed to update frequency from PM QoS (-517)
+[    1.189687] gs101-devfreq 17000040.devfreq_disp: failed to update frequency from PM QoS (-517)
+[    1.190022] gs101-devfreq 17000040.devfreq_disp: DISP cdev is initialized!!
+[    1.190027] gs101-devfreq 17000040.devfreq_disp: devfreq is initialized!!
+[    1.190242] gs101-devfreq 17000050.devfreq_cam: Not registered UM monitor data
+[    1.190247] gs101-devfreq 17000050.devfreq_cam: ALT-DVFS is not declared by device tree.
+[    1.190704] gs101-devfreq 17000050.devfreq_cam: DT min freq is lower than ECT min freq!
+[    1.190709] gs101-devfreq 17000050.devfreq_cam: Nudged 67000 KHz to the lower 111000 KHz freq.
+[    1.190996] gs101-devfreq 17000050.devfreq_cam: failed to update frequency from PM QoS (-517)
+[    1.191005] gs101-devfreq 17000050.devfreq_cam: failed to update frequency from PM QoS (-517)
+[    1.191075] gs101-devfreq 17000050.devfreq_cam: CAM cdev is initialized!!
+[    1.191082] gs101-devfreq 17000050.devfreq_cam: devfreq is initialized!!
+[    1.191290] gs101-devfreq 17000060.devfreq_tnr: Not registered UM monitor data
+[    1.191295] gs101-devfreq 17000060.devfreq_tnr: ALT-DVFS is not declared by device tree.
+[    1.191764] gs101-devfreq 17000060.devfreq_tnr: DT min freq is lower than ECT min freq!
+[    1.191768] gs101-devfreq 17000060.devfreq_tnr: Nudged 67000 KHz to the lower 111000 KHz freq.
+[    1.192014] gs101-devfreq 17000060.devfreq_tnr: failed to update frequency from PM QoS (-517)
+[    1.192022] gs101-devfreq 17000060.devfreq_tnr: failed to update frequency from PM QoS (-517)
+[    1.192098] gs101-devfreq 17000060.devfreq_tnr: TNR cdev is initialized!!
+[    1.192106] gs101-devfreq 17000060.devfreq_tnr: devfreq is initialized!!
+[    1.192331] gs101-devfreq 17000070.devfreq_mfc: Not registered UM monitor data
+[    1.192338] gs101-devfreq 17000070.devfreq_mfc: ALT-DVFS is not declared by device tree.
+[    1.193117] gs101-devfreq 17000070.devfreq_mfc: failed to update frequency from PM QoS (-517)
+[    1.193128] gs101-devfreq 17000070.devfreq_mfc: failed to update frequency from PM QoS (-517)
+[    1.193201] gs101-devfreq 17000070.devfreq_mfc: MFC cdev is initialized!!
+[    1.193207] gs101-devfreq 17000070.devfreq_mfc: devfreq is initialized!!
+[    1.193421] gs101-devfreq 17000080.devfreq_bw: Not registered UM monitor data
+[    1.193427] gs101-devfreq 17000080.devfreq_bw: ALT-DVFS is not declared by device tree.
+[    1.194110] gs101-devfreq 17000080.devfreq_bw: failed to update frequency from PM QoS (-517)
+[    1.194119] gs101-devfreq 17000080.devfreq_bw: failed to update frequency from PM QoS (-517)
+[    1.194188] gs101-devfreq 17000080.devfreq_bw: BW cdev is initialized!!
+[    1.194193] gs101-devfreq 17000080.devfreq_bw: devfreq is initialized!!
+[    1.194412] gs101-devfreq 17000090.devfreq_dsu: Not registered UM monitor data
+[    1.194416] gs101-devfreq 17000090.devfreq_dsu: ALT-DVFS is not declared by device tree.
+[    1.195536] gs101-devfreq 17000090.devfreq_dsu: DT max freq is higher than ECT max freq!
+[    1.195806] gs101-devfreq 17000090.devfreq_dsu: failed to update frequency from PM QoS (-517)
+[    1.195817] gs101-devfreq 17000090.devfreq_dsu: failed to update frequency from PM QoS (-517)
+[    1.195904] gs101-devfreq 17000090.devfreq_dsu: DSU cdev is initialized!!
+[    1.195911] gs101-devfreq 17000090.devfreq_dsu: devfreq is initialized!!
+[    1.196126] gs101-devfreq 170000a0.devfreq_bci: Not registered UM monitor data
+[    1.196132] gs101-devfreq 170000a0.devfreq_bci: ALT-DVFS is not declared by device tree.
+[    1.197386] gs101-devfreq 170000a0.devfreq_bci: failed to update frequency from PM QoS (-517)
+[    1.197396] gs101-devfreq 170000a0.devfreq_bci: failed to update frequency from PM QoS (-517)
+[    1.197487] gs101-devfreq 170000a0.devfreq_bci: BCI cdev is initialized!!
+[    1.197493] gs101-devfreq 170000a0.devfreq_bci: devfreq is initialized!!
+[    1.197772] load_integrated_module: Initializing module "s5910"
+[    1.197849] load_integrated_module: Initializing module "s2mpg1415_gpio"
+[    1.198182] load_integrated_module: Initializing module "slg51002_core"
+[    1.198261] load_integrated_module: Initializing module "samsung_dma_heap"
+[    1.198680] samsung,dma-heap-chunk trusty:video_stream_dma_heap: assigned reserved memory node vstream
+[    1.198791] Registered vstream-secure dma-heap successfully
+[    1.198841] samsung,dma-heap-chunk trusty:video_frame_dma_heap: assigned reserved memory node vframe
+[    1.198881] Registered vframe-secure dma-heap successfully
+[    1.198924] samsung,dma-heap-chunk trusty:video_scaler_dma_heap: assigned reserved memory node vscaler
+[    1.198970] Registered vscaler-secure dma-heap successfully
+[    1.199304] samsung,dma-heap-cma trusty:faceauth_preview_heap: assigned reserved memory node faprev
+[    1.199346] Registered faprev-secure dma-heap successfully
+[    1.199703] Registered mfc_fw-secure dma-heap successfully
+[    1.200568] gcma: Reserved memory: created GCMA memory pool at 0x00000009d7100000, size 75 MiB for famodel
+[    1.200653] Registered famodel-secure dma-heap successfully
+[    1.201100] gcma: Reserved memory: created GCMA memory pool at 0x00000000fe800000, size 24 MiB for tui
+[    1.201166] Registered tui-secure dma-heap successfully
+[    1.201524] gcma: Reserved memory: created GCMA memory pool at 0x00000009d4400000, size 32 MiB for faceauth_dsp
+[    1.201588] Registered faceauth_dsp-secure dma-heap successfully
+[    1.201840] gcma: Reserved memory: created GCMA memory pool at 0x00000009ff000000, size 16 MiB for faceauth_tpu
+[    1.201886] Registered faceauth_tpu-secure dma-heap successfully
+[    1.203422] gcma: Reserved memory: created GCMA memory pool at 0x00000009c9800000, size 172 MiB for farawimg
+[    1.203504] Registered farawimg-secure dma-heap successfully
+[    1.203810] Registered system dma-heap successfully
+[    1.203839] Registered system-uncached dma-heap successfully
+[    1.203915] Registered video_system dma-heap successfully
+[    1.203952] Registered video_system-uncached dma-heap successfully
+[    1.204409] load_integrated_module: Initializing module "ufs_exynos_gs"
+[    1.205040] exynos-ufs 13200000.ufs: exynos_ufs_probe: start
+[    1.205046] exynos-ufs 13200000.ufs: ===============================
+[    1.205096] exynos-ufs 13200000.ufs: reg_hci    00000000d92b3fa5
+[    1.205119] exynos-ufs 13200000.ufs: reg_unipro 00000000eb359dfa
+[    1.205130] exynos-ufs 13200000.ufs: reg_ufsp   00000000a97d18e8
+[    1.205144] exynos-ufs 13200000.ufs: reg_phy    0000000064ae930d
+[    1.205154] exynos-ufs 13200000.ufs: reg_cport  000000009f04dba6
+[    1.205159] exynos-ufs 13200000.ufs: 
+[    1.205510] exynos-ufs 13200000.ufs: ufs-iocc: offset 0x710, mask 0x3, value 0x3
+[    1.205530] exynos-ufs 13200000.ufs: evt version : 0, board: 1
+[    1.205548] exynos-ufs 13200000.ufs: ===============================
+[    1.205573] exynos-ufs 13200000.ufs: exynos_ufs_init_dbg:
+[    1.205579] exynos-ufs 13200000.ufs: UNIP_COMP_AXI_AUX_FIELD = 0x00000040
+[    1.205586] exynos-ufs 13200000.ufs: __WSTRB = 0x0f000000
+[    1.212204] exynos-ufs 13200000.ufs: ufshcd_populate_vreg: Unable to find vdd-hba-supply regulator, assuming enabled
+[    1.212388] exynos-ufs 13200000.ufs: ufshcd_populate_vreg: unable to find vcc-max-microamp
+[    1.212396] exynos-ufs 13200000.ufs: ufshcd_populate_vreg: Unable to find vccq-supply regulator, assuming enabled
+[    1.212401] exynos-ufs 13200000.ufs: ufshcd_populate_vreg: Unable to find vccq2-supply regulator, assuming enabled
+[    1.216789] exynos-ufs 13200000.ufs: configured KDN with MKE=1, DT=0, KE=0
+[    1.216887] exynos-ufs 13200000.ufs: enabled inline encryption support with wrapped keys
+[    1.218762] scsi host0: ufshcd
+[    1.219350] exynos-ufs 13200000.ufs: kdn: evicting keyslot 0
+[    1.220553] exynos-ufs 13200000.ufs: kdn: evicting keyslot 1
+[    1.221560] exynos-ufs 13200000.ufs: kdn: evicting keyslot 2
+[    1.222596] exynos-ufs 13200000.ufs: kdn: evicting keyslot 3
+[    1.223609] exynos-ufs 13200000.ufs: kdn: evicting keyslot 4
+[    1.224611] exynos-ufs 13200000.ufs: kdn: evicting keyslot 5
+[    1.225602] exynos-ufs 13200000.ufs: kdn: evicting keyslot 6
+[    1.226611] exynos-ufs 13200000.ufs: kdn: evicting keyslot 7
+[    1.227599] exynos-ufs 13200000.ufs: kdn: evicting keyslot 8
+[    1.228601] exynos-ufs 13200000.ufs: kdn: evicting keyslot 9
+[    1.229603] exynos-ufs 13200000.ufs: kdn: evicting keyslot 10
+[    1.230597] exynos-ufs 13200000.ufs: kdn: evicting keyslot 11
+[    1.231606] exynos-ufs 13200000.ufs: kdn: evicting keyslot 12
+[    1.232834] exynos-ufs 13200000.ufs: kdn: evicting keyslot 13
+[    1.233786] exynos-ufs 13200000.ufs: kdn: evicting keyslot 14
+[    1.234791] exynos-ufs 13200000.ufs: mclk: 178000000
+[    1.234837] exynos-ufs 13200000.ufs: kdn: restoring keys
+[    1.240688] load_integrated_module: Initializing module "spi_s3c64xx"
+[    1.241172] s3c64xx-spi 10ce0000.spi: spi bus clock parent not specified, using clock at index 0 as parent
+[    1.241184] s3c64xx-spi 10ce0000.spi: number of chip select lines not specified, assuming 1 chip select line
+[    1.241331] s3c64xx-spi 10ce0000.spi: set usi mode - 0x2
+[    1.241512] s3c64xx-spi 10ce0000.spi: Not using idle state
+[    1.241517] s3c64xx-spi 10ce0000.spi: spi clkoff-time is empty(Default: 0ms)
+[    1.241524] s3c64xx-spi 10ce0000.spi: PORT 15 fifo_lvl_mask = 0x7f
+[    1.241783] ese@0 enforce active low on chipselect handle
+[    1.243615] s3c64xx-spi 111b0000.spi: spi bus clock parent not specified, using clock at index 0 as parent
+[    1.243621] s3c64xx-spi 111b0000.spi: number of chip select lines not specified, assuming 1 chip select line
+[    1.243828] s3c64xx-spi 111b0000.spi: set usi mode - 0x2
+[    1.243959] s3c64xx-spi 111b0000.spi: Couldn't get pinctrl.
+[    1.243965] s3c64xx-spi 111b0000.spi: spi clkoff-time is empty(Default: 0ms)
+[    1.243969] s3c64xx-spi 111b0000.spi: PORT 18 fifo_lvl_mask = 0x7f
+[    1.245456] s3c64xx-spi 111c0000.spi: spi bus clock parent not specified, using clock at index 0 as parent
+[    1.245473] s3c64xx-spi 111c0000.spi: set usi mode - 0x2
+[    1.245588] s3c64xx-spi 111c0000.spi: Not using idle state
+[    1.245592] s3c64xx-spi 111c0000.spi: spi clkoff-time is empty(Default: 0ms)
+[    1.245599] s3c64xx-spi 111c0000.spi: PORT 19 fifo_lvl_mask = 0x7f
+[    1.247612] s3c64xx-spi 111d0000.spi: spi bus clock parent not specified, using clock at index 0 as parent
+[    1.247623] s3c64xx-spi 111d0000.spi: number of chip select lines not specified, assuming 1 chip select line
+[    1.247639] s3c64xx-spi 111d0000.spi: set usi mode - 0x2
+[    1.247771] s3c64xx-spi 111d0000.spi: Default state not defined
+[    1.247777] s3c64xx-spi 111d0000.spi: Not using idle state
+[    1.247783] s3c64xx-spi 111d0000.spi: spi clkoff-time is empty(Default: 0ms)
+[    1.247789] s3c64xx-spi 111d0000.spi: PORT 20 fifo_lvl_mask = 0x7f
+[    1.248977] s3c64xx-spi 111e0000.spi: spi bus clock parent not specified, using clock at index 0 as parent
+[    1.248985] s3c64xx-spi 111e0000.spi: number of chip select lines not specified, assuming 1 chip select line
+[    1.249002] s3c64xx-spi 111e0000.spi: set usi mode - 0x2
+[    1.249107] s3c64xx-spi 111e0000.spi: Couldn't get pinctrl.
+[    1.249113] s3c64xx-spi 111e0000.spi: spi clkoff-time is empty(Default: 0ms)
+[    1.249120] s3c64xx-spi 111e0000.spi: PORT 21 fifo_lvl_mask = 0x7f
+[    1.249881] s3c64xx-spi 111f0000.spi: spi bus clock parent not specified, using clock at index 0 as parent
+[    1.249888] s3c64xx-spi 111f0000.spi: number of chip select lines not specified, assuming 1 chip select line
+[    1.249905] s3c64xx-spi 111f0000.spi: set usi mode - 0x2
+[    1.250019] s3c64xx-spi 111f0000.spi: Couldn't get pinctrl.
+[    1.250030] s3c64xx-spi 111f0000.spi: spi clkoff-time is empty(Default: 0ms)
+[    1.250037] s3c64xx-spi 111f0000.spi: PORT 22 fifo_lvl_mask = 0x7f
+[    1.251205] load_integrated_module: Initializing module "spmi_bit_bang"
+[    1.251848] s5910_spmi_driver 0-05: off: 0 0 0x215 0xf
+[    1.251856] s5910_spmi_driver 0-05: off: 1 1000 0x20e 0x4
+[    1.251863] s5910_spmi_driver 0-05: off: 2 0 0x240 0x10
+[    1.251868] s5910_spmi_driver 0-05: on: 0 0 0x211 0x47
+[    1.251874] s5910_spmi_driver 0-05: on: 1 0 0x236 0xe
+[    1.251879] s5910_spmi_driver 0-05: on: 2 0 0x215 0x7f
+[    1.251885] s5910_spmi_driver 0-05: on: 3 0 0x20e 0x0
+[    1.252104] load_integrated_module: Initializing module "gvotable"
+[    1.252162] load_integrated_module: Initializing module "s2mpg14_key"
+[    1.252535] load_integrated_module: Initializing module "keycombo"
+[    1.252843] load_integrated_module: Initializing module "rtc_s2mpg14"
+[    1.253017] load_integrated_module: Initializing module "i2c_exynos5"
+[    1.253496] exynos5-hsi2c 10880000.hsi2c: set usi mode - 0x4
+[    1.253531] exynos5-hsi2c 10880000.hsi2c: Trailing count: 0xffffff
+[    1.253708] exynos5-hsi2c 10880000.hsi2c: exynos5_i2c_set_timing IPCLK = 200000000 OP_CLK = 950000 DIV = 12 FSCK = 961538 TIMING FS1(FS+) = 0x1E0FF00 TIMING FS2(FS+) = 0x30003E0 TIMING FS3(FS+) = 0xC0000
+[    1.254274] exynos5-hsi2c 10890000.hsi2c: set usi mode - 0x4
+[    1.254289] exynos5-hsi2c 10890000.hsi2c: Trailing count: 0xffffff
+[    1.254383] exynos5-hsi2c 10890000.hsi2c: exynos5_i2c_set_timing IPCLK = 200000000 OP_CLK = 950000 DIV = 12 FSCK = 961538 TIMING FS1(FS+) = 0x1E0FF00 TIMING FS2(FS+) = 0x30003E0 TIMING FS3(FS+) = 0xC0000
+[    1.254826] exynos5-hsi2c 108a0000.hsi2c: set usi mode - 0x4
+[    1.254841] exynos5-hsi2c 108a0000.hsi2c: Trailing count: 0xffffff
+[    1.254937] exynos5-hsi2c 108a0000.hsi2c: exynos5_i2c_set_timing IPCLK = 200000000 OP_CLK = 950000 DIV = 12 FSCK = 961538 TIMING FS1(FS+) = 0x1E0FF00 TIMING FS2(FS+) = 0x30003E0 TIMING FS3(FS+) = 0xC0000
+[    1.255365] exynos5-hsi2c 108b0000.hsi2c: set usi mode - 0x4
+[    1.255380] exynos5-hsi2c 108b0000.hsi2c: Trailing count: 0xffffff
+[    1.255465] exynos5-hsi2c 108b0000.hsi2c: exynos5_i2c_set_timing IPCLK = 200000000 OP_CLK = 390000 DIV = 32 FSCL = 378787 Timing FS1 = 0x1F0FF00 TIMING FS2 = 0x30003E0 TIMING FS3 = 0x200000
+[    1.255589] exynos-ufs 13200000.ufs: PA_ActiveTxDataLanes(2), PA_ActiveRxDataLanes(2)
+[    1.255596] exynos-ufs 13200000.ufs: max_gear(4), PA_MaxRxHSGear(4)
+[    1.255622] exynos-ufs 13200000.ufs: UFS link start-up passes
+[    1.257391] exynos5-hsi2c 108c0000.hsi2c: set usi mode - 0x4
+[    1.257408] exynos5-hsi2c 108c0000.hsi2c: Trailing count: 0x20000
+[    1.257492] exynos5-hsi2c 108c0000.hsi2c: exynos5_i2c_set_timing IPCLK = 200000000 OP_CLK = 950000 DIV = 12 FSCK = 961538 TIMING FS1(FS+) = 0x1E0FF00 TIMING FS2(FS+) = 0x30003E0 TIMING FS3(FS+) = 0xC0000
+[    1.258059] exynos5-hsi2c 108d0000.hsi2c: set usi mode - 0x4
+[    1.258073] exynos5-hsi2c 108d0000.hsi2c: Trailing count: 0xffffff
+[    1.258180] exynos5-hsi2c 108d0000.hsi2c: exynos5_i2c_set_timing IPCLK = 200000000 OP_CLK = 950000 DIV = 12 FSCK = 961538 TIMING FS1(FS+) = 0x1E0FF00 TIMING FS2(FS+) = 0x30003E0 TIMING FS3(FS+) = 0xC0000
+[    1.259037] i2c 6-0025: Fixed dependency cycle(s) with /hsi2c@108D0000/max77759tcpc@25/connector/ports/port@1/endpoint
+[    1.259094] i2c 6-0025: Fixed dependency cycle(s) with /hsi2c@108D0000/max77759tcpc@25/connector/ports/port@0/endpoint
+[    1.259744] exynos5-hsi2c 10c90000.hsi2c: set usi mode - 0x4
+[    1.259759] exynos5-hsi2c 10c90000.hsi2c: Trailing count: 0xffffff
+[    1.259903] exynos5-hsi2c 10c90000.hsi2c: exynos5_i2c_set_timing IPCLK = 200000000 OP_CLK = 950000 DIV = 12 FSCK = 961538 TIMING FS1(FS+) = 0x1E0FF00 TIMING FS2(FS+) = 0x30003E0 TIMING FS3(FS+) = 0xC0000
+[    1.261273] exynos5-hsi2c 10ca0000.hsi2c: set usi mode - 0x4
+[    1.261287] exynos5-hsi2c 10ca0000.hsi2c: Trailing count: 0xffffff
+[    1.261388] exynos5-hsi2c 10ca0000.hsi2c: exynos5_i2c_set_timing IPCLK = 200000000 OP_CLK = 400000 DIV = 31 FSCL = 390625 Timing FS1 = 0x1F0FF00 TIMING FS2 = 0x30003E0 TIMING FS3 = 0x1F0000
+[    1.261698] at24 10-0050: supply vcc not found, using dummy regulator
+[    1.263129] at24 10-0050: 1024 byte 24c08 EEPROM, writable, 1 bytes/write
+[    1.263928] load_integrated_module: Initializing module "i2c_acpm"
+[    1.264258] exynos-ufs 13200000.ufs: UFS device initialized
+[    1.264518] i2c-acpm acpm_mfd_bus@15510000: acpm mfd bus driver probe started
+[    1.266567] exynos-ufs 13200000.ufs: PA_ActiveTxDataLanes(2),PA_ActiveRxDataLanes(2)
+[    1.266584] exynos-ufs 13200000.ufs: Power mode change(0): M(1)G(4)L(2)HS-series(2)
+[    1.266590] exynos-ufs 13200000.ufs: HS mode config passes
+[    1.267216] scsi 0:0:0:49488: Well-known LUN    KIOXIA   THGJFLT2E46BATPB 0100 PQ: 0 ANSI: 6
+[    1.268316] ufs_device_wlun 0:0:0:49488: Attached scsi generic sg0 type 30
+[    1.268704] scsi 0:0:0:49476: Well-known LUN    KIOXIA   THGJFLT2E46BATPB 0100 PQ: 0 ANSI: 6
+[    1.269306] s2mpg15 i2c-s2mpg15: device found: rev.0x10
+[    1.269518] scsi 0:0:0:49476: Attached scsi generic sg1 type 30
+[    1.269725] scsi 0:0:0:49456: Well-known LUN    KIOXIA   THGJFLT2E46BATPB 0100 PQ: 0 ANSI: 6
+[    1.270355] scsi 0:0:0:49456: Attached scsi generic sg2 type 30
+[    1.270779] scsi 0:0:0:0: Direct-Access     KIOXIA   THGJFLT2E46BATPB 0100 PQ: 0 ANSI: 6
+[    1.271619] scsi 0:0:0:0: Attached scsi generic sg3 type 0
+[    1.272362] scsi 0:0:0:1: Direct-Access     KIOXIA   THGJFLT2E46BATPB 0100 PQ: 0 ANSI: 6
+[    1.272556] sd 0:0:0:0: [sda] 124867584 4096-byte logical blocks: (511 GB/476 GiB)
+[    1.272642] sd 0:0:0:0: [sda] Write Protect is off
+[    1.272673] sd 0:0:0:0: [sda] Mode Sense: 00 32 00 10
+[    1.272798] sd 0:0:0:0: [sda] Disabling FUA
+[    1.272808] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    1.272830] sd 0:0:0:0: [sda] Preferred minimum I/O size 4096 bytes
+[    1.272839] sd 0:0:0:0: [sda] Optimal transfer size 524288 bytes
+[    1.274419] scsi 0:0:0:1: Attached scsi generic sg4 type 0
+[    1.274970] scsi 0:0:0:2: Direct-Access     KIOXIA   THGJFLT2E46BATPB 0100 PQ: 0 ANSI: 6
+[    1.276179]  sda: sda1 sda2 sda3 sda4 sda5 sda6 sda7 sda8 sda9 sda10 sda11 sda12 sda13 sda14 sda15 sda16 sda17 sda18 sda19 sda20 sda21 sda22 sda23 sda24 sda25 sda26 sda27 sda28 sda29 sda30 sda31 sda32 sda33 sda34
+[    1.277952] sd 0:0:0:0: [sda] Attached SCSI disk
+[    1.278441] scsi 0:0:0:2: Attached scsi generic sg5 type 0
+[    1.278644] sd 0:0:0:1: [sdb] 16384 4096-byte logical blocks: (67.1 MB/64.0 MiB)
+[    1.278701] scsi 0:0:0:3: Direct-Access     KIOXIA   THGJFLT2E46BATPB 0100 PQ: 0 ANSI: 6
+[    1.278727] sd 0:0:0:1: [sdb] Write Protect is off
+[    1.278754] sd 0:0:0:1: [sdb] Mode Sense: 00 32 00 10
+[    1.278843] sd 0:0:0:1: [sdb] Disabling FUA
+[    1.278852] sd 0:0:0:1: [sdb] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[    1.278862] sd 0:0:0:1: [sdb] Preferred minimum I/O size 4096 bytes
+[    1.278868] sd 0:0:0:1: [sdb] Optimal transfer size 524288 bytes
+[    1.280703] scsi 0:0:0:3: Attached scsi generic sg6 type 0
+[    1.281290]  sdb: sdb1 sdb2 sdb3 sdb4 sdb5 sdb6 sdb7 sdb8 sdb9 sdb10 sdb11 sdb12
+[    1.281873] sd 0:0:0:2: [sdc] 16384 4096-byte logical blocks: (67.1 MB/64.0 MiB)
+[    1.282055] sd 0:0:0:1: [sdb] Attached SCSI disk
+[    1.282192] sd 0:0:0:2: [sdc] Write Protect is off
+[    1.282220] sd 0:0:0:2: [sdc] Mode Sense: 00 32 00 10
+[    1.282336] sd 0:0:0:2: [sdc] Disabling FUA
+[    1.282362] sd 0:0:0:2: [sdc] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[    1.282371] sd 0:0:0:2: [sdc] Preferred minimum I/O size 4096 bytes
+[    1.282378] sd 0:0:0:2: [sdc] Optimal transfer size 524288 bytes
+[    1.283064] sd 0:0:0:3: [sdd] 1024 4096-byte logical blocks: (4.19 MB/4.00 MiB)
+[    1.283147] sd 0:0:0:3: [sdd] Write Protect is off
+[    1.283174] sd 0:0:0:3: [sdd] Mode Sense: 00 32 00 10
+[    1.283262] sd 0:0:0:3: [sdd] Disabling FUA
+[    1.283267] sd 0:0:0:3: [sdd] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    1.283274] sd 0:0:0:3: [sdd] Preferred minimum I/O size 4096 bytes
+[    1.283279] sd 0:0:0:3: [sdd] Optimal transfer size 524288 bytes
+[    1.284833]  sdc: sdc1 sdc2 sdc3 sdc4 sdc5 sdc6 sdc7 sdc8 sdc9 sdc10 sdc11 sdc12
+[    1.285420] sd 0:0:0:2: [sdc] Attached SCSI disk
+[    1.285798]  sdd: sdd1 sdd2 sdd3 sdd4
+[    1.286020] sd 0:0:0:3: [sdd] Attached SCSI disk
+[    1.339671] S2MPG15_LDO22: Bringing 1800000uV into 1850000-1850000uV
+[    1.340034] s2mpg15 i2c-s2mpg15: LDO22S: ramp_delay not set
+[    1.340041] S2MPG15_LDO22: failed to get delay: -EINVAL
+[    1.342273] s2mpg15 i2c-s2mpg15: OCP_CTRL1: 0xbb
+[    1.342347] s2mpg15 i2c-s2mpg15: OCP_CTRL2: 0xba
+[    1.342422] s2mpg15 i2c-s2mpg15: OCP_CTRL3: 0xbb
+[    1.342489] s2mpg15 i2c-s2mpg15: OCP_CTRL4: 0xbb
+[    1.342559] s2mpg15 i2c-s2mpg15: OCP_CTRL5: 0xbb
+[    1.342629] s2mpg15 i2c-s2mpg15: OCP_CTRL6: 0xbb
+[    1.342700] s2mpg15 i2c-s2mpg15: OCP_CTRL7: 0xbb
+[    1.342769] s2mpg15 i2c-s2mpg15: OCP_CTRL8: 0x0
+[    1.342839] s2mpg15 i2c-s2mpg15: B2S_OCP_WARN : 0x80
+[    1.342908] s2mpg15 i2c-s2mpg15: B2S_SOFT_OCP_WARN : 0x12
+[    1.348510] i2c-acpm acpm_mfd_bus@15510000: acpm mfd bus driver probe was succeeded
+[    1.348739] i2c-acpm acpm_mfd_bus@15500000: acpm mfd bus driver probe started
+[    1.350197] s2mpg14 i2c-s2mpg14: device found: rev.0x10
+[    1.359068] slg51002 4-0075: No init registers are overridden
+[    1.360170] slg51002 4-0075: chip_id: 0xb13103
+[    1.361023] ldo1: Bringing 2850000uV into 2250000-2250000uV
+[    1.364337] ldo3: Bringing 1800000uV into 2850000-2850000uV
+[    1.366470] ldo4: Bringing 2900000uV into 2950000-2950000uV
+[    1.368628] ldo5: Bringing 2850000uV into 2900000-2900000uV
+[    1.381210] s2mpg14 i2c-s2mpg14: s2mpg14 S2MPG14_COMMON_IBIM1=0xfc
+[    1.404855] s2mpg14 i2c-s2mpg14: BUCK_OCP_CTRL1: 0xbb
+[    1.404929] s2mpg14 i2c-s2mpg14: BUCK_OCP_CTRL2: 0xbb
+[    1.404996] s2mpg14 i2c-s2mpg14: BUCK_OCP_CTRL3: 0xbb
+[    1.405065] s2mpg14 i2c-s2mpg14: BUCK_OCP_CTRL4: 0xbb
+[    1.405132] s2mpg14 i2c-s2mpg14: BUCK_OCP_CTRL5: 0xbb
+[    1.405203] s2mpg14 i2c-s2mpg14: SMPL_WARN_CTRL : 0x68
+[    1.405274] s2mpg14 i2c-s2mpg14: B2M_OCP_WARN : 0x80
+[    1.405342] s2mpg14 i2c-s2mpg14: B3M_OCP_WARN : 0x80
+[    1.405410] s2mpg14 i2c-s2mpg14: B7M_OCP_WARN : 0x80
+[    1.405540] s2mpg14 i2c-s2mpg14: B2M_SOFT_OCP_WARN : 0x0
+[    1.405607] s2mpg14 i2c-s2mpg14: B3M_SOFT_OCP_WARN : 0x0
+[    1.405676] s2mpg14 i2c-s2mpg14: B7M_SOFT_OCP_WARN : 0x0
+[    1.408471] s2mpg14-rtc s2mpg14-rtc: WTSR: enable, COLDRST : disable, SMPL: enable
+[    1.411527] s2mpg14-rtc s2mpg14-rtc: 2024-09-14 03:52:38(0x40)AM
+[    1.413037] s2mpg14-rtc s2mpg14-rtc: 2152-137-141 01:171:170(0xa0)AM
+[    1.414608] s2mpg14-rtc s2mpg14-rtc: 2024-09-14 03:52:38(0x40)AM
+[    1.414930] s2mpg14-rtc s2mpg14-rtc: registered as rtc0
+[    1.416431] s2mpg14-rtc s2mpg14-rtc: 2024-09-14 03:52:38(0x40)AM
+[    1.416490] s2mpg14-rtc s2mpg14-rtc: setting system clock to 2024-09-14T03:52:38 UTC (1726285958)
+[    1.418770] s2mpg14 i2c-s2mpg14: could not find current_node
+[    1.418779] s2mpg14-power-keys: probe of s2mpg14-power-keys failed with error -2
+[    1.419218] i2c-acpm acpm_mfd_bus@15500000: acpm mfd bus driver probe was succeeded
+[    1.420100] load_integrated_module: Initializing module "s2mpg15_spmic_thermal"
+[    1.420701] s2mpg15-spmic-thermal s2mpg15-spmic-thermal: DMA mask not set
+[    1.420816] s2mpg15-spmic-thermal s2mpg15-spmic-thermal: Registering 0 sensor
+[    1.425010] thermal thermal_zone0: Failed to set trips: -11
+[    1.425046] s2mpg15-spmic-thermal s2mpg15-spmic-thermal: Registering 1 sensor
+[    1.428269] thermal thermal_zone1: Failed to set trips: -11
+[    1.428353] s2mpg15-spmic-thermal s2mpg15-spmic-thermal: Set sensor 1 hot trip(mdegC):65000, ret:0
+[    1.428364] s2mpg15-spmic-thermal s2mpg15-spmic-thermal: Registering 2 sensor
+[    1.431569] thermal thermal_zone2: Failed to set trips: -11
+[    1.431589] s2mpg15-spmic-thermal s2mpg15-spmic-thermal: Registering 3 sensor
+[    1.434980] thermal thermal_zone3: Failed to set trips: -11
+[    1.434996] s2mpg15-spmic-thermal s2mpg15-spmic-thermal: Registering 4 sensor
+[    1.438208] thermal thermal_zone4: Failed to set trips: -11
+[    1.438223] s2mpg15-spmic-thermal s2mpg15-spmic-thermal: Registering 5 sensor
+[    1.441434] thermal thermal_zone5: Failed to set trips: -11
+[    1.441452] s2mpg15-spmic-thermal s2mpg15-spmic-thermal: Registering 6 sensor
+[    1.444962] thermal thermal_zone6: Failed to set trips: -11
+[    1.444981] s2mpg15-spmic-thermal s2mpg15-spmic-thermal: Registering 7 sensor
+[    1.448218] thermal thermal_zone7: Failed to set trips: -11
+[    1.449596] ------------[ cut here ]------------
+[    1.449602] sysfs: (bin_)attrs not set by subsystem for group: spmic/
+[    1.449656] WARNING: CPU: 0 PID: 1 at fs/sysfs/group.c:122 internal_create_group+0x270/0x3b0
+[    1.449710] CPU: 0 PID: 1 Comm: swapper/0 Tainted: G S      W          6.1.75-g7910ee17f109 #1
+[    1.449721] Hardware name: ZUMA PRO CAIMAN MP board based on ZUMA PRO (DT)
+[    1.449731] pstate: 60400005 (nZCv daif +PAN -UAO -TCO -DIT -SSBS BTYPE=--)
+[    1.449739] pc : internal_create_group+0x270/0x3b0
+[    1.449747] lr : internal_create_group+0x270/0x3b0
+[    1.449753] sp : ffffffc00805b920
+[    1.449757] x29: ffffffc00805b930 x28: ffffff800b592000 x27: ffffffd56735b160
+[    1.449778] x26: ffffffd56735ab48 x25: ffffffd56735b1b8 x24: ffffff800c083380
+[    1.449787] x23: 0000000000000000 x22: 0000000000000000 x21: 0000000000000000
+[    1.449796] x20: ffffffd56735b160 x19: 0000000000000000 x18: ffffffc0080510a8
+[    1.449805] x17: 0000000000000000 x16: 0000000000000100 x15: fffffffffff00000
+[    1.449815] x14: 0000000000000406 x13: 00000000ffffffea x12: ffffff8b684fffa8
+[    1.449845] x11: ffffff8b68240000 x10: ffffff8b78630000 x9 : 0000000000000001
+[    1.449854] x8 : 0000000000000001 x7 : 00000000000bffe8 x6 : c0000000ffff7fff
+[    1.449863] x5 : 00000000002bffa8 x4 : 0000000000000000 x3 : 0000000000000000
+[    1.449873] x2 : 0000000000000000 x1 : 0000000000000000 x0 : ffffff8004669300
+[    1.449887] Call trace:
+[    1.449894]  internal_create_group+0x270/0x3b0
+[    1.449902]  sysfs_create_group+0x1c/0x2c
+[    1.449908]  register_temp_residency_stats+0x150/0x294
+[    1.449933]  s2mpg15_spmic_thermal_probe+0x3f4/0x6b0
+[    1.449953]  platform_probe+0x6c/0xe4
+[    1.449972]  really_probe+0xc0/0x2f4
+[    1.449982]  __driver_probe_device+0x7c/0x120
+[    1.449990]  driver_probe_device+0x40/0x120
+[    1.449996]  __driver_attach+0xf8/0x1a0
+[    1.450001]  bus_for_each_dev+0x7c/0xdc
+[    1.450006]  driver_attach+0x28/0x3c
+[    1.450012]  bus_add_driver+0x158/0x21c
+[    1.450016]  driver_register+0x78/0x13c
+[    1.450022]  __platform_driver_register+0x2c/0x3c
+[    1.450030]  s2mpg15_spmic_thermal_driver_init+0x20/0x30
+[    1.450052]  do_one_initcall+0x5c/0x2e0
+[    1.450068]  load_integrated_module+0x1c0/0x1e0
+[    1.450089]  load_integrated_modules+0x44/0x68
+[    1.450109]  do_one_initcall+0x5c/0x2e0
+[    1.450114]  kernel_init_freeable+0x26c/0x2dc
+[    1.450127]  kernel_init+0x28/0x140
+[    1.450139]  ret_from_fork+0x10/0x20
+[    1.450149] ---[ end trace 0000000000000000 ]---
+[    1.450159] pixel_metrics: ERR:-22 failed to create temp_residency_all files
+[    1.450172] s2mpg15-spmic-thermal s2mpg15-spmic-thermal: Failed to register for temperature residency stats. ret: -12
+[    1.451753] s2mpg15-spmic-thermal s2mpg15-spmic-thermal: Applying NTC... disabling odpm [s2mpg15]
+[    1.542236] s2mpg15-spmic-thermal s2mpg15-spmic-thermal: Set NTC channels (adc_ch_en : 0x0)
+[    1.542375] s2mpg15-spmic-thermal s2mpg15-spmic-thermal: Re-enabled odpm [s2mpg15] :)
+[    1.542805] load_integrated_module: Initializing module "exynos_acme"
+[    1.546351] cpu cpu0: EM: Access to CPUFreq policy failed
+[    1.546591] cpu cpu0: EM: created perf domain
+[    1.546596] exynos_acme: Complete to initialize cpufreq-domain0
+[    1.546601] exynos_acme: CPUFREQ of domain0 cal-id : 0xb040002
+[    1.546611] exynos_acme: CPUFREQ of domain0 sibling cpus : 0-3
+[    1.546614] exynos_acme: CPUFREQ of domain0 boot freq = 1197000 kHz, resume freq = 1425000 kHz
+[    1.546618] exynos_acme: CPUFREQ of domain0 max freq : 1950000 kHz, min freq : 820000 kHz
+[    1.546622] exynos_acme: CPUFREQ of domain0 table size = 10
+[    1.546626] exynos_acme: CPUFREQ of domain0 : L0    820000 kHz
+[    1.546630] exynos_acme: CPUFREQ of domain0 : L1    955000 kHz
+[    1.546633] exynos_acme: CPUFREQ of domain0 : L2   1098000 kHz
+[    1.546637] exynos_acme: CPUFREQ of domain0 : L3   1197000 kHz
+[    1.546640] exynos_acme: CPUFREQ of domain0 : L4   1328000 kHz
+[    1.546643] exynos_acme: CPUFREQ of domain0 : L5   1425000 kHz
+[    1.546646] exynos_acme: CPUFREQ of domain0 : L6   1548000 kHz
+[    1.546650] exynos_acme: CPUFREQ of domain0 : L7   1696000 kHz
+[    1.546653] exynos_acme: CPUFREQ of domain0 : L8   1849000 kHz
+[    1.546656] exynos_acme: CPUFREQ of domain0 : L9   1950000 kHz
+[    1.552780] cpu cpu4: EM: Access to CPUFreq policy failed
+[    1.553173] cpu cpu4: EM: created perf domain
+[    1.553177] exynos_acme: Complete to initialize cpufreq-domain1
+[    1.553180] exynos_acme: CPUFREQ of domain1 cal-id : 0xb040003
+[    1.553187] exynos_acme: CPUFREQ of domain1 sibling cpus : 4-6
+[    1.553192] exynos_acme: CPUFREQ of domain1 boot freq = 1065000 kHz, resume freq = 1795000 kHz
+[    1.553196] exynos_acme: CPUFREQ of domain1 max freq : 2600000 kHz, min freq : 357000 kHz
+[    1.553200] exynos_acme: CPUFREQ of domain1 table size = 17
+[    1.553202] exynos_acme: CPUFREQ of domain1 : L0    357000 kHz
+[    1.553206] exynos_acme: CPUFREQ of domain1 : L1    578000 kHz
+[    1.553213] exynos_acme: CPUFREQ of domain1 : L2    648000 kHz
+[    1.553216] exynos_acme: CPUFREQ of domain1 : L3    787000 kHz
+[    1.553222] exynos_acme: CPUFREQ of domain1 : L4    910000 kHz
+[    1.553225] exynos_acme: CPUFREQ of domain1 : L5   1065000 kHz
+[    1.553228] exynos_acme: CPUFREQ of domain1 : L6   1221000 kHz
+[    1.553231] exynos_acme: CPUFREQ of domain1 : L7   1328000 kHz
+[    1.553235] exynos_acme: CPUFREQ of domain1 : L8   1418000 kHz
+[    1.553238] exynos_acme: CPUFREQ of domain1 : L9   1549000 kHz
+[    1.553241] exynos_acme: CPUFREQ of domain1 : L10  1795000 kHz
+[    1.553244] exynos_acme: CPUFREQ of domain1 : L11  1945000 kHz
+[    1.553248] exynos_acme: CPUFREQ of domain1 : L12  2130000 kHz
+[    1.553251] exynos_acme: CPUFREQ of domain1 : L13  2245000 kHz
+[    1.553254] exynos_acme: CPUFREQ of domain1 : L14  2367000 kHz
+[    1.553257] exynos_acme: CPUFREQ of domain1 : L15  2450000 kHz
+[    1.553261] exynos_acme: CPUFREQ of domain1 : L16  2600000 kHz
+[    1.555684] cpu cpu7: EM: Access to CPUFreq policy failed
+[    1.556088] cpu cpu7: EM: created perf domain
+[    1.556092] exynos_acme: Complete to initialize cpufreq-domain2
+[    1.556096] exynos_acme: CPUFREQ of domain2 cal-id : 0xb040004
+[    1.556102] exynos_acme: CPUFREQ of domain2 sibling cpus : 7
+[    1.556109] exynos_acme: CPUFREQ of domain2 boot freq = 1164000 kHz, resume freq = 1164000 kHz
+[    1.556115] exynos_acme: CPUFREQ of domain2 max freq : 3105000 kHz, min freq : 700000 kHz
+[    1.556118] exynos_acme: CPUFREQ of domain2 table size = 18
+[    1.556121] exynos_acme: CPUFREQ of domain2 : L0    700000 kHz
+[    1.556125] exynos_acme: CPUFREQ of domain2 : L1   1164000 kHz
+[    1.556128] exynos_acme: CPUFREQ of domain2 : L2   1396000 kHz
+[    1.556131] exynos_acme: CPUFREQ of domain2 : L3   1557000 kHz
+[    1.556134] exynos_acme: CPUFREQ of domain2 : L4   1745000 kHz
+[    1.556138] exynos_acme: CPUFREQ of domain2 : L5   1885000 kHz
+[    1.556142] exynos_acme: CPUFREQ of domain2 : L6   1999000 kHz
+[    1.556145] exynos_acme: CPUFREQ of domain2 : L7   2147000 kHz
+[    1.556149] exynos_acme: CPUFREQ of domain2 : L8   2294000 kHz
+[    1.556152] exynos_acme: CPUFREQ of domain2 : L9   2363000 kHz
+[    1.556155] exynos_acme: CPUFREQ of domain2 : L10  2499000 kHz
+[    1.556158] exynos_acme: CPUFREQ of domain2 : L11  2687000 kHz
+[    1.556161] exynos_acme: CPUFREQ of domain2 : L12  2802000 kHz
+[    1.556165] exynos_acme: CPUFREQ of domain2 : L13  2914000 kHz
+[    1.556168] exynos_acme: CPUFREQ of domain2 : L14  2943000 kHz
+[    1.556171] exynos_acme: CPUFREQ of domain2 : L15  2970000 kHz
+[    1.556174] exynos_acme: CPUFREQ of domain2 : L16  3015000 kHz
+[    1.556177] exynos_acme: CPUFREQ of domain2 : L17  3105000 kHz
+[    1.556344] exynos_acme: CPUFREQ domain0 registered
+[    1.556643] exynos_acme: CPUFREQ domain1 registered
+[    1.556708] exynos_acme: CPUFREQ domain2 registered
+[    1.557437] cpu_cooling 0: freq:1950000 KHz
+[    1.557443] cpu_cooling 0: freq:1849000 KHz
+[    1.557447] cpu_cooling 0: freq:1696000 KHz
+[    1.557449] cpu_cooling 0: freq:1548000 KHz
+[    1.557455] cpu_cooling 0: freq:1425000 KHz
+[    1.557459] cpu_cooling 0: freq:1328000 KHz
+[    1.557462] cpu_cooling 0: freq:1197000 KHz
+[    1.557465] cpu_cooling 0: freq:1098000 KHz
+[    1.557469] cpu_cooling 0: freq:955000 KHz
+[    1.557472] cpu_cooling 0: freq:820000 KHz
+[    1.557482] cpu_cooling 0: freq:1950000 power: 91, mV: 818, cap: 70
+[    1.557488] cpu_cooling 0: freq:1849000 power: 76, mV: 768, cap: 70
+[    1.557493] cpu_cooling 0: freq:1696000 power: 61, mV: 718, cap: 70
+[    1.557498] cpu_cooling 0: freq:1548000 power: 52, mV: 693, cap: 70
+[    1.557505] cpu_cooling 0: freq:1425000 power: 44, mV: 668, cap: 70
+[    1.557510] cpu_cooling 0: freq:1328000 power: 39, mV: 650, cap: 70
+[    1.557515] cpu_cooling 0: freq:1197000 power: 32, mV: 625, cap: 70
+[    1.557519] cpu_cooling 0: freq:1098000 power: 28, mV: 612, cap: 70
+[    1.557524] cpu_cooling 0: freq:955000 power: 23, mV: 593, cap: 70
+[    1.557531] cpu_cooling 0: freq:820000 power: 18, mV: 568, cap: 70
+[    1.557697] build_static_power_table: Failed to get param table from ECT
+[    1.560884] cpu cooling registered for cpu: 0, capacitance: 70, power_callback: true, static_power: false
+[    1.560930] exynos_acme: Skipping boot pm_qos domain0
+[    1.561140] cpu_cooling 4: freq:2600000 KHz
+[    1.561147] cpu_cooling 4: freq:2450000 KHz
+[    1.561153] cpu_cooling 4: freq:2367000 KHz
+[    1.561159] cpu_cooling 4: freq:2245000 KHz
+[    1.561164] cpu_cooling 4: freq:2130000 KHz
+[    1.561170] cpu_cooling 4: freq:1945000 KHz
+[    1.561175] cpu_cooling 4: freq:1795000 KHz
+[    1.561182] cpu_cooling 4: freq:1549000 KHz
+[    1.561186] cpu_cooling 4: freq:1418000 KHz
+[    1.561192] cpu_cooling 4: freq:1328000 KHz
+[    1.561197] cpu_cooling 4: freq:1221000 KHz
+[    1.561201] cpu_cooling 4: freq:1065000 KHz
+[    1.561205] cpu_cooling 4: freq:910000 KHz
+[    1.561210] cpu_cooling 4: freq:787000 KHz
+[    1.561215] cpu_cooling 4: freq:648000 KHz
+[    1.561219] cpu_cooling 4: freq:578000 KHz
+[    1.561222] cpu_cooling 4: freq:357000 KHz
+[    1.561229] cpu_cooling 4: freq:2600000 power: 1249, mV: 968, cap: 513
+[    1.561234] cpu_cooling 4: freq:2450000 power: 1045, mV: 912, cap: 513
+[    1.561239] cpu_cooling 4: freq:2367000 power: 955, mV: 887, cap: 513
+[    1.561244] cpu_cooling 4: freq:2245000 power: 832, mV: 850, cap: 513
+[    1.561248] cpu_cooling 4: freq:2130000 power: 743, mV: 825, cap: 513
+[    1.561253] cpu_cooling 4: freq:1945000 power: 599, mV: 775, cap: 513
+[    1.561259] cpu_cooling 4: freq:1795000 power: 492, mV: 731, cap: 513
+[    1.561265] cpu_cooling 4: freq:1549000 power: 362, mV: 675, cap: 513
+[    1.561271] cpu_cooling 4: freq:1418000 power: 300, mV: 643, cap: 513
+[    1.561277] cpu_cooling 4: freq:1328000 power: 271, mV: 631, cap: 513
+[    1.561282] cpu_cooling 4: freq:1221000 power: 234, mV: 612, cap: 513
+[    1.561286] cpu_cooling 4: freq:1065000 power: 188, mV: 587, cap: 513
+[    1.561291] cpu_cooling 4: freq:910000 power: 150, mV: 568, cap: 513
+[    1.561295] cpu_cooling 4: freq:787000 power: 124, mV: 556, cap: 513
+[    1.561300] cpu_cooling 4: freq:648000 power: 98, mV: 543, cap: 513
+[    1.561304] cpu_cooling 4: freq:578000 power: 85, mV: 537, cap: 513
+[    1.561309] cpu_cooling 4: freq:357000 power: 46, mV: 506, cap: 513
+[    1.564000] cpu cooling registered for cpu: 4, capacitance: 513, power_callback: true, static_power: true
+[    1.564016] exynos_acme: Skipping boot pm_qos domain1
+[    1.564171] cpu_cooling 7: freq:3105000 KHz
+[    1.564176] cpu_cooling 7: freq:3015000 KHz
+[    1.564180] cpu_cooling 7: freq:2970000 KHz
+[    1.564186] cpu_cooling 7: freq:2943000 KHz
+[    1.564190] cpu_cooling 7: freq:2914000 KHz
+[    1.564197] cpu_cooling 7: freq:2802000 KHz
+[    1.564203] cpu_cooling 7: freq:2687000 KHz
+[    1.564207] cpu_cooling 7: freq:2499000 KHz
+[    1.564212] cpu_cooling 7: freq:2363000 KHz
+[    1.564216] cpu_cooling 7: freq:2294000 KHz
+[    1.564220] cpu_cooling 7: freq:2147000 KHz
+[    1.564223] cpu_cooling 7: freq:1999000 KHz
+[    1.564227] cpu_cooling 7: freq:1885000 KHz
+[    1.564229] cpu_cooling 7: freq:1745000 KHz
+[    1.564232] cpu_cooling 7: freq:1557000 KHz
+[    1.564235] cpu_cooling 7: freq:1396000 KHz
+[    1.564238] cpu_cooling 7: freq:1164000 KHz
+[    1.564240] cpu_cooling 7: freq:700000 KHz
+[    1.564249] cpu_cooling 7: freq:3105000 power: 2681, mV: 1068, cap: 757
+[    1.564254] cpu_cooling 7: freq:3015000 power: 2397, mV: 1025, cap: 757
+[    1.564259] cpu_cooling 7: freq:2970000 power: 2329, mV: 1018, cap: 757
+[    1.564263] cpu_cooling 7: freq:2943000 power: 2281, mV: 1012, cap: 757
+[    1.564267] cpu_cooling 7: freq:2914000 power: 2205, mV: 1000, cap: 757
+[    1.564272] cpu_cooling 7: freq:2802000 power: 1914, mV: 950, cap: 757
+[    1.564276] cpu_cooling 7: freq:2687000 power: 1691, mV: 912, cap: 757
+[    1.564280] cpu_cooling 7: freq:2499000 power: 1386, mV: 856, cap: 757
+[    1.564285] cpu_cooling 7: freq:2363000 power: 1196, mV: 818, cap: 757
+[    1.564291] cpu_cooling 7: freq:2294000 power: 1111, mV: 800, cap: 757
+[    1.564296] cpu_cooling 7: freq:2147000 power: 958, mV: 768, cap: 757
+[    1.564302] cpu_cooling 7: freq:1999000 power: 821, mV: 737, cap: 757
+[    1.564307] cpu_cooling 7: freq:1885000 power: 735, mV: 718, cap: 757
+[    1.564311] cpu_cooling 7: freq:1745000 power: 634, mV: 693, cap: 757
+[    1.564315] cpu_cooling 7: freq:1557000 power: 516, mV: 662, cap: 757
+[    1.564319] cpu_cooling 7: freq:1396000 power: 420, mV: 631, cap: 757
+[    1.564324] cpu_cooling 7: freq:1164000 power: 317, mV: 600, cap: 757
+[    1.564329] cpu_cooling 7: freq:700000 power: 163, mV: 556, cap: 757
+[    1.566885] cpu cooling registered for cpu: 7, capacitance: 757, power_callback: true, static_power: true
+[    1.566899] exynos_acme: Skipping boot pm_qos domain2
+[    1.567000] exynos_acme: Initialized Exynos cpufreq driver
+[    1.567774] load_integrated_module: Initializing module "gs_governor_utils"
+[    1.567828] load_integrated_module: Initializing module "gs_governor_memlat"
+[    1.568662] load_integrated_module: Initializing module "gs_governor_dsulat"
+[    1.569601] load_integrated_module: Initializing module "odpm"
+[    1.569806] odpm: s2mpg15-odpm: init
+[    1.570044] odpm: Configuring S2MPG15...
+[    1.570133] odpm: S2MPG15: Applied new sampling frequency (type 0) in Hz: 125.000000
+[    1.570217] odpm: S2MPG15: Applied new sampling frequency (type 1) in Hz: 31.250000
+[    1.570225] odpm: S2MPG15: CH0=S1S_VDD_CAM
+[    1.570312] odpm: S2MPG15: CH1=S2S_VDD_G3D
+[    1.570392] odpm: S2MPG15: CH2=S4S_VDD2H_MEM
+[    1.570474] odpm: S2MPG15: CH3=S5S_VDDQ_MEM
+[    1.570554] odpm: S2MPG15: CH4=L22S_UDFPS
+[    1.570634] odpm: S2MPG15: CH5=S9S_VDD_AOC
+[    1.570713] odpm: S2MPG15: CH6=L2S_PLL_MIPI_UFS
+[    1.570794] odpm: S2MPG15: CH7=S3S_LLDO1
+[    1.570873] odpm: S2MPG15: CH8=L21S_VDD2L_MEM
+[    1.570953] odpm: S2MPG15: CH9=VSYS_PWR_MODEM
+[    1.571034] odpm: S2MPG15: CH10=VSYS_PWR_WLAN_BT
+[    1.571114] odpm: S2MPG15: CH11=VSYS_PWR_MMWAVE
+[    1.571596] odpm: Configuring S2MPG15...done
+[    1.571869] odpm: S2MPG15: Starting at timestamp (ms): 1559
+[    1.572469] odpm: s2mpg15-odpm: init completed
+[    1.572650] odpm: s2mpg14-odpm: init
+[    1.572781] odpm: Configuring S2MPG14...
+[    1.572865] odpm: S2MPG14: Applied new sampling frequency (type 0) in Hz: 125.000000
+[    1.572947] odpm: S2MPG14: Applied new sampling frequency (type 1) in Hz: 31.250000
+[    1.572951] odpm: S2MPG14: CH0=S1M_VDD_MIF
+[    1.572960] s2mpg14-meter s2mpg14-meter: CH0, BUCK1M
+[    1.573045] odpm: S2MPG14: CH1=S2M_VDD_CPUCL1
+[    1.573049] s2mpg14-meter s2mpg14-meter: CH1, BUCK2M
+[    1.573132] odpm: S2MPG14: CH2=S3M_VDD_CPUCL2
+[    1.573136] s2mpg14-meter s2mpg14-meter: CH2, BUCK3M
+[    1.573218] odpm: S2MPG14: CH3=S4M_VDD_CPUCL0
+[    1.573224] s2mpg14-meter s2mpg14-meter: CH3, BUCK4M
+[    1.573305] odpm: S2MPG14: CH4=S5M_VDD_INT
+[    1.573308] s2mpg14-meter s2mpg14-meter: CH4, BUCK5M
+[    1.573389] odpm: S2MPG14: CH5=S6M_LLDO1
+[    1.573393] s2mpg14-meter s2mpg14-meter: CH5, BUCK6M
+[    1.573474] odpm: S2MPG14: CH6=S7M_VDD_TPU
+[    1.573477] s2mpg14-meter s2mpg14-meter: CH6, BUCK7M
+[    1.573560] odpm: S2MPG14: CH7=S8M_LLDO2
+[    1.573563] s2mpg14-meter s2mpg14-meter: CH7, BUCK8M
+[    1.573644] odpm: S2MPG14: CH8=S9M_VDD_CPUCL1_M
+[    1.573647] s2mpg14-meter s2mpg14-meter: CH8, BUCK9M
+[    1.573728] odpm: S2MPG14: CH9=VSYS_PWR_DISPLAY
+[    1.573731] s2mpg14-meter s2mpg14-meter: CH9, invalid
+[    1.573814] odpm: S2MPG14: CH10=VSYS_PWR_CAMERA
+[    1.573818] s2mpg14-meter s2mpg14-meter: CH10, invalid
+[    1.573899] odpm: S2MPG14: CH11=VSYS_PWR_RFFE
+[    1.573902] s2mpg14-meter s2mpg14-meter: CH11, invalid
+[    1.574367] odpm: Configuring S2MPG14...done
+[    1.574509] odpm: S2MPG14: Starting at timestamp (ms): 1562
+[    1.574889] odpm: s2mpg14-odpm: init completed
+[    1.574997] load_integrated_module: Initializing module "pixel_reboot"
+[    1.575467] pixel-reboot pixel-reboot: register restart handler successfully
+[    1.575661] load_integrated_module: Initializing module "trusty_virtio"
+[    1.576817] trusty_ipc virtio0: vring0: va(id)  00000000839bdd62(ffffffc2) qsz 32 notifyid 1
+[    1.576860] trusty_ipc virtio0: vring1: va(id)  00000000d25cd270(ffffffc3) qsz 32 notifyid 2
+[    1.578190] trusty-virtio trusty:virtio: initializing done
+[    1.578280] trusty_ipc virtio0: is online
+[    1.578672] load_integrated_module: Initializing module "gzvm"
+[    1.579073] load_integrated_module: Initializing module "arm_dsu_pmu"
+[    1.586701] load_integrated_module: Initializing module "pinctrl_slg51002"
+[    1.588984] load_integrated_module: Initializing module "rt6160_regulator"
+[    1.589684] rt6160 4-0077: Failed to parse reg_defaults from device tree (-22), init from hw
+[    1.589720] rt6160 4-0077: No cache defaults, reading back from HW
+[    1.590458] rt6160 4-0077: VID = [0xa8]
+[    1.590520] PP3200_CAM_BB: Bringing 3450000uV into 3200000-3200000uV
+[    1.591358] slg51002 4-0075: Failed to create device link (0x180) with 4-0077
+[    1.591366] slg51002 4-0075: Failed to create device link (0x180) with 4-0077
+[    1.591375] slg51002 4-0075: Failed to create device link (0x180) with 4-0077
+[    1.591380] slg51002 4-0075: Failed to create device link (0x180) with 4-0077
+[    1.591386] slg51002 4-0075: Failed to create device link (0x180) with 4-0077
+[    1.591914] clk: Not disabling unused clocks
+[    1.592006] exynos_pd: pd-dpub sync_state: children need sync
+[    1.592013] exynos_pd: pd-mfc sync_state: turn_off = 1
+[    1.592281] exynos_pd: pd-aur sync_state: turn_off = 1
+[    1.592664] exynos_pd: pd-ispfe sync_state: turn_off = 1
+[    1.592972] exynos_pd: pd-tpu sync_state: turn_off = 1
+[    1.593267] ALSA device list:
+[    1.593282]   No soundcards found.
+[    1.593429] Warning: unable to open an initial console.
+[    1.601021] Freeing unused kernel memory: 11968K
+[    1.633482] Run /init as init process
+[    1.633525]   with arguments:
+[    1.633528]     /init
+[    1.633534]   with environment:
+[    1.633539]     HOME=/
+[    1.633546]     TERM=linux
+[    1.647443] mount (239) used greatest stack depth: 13064 bytes left
+[    1.792615] odpm: S2MPG14: Applied new sampling frequency (type 0) in Hz: 1000.000000
+[    1.792647] odpm: S2MPG14: meter reset
+[    2.536509] 
+               
+               
+               
+                 __                _                     _     
+                / _|_ __ ___  __ _| |__   ___ _ __   ___| |__  
+               | |_| '__/ _ \/ _` | '_ \ / _ \ '_ \ / __| '_ \ 
+               |  _| | |  __/ (_| | |_) |  __/ | | | (__| | | |
+               |_| |_|  \___|\__, |_.__/ \___|_| |_|\___|_| |_|
+                                |_|                            
+               
+                          CPU benchmark • by kdrag0n
+               
+               ------------------------------------------------
+               
+               Frequency domains: 
+[    2.537006] cpu1 
+[    2.537072] cpu4 
+[    2.537125] cpu7 
+[    2.537166] 
+               Offline CPUs: 
+[    2.540282] cpu1 
+[    2.545611] psci: CPU1 killed (polled 0 ms)
+[    2.547089] cpu2 
+[    2.550810] psci: CPU2 killed (polled 0 ms)
+[    2.551463] cpu3 
+[    2.555188] psci: CPU3 killed (polled 0 ms)
+[    2.555750] cpu4 
+[    2.559224] psci: CPU4 killed (polled 0 ms)
+[    2.559882] cpu5 
+[    2.563370] psci: CPU5 killed (polled 0 ms)
+[    2.563942] cpu6 
+[    2.567504] psci: CPU6 killed (polled 0 ms)
+[    2.568261] cpu7 
+[    2.570060] psci: CPU7 killed (polled 0 ms)
+
+[   31.843519] disp_vddd: disabling
+[   31.843785] S2MPG15_LDO5: disabling
+[   31.844028] S2MPG15_LDO7: disabling
+[   31.848188] slg51002 4-0075: No init registers are overridden
+[   31.852970] S2MPG14_LDO8: disabling
+[   31.853168] S2MPG14_LDO9: disabling
+[   31.853343] S2MPG14_LDO14: disabling
+[   31.853581] S2MPG14_LDO19: disabling
+[   32.593795] CPU features: detected CPU1: Activity Monitors Unit (AMU)
+[   32.593943] Detected PIPT I-cache on CPU1
+[   32.594029] cacheinfo: Unable to detect cache hierarchy for CPU 1
+[   32.594082] GICv3: CPU1: found redistributor 100 region 0:0x0000000010460000
+[   32.594319] CPU1: Booted secondary processor 0x0000000100 [0x410fd801]
+[   32.597485] CPU features: detected CPU4: Activity Monitors Unit (AMU)
+[   32.597533] Detected PIPT I-cache on CPU4
+[   32.597542] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x1001111011312122, CPU4: 0x1001111010312122
+[   32.597567] cacheinfo: Unable to detect cache hierarchy for CPU 4
+[   32.597588] GICv3: CPU4: found redistributor 400 region 0:0x00000000104c0000
+[   32.597678] CPU4: Booted secondary processor 0x0000000400 [0x410fd811]
+[   33.606141] 
+               ===== CPU 1 =====
+               Frequencies: 820 955 1098 1197 1328 1425 1548 1696 1849 1950
+               
+                820: 
+[  198.147415] coremark (254) used greatest stack depth: 12912 bytes left
+[  198.156449]  3836     4.7 C/MHz     56 mW    8.8 J   68.0 I/mJ   156.4 s
+                955: 
+[  305.124441] kworker/dying (8) used greatest stack depth: 12400 bytes left
+[  340.364569]  4475     4.7 C/MHz     66 mW    8.9 J   67.6 I/mJ   134.1 s
+               1098: 
+[  465.341205]  5135     4.7 C/MHz     77 mW    8.9 J   67.1 I/mJ   116.9 s
+               1197: 
+[  580.454041]  5608     4.7 C/MHz     83 mW    8.9 J   67.3 I/mJ   107.0 s
+               1328: 
+[  684.900725]  6230     4.7 C/MHz     96 mW    9.3 J   64.6 I/mJ    96.3 s
+               1425: 
+[  782.826266]  6682     4.7 C/MHz    107 mW    9.6 J   62.4 I/mJ    89.8 s
+               1548: 
+[  873.656158]  7255     4.7 C/MHz    122 mW   10.1 J   59.4 I/mJ    82.7 s
+               1696: 
+[  957.332156]  7942     4.7 C/MHz    141 mW   10.6 J   56.4 I/mJ    75.6 s
+               1849: 
+[ 1034.503083]  8690     4.7 C/MHz    176 mW   12.1 J   49.5 I/mJ    69.1 s
+               1950: 
+[ 1108.302930] psci: CPU1 killed (polled 0 ms)
+[ 1108.308516] CPU features: detected CPU7: Activity Monitors Unit (AMU)
+[ 1108.308587] Detected PIPT I-cache on CPU7
+[ 1108.308603] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x1001111011312122, CPU7: 0x1001111010312122
+[ 1108.308644] cacheinfo: Unable to detect cache hierarchy for CPU 7
+[ 1108.308685] GICv3: CPU7: found redistributor 700 region 0:0x0000000010520000
+[ 1108.308828] CPU7: Booted secondary processor 0x0000000700 [0x410fd821]
+[ 1109.319378]  9138     4.7 C/MHz    204 mW   13.4 J   44.7 I/mJ    65.7 s
+               
+               
+               ===== CPU 4 =====
+               Frequencies: 357 578 648 787 910 1065 1221 1328 1418 1549 1795 1945 2130 2245 2367 2450 2600
+               
+                357: 
+[ 1307.169544]  3163     8.9 C/MHz     35 mW    6.6 J   90.3 I/mJ   189.7 s
+                578: 
+[ 1432.222494]  5131     8.9 C/MHz     56 mW    6.6 J   90.9 I/mJ   116.9 s
+                648: 
+[ 1544.729540]  5748     8.9 C/MHz     64 mW    6.6 J   90.5 I/mJ   104.4 s
+                787: 
+[ 1638.818657]  6980     8.9 C/MHz     78 mW    6.7 J   89.6 I/mJ    86.0 s
+                910: 
+[ 1721.332070]  8066     8.9 C/MHz     93 mW    6.9 J   87.1 I/mJ    74.4 s
+               1065: 
+[ 1792.911593]  9456     8.9 C/MHz    114 mW    7.2 J   83.2 I/mJ    63.5 s
+               1221: 
+[ 1856.412791] 10835     8.9 C/MHz    141 mW    7.8 J   77.1 I/mJ    55.4 s
+               1328: 
+[ 1915.443226] 11788     8.9 C/MHz    161 mW    8.2 J   73.3 I/mJ    50.9 s
+               1418: 
+[ 1971.233397] 12589     8.9 C/MHz    176 mW    8.4 J   71.4 I/mJ    47.7 s
+               1549: 
+[ 2023.010340] 13747     8.9 C/MHz    206 mW    9.0 J   66.9 I/mJ    43.7 s
+               1795: 
+[ 2068.789001] 15935     8.9 C/MHz    452 mW   17.0 J   35.2 I/mJ    37.7 s
+               1945: 
+[ 2111.681384] 17259     8.9 C/MHz    377 mW   13.1 J   45.7 I/mJ    34.8 s
+               2130: 
+[ 2151.534496] 18910     8.9 C/MHz    470 mW   14.9 J   40.3 I/mJ    31.7 s
+               2245: 
+[ 2189.757162] 19940     8.9 C/MHz    534 mW   16.1 J   37.3 I/mJ    30.1 s
+               2367: 
+[ 2226.389341] 21050     8.9 C/MHz    620 mW   17.7 J   33.9 I/mJ    28.5 s
+               2450: 
+[ 2262.096925] 21755     8.9 C/MHz    684 mW   18.9 J   31.8 I/mJ    27.6 s
+               2600: 
+[ 2296.213422] psci: CPU4 killed (polled 0 ms)
+[ 2297.222946] 23094     8.9 C/MHz    862 mW   22.4 J   26.8 I/mJ    26.0 s
+               
+               
+               ===== CPU 7 =====
+               Frequencies: 700 1164 1396 1557 1745 1885 1999 2147 2294 2363 2499 2687 2802 2914 2943 2970 3015 3105
+               
+                700: 
+[ 2385.606026]  7477     10.7 C/MHz    159 mW   12.7 J   47.1 I/mJ    80.3 s
+               1164: 
+[ 2442.110326] 12404     10.7 C/MHz    285 mW   13.8 J   43.6 I/mJ    48.4 s
+               1396: 
+[ 2490.550802] 14884     10.7 C/MHz    382 mW   15.4 J   39.0 I/mJ    40.3 s
+               1557: 
+[ 2534.795345] 16613     10.7 C/MHz    468 mW   16.9 J   35.5 I/mJ    36.1 s
+               1745: 
+[ 2575.148183] 18621     10.7 C/MHz    576 mW   18.6 J   32.3 I/mJ    32.2 s
+               1885: 
+[ 2613.145203] 20088     10.7 C/MHz    673 mW   20.1 J   29.8 I/mJ    29.9 s
+               1999: 
+[ 2649.494262] 21263     10.6 C/MHz    753 mW   21.3 J   28.2 I/mJ    28.2 s
+               2147: 
+[ 2683.838669] 22889     10.7 C/MHz    889 mW   23.3 J   25.7 I/mJ    26.2 s
+               2294: 
+[ 2716.506266] 24452     10.7 C/MHz   1053 mW   25.8 J   23.2 I/mJ    24.5 s
+               2363: 
+[ 2748.475655] 25169     10.7 C/MHz   1151 mW   27.4 J   21.9 I/mJ    23.8 s
+               2499: 
+[ 2779.126907] 26642     10.7 C/MHz   1371 mW   30.9 J   19.4 I/mJ    22.5 s
+               2687: 
+[ 2808.193553] 28659     10.7 C/MHz   1722 mW   36.1 J   16.6 I/mJ    20.9 s
+               2802: 
+[ 2836.417143] 29861     10.7 C/MHz   1993 mW   40.1 J   15.0 I/mJ    20.1 s
+               2914: 
+[ 2863.876765] 31041     10.7 C/MHz   2392 mW   46.3 J   13.0 I/mJ    19.3 s
+               2943: 
+[ 2891.142787] 31356     10.7 C/MHz   2468 mW   47.3 J   12.7 I/mJ    19.1 s
+               2970: 
+[ 2918.206270] 31691     10.7 C/MHz   2505 mW   47.4 J   12.6 I/mJ    18.9 s
+               3015: 
+[ 2944.996211] 32154     10.7 C/MHz   2656 mW   49.6 J   12.1 I/mJ    18.7 s
+               3105: 
+[ 2971.261784] psci: CPU7 killed (polled 10 ms)
+[ 2971.269642] 33092     10.7 C/MHz   3028 mW   54.9 J   10.9 I/mJ    18.1 s
+               
+               
+               Benchmark finished!
+[ 2971.297984] 
+               real	49m29.500s
+               user	42m50.856s
+               sys	0m0.579s
