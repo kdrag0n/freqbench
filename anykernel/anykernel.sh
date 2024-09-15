@@ -37,6 +37,7 @@ patch_cmdline nohz_full nohz_full=$bench_cpus
 patch_cmdline loglevel loglevel=0
 patch_cmdline printk.devkmsg printk.devkmsg=on
 patch_cmdline skip_initramfs ""
+patch_cmdline firmware_class.path firmware_class.path=/firmware/image
 
 mv $home/rd-new.cpio.gz $home/ramdisk-new.cpio
 
