@@ -1,0 +1,288 @@
+           CPU0       CPU1       CPU2       CPU3       CPU4       CPU5       CPU6       CPU7       
+  4:          0          0          0          0          0          0          0          0     GIC-0  27 Level     arch_timer
+  6:          0          0          0          0          0          0          0          0     GIC-0 498 Edge      mct_comp_irq
+  7:        693          0          0          0          0          0          0          0     GIC-0 502 Edge      mct_tick0
+  8:          0        157          0          0          0          0          0          0     GIC-0 503 Edge      mct_tick1
+  9:          0          0        147          0          0          0          0          0     GIC-0 504 Edge      mct_tick2
+ 10:          0          0          0        139          0          0          0          0     GIC-0 505 Edge      mct_tick3
+ 11:          0          0          0          0        129          0          0          0     GIC-0 506 Edge      mct_tick4
+ 12:          0          0          0          0          0        120          0          0     GIC-0 507 Edge      mct_tick5
+ 13:          0          0          0          0          0          0        115          0     GIC-0 508 Edge      mct_tick6
+ 14:          0          0          0          0          0          0          0        102     GIC-0 509 Edge      mct_tick7
+ 81:          0          0          0          0          0          0          0          0     GIC-0 272 Edge      13030000.pinctrl
+ 82:          0          0          0          0          0          0          0          0     GIC-0 283 Edge      13c40000.pinctrl
+ 83:          0          0          0          0          0          0          0          0     GIC-0 412 Edge      10430000.pinctrl
+ 84:         42          0          0          0          0          0          0          0     GIC-0 439 Edge      10830000.pinctrl
+ 85:          0          0          0          0          0          0          0          0     GIC-0 244 Edge      190a0000.sysmmu
+ 86:          0          0          0          0          0          0          0          0     GIC-0 243 Edge      190a0000.sysmmu
+ 87:          0          0          0          0          0          0          0          0     GIC-0 246 Edge      190b0000.sysmmu
+ 88:          0          0          0          0          0          0          0          0     GIC-0 245 Edge      190b0000.sysmmu
+ 89:          0          0          0          0          0          0          0          0     GIC-0 248 Edge      190c0000.sysmmu
+ 90:          0          0          0          0          0          0          0          0     GIC-0 247 Edge      190c0000.sysmmu
+ 91:          0          0          0          0          0          0          0          0     GIC-0  80 Edge      18e00000.sysmmu
+ 92:          0          0          0          0          0          0          0          0     GIC-0  82 Edge      18e00000.sysmmu
+ 93:          0          0          0          0          0          0          0          0     GIC-0 305 Edge      18a60000.sysmmu
+ 94:          0          0          0          0          0          0          0          0     GIC-0 306 Edge      18a60000.sysmmu
+ 95:          0          0          0          0          0          0          0          0     GIC-0 307 Edge      18a80000.sysmmu
+ 96:          0          0          0          0          0          0          0          0     GIC-0 308 Edge      18a80000.sysmmu
+ 97:          0          0          0          0          0          0          0          0     GIC-0 309 Edge      18b90000.sysmmu
+ 98:          0          0          0          0          0          0          0          0     GIC-0 310 Edge      18b90000.sysmmu
+ 99:          0          0          0          0          0          0          0          0     GIC-0 375 Edge      18890000.sysmmu
+100:          0          0          0          0          0          0          0          0     GIC-0 376 Edge      18890000.sysmmu
+101:          0          0          0          0          0          0          0          0     GIC-0 377 Edge      188b0000.sysmmu
+102:          0          0          0          0          0          0          0          0     GIC-0 378 Edge      188b0000.sysmmu
+103:          0          0          0          0          0          0          0          0     GIC-0 355 Edge      17210000.sysmmu
+104:          0          0          0          0          0          0          0          0     GIC-0 356 Edge      17210000.sysmmu
+105:          0          0          0          0          0          0          0          0     GIC-0 333 Edge      17450000.sysmmu
+106:          0          0          0          0          0          0          0          0     GIC-0 334 Edge      17450000.sysmmu
+107:          0          0          0          0          0          0          0          0     GIC-0 335 Edge      17470000.sysmmu
+108:          0          0          0          0          0          0          0          0     GIC-0 336 Edge      17470000.sysmmu
+109:          0          0          0          0          0          0          0          0     GIC-0 323 Edge      17750000.sysmmu
+110:          0          0          0          0          0          0          0          0     GIC-0 324 Edge      17750000.sysmmu
+111:          0          0          0          0          0          0          0          0     GIC-0 366 Edge      18020000.sysmmu
+112:          0          0          0          0          0          0          0          0     GIC-0 479 Edge      17930000.sysmmu
+113:          0          0          0          0          0          0          0          0     GIC-0 480 Edge      17930000.sysmmu
+114:          0          0          0          0          0          0          0          0     GIC-0 259 Edge      17c20000.sysmmu
+115:          0          0          0          0          0          0          0          0     GIC-0 260 Edge      17c20000.sysmmu
+116:          0          0          0          0          0          0          0          0     GIC-0 261 Edge      17c30000.sysmmu
+117:          0          0          0          0          0          0          0          0     GIC-0 262 Edge      17c30000.sysmmu
+118:          0          0          0          0          0          0          0          0     GIC-0 491 Edge      17680000.sysmmu
+119:          0          0          0          0          0          0          0          0     GIC-0 492 Edge      17680000.sysmmu
+120:          0          0          0          0          0          0          0          0     GIC-0 192 Level     ecc_handler0
+121:          0          0          0          0          0          0          0          0     GIC-0 193 Level     ecc_handler1
+122:          0          0          0          0          0          0          0          0     GIC-0 194 Level     ecc_handler2
+123:          0          0          0          0          0          0          0          0     GIC-0 195 Level     ecc_handler3
+124:          0          0          0          0          0          0          0          0     GIC-0 196 Level     ecc_handler4
+125:          0          0          0          0          0          0          0          0     GIC-0 197 Level     ecc_handler5
+126:          0          0          0          0          0          0          0          0     GIC-0 198 Level     ecc_handler6
+127:          0          0          0          0          0          0          0          0     GIC-0 199 Level     ecc_handler7
+128:          0          0          0          0          0          0          0          0     GIC-0 200 Level     ecc_handler8
+129:          0          0          0          0          0          0          0          0     GIC-0 201 Level     ecc_handler9
+130:          0          0          0          0          0          0          0          0     GIC-0 202 Level     ecc_handler10
+131:          0          0          0          0          0          0          0          0     GIC-0 203 Level     ecc_handler11
+132:          0          0          0          0          0          0          0          0     GIC-0 204 Level     ecc_handler12
+133:          0          0          0          0          0          0          0          0     GIC-0 205 Level     ecc_handler13
+134:          0          0          0          0          0          0          0          0     GIC-0 213 Level     ecc_handler14
+135:          0          0          0          0          0          0          0          0     GIC-0  84 Edge      DATA_BUS_C
+136:          0          0          0          0          0          0          0          0     GIC-0  85 Edge      DATA_BUS_C1
+137:          0          0          0          0          0          0          0          0     GIC-0 153 Edge      DATA_CORE
+138:          0          0          0          0          0          0          0          0     GIC-0 159 Edge      PERI_CORE_0
+139:          0          0          0          0          0          0          0          0     GIC-0 160 Edge      PERI_CORE_1
+140:          0          0          0          0          0          0          0          0     GIC-0  86 Edge      PERI_BUS_C
+141:          2          0          0          0          0          0          0          0     GIC-0  71 Edge      158d0000.exynos-adv_tracer
+142:          0          0          0          0          0          0          0          0     GIC-0 351 Edge      fimc3aa0-0
+143:          0          0          0          0          0          0          0          0     GIC-0 352 Edge      fimc3aa0-1
+144:          0          0          0          0          0          0          0          0     GIC-0 353 Edge      fimc3aa1-0
+145:          0          0          0          0          0          0          0          0     GIC-0 354 Edge      fimc3aa1-1
+146:          0          0          0          0          0          0          0          0     GIC-0 328 Edge      fimcisp0-0
+147:          0          0          0          0          0          0          0          0     GIC-0 329 Edge      fimcisp0-1
+148:          0          0          0          0          0          0          0          0     GIC-0 326 Edge      fimcisp1-0
+149:          0          0          0          0          0          0          0          0     GIC-0 327 Edge      fimcisp1-1
+150:          0          0          0          0          0          0          0          0     GIC-0 331 Edge      fimcmcs0-0
+151:          0          0          0          0          0          0          0          0     GIC-0 332 Edge      fimcmcs1-0
+152:          0          0          0          0          0          0          0          0     GIC-0 461 Edge      fimcvra-1
+153:          0          0          0          0          0          0          0          0     GIC-0 330 Edge      17530000.gdc
+167:          0          0          0          0          0          0          0          0     GIC-0 345 Edge      17160000.sensor-paf-pdp, 17170000.sensor-paf-pdp
+168:          0          0          0          0          0          0          0          0     GIC-0 370 Edge      188d0000.mfc
+169:          0          0          0          0          0          0          0          0     GIC-0 320 Edge      18500000.mali
+170:          0          0          0          0          0          0          0          0     GIC-0 319 Edge      18500000.mali
+171:          1          0          0          0          0          0          0          0     GIC-0 321 Edge      18500000.mali
+172:         65          0          0          0          0          0          0          0     GIC-0 173 Level     arm-pmu
+173:          0          0          0          0          0          0          0          0     GIC-0 174 Level     arm-pmu
+174:          0          0          0          0          0          0          0          0     GIC-0 175 Level     arm-pmu
+175:          0          0          0          0          0          0          0          0     GIC-0 176 Level     arm-pmu
+176:          0          0          0          0          0          0          0          0     GIC-0 177 Level     arm-pmu
+177:          0          0          0          0          0          0          0          0     GIC-0 178 Level     arm-pmu
+178:          0          0          0          0          0          0          0          0     GIC-0 206 Level     arm-pmu
+179:          0          0          0          0          0          0          0          0     GIC-0 207 Level     arm-pmu
+180:          0          0          0          0          0          0          0          0     GIC-0 214 Level     exynos-ocp
+182:          2          0          0          0          0          0          0          0     GIC-0 500 Edge      tzdev_iwi_event
+183:          0          0          0          0          0          0          0          0     GIC-0 501 Edge      tzdev_iwi_panic
+184:        331          0          0          0          0          0          0          0     GIC-0 281 Edge      ufshcd
+185:          0          0          0          0          0          0          0          0     GIC-0  78 Edge      18cf1000.abox-gic
+186:          0          0          0          0          0          0          0          0     GIC-0 230 Edge      19071000.dpp
+187:          0          0          0          0          0          0          0          0     GIC-0 237 Edge      19071000.dpp
+188:          0          0          0          0          0          0          0          0     GIC-0 235 Edge      19076000.dpp
+189:          0          0          0          0          0          0          0          0     GIC-0 242 Edge      19076000.dpp
+190:          0          0          0          0          0          0          0          0     GIC-0 231 Edge      19072000.dpp
+191:          0          0          0          0          0          0          0          0     GIC-0 238 Edge      19072000.dpp
+192:          0          0          0          0          0          0          0          0     GIC-0 234 Edge      19075000.dpp
+193:          0          0          0          0          0          0          0          0     GIC-0 240 Edge      19075000.dpp
+194:          0          0          0          0          0          0          0          0     GIC-0 232 Edge      19073000.dpp
+195:          0          0          0          0          0          0          0          0     GIC-0 239 Edge      19073000.dpp
+196:          0          0          0          0          0          0          0          0     GIC-0 233 Edge      19074000.dpp
+197:          0          0          0          0          0          0          0          0     GIC-0 241 Edge      19074000.dpp
+198:       3731          0          0          0          0          0          0          0     GIC-0 222 Edge      19080000.dsim
+199:          0          0          0          0          0          0          0          0     GIC-0 280 Edge      130b0000.displayport
+200:          0          0          0          0          0          0          0          0     GIC-0 215 Edge      19030000.decon_f
+201:          0          0          0          0          0          0          0          0     GIC-0 216 Edge      19030000.decon_f
+202:          0          0          0          0          0          0          0          0     GIC-0 221 Edge      19030000.decon_f
+203:          0          0          0          0          0          0          0          0     GIC-0 227 Edge      19050000.decon_t
+204:          0          0          0          0          0          0          0          0     GIC-0 228 Edge      19050000.decon_t
+205:          0          0          0          0          0          0          0          0     GIC-0 229 Edge      19050000.decon_t
+206:          0          0          0          0          0          0          0          0     GIC-0  72 Edge      15900000.acpm_ipc
+207:          0          0          0          0          0          0          0          0     GIC-0  96 Edge      1a2e0000.pdma0
+208:          0          0          0          0          0          0          0          0     GIC-0 442 Edge      10860000.hsi2c
+209:          0          0          0          0          0          0          0          0     GIC-0 443 Edge      10870000.hsi2c
+210:          0          0          0          0          0          0          0          0     GIC-0 444 Edge      10880000.hsi2c
+211:          0          0          0          0          0          0          0          0     GIC-0 445 Edge      10890000.hsi2c
+212:        112          0          0          0          0          0          0          0     GIC-0 420 Edge      104b0000.hsi2c
+213:        907          0          0          0          0          0          0          0     GIC-0 424 Edge      104f0000.hsi2c
+214:          0          0          0          0          0          0          0          0     GIC-0 449 Edge      108d0000.hsi2c
+215:         36          0          0          0          0          0          0          0     GIC-0 450 Edge      108e0000.hsi2c
+216:          0          0          0          0          0          0          0          0     GIC-0 451 Edge      108f0000.hsi2c
+217:        240          0          0          0          0          0          0          0     GIC-0 454 Edge      10920000.hsi2c
+218:          0          0          0          0          0          0          0          0     GIC-0 459 Edge      10990000.hsi2c
+219:       1304          0          0          0          0          0          0          0     GIC-0 460 Edge      109a0000.hsi2c
+220:         66          0          0          0          0          0          0          0     GIC-0 111 Edge      15d30000.hsi2c
+221:         47          0          0          0          0          0          0          0     GIC-0 113 Edge      15d50000.hsi2c
+222:       2194          0          0          0          0          0          0          0     GIC-0 114 Edge      15d60000.hsi2c
+223:          0          0          0          0          0          0          0          0     GIC-0 115 Edge      15d70000.hsi2c
+224:          0          0          0          0          0          0          0          0     GIC-0 414 Edge      spi-s3c64xx
+225:          0          0          0          0          0          0          0          0     GIC-0 416 Edge      spi-s3c64xx
+226:          0          0          0          0          0          0          0          0     GIC-0 446 Edge      spi-s3c64xx
+227:          0          0          0          0          0          0          0          0     GIC-0 458 Edge      spi-s3c64xx
+230:          0          0          0          0          0          0          0          0     GIC-0 277 Edge      phydrd-wakeup
+231:          0          0          0          0          0          0          0          0     GIC-0 278 Edge      phydrd-conn
+232:          0          0          0          0          0          0          0          0     GIC-0 295 Edge      13c20000.sysmmu
+233:          0          0          0          0          0          0          0          0     GIC-0 264 Edge      13070000.sysmmu
+234:          0          0          0          0          0          0          0          0     GIC-0 285 Level     exynos-pcie
+237:          0          0          0          0          0          0          0          0     GIC-0 496 Edge      10050000.watchdog_cl0
+238:          0          0          0          0          0          0          0          0     GIC-0 497 Edge      10060000.watchdog_cl2
+239:         60          0          0          0          0          0          0          0     GIC-0 116 Edge      15c40000.adc
+240:         97          0          0          0          0          0          0          0     GIC-0 282 Edge      dw-mci
+243:          0          0          0          0          0          0          0          0     GIC-0 298 Edge      18a20000.g2d
+245:          0          0          0          0          0          0          0          0     GIC-0 371 Edge      188e0000.tsmux
+246:          0          0          0          0          0          0          0          0     GIC-0 300 Edge      18b10000.scaler
+247:          0          0          0          0          0          0          0          0     GIC-0 299 Edge      18b00000.smfc
+248:          0          0          0          0          0          0          0          0     GIC-0 297 Edge      18b30000.jsqz
+252:          0          0          0          0          0          0          0          0     GIC-0 510 Edge      10090000.BIG, 10090000.MID, 10090000.LITTLE
+253:          0          0          0          0          0          0          0          0     GIC-0 511 Edge      100a0000.G3D, 100a0000.ISP
+254:          9          0          0          0          0          0          0          0     GIC-0 256 Edge      seclog
+255:          0          0          0          0          0          0          0          0     GIC-0 257 Edge      hdcp
+256:          8          0          0          0          0          0          0          0     GIC-0 486 Edge      ufs-srpmb
+257:          0          0          0          0          0          0          0          0     GIC-0 380 Edge      1bc3004c.mcinfo
+258:          0          0          0          0          0          0          0          0     GIC-0 387 Edge      1bc3004c.mcinfo
+259:          0          0          0          0          0          0          0          0     GIC-0 394 Edge      1bc3004c.mcinfo
+260:          0          0          0          0          0          0          0          0     GIC-0 401 Edge      1bc3004c.mcinfo
+262:          0          0          0          0          0          0          0          0     GIC-0 382 Edge      ppmpu
+263:          0          0          0          0          0          0          0          0     GIC-0 383 Edge      ppmpu
+264:          0          0          0          0          0          0          0          0     GIC-0 389 Edge      ppmpu
+265:          0          0          0          0          0          0          0          0     GIC-0 390 Edge      ppmpu
+266:          0          0          0          0          0          0          0          0     GIC-0 396 Edge      ppmpu
+267:          0          0          0          0          0          0          0          0     GIC-0 397 Edge      ppmpu
+268:          0          0          0          0          0          0          0          0     GIC-0 403 Edge      ppmpu
+269:          0          0          0          0          0          0          0          0     GIC-0 404 Edge      ppmpu
+270:          0          0          0          0          0          0          0          0     GIC-0 407 Edge      cp_wdt
+274:          0          0          0          0          0          0          0          0     GIC-0  73 Edge      15920000.mailbox_cp
+275:          0          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   4 Edge      dp-pmic-irq
+278:          0          0          0          0          0          0          0          0  max77705     Edge      sysovlo-irq
+281:          0          0          0          0          0          0          0          0  max77705     Edge      bypass-irq
+282:          0          0          0          0          0          0          0          0  max77705     Edge      batp-irq
+285:          0          0          0          0          0          0          0          0  max77705     Edge      wpc-int
+287:          0          0          0          0          0          0          0          0  max77705     Edge      aicl-irq
+288:          0          0          0          0          0          0          0          0  max77705     Edge      fuelgauge-irq
+289:          4          0          0          0          0          0          0          0  max77705     Edge      usbc-apcmd-irq
+290:          0          0          0          0          0          0          0          0  max77705     Edge      cc-vconncop-irq
+291:          1          0          0          0          0          0          0          0  max77705     Edge      cc-vsafe0v-irq
+293:          0          0          0          0          0          0          0          0  max77705     Edge      cc-vconnsc-irq
+294:          1          0          0          0          0          0          0          0  max77705     Edge      cc-ccpinstat-irq
+295:          1          0          0          0          0          0          0          0  max77705     Edge      cc-ccistat-irq
+296:          0          0          0          0          0          0          0          0  max77705     Edge      cc-ccvcnstat-irq
+297:          1          0          0          0          0          0          0          0  max77705     Edge      cc-ccstat-irq
+298:          0          0          0          0          0          0          0          0  max77705     Edge      muic-vbusdet
+299:          0          0          0          0          0          0          0          0  max77705     Edge      muic-vbadc
+300:          0          0          0          0          0          0          0          0  max77705     Edge      muic-dcdtmo
+301:          0          0          0          0          0          0          0          0  max77705     Edge      muic-fakvb
+302:          0          0          0          0          0          0          0          0  max77705     Edge      muic-chgtyp
+303:          0          0          0          0          0          0          0          0  max77705     Edge      muic-uiadc
+304:          0          0          0          0          0          0          0          0  max77705     Edge      usbc-sysmsg-irq
+305:          1          0          0          0          0          0          0          0  max77705     Edge      pd-pdmsg-irq
+306:          0          0          0          0          0          0          0          0  max77705     Edge      pd-psrdy-irq
+307:          1          0          0          0          0          0          0          0  max77705     Edge      pd-datarole-irq
+308:          0          0          0          0          0          0          0          0  max77705     Edge      pd-ssacci-irq
+309:          0          0          0          0          0          0          0          0  max77705     Edge      pd-fctid-irq
+310:          0          0          0          0          0          0          0          0  max77705     Edge      usbc-vdm0-irq
+311:          0          0          0          0          0          0          0          0  max77705     Edge      usbc-vdm1-irq
+312:          0          0          0          0          0          0          0          0  max77705     Edge      usbc-vdm2-irq
+313:          0          0          0          0          0          0          0          0  max77705     Edge      usbc-vdm3-irq
+314:          0          0          0          0          0          0          0          0  max77705     Edge      usbc-vdm4-irq
+315:          0          0          0          0          0          0          0          0  max77705     Edge      usbc-vdm5-irq
+316:          0          0          0          0          0          0          0          0  max77705     Edge      usbc-vdm6-irq
+317:          0          0          0          0          0          0          0          0  max77705     Edge      usbc-vir0-irq
+318:          4          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   6 Level     max77705-irq
+329:          0          0          0          0          0          0          0          0   s2mps19     Edge      rtc-alarm0
+335:          0          0          0          0          0          0          0          0   s2mps19     Edge      TEMP_IRQ
+336:          0          0          0          0          0          0          0          0   s2mps19     Edge      TEMP_IRQ
+342:          0          0          0          0          0          0          0          0   s2mps19     Edge      BUCK_OCP_IRQ
+343:          0          0          0          0          0          0          0          0   s2mps19     Edge      BUCK_OCP_IRQ
+344:          0          0          0          0          0          0          0          0   s2mps19     Edge      BUCK_OCP_IRQ
+345:          0          0          0          0          0          0          0          0   s2mps19     Edge      BUCK_OCP_IRQ
+346:          0          0          0          0          0          0          0          0   s2mps19     Edge      BUCK_OCP_IRQ
+347:          0          0          0          0          0          0          0          0   s2mps19     Edge      BUCK_OCP_IRQ
+348:          0          0          0          0          0          0          0          0   s2mps19     Edge      BUCK_OCP_IRQ
+349:          0          0          0          0          0          0          0          0   s2mps19     Edge      BUCK_OCP_IRQ
+350:          0          0          0          0          0          0          0          0   s2mps19     Edge      BUCK_OCP_IRQ
+351:          0          0          0          0          0          0          0          0   s2mps19     Edge      BUCK_OCP_IRQ
+352:          0          0          0          0          0          0          0          0   s2mps19     Edge      BUCK_OCP_IRQ
+353:          0          0          0          0          0          0          0          0   s2mps19     Edge      BUCK_OCP_IRQ
+354:          0          0          0          0          0          0          0          0   s2mps19     Edge      BB_OCP_IRQ
+370:          0          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   1 Level     s2mps19-irq
+379:          0          0          0          0          0          0          0          0   s2mps20     Edge      TEMP_IRQ
+380:          0          0          0          0          0          0          0          0   s2mps20     Edge      TEMP_IRQ
+383:          0          0          0          0          0          0          0          0   s2mps20     Edge      BUCK_OCP_IRQ
+384:          0          0          0          0          0          0          0          0   s2mps20     Edge      BUCK_OCP_IRQ
+385:          0          0          0          0          0          0          0          0   s2mps20     Edge      BUCK_OCP_IRQ
+386:          0          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   5 Level     s2mps20-irq
+387:          0          0          0          0          0          0          0          0   PCI-MSI   0 Edge      PCIe PME, aerdrv
+419:          0          0          0          0          0          0          0          0  exynos_gpio_irq_chip   2 Edge      panel0:disp-det
+420:          1          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   0 Edge      panel0:conn-det
+421:          0          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   0 Level     cs35l41, cs35l41
+422:         13          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   2 Edge      madera IRQ
+423:          1          0          0          0          0          0          0          0  madera IRQ  72 Edge      BOOT_DONE
+424:          1          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   2 Edge      sec-nfc
+425:          1          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   6 Edge      sec-nfc
+427:          0          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   6 Edge      gpio-keys: KEY_WINK
+428:          0          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   4 Edge      gpio-keys: KEY_VOLUMEDOWN
+429:          0          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   3 Edge      gpio-keys: KEY_VOLUMEUP
+430:          0          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   4 Edge      gpio-keys: KEY_POWER
+431:          4          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   0 Level     sec_ts
+432:          0          0          0          0          0          0          0          0  exynos_gpio_irq_chip   4 Level     SMPL WARN
+433:          1          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   3 Edge      bt_host_wake
+434:          1          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   5 Edge      tflash_det
+436:          0          0          0          0          0          0          0          0  exynos_gpio_irq_chip   0 Edge      jig-irq
+437:          1          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   0 Edge      wpd-det-irq
+438:          0          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   1 Edge      wpc-irq
+439:          1          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   1 Edge      qbt_finger_detect
+440:          1          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   3 Edge      qbt_ipc
+441:          0          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   0 Edge      sx9330_irq
+442:          0          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   7 Level     ttyBCM
+444:          1          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   0 Edge      ssp-shub-int
+445:          0          0          0          0          0          0          0          0  exynos_gpio_irq_chip   0 Edge      hrm_sensor_irq
+446:          0          0          0          0          0          0          0          0  madera IRQ  22 Edge      ADSP2 Compressed IRQ
+447:          0          0          0          0          0          0          0          0  madera IRQ  65 Edge      ADSP2 bus error
+448:          0          0          0          0          0          0          0          0  mailbox_irq_chip   0 Edge      15510000.vts
+449:          0          0          0          0          0          0          0          0  mailbox_irq_chip   1 Edge      15510000.vts
+450:          0          0          0          0          0          0          0          0  mailbox_irq_chip   2 Edge      15510000.vts
+451:          0          0          0          0          0          0          0          0  mailbox_irq_chip   3 Edge      15510000.vts
+452:          0          0          0          0          0          0          0          0  mailbox_irq_chip   4 Edge      15510000.vts
+453:          0          0          0          0          0          0          0          0  mailbox_irq_chip   5 Edge      15510000.vts
+454:          0          0          0          0          0          0          0          0  mailbox_irq_chip   6 Edge      15510000.vts
+455:          0          0          0          0          0          0          0          0  mailbox_irq_chip   7 Edge      15510000.vts
+456:          0          0          0          0          0          0          0          0  mailbox_irq_chip   8 Edge      15510000.vts
+457:          0          0          0          0          0          0          0          0  mailbox_irq_chip   9 Edge      15510000.vts
+458:         42          0          0          0          0          0          0          0  exynos_gpio_irq_chip   0 Edge      19030000.decon_f
+459:          0          0          0          0          0          0          0          0  madera IRQ   8 Edge      MICDET
+460:          1          0          0          0          0          0          0          0  madera IRQ   7 Edge      HPDET
+461:          1          0          0          0          0          0          0          0  madera IRQ  14 Edge      JACKDET rise
+462:          0          0          0          0          0          0          0          0  madera IRQ  15 Edge      JACKDET fall
+463:          0          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   6 Edge      flip_cover
+464:          0          0          0          0          0          0          0          0  exynos7_wkup_irq_chip   2 Edge      certify_cover
+IPI0:       115        236        240         52        244        243        234        238       Rescheduling interrupts
+IPI1:         0          5          5          5          4          4         11          9       Function call interrupts
+IPI2:         0          0          0          0          0          0          0          0       CPU stop interrupts
+IPI3:         0          0          0          0          0          0          0          0       Timer broadcast interrupts
+IPI4:        82          2          2          2          2          2          3          2       IRQ work interrupts
+IPI5:         0          0          0          0          0          0          0          0       CPU wake-up interrupts
+IPI6:         0          0          0          0          0          0          0          0       CPU stop (for crash dump) interrupts
+Err:          0
