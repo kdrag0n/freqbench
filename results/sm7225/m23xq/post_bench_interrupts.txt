@@ -1,0 +1,197 @@
+           CPU0       
+  3:       7208     GICv3  19 Level     arch_timer
+  5:     159009     GICv3  38 Level     arch_mem_timer
+  7:          0     GICv3 195 Level     ngd_slim_irq
+  9:        475     GICv3 297 Level     1d84000.ufshc
+ 10:          6     GICv3 260 Level     ipcc_1
+ 13:       3287     GICv3  37 Level     apps_rsc
+ 14:          0     GICv3 161 Level     disp_rsc
+ 15:          0     GICv3  21 Level     arm-pmu
+ 16:          0     GICv3 304 Level     sps
+ 17:          0     GICv3  32 Edge      apps_wdog_bark
+ 19:          0     GICv3  22 Level     KRYO L1-L2 ECC FAULTIRQ
+ 20:          0     GICv3  67 Level     KRYO L3-SCU ECC FAULTIRQ
+ 21:          0       PDC   6 Edge      adsp
+ 22:          0     GICv3 610 Edge      cdsp
+ 23:          0     GICv3 168 Edge      modem
+ 24:          0       PDC  26 Level     tsens-upper-lower
+ 25:          0       PDC  28 Level     tsens-critical
+ 26:          0       PDC  20 Edge      tsens-0C
+ 27:          0       PDC  27 Level     tsens-upper-lower
+ 28:          0       PDC  29 Level     tsens-critical
+ 29:          0       PDC  21 Edge      tsens-0C
+ 31:          0       PDC  11 Level     eud_irq
+ 38:         14     GICv3 236 Level     mmc0
+ 39:          4     GICv3 254 Level     8804000.sdhci
+ 54:          0       PDC  14 Edge      dp_hs_phy_irq
+ 55:          1     GICv3 162 Level     pwr_event_irq
+ 56:          0       PDC  17 Level     ss_phy_irq
+ 57:          0       PDC  15 Edge      dm_hs_phy_irq
+ 58:          0     GICv3 332 Level     kgsl_3d0_irq
+ 59:          0     GICv3 336 Level     kgsl_hfi_irq
+ 60:          0     GICv3 337 Level     kgsl_gmu_irq
+ 61:          0     GICv3 615 Level     error_irq
+ 62:          0     GICv3 617 Edge      wdg_bite_irq
+ 63:          0     GICv3 619 Edge      ipc_irq
+ 64:          0     GICv3 616 Level     general_irq
+ 65:          0     GICv3 509 Edge      csiphy
+ 66:          0     GICv3 510 Edge      csiphy
+ 67:          0     GICv3 511 Edge      csiphy
+ 68:          0     GICv3 493 Edge      csiphy
+ 69:          0     GICv3 500 Edge      cci
+ 70:          0     GICv3 494 Edge      cci
+ 71:          1     GICv3 501 Edge      cpas-cdm
+ 72:          0     GICv3 496 Edge      csid0
+ 73:          2     GICv3 497 Edge      ife0
+ 74:          0     GICv3 498 Edge      csid1
+ 75:          2     GICv3 499 Edge      ife1
+ 76:          0     GICv3 749 Edge      csid
+ 77:          2     GICv3 750 Edge      ife
+ 78:          0     GICv3 505 Edge      csid-lite
+ 79:          2     GICv3 504 Edge      ife-lite
+ 80:          0     GICv3 495 Edge      a5
+ 81:          0     GICv3 506 Edge      jpeg
+ 82:          0     GICv3 507 Edge      jpegdma
+ 83:          1     GICv3 508 Edge      lrme
+ 84:          0     GICv3 491 Edge      cpas_camnoc
+ 85:          0     GICv3 261 Level     arm-smmu global fault
+ 86:          0     GICv3 263 Level     arm-smmu global fault
+ 87:          0     GICv3 396 Level     arm-smmu-context-fault
+ 88:          0     GICv3 397 Level     arm-smmu-context-fault
+ 89:          0     GICv3 398 Level     arm-smmu-context-fault
+ 90:          0     GICv3 399 Level     arm-smmu-context-fault
+ 95:          0     GICv3  97 Level     arm-smmu global fault
+ 98:          0     GICv3 129 Level     arm-smmu-context-fault
+ 99:          0     GICv3 130 Level     arm-smmu-context-fault
+100:          0     GICv3 131 Level     arm-smmu-context-fault
+101:          0     GICv3 132 Level     arm-smmu-context-fault
+102:          0     GICv3 133 Level     arm-smmu-context-fault
+103:          0     GICv3 134 Level     arm-smmu-context-fault
+104:          0     GICv3 135 Level     arm-smmu-context-fault
+105:          0     GICv3 136 Level     arm-smmu-context-fault
+106:          0     GICv3 137 Level     arm-smmu-context-fault
+107:          0     GICv3 138 Level     arm-smmu-context-fault
+108:          0     GICv3 139 Level     arm-smmu-context-fault
+109:          0     GICv3 140 Level     arm-smmu-context-fault
+110:          0     GICv3 141 Level     arm-smmu-context-fault
+111:          0     GICv3 142 Level     arm-smmu-context-fault
+112:          0     GICv3 143 Level     arm-smmu-context-fault
+113:          0     GICv3 144 Level     arm-smmu-context-fault
+114:          0     GICv3 145 Level     arm-smmu-context-fault
+115:          0     GICv3 146 Level     arm-smmu-context-fault
+116:          0     GICv3 147 Level     arm-smmu-context-fault
+117:          0     GICv3 148 Level     arm-smmu-context-fault
+118:          0     GICv3 149 Level     arm-smmu-context-fault
+119:          0     GICv3 150 Level     arm-smmu-context-fault
+120:          0     GICv3 213 Level     arm-smmu-context-fault
+121:          0     GICv3 214 Level     arm-smmu-context-fault
+122:          0     GICv3 215 Level     arm-smmu-context-fault
+123:          0     GICv3 216 Level     arm-smmu-context-fault
+124:          0     GICv3 217 Level     arm-smmu-context-fault
+125:          0     GICv3 218 Level     arm-smmu-context-fault
+126:          0     GICv3 219 Level     arm-smmu-context-fault
+127:          0     GICv3 220 Level     arm-smmu-context-fault
+128:          0     GICv3 221 Level     arm-smmu-context-fault
+129:          0     GICv3 222 Level     arm-smmu-context-fault
+130:          0     GICv3 223 Level     arm-smmu-context-fault
+131:          0     GICv3 224 Level     arm-smmu-context-fault
+132:          0     GICv3 347 Level     arm-smmu-context-fault
+133:          0     GICv3 348 Level     arm-smmu-context-fault
+134:          0     GICv3 349 Level     arm-smmu-context-fault
+135:          0     GICv3 350 Level     arm-smmu-context-fault
+136:          0     GICv3 351 Level     arm-smmu-context-fault
+137:          0     GICv3 352 Level     arm-smmu-context-fault
+185:          0     GICv3 302 Edge      tmc-etr
+186:        755     GICv3 276 Level     gpi_dma800000_gpii0
+196:          3     GICv3 633 Level     i2c_geni
+197:          0     GICv3 634 Level     msm_serial_geni0
+198:          0     GICv3 635 Level     spi_geni
+209:      44020     GICv3 386 Level     i2c_geni
+210:          0     GICv3 387 Level     i2c_geni
+211:          0     GICv3 388 Level     msm_serial_geni8
+212:          3     GICv3 389 Level     i2c_geni
+213:          0     GICv3 206 Level     msm_vidc
+214:          0     GICv3 115 Level     msm_drm
+215:          0  pmic_arb 8388916 Edge      pon_kpdpwr_status
+216:          0  pmic_arb 8454452 Edge      pon_resin_status
+218:          0  pmic_arb 8716596 Edge      pon_kpdpwr_resin_bark
+219:          0  pmic_arb 37749045 Edge      qcom,temp-alarm
+221:          0  pmic_arb 202375484 Edge      volume_up
+229:          0  pmic_arb 1111490921 Edge      qcom,temp-alarm
+230:          0  pmic_arb 1137705324 Edge      bcl-lvl0
+231:          0  pmic_arb 1137770860 Edge      bcl-lvl1
+232:          0  pmic_arb 1137836396 Edge      bcl-lvl2
+233:        554  pmic_arb 1125122410 Edge      pm-adc5
+234:          3  pmic_arb 1129316715 Edge      thr-int-en
+247:          0  pmic_arb 1563427201 Edge      qpnp_flash_led_fault_irq
+248:          0  pmic_arb 1563623809 Edge      qpnp_flash_led_all_ramp_down_done_irq
+249:          0  pmic_arb 1563689345 Edge      qpnp_flash_led_all_ramp_up_done_irq
+250:          1  pmic_arb 1661993354 Edge      pm-adc5
+251:          0  pmic_arb 1665139083 Edge      thr-int-en
+252:          0  pmic_arb 1713439117 Edge      pm8xxx_rtc_alarm
+257:          6      ipcc   0 Edge      qcom,qmp-aop
+258:          0     GICv3 430 Level     capture bus
+259:          0     GICv3 431 Level     capture bus
+260:          0     GICv3 432 Level     capture bus
+261:          0     GICv3 623 Level     capture bus
+262:          0     GICv3 624 Level     capture bus
+263:          0     GICv3 625 Level     capture bus
+264:          0     GICv3 626 Level     capture bus
+265:          0     GICv3  64 Level     limits_sensor-00
+266:          0     GICv3  65 Level     limits_sensor-01
+267:          0      ipcc 131074 Edge      smp2p-mpss
+268:          0      ipcc 196610 Edge      smp2p-adsp
+269:          0      ipcc 393218 Edge      smp2p-cdsp
+270:          0      ipcc 458754 Edge      smp2p-npu
+271:          0     smp2p   2 Edge      adsp
+272:          0     smp2p   0 Edge      adsp
+273:          0     smp2p   1 Edge      error_ready_interrupt
+274:          0     smp2p   3 Edge      adsp
+275:          0     smp2p   2 Edge      cdsp
+276:          0     smp2p   0 Edge      cdsp
+277:          0     smp2p   1 Edge      error_ready_interrupt
+278:          0     smp2p   3 Edge      cdsp
+279:          0     smp2p   2 Edge      modem
+280:          0     smp2p   0 Edge      modem
+281:          0     smp2p   1 Edge      error_ready_interrupt
+282:          0     smp2p   3 Edge      modem
+283:          0     smp2p   7 Edge      modem
+284:          0     smp2p   0 Edge      smp2p_sleepstate
+288:          0     GICv3 165 Level     dwc3
+290:          0   msmgpio   9 Level     pn547
+291:          0   msmgpio   7 Edge      pn547_clk_req
+292:          0    sm5714     Edge      muic-dpdm_ovp
+293:          0    sm5714     Edge      muic-vbus_rid_detach
+294:          0    sm5714     Edge      muic-rid_detect
+295:          0    sm5714     Edge      muic-chgtype_attach
+296:          0    sm5714     Edge      muic-dectimeout
+297:          0    sm5714     Edge      muic-afc_error
+298:          0    sm5714     Edge      muic-afc_sta_chg
+299:          0    sm5714     Edge      muic-multi_byte
+301:          0    sm5714     Edge      muic-afc_accepted
+302:          0    sm5714     Edge      muic-afc_ta_attached
+305:          0    sm5714     Edge      vbusuvlo-irq
+306:          0    sm5714     Edge      vbuspok-irq
+308:          0    sm5714     Edge      done-irq
+314:          0    sm5714     Edge      aicl-irq
+315:          0    sm5714     Edge      vsysovp-irq
+320:          0    sm5714     Edge      otgfail-irq
+329:          0    sm5714     Edge      fuelgauge-irq
+330:          0   msmgpio  84 Level     sm5714-irq
+331:          0   msmgpio  94 Edge      8804000.sdhci cd
+332:          0   msmgpio  97 Edge      ISG6320
+333:          5   msmgpio  22 Edge      NVT-ts
+335:          0   msmgpio  12 Edge      UB_CON_DET
+336:          0   msmgpio  23 Edge      TE_GPIO
+337:          0       sde   4 Edge      dsi_ctrl
+338:          0   msmgpio  54 Edge      tfa98xx
+339:          0     smp2p   0 Edge      ipa_smp2p_clk_vote
+340:          0   msmgpio 124 Level     sm5714-usbpd
+IPI0:       146       Rescheduling interrupts
+IPI1:         9       Function call interrupts
+IPI2:         0       CPU stop interrupts
+IPI3:         0       CPU stop (for crash dump) interrupts
+IPI4:         0       Timer broadcast interrupts
+IPI5:     79364       IRQ work interrupts
+IPI6:         0       CPU wake-up interrupts
+Err:          0

@@ -1,0 +1,81 @@
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x51df805e]
+[    0.000000] Linux version 4.19.152-perf-100000-abITEJO443 (tejo@tejo-Thin-GF63-12VF) (Android (10087095, +pgo, +bolt, +lto, -mlgo, based on r487747c) clang version 17.0.2 (https://android.googlesource.com/toolchain/llvm-project d9f89f4d16663d5012e5c09495f3b30ece3d2362), LLD 17.0.2) #1 SMP PREEMPT Sun Dec 1 14:15:47 IST 2024
+[    0.000000] Machine model: Samsung M23XQ PROJECT (board-id,04)
+[    0.000000] sec_hw_param:sec_hw_rev_setup() androidboot.revision 5
+[    0.000000] androidboot.revision 5
+[    0.000000] androidboot.revision 5
+[    0.000000] Malformed early option 'androidboot.reserve_mem_region'
+[    0.000000] muic_param: set_afc_disable: afc_mode is 0x30
+[    0.000000] muic_param: set_uart_sel: uart_sel is 0x02
+[    0.000000] sapa: read_sapa_param param_time:0
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000fe000000, size 28 MiB
+[    0.000000] OF: reserved mem: initialized node qseecom_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000fd000000, size 16 MiB
+[    0.000000] OF: reserved mem: initialized node adsp_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000fb000000, size 32 MiB
+[    0.000000] OF: reserved mem: initialized node qseecom_ta_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000f9000000, size 32 MiB
+[    0.000000] OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000f6800000, size 40 MiB
+[    0.000000] OF: reserved mem: initialized node mem_dump_region, compatible id shared-dma-pool
+[    0.000000] Reserved memory: created CMA memory pool at 0x00000000f0000000, size 104 MiB
+[    0.000000] OF: reserved mem: initialized node secure_display_region, compatible id shared-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000080000000, size 6 MiB
+[    0.000000] OF: reserved mem: initialized node hyp_region@80000000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000080700000, size 1 MiB
+[    0.000000] OF: reserved mem: initialized node xbl_aop_mem@80700000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x00000000808ff000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node sec_apps_region@808ff000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000080900000, size 2 MiB
+[    0.000000] OF: reserved mem: initialized node smem@80900000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000084800000, size 64 MiB
+[    0.000000] OF: reserved mem: initialized node pil_adsp_region@88d00000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000088800000, size 5 MiB
+[    0.000000] OF: reserved mem: initialized node camera_region@86000000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000088d00000, size 5 MiB
+[    0.000000] OF: reserved mem: initialized node pil_npu_region@86500000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000089200000, size 5 MiB
+[    0.000000] OF: reserved mem: initialized node pil_video_region@86a00000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x0000000089700000, size 30 MiB
+[    0.000000] OF: reserved mem: initialized node cdsp_regions@86f00000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x000000008b500000, size 2 MiB
+[    0.000000] OF: reserved mem: initialized node wlan_fw_region@8b500000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x000000008b700000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node ipa_fw_region@8b700000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x000000008b710000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node ipa_gsi_region@8b710000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x000000008b715400, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node gpu_region@8b715400, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x000000008b800000, size 248 MiB
+[    0.000000] OF: reserved mem: initialized node modem_region@8b800000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x000000009fb00000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node hdm_region@9FB00000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x00000000b0200000, size 2 MiB
+[    0.000000] OF: reserved mem: initialized node fastuh_region@B0200000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x00000000b0c00000, size 1 MiB
+[    0.000000] OF: reserved mem: initialized node tima_region@B0C00000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x00000000b0fff000, size 0 MiB
+[    0.000000] OF: reserved mem: initialized node kaslr_region@B0FFF000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x00000000b1000000, size 9 MiB
+[    0.000000] OF: reserved mem: initialized node sec_debug_region@B1000000, compatible id removed-dma-pool
+[    0.000000] Removed memory: created DMA memory pool at 0x00000000c0000000, size 94 MiB
+[    0.000000] OF: reserved mem: initialized node removed_region@c0000000, compatible id removed-dma-pool
+[    0.000000] modem_removed_dma_setup: memory add to memblock: paddr=0x00000000d0000000, t_size=96 MiB
+[    0.000000] OF: reserved mem: initialized node modem_shared_mem_region@d0000000, compatible id modem-removed-dma-pool
+[    0.000000] On node 0 totalpages: 1438053
+[    0.000000]   Normal zone: 22470 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 1438053 pages, LIFO batch:63
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.1
+[    0.000000] random: fast init done
+[    0.000000] percpu: Embedded 24 pages/cpu s60440 r8192 d29672 u98304
+[    0.000000] pcpu-alloc: s60440 r8192 d29672 u98304 alloc=24*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: kernel page table isolation disabled by kernel configuration
+[    0.000000] CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1415583
